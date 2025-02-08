@@ -1,15 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739050242
+::res://::1739058667
 icon.png::CompressedTexture2D::9058270980443021030::1738965449::1738965472::1::::<><>::
-main.tscn::PackedScene::1070366442542408141::1739050242::0::1::::<><>::uid://b618s8yms5b50::::res://scenes/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll.tscn
-README.md::TextFile::-1::1738965449::0::1::::<><>::
+main.tscn::PackedScene::1070366442542408141::1739058655::0::1::::<><>::uid://b618s8yms5b50::::res://scenes/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll.tscn
 ::res://addons/::1739050624
-::res://addons/gridmap-plus/::1739050624
+::res://addons/gridmap-plus/::1739050625
 GridmapPlugin.gd::GDScript::-1::1739050624::0::1::::<>EditorPlugin<>::
 GridMapPlus.gd::GDScript::-1::1739050624::0::1::::GridMapPlus<>Node<>::
 icon.svg::CompressedTexture2D::2354213991509118133::1739050624::1739050625::1::::<><>::
 plugin.cfg::TextFile::-1::1739050624::0::1::::<><>::
-::res://addons/gridmap-plus/assets/::1739050624
+::res://addons/gridmap-plus/assets/::1739050625
 Buttons.tres::Theme::4980770352832666559::1739050624::0::1::::<><>::
 crosshair.png::CompressedTexture2D::2106462459054382079::1739050624::1739050625::1::::<><>::
 Crosshair.tres::SpriteFrames::5820723188896309203::1739050624::0::1::::<><>::uid://5anenb7wdrd4::::res://addons/gridmap-plus/assets/crosshair.png<>uid://dlmas1bqktrc2::::res://addons/gridmap-plus/assets/percentage.png
@@ -17,7 +16,7 @@ digits.png::CompressedTexture2D::7653823252358313829::1739050624::1739050625::1:
 percentage.png::CompressedTexture2D::7956145376329669659::1739050624::1739050625::1::::<><>::
 selection.png::CompressedTexture2D::1589824029445392580::1739050624::1739050625::1::::<><>::
 skybox.png::CompressedTexture2D::3602993277699944997::1739050624::1739050625::1::::<><>::
-::res://addons/gridmap-plus/assets/icons/::1739050624
+::res://addons/gridmap-plus/assets/icons/::1739050625
 Build.svg::CompressedTexture2D::7049601396131068249::1739050624::1739050625::1::::<><>::
 ::res://addons/gridmap-plus/dock/::1739050624
 Build.gd::GDScript::-1::1739050624::0::1::::<>Window<>::
@@ -29,8 +28,8 @@ Toolbar.tscn::PackedScene::1792008193621627274::1739050624::0::1::::<><>::res://
 ::res://assets/::1739048860
 ::res://assets/BGM/::1739047434
 WEXECUTION.mp3::AudioStreamMP3::5267975667889712132::1739047421::1739047434::1::::<><>::
-::res://assets/meshlibraries/::1739049898
-main.tres::MeshLibrary::3256605164773035509::1739047228::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
+::res://assets/meshlibraries/::1739058654
+main.tres::MeshLibrary::3256605164773035509::1739058654::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
 main_node.tscn::PackedScene::3628909229905760584::1738967118::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
 ::res://assets/Models/::1739049009
 7c33ed83.png::CompressedTexture2D::1762344265196924901::1739049008::1739049009::1::::<><>::
@@ -47,9 +46,9 @@ wega.png::CompressedTexture2D::2696350657868709057::1738965899::1738966437::1:::
 ::res://resources/::1739048280
 brush_node.png::CompressedTexture2D::3768255770255018149::1739048279::1739048280::1::::<><>::
 icon.png::CompressedTexture2D::7615961334456266644::1739048279::1739048280::1::::<><>::
-::res://scenes/::1739050242
+::res://scenes/::1739058655
 Interactible3D.gd::GDScript::-1::1738965449::0::1::::Interactible3D<>Area3D<>::
-mainMenu.tscn::PackedScene::290914851781947886::1739050242::0::1::::<><>::res://scenes/main_menu.gd<>uid://crbwdh5irpgui::::res://assets/textures/wch3.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>res://shaders/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png
+mainMenu.tscn::PackedScene::290914851781947886::1739058654::0::1::::<><>::res://scenes/main_menu.gd<>uid://crbwdh5irpgui::::res://assets/textures/wch3.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>res://shaders/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png
 main_menu.gd::GDScript::-1::1738965449::0::1::::<>Control<>::
 pause_node.gd::GDScript::-1::1738965449::0::1::::<>Control<>::
 player.gd::GDScript::-1::1738967875::0::1::::PlayerCharacter<>CharacterBody3D<>::
@@ -59,18 +58,18 @@ PlayerGUI.tscn::PackedScene::6994869833913520368::1738965662::0::1::::<><>::res:
 SettingsWindow.tscn::PackedScene::3703183720414537606::1738966287::0::1::::<><>::res://scenes/settings_window.gd
 settings_window.gd::GDScript::-1::1738965449::0::1::::<>Panel<>::
 wega.gd::GDScript::-1::1739047536::0::1::::<>Sprite3D<>::
-wega.tscn::PackedScene::4617986234045561769::1739050242::0::1::::<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>res://scenes/wega.gd<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
+wega.tscn::PackedScene::4617986234045561769::1739058655::0::1::::<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>res://scenes/wega.gd<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
 ::res://scenes/autoload/::1738965449
 GameManager.gd::GDScript::-1::1738965449::0::1::::<>Node<>::
 SettingsHandler.gd::GDScript::-1::1738965449::0::1::::<>Node<>::
-::res://scenes/menus/::1739050242
+::res://scenes/menus/::1739058655
 gameover.gd::GDScript::-1::1739047817::0::1::::<>Node2D<>::
-gameover.tscn::PackedScene::4822005129990280951::1739050242::0::1::::<><>::res://scenes/menus/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
-::res://scenes/objects/::1739050242
+gameover.tscn::PackedScene::4822005129990280951::1739058655::0::1::::<><>::res://scenes/menus/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
+::res://scenes/objects/::1739058655
 wegadoll.gd::GDScript::-1::1739049350::0::1::::<>Node3D<>::
-wegadoll.tscn::PackedScene::6717543873806726871::1739050242::0::1::::<><>::res://scenes/objects/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
-::res://shaders/::1739050243
-texturescroll.gdshader::Shader::-1::1739050242::0::1::::<><>::
+wegadoll.tscn::PackedScene::6717543873806726871::1739058655::0::1::::<><>::res://scenes/objects/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
+::res://shaders/::1739058656
+texturescroll.gdshader::Shader::-1::1739058655::0::1::::<><>::
 ::res://test_scene_assets/::1738965472
 ButtonInteractible.gd::GDScript::-1::1738965449::0::1::::<>Interactible3D<>::
 cat_screenshot.jpg::CompressedTexture2D::5024421459478628532::1738965449::1738965472::1::::<><>::
