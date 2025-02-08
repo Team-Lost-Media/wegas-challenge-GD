@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cax2yqkm1rgqx"]
+
+[ext_resource type="Script" path="res://scenes/menus/gameover.gd" id="1_40yjg"]
+[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_2cmpw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgope"]
+font_size = 50
+font_color = Color(1, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_40yjg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 558.0
+offset_top = 135.0
+offset_right = 1091.0
+offset_bottom = 290.0
+text = "you suck!!!!"
+label_settings = SubResource("LabelSettings_i3kce")
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 23.0
+offset_top = 248.0
+offset_right = 752.0
+offset_bottom = 403.0
+text = "press space to retry"
+label_settings = SubResource("LabelSettings_tgope")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1151.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Maltigi" type="Sprite2D" parent="."]
+position = Vector2(286, 321)
+texture = ExtResource("2_2cmpw")

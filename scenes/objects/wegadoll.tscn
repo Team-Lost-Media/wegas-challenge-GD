@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2ya7342irkd8"]
+
+[ext_resource type="Script" path="res://scenes/objects/wegadoll.gd" id="1_em6xu"]
+[ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="1_s7v15"]
+
+[sub_resource type="Animation" id="Animation_2hahg"]
+resource_name = "spin"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WegaDoll:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.14159, 0), Vector3(0, -3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rphn0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WegaDoll:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrb3n"]
+_data = {
+"RESET": SubResource("Animation_rphn0"),
+"spin": SubResource("Animation_2hahg")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fror2"]
+radius = 0.404445
+height = 1.36394
+
+[node name="wegadoll" type="Node3D"]
+script = ExtResource("1_em6xu")
+
+[node name="WegaDoll" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+mesh = ExtResource("1_s7v15")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xrb3n")
+}
+autoplay = "spin"
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529757, 0)
+shape = SubResource("CapsuleShape3D_fror2")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

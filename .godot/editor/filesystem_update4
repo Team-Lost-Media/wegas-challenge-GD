@@ -1,0 +1,11 @@
+res://shaders/texturescroll.gdshader
+res://assets/meshlibraries/main.tres
+res://scenes/wega.gd
+res://main.tscn
+res://scenes/mainMenu.tscn
+res://scenes/wega.tscn
+res://scenes/menus/gameover.tscn
+res://scenes/menus/gameover.gd
+res://scenes/objects/wegadoll.gd
+res://scenes/objects/wegadoll.tscn
+res://assets/meshlibraries/wegadoll.tres
