@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Wegas Challenge GD port"
 config/version="1.0"
-config/tags=PackedStringArray("shitpost", "wega")
+config/tags=PackedStringArray("finished", "shitpost", "wega")
 run/main_scene="res://scenes/menus/main/mainMenu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/textures/SORETRO-1.png.png"
