@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=4 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" path="res://scenes/settings_window.gd" id="1_36pg8"]
+[ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
@@ -14,7 +15,6 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [node name="Settings" type="Panel"]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,6 +30,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
 script = ExtResource("1_36pg8")
 
 [node name="Label" type="Label" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -42,6 +43,7 @@ grow_horizontal = 2
 text = "Settings"
 
 [node name="HSeparator" type="HSeparator" parent="."]
+z_index = 1
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -53,6 +55,7 @@ offset_bottom = 34.0
 grow_horizontal = 2
 
 [node name="OptionButton" type="OptionButton" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 115.0
 offset_top = 37.5
@@ -70,6 +73,7 @@ popup/item_3/text = "640x360"
 popup/item_3/id = 3
 
 [node name="Label" type="Label" parent="OptionButton"]
+z_index = 1
 layout_mode = 0
 offset_left = -109.0
 offset_top = 2.0
@@ -78,6 +82,7 @@ offset_bottom = 25.0
 text = "Resolution"
 
 [node name="CheckBox" type="CheckBox" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 192.0
 offset_top = 72.5
@@ -85,6 +90,7 @@ offset_right = 216.0
 offset_bottom = 96.5
 
 [node name="Label" type="Label" parent="CheckBox"]
+z_index = 1
 layout_mode = 0
 offset_left = -186.0
 offset_top = -1.0
@@ -93,6 +99,7 @@ offset_bottom = 22.0
 text = "Fullscreen"
 
 [node name="CheckBox2" type="CheckBox" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 192.0
 offset_top = 103.5
@@ -100,6 +107,7 @@ offset_right = 216.0
 offset_bottom = 127.5
 
 [node name="Label" type="Label" parent="CheckBox2"]
+z_index = 1
 layout_mode = 0
 offset_left = -186.0
 offset_top = -1.0
@@ -108,6 +116,7 @@ offset_bottom = 22.0
 text = "VSync"
 
 [node name="Button" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 5.0
 offset_top = 213.0
@@ -116,6 +125,7 @@ offset_bottom = 246.0
 text = "Apply"
 
 [node name="Button2" type="Button" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 194.0
 offset_top = 2.5
@@ -125,6 +135,7 @@ theme_override_font_sizes/font_size = 14
 text = "X"
 
 [node name="HSlider" type="HSlider" parent="."]
+z_index = 1
 layout_mode = 0
 offset_left = 91.0
 offset_top = 133.5
@@ -135,12 +146,24 @@ step = 0.05
 value = 1.0
 
 [node name="Label" type="Label" parent="HSlider"]
+z_index = 1
 layout_mode = 0
 offset_left = -85.0
 offset_top = -3.0
 offset_right = -2.0
 offset_bottom = 20.0
 text = "Volume"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.277528, 0.277528, 0.277528, 1)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 221.0
+offset_bottom = 250.0
+mouse_filter = 2
+texture = ExtResource("2_cpgv8")
+expand_mode = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_apply_settings"]
 [connection signal="pressed" from="Button2" to="." method="_on_close"]

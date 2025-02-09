@@ -1,0 +1,17 @@
+res://addons/gridmap-plus/assets/Buttons.tres::4c78b022b25e74d1f776b3789558188e::1739050624::res://.godot/exported/133200997/export-4824c4e54b3942677acf394561961221-Buttons.res
+res://addons/gridmap-plus/assets/Crosshair.tres::a3fd89258cb0e46fc9275b8112bd353c::1739050624::res://.godot/exported/133200997/export-2e962f5c96a75e341f5d89513201b166-Crosshair.res
+res://addons/gridmap-plus/dock/Dock.tscn::480e7cbd411c1b99267bd5cf3ef1c64a::1739050624::res://.godot/exported/133200997/export-424f126aea340e5f7298700e3e0f8d09-Dock.scn
+res://addons/gridmap-plus/dock/Toolbar.tscn::0c3a06d035e08045751be51a6e9677d9::1739050624::res://.godot/exported/133200997/export-09ab738921419881b2f65b06ec6998e2-Toolbar.scn
+res://assets/meshlibraries/main.tres::4e917ef202ba9d56af76440c0774d16d::1739111993::res://.godot/exported/133200997/export-e1655654f65c73583551a7bfce2ed774-main.res
+res://assets/meshlibraries/main_node.tscn::490da7399a65ff300cbcedcdf6175f36::1738967118::res://.godot/exported/133200997/export-51f9074e4177ebd5bfcf6eb423a508ac-main_node.scn
+res://scenes/main/main2.tscn::487e134f3f7537f0c57379ad867a3bb5::1739113926::res://.godot/exported/133200997/export-57ac4a5e9d78f87a5480f68208d1e703-main2.scn
+res://scenes/main/main.tscn::bcbb3593819b904c1c56364850d3b089::1739113926::res://.godot/exported/133200997/export-f39996a6d27a38698d16421ab974097b-main.scn
+res://scenes/menus/gameover/gameover.tscn::03d8246f130f565eaccd78a33bb4eaea::1739112699::res://.godot/exported/133200997/export-44e307c698f270905b213a8067c82029-gameover.scn
+res://scenes/menus/main/mainMenu.tscn::0fc5b50b99185b199e7ef18ddb6a1e55::1739113926::res://.godot/exported/133200997/export-3e8c53b8cfa8835ce2123d82e44eac51-mainMenu.scn
+res://scenes/menus/win/win.tscn::a55e3446e9bf7aa990d36929200c6ace::1739112728::res://.godot/exported/133200997/export-7c61c3b0c3193f7d180812b6adc2bd64-win.scn
+res://scenes/objects/player/player.tscn::5cf0c46d26b8e764e0ea5479e2533913::1739113926::res://.godot/exported/133200997/export-2276a51087c81b031e3f5ae748ea0216-player.scn
+res://scenes/objects/urio/urio.tscn::93759136e40c9093d7c2385f1d760a5a::1739113927::res://.godot/exported/133200997/export-0e539ca9549bd6ffdc7921493ee2ff49-urio.scn
+res://scenes/objects/wega/wega.tscn::51a1e944c0485d01e0254f2cc83bbc8a::1739113926::res://.godot/exported/133200997/export-f2b2f4f84d4877ff2af1a91e9ddec8f3-wega.scn
+res://scenes/objects/wegadoll/wegadoll.tscn::f980703744d2e07a15225c553f95762c::1739113926::res://.godot/exported/133200997/export-ebedb2ff38c10c2e9cb2f0adf3588fea-wegadoll.scn
+res://scenes/objects/deathbarrier.tscn::da7917a461e246a9470627a66ccc9e2c::1739113927::res://.godot/exported/133200997/export-55001a860bc5539f64d99d7562274ffb-deathbarrier.scn
+res://scenes/SettingsWindow.tscn::cdf321df24e9079a093785482aac5590::1739113927::res://.godot/exported/133200997/export-0c0da958d4fcdc240005a36d33fdd44d-SettingsWindow.scn

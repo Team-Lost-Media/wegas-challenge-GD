@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://lhw2tjfc1bc4"]
+[gd_scene load_steps=10 format=3 uid="uid://lhw2tjfc1bc4"]
 
 [ext_resource type="Script" path="res://scenes/main/gameloop2.gd" id="1_5ycap"]
 [ext_resource type="PackedScene" uid="uid://dtvrk2opu62up" path="res://scenes/objects/urio/urio.tscn" id="2_ksh3n"]
@@ -8,11 +8,23 @@
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="5_48f8n"]
 [ext_resource type="PackedScene" uid="uid://c2ya7342irkd8" path="res://scenes/objects/wegadoll/wegadoll.tscn" id="6_hmca7"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ngiwc"]
+font_size = 50
+
 [sub_resource type="Environment" id="Environment_wcvh3"]
 background_mode = 1
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_5ycap")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="GUI"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "wegas left: "
+label_settings = SubResource("LabelSettings_ngiwc")
+metadata/_edit_use_anchors_ = true
 
 [node name="Urio" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_ksh3n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15395, 20.1477)
@@ -20,7 +32,7 @@ playerpos = NodePath("../Player")
 speed = 13.0
 
 [node name="Player" parent="." instance=ExtResource("3_qga71")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.30058, 1.36802, 7.32258)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.30058, 1.36802, 9.35969)
 DEFAULT_SPEED = 14
 JUMP_VELOCITY = 0.0
 
@@ -48,6 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 stream = ExtResource("5_2ax8x")
 pitch_scale = 1.25
 autoplay = true
+parameters/looping = true
 
 [node name="group of wegas" type="Node3D" parent="."]
 

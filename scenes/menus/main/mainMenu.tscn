@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
-[ext_resource type="Texture2D" uid="uid://crbwdh5irpgui" path="res://assets/textures/wch3.png" id="2_syd02"]
+[ext_resource type="Texture2D" uid="uid://bnhpvbl0maafv" path="res://assets/textures/wch.png" id="2_oj6mh"]
 [ext_resource type="PackedScene" uid="uid://bs035oor8cgug" path="res://scenes/SettingsWindow.tscn" id="3_u5k1e"]
 [ext_resource type="Shader" path="res://shaders/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
@@ -26,11 +26,11 @@ script = ExtResource("1_mgf8r")
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 402.0
+offset_left = 433.0
 offset_top = 106.0
-offset_right = 784.0
+offset_right = 722.0
 offset_bottom = 290.0
-texture = ExtResource("2_syd02")
+texture = ExtResource("2_oj6mh")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -52,6 +52,7 @@ layout_mode = 2
 text = "Exit to desktop"
 
 [node name="Settings" parent="." instance=ExtResource("3_u5k1e")]
+visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_left = 0.0

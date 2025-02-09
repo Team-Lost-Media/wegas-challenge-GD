@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739063109
+::res://::1739111986
 icon.png::CompressedTexture2D::7924870037967611849::1738965449::1739062721::1::::<><>::
 ::res://addons/::1739050624
 ::res://addons/gridmap-plus/::1739050625
@@ -28,58 +28,63 @@ Toolbar.tscn::PackedScene::1792008193621627274::1739050624::0::1::::<><>::res://
 ::res://assets/BGM/::1739062405
 WEXECUTION part2.mp3::AudioStreamMP3::425772264080042001::1739062403::1739062405::1::::<><>::
 WEXECUTION.mp3::AudioStreamMP3::5267975667889712132::1739047421::1739047434::1::::<><>::
-::res://assets/meshlibraries/::1739059358
-main.tres::MeshLibrary::3256605164773035509::1739059358::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
+::res://assets/meshlibraries/::1739111993
+main.tres::MeshLibrary::3256605164773035509::1739111993::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
 main_node.tscn::PackedScene::3628909229905760584::1738967118::0::1::::<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png
 ::res://assets/Models/::1739062709
 7c33ed83.png::CompressedTexture2D::1762344265196924901::1739049008::1739049009::1::::<><>::
 luigidoll.obj::Mesh::1010693284744560514::1739048914::1739048914::1::::<><>::uid://0dxs11b638dl::::res://assets/Models/7c33ed83.png
-::res://assets/SFX/::1739063132
+::res://assets/SFX/::1739113772
+ding-sound-effect_2.mp3::AudioStreamMP3::8493367675932837558::1739113533::1739113534::1::::<><>::
 hl2 stalker scream.mp3::AudioStreamMP3::7373014147468029977::1739047520::1739047522::1::::<><>::
 urio.mp3::AudioStreamMP3::3915800145385139053::1739063132::1739063132::1::::<><>::
+wood tap.mp3::AudioStreamMP3::977154771026694563::1739113772::1739113772::1::::<><>::
 you're winner.mp3::AudioStreamMP3::4559864138229508788::1739062688::1739062688::1::::<><>::
-::res://assets/textures/::1739072623
+::res://assets/textures/::1739112522
 maltigi.jpg::CompressedTexture2D::1938301278932766979::1738968785::1738968788::1::::<><>::
 shoe_bench.png::CompressedTexture2D::3414474368800384829::1739047890::1739047890::1::::<><>::
 SORETRO-1.png.png::CompressedTexture2D::1909281577612996051::1738966863::1738966881::1::::<><>::
 urio.png::CompressedTexture2D::5153051984921413146::1739072623::1739072626::1::::<><>::
 wch3.png::CompressedTexture2D::5969457632603771088::1738966147::1738966147::1::::<><>::
+wch.png::CompressedTexture2D::3314274622497560799::1739112519::1739112522::1::::<><>::
 wega.png::CompressedTexture2D::2696350657868709057::1738965899::1738966437::1::::<><>::
 you winga.png::CompressedTexture2D::8471274237064570921::1739062903::1739062904::1::::<><>::
-::res://scenes/::1739072588
+::res://scenes/::1739113608
 pause_node.gd::GDScript::-1::1738965449::0::1::::<>Control<>::
-SettingsWindow.tscn::PackedScene::3703183720414537606::1739072588::0::1::::<><>::res://scenes/settings_window.gd
+SettingsWindow.tscn::PackedScene::3703183720414537606::1739113608::0::1::::<><>::res://scenes/settings_window.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png
 settings_window.gd::GDScript::-1::1738965449::0::1::::<>Panel<>::
 ::res://scenes/autoload/::1739062481
 GameManager.gd::GDScript::-1::1739062481::0::1::::<>Node<>::
 SettingsHandler.gd::GDScript::-1::1738965449::0::1::::<>Node<>::
-::res://scenes/main/::1739072588
-gameloop2.gd::GDScript::-1::1739063091::0::1::::<>Node3D<>::
-gameloop.gd::GDScript::-1::1739072587::0::1::::<>Node3D<>::
-main2.tscn::PackedScene::787912926650834485::1739072588::0::1::::<><>::res://scenes/main/gameloop2.gd<>uid://dtvrk2opu62up::::res://scenes/objects/urio/urio.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://gcin3qcooyqb::::res://assets/BGM/WEXECUTION part2.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
-main.tscn::PackedScene::1070366442542408141::1739072587::0::1::::<><>::res://scenes/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
+::res://scenes/main/::1739113608
+gameloop2.gd::GDScript::-1::1739112445::0::1::::<>Node3D<>::
+gameloop.gd::GDScript::-1::1739113607::0::1::::<>Node3D<>::
+main2.tscn::PackedScene::787912926650834485::1739113608::0::1::::<><>::res://scenes/main/gameloop2.gd<>uid://dtvrk2opu62up::::res://scenes/objects/urio/urio.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://gcin3qcooyqb::::res://assets/BGM/WEXECUTION part2.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
+main.tscn::PackedScene::1070366442542408141::1739113608::0::1::::<><>::res://scenes/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://dtair3t3lk2lu::::res://assets/SFX/ding-sound-effect_2.mp3
 ::res://scenes/menus/::1739062920
-::res://scenes/menus/gameover/::1739072588
-gameover.gd::GDScript::-1::1739063091::0::1::::<>Node2D<>::
-gameover.tscn::PackedScene::4822005129990280951::1739072588::0::1::::<><>::res://scenes/menus/gameover/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
-::res://scenes/menus/main/::1739072587
-mainMenu.tscn::PackedScene::290914851781947886::1739072587::0::1::::<><>::res://scenes/menus/main/main_menu.gd<>uid://crbwdh5irpgui::::res://assets/textures/wch3.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>res://shaders/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png
+::res://scenes/menus/gameover/::1739112699
+gameover.gd::GDScript::-1::1739072812::0::1::::<>Node2D<>::
+gameover.tscn::PackedScene::4822005129990280951::1739112699::0::1::::<><>::res://scenes/menus/gameover/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
+::res://scenes/menus/main/::1739113607
+mainMenu.tscn::PackedScene::290914851781947886::1739113607::0::1::::<><>::res://scenes/menus/main/main_menu.gd<>uid://bnhpvbl0maafv::::res://assets/textures/wch.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>res://shaders/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png
 main_menu.gd::GDScript::-1::1739063092::0::1::::<>Control<>::
-::res://scenes/menus/win/::1739072588
-win.gd::GDScript::-1::1739063092::0::1::::<>Node2D<>::
-win.tscn::PackedScene::6043677511306581012::1739072588::0::1::::<><>::res://scenes/menus/win/win.gd<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3
-::res://scenes/objects/::1739063101
-::res://scenes/objects/player/::1739072588
+::res://scenes/menus/win/::1739112728
+win.gd::GDScript::-1::1739073101::0::1::::<>Node2D<>::
+win.tscn::PackedScene::6043677511306581012::1739112728::0::1::::<><>::res://scenes/menus/win/win.gd<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3
+::res://scenes/objects/::1739113608
+deathbarrier.gd::GDScript::-1::1739073726::0::1::::<>Area3D<>::
+deathbarrier.tscn::PackedScene::4263417348308328412::1739113608::0::1::::<><>::res://scenes/objects/deathbarrier.gd
+::res://scenes/objects/player/::1739113608
 player.gd::GDScript::-1::1739072587::0::1::::PlayerCharacter<>CharacterBody3D<>::
-player.tscn::PackedScene::3611808840168377422::1739072588::0::1::::<><>::res://scenes/objects/player/player.gd
-::res://scenes/objects/urio/::1739072588
-urio.tscn::PackedScene::8537253500320476731::1739072588::0::1::::<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>res://scenes/objects/wega/wega.gd<>uid://bv13wkw1r5qdh::::res://assets/SFX/urio.mp3
+player.tscn::PackedScene::3611808840168377422::1739113608::0::1::::<><>::res://scenes/objects/player/player.gd
+::res://scenes/objects/urio/::1739113608
+urio.tscn::PackedScene::8537253500320476731::1739113608::0::1::::<><>::uid://cfogapnt1wsr7::::res://assets/textures/urio.png<>res://scenes/objects/wega/wega.gd<>uid://bv13wkw1r5qdh::::res://assets/SFX/urio.mp3
 wega.gd::GDScript::-1::1739063101::0::1::::<>Sprite3D<>::
-::res://scenes/objects/wega/::1739072588
-wega.gd::GDScript::-1::1739061841::0::1::::<>Sprite3D<>::
-wega.tscn::PackedScene::4617986234045561769::1739072588::0::1::::<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>res://scenes/objects/wega/wega.gd<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
-::res://scenes/objects/wegadoll/::1739072588
+::res://scenes/objects/wega/::1739113608
+wega.gd::GDScript::-1::1739072679::0::1::::<>Sprite3D<>::
+wega.tscn::PackedScene::4617986234045561769::1739113608::0::1::::<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>res://scenes/objects/wega/wega.gd<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
+::res://scenes/objects/wegadoll/::1739113608
 wegadoll.gd::GDScript::-1::1739062481::0::1::::<>Node3D<>::
-wegadoll.tscn::PackedScene::6717543873806726871::1739072588::0::1::::<><>::res://scenes/objects/wegadoll/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
-::res://shaders/::1739072588
-texturescroll.gdshader::Shader::-1::1739072588::0::1::::<><>::
+wegadoll.tscn::PackedScene::6717543873806726871::1739113608::0::1::::<><>::res://scenes/objects/wegadoll/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
+::res://shaders/::1739113609
+texturescroll.gdshader::Shader::-1::1739113608::0::1::::<><>::

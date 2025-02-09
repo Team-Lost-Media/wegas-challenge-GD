@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://piq1qo6dhgdh"]
+[gd_scene load_steps=11 format=3 uid="uid://piq1qo6dhgdh"]
 
 [ext_resource type="Script" path="res://scenes/main/gameloop.gd" id="1_g51f3"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_o8krw"]
@@ -7,12 +7,25 @@
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="5_kwqv8"]
 [ext_resource type="AudioStream" uid="uid://chb3131atdha7" path="res://assets/BGM/WEXECUTION.mp3" id="5_plv8s"]
 [ext_resource type="PackedScene" uid="uid://c2ya7342irkd8" path="res://scenes/objects/wegadoll/wegadoll.tscn" id="6_12rhd"]
+[ext_resource type="AudioStream" uid="uid://n6lujls2y0vf" path="res://assets/SFX/wood tap.mp3" id="7_biobv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t52ot"]
+font_size = 50
 
 [sub_resource type="Environment" id="Environment_wcvh3"]
 background_mode = 1
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_g51f3")
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="GUI"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "wegas left: "
+label_settings = SubResource("LabelSettings_t52ot")
+metadata/_edit_use_anchors_ = true
 
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_o8krw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
@@ -47,6 +60,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_plv8s")
 autoplay = true
+parameters/looping = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_biobv")
+pitch_scale = 1.7
 
 [node name="group of wegas" type="Node3D" parent="."]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crbwdh5irpgui"
-path="res://.godot/imported/wch3.png-d237303f56ea8f168aa75b65671e7a89.ctex"
+uid="uid://bnhpvbl0maafv"
+path="res://.godot/imported/wch.png-00f79c7c7ce89430d722b059c471f417.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/wch3.png"
-dest_files=["res://.godot/imported/wch3.png-d237303f56ea8f168aa75b65671e7a89.ctex"]
+source_file="res://assets/textures/wch.png"
+dest_files=["res://.godot/imported/wch.png-00f79c7c7ce89430d722b059c471f417.ctex"]
 
 [params]
 
