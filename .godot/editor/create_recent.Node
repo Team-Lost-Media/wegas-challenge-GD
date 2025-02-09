@@ -1,12 +1,11 @@
-Node3D
-GridMap
-Brush
 CollisionShape3D
 Area3D
+GridMap
+AudioStreamPlayer
+Node3D
 AnimationPlayer
 ColorRect
 AudioStreamPlayer3D
-AudioStreamPlayer
 Label
 Camera2D
 Timer

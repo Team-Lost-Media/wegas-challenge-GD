@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtvrk2opu62up"]
+
+[ext_resource type="Texture2D" uid="uid://cfogapnt1wsr7" path="res://assets/textures/urio.png" id="1_a0tkc"]
+[ext_resource type="Script" path="res://scenes/objects/wega/wega.gd" id="2_qbycy"]
+[ext_resource type="AudioStream" uid="uid://bv13wkw1r5qdh" path="res://assets/SFX/urio.mp3" id="3_dp1vr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4c0fa"]
+size = Vector3(1.39148, 1.7153, 0.257813)
+
+[node name="Urio" type="Sprite3D"]
+pixel_size = 0.006
+billboard = 1
+texture = ExtResource("1_a0tkc")
+region_rect = Rect2(20, 0, 0, 0)
+script = ExtResource("2_qbycy")
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
+shape = SubResource("BoxShape3D_4c0fa")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_dp1vr")
+autoplay = true
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

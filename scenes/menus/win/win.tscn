@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://csduqrm086aoq"]
+
+[ext_resource type="Script" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
+[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_2ugug"]
+[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="3_25npl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgope"]
+font_size = 50
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_rc6es")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 558.0
+offset_top = 135.0
+offset_right = 1091.0
+offset_bottom = 290.0
+text = "you winga!"
+label_settings = SubResource("LabelSettings_i3kce")
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 248.0
+offset_right = 685.0
+offset_bottom = 403.0
+text = "press space to go to menu"
+label_settings = SubResource("LabelSettings_tgope")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1211.0
+offset_bottom = 671.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="NOT Maltigi" type="Sprite2D" parent="."]
+position = Vector2(255, 324)
+scale = Vector2(2.59432, 2.30412)
+texture = ExtResource("2_2ugug")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_25npl")
+autoplay = true
