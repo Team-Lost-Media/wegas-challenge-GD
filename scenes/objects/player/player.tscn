@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://brpt71jl5cg2q"]
+[gd_scene load_steps=9 format=3 uid="uid://brpt71jl5cg2q"]
 
-[ext_resource type="Script" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
+[ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
+[ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jse87"]
 
@@ -71,14 +72,15 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_auuwx"]
 _data = {
-"RESET": SubResource("Animation_fnymu"),
-"crouch": SubResource("Animation_nuoua"),
-"sprint": SubResource("Animation_px50k")
+&"RESET": SubResource("Animation_fnymu"),
+&"crouch": SubResource("Animation_nuoua"),
+&"sprint": SubResource("Animation_px50k")
 }
 
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
+mouse_sensitivity = 10.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.295367, 0)
@@ -101,5 +103,15 @@ collide_with_bodies = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_auuwx")
+&"": SubResource("AnimationLibrary_auuwx")
 }
+
+[node name="DashCooldown" type="Timer" parent="."]
+one_shot = true
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = 900.0
+offset_right = 1149.0
+offset_bottom = 27.0
+max_value = 1.0
+script = ExtResource("2_g10m2")

@@ -25,6 +25,9 @@ var inputEnabled := true # can the player move?
 var aimlookEnabled := true # can the player look around?
 var interactionsEnabled := true # can the player interact with Interactibles3D?
 
+var dash_multiplier: float = 1
+@onready var dash_cooldown: Timer = $DashCooldown
+
 #region Main control flow 
 
 func _ready():
@@ -37,19 +40,30 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity.y += -55 * delta
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 	
+	if Input.is_action_just_pressed("sprint") and dash_cooldown.is_stopped():
+		dash_multiplier = 5
+		velocity.y = 5
+		dash_cooldown.start()
+	
+	if dash_multiplier > 1:
+		dash_multiplier = move_toward(dash_multiplier, 1, 0.2)
+	
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * SPEED * dash_multiplier
+		velocity.z = direction.z * SPEED * dash_multiplier
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED) 
+	
+	camera.fov = SettingsHandler.fov
+	mouse_sensitivity = SettingsHandler.sensitivity
 	
 	# All of the other processing functions go here
 	_process_interact()
@@ -78,8 +92,8 @@ func _unhandled_input(event : InputEvent):
 		var mouseInput : Vector2
 		mouseInput.x += event.relative.x
 		mouseInput.y += event.relative.y
-		self.rotation_degrees.y -= mouseInput.x * mouse_sensitivity
-		head.rotation_degrees.x -= mouseInput.y * mouse_sensitivity
+		self.rotation_degrees.y -= mouseInput.x * mouse_sensitivity / 100
+		head.rotation_degrees.x -= mouseInput.y * mouse_sensitivity / 100
 
 #endregion
 

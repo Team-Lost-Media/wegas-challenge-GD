@@ -6,6 +6,8 @@ extends Panel
 @onready var FullscreenToggle = $CheckBox
 @onready var VSyncToggle = $CheckBox2
 @onready var AudioSlider = $HSlider
+@onready var FOVSlider = $HSlider2
+@onready var SensitivitySlider = $HSlider3
 
 signal Closing
 
@@ -20,6 +22,8 @@ func _ready():
 	FullscreenToggle.button_pressed = SettingsHandler.get_value("fullscreen")
 	VSyncToggle.button_pressed = SettingsHandler.get_value("vsync")
 	AudioSlider.value = SettingsHandler.get_value("volume")
+	FOVSlider.value = SettingsHandler.get_value("fov")
+	SensitivitySlider.value = SettingsHandler.get_value("sensitivity")
 
 func _on_apply_settings() -> void:
 	var resolution = ResolutionOption.get_item_text(ResolutionOption.selected)
@@ -27,7 +31,7 @@ func _on_apply_settings() -> void:
 	var vsync = VSyncToggle.button_pressed
 	resolution = resolution.split("x")
 	resolution = [int(resolution[0]), int(resolution[1])]
-	SettingsHandler.SettingsDict = {"resolution": resolution, "vsync": vsync, "fullscreen": fullscreen, "volume": AudioSlider.value}
+	SettingsHandler.SettingsDict = {"resolution": resolution, "vsync": vsync, "fullscreen": fullscreen, "volume": AudioSlider.value, "fov" : FOVSlider.value, "sensitivity" : SensitivitySlider.value}
 	
 	SettingsHandler._apply_settings()
 	SettingsHandler._save_settings()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=5 format=3 uid="uid://bs035oor8cgug"]
 
-[ext_resource type="Script" path="res://scenes/settings_window.gd" id="1_36pg8"]
+[ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
+[ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
@@ -65,6 +66,7 @@ theme_override_font_sizes/font_size = 13
 selected = 2
 item_count = 4
 popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
 popup/item_1/text = "1280x720"
 popup/item_1/id = 1
 popup/item_2/text = "1152x648"
@@ -153,6 +155,51 @@ offset_top = -3.0
 offset_right = -2.0
 offset_bottom = 20.0
 text = "Volume"
+
+[node name="HSlider2" type="HSlider" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 91.0
+offset_top = 159.0
+offset_right = 212.0
+offset_bottom = 175.0
+min_value = 30.0
+max_value = 150.0
+value = 75.0
+script = ExtResource("2_007d3")
+fov = true
+
+[node name="Label" type="Label" parent="HSlider2"]
+z_index = 1
+layout_mode = 0
+offset_left = -84.5
+offset_top = -4.0
+offset_right = -1.5
+offset_bottom = 19.0
+text = "FOV"
+
+[node name="HSlider3" type="HSlider" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 122.5
+offset_top = 182.0
+offset_right = 212.5
+offset_bottom = 198.0
+min_value = 5.0
+max_value = 30.0
+step = 0.5
+value = 10.0
+script = ExtResource("2_007d3")
+sensitivity = true
+
+[node name="Label" type="Label" parent="HSlider3"]
+z_index = 1
+layout_mode = 0
+offset_left = -116.0
+offset_top = -4.0
+offset_right = -10.0
+offset_bottom = 19.0
+text = "Sensitivity: 10"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.277528, 0.277528, 0.277528, 1)

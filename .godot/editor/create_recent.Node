@@ -1,3 +1,6 @@
+OmniLight3D
+ProgressBar
+Timer
 AudioStreamPlayer
 AudioStreamPlayer3D
 TextureRect
@@ -10,5 +13,3 @@ GridMap
 Node3D
 AnimationPlayer
 ColorRect
-Camera2D
-Timer

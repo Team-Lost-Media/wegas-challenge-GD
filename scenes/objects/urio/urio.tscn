@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dtvrk2opu62up"]
 
 [ext_resource type="Texture2D" uid="uid://cfogapnt1wsr7" path="res://assets/textures/urio.png" id="1_a0tkc"]
-[ext_resource type="Script" path="res://scenes/objects/wega/wega.gd" id="2_qbycy"]
+[ext_resource type="Script" uid="uid://gnxufoxmdk25" path="res://scenes/objects/wega/wega.gd" id="2_qbycy"]
 [ext_resource type="AudioStream" uid="uid://bv13wkw1r5qdh" path="res://assets/SFX/urio.mp3" id="3_dp1vr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4c0fa"]

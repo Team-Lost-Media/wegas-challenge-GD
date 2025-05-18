@@ -5,7 +5,10 @@ extends Node
 var SettingsDict : Dictionary
 
 const SETTINGS_FILE_PATH = "user://settings.sav"
-const DEFAULT_SETTINGS = {"resolution": [1152, 648], "vsync": true, "fullscreen": false, "volume" : 1} # Settings that are set by default, in case if settings file does not exist
+const DEFAULT_SETTINGS = {"resolution": [1152, 648], "vsync": true, "fullscreen": false, "volume" : 1, "fov" : 75, "sensitivity" : 10} # Settings that are set by default, in case if settings file does not exist
+
+var fov: float = 75 #ignore this
+var sensitivity: float = 10 #ignore this too
 
 func _ready():
 	await _load_settings()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://c2ya7342irkd8"]
 
-[ext_resource type="Script" path="res://scenes/objects/wegadoll/wegadoll.gd" id="1_em6xu"]
+[ext_resource type="Script" uid="uid://c678w1er04n1n" path="res://scenes/objects/wegadoll/wegadoll.gd" id="1_em6xu"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="1_s7v15"]
 
 [sub_resource type="Animation" id="Animation_rphn0"]
@@ -36,13 +36,13 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xrb3n"]
 _data = {
-"RESET": SubResource("Animation_rphn0"),
-"spin": SubResource("Animation_2hahg")
+&"RESET": SubResource("Animation_rphn0"),
+&"spin": SubResource("Animation_2hahg")
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fror2"]
 radius = 0.404445
-height = 1.36394
+height = 2.30811
 
 [node name="wegadoll" type="Node3D"]
 script = ExtResource("1_em6xu")
@@ -53,14 +53,14 @@ mesh = ExtResource("1_s7v15")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_xrb3n")
+&"": SubResource("AnimationLibrary_xrb3n")
 }
 autoplay = "spin"
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.529757, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 1.12622, 0)
 shape = SubResource("CapsuleShape3D_fror2")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

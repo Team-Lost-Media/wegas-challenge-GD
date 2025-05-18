@@ -13,3 +13,7 @@ func _process(delta: float) -> void:
 	label.text = "wegas left: %s" % wegasleft
 	if wegasleft == 0:
 		get_tree().change_scene_to_file("res://scenes/main/main2.tscn")
+	
+	if Input.is_action_just_pressed("escape"):
+		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

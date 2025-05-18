@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://piq1qo6dhgdh"]
 
-[ext_resource type="Script" path="res://scenes/main/gameloop.gd" id="1_g51f3"]
+[ext_resource type="Script" uid="uid://cp7ixbdpto73r" path="res://scenes/main/gameloop.gd" id="1_g51f3"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_o8krw"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_pnemw"]
 [ext_resource type="MeshLibrary" uid="uid://bmnr2t3cooaoj" path="res://assets/meshlibraries/main.tres" id="4_260hc"]
@@ -30,12 +30,18 @@ metadata/_edit_use_anchors_ = true
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_o8krw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
-speed = 6.5
+speed = 11.5
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Wega"]
+light_color = Color(1, 0, 0, 1)
+light_energy = 7.5
+shadow_enabled = true
+omni_range = 10.0
 
 [node name="Player" parent="." instance=ExtResource("3_pnemw")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.53794, 1.36802, 8.21174)
-DEFAULT_SPEED = 7
-JUMP_VELOCITY = 0.0
+DEFAULT_SPEED = 11
+JUMP_VELOCITY = 10.0
 
 [node name="Main" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485046, 0.712285, 0.156724)
