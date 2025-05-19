@@ -31,6 +31,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.15395, 20.1477)
 playerpos = NodePath("../Player")
 speed = 13.0
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Urio"]
+light_color = Color(1, 0, 0, 1)
+light_energy = 10.0
+light_indirect_energy = 2.0
+shadow_enabled = true
+omni_range = 10.0
+
 [node name="Player" parent="." instance=ExtResource("3_qga71")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.30058, 1.36802, 9.35969)
 DEFAULT_SPEED = 14
