@@ -1,10 +1,10 @@
+Label
 OmniLight3D
 ProgressBar
 Timer
 AudioStreamPlayer
 AudioStreamPlayer3D
 TextureRect
-Label
 Label3D
 CanvasLayer
 CollisionShape3D
@@ -12,4 +12,3 @@ Area3D
 GridMap
 Node3D
 AnimationPlayer
-ColorRect

@@ -12,3 +12,5 @@ res://scenes/SettingsWindow.tscn
 res://scenes/menus/gameover/gameover.gd
 res://scenes/menus/gameover/gameover.tscn
 res://assets/meshlibraries/main_node.tscn
+res://scenes/objects/player/player.gd
+res://scenes/objects/player/progress_bar.gd

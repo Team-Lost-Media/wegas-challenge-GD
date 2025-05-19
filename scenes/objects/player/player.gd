@@ -21,12 +21,15 @@ var currentState : CharacterState = CharacterState.WALKING
 @export var mouse_sensitivity := 0.1
 @export var SPRINT_SPEED := 3.5
 @export var CROUCH_SPEED := 1.5
+@export var max_dashes: int = 2
 var inputEnabled := true # can the player move?
 var aimlookEnabled := true # can the player look around?
 var interactionsEnabled := true # can the player interact with Interactibles3D?
 
 var dash_multiplier: float = 1
+var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
+@onready var superjump_cooldown: Timer = $SuperJumpCooldown
 
 #region Main control flow 
 
@@ -43,11 +46,17 @@ func _physics_process(delta: float) -> void:
 		velocity.y += -55 * delta
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		if Input.is_action_pressed("superjump") and superjump_cooldown.is_stopped():
+			velocity.y = JUMP_VELOCITY * 2.5
+			superjump_cooldown.start()
+		else:
+			velocity.y = JUMP_VELOCITY
 	
-	if Input.is_action_just_pressed("sprint") and dash_cooldown.is_stopped():
+	if Input.is_action_just_pressed("sprint") and dashes_left > 0:
+		dash_cooldown.stop()
 		dash_multiplier = 5
 		velocity.y = 5
+		dashes_left -= 1
 		dash_cooldown.start()
 	
 	if dash_multiplier > 1:
@@ -70,6 +79,10 @@ func _physics_process(delta: float) -> void:
 	_handle_states()
 	
 	move_and_slide()
+
+func _on_dash_cooldown_timeout() -> void:
+	dashes_left = max_dashes
+
 
 #endregion
 

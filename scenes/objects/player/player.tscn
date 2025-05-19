@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://brpt71jl5cg2q"]
+[gd_scene load_steps=15 format=3 uid="uid://brpt71jl5cg2q"]
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jse87"]
 
@@ -77,6 +78,24 @@ _data = {
 &"sprint": SubResource("Animation_px50k")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wim6f"]
+bg_color = Color(0.545098, 0.054902, 0.690196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmdvr"]
+bg_color = Color(0.141176, 0, 0.2, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nkbs0"]
+font = ExtResource("3_0a575")
+font_size = 41
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0a575"]
+bg_color = Color(0.368627, 0.054902, 0.690196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkbs0"]
+bg_color = Color(0.0901961, 0, 0.2, 1)
+
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
@@ -107,11 +126,44 @@ libraries = {
 }
 
 [node name="DashCooldown" type="Timer" parent="."]
+wait_time = 1.5
 one_shot = true
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
-offset_left = 900.0
-offset_right = 1149.0
-offset_bottom = 27.0
+[node name="SuperJumpCooldown" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="DashCooldownBar" type="ProgressBar" parent="."]
+offset_left = 850.0
+offset_top = 3.0
+offset_right = 1150.0
+offset_bottom = 45.0
+theme_override_styles/background = SubResource("StyleBoxFlat_wim6f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_gmdvr")
 max_value = 1.0
+show_percentage = false
 script = ExtResource("2_g10m2")
+dash = true
+
+[node name="Label" type="Label" parent="DashCooldownBar"]
+layout_mode = 0
+offset_left = -352.0
+offset_right = -16.0
+offset_bottom = 37.0
+text = "dashes left: 2"
+label_settings = SubResource("LabelSettings_nkbs0")
+vertical_alignment = 1
+
+[node name="SuperJumpCooldownBar" type="ProgressBar" parent="."]
+offset_left = 850.0
+offset_top = 68.0
+offset_right = 1149.0
+offset_bottom = 109.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0a575")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nkbs0")
+max_value = 1.0
+show_percentage = false
+script = ExtResource("2_g10m2")
+superjump = true
+
+[connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
