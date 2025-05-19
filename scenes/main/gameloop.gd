@@ -6,6 +6,10 @@ extends Node3D
 
 @onready var wegasleft = group_of_wegas.get_child_count()
 
+func _ready() -> void:
+	Points.points = 0
+	Points.style = "none"
+
 func _process(delta: float) -> void:
 	if wegasleft != group_of_wegas.get_child_count():
 		sfx.play()

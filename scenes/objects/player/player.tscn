@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://brpt71jl5cg2q"]
+[gd_scene load_steps=26 format=3 uid="uid://brpt71jl5cg2q"]
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
+[ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
+[ext_resource type="Script" uid="uid://cc3nhv7vlnl17" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
+[ext_resource type="Script" uid="uid://cx5silmovrt1o" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jse87"]
 
@@ -96,6 +99,41 @@ bg_color = Color(0.368627, 0.054902, 0.690196, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkbs0"]
 bg_color = Color(0.0901961, 0, 0.2, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wim6f"]
+
+[sub_resource type="Gradient" id="Gradient_gmdvr"]
+colors = PackedColorArray(0.0651733, 0.0156, 0.13, 0.501961, 0.238095, 0.1147, 0.37, 0.501961)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_io36v"]
+gradient = SubResource("Gradient_gmdvr")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gmdvr"]
+font = ExtResource("3_0a575")
+font_size = 41
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Gradient" id="Gradient_io36v"]
+colors = PackedColorArray(0.12549, 0.0156863, 0.207843, 1, 0.6265, 0.17, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bdcal"]
+gradient = SubResource("Gradient_io36v")
+height = 16
+fill_from = Vector2(1, 0.311927)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdcal"]
+font = ExtResource("3_0a575")
+font_size = 41
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_io36v"]
+font = ExtResource("3_0a575")
+font_size = 41
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Player" type="CharacterBody3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
@@ -127,6 +165,10 @@ libraries = {
 
 [node name="DashCooldown" type="Timer" parent="."]
 wait_time = 1.5
+one_shot = true
+
+[node name="JustDashed" type="Timer" parent="."]
+wait_time = 0.25
 one_shot = true
 
 [node name="SuperJumpCooldown" type="Timer" parent="."]
@@ -166,4 +208,57 @@ show_percentage = false
 script = ExtResource("2_g10m2")
 superjump = true
 
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_left = 900.0
+offset_top = 132.0
+offset_right = 1149.0
+offset_bottom = 323.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wim6f")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_io36v")
+
+[node name="StyleBar" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme = ExtResource("4_nkbs0")
+script = ExtResource("5_wim6f")
+
+[node name="RankLabel" type="Label" parent="PanelContainer/StyleBar"]
+layout_mode = 2
+text = "SHOE BENCH"
+label_settings = SubResource("LabelSettings_gmdvr")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/StyleBar"]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_bdcal")
+
+[node name="StyleLabel" type="Label" parent="PanelContainer/StyleBar"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_bdcal")
+
+[node name="PointsLabel" type="Label" parent="PanelContainer/StyleBar"]
+layout_mode = 2
+text = "points"
+label_settings = SubResource("LabelSettings_bdcal")
+
+[node name="Timer" type="Label" parent="PanelContainer/StyleBar"]
+layout_mode = 2
+text = "0:0.00"
+label_settings = SubResource("LabelSettings_io36v")
+script = ExtResource("6_gmdvr")
+
+[node name="Timer" type="Timer" parent="PanelContainer/StyleBar/Timer"]
+wait_time = 0.01
+autostart = true
+
+[node name="Debug" type="Label" parent="."]
+offset_left = 528.0
+offset_top = 50.0
+offset_right = 953.0
+offset_bottom = 384.0
+
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar" method="_on_timer_timeout"]
+[connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]

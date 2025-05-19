@@ -10,22 +10,26 @@ config_version=5
 
 [application]
 
-config/name="Wegas Challenge GD port"
+config/name="Wegas Challenge: WEGAKILL"
+config/description="wega's challenge but with more stuff, this is based off of a port of wega's challenge to godot made by xetheon"
 config/version="1.0"
 config/tags=PackedStringArray("finished", "shitpost", "wega")
 run/main_scene="res://scenes/menus/main/mainMenu.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://assets/textures/SORETRO-1.png.png"
+config/icon="uid://bei5enh7oagrt"
 
 [autoload]
 
 SettingsHandler="*res://scenes/autoload/SettingsHandler.gd"
 GameManager="*res://scenes/autoload/GameManager.gd"
+Points="*res://scenes/objects/player/points.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/description=""
+mouse_cursor/name="Wegas Challenge GD port"
 
 [dotnet]
 
@@ -116,5 +120,6 @@ escape={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

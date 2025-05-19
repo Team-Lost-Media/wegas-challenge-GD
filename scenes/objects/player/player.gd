@@ -30,6 +30,7 @@ var dash_multiplier: float = 1
 var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
+@onready var just_dashed: Timer = $JustDashed
 
 #region Main control flow 
 
@@ -37,6 +38,7 @@ func _ready():
 	$MeshInstance3D.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GameManager.player = self
+	
 
 func _physics_process(delta: float) -> void:
 	if !inputEnabled:
@@ -54,6 +56,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("sprint") and dashes_left > 0:
 		dash_cooldown.stop()
+		just_dashed.start()
 		dash_multiplier = 5
 		velocity.y = 5
 		dashes_left -= 1

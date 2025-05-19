@@ -20,6 +20,21 @@ func _on_start_timer_timeout() -> void:
 	enabled = true
 
 
-func _on_area_3d_body_entered(body: Node3D) -> void:
+func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		get_tree().change_scene_to_file("res://scenes/menus/gameover/gameover.tscn")
+
+
+func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		if enabled:
+			Points.points += 300
+			Points.style = "+ABOVE"
+			print("ABOVE")
+
+func _on_juke_area_3d_body_entered(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		if enabled and body.just_dashed.is_stopped() == false:
+			Points.points += 300
+			Points.style = "+JUKED"
+			print("JUKED")
