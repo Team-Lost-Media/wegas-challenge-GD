@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cax2yqkm1rgqx"]
 
-[ext_resource type="Script" path="res://scenes/menus/gameover/gameover.gd" id="1_40yjg"]
+[ext_resource type="Script" uid="uid://x1oq3o7aaim7" path="res://scenes/menus/gameover/gameover.gd" id="1_40yjg"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_2cmpw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
