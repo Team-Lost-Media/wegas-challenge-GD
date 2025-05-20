@@ -1,4 +1,6 @@
 Timer
+ProgressBar
+TextureProgressBar
 Label
 PanelContainer
 Container
@@ -10,5 +12,3 @@ CollisionShape3D
 Area3D
 Button
 OmniLight3D
-ProgressBar
-AudioStreamPlayer

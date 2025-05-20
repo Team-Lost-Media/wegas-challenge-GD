@@ -1,7 +1,8 @@
-res://scenes/main/main.tscn
+res://scenes/menus/main/mainMenu.tscn
 res://shaders/texturescroll.gdshader
 res://assets/meshlibraries/main.tres
-res://scenes/menus/main/mainMenu.tscn
+res://scenes/objects/player/global.gd
+res://scenes/main/main.tscn
 res://scenes/main/main2.tscn
 res://scenes/objects/wega/wega.tscn
 res://scenes/objects/wegadoll/wegadoll.tscn
@@ -11,3 +12,4 @@ res://scenes/objects/deathbarrier.tscn
 res://scenes/SettingsWindow.tscn
 res://scenes/menus/gameover/gameover.tscn
 res://assets/meshlibraries/main_node.tscn
+res://scenes/objects/player/style_bar.gd

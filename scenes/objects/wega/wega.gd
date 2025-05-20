@@ -29,14 +29,14 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if enabled:
-			Points.points += 200
-			Points.style = "+ABOVE"
+			Global.points += 200
+			Global.style = "+ABOVE"
 			print("ABOVE")
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if enabled and body.just_dashed.is_stopped() == false and juke_timer.is_stopped():
 			juke_timer.start()
-			Points.points += 400
-			Points.style = "+JUKED"
+			Global.points += 400
+			Global.style = "+JUKED"
 			print("JUKED")

@@ -1,6 +1,10 @@
 extends Node3D
 
+signal collected
+
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		Points.points += 1
+		collected.connect(Global.collect_wegadoll)
+		collected.emit()
+		Global.points += 1
 		queue_free()
