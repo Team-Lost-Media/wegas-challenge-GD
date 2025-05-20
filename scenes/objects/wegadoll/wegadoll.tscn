@@ -41,8 +41,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fror2"]
-radius = 0.404445
-height = 2.30811
+height = 2.5
 
 [node name="wegadoll" type="Node3D"]
 script = ExtResource("1_em6xu")
@@ -60,7 +59,7 @@ autoplay = "spin"
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 1.12622, 0)
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
 shape = SubResource("CapsuleShape3D_fror2")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

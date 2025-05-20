@@ -3,6 +3,7 @@ extends Sprite3D
 @export var playerpos: CharacterBody3D
 @export var speed: float
 @onready var start_timer: Timer = $StartTimer
+@onready var juke_timer: Timer = $JukeTimer
 @onready var audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var enabled = false
@@ -28,13 +29,14 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if enabled:
-			Points.points += 300
+			Points.points += 200
 			Points.style = "+ABOVE"
 			print("ABOVE")
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		if enabled and body.just_dashed.is_stopped() == false:
-			Points.points += 300
+		if enabled and body.just_dashed.is_stopped() == false and juke_timer.is_stopped():
+			juke_timer.start()
+			Points.points += 400
 			Points.style = "+JUKED"
 			print("JUKED")
