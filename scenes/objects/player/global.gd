@@ -3,11 +3,16 @@ extends Node
 var points: int = 0
 var style: String = "none"#the idea is, once style != null itll display it in a style bar like ultrakill and then become null
 
+var tutorial = false
 
 
-func one_centisecond_passed() -> void:
+func one_centisecond_has_passed() -> void:
 	pass #print("test")
 
+func reset(): #execited when the player retries after a game over or win
+	points = 0
+	style = "none"
+	wegadoll_combo = 0
 
 var timer = Timer
 var wegadoll_combo_timer = timer.new()

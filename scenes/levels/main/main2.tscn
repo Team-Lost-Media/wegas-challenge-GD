@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://lhw2tjfc1bc4"]
 
-[ext_resource type="Script" uid="uid://bpcionidbxdty" path="res://scenes/main/gameloop2.gd" id="1_5ycap"]
+[ext_resource type="Script" uid="uid://bpcionidbxdty" path="res://scenes/levels/main/gameloop2.gd" id="1_5ycap"]
 [ext_resource type="PackedScene" uid="uid://dtvrk2opu62up" path="res://scenes/objects/urio/urio.tscn" id="2_ksh3n"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_qga71"]
 [ext_resource type="MeshLibrary" uid="uid://bmnr2t3cooaoj" path="res://assets/meshlibraries/main.tres" id="4_7npv4"]

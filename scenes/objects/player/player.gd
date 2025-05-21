@@ -26,11 +26,16 @@ var inputEnabled := true # can the player move?
 var aimlookEnabled := true # can the player look around?
 var interactionsEnabled := true # can the player interact with Interactibles3D?
 
+# MY variables!!!!!!!!!!!!
 var dash_multiplier: float = 1
 var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
 @onready var just_dashed: Timer = $JustDashed
+@onready var coyote_timer: Timer = $CoyoteTimer
+@onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
+var coyote: bool
+var coyote_disabled: bool
 
 #region Main control flow 
 
@@ -44,15 +49,23 @@ func _physics_process(delta: float) -> void:
 	if !inputEnabled:
 		return
 	
+	
 	if not is_on_floor():
 		velocity.y += -55 * delta
+		if coyote_timer.is_stopped() and !coyote and !coyote_disabled:
+			coyote_timer.start()
+			coyote = true
+	else:
+		coyote_disabled = false
 	
-	if Input.is_action_just_pressed("jump") and is_on_floor():
-		if Input.is_action_pressed("superjump") and superjump_cooldown.is_stopped():
-			velocity.y = JUMP_VELOCITY * 2.5
-			superjump_cooldown.start()
-		else:
-			velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("jump"):
+		if is_on_floor() or coyote:
+			if Input.is_action_pressed("superjump") and superjump_cooldown.is_stopped():
+				velocity.y = JUMP_VELOCITY * 2.5
+				superjump_cooldown.start()
+			else:
+				velocity.y = JUMP_VELOCITY
+		coyote_disabled = true
 	
 	if Input.is_action_just_pressed("sprint") and dashes_left > 0:
 		dash_cooldown.stop()
@@ -85,6 +98,9 @@ func _physics_process(delta: float) -> void:
 
 func _on_dash_cooldown_timeout() -> void:
 	dashes_left = max_dashes
+func _on_coyote_timer_timeout() -> void:
+	coyote = false
+	coyote_disabled = true
 
 
 #endregion

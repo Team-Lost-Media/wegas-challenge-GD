@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://csduqrm086aoq"]
+
+[ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_xe150"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_7qphd"]
+[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_n72p0"]
+[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="3_7qphd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_aydif"]
+font = ExtResource("2_7qphd")
+font_size = 41
+outline_size = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_dq4ij"]
+font_size = 41
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xe150")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 558.0
+offset_top = 135.0
+offset_right = 1091.0
+offset_bottom = 290.0
+text = "good job!"
+label_settings = SubResource("LabelSettings_i3kce")
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 248.0
+offset_right = 685.0
+offset_bottom = 403.0
+text = "now do it for real"
+label_settings = SubResource("LabelSettings_aydif")
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -48.0
+offset_top = 296.0
+offset_right = 681.0
+offset_bottom = 451.0
+text = "press space to go to menu)"
+label_settings = SubResource("LabelSettings_dq4ij")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1211.0
+offset_bottom = 671.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="NOT Maltigi" type="Sprite2D" parent="."]
+position = Vector2(255, 324)
+scale = Vector2(2.59432, 2.30412)
+texture = ExtResource("2_n72p0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7qphd")
+autoplay = true

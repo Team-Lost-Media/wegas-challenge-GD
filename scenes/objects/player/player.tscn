@@ -174,6 +174,10 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="DashCooldownBar" type="ProgressBar" parent="."]
 offset_left = 789.0
 offset_top = 3.0
@@ -270,5 +274,6 @@ scale = Vector2(1, 0.998576)
 script = ExtResource("7_io36v")
 
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
 [connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar" method="_on_timer_timeout"]
 [connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]

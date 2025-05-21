@@ -43,6 +43,10 @@ offset_bottom = 482.0
 layout_mode = 2
 text = "Play"
 
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tutorial"
+
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Settings"
@@ -77,6 +81,7 @@ texture = ExtResource("5_etru4")
 expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]

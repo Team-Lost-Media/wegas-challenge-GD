@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://csduqrm086aoq"]
+[gd_scene load_steps=6 format=3 uid="uid://bkj25ag02mueh"]
 
-[ext_resource type="Script" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
+[ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
 [ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_2ugug"]
 [ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="3_25npl"]
 

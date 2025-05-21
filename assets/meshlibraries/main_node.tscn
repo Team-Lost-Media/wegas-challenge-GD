@@ -1,16 +1,62 @@
-[gd_scene load_steps=5 format=3 uid="uid://brx4utgdehcom"]
+[gd_scene load_steps=20 format=3 uid="uid://brx4utgdehcom"]
 
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="1_5cmm4"]
+[ext_resource type="ArrayMesh" uid="uid://tcpbqh6payhs" path="res://assets/Models/lamp/Lamp base obj.obj" id="2_0a210"]
+[ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="2_k3wk4"]
+[ext_resource type="ArrayMesh" uid="uid://calfkgwgxmet8" path="res://assets/Models/lamp/Lamp glass obj.obj" id="3_k3wk4"]
+[ext_resource type="ArrayMesh" uid="uid://bjy0tbfcprkjc" path="res://assets/Models/lamp/Lamp metal obj.obj" id="4_dod8n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rh51"]
 albedo_texture = ExtResource("1_5cmm4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_wa1se"]
 material = SubResource("StandardMaterial3D_2rh51")
-size = Vector3(5, 1, 5)
+size = Vector3(2, 0.3, 2)
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_p3yht"]
-data = PackedVector3Array(-2.5, 0.5, 2.5, 2.5, 0.5, 2.5, -2.5, -0.5, 2.5, 2.5, 0.5, 2.5, 2.5, -0.5, 2.5, -2.5, -0.5, 2.5, 2.5, 0.5, -2.5, -2.5, 0.5, -2.5, 2.5, -0.5, -2.5, -2.5, 0.5, -2.5, -2.5, -0.5, -2.5, 2.5, -0.5, -2.5, 2.5, 0.5, 2.5, 2.5, 0.5, -2.5, 2.5, -0.5, 2.5, 2.5, 0.5, -2.5, 2.5, -0.5, -2.5, 2.5, -0.5, 2.5, -2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, -0.5, -2.5, -2.5, 0.5, 2.5, -2.5, -0.5, 2.5, -2.5, -0.5, -2.5, 2.5, 0.5, 2.5, -2.5, 0.5, 2.5, 2.5, 0.5, -2.5, -2.5, 0.5, 2.5, -2.5, 0.5, -2.5, 2.5, 0.5, -2.5, -2.5, -0.5, 2.5, 2.5, -0.5, 2.5, -2.5, -0.5, -2.5, 2.5, -0.5, 2.5, 2.5, -0.5, -2.5, -2.5, -0.5, -2.5)
+[sub_resource type="BoxShape3D" id="BoxShape3D_so3v1"]
+size = Vector3(4, 0.3, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3wk4"]
+albedo_color = Color(0.0980392, 0.0980392, 0.25098, 1)
+albedo_texture = ExtResource("1_5cmm4")
+
+[sub_resource type="BoxMesh" id="BoxMesh_dod8n"]
+material = SubResource("StandardMaterial3D_k3wk4")
+size = Vector3(2, 0.3, 2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uvt1l"]
+material = ExtResource("2_k3wk4")
+size = Vector3(2, 2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uvt1l"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvt1l"]
+albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kj88f"]
+material = SubResource("StandardMaterial3D_uvt1l")
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rcnw4"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dod8n"]
+albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
+emission = Color(0.572549, 0.2, 1, 1)
+disable_receive_shadows = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvfsl"]
+size = Vector3(1.5, 2, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_la0hb"]
+transparency = 1
+albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 0.592157)
+disable_receive_shadows = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvgls"]
+albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
+disable_receive_shadows = true
 
 [node name="Node3D2" type="Node3D"]
 
@@ -20,4 +66,57 @@ mesh = SubResource("BoxMesh_wa1se")
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_p3yht")
+shape = SubResource("BoxShape3D_so3v1")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = SubResource("BoxMesh_dod8n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D4/StaticBody3D"]
+shape = SubResource("BoxShape3D_so3v1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+mesh = SubResource("BoxMesh_uvt1l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0205078, 5.96046e-07, 0.00145221)
+shape = SubResource("BoxShape3D_uvt1l")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, -0.5, 0)
+mesh = SubResource("BoxMesh_kj88f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00571346, 3.57628e-07, 0.000585318)
+shape = SubResource("BoxShape3D_rcnw4")
+
+[node name="Lamp" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
+mesh = ExtResource("2_0a210")
+surface_material_override/0 = SubResource("StandardMaterial3D_dod8n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Lamp"]
+transform = Transform3D(1.44046, 0, 0, 0, 1.44046, 0, 0, 0, 1.44046, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_nvfsl")
+
+[node name="Glass" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
+mesh = ExtResource("3_k3wk4")
+skeleton = NodePath("../Lamp")
+surface_material_override/0 = SubResource("StandardMaterial3D_la0hb")
+
+[node name="Handle" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
+mesh = ExtResource("4_dod8n")
+skeleton = NodePath("../Lamp")
+surface_material_override/0 = SubResource("StandardMaterial3D_nvgls")

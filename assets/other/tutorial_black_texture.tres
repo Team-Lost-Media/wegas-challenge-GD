@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://qano16jjkcr2"]
+
+[sub_resource type="Gradient" id="Gradient_rcnw4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_so3v1"]
+gradient = SubResource("Gradient_rcnw4")
+
+[resource]
+albedo_color = Color(0.02288, 0.0216, 0.06, 1)
+normal_texture = SubResource("GradientTexture2D_so3v1")

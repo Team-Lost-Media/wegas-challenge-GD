@@ -1,4 +1,9 @@
+GridMap
+Node3D
+OmniLight3D
 Timer
+Label3D
+Button
 ProgressBar
 TextureProgressBar
 Label
@@ -8,7 +13,3 @@ TextureRect
 ColorRect
 RichTextLabel
 VBoxContainer
-CollisionShape3D
-Area3D
-Button
-OmniLight3D

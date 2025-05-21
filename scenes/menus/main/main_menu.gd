@@ -10,7 +10,12 @@ extends Control
 
 
 func _play() -> void:
-	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
+
+func _tutorial() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/tutorial/tutorial.tscn")
+	Global.tutorial = true
+
 
 func _settings() -> void:
 	settings.show()
