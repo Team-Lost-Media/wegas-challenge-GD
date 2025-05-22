@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://piq1qo6dhgdh"]
+[gd_scene load_steps=57 format=4 uid="uid://piq1qo6dhgdh"]
 
 [ext_resource type="Script" uid="uid://cp7ixbdpto73r" path="res://scenes/levels/main/gameloop.gd" id="1_g51f3"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_o8krw"]
@@ -13,8 +13,26 @@
 [sub_resource type="LabelSettings" id="LabelSettings_t52ot"]
 font_size = 50
 
-[sub_resource type="Environment" id="Environment_wcvh3"]
-background_mode = 1
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_osekl"]
+sky_top_color = Color(0.085, 0, 0.17, 1)
+sky_horizon_color = Color(0.05, 0, 0.1, 1)
+sky_curve = 5.51375
+ground_bottom_color = Color(0.027451, 0, 0.0588235, 1)
+ground_horizon_color = Color(0.34902, 0, 0.376471, 1)
+ground_curve = 0.0527804
+sun_angle_max = 123.1
+sun_curve = 0.121838
+
+[sub_resource type="Sky" id="Sky_j726a"]
+sky_material = SubResource("ProceduralSkyMaterial_osekl")
+
+[sub_resource type="Environment" id="Environment_dwkvq"]
+background_mode = 2
+background_color = Color(0.05, 0, 0.1, 1)
+sky = SubResource("Sky_j726a")
+ambient_light_source = 3
+ambient_light_color = Color(1, 0.916667, 0.75, 1)
+ssao_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rh51"]
 albedo_texture = ExtResource("4_osekl")
@@ -444,10 +462,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_o8krw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
-speed = 11.5
+speed = 11.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Wega"]
-light_color = Color(1, 0, 0, 1)
+light_color = Color(0.5, 0, 1, 1)
 light_energy = 7.5
 shadow_enabled = true
 omni_range = 10.0
@@ -460,12 +478,15 @@ JUMP_VELOCITY = 10.0
 [node name="Main" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485046, 0.712285, 0.156724)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Main"]
-environment = SubResource("Environment_wcvh3")
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="Main"]
+environment = SubResource("Environment_dwkvq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Main"]
-transform = Transform3D(1, 0, 0, 0, 0.0447701, 0.998997, 0, -0.998997, 0.0447701, 6.17167, 9.17757, 0)
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 6.65672, 8.46529, -0.156724)
+light_color = Color(1, 0, 0.25, 1)
+light_energy = 3.0
 light_angular_distance = 30.0
+shadow_enabled = true
 
 [node name="GridMap" type="GridMap" parent="Main"]
 mesh_library = SubResource("MeshLibrary_0g67u")

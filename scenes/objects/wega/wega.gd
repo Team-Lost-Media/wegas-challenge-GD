@@ -18,7 +18,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if enabled:
-		global_position = global_position.move_toward(playerpos.global_position, delta * speed)
+		global_position = global_position.move_toward(playerpos.global_position + Vector3(0, 0.6, 0), delta * speed)
 		if not audio.playing:
 			audio.play()
 

@@ -15,3 +15,5 @@ res://assets/meshlibraries/main_node.tscn
 res://scenes/levels/tutorial/tutorial.tscn
 res://scenes/menus/win/tutorial win.tscn
 res://scenes/menus/win/win.tscn
+res://scenes/objects/wega/wega.gd
+res://scenes/levels/main/gameloop.gd
