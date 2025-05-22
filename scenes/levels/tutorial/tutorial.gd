@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 	wegasleft = group_of_wegas.get_child_count()
 	if wegasleft == 0:
 		get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
+		Global.tutorial = false
 
 
 func _on_wegadoll_collected() -> void: #this only applies to the first one dw

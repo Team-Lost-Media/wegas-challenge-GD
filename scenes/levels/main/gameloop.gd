@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 	wegasleft = group_of_wegas.get_child_count()
 	label.text = "wegas left: %s" % wegasleft
 	if wegasleft == 0:
-		get_tree().change_scene_to_file("res://scenes/main/main2.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/main/main2.tscn")
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")

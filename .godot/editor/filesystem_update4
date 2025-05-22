@@ -1,7 +1,7 @@
-res://scenes/levels/tutorial/tutorial.tscn
-res://shaders/texturescroll.gdshader
-res://assets/meshlibraries/main.tres
 res://scenes/menus/main/mainMenu.tscn
+res://shaders/texturescroll.gdshader
+res://assets/other/tutorial_black_texture.tres
+res://assets/meshlibraries/main.tres
 res://scenes/levels/main/main.tscn
 res://scenes/levels/main/main2.tscn
 res://scenes/objects/wega/wega.tscn
@@ -12,7 +12,6 @@ res://scenes/objects/deathbarrier.tscn
 res://scenes/SettingsWindow.tscn
 res://scenes/menus/gameover/gameover.tscn
 res://assets/meshlibraries/main_node.tscn
-res://scenes/menus/win/win.tscn
-res://scenes/levels/tutorial/tutorial.gd
-res://scenes/objects/player/player.gd
+res://scenes/levels/tutorial/tutorial.tscn
 res://scenes/menus/win/tutorial win.tscn
+res://scenes/menus/win/win.tscn
