@@ -462,7 +462,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_o8krw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
-speed = 11.0
+speed = 11.5
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Wega"]
 light_color = Color(0.5, 0, 1, 1)
