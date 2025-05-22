@@ -9,6 +9,8 @@ extends Sprite3D
 @onready var audio: AudioStreamPlayer3D = $AudioStreamPlayer3D
 
 var enabled = false
+var speed_multiplier: float = 1.0
+var status: String = ""
 
 func _ready() -> void:
 	start_timer.wait_time = time_to_enable
@@ -18,9 +20,16 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if enabled:
-		global_position = global_position.move_toward(playerpos.global_position + Vector3(0, 0.6, 0), delta * speed)
+		global_position = global_position.move_toward(playerpos.global_position + Vector3(0, 0.6, 0), delta * speed * speed_multiplier)
 		if not audio.playing:
 			audio.play()
+		if status == "JUKED":
+			if speed_multiplier < 0.8:
+				speed_multiplier = lerp(speed_multiplier, 1.0, 0.8 * delta)
+				print(speed_multiplier)
+			else:
+				speed_multiplier = 1
+				status = ""
 
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:
@@ -45,6 +54,8 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if enabled and body.just_dashed.is_stopped() == false and juke_timer.is_stopped():
 			juke_timer.start()
+			speed_multiplier = 0.5
+			status = "JUKED"
 			Global.points += 400
 			Global.style = "+JUKED"
 			print("JUKED")

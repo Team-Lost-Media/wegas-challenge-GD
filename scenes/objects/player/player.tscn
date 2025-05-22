@@ -265,7 +265,6 @@ wait_time = 0.01
 autostart = true
 
 [node name="Debug" type="Label" parent="."]
-visible = false
 offset_left = 281.0
 offset_top = 63.0
 offset_right = 957.0

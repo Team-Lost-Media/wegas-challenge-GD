@@ -17,3 +17,5 @@ res://scenes/menus/win/tutorial win.tscn
 res://scenes/menus/win/win.tscn
 res://scenes/objects/wega/wega.gd
 res://scenes/levels/main/gameloop.gd
+res://scenes/objects/player/player.gd
+res://scenes/objects/player/debug.gd
