@@ -2,12 +2,13 @@ extends Panel
 
 ## Settings panel that does settings things
 
-@onready var ResolutionOption = $OptionButton
-@onready var FullscreenToggle = $CheckBox
-@onready var VSyncToggle = $CheckBox2
-@onready var AudioSlider = $HSlider
-@onready var FOVSlider = $HSlider2
-@onready var SensitivitySlider = $HSlider3
+@onready var ResolutionOption = $VBoxContainer/ResolutionOptionButton
+@onready var FullscreenToggle = $VBoxContainer/FullscreenCheckBox
+@onready var VSyncToggle = $VBoxContainer/VSyncCheckBox
+@onready var AudioSlider = $VBoxContainer/SFXSlider
+@onready var MusicSlider = $VBoxContainer/BGMSlider
+@onready var FOVSlider = $VBoxContainer/FOVSlider
+@onready var SensitivitySlider = $VBoxContainer/SensitivitySlider
 
 signal Closing
 
@@ -19,9 +20,11 @@ func _ready():
 		if text == r:
 			ResolutionOption.selected = i
 			break
+	ResolutionOption.selected = SettingsHandler.get_value("selected resolution")
 	FullscreenToggle.button_pressed = SettingsHandler.get_value("fullscreen")
 	VSyncToggle.button_pressed = SettingsHandler.get_value("vsync")
-	AudioSlider.value = SettingsHandler.get_value("volume")
+	AudioSlider.value = SettingsHandler.get_value("sfx volume")
+	MusicSlider.value = SettingsHandler.get_value("music volume")
 	FOVSlider.value = SettingsHandler.get_value("fov")
 	SensitivitySlider.value = SettingsHandler.get_value("sensitivity")
 
@@ -31,7 +34,7 @@ func _on_apply_settings() -> void:
 	var vsync = VSyncToggle.button_pressed
 	resolution = resolution.split("x")
 	resolution = [int(resolution[0]), int(resolution[1])]
-	SettingsHandler.SettingsDict = {"resolution": resolution, "vsync": vsync, "fullscreen": fullscreen, "volume": AudioSlider.value, "fov" : FOVSlider.value, "sensitivity" : SensitivitySlider.value}
+	SettingsHandler.SettingsDict = {"selected resolution": ResolutionOption.selected, "resolution": resolution, "vsync": vsync, "fullscreen": fullscreen, "sfx volume": AudioSlider.value, "music volume": MusicSlider.value, "fov" : FOVSlider.value, "sensitivity" : SensitivitySlider.value}
 	
 	SettingsHandler._apply_settings()
 	SettingsHandler._save_settings()

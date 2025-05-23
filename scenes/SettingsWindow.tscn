@@ -21,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -112.5
+offset_left = -112.0
 offset_top = -128.0
-offset_right = 109.5
-offset_bottom = 123.0
+offset_right = 110.0
+offset_bottom = 143.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
@@ -43,25 +43,38 @@ offset_bottom = 29.0
 grow_horizontal = 2
 text = "Settings"
 
+[node name="Button2" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 194.0
+offset_top = 2.5
+offset_right = 219.0
+offset_bottom = 30.5
+theme_override_font_sizes/font_size = 14
+text = "X"
+
 [node name="HSeparator" type="HSeparator" parent="."]
 z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -107.0
+layout_mode = 2
+offset_left = 4.0
 offset_top = 30.0
-offset_right = 107.0
+offset_right = 218.0
 offset_bottom = 34.0
 grow_horizontal = 2
 
-[node name="OptionButton" type="OptionButton" parent="."]
-z_index = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_direction = 3
 layout_mode = 0
-offset_left = 115.0
-offset_top = 37.5
-offset_right = 214.0
-offset_bottom = 63.5
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 109.0
+offset_bottom = 268.0
+theme_override_constants/separation = 5
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="VBoxContainer"]
+z_index = 1
+layout_direction = 2
+layout_mode = 2
 theme_override_font_sizes/font_size = 13
 selected = 2
 item_count = 4
@@ -74,117 +87,50 @@ popup/item_2/id = 2
 popup/item_3/text = "640x360"
 popup/item_3/id = 3
 
-[node name="Label" type="Label" parent="OptionButton"]
+[node name="FullscreenCheckBox" type="CheckBox" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = -109.0
-offset_top = 2.0
-offset_right = -26.0
-offset_bottom = 25.0
-text = "Resolution"
+layout_direction = 2
+layout_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="."]
+[node name="VSyncCheckBox" type="CheckBox" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = 192.0
-offset_top = 72.5
-offset_right = 216.0
-offset_bottom = 96.5
+layout_direction = 2
+layout_mode = 2
 
-[node name="Label" type="Label" parent="CheckBox"]
+[node name="SFXSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = -186.0
-offset_top = -1.0
-offset_right = -103.0
-offset_bottom = 22.0
-text = "Fullscreen"
-
-[node name="CheckBox2" type="CheckBox" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 192.0
-offset_top = 103.5
-offset_right = 216.0
-offset_bottom = 127.5
-
-[node name="Label" type="Label" parent="CheckBox2"]
-z_index = 1
-layout_mode = 0
-offset_left = -186.0
-offset_top = -1.0
-offset_right = -103.0
-offset_bottom = 22.0
-text = "VSync"
-
-[node name="Button" type="Button" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 5.0
-offset_top = 213.0
-offset_right = 217.0
-offset_bottom = 246.0
-text = "Apply"
-
-[node name="Button2" type="Button" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 194.0
-offset_top = 2.5
-offset_right = 219.0
-offset_bottom = 30.5
-theme_override_font_sizes/font_size = 14
-text = "X"
-
-[node name="HSlider" type="HSlider" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 91.0
-offset_top = 133.5
-offset_right = 212.0
-offset_bottom = 149.5
+custom_minimum_size = Vector2(0, 23)
+layout_direction = 2
+layout_mode = 2
 max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="Label" type="Label" parent="HSlider"]
+[node name="BGMSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = -85.0
-offset_top = -3.0
-offset_right = -2.0
-offset_bottom = 20.0
-text = "Volume"
+custom_minimum_size = Vector2(0, 23)
+layout_direction = 2
+layout_mode = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
 
-[node name="HSlider2" type="HSlider" parent="."]
+[node name="FOVSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = 91.0
-offset_top = 159.0
-offset_right = 212.0
-offset_bottom = 175.0
+custom_minimum_size = Vector2(0, 23)
+layout_direction = 2
+layout_mode = 2
 min_value = 30.0
 max_value = 150.0
 value = 75.0
 script = ExtResource("2_007d3")
 fov = true
 
-[node name="Label" type="Label" parent="HSlider2"]
+[node name="SensitivitySlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-layout_mode = 0
-offset_left = -84.5
-offset_top = -4.0
-offset_right = -1.5
-offset_bottom = 19.0
-text = "FOV"
-
-[node name="HSlider3" type="HSlider" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 122.5
-offset_top = 182.0
-offset_right = 212.5
-offset_bottom = 198.0
+custom_minimum_size = Vector2(0, 23)
+layout_direction = 2
+layout_mode = 2
 min_value = 5.0
 max_value = 30.0
 step = 0.5
@@ -192,14 +138,60 @@ value = 10.0
 script = ExtResource("2_007d3")
 sensitivity = true
 
-[node name="Label" type="Label" parent="HSlider3"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 36.0
+offset_right = 120.0
+offset_bottom = 268.0
+theme_override_constants/separation = 5
+
+[node name="Resolution" type="Label" parent="VBoxContainer2"]
+z_index = 1
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+text = "Resolution"
+
+[node name="Fullscreen" type="Label" parent="VBoxContainer2"]
+z_index = 1
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+text = "Fullscreen"
+
+[node name="VSync" type="Label" parent="VBoxContainer2"]
+z_index = 1
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+text = "VSync"
+
+[node name="SFX Volume" type="Label" parent="VBoxContainer2"]
+z_index = 1
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="BGM Volume" type="Label" parent="VBoxContainer2"]
+z_index = 1
+layout_mode = 2
+text = "BGM Volume"
+
+[node name="FOV" type="Label" parent="VBoxContainer2"]
+z_index = 1
+layout_mode = 2
+text = "FOV: 75"
+
+[node name="Sensitivity" type="Label" parent="VBoxContainer2"]
+z_index = 1
+layout_mode = 2
+text = "Sensitivity: 10"
+
+[node name="Button" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = -116.0
-offset_top = -4.0
-offset_right = -10.0
-offset_bottom = 19.0
-text = "Sensitivity: 10"
+offset_left = 5.0
+offset_top = 233.0
+offset_right = 217.0
+offset_bottom = 266.0
+text = "Apply"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.277528, 0.277528, 0.277528, 1)
@@ -207,10 +199,10 @@ layout_mode = 0
 offset_left = 2.0
 offset_top = 1.0
 offset_right = 221.0
-offset_bottom = 250.0
+offset_bottom = 270.0
 mouse_filter = 2
 texture = ExtResource("2_cpgv8")
 expand_mode = 1
 
-[connection signal="pressed" from="Button" to="." method="_on_apply_settings"]
 [connection signal="pressed" from="Button2" to="." method="_on_close"]
+[connection signal="pressed" from="Button" to="." method="_on_apply_settings"]

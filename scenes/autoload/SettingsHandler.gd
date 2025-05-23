@@ -5,7 +5,7 @@ extends Node
 var SettingsDict : Dictionary
 
 const SETTINGS_FILE_PATH = "user://settings.sav"
-const DEFAULT_SETTINGS = {"resolution": [1152, 648], "vsync": true, "fullscreen": false, "volume" : 1, "fov" : 75, "sensitivity" : 10} # Settings that are set by default, in case if settings file does not exist
+const DEFAULT_SETTINGS = {"selected resolution": 2, "resolution": [1152, 648], "vsync": true, "fullscreen": false, "sfx volume" : 1, "music volume" : 1, "fov" : 75, "sensitivity" : 10} # Settings that are set by default, in case if settings file does not exist
 
 var fov: float = 75 #ignore this
 var sensitivity: float = 10 #ignore this too
@@ -45,7 +45,8 @@ func _apply_settings():
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
 	
-	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(get_value("volume")))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(get_value("sfx volume")))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), linear_to_db(get_value("music volume")))
 
 ## Loads settings from settings file
 func _load_settings():
