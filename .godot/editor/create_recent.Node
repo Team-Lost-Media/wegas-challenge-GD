@@ -1,3 +1,8 @@
+Button
+CollisionShape2D
+Area2D
+Timer
+Label
 VBoxContainer
 CollisionShape3D
 MeshInstance3D
@@ -5,11 +10,5 @@ StaticBody3D
 GridMap
 Node3D
 OmniLight3D
-Timer
 Label3D
-Button
 ProgressBar
-TextureProgressBar
-Label
-PanelContainer
-Container

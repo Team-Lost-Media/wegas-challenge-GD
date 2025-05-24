@@ -5,17 +5,18 @@ var style: String = "none"#the idea is, once style != null itll display it in a 
 
 var tutorial = false
 
-
-func one_centisecond_has_passed() -> void:
-	pass #print("test")
+#region end screen variables
+var time_as_string: String
+var time_in_seconds: float
+#endregion
 
 func reset(): #execited when the player retries after a game over or win
 	points = 0
 	style = "none"
 	wegadoll_combo = 0
 
-var timer = Timer
-var wegadoll_combo_timer = timer.new()
+var newtimer = Timer
+var wegadoll_combo_timer = newtimer.new()
 var wegadoll_combo: int = 0
 signal wegadoll_collected
 

@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	if wegasleft == 0:
 		#get_tree().change_scene_to_file("res://scenes/levels/main/main2.tscn") #go to main2
 		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+		
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")

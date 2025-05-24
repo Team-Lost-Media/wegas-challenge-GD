@@ -39,6 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5736, 14.0363, -5.16903)
 playerpos = NodePath("../Player")
 speed = 11.5
 enable_manually = true
+death_scene = "res://scenes/levels/tutorial/tutorial.tscn"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Wega"]
 light_color = Color(0.501961, 0, 1, 1)
@@ -98,6 +99,7 @@ metadata/_editor_floor_ = Vector3(0, 4, 0)
 
 [node name="deathbarrier" parent="Main" instance=ExtResource("5_el101")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
+death_scene = "res://scenes/levels/tutorial/tutorial.tscn"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Main"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.971394, 3.90791, -5.01472)

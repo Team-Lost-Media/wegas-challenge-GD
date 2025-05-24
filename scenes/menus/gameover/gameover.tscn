@@ -1,18 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://cax2yqkm1rgqx"]
+[gd_scene load_steps=9 format=3 uid="uid://cax2yqkm1rgqx"]
 
 [ext_resource type="Script" uid="uid://x1oq3o7aaim7" path="res://scenes/menus/gameover/gameover.gd" id="1_40yjg"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_2cmpw"]
+[ext_resource type="Curve" uid="uid://2j4djjrll8hj" path="res://assets/other/points and time curve.tres" id="2_chhmu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
 font_size = 100
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tgope"]
-font_size = 50
+font_size = 65
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dwtvt"]
+font_size = 20
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_chhmu"]
+font_size = 35
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rubpt"]
+font_size = 15
 font_color = Color(1, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_40yjg")
+points_and_time_curve = ExtResource("2_chhmu")
+
+[node name="Maltigi" type="Sprite2D" parent="."]
+position = Vector2(286, 321)
+texture = ExtResource("2_2cmpw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1151.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -27,21 +53,60 @@ label_settings = SubResource("LabelSettings_i3kce")
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 23.0
-offset_top = 248.0
-offset_right = 752.0
-offset_bottom = 403.0
+offset_left = -86.0
+offset_top = 208.0
+offset_right = 628.0
+offset_bottom = 363.0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
+horizontal_alignment = 1
 
-[node name="ColorRect" type="ColorRect" parent="."]
-z_index = -1
-offset_left = -1.0
-offset_right = 1151.0
-offset_bottom = 648.0
-mouse_filter = 2
-color = Color(0, 0, 0, 1)
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 305.0
+offset_right = 587.0
+offset_bottom = 460.0
+text = "(if it makes you feel any better, your final score was:"
+label_settings = SubResource("LabelSettings_dwtvt")
+horizontal_alignment = 1
 
-[node name="Maltigi" type="Sprite2D" parent="."]
-position = Vector2(286, 321)
-texture = ExtResource("2_2cmpw")
+[node name="Label3" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 338.0
+offset_right = 581.0
+offset_bottom = 493.0
+text = "69420)"
+label_settings = SubResource("LabelSettings_chhmu")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -47.0
+offset_top = 383.0
+offset_right = 587.0
+offset_bottom = 538.0
+text = "(sort of)"
+label_settings = SubResource("LabelSettings_rubpt")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Label/Label4"]
+visible = false
+layout_mode = 0
+offset_top = 23.0
+offset_right = 634.0
+offset_bottom = 178.0
+text = "(you see, your score is calculated by adding a multiplier to your points based off of
+the time it took you to collect all the wegadolls. since your run ended prematurely,
+said time is actually faster than it wouldve been, had this run survived)"
+label_settings = SubResource("LabelSettings_rubpt")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Label/Label4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 282.0
+offset_top = 3.0
+offset_right = 352.0
+offset_bottom = 23.0
