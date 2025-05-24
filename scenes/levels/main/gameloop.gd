@@ -9,10 +9,13 @@ extends Node3D
 func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
+	Global.wegadolls_left = wegasleft
+	Global.max_wegadolls = wegasleft
 
 func _process(delta: float) -> void:
 	if wegasleft != group_of_wegas.get_child_count():
 		sfx.play()
+		Global.wegadolls_left = group_of_wegas.get_child_count()
 	wegasleft = group_of_wegas.get_child_count()
 	label.text = "wegas left: %s" % wegasleft
 	if wegasleft == 0:

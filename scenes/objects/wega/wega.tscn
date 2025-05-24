@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b618s8yms5b50"]
+[gd_scene load_steps=8 format=3 uid="uid://b618s8yms5b50"]
 
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="1_q83eg"]
 [ext_resource type="Script" uid="uid://gnxufoxmdk25" path="res://scenes/objects/wega/wega.gd" id="2_smnq3"]
+[ext_resource type="Curve" uid="uid://qy6j0ucusih1" path="res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres" id="3_vniee"]
 [ext_resource type="AudioStream" uid="uid://ddbsp3pytmph6" path="res://assets/SFX/hl2 stalker scream.mp3" id="3_xnr02"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_vniee"]
@@ -20,6 +21,7 @@ billboard = 1
 texture = ExtResource("1_q83eg")
 region_rect = Rect2(20, 0, 0, 0)
 script = ExtResource("2_smnq3")
+percentage_wegadolls_left_to_speed_curve = ExtResource("3_vniee")
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 3.0

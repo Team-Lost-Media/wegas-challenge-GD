@@ -19,3 +19,5 @@ res://scenes/menus/win/tutorial win.tscn
 res://scenes/levels/main/testytest.tscn
 res://scenes/objects/deathbarrier.tscn
 res://scenes/objects/player/global.gd
+res://scenes/levels/main/gameloop.gd
+res://scenes/objects/wega/wega.gd
