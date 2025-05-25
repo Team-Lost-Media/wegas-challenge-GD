@@ -1,20 +1,22 @@
-res://assets/meshlibraries/main.tres::b530b076488ebaa6d3e688fa711db3c5::1748007388::res://.godot/exported/133200997/export-e1655654f65c73583551a7bfce2ed774-main.res
-res://assets/meshlibraries/main_node.tscn::e0d489071c3528214580fd831f4ebe83::1748010948::res://.godot/exported/133200997/export-51f9074e4177ebd5bfcf6eb423a508ac-main_node.scn
-res://scenes/menus/gameover/gameover.tscn::fe6f93a1aff050b1d49585a1c53b512b::1748010948::res://.godot/exported/133200997/export-44e307c698f270905b213a8067c82029-gameover.scn
-res://scenes/menus/main/mainMenu.tscn::faded9943989ed7956cbafcbe40ebd2e::1748010947::res://.godot/exported/133200997/export-3e8c53b8cfa8835ce2123d82e44eac51-mainMenu.scn
-res://scenes/menus/win/win.tscn::0be07a2995890b339c3b8c034eed1c72::1748010948::res://.godot/exported/133200997/export-7c61c3b0c3193f7d180812b6adc2bd64-win.scn
-res://scenes/objects/player/player.tscn::edab561c31ab4ecbb3d92c70f3dd961f::1748010948::res://.godot/exported/133200997/export-2276a51087c81b031e3f5ae748ea0216-player.scn
-res://scenes/objects/urio/urio.tscn::26c43447da181fcf805d69691b3b7bb8::1748010948::res://.godot/exported/133200997/export-0e539ca9549bd6ffdc7921493ee2ff49-urio.scn
-res://scenes/objects/wega/wega.tscn::62a60b6770aa7bc75c03cd4a6bc935e6::1748010948::res://.godot/exported/133200997/export-f2b2f4f84d4877ff2af1a91e9ddec8f3-wega.scn
-res://scenes/objects/wegadoll/wegadoll.tscn::89fe30a7111ba6beaa97fea0c793c38b::1748010948::res://.godot/exported/133200997/export-ebedb2ff38c10c2e9cb2f0adf3588fea-wegadoll.scn
-res://scenes/objects/deathbarrier.tscn::bd5037eef2990f3c9f7a493e45982efb::1747949830::res://.godot/exported/133200997/export-55001a860bc5539f64d99d7562274ffb-deathbarrier.scn
-res://scenes/SettingsWindow.tscn::88b3dd4080249868be6d7aa4b54e7bd5::1748010948::res://.godot/exported/133200997/export-0c0da958d4fcdc240005a36d33fdd44d-SettingsWindow.scn
-res://assets/other/tutorial_black_texture.tres::2d7419532145a751609ef20abfd71378::1748007388::res://.godot/exported/133200997/export-1d28ff0907ce961eb157ae353b23e1ce-tutorial_black_texture.res
+res://assets/meshlibraries/main.tres::b530b076488ebaa6d3e688fa711db3c5::1748202119::res://.godot/exported/133200997/export-e1655654f65c73583551a7bfce2ed774-main.res
+res://assets/meshlibraries/main_node.tscn::e0d489071c3528214580fd831f4ebe83::1748203700::res://.godot/exported/133200997/export-51f9074e4177ebd5bfcf6eb423a508ac-main_node.scn
+res://scenes/menus/gameover/gameover.tscn::e9914d861601dae5c4ced83aa5ccc7b1::1748203700::res://.godot/exported/133200997/export-44e307c698f270905b213a8067c82029-gameover.scn
+res://scenes/menus/main/mainMenu.tscn::faded9943989ed7956cbafcbe40ebd2e::1748203699::res://.godot/exported/133200997/export-3e8c53b8cfa8835ce2123d82e44eac51-mainMenu.scn
+res://scenes/menus/win/win.tscn::98febdd0493a15591a8210514c4d44cc::1748203700::res://.godot/exported/133200997/export-7c61c3b0c3193f7d180812b6adc2bd64-win.scn
+res://scenes/objects/player/player.tscn::8d803b2fb4c0f555963fb7fae31fe701::1748203700::res://.godot/exported/133200997/export-2276a51087c81b031e3f5ae748ea0216-player.scn
+res://scenes/objects/urio/urio.tscn::26c43447da181fcf805d69691b3b7bb8::1748203700::res://.godot/exported/133200997/export-0e539ca9549bd6ffdc7921493ee2ff49-urio.scn
+res://scenes/objects/wega/wega.tscn::99aac27830e9e5a9fadb83f869cf62c0::1748203700::res://.godot/exported/133200997/export-f2b2f4f84d4877ff2af1a91e9ddec8f3-wega.scn
+res://scenes/objects/wegadoll/wegadoll.tscn::89fe30a7111ba6beaa97fea0c793c38b::1748203700::res://.godot/exported/133200997/export-ebedb2ff38c10c2e9cb2f0adf3588fea-wegadoll.scn
+res://scenes/objects/deathbarrier.tscn::bd5037eef2990f3c9f7a493e45982efb::1748203700::res://.godot/exported/133200997/export-55001a860bc5539f64d99d7562274ffb-deathbarrier.scn
+res://scenes/SettingsWindow.tscn::88b3dd4080249868be6d7aa4b54e7bd5::1748203700::res://.godot/exported/133200997/export-0c0da958d4fcdc240005a36d33fdd44d-SettingsWindow.scn
+res://assets/other/tutorial_black_texture.tres::2d7419532145a751609ef20abfd71378::1748202119::res://.godot/exported/133200997/export-1d28ff0907ce961eb157ae353b23e1ce-tutorial_black_texture.res
 res://assets/other/vcr_osd_mono.tres::3c4059fd3cda8b83dd53262bb9e36e3e::1747661833::res://.godot/exported/133200997/export-a30ce10f7c43af53d6c3067dc6ff0ee0-vcr_osd_mono.res
-res://scenes/levels/main/main2.tscn::5e5f9b076ba197ee1d2d7217e2cfea05::1748010948::res://.godot/exported/133200997/export-e62328e8e2adcef6512b7df12b26a1dd-main2.scn
-res://scenes/levels/main/main.tscn::93cf9e771f0e8ddfdb5b9c912f5f5ae8::1748010947::res://.godot/exported/133200997/export-3880aff7e95068f08131f8a2d0aff9ae-main.scn
-res://scenes/levels/tutorial/tutorial.tscn::fbdce486ee58a65a081861e0abf1e9d4::1748010948::res://.godot/exported/133200997/export-5e4eaaf47c35a38f6daa7fbe2d5da84f-tutorial.scn
-res://scenes/menus/win/tutorial win.tscn::adf84fe08793e77f6de7edfaf6f56fd8::1748010948::res://.godot/exported/133200997/export-3005f818491426ff32b1fbfbe0b0c602-tutorial win.scn
+res://scenes/levels/main/main2.tscn::5e5f9b076ba197ee1d2d7217e2cfea05::1748203700::res://.godot/exported/133200997/export-e62328e8e2adcef6512b7df12b26a1dd-main2.scn
+res://scenes/levels/main/main.tscn::8960959a28935199ea3223b468a4681c::1748203803::res://.godot/exported/133200997/export-3880aff7e95068f08131f8a2d0aff9ae-main.scn
+res://scenes/levels/tutorial/tutorial.tscn::ad656468f99ba1e9ca5b8fa65759e9f7::1748203700::res://.godot/exported/133200997/export-5e4eaaf47c35a38f6daa7fbe2d5da84f-tutorial.scn
+res://scenes/menus/win/tutorial win.tscn::652d28dd471416a767d2eb51b61ad5b3::1748203700::res://.godot/exported/133200997/export-3005f818491426ff32b1fbfbe0b0c602-tutorial win.scn
 res://main.tscn::8ce6d321a945129e42e5c036cd666712::1747563943::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://scenes/levels/main/testytest.tscn::9c4d551548d5b5baa58e572574d0f890::1748010949::res://.godot/exported/133200997/export-3e0983bcf6194885c9d474b776d6588d-testytest.scn
+res://scenes/levels/main/testytest.tscn::de09306d39cf12e0cc7815bfe1310873::1748203700::res://.godot/exported/133200997/export-3e0983bcf6194885c9d474b776d6588d-testytest.scn
 res://default_bus_layout.tres::64e93122c806643ba6e9306e24baa648::1748010213::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
+res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres::2264ef530a67186bb4dbeb53359efe1a::1748202119::res://.godot/exported/133200997/export-b11f8bd124009eef165d54d6992a4566-default percentage of wegadolls collected to wega speed multiplier curve.res
+res://assets/other/points and time curve.tres::ea37cff4d3a16a4d1ca58d30974d61c7::1748202119::res://.godot/exported/133200997/export-706bc618fefc8ce2252489568c5b0e6b-points and time curve.res

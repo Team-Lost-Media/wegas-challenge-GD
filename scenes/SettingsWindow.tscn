@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=6 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
 [ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
+[ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
@@ -24,11 +25,22 @@ anchor_bottom = 0.5
 offset_left = -112.0
 offset_top = -128.0
 offset_right = 110.0
-offset_bottom = 143.0
+offset_bottom = 179.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
 script = ExtResource("1_36pg8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.277528, 0.277528, 0.277528, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 221.0
+offset_bottom = 306.0
+mouse_filter = 2
+texture = ExtResource("2_cpgv8")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
@@ -184,25 +196,27 @@ z_index = 1
 layout_mode = 2
 text = "Sensitivity: 10"
 
-[node name="Button" type="Button" parent="."]
+[node name="reset high score" type="Button" parent="."]
 z_index = 1
 layout_mode = 0
 offset_left = 5.0
-offset_top = 233.0
+offset_top = 231.0
 offset_right = 217.0
-offset_bottom = 266.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 15
+text = "Reset High Score"
+script = ExtResource("4_ee6v7")
+
+[node name="Button" type="Button" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 269.0
+offset_right = 218.0
+offset_bottom = 304.0
+theme_override_font_sizes/font_size = 20
 text = "Apply"
 
-[node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.277528, 0.277528, 0.277528, 1)
-layout_mode = 0
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 221.0
-offset_bottom = 270.0
-mouse_filter = 2
-texture = ExtResource("2_cpgv8")
-expand_mode = 1
-
 [connection signal="pressed" from="Button2" to="." method="_on_close"]
+[connection signal="pressed" from="reset high score" to="reset high score" method="_on_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_apply_settings"]

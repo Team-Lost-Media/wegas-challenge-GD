@@ -35,13 +35,14 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if high_score == true:
-		high_score_label.label_settings.font_color.h += 0.2 * delta
-		high_score_label.text = "NEW HIGH SCORE!"
-	else:
-		high_score_label.text = str("previous high score: ", Save.load_score())
 	
 	if tutorial == false:
+		if high_score == true:
+			high_score_label.label_settings.font_color.h += 0.2 * delta
+			high_score_label.text = "NEW HIGH SCORE!"
+		else:
+			high_score_label.text = str("previous high score: ", Save.load_score())
+		
 		if Input.is_action_just_pressed("jump") and timer.is_stopped():
 			get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
 			Global.reset()
