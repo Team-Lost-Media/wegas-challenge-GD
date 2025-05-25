@@ -22,7 +22,8 @@ config/icon="uid://bei5enh7oagrt"
 
 SettingsHandler="*res://scenes/autoload/SettingsHandler.gd"
 GameManager="*res://scenes/autoload/GameManager.gd"
-Global="*res://scenes/objects/player/global.gd"
+Global="*res://scenes/autoload/global.gd"
+Save="*res://scenes/autoload/save.gd"
 
 [display]
 
