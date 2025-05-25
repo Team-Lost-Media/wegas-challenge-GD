@@ -58,3 +58,14 @@ func check_wegadoll_combo() -> void:
 
 func _process(delta: float) -> void:
 	pass
+
+func x_seconds_passed(delta: float, x: float):
+	var previous_time_in_seconds: int
+	var time: float
+	previous_time_in_seconds = snapped(time, x)
+	time += delta
+	
+	if snapped(time, x) > previous_time_in_seconds:
+		return true
+	else:
+		return false

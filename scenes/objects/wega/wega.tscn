@@ -23,9 +23,6 @@ region_rect = Rect2(20, 0, 0, 0)
 script = ExtResource("2_smnq3")
 percentage_wegadolls_left_to_speed_curve = ExtResource("3_vniee")
 
-[node name="StartTimer" type="Timer" parent="."]
-wait_time = 3.0
-
 [node name="DeathArea3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
@@ -59,11 +56,18 @@ shape = SubResource("BoxShape3D_vniee")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.3, -1.5)
 shape = SubResource("BoxShape3D_vniee")
 
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+
 [node name="JukeTimer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
-[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[node name="EnrageColorTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
 [connection signal="body_entered" from="AboveWegaArea3D" to="." method="_on_above_wega_area_3d_body_entered"]
 [connection signal="body_entered" from="JukeArea3D" to="." method="_on_juke_area_3d_body_entered"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

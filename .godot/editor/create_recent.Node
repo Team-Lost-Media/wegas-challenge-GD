@@ -1,7 +1,7 @@
+Timer
 Button
 CollisionShape2D
 Area2D
-Timer
 Label
 VBoxContainer
 CollisionShape3D
