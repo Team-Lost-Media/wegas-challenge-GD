@@ -226,6 +226,8 @@ texture = SubResource("GradientTexture2D_io36v")
 layout_mode = 2
 theme = ExtResource("4_nkbs0")
 script = ExtResource("5_wim6f")
+wegakill = Color(0.529412, 0.27451, 2, 1)
+wegakill_outline = Color(1, 0, 1, 1)
 
 [node name="RankLabel" type="Label" parent="PanelContainer/StyleBar"]
 layout_mode = 2

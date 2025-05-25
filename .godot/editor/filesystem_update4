@@ -1,14 +1,16 @@
-res://scenes/menus/main/mainMenu.tscn
+res://scenes/objects/player/player.tscn
 res://shaders/texturescroll.gdshader
+res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres
 res://assets/other/tutorial_black_texture.tres
 res://assets/meshlibraries/main.tres
 res://assets/other/points and time curve.tres
-res://scenes/objects/player/timer.gd
+res://scenes/objects/player/style_bar.gd
+res://scenes/objects/player/progress_bar.gd
+res://scenes/menus/main/mainMenu.tscn
 res://scenes/levels/main/main.tscn
 res://scenes/levels/main/main2.tscn
 res://scenes/objects/wega/wega.tscn
 res://scenes/objects/wegadoll/wegadoll.tscn
-res://scenes/objects/player/player.tscn
 res://scenes/objects/urio/urio.tscn
 res://scenes/SettingsWindow.tscn
 res://scenes/menus/win/win.tscn
@@ -18,6 +20,7 @@ res://assets/meshlibraries/main_node.tscn
 res://scenes/menus/win/tutorial win.tscn
 res://scenes/levels/main/testytest.tscn
 res://scenes/objects/deathbarrier.tscn
+res://scenes/menus/gameover/gameover.gd
 res://scenes/objects/player/global.gd
-res://scenes/levels/main/gameloop.gd
 res://scenes/objects/wega/wega.gd
+res://scenes/menus/win/win.gd

@@ -21,7 +21,7 @@ func _ready() -> void:
 		var score_multiplier
 		score_multiplier = points_and_time_curve.sample(Global.time_in_seconds)
 		score = Global.points * score_multiplier
-		print(score_multiplier)
+		print("score multiplier = ", score_multiplier)
 		#actually display it
 		final_score.text = str(snapped(score, 1))
 

@@ -39,7 +39,6 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 		wegadoll_combo_timer.stop()
 		wegadoll_combo_timer.start()
 		wegadoll_combo = 1
-		print("a")
 	else:
 		wegadoll_combo_timer.stop()
 		wegadoll_combo_timer.start()
@@ -47,7 +46,6 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 
 
 func check_wegadoll_combo() -> void:
-	print("TIMEOUT")
 	if wegadoll_combo > 6:
 		if wegadoll_combo > 99:
 			style = "+ULTRAWEGACOMBO"

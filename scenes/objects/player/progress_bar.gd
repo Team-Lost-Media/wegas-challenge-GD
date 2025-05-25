@@ -15,11 +15,11 @@ func _process(delta: float) -> void:
 		label.text = str("dashes left: ", str(player.dashes_left))
 		match player.dashes_left:
 			2:
-				label.label_settings.font_color = Color8(0, 255, 0)
+				label.label_settings.font_color = Color.from_rgba8(0, 255, 0)
 			1:
-				label.label_settings.font_color = Color8(255, 128, 0)
+				label.label_settings.font_color = Color.from_rgba8(255, 128, 0)
 			0:
-				label.label_settings.font_color = Color8(255, 0, 0)
+				label.label_settings.font_color = Color.from_rgba8(255, 0, 0)
 	
 	if superjump:
 		max_value = superjump_cooldown.wait_time

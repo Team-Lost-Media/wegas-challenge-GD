@@ -37,17 +37,17 @@ func _process(delta: float) -> void:
 		if speed_up_with_wegadolls:
 			if Global.max_wegadolls != 0:
 				wegadoll_percentage =  float(Global.wegadolls_left) / float(Global.max_wegadolls)
-			print("wegadolls_left = ", Global.wegadolls_left)
-			print("max_wegadolls = ", Global.max_wegadolls)
-			print("wegadoll_percentage = ", wegadoll_percentage)
+			#print("wegadolls_left = ", Global.wegadolls_left)
+			#print("max_wegadolls = ", Global.max_wegadolls)
+			#print("wegadoll_percentage = ", wegadoll_percentage)
 			wegadoll_speed_multiplier = percentage_wegadolls_left_to_speed_curve.sample(wegadoll_percentage)
-			print("wegadoll_speed_multiplier = ", wegadoll_speed_multiplier)
+			#print("wegadoll_speed_multiplier = ", wegadoll_speed_multiplier)
 		
 		#handle slowdown when juked
 		if status == "JUKED":
 			if juke_speed_multiplier < 0.8:
 				juke_speed_multiplier = lerp(juke_speed_multiplier, 1.0, 0.8 * delta)
-				print(juke_speed_multiplier)
+				#print("juke speed multiplier = ", juke_speed_multiplier)
 			else:
 				juke_speed_multiplier = 1
 				status = ""
