@@ -262,7 +262,7 @@ text = "0:0.00"
 label_settings = SubResource("LabelSettings_io36v")
 script = ExtResource("6_gmdvr")
 
-[node name="Timer" type="Timer" parent="PanelContainer/StyleBar/Timer"]
+[node name="OLDTimerDONTUSE" type="Timer" parent="PanelContainer/StyleBar/Timer"]
 wait_time = 0.01
 autostart = true
 
@@ -277,5 +277,5 @@ script = ExtResource("7_io36v")
 
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
-[connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar" method="_on_timer_timeout"]
-[connection signal="timeout" from="PanelContainer/StyleBar/Timer/Timer" to="PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]
+[connection signal="timeout" from="PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="PanelContainer/StyleBar" method="_on_timer_timeout"]
+[connection signal="timeout" from="PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]

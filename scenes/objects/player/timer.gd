@@ -19,11 +19,11 @@ func _on_timer_timeout() -> void:
 
 func _process(delta: float) -> void:
 	time += delta
-	if totaltime_seconds > 59.99:
+	if totaltime_seconds >= 60:
+		totaltime_seconds
 		totaltime_minutes += 1
-		totaltime_seconds = 0
-	else:
-		totaltime_seconds = time
+		#turning 60 secs into a minute
+	totaltime_seconds = time - 60*totaltime_minutes
 	text = str(totaltime_minutes, ":", snapped(totaltime_seconds, 0.001))
 	Global.time_as_string = str(totaltime_minutes, ":", snapped(totaltime_seconds, 0.001))
 	Global.time_in_seconds = time

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene load_steps=9 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
 [ext_resource type="Texture2D" uid="uid://ct2agqmwrxprp" path="res://assets/textures/wegakill.png" id="2_6osn1"]
@@ -15,6 +15,23 @@ shader_parameter/repeat_y = 5.0
 shader_parameter/row_offset = 1.0
 shader_parameter/texture_to_scroll = ExtResource("5_etru4")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv5wv"]
+bg_color = Color(0.392157, 0, 0.67451, 0.501961)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.152941, 0, 0.235294, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_yk1ip"]
+font_size = 20
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -23,6 +40,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mgf8r")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+material = SubResource("ShaderMaterial_jtjce")
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+texture = ExtResource("5_etru4")
+expand_mode = 1
 
 [node name="TextureRect2" type="TextureRect" parent="."]
 layout_mode = 0
@@ -55,6 +82,18 @@ text = "Settings"
 layout_mode = 2
 text = "Exit to desktop"
 
+[node name="tips" type="Label" parent="."]
+layout_mode = 2
+offset_left = 218.0
+offset_top = 454.0
+offset_right = 936.0
+offset_bottom = 566.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nv5wv")
+text = "Wega speeds up as you collect more Wegadolls!"
+label_settings = SubResource("LabelSettings_yk1ip")
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Settings" parent="." instance=ExtResource("3_u5k1e")]
 visible = false
 layout_mode = 0
@@ -69,16 +108,6 @@ offset_right = 690.0
 offset_bottom = 546.0
 grow_horizontal = 1
 grow_vertical = 1
-
-[node name="TextureRect" type="TextureRect" parent="."]
-z_index = -1
-material = SubResource("ShaderMaterial_jtjce")
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
-mouse_filter = 2
-texture = ExtResource("5_etru4")
-expand_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]

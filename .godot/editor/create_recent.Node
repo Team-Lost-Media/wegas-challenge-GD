@@ -1,8 +1,9 @@
+HSeparator
+Label
 Button
 Timer
 CollisionShape2D
 Area2D
-Label
 VBoxContainer
 CollisionShape3D
 MeshInstance3D

@@ -26,7 +26,11 @@ func _ready() -> void:
 		score = Global.points * score_multiplier
 		print("score multiplier = ", score_multiplier)
 		#actually display it
-		final_score.text = str(snapped(score, 1))
+		if score == 0:
+			final_score.text = "0! TOO SLOW"
+		else:
+			final_score.text = str(snapped(score, 1))
+		
 		#save it and show off if it's a high score
 		if Save.load_score() < snapped(score, 1):
 			Save.save_score(snapped(score, 1))
