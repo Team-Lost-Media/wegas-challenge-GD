@@ -4,6 +4,7 @@ res://assets/other/default percentage of wegadolls collected to wega speed multi
 res://assets/other/tutorial_black_texture.tres
 res://assets/meshlibraries/main.tres
 res://assets/other/points and time curve.tres
+res://scenes/objects/player/player.gd
 res://scenes/levels/main/main.tscn
 res://scenes/levels/main/main2.tscn
 res://scenes/objects/wega/wega.tscn
@@ -18,7 +19,3 @@ res://assets/meshlibraries/main_node.tscn
 res://scenes/menus/win/tutorial win.tscn
 res://scenes/levels/main/testytest.tscn
 res://scenes/objects/deathbarrier.tscn
-res://scenes/menus/main/main_menu.gd
-res://assets/other/tips.txt
-res://scenes/objects/player/timer.gd
-res://scenes/menus/win/win.gd

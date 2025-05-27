@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkj25ag02mueh"]
+[gd_scene load_steps=12 format=3 uid="uid://bkj25ag02mueh"]
 
 [ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
 [ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_2ugug"]
@@ -26,6 +26,11 @@ font = ExtResource("3_gc12i")
 font_size = 41
 
 [sub_resource type="LabelSettings" id="LabelSettings_svv80"]
+font = ExtResource("3_gc12i")
+font_size = 41
+font_color = Color(0.405, 0.4145, 0.5, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqcem"]
 font = ExtResource("3_gc12i")
 font_size = 41
 font_color = Color(0.405, 0.4145, 0.5, 1)
@@ -99,6 +104,13 @@ label_settings = SubResource("LabelSettings_6ogbe")
 layout_mode = 2
 text = "previous high score: ass"
 label_settings = SubResource("LabelSettings_svv80")
+
+[node name="new high score2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "
+wr: 12643
+holder: somerandomguy21"
+label_settings = SubResource("LabelSettings_kqcem")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_25npl")

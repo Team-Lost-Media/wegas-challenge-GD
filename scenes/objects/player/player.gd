@@ -36,6 +36,8 @@ var dashes_left: int = max_dashes
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
 var coyote: bool
 var coyote_disabled: bool
+@export var fly: bool = false
+@export var disable_collecting_wegadolls: bool = false
 
 #region Main control flow 
 
@@ -57,6 +59,25 @@ func _physics_process(delta: float) -> void:
 			coyote = true
 	else:
 		coyote_disabled = false
+	
+	if fly:
+		if !is_on_floor():
+			velocity.y = 0
+			if Input.is_action_pressed("Q"):
+				velocity.y = 500 * delta
+			if Input.is_action_pressed("E"):
+				velocity.y = -500 * delta
+	
+#	if Input.is_action_just_pressed("debug"):
+#		style_panel.hide()
+#		$DashCooldownBar.hide()
+#		$SuperJumpCooldownBar.hide()
+	
+	if Input.is_action_just_pressed("debug"):
+		var date = Time.get_date_string_from_system().replace(".","_")
+		var time :String = Time.get_time_string_from_system().replace(":","")
+		var img = get_viewport().get_texture().get_image()
+		img.save_png("res://screenshots/" + date + time + ".png")
 	
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor() or coyote:
