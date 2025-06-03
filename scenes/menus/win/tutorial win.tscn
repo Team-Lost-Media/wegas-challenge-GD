@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://csduqrm086aoq"]
+[gd_scene load_steps=8 format=3 uid="uid://yvg8y6iuj5t5"]
 
 [ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_xe150"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_7qphd"]

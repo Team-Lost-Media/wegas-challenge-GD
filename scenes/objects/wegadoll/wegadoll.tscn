@@ -1,18 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://c2ya7342irkd8"]
+[gd_scene load_steps=7 format=3 uid="uid://c2ya7342irkd8"]
 
 [ext_resource type="Script" uid="uid://c678w1er04n1n" path="res://scenes/objects/wegadoll/wegadoll.gd" id="1_em6xu"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="1_s7v15"]
-[ext_resource type="Texture2D" uid="uid://0dxs11b638dl" path="res://assets/Models/7c33ed83.png" id="3_8dsr2"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2k1us"]
-resource_name = "face"
-albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("3_8dsr2")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p3vb2"]
-resource_name = "face"
-albedo_color = Color(0.8, 0.8, 0.8, 1)
-albedo_texture = ExtResource("3_8dsr2")
 
 [sub_resource type="Animation" id="Animation_rphn0"]
 length = 0.001
@@ -60,8 +49,6 @@ script = ExtResource("1_em6xu")
 [node name="WegaDoll" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 mesh = ExtResource("1_s7v15")
-surface_material_override/0 = SubResource("StandardMaterial3D_2k1us")
-surface_material_override/1 = SubResource("StandardMaterial3D_p3vb2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

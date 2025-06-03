@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://brx4utgdehcom"]
+[gd_scene load_steps=17 format=3 uid="uid://brx4utgdehcom"]
 
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="1_5cmm4"]
 [ext_resource type="ArrayMesh" uid="uid://tcpbqh6payhs" path="res://assets/Models/lamp/Lamp base obj.obj" id="2_0a210"]
@@ -41,22 +41,8 @@ size = Vector3(2, 1, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_rcnw4"]
 size = Vector3(2, 1, 2)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dod8n"]
-albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
-emission = Color(0.572549, 0.2, 1, 1)
-disable_receive_shadows = true
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_nvfsl"]
 size = Vector3(1.5, 2, 1.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_la0hb"]
-transparency = 1
-albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 0.592157)
-disable_receive_shadows = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nvgls"]
-albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
-disable_receive_shadows = true
 
 [node name="Node3D2" type="Node3D"]
 
@@ -100,7 +86,6 @@ shape = SubResource("BoxShape3D_rcnw4")
 [node name="Lamp" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
 mesh = ExtResource("2_0a210")
-surface_material_override/0 = SubResource("StandardMaterial3D_dod8n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Lamp"]
 transform = Transform3D(1.44046, 0, 0, 0, 1.44046, 0, 0, 0, 1.44046, 0, 0, 0)
@@ -113,10 +98,8 @@ shape = SubResource("BoxShape3D_nvfsl")
 transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
 mesh = ExtResource("3_k3wk4")
 skeleton = NodePath("../Lamp")
-surface_material_override/0 = SubResource("StandardMaterial3D_la0hb")
 
 [node name="Handle" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
 mesh = ExtResource("4_dod8n")
 skeleton = NodePath("../Lamp")
-surface_material_override/0 = SubResource("StandardMaterial3D_nvgls")

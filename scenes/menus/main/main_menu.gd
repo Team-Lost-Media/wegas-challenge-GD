@@ -6,7 +6,7 @@ extends Control
 
 @onready var settings = $Settings
 @onready var buttons = $VBoxContainer
-@onready var tips = $tips
+@onready var tips_text = $tips
 
 
 func _play() -> void:
@@ -28,36 +28,19 @@ func _on_close_button() -> void:
 	settings.hide()
 	buttons.show() 
 
-
-var list = []   
-var list_position = 0
-
 func _ready() -> void:
-	var path = ""
-	#if OS.has_feature("editor"):
-	#	path = ProjectSettings.globalize_path("res://Text/flavortext.txt")
-	#else:
-	#	path = OS.get_executable_path().get_base_dir().path_join("data/text/pause/flavortext.txt")
-	
-	path = "res://assets/other/tips.txt"
-	
-	var f = FileAccess.open(path, FileAccess.READ)
-	
-	while not f.eof_reached():
-		list.append(f.get_line())
-	
-	list.shuffle()
-	var random_item = random_item()
-	while random_item == "":
-		random_item = random_item()
-	if random_item != "":
-		tips.text = random_item
+	randomize()
+	tips_text.text = tips.pick_random()
 
-func random_item():
-	list_position+=1
-
-	if list_position == list.size():
-		list.shuffle()
-		list_position = 0
-
-	return list[list_position]
+var tips = ["Wega speeds up as you collect more Wegadolls.",
+"Styling on Wega enough will +ENRAGE him. Wega is faster when enraged, but only when you haven't collected many Wegadolls.",
+"Juking Wega slows him down!",
+"There's an unique style bonus for a +WEGACOMBO with 100 Wegadolls, but it's not as easy as one might think...",
+"The hitboxes for the platform tiles are much more forgiving than you think!",
+"Fun fact: you can reach WEGAKILL rank before collecting any Wegadolls!",
+"Your final score is your points multiplied by a special number that gets smaller the more time you take to collect all Wegadolls.",
+"Maltigi is in the game.",
+"Wega emits a purple light at all times! If the environment around you is becoming purple, he might be near.",
+"It takes Wega exactly three seconds to run after you.",
+"WATLM tomorrow"
+]

@@ -89,7 +89,8 @@ offset_top = 454.0
 offset_right = 936.0
 offset_bottom = 566.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nv5wv")
-text = "Wega speeds up as you collect more Wegadolls!"
+text = "If you're seeing this, the randomization I used to select one of these tips at random failed.
+BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGH"
 label_settings = SubResource("LabelSettings_yk1ip")
 horizontal_alignment = 1
 autowrap_mode = 2
