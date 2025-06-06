@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene load_steps=30 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
 [ext_resource type="Texture2D" uid="uid://ct2agqmwrxprp" path="res://assets/textures/wegakill.png" id="2_6osn1"]
 [ext_resource type="PackedScene" uid="uid://bs035oor8cgug" path="res://scenes/SettingsWindow.tscn" id="3_u5k1e"]
 [ext_resource type="Shader" uid="uid://chc61cjknrihr" path="res://shaders/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
+[ext_resource type="Texture2D" uid="uid://ob1wrwp6rjbd" path="res://screenshots/2025-06-06182626.png" id="6_nv5wv"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_yk1ip"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -31,6 +33,68 @@ corner_radius_bottom_left = 10
 font_size = 20
 outline_size = 16
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6osn1"]
+bg_color = Color(0.0980392, 0.0392157, 0.137255, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ct2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxm30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jl5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugs4v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfbu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6e7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_524vu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_if2gh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3myg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxb73"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77ybs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6md1"]
+font = ExtResource("6_yk1ip")
+font_size = 82
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 30
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(7, 7)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ct2e"]
+font = ExtResource("6_yk1ip")
+font_size = 41
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 15
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7n6k"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -110,8 +174,130 @@ offset_bottom = 546.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="Gamemodes" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 54.0
+offset_right = 1056.0
+offset_bottom = 594.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6osn1")
+
+[node name="Quit" type="Button" parent="Gamemodes"]
+layout_mode = 2
+offset_left = 5.0
+offset_right = 949.0
+offset_bottom = 50.0
+theme_override_constants/outline_size = 20
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w6md1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2ct2e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nxm30")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5jl5l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugs4v")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7dfbu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sp6e7")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_524vu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_04vnt")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qyi5k")
+text = "CLOSE"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gamemodes"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = -8.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Classic" type="Button" parent="Gamemodes/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
+
+[node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/Classic"]
+layout_mode = 0
+offset_right = 944.0
+offset_bottom = 200.0
+texture = ExtResource("6_nv5wv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Gamemodes/VBoxContainer/Classic"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -6.0
+offset_right = 346.0
+offset_bottom = 67.0
+text = "CLASSIC"
+label_settings = SubResource("LabelSettings_w6md1")
+
+[node name="Label2" type="Label" parent="Gamemodes/VBoxContainer/Classic"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 75.0
+offset_right = 538.0
+offset_bottom = 192.0
+text = "Typical WEGAKILL.       note: the image
+There's only Wega.      is 1918 x 406
+Collect all Wegadolls."
+label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="HSeparator" type="HSeparator" parent="Gamemodes/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_g7n6k")
+
+[node name="The Idol" type="Button" parent="Gamemodes/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
+
+[node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/The Idol"]
+layout_mode = 0
+offset_right = 944.0
+offset_bottom = 200.0
+texture = ExtResource("6_nv5wv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -6.0
+offset_right = 346.0
+offset_bottom = 67.0
+text = "THE IDOL"
+label_settings = SubResource("LabelSettings_w6md1")
+
+[node name="Label2" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 75.0
+offset_right = 538.0
+offset_bottom = 192.0
+text = "Collect all Wegadolls. Thnak you.
+Now with the WC:TI enemies.
+Idol not included."
+label_settings = SubResource("LabelSettings_2ct2e")
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]
+[connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]
+[connection signal="pressed" from="Gamemodes/VBoxContainer/Classic" to="." method="_classic"]
+[connection signal="pressed" from="Gamemodes/VBoxContainer/The Idol" to="." method="_the_idol"]

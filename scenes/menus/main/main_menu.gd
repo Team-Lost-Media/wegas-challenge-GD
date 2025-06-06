@@ -7,15 +7,28 @@ extends Control
 @onready var settings = $Settings
 @onready var buttons = $VBoxContainer
 @onready var tips_text = $tips
-
+@onready var gamemodes = $Gamemodes
 
 func _play() -> void:
+	gamemodes.show()
+	buttons.hide()
+
+func _classic() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
+
+func _the_idol() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
+
+
+func on_gamemode_quit_pressed() -> void:
+	gamemodes.hide()
+	buttons.show()
+
+
 
 func _tutorial() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/tutorial/tutorial.tscn")
 	Global.tutorial = true
-
 
 func _settings() -> void:
 	settings.show()

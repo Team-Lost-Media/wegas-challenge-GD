@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://piq1qo6dhgdh"]
+[gd_scene load_steps=59 format=4 uid="uid://piq1qo6dhgdh"]
 
 [ext_resource type="Script" uid="uid://cp7ixbdpto73r" path="res://scenes/levels/main/gameloop.gd" id="1_g51f3"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_o8krw"]
@@ -12,6 +12,12 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_t52ot"]
 font_size = 50
+
+[sub_resource type="Gradient" id="Gradient_osekl"]
+colors = PackedColorArray(0, 0, 0, 1, 0.968627, 0, 0.65098, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dwkvq"]
+gradient = SubResource("Gradient_osekl")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_osekl"]
 sky_top_color = Color(0.085, 0, 0.17, 1)
@@ -32,7 +38,9 @@ background_color = Color(0.05, 0, 0.1, 1)
 sky = SubResource("Sky_j726a")
 ambient_light_source = 3
 ambient_light_color = Color(1, 0.916667, 0.75, 1)
-ssao_enabled = true
+fog_light_color = Color(0.227451, 0, 0.235294, 1)
+volumetric_fog_density = 0.008
+adjustment_color_correction = SubResource("GradientTexture2D_dwkvq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2rh51"]
 albedo_texture = ExtResource("4_osekl")

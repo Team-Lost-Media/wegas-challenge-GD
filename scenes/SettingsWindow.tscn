@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
-[ext_resource type="Script" path="res://scenes/settings_slider.gd" id="2_007d3"]
+[ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
-[ext_resource type="Script" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
+[ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)

@@ -68,10 +68,19 @@ func _physics_process(delta: float) -> void:
 			if Input.is_action_pressed("E"):
 				velocity.y = -500 * delta
 	
-#	if Input.is_action_just_pressed("debug"):
-#		style_panel.hide()
-#		$DashCooldownBar.hide()
-#		$SuperJumpCooldownBar.hide()
+	
+	var enablewega = false
+	if enablewega == true:
+		if Input.is_action_just_pressed("crouch"):
+			if $"../Wega".enabled == true:
+				$"../Wega".enabled = false
+			else:
+				$"../Wega".enabled = true
+	
+	#if Input.is_action_just_pressed("debug"):
+	#	style_panel.hide()
+	#	$DashCooldownBar.hide()
+	#	$SuperJumpCooldownBar.hide()
 	
 	if Input.is_action_just_pressed("debug"):
 		var date = Time.get_date_string_from_system().replace(".","_")

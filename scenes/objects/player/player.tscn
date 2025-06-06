@@ -1,12 +1,12 @@
 [gd_scene load_steps=27 format=3 uid="uid://brpt71jl5cg2q"]
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
-[ext_resource type="Script" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
+[ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
-[ext_resource type="Script" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
-[ext_resource type="Script" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
-[ext_resource type="Script" path="res://scenes/objects/player/debug.gd" id="7_io36v"]
+[ext_resource type="Script" uid="uid://cc3nhv7vlnl17" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
+[ext_resource type="Script" uid="uid://cx5silmovrt1o" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
+[ext_resource type="Script" uid="uid://b2olgww16r17y" path="res://scenes/objects/player/debug.gd" id="7_io36v"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jse87"]
 

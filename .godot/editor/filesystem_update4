@@ -18,26 +18,6 @@ res://assets/meshlibraries/main_node.tscn
 res://scenes/menus/win/tutorial win.tscn
 res://scenes/levels/main/testytest.tscn
 res://scenes/objects/deathbarrier.tscn
-res://scenes/menus/main/main_menu.gd
-res://README.md
-res://assets/other/tips.txt
 res://scenes/objects/player/player.gd
-res://scenes/objects/wegadoll/wegadoll.gd
-res://assets/other/vcr_osd_mono.tres
-res://scenes/reset_high_score.gd
-res://scenes/settings_slider.gd
-res://scenes/settings_window.gd
-res://scenes/autoload/global.gd
-res://scenes/autoload/save.gd
-res://scenes/autoload/SettingsHandler.gd
-res://scenes/levels/main/gameloop2.gd
-res://scenes/levels/main/gameloop.gd
-res://scenes/levels/tutorial/tutorial.gd
-res://scenes/menus/gameover/gameover.gd
-res://scenes/menus/win/win.gd
-res://scenes/objects/deathbarrier.gd
-res://scenes/objects/player/debug.gd
-res://scenes/objects/player/progress_bar.gd
-res://scenes/objects/player/style_bar.gd
-res://scenes/objects/player/timer.gd
-res://scenes/objects/wega/wega.gd
+res://scenes/menus/main/main_menu.gd
+res://scenes/levels/the idol/wctimain.gd
