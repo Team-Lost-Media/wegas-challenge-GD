@@ -6,6 +6,7 @@ var wegadolls_left: int
 var max_wegadolls: int
 
 var tutorial = false
+var timer_stopped = false
 
 #region end screen variables
 var time_as_string: String

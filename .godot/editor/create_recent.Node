@@ -1,3 +1,8 @@
+Node
+Area3D
+CollisionShape3D
+MeshInstance3D
+Node3D
 Sprite3D
 HSeparator
 Button
@@ -8,8 +13,3 @@ VBoxContainer
 Panel
 Timer
 CollisionShape2D
-Area2D
-CollisionShape3D
-MeshInstance3D
-StaticBody3D
-GridMap

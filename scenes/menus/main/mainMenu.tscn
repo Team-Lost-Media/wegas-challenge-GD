@@ -1,12 +1,13 @@
-[gd_scene load_steps=30 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene load_steps=31 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
 [ext_resource type="Texture2D" uid="uid://ct2agqmwrxprp" path="res://assets/textures/wegakill.png" id="2_6osn1"]
 [ext_resource type="PackedScene" uid="uid://bs035oor8cgug" path="res://scenes/SettingsWindow.tscn" id="3_u5k1e"]
 [ext_resource type="Shader" uid="uid://chc61cjknrihr" path="res://shaders/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
-[ext_resource type="Texture2D" uid="uid://ob1wrwp6rjbd" path="res://screenshots/2025-06-06182626.png" id="6_nv5wv"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_yk1ip"]
+[ext_resource type="Texture2D" uid="uid://h510i4enqc80" path="res://assets/textures/thumbnails/classic.png" id="7_w6md1"]
+[ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -175,6 +176,7 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="Gamemodes" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 96.0
 offset_top = 54.0
@@ -229,7 +231,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
 layout_mode = 0
 offset_right = 944.0
 offset_bottom = 200.0
-texture = ExtResource("6_nv5wv")
+texture = ExtResource("7_w6md1")
 expand_mode = 1
 stretch_mode = 5
 
@@ -269,7 +271,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
 layout_mode = 0
 offset_right = 944.0
 offset_bottom = 200.0
-texture = ExtResource("6_nv5wv")
+texture = ExtResource("8_2ct2e")
 expand_mode = 1
 stretch_mode = 5
 
@@ -288,9 +290,9 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Collect all Wegadolls. Thnak you.
-Now with the WC:TI enemies.
-Idol not included."
+text = "Now with the WC:TI enemies.
+Idol not included.
+thnak you."
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]

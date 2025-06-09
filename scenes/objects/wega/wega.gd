@@ -4,9 +4,12 @@ extends Sprite3D
 @export var speed: float
 @export var time_to_enable: float = 3
 @export var enable_manually = false
+@export var kill = true
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 @export var speed_up_with_wegadolls = false
 @export var percentage_wegadolls_left_to_speed_curve: Curve
+@export var wcti_enrage = false
+@export var enrage_when_x_left: int
 
 @onready var start_timer: Timer = $StartTimer
 @onready var juke_timer: Timer = $JukeTimer
@@ -80,7 +83,8 @@ func _on_start_timer_timeout() -> void:
 
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		get_tree().change_scene_to_file(death_scene)
+		if kill == true:
+			get_tree().change_scene_to_file(death_scene)
 
 
 func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:

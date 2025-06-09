@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=4 uid="uid://no63u31i6p4d"]
 
-[ext_resource type="Script" uid="uid://cp7ixbdpto73r" path="res://scenes/levels/main/gameloop.gd" id="1_utox6"]
+[ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_e0t3y"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_n65sf"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_l4h6m"]
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="4_68vac"]
@@ -448,7 +448,7 @@ item/8/navigation_layers = 1
 item/8/preview = SubResource("ImageTexture_l68v3")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_utox6")
+script = ExtResource("1_e0t3y")
 
 [node name="GUI" type="CanvasLayer" parent="."]
 

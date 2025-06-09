@@ -31,6 +31,8 @@ var dash_multiplier: float = 1
 var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
+@onready var dash_cooldown_bar: ProgressBar = $DashCooldownBar
+@onready var superjump_cooldown_bar: ProgressBar = $SuperJumpCooldownBar
 @onready var just_dashed: Timer = $JustDashed
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
@@ -69,6 +71,7 @@ func _physics_process(delta: float) -> void:
 				velocity.y = -500 * delta
 	
 	
+	#used for debug
 	var enablewega = false
 	if enablewega == true:
 		if Input.is_action_just_pressed("crouch"):
@@ -131,6 +134,11 @@ func _on_dash_cooldown_timeout() -> void:
 func _on_coyote_timer_timeout() -> void:
 	coyote = false
 	coyote_disabled = true
+
+func fade_out_gui(delta: float) -> void:
+	style_panel.modulate = style_panel.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
+	dash_cooldown_bar.modulate = dash_cooldown_bar.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
+	superjump_cooldown_bar.modulate = superjump_cooldown_bar.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 
 
 #endregion

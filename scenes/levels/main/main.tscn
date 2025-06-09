@@ -508,7 +508,7 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="deathbarrier" parent="Main" instance=ExtResource("5_kwqv8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_plv8s")
 autoplay = true
 bus = &"BGM"

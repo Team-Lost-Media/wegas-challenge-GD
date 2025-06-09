@@ -4,7 +4,6 @@ var time: float
 var totaltime_seconds: float
 var totaltime_minutes: int
 
-
 func _on_timer_timeout() -> void:
 	pass
 	#one_centisecond_passed.connect(Global.one_centisecond_has_passed)
@@ -18,7 +17,8 @@ func _on_timer_timeout() -> void:
 #also the first section is broken because one_centisecond_passed doesnt exist anymore
 
 func _process(delta: float) -> void:
-	time += delta
+	if Global.timer_stopped == false:
+		time += delta
 	if totaltime_seconds >= 60:
 		totaltime_seconds
 		totaltime_minutes += 1
