@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://c8e8i7oo5k8rm"]
+[gd_scene load_steps=5 format=3 uid="uid://c8e8i7oo5k8rm"]
+
+[ext_resource type="Texture2D" uid="uid://oup3grqiq2k6" path="res://assets/textures/maltigi enemy.webp" id="1_b73rg"]
+[ext_resource type="Script" uid="uid://dn4tj451acebl" path="res://scenes/objects/maltigi/maltigi.gd" id="2_48lxq"]
+[ext_resource type="AudioStream" uid="uid://cqtjmmx0cgoo5" path="res://assets/SFX/maltscream.wav" id="3_48lxq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kulab"]
+height = 2.5293
 
 [node name="Maltigi" type="Sprite3D"]
+pixel_size = 0.005
+billboard = 1
+transparent = false
+texture = ExtResource("1_b73rg")
+script = ExtResource("2_48lxq")
+
+[node name="DeathArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
+shape = SubResource("CylinderShape3D_kulab")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_48lxq")
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="DashCooldownTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="DashDelay" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="DashDelay" to="." method="_on_dash_delay_timeout"]

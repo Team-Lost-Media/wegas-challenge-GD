@@ -1,7 +1,9 @@
+MeshInstance3D
+RayCast3D
+RhythmNotifier
 Node
 Area3D
 CollisionShape3D
-MeshInstance3D
 Node3D
 Sprite3D
 HSeparator
@@ -10,6 +12,3 @@ Label
 TextureRect
 TextureButton
 VBoxContainer
-Panel
-Timer
-CollisionShape2D

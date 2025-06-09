@@ -11,13 +11,15 @@ extends Node3D
 @onready var so_retro_area: Area3D = $"So Retro!/Area3D"
 @onready var wega: Sprite3D = $Wega
 @onready var player: PlayerCharacter = $Player
-
+@onready var wegafadence_beat: RhythmNotifier = $"wegafadence beat" #emits a signal every bar
+var wegafadence_bars: int = 0
 
 func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
+	wegafadence_beat.running = false
 
 func _process(delta: float) -> void:
 	if wegasleft != group_of_wegas.get_child_count():
@@ -59,3 +61,8 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		
 		#currently used as a placeholder
 		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+
+
+func _on_rhythm_notifier_beat(current_beat: int) -> void:
+	wegafadence_bars += 1
+	#sfx.play()

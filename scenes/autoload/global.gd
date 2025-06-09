@@ -60,6 +60,8 @@ func check_wegadoll_combo() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
+## Requires [code]delta[/code] and [code]x[/code] as parameters. Returns [code]true[/code] when [code]x[/code] seconds have passed. Can be used with any interval, namely multiples of 10 such as 0.01, 0.1 and 1.
 func x_seconds_passed(delta: float, x: float):
 	var previous_time_in_seconds: int
 	var time: float

@@ -1,14 +1,24 @@
 extends Sprite3D
 
+## The CharacterBody3D node whose position Wega will move towards.
 @export var playerpos: CharacterBody3D
+## The speed at which Wega will move towards the player. Usually higher than the player's default speed.
 @export var speed: float
+## The time it takes for Wega to enable.
 @export var time_to_enable: float = 3
+## If set to [code]true[/code], Wega will not enable automatically. To enable him, another script must change [code]enabled[/code] to [code]true[/code]. False by default.
 @export var enable_manually = false
+## If set to [code]false[/code], Wega cannot kill the player. True by default.
 @export var kill = true
+## The scene to bring the player to if Wega kills them.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
+## If set to [code]true[/code], you can use [code]ercentage_wegadolls_left_to_speed_curve[/code] (which is below) to change how Wega speeds up or slows down with varying Wegadoll percentages.
 @export var speed_up_with_wegadolls = false
+## Only functions if [code]speed_up_with_wegadolls[/code] is set to [code]true[/code]. [br]Adds a multiplier to Wega's speed based on the Y value of the curve at X. The X value is the percentage of Wegadolls remaining. Typically, Wega starts off slower than normal at high percentages and gets faster at slower percentages.
 @export var percentage_wegadolls_left_to_speed_curve: Curve
+## If set to [code]true[/code], Wega cannot enrage normally (by being styled on fast enough), but will only enrage when [code]enrage_when_x_left[/code] Wegadolls remain to be collected. Enraging will also make him go faster. This stacks with [code]percentage_wegadolls_left_to_speed_curve[/code].
 @export var wcti_enrage = false
+## Only functions if [code]wcti_enrage[/code] is set to [code]true[/code]. [br]Wega will enrage when X Wegadolls remain. In WC:TI, it's 50.
 @export var enrage_when_x_left: int
 
 @onready var start_timer: Timer = $StartTimer
