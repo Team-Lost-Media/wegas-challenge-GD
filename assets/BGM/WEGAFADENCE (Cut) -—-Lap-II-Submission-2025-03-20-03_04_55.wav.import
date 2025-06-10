@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl5jwa2w0x6nl"
+path="res://.godot/imported/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav-9f0d0ac2e9e211e9c60549f4ef5347c7.sample"
+
+[deps]
+
+source_file="res://assets/BGM/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav"
+dest_files=["res://.godot/imported/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav-9f0d0ac2e9e211e9c60549f4ef5347c7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

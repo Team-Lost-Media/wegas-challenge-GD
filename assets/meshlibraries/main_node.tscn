@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://brx4utgdehcom"]
+[gd_scene load_steps=20 format=3 uid="uid://brx4utgdehcom"]
 
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="1_5cmm4"]
 [ext_resource type="ArrayMesh" uid="uid://tcpbqh6payhs" path="res://assets/Models/lamp/Lamp base obj.obj" id="2_0a210"]
@@ -29,7 +29,7 @@ material = ExtResource("2_k3wk4")
 size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uvt1l"]
-size = Vector3(2, 2, 2)
+size = Vector3(4, 1.2, 4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvt1l"]
 albedo_color = Color(0.0235294, 0.0235294, 0.0588235, 1)
@@ -43,6 +43,18 @@ size = Vector3(2, 1, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nvfsl"]
 size = Vector3(1.5, 2, 1.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k3wk4"]
+material = ExtResource("2_k3wk4")
+size = Vector3(2, 1.2, 2)
+
+[sub_resource type="PrismMesh" id="PrismMesh_dod8n"]
+material = ExtResource("2_k3wk4")
+left_to_right = 0.0
+size = Vector3(2, 1.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8g04p"]
+size = Vector3(2.35, 1.019, 4)
 
 [node name="Node3D2" type="Node3D"]
 
@@ -103,3 +115,23 @@ skeleton = NodePath("../Lamp")
 transform = Transform3D(0.694221, 0, 0, 0, 0.694221, 0, 0, 0, 0.694221, -14, -1, 0)
 mesh = ExtResource("4_dod8n")
 skeleton = NodePath("../Lamp")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
+mesh = SubResource("BoxMesh_k3wk4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0205078, 5.96046e-07, 0.00145221)
+shape = SubResource("BoxShape3D_uvt1l")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 0)
+mesh = SubResource("PrismMesh_dod8n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D6/StaticBody3D"]
+transform = Transform3D(0.858011, 0.513631, 1.15068e-07, -0.513631, 0.858011, -6.88833e-08, -1.3411e-07, 0, 1, -0.249437, -0.432317, 0.00183108)
+shape = SubResource("BoxShape3D_8g04p")

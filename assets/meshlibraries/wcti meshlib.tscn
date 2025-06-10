@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://dsvyitsggjtk0"]
+
+[ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="1_tjhse"]
+[ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_7tlgv"]
+
+[sub_resource type="Gradient" id="Gradient_rcnw4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_so3v1"]
+gradient = SubResource("Gradient_rcnw4")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7pco"]
+albedo_color = Color(0.0509804, 0.0509804, 0.239216, 1)
+normal_texture = SubResource("GradientTexture2D_so3v1")
+grow = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7tlgv"]
+material = SubResource("StandardMaterial3D_h7pco")
+size = Vector3(2, 1.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7bmcu"]
+size = Vector3(4, 1.2, 4)
+
+[sub_resource type="PrismMesh" id="PrismMesh_ffb4o"]
+material = ExtResource("1_tjhse")
+left_to_right = 0.0
+size = Vector3(2, 1.2, 2)
+
+[sub_resource type="Gradient" id="Gradient_2iylf"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4n3vn"]
+gradient = SubResource("Gradient_2iylf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hyali"]
+albedo_texture = ExtResource("2_7tlgv")
+normal_texture = SubResource("GradientTexture2D_4n3vn")
+grow = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ffb4o"]
+material = SubResource("StandardMaterial3D_hyali")
+size = Vector3(2, 1.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tlgv"]
+size = Vector3(4, 1.2, 2)
+
+[node name="WctiMeshlib" type="Node3D"]
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
+mesh = SubResource("BoxMesh_7tlgv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D5/StaticBody3D"]
+shape = SubResource("BoxShape3D_7bmcu")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 0, 0)
+mesh = SubResource("PrismMesh_ffb4o")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D6"]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="MeshInstance3D6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.6, 0)
+depth = 4.0
+polygon = PackedVector2Array(0, 0, 2, 0, 0, 1.2)
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 0, 0)
+mesh = SubResource("BoxMesh_ffb4o")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D7/StaticBody3D"]
+shape = SubResource("BoxShape3D_7tlgv")

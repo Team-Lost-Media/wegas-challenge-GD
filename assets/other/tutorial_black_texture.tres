@@ -6,5 +6,6 @@
 gradient = SubResource("Gradient_rcnw4")
 
 [resource]
-albedo_color = Color(0.02288, 0.0216, 0.06, 1)
+albedo_color = Color(0.0509804, 0.0509804, 0.239216, 1)
 normal_texture = SubResource("GradientTexture2D_so3v1")
+grow = true

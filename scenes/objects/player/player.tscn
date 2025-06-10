@@ -170,6 +170,10 @@ one_shot = true
 wait_time = 0.4
 one_shot = true
 
+[node name="JustJumped" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
 [node name="SuperJumpCooldown" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true

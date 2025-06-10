@@ -34,6 +34,7 @@ var dashes_left: int = max_dashes
 @onready var dash_cooldown_bar: ProgressBar = $DashCooldownBar
 @onready var superjump_cooldown_bar: ProgressBar = $SuperJumpCooldownBar
 @onready var just_dashed: Timer = $JustDashed
+@onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
 var coyote: bool
@@ -98,6 +99,7 @@ func _physics_process(delta: float) -> void:
 				superjump_cooldown.start()
 			else:
 				velocity.y = JUMP_VELOCITY
+				just_jumped.start()
 		coyote_disabled = true
 	
 	if Input.is_action_just_pressed("sprint") and dashes_left > 0:
