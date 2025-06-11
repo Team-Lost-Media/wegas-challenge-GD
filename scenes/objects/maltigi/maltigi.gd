@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		
 		if dash_cooldown_timer.is_stopped():
 			moving = false
-			target_position = player.position + Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z)
+			target_position = player.position + Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(1.2, 1.2, 1.2)
 			dash_delay_timer.start(dash_delay)
 			line.draw(position, target_position)
 			#draw the line
@@ -63,10 +63,13 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 		if kill == true:
 			get_tree().change_scene_to_file(death_scene)
 
-func start() -> void:
+func start(timer = false) -> void:
 	kill = true
-	enabled = true
 	show()
+	if timer == false:
+		enabled = true
+	else:
+		start_timer.start(time_to_enable)
 
 func stop() -> void:
 	kill = false

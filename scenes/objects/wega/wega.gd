@@ -16,10 +16,17 @@ extends Sprite3D
 @export var speed_up_with_wegadolls = false
 ## Only functions if [code]speed_up_with_wegadolls[/code] is set to [code]true[/code]. [br]Adds a multiplier to Wega's speed based on the Y value of the curve at X. The X value is the percentage of Wegadolls remaining. Typically, Wega starts off slower than normal at high percentages and gets faster at slower percentages.
 @export var percentage_wegadolls_left_to_speed_curve: Curve
+@export_group("WCTI Enrage")
 ## If set to [code]true[/code], Wega cannot enrage normally (by being styled on fast enough), but will only enrage when [code]enrage_when_x_left[/code] Wegadolls remain to be collected. Enraging will also make him go faster. This stacks with [code]percentage_wegadolls_left_to_speed_curve[/code].
 @export var wcti_enrage = false
 ## Only functions if [code]wcti_enrage[/code] is set to [code]true[/code]. [br]Wega will enrage when X Wegadolls remain. In WC:TI, it's 50.
 @export var enrage_when_x_left: int
+## Only functions if [code]wcti_enrage[/code] is set to [code]true[/code]. The speed at which Wega will move when enraged.
+@export var wcti_enraged_speed: float
+## Only functions if [code]wcti_enrage[/code] is set to [code]true[/code]. Wega's new texture when enraged.
+@export var wcti_enraged_texture: Texture2D
+## Only functions if [code]wcti_enrage[/code] is set to [code]true[/code]. If the old and new textures have different resolutions, you must change this value to keep Wega the same size.
+@export var new_texture_pixel_size: float
 
 @onready var start_timer: Timer = $StartTimer
 @onready var juke_timer: Timer = $JukeTimer
@@ -75,7 +82,7 @@ func _process(delta: float) -> void:
 		
 		if Global.x_seconds_passed(delta, 0.01) == true and rage < 1000:
 			rage -= 1
-		if rage > 1000 and rage < 999999:
+		if rage > 1000 and rage < 999999 and wcti_enrage == false:
 			#enrage
 			Global.style = "+ENRAGED"
 			Global.points += 400
@@ -83,12 +90,18 @@ func _process(delta: float) -> void:
 			enrage_color_timer.start()
 			rage = 99999999
 			wegadoll_speed_multiplier_minimum = 1
+		
+		if wcti_enrage == true:
+			if Global.wegadolls_left <= enrage_when_x_left and texture != wcti_enraged_texture:
+				Global.style = "+ENRAGED"
+				Global.points += 400
+				texture = wcti_enraged_texture
+				pixel_size = new_texture_pixel_size
+				speed = wcti_enraged_speed
 
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:
 		enabled = true
-	else:
-		pass
 
 
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
@@ -107,7 +120,7 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		if enabled and body.just_dashed.is_stopped() == false and juke_timer.is_stopped():
+		if enabled and !body.just_dashed.is_stopped() and juke_timer.is_stopped():
 			juke_timer.start()
 			juke_speed_multiplier = 0.5
 			status = "JUKED"

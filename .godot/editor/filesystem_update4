@@ -1,13 +1,13 @@
-res://scenes/levels/the idol/wctimain.tscn
+res://scenes/menus/main/mainMenu.tscn
 res://shaders/texturescroll.gdshader
 res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres
 res://assets/other/tutorial_black_texture.tres
 res://assets/meshlibraries/main.tres
 res://assets/meshlibraries/wcti mesh lib.tres
 res://assets/other/points and time curve.tres
-res://scenes/menus/main/mainMenu.tscn
 res://scenes/levels/main/main.tscn
 res://scenes/levels/main/main2.tscn
+res://scenes/levels/the idol/wctimain.tscn
 res://scenes/objects/wega/wega.tscn
 res://scenes/objects/maltigi/maltigi.tscn
 res://scenes/objects/wegadoll/wegadoll.tscn
@@ -23,8 +23,6 @@ res://scenes/levels/main/testytest.tscn
 res://scenes/objects/deathbarrier.tscn
 res://assets/meshlibraries/wcti meshlib.tscn
 res://scenes/levels/main/wcti_main.gd
-res://scenes/objects/wegadoll/wegadoll.gd
-res://scenes/objects/maltigi/maltigi.gd
-res://scenes/objects/player/player.gd
-res://default_bus_layout.tres
 res://scenes/levels/the idol/message.gd
+res://scenes/levels/the idol/flash.gd
+res://scenes/objects/maltigi/maltigi.gd

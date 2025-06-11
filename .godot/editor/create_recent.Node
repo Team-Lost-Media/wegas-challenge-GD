@@ -1,3 +1,9 @@
+Sprite3D
+Node3D
+CanvasLayer
+ColorRect
+TextureRect
+Timer
 SpotLight3D
 OmniLight3D
 CollisionPolygon3D
@@ -6,10 +12,3 @@ RayCast3D
 RhythmNotifier
 Node
 Area3D
-CollisionShape3D
-Node3D
-Sprite3D
-HSeparator
-Button
-Label
-TextureRect
