@@ -7,11 +7,11 @@ var fadeout: bool = false
 func _ready() -> void:
 	modulate = Color.TRANSPARENT
 
-func say(message: String) -> void:
+func say(message: String, duration: float = 1.0) -> void:
 	text = message
 	modulate = Color.WHITE
 	fadeout = false
-	display_timer.start()
+	display_timer.start(duration)
 
 func _process(delta: float) -> void:
 	if fadeout == true:
@@ -21,3 +21,7 @@ func _process(delta: float) -> void:
 
 func _on_display_timer_timeout() -> void:
 	fadeout = true
+
+func stop() -> void:
+	modulate = Color.TRANSPARENT
+	fadeout = false

@@ -13,12 +13,20 @@ extends Node3D
 @onready var environment: WorldEnvironment = $Main/WorldEnvironment2
 @onready var sun: DirectionalLight3D = $Main/DirectionalLight3D
 @onready var skybox: Node3D = $Main/skybox
+@onready var particles: CPUParticles3D = $particles
 
 
 @onready var so_retro: Node3D = $"So Retro!"
 @onready var so_retro_area: Area3D = $"So Retro!/Area3D"
 @onready var wega: Sprite3D = $Wega
 @onready var maltigi: Sprite3D = $Maltigi
+
+#the three benches
+@onready var shoe_bench_timer: Control = $"Shoe Bench Timer"
+@onready var you_have_3_minutes_left_to_live: Label = $"Shoe Bench Timer/YOU HAVE 3 MINUTES LEFT TO LIVE"
+@onready var bench_bar: ProgressBar = $"Shoe Bench Timer/BenchBar"
+@onready var the_man_himself: Sprite2D = $"Shoe Bench Timer/the man himself"
+
 @onready var player: PlayerCharacter = $Player
 @onready var wegafadence_beat: RhythmNotifier = $"wegafadence beat" #emits a signal every bar
 var wegafadence_bars: int = 0
@@ -26,24 +34,35 @@ var wegafadence_bars: int = 0
 @onready var lap_2_gridmap: GridMap = $Main/Lap2GridMap
 @onready var lap_2_start_pause: Timer = $Lap2StartPause
 @onready var flash: CanvasLayer = $Flash
+@onready var the_retros: MeshInstance3D = $"the retros"
+
 
 @export var so_retro_material: Material
 @export var lap2_sun_color: Color
+@export var lap2_sky: ProceduralSkyMaterial
+@export var hot_particles: Mesh
 
 var delta_but_the_one_i_used_for_the_transition_to_lap_2: float
+var lap1_sky: Sky
 var lap2_startable = false
 var move_lap_2_gridmap = false
 var lap = 1
+var lap_2_sun_fadeout = false
+var shoe_bench_timer_slide_in = false
 
-
+var shoe_bench_scale: Vector2
 func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
+	shoe_bench_timer.position.y += 200
 	wegafadence_beat.running = false
+	wegafadence_bars = 0
+	lap1_sky = environment.environment.sky
 	message.text = ""
 	maltigi.stop()
+	shoe_bench_scale = the_man_himself.scale
 	lap_2_gridmap.position.y = -30
 	lap_2_gridmap.hide()
 	group_of_wegas_TWO.position.y = -30
@@ -51,12 +70,12 @@ func _ready() -> void:
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, gridmap.mesh_library.get_item_mesh(0).surface_get_material(0))
 	#flash.flash(Color.WHITE, 1.5)
 
+var time_passed = 0.0
 
 var wega_started: bool = false
 var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
-
 func _process(delta: float) -> void:
 	delta_but_the_one_i_used_for_the_transition_to_lap_2 = delta
 	
@@ -85,7 +104,7 @@ func _process(delta: float) -> void:
 			message.say("WEGA IS ENRAGED")
 			wega_started = true
 	
-	if wegasleft <= 150 and lap != 2:
+	if wegasleft <= 170 and lap != 2:
 		lap1exit_started = true
 		lap2_startable = true
 		so_retro.show()
@@ -106,15 +125,28 @@ func _process(delta: float) -> void:
 	if lap == 2:
 		lap_2_gridmap.position.y = lerp(lap_2_gridmap.position.y, 0.0, clamp(5.0 * delta, 0.0, 1.0))
 		group_of_wegas_TWO.position.y = lerp(group_of_wegas_TWO.position.y, 1.0, clamp(5.0 * delta, 0.0, 1.0))
-		sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
+		if FUCK == false:
+			sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
 	
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-	
+	if wegafadence.playing:
+		
+		time_passed += delta
+		var time_left = abs(snapped(time_passed - 170.0, 0.1))
+		var minutes = snapped(time_left, 60) / 60
+		you_have_3_minutes_left_to_live.text = str(time_left)
+		#you_have_3_minutes_left_to_live.text = str(minutes, ":", time_left - minutes * 60) 
+
 	so_retro.rotation.y -= PI * 2 * delta
+	the_retros.rotation.y -= PI * 0.1 * delta
+	
+	if shoe_bench_timer_slide_in == true:
+		var tween = create_tween()
+		tween.tween_property(shoe_bench_timer, "position", Vector2(0, 0), 2.0).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 
 func _on_so_retro_body_entered(body: Node3D) -> void:
@@ -124,6 +156,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		Global.timer_stopped = false
 		so_retro.position.y -= 200
 		so_retro.hide()
+		message.say("IT'S RETRO TIME", 10.0)
 		label.modulate = Color.WHITE
 		player.style_panel.modulate = Color.WHITE
 		player.superjump_cooldown_bar.modulate = Color.WHITE
@@ -139,21 +172,66 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		#currently used as a placeholder
 		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 
-
+var FUCK = false
 func _on_rhythm_notifier_beat(current_beat: int) -> void:
 	wegafadence_bars += 1
-	sfx.play()
+	bench_bar.value = wegafadence_bars
+	shoe_bench_timer_bounce()
+	print(wegafadence_bars)
+	#sfx.play()
+	var shit: Mesh
 	match wegafadence_bars:
 		16:
 			flash.flash(Color.WHITE, 1.5)
+			particles.emitting = true
+			shit = particles.mesh
 		32:
+			FUCK = true
+			sun.light_color = Color.from_string("e02e16", Color.CHARTREUSE)
 			flash.flash(Color.INDIAN_RED, 1.5)
 			skybox.show()
-
+			particles.mesh = hot_particles
+		48:
+			flash.flash(Color.WHITE, 1.5)
+			skybox.hide()
+			particles.mesh = shit
+			sun.light_color = Color.from_rgba8(123, 22, 224)
+			sun.light_energy = 4.0
+			environment.environment.sky = lap1_sky
+		62:
+			FUCK = false
+		64:
+			environment.environment.sky.sky_material = lap2_sky
+			flash.flash(Color.WHITE, 1.5)
+			sun.light_energy = 12.0
+			the_retros.show()
+		96:
+			FUCK = true
+			sun.light_color = Color.from_string("e02e16", Color.CHARTREUSE)
+			flash.flash(Color.INDIAN_RED, 1.5)
+			skybox.show()
+			particles.mesh = hot_particles
 
 func _on_lap_2_start_pause_timeout() -> void:
 	wegafadence.play()
+	message.stop()
 	flash.flash(Color.WHITE, 1.5)
+	environment.environment.sky.sky_material = lap2_sky
 	gridmap.mesh_library.get_item_mesh(0).surface_set_material(0, so_retro_material)
 	gridmap.mesh_library.get_item_mesh(1).surface_set_material(0, so_retro_material)
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, so_retro_material)
+	shoe_bench_timer_slide_in = true
+
+func shoe_bench_timer_bounce() -> void:
+	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then
+		bounce(bench_bar, Vector2(0.975, 1.025), Vector2(1.0, 1.0))
+		bounce(the_man_himself, Vector2(0.8, 1.2) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
+	else: #if it's odd then
+		bounce(bench_bar, Vector2(1.025, 0.975), Vector2(1.0, 1.0))
+		bounce(the_man_himself, Vector2(1.2, 0.8) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
+
+## Makes the given node bounce. The node MUST have its pivot centered, and it MUST have a transform and scale property!
+func bounce(node: Node, start: Vector2 = Vector2(0.9, 1.1), end: Vector2 = Vector2(1.0, 1.0)) -> void:
+	var tween = create_tween()
+	tween.tween_property(node, "scale", start, 0.05).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(node, "scale", end, 0.4).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)

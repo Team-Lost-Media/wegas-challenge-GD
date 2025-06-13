@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		
 		if dash_cooldown_timer.is_stopped():
 			moving = false
-			target_position = player.position + Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(1.2, 1.2, 1.2)
+			target_position = player.position #+ Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(0.3, 0.3, 0.3)
 			dash_delay_timer.start(dash_delay)
 			line.draw(position, target_position)
 			#draw the line

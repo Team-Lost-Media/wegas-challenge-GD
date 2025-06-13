@@ -59,6 +59,7 @@ shape = SubResource("BoxShape3D_vniee")
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 3.0
+one_shot = true
 
 [node name="JukeTimer" type="Timer" parent="."]
 wait_time = 0.5

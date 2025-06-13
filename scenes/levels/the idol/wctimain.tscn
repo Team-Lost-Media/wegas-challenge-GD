@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bx4ofdrp8dc2v"]
+[gd_scene load_steps=48 format=3 uid="uid://bx4ofdrp8dc2v"]
 
 [ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_2any5"]
 [ext_resource type="Script" uid="uid://cf2srb56vlwde" path="res://scenes/levels/the idol/maltigi_line.gd" id="2_1a3yk"]
@@ -8,10 +8,12 @@
 [ext_resource type="Script" uid="uid://ca4hmppmj846s" path="res://scenes/levels/the idol/flash.gd" id="3_7ixl2"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_k8crp"]
 [ext_resource type="PackedScene" uid="uid://c8e8i7oo5k8rm" path="res://scenes/objects/maltigi/maltigi.tscn" id="3_qn1fo"]
+[ext_resource type="Texture2D" uid="uid://b5npf3t0v1emx" path="res://assets/textures/so retroer! so retroer! so retroer! so retroer!.png" id="4_5niun"]
 [ext_resource type="Script" uid="uid://benjx0bkvjl3f" path="res://scenes/levels/the idol/message.gd" id="4_ll2y4"]
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="6_goutp"]
 [ext_resource type="MeshLibrary" uid="uid://cr4mwxcsmnvgd" path="res://assets/meshlibraries/wcti mesh lib.tres" id="7_1a3yk"]
 [ext_resource type="AudioStream" uid="uid://chb3131atdha7" path="res://assets/BGM/WEXECUTION.mp3" id="7_50t62"]
+[ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="7_bcxo4"]
 [ext_resource type="Texture2D" uid="uid://mq5201fr415c" path="res://assets/textures/WegaEnraged.webp" id="7_mok1j"]
 [ext_resource type="AudioStream" uid="uid://n6lujls2y0vf" path="res://assets/SFX/wood tap.mp3" id="8_7jrn3"]
 [ext_resource type="ArrayMesh" uid="uid://bv380bjbntfwp" path="res://assets/Models/soretro.obj" id="8_qo4dl"]
@@ -31,6 +33,55 @@ albedo_texture = ExtResource("2_cg5xk")
 normal_texture = SubResource("GradientTexture2D_so3v1")
 grow = true
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_pcnek"]
+sky_top_color = Color(1, 0.435294, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_curve = 5.14451
+ground_bottom_color = Color(0.0196078, 0, 0, 1)
+ground_horizon_color = Color(0.239216, 0.0509804, 0.0509804, 1)
+ground_curve = 0.0585636
+sun_angle_max = 123.1
+sun_curve = 0.126134
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5niun"]
+transparency = 1
+albedo_color = Color(2, 0.75, 0, 0.5)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_c0roo"]
+material = SubResource("StandardMaterial3D_5niun")
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_exi62"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.5)
+albedo_texture = ExtResource("4_5niun")
+texture_filter = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjl6n"]
+next_pass = SubResource("StandardMaterial3D_exi62")
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.5)
+albedo_texture = ExtResource("4_5niun")
+texture_filter = 2
+
+[sub_resource type="SphereMesh" id="SphereMesh_5niun"]
+material = SubResource("StandardMaterial3D_bjl6n")
+flip_faces = true
+radius = 100.0
+height = 200.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcnek"]
+transparency = 1
+albedo_color = Color(2, 0, 0, 0.5)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_bcxo4"]
+material = SubResource("StandardMaterial3D_pcnek")
+size = Vector3(0.1, 0.1, 0.1)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a3yk"]
 albedo_color = Color(1, 0, 0, 1)
 
@@ -47,6 +98,28 @@ font = ExtResource("2_sr6d7")
 font_size = 82
 outline_size = 40
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_exi62"]
+font = ExtResource("2_sr6d7")
+font_size = 41
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjl6n"]
+bg_color = Color(1, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5niun"]
+bg_color = Color(0.41, 0, 0, 1)
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_1a3yk"]
 colors = PackedColorArray(0.0175, 0.009, 0.06, 1, 0.924, 0.81, 1, 1)
@@ -88,6 +161,25 @@ height = 4.0
 script = ExtResource("1_2any5")
 so_retro_material = SubResource("StandardMaterial3D_7ixl2")
 lap2_sun_color = Color(0.878431, 0.298039, 0.0862745, 1)
+lap2_sky = SubResource("ProceduralSkyMaterial_pcnek")
+hot_particles = SubResource("BoxMesh_c0roo")
+
+[node name="the retros" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_5niun")
+
+[node name="particles" type="CPUParticles3D" parent="."]
+emitting = false
+amount = 512
+lifetime = 6.0
+mesh = SubResource("BoxMesh_bcxo4")
+emission_shape = 3
+emission_box_extents = Vector3(50, 1, 50)
+spread = 90.0
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 1.0
+angular_velocity_min = -60.0
+angular_velocity_max = 60.0
 
 [node name="Flash" type="CanvasLayer" parent="."]
 layer = 100
@@ -120,7 +212,6 @@ offset_left = 194.0
 offset_top = 560.0
 offset_right = 1010.0
 offset_bottom = 633.0
-text = "MALTIGI IS COMING"
 label_settings = SubResource("LabelSettings_mok1j")
 horizontal_alignment = 1
 script = ExtResource("4_ll2y4")
@@ -128,6 +219,59 @@ metadata/_edit_use_anchors_ = true
 
 [node name="DisplayTimer" type="Timer" parent="GUI/Message"]
 one_shot = true
+
+[node name="Shoe Bench Timer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="YOU HAVE 3 MINUTES LEFT TO LIVE" type="Label" parent="Shoe Bench Timer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -170.0
+offset_right = 20.0
+offset_bottom = -147.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(48, 18.5)
+text = "2:51"
+label_settings = SubResource("LabelSettings_exi62")
+
+[node name="BenchBar" type="ProgressBar" parent="Shoe Bench Timer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -134.0
+offset_right = 249.0
+offset_bottom = -101.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(226, 16)
+mouse_filter = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bjl6n")
+theme_override_styles/fill = SubResource("StyleBoxFlat_5niun")
+max_value = 128.0
+step = 1.0
+fill_mode = 1
+show_percentage = false
+
+[node name="the man himself" type="Sprite2D" parent="Shoe Bench Timer"]
+position = Vector2(369, 526)
+scale = Vector2(0.152778, 0.0768429)
+texture = ExtResource("7_bcxo4")
 
 [node name="Maltigi" parent="." node_paths=PackedStringArray("player", "line") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
@@ -189,7 +333,7 @@ shadow_enabled = true
 mesh_library = ExtResource("7_1a3yk")
 cell_size = Vector3(2, 1.2, 2)
 data = {
-"cells": PackedInt32Array(65535, 65535, 0, 65535, 4, 0, 65535, 2, 0, 65535, 3, 0, 65535, 0, 0, 65535, 1, 0, 65535, 65532, 0, 65535, 65534, 0, 65535, 65533, 0, 65535, 65531, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 0, 5, 65535, 0, 7, 4, 0, 6, 4, 0, 5, 4, 0, 4, 4, 0, 3, 4, 0, 2, 4, 0, 1, 4, 0, 0, 4, 0, 5, 65534, 0, 5, 65533, 0, 5, 65532, 0, 5, 65531, 0, 5, 65530, 0, 5, 65529, 0, 5, 65528, 0, 5, 65527, 0, 5, 65526, 0, 5, 65525, 0, 5, 65524, 0, 1, 65524, 0, 0, 65524, 0, 65535, 65525, 0, 65535, 65526, 0, 65535, 65527, 0, 65535, 65528, 0, 65535, 65529, 0, 65535, 65530, 0, 65529, 65529, 0, 65528, 65529, 0, 65527, 65529, 0, 65526, 65529, 0, 65525, 65529, 0, 65524, 65529, 0, 65524, 65530, 0, 65524, 65531, 0, 65524, 65532, 0, 65524, 65533, 0, 65524, 65534, 0, 65524, 65535, 0, 65524, 0, 0, 65524, 1, 0, 65534, 4, 0, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 0, 65524, 4, 0, 65524, 3, 0, 65524, 2, 0, 11, 65521, 1310721, 11, 65520, 0, 11, 65519, 0, 8, 65519, 0, 7, 65519, 0, 6, 65519, 0, 5, 65519, 0, 4, 65519, 0, 3, 65519, 0, 2, 65519, 0, 1, 65519, 0, 1, 65520, 0, 1, 65521, 0, 1, 65522, 0, 1, 65523, 0, 65524, 9, 1048578, 65524, 8, 1048578, 65524, 7, 0, 65524, 6, 0, 4, 15, 0, 5, 15, 0, 6, 15, 0, 7, 15, 0, 8, 15, 0, 9, 15, 0, 10, 15, 0, 11, 15, 0, 11, 14, 0, 11, 13, 0, 11, 12, 1179649, 5, 5, 655362, 5, 6, 1441793, 0, 65519, 0, 65535, 65519, 0, 65534, 65519, 0, 65533, 65519, 0, 65532, 65519, 0, 65531, 65519, 0, 65530, 65519, 0, 65527, 65519, 0, 65526, 65519, 0, 65525, 65519, 0, 65524, 65519, 0, 65524, 65524, 0, 65524, 65525, 0, 65524, 65526, 0, 65524, 65527, 0, 65524, 65528, 0, 65529, 65519, 0, 65528, 65519, 0, 65533, 65524, 0, 65532, 65524, 0, 65531, 65524, 0, 65530, 65524, 0, 65529, 65524, 0, 65528, 65524, 0, 65527, 65524, 0, 65526, 65524, 0, 65525, 65524, 0, 65524, 5, 0, 0, 2, 0, 1, 2, 0, 1, 3, 0, 0, 3, 0, 2, 2, 0, 2, 3, 0, 2, 5, 0, 1, 5, 0, 0, 5, 0, 65535, 5, 0, 65529, 4, 0, 3, 15, 0, 2, 15, 0, 1, 15, 0, 5, 13, 1048577, 5, 14, 655362, 65536, 15, 1, 196607, 15, 1, 262142, 15, 1, 262141, 15, 1441794, 262140, 15, 0, 262139, 15, 0, 262138, 15, 0, 262137, 15, 0, 262136, 15, 0, 262135, 15, 0, 262134, 15, 0, 262133, 15, 0, 262132, 15, 0, 65535, 65524, 0, 65534, 65524, 0, 0, 15, 131073, 10, 65519, 0, 9, 65519, 0, 5, 65523, 0, 131071, 15, 131073, 196606, 15, 131073, -65531, 12, 1048577, -131067, 11, 1048576, -131067, 10, 1048576, -131067, 9, 1048576, -131067, 8, 1048576, -65531, 7, 1441793, -65531, 13, 1310721, -131067, 12, 1310721, -131067, 7, 1179649, -65531, 6, 1179649, 65525, 9, 1, -10, 9, 1, -65545, 9, 1, -65546, 9, 131073, -11, 9, 131073, -131080, 9, 1048576, -131079, 9, 1048576, -131078, 9, 1048576, -131077, 9, 1048576, -131076, 9, 1048576, -131075, 9, 1048576, -131081, 9, 131073, 131065, 3, 1441793, 196601, 2, 1441793, 131065, 65530, 1048577, 196601, 65531, 1048577, 196601, 1, 655362, 196601, 0, 1048576, 196601, 65535, 1048576, 196601, 65534, 1048576, 196601, 65533, 1048576, 196601, 65532, 655362, 65529, 65530, 1310721, 131065, 65531, 1310721, 65529, 3, 1179649, 131065, 2, 1179649, 65547, 65521, 1048577, 131083, 65522, 1048577, 196619, 65523, 1048577, 262155, 65524, 1048577, 262155, 65525, 655362, 262155, 65526, 1048576, 262155, 65527, 1048576, 262155, 65528, 1048576, 262155, 65529, 1048576, 262155, 65530, 1048576, 262155, 65531, 1048576, 262155, 65532, 1441792, 262155, 65533, 1441794, 262155, 65534, 1441794, 262155, 65535, 1441794, 262155, 0, 1048576, 262155, 1, 1048576, 262155, 2, 1048576, 262155, 3, 1048576, 262155, 4, 1048576, 262155, 5, 1048576, 262155, 6, 1048576, 262155, 7, 1048576, 262155, 8, 655362, 65547, 12, 1441793, 131083, 11, 1441793, 196619, 10, 1441793, 262155, 9, 1441793, 65547, 11, 1179649, 131083, 10, 1179649, 196619, 9, 1179649, 196619, 65524, 1310721, 131083, 65523, 1310721, 65547, 65522, 1310721, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 8, 65535, 0, 8, 4, 1310720, 9, 65535, 0, 9, 4, 1310720, 10, 65535, 0, 10, 0, 0, 10, 1, 0, 10, 2, 0, 10, 3, 0, 10, 4, 0, 6, 65535, 0)
+"cells": PackedInt32Array(65535, 65535, 0, 65535, 4, 0, 65535, 2, 0, 65535, 3, 0, 65535, 0, 0, 65535, 1, 0, 65535, 65532, 0, 65535, 65534, 0, 65535, 65533, 0, 65535, 65531, 0, 0, 65535, 0, 1, 65535, 0, 2, 65535, 0, 3, 65535, 0, 4, 65535, 0, 5, 65535, 0, 7, 4, 0, 6, 4, 0, 5, 4, 0, 4, 4, 0, 3, 4, 0, 2, 4, 0, 1, 4, 0, 0, 4, 0, 5, 65534, 0, 5, 65533, 0, 5, 65532, 0, 5, 65531, 0, 5, 65530, 0, 5, 65529, 0, 5, 65528, 0, 5, 65527, 0, 5, 65526, 0, 5, 65525, 0, 5, 65524, 0, 1, 65524, 0, 0, 65524, 0, 65535, 65525, 0, 65535, 65526, 0, 65535, 65527, 0, 65535, 65528, 0, 65535, 65529, 0, 65535, 65530, 0, 65529, 65529, 0, 65528, 65529, 0, 65527, 65529, 0, 65526, 65529, 0, 65525, 65529, 0, 65524, 65529, 0, 65524, 65530, 0, 65524, 65531, 0, 65524, 65532, 0, 65524, 65533, 0, 65524, 65534, 0, 65524, 65535, 0, 65524, 0, 0, 65524, 1, 0, 65534, 4, 0, 65530, 4, 0, 65531, 4, 0, 65532, 4, 0, 65533, 4, 0, 65524, 4, 0, 65524, 3, 0, 65524, 2, 0, 11, 65521, 1310721, 11, 65520, 0, 11, 65519, 0, 8, 65519, 0, 7, 65519, 0, 6, 65519, 0, 5, 65519, 0, 4, 65519, 0, 3, 65519, 0, 2, 65519, 0, 1, 65519, 0, 1, 65520, 0, 1, 65521, 0, 1, 65522, 0, 1, 65523, 0, 65524, 9, 1048578, 65524, 8, 1048578, 65524, 7, 0, 65524, 6, 0, 4, 15, 0, 5, 15, 0, 6, 15, 0, 7, 15, 0, 8, 15, 0, 9, 15, 0, 10, 15, 0, 11, 15, 0, 11, 14, 0, 11, 13, 0, 11, 12, 1179649, 5, 5, 655362, 5, 6, 1441793, 0, 65519, 0, 65535, 65519, 0, 65534, 65519, 0, 65533, 65519, 0, 65532, 65519, 0, 65531, 65519, 0, 65530, 65519, 0, 65527, 65519, 0, 65526, 65519, 0, 65525, 65519, 0, 65524, 65519, 0, 65524, 65524, 0, 65524, 65525, 0, 65524, 65526, 0, 65524, 65527, 0, 65524, 65528, 0, 65529, 65519, 0, 65528, 65519, 0, 65533, 65524, 0, 65532, 65524, 0, 65531, 65524, 0, 65530, 65524, 0, 65529, 65524, 0, 65528, 65524, 0, 65527, 65524, 0, 65526, 65524, 0, 65525, 65524, 0, 65524, 5, 0, 0, 2, 0, 1, 2, 0, 1, 3, 0, 0, 3, 0, 2, 2, 0, 2, 3, 0, 2, 5, 0, 1, 5, 0, 0, 5, 0, 65535, 5, 0, 65529, 4, 0, 3, 15, 0, 2, 15, 0, 1, 15, 0, 5, 13, 1048577, 5, 14, 655362, 65536, 15, 1, 196607, 15, 1, 262142, 15, 1, 262141, 15, 1441794, 262140, 15, 0, 262139, 15, 0, 262138, 15, 0, 262137, 15, 0, 262136, 15, 0, 262135, 15, 0, 262134, 15, 0, 262133, 15, 0, 262132, 15, 0, 65535, 65524, 0, 65534, 65524, 0, 0, 15, 131073, 10, 65519, 0, 9, 65519, 0, 5, 65523, 0, 131071, 15, 131073, 196606, 15, 131073, -65531, 12, 1048577, -131067, 11, 1048576, -131067, 10, 1048576, -131067, 9, 1048576, -131067, 8, 1048576, -65531, 7, 1441793, -65531, 13, 1310721, -131067, 12, 1310721, -131067, 7, 1179649, -65531, 6, 1179649, 65525, 9, 1, -10, 9, 1, -65545, 9, 1, -65546, 9, 131073, -11, 9, 131073, -131080, 9, 1048576, -131079, 9, 1048576, -131078, 9, 1048576, -131077, 9, 1048576, -131076, 9, 1048576, -131075, 9, 1048576, -131081, 9, 131073, 131065, 3, 1441793, 196601, 2, 1441793, 131065, 65530, 1048577, 196601, 65531, 1048577, 196601, 1, 655362, 196601, 0, 1048576, 196601, 65535, 1048576, 196601, 65534, 1048576, 196601, 65533, 1048576, 196601, 65532, 655362, 65529, 65530, 1310721, 131065, 65531, 1310721, 65529, 3, 1179649, 131065, 2, 1179649, 65547, 65521, 1048577, 131083, 65522, 1048577, 196619, 65523, 1048577, 262155, 65524, 1048577, 262155, 65525, 655362, 262155, 65526, 1048576, 262155, 65527, 1048576, 262155, 65528, 1048576, 262155, 65529, 1048576, 262155, 65530, 1048576, 262155, 65531, 1048576, 262155, 65532, 1441792, 262155, 65533, 1441794, 262155, 65534, 1441794, 262155, 65535, 1441794, 262155, 0, 1048576, 262155, 1, 1048576, 262155, 2, 1048576, 262155, 3, 1048576, 262155, 4, 1048576, 262155, 5, 1048576, 262155, 6, 1048576, 262155, 7, 1048576, 262155, 8, 655362, 65547, 12, 1441793, 131083, 11, 1441793, 196619, 10, 1441793, 262155, 9, 1441793, 65547, 11, 1179649, 131083, 10, 1179649, 196619, 9, 1179649, 196619, 65524, 1310721, 131083, 65523, 1310721, 65547, 65522, 1310721, 7, 65535, 0, 7, 0, 0, 7, 1, 0, 7, 2, 0, 7, 3, 0, 6, 65535, 0)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
@@ -197,14 +341,26 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 mesh_library = ExtResource("7_1a3yk")
 cell_size = Vector3(2, 1.2, 2)
 data = {
-"cells": PackedInt32Array(-131075, 10, 655360, -131075, 11, 655360, -131075, 12, 655360, -131075, 13, 655360, -131075, 14, 655360, -131075, 15, 655360, -131075, 16, 655360, -131075, 17, 655360, -131075, 18, 655360, -131075, 19, 655360, -131074, 19, 655360, -65537, 19, 655361, -65536, 19, 655361, 1, 19, 655361, 2, 16, 655360, 2, 17, 655360, 2, 18, 1441794, 2, 19, 1048578, 65519, 15, 0, 131056, 15, 655361, 196593, 15, 655361, 262130, 15, 655361, 262131, 15, 1048578, 65523, 9, 0, 65522, 9, 0, 65521, 9, 0, 65520, 9, 0, 65519, 9, 0, 65518, 9, 0, 65517, 9, 0, 65516, 9, 0, 65518, 15, 0, 65517, 15, 0, 65516, 15, 0, 65516, 14, 0, 65516, 13, 0, 65516, 12, 0, 65516, 11, 0, 65516, 10, 0, 65523, 0, 0, 131058, 0, 1, 196593, 0, 1, 262128, 0, 1, 262127, 0, 1048578, 262126, 0, 0, 262125, 0, 0, 262124, 2, 0, 262124, 1, 0, 262124, 0, 0, 262124, 3, 0, 131052, 8, 1441793, 196588, 7, 1441793, 262124, 6, 1441793, 262124, 4, 1441792, 262124, 5, 655362, 6, 65528, 1048576, 7, 65528, 1441794, 8, 65528, 1, -65527, 65528, 1, -131062, 65528, 0, -131061, 65528, 0, -131060, 65528, 0, -131059, 65528, 0, -65522, 65528, 655361, 15, 65528, 655361, 16, 65528, 1441794, 262156, 65534, 1, 196621, 65534, 1, 131086, 65534, 1, 65551, 65534, 1, 16, 65529, 1441794, 16, 65530, 0, 16, 65531, 0, 16, 65532, 0, 16, 65533, 0, 16, 65534, 1441792, 17, 65528, 0, 18, 65528, 0, 19, 65528, 0, 20, 65528, 0, 20, 65529, 0, 20, 65530, 0, 20, 65531, 0, 20, 65532, 0, 20, 65533, 0, 20, 65534, 0, 19, 65534, 0, 18, 65534, 0, 17, 65534, 0, 327690, 65529, 1, 393225, 65529, 1, 458760, 65529, 1, 458759, 65529, 1441794, 458758, 65529, 0, 458757, 65529, 0, 458756, 65529, 0, 458756, 65528, 0, 458756, 65527, 0, 458756, 65526, 0, 524293, 65526, 655361, 589830, 65526, 655361, 655367, 65526, 655361, 655368, 65526, 1048578, 655368, 65525, 1048578, 655368, 65524, 655360, 655368, 65523, 655360, 655368, 65522, 1048576, 655368, 65521, 1048576, 655363, 65521, 1048576, 655362, 65521, 1048576, 655361, 65521, 1048576, 655360, 65521, 1048576, 655360, 65526, 1048576, 655360, 65527, 1048576, 655360, 65528, 1048576, 655360, 65529, 1048576, 655364, 65533, 1048576, 655365, 65533, 1048576, 655366, 65533, 1048576, 655363, 65533, 1048576, 655360, 65530, 1048576, 655360, 65531, 1048576, 655360, 65532, 1048576, 655360, 65533, 1048576, 655361, 65533, 1048576, 655362, 65533, 1048576, 720893, 65533, 1048576, 720893, 65532, 1048576, 720893, 65531, 1048576, 720892, 65531, 1048576, 720891, 65531, 1048576, 720890, 65531, 1048576, 720893, 65534, 1048576, 720893, 65535, 1048576, 720893, 0, 1048576, 720893, 1, 1048576, 327674, 14, 1441793, 393210, 13, 1441793, 458746, 12, 1441793, 524282, 11, 1441793, 589818, 10, 1441793, 655354, 9, 1441793, 720890, 8, 1441793, 720893, 2, 1441792, 720889, 65531, 1441792, 720888, 65531, 1441792, 720890, 2, 1441792, 720890, 3, 1441792, 720890, 4, 1441792, 720890, 5, 1441792, 720890, 6, 1441792, 720890, 7, 655362, -131074, 9, 1441792, -131073, 9, 1441792, -196608, 9, 1441792, -196607, 9, 1441792, -196606, 9, 1441792, -131069, 9, 655361, -131068, 9, 1048578, 720887, 65531, 1048576, -131073, 19, 524289, -131072, 19, 524289, -65535, 19, 524289, 65520, 15, 524289, 131057, 15, 524289, 196594, 15, 524289, -196605, 9, 524289, -131063, 65528, 131073, -65528, 65528, 131073, -131058, 65528, 524289, -65521, 65528, 524289, 65516, 8, 1179649, 131052, 7, 1179649, 196588, 6, 1179649, 196592, 0, 131073, 131057, 0, 131073, 65522, 0, 131073, 15, 65534, 131073, 65550, 65534, 131073, 131085, 65534, 131073, 196620, 65534, 131073, 262154, 65529, 131073, 327689, 65529, 131073, 393224, 65529, 131073, 327674, 13, 1179649, 393210, 12, 1179649, 458746, 11, 1179649, 524282, 10, 1179649, 589818, 9, 1179649, 655354, 8, 1179649, 589831, 65526, 524289, 524294, 65526, 524289, 458757, 65526, 524289, 262138, 14, 1179649)
+"cells": PackedInt32Array(-131075, 10, 655360, -131075, 11, 655360, -131075, 12, 655360, -131075, 13, 655360, -131075, 14, 655360, -131075, 15, 655360, -131075, 16, 655360, -131075, 17, 655360, -131075, 18, 655360, -131075, 19, 655360, -131074, 19, 655360, -65537, 19, 655361, -65536, 19, 655361, 1, 19, 655361, 2, 16, 655360, 2, 17, 655360, 2, 18, 1441794, 2, 19, 1048578, 65519, 15, 0, 131056, 15, 655361, 196593, 15, 655361, 262130, 15, 655361, 262131, 15, 1048578, 65523, 9, 0, 65522, 9, 0, 65521, 9, 0, 65520, 9, 0, 65519, 9, 0, 65518, 9, 0, 65517, 9, 0, 65516, 9, 0, 65518, 15, 0, 65517, 15, 0, 65516, 15, 0, 65516, 14, 0, 65516, 13, 0, 65516, 12, 0, 65516, 11, 0, 65516, 10, 0, 65523, 0, 0, 131058, 0, 1, 196593, 0, 1, 262128, 0, 1, 262127, 0, 1048578, 262126, 0, 0, 262125, 0, 0, 262124, 2, 0, 262124, 1, 0, 262124, 0, 0, 262124, 3, 0, 131052, 8, 1441793, 196588, 7, 1441793, 262124, 6, 1441793, 262124, 4, 1441792, 262124, 5, 655362, 6, 65528, 1048576, 7, 65528, 1441794, 8, 65528, 1, -65527, 65528, 1, -131062, 65528, 0, -131061, 65528, 0, -131060, 65528, 0, -131059, 65528, 0, -65522, 65528, 655361, 15, 65528, 655361, 16, 65528, 1441794, 262156, 65534, 1, 196621, 65534, 1, 131086, 65534, 1, 65551, 65534, 1, 16, 65529, 1441794, 16, 65530, 0, 16, 65531, 0, 16, 65532, 0, 16, 65533, 0, 16, 65534, 1441792, 17, 65528, 0, 18, 65528, 0, 19, 65528, 0, 20, 65528, 0, 20, 65529, 0, 20, 65530, 0, 20, 65531, 0, 20, 65532, 0, 20, 65533, 0, 20, 65534, 0, 19, 65534, 0, 18, 65534, 0, 17, 65534, 0, 327690, 65529, 1, 393225, 65529, 1, 458760, 65529, 1, 458759, 65529, 1441794, 458758, 65529, 0, 458757, 65529, 0, 458756, 65529, 0, 458756, 65528, 0, 458756, 65527, 0, 458756, 65526, 0, 524293, 65526, 655361, 589830, 65526, 655361, 655367, 65526, 655361, 655368, 65526, 1048578, 655368, 65525, 1048578, 655368, 65524, 655360, 655368, 65523, 655360, 655368, 65522, 1048576, 655368, 65521, 1048576, 655363, 65521, 1048576, 655362, 65521, 1048576, 655361, 65521, 1048576, 655360, 65521, 1048576, 655360, 65526, 1048576, 655360, 65527, 1048576, 655360, 65528, 1048576, 655360, 65529, 1048576, 655364, 65533, 1048576, 655365, 65533, 1048576, 655366, 65533, 1048576, 655363, 65533, 1048576, 655360, 65530, 1048576, 655360, 65531, 1048576, 655360, 65532, 1048576, 655360, 65533, 1048576, 655361, 65533, 1048576, 655362, 65533, 1048576, 720893, 65533, 1048576, 720893, 65532, 1048576, 720893, 65531, 1048576, 720892, 65531, 1048576, 720891, 65531, 1048576, 720890, 65531, 1048576, 720893, 65534, 1048576, 720893, 65535, 1048576, 720893, 0, 1048576, 720893, 1, 1048576, 327674, 14, 1441793, 393210, 13, 1441793, 458746, 12, 1441793, 524282, 11, 1441793, 589818, 10, 1441793, 655354, 9, 1441793, 720890, 8, 1441793, 720893, 2, 1441792, 720889, 65531, 1441792, 720888, 65531, 1441792, 720890, 2, 1441792, 720890, 3, 1441792, 720890, 4, 1441792, 720890, 5, 1441792, 720890, 6, 1441792, 720890, 7, 655362, -131074, 9, 1441792, -131073, 9, 1441792, -196608, 9, 1441792, -196607, 9, 1441792, -196606, 9, 1441792, -131069, 9, 655361, -131068, 9, 1048578, 720887, 65531, 1048576, -131073, 19, 524289, -131072, 19, 524289, -65535, 19, 524289, 65520, 15, 524289, 131057, 15, 524289, 196594, 15, 524289, -196605, 9, 524289, -131063, 65528, 131073, -65528, 65528, 131073, -131058, 65528, 524289, -65521, 65528, 524289, 65516, 8, 1179649, 131052, 7, 1179649, 196588, 6, 1179649, 196592, 0, 131073, 131057, 0, 131073, 65522, 0, 131073, 15, 65534, 131073, 65550, 65534, 131073, 131085, 65534, 131073, 196620, 65534, 131073, 262154, 65529, 131073, 327689, 65529, 131073, 393224, 65529, 131073, 327674, 13, 1179649, 393210, 12, 1179649, 458746, 11, 1179649, 524282, 10, 1179649, 589818, 9, 1179649, 655354, 8, 1179649, 589831, 65526, 524289, 524294, 65526, 524289, 458757, 65526, 524289, 262138, 14, 1179649, 131059, 65519, 1, 196594, 65519, 1, 262129, 65519, 1, 262128, 65519, 1441794, 262126, 65519, 1441792, 262127, 65519, 1441792, 262127, 65520, 1441792, 262127, 65521, 1441792, 262125, 65519, 1441792, 262124, 65519, 1441792, 262124, 65520, 1441792, 262124, 65521, 1441792, 327660, 65522, 1048577, 393196, 65523, 1048577, 458732, 65524, 1048577, 262127, 65522, 1048576, 262127, 65523, 1048576, 262127, 65524, 1048576, 262127, 65525, 1048576, 262127, 65526, 1048576, 262127, 65527, 1048576, 262127, 65528, 1048576, 262127, 65529, 1048576, 131059, 65529, 1, 196594, 65529, 1, 262129, 65529, 1, 262128, 65529, 1441794, 458732, 65525, 2, 458731, 65525, 2, 458730, 65525, 1048576, 458732, 65526, 1048576, 458729, 65525, 1048576, 458728, 65525, 1048576, 458728, 65526, 1048576, 458728, 65527, 1048576, 458728, 65528, 1048576, 458728, 65529, 1048576, 458732, 65527, 1048576, 458732, 65528, 1048576, 458732, 65529, 1048576, 458731, 65529, 1048576, 458730, 65529, 1048576, 458729, 65529, 1048576, 524264, 65530, 1048577, 589800, 65531, 1048577, 655336, 65532, 1048577, 65523, 65519, 131073, 131058, 65519, 131073, 196593, 65519, 131073, 65523, 65529, 131073, 131058, 65529, 131073, 196593, 65529, 131073, 262124, 65522, 1310721, 327660, 65523, 1310721, 393196, 65524, 1310721, 458728, 65530, 1310721, 524264, 65531, 1310721, 589800, 65532, 1310721, 720872, 65534, 2, 720872, 65535, 0, 720872, 0, 0, 720874, 65534, 0, 720874, 65535, 0, 720874, 0, 0, 720874, 3, 0, 720874, 4, 0, 720874, 5, 0, 720874, 6, 0, 720875, 3, 0, 720876, 3, 0, 720877, 3, 0, 720877, 6, 0, 720878, 3, 0, 720878, 6, 0, 720879, 3, 0, 720879, 6, 0, 720882, 1, 0, 720882, 2, 0, 720882, 3, 0, 720885, 1, 0, 720886, 1, 0, 720887, 65533, 0, 720887, 65534, 0, 720887, 65535, 0, 720887, 0, 0, 720887, 1, 0, 655336, 65533, 1310721, 720872, 65533, 1048577, 8, 65535, 0, 10, 0, 0, 10, 65535, 0, 10, 1, 0, 10, 2, 0, 10, 3, 0, 10, 4, 0, 9, 4, 0, 8, 4, 0, 9, 65535, 0)
 }
-metadata/_editor_floor_ = Vector3(0, 3, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="deathbarrier" parent="Main" instance=ExtResource("6_goutp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 
 [node name="skybox" type="Node3D" parent="Main"]
+visible = false
+
+[node name="Node3D" type="Node3D" parent="Main/skybox"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Main/skybox/Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 56, 0)
+light_color = Color(1, 0.333333, 0, 1)
+light_energy = 1000.0
+light_indirect_energy = 107.33
+light_size = 11.785
+spot_range = 500.0
+spot_angle = 60.0
 
 [node name="Sprite3D" type="Sprite3D" parent="Main/skybox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 960)
@@ -227,22 +383,22 @@ pixel_size = 1.0
 texture = ExtResource("13_bcxo4")
 
 [node name="Sprite3D5" type="Sprite3D" parent="Main/skybox"]
-transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 1470, 960)
+transform = Transform3D(-1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 1430, 959)
 pixel_size = 1.0
 texture = ExtResource("13_bcxo4")
 
 [node name="Sprite3D6" type="Sprite3D" parent="Main/skybox"]
-transform = Transform3D(1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, -1.50996e-07, 1.32005e-14, -1, 0, 1470, -960)
+transform = Transform3D(1, -8.74228e-08, -1.50996e-07, -8.74228e-08, -1, 0, -1.50996e-07, 1.32005e-14, -1, 0, 1430, -959)
 pixel_size = 1.0
 texture = ExtResource("13_bcxo4")
 
 [node name="Sprite3D7" type="Sprite3D" parent="Main/skybox"]
-transform = Transform3D(4.37114e-08, -3.82137e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, -4.37114e-08, -960, 1470, 0)
+transform = Transform3D(4.37114e-08, -3.82137e-15, -1, -8.74228e-08, -1, 0, -1, 8.74228e-08, -4.37114e-08, -959, 1430, 0)
 pixel_size = 1.0
 texture = ExtResource("13_bcxo4")
 
 [node name="Sprite3D8" type="Sprite3D" parent="Main/skybox"]
-transform = Transform3D(4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 960, 1470, 0)
+transform = Transform3D(4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 959, 1430, 0)
 pixel_size = 1.0
 texture = ExtResource("13_bcxo4")
 
@@ -447,12 +603,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.672
 
 [node name="wegadoll34" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.672, 1.0077, -0.833434)
-
-[node name="wegadoll21" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.6574, 1, -0.777413)
-
-[node name="wegadoll22" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.575, 1, -0.936266)
 
 [node name="wegadoll23" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3873, 1, -2.71805)
@@ -721,24 +871,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.558
 [node name="wegadoll92" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 5.29426)
 
-[node name="wegadoll93" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, -0.800866)
-
-[node name="wegadoll94" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 1.18609)
-
-[node name="wegadoll95" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 3.2661)
-
-[node name="wegadoll96" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 5.27509)
-
-[node name="wegadoll97" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 7.34194)
-
-[node name="wegadoll98" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 9.38286)
-
 [node name="wegadoll99" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.88108, 7.12672)
 
@@ -756,12 +888,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.558
 
 [node name="wegadoll104" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.82446, 8.86411)
-
-[node name="wegadoll105" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 16.6256, 1, 9.18578)
-
-[node name="wegadoll106" parent="group of wegas" instance=ExtResource("9_4fuep")]
-transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 18.6016, 1, 9.27703)
 
 [node name="wegadoll107" parent="group of wegas" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 27.3341)
@@ -840,7 +966,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
 [node name="group of wegas TWO" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00006, 0)
-visible = false
 
 [node name="wegadoll" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -0.7)
@@ -1210,6 +1335,192 @@ transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503
 
 [node name="wegadoll55" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5378, 1, -32.807)
+
+[node name="wegadoll304" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5378, 4.65146, -32.807)
+
+[node name="wegadoll312" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -32.807)
+
+[node name="wegadoll318" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -30.807)
+
+[node name="wegadoll319" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -28.807)
+
+[node name="wegadoll320" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -26.807)
+
+[node name="wegadoll321" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -24.807)
+
+[node name="wegadoll322" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -22.807)
+
+[node name="wegadoll323" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -20.807)
+
+[node name="wegadoll324" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -18.807)
+
+[node name="wegadoll325" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -16.807)
+
+[node name="wegadoll326" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -14.807)
+
+[node name="wegadoll327" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -12.807)
+
+[node name="wegadoll328" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5378, 4.65146, -12.807)
+
+[node name="wegadoll313" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.5378, 4.65146, -32.807)
+
+[node name="wegadoll314" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.5378, 4.65146, -32.807)
+
+[node name="wegadoll315" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -32.807)
+
+[node name="wegadoll316" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -30.807)
+
+[node name="wegadoll317" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -28.807)
+
+[node name="wegadoll329" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -20.807)
+
+[node name="wegadoll330" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -18.807)
+
+[node name="wegadoll331" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -16.807)
+
+[node name="wegadoll332" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -14.807)
+
+[node name="wegadoll333" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -12.807)
+
+[node name="wegadoll340" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5378, 8.22502, -20.807)
+
+[node name="wegadoll341" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -18.807)
+
+[node name="wegadoll342" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -16.807)
+
+[node name="wegadoll343" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -14.807)
+
+[node name="wegadoll344" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -12.807)
+
+[node name="wegadoll348" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, -2.807)
+
+[node name="wegadoll349" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, -0.806999)
+
+[node name="wegadoll350" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, 1.193)
+
+[node name="wegadoll351" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, -2.807)
+
+[node name="wegadoll352" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, -0.806999)
+
+[node name="wegadoll353" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 1.193)
+
+[node name="wegadoll366" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 3.193)
+
+[node name="wegadoll367" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 5.193)
+
+[node name="wegadoll368" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 7.193)
+
+[node name="wegadoll369" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -4.807)
+
+[node name="wegadoll370" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -2.807)
+
+[node name="wegadoll371" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -0.806999)
+
+[node name="wegadoll372" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, 1.193)
+
+[node name="wegadoll373" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, 3.193)
+
+[node name="wegadoll374" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -19.5378, 13.0845, 3.193)
+
+[node name="wegadoll375" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -21.5378, 13.0845, 3.193)
+
+[node name="wegadoll354" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 9.193)
+
+[node name="wegadoll357" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 7.193)
+
+[node name="wegadoll358" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -41.5378, 13.0845, 7.193)
+
+[node name="wegadoll359" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -39.5378, 13.0845, 7.193)
+
+[node name="wegadoll360" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -37.5378, 13.0845, 7.193)
+
+[node name="wegadoll361" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -35.5378, 13.0845, 7.193)
+
+[node name="wegadoll362" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -33.5378, 13.0845, 7.193)
+
+[node name="wegadoll363" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -37.5378, 13.0845, 13.193)
+
+[node name="wegadoll364" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -35.5378, 13.0845, 13.193)
+
+[node name="wegadoll365" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -33.5378, 13.0845, 13.193)
+
+[node name="wegadoll355" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 11.193)
+
+[node name="wegadoll356" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 13.193)
+
+[node name="wegadoll334" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41.5378, 8.22502, -12.807)
+
+[node name="wegadoll335" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5378, 8.22502, -12.807)
+
+[node name="wegadoll336" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -45.5378, 8.22502, -12.807)
+
+[node name="wegadoll337" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -45.5378, 8.22502, -20.807)
+
+[node name="wegadoll338" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5378, 8.22502, -20.807)
+
+[node name="wegadoll339" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41.5378, 8.22502, -20.807)
 
 [node name="wegadoll56" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.6397, 1, -32.807)
@@ -1763,7 +2074,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.558
 [node name="wegadoll178" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
-[connection signal="timeout" from="GUI/Message/DisplayTimer" to="GUI/Message" method="_on_display_timer_timeout"]
 [connection signal="body_entered" from="So Retro!/Area3D" to="." method="_on_so_retro_body_entered"]
 [connection signal="beat" from="wegafadence beat" to="." method="_on_rhythm_notifier_beat"]
 [connection signal="timeout" from="Lap2StartPause" to="." method="_on_lap_2_start_pause_timeout"]
