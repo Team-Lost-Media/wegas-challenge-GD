@@ -67,6 +67,7 @@ func _ready() -> void:
 	lap_2_gridmap.hide()
 	group_of_wegas_TWO.position.y = -30
 	group_of_wegas_TWO.hide()
+	
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, gridmap.mesh_library.get_item_mesh(0).surface_get_material(0))
 	#flash.flash(Color.WHITE, 1.5)
 
@@ -95,13 +96,13 @@ func _process(delta: float) -> void:
 	if wegasleft <= 100:
 		if maltigi_started == false:
 			maltigi.start(true)
-			message.say("MALTIGI IS COMING")
+			message.say("MALTIGI IS COMING", 2.0)
 			maltigi_started = true
 	
 	
 	if wegasleft <= 50:
 		if wega_started == false:
-			message.say("WEGA IS ENRAGED")
+			message.say("WEGA IS ENRAGED", 2.0)
 			wega_started = true
 	
 	if wegasleft <= 170 and lap != 2:
@@ -173,13 +174,14 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 
 var FUCK = false
+var shit: Mesh
 func _on_rhythm_notifier_beat(current_beat: int) -> void:
 	wegafadence_bars += 1
 	bench_bar.value = wegafadence_bars
 	shoe_bench_timer_bounce()
 	print(wegafadence_bars)
 	#sfx.play()
-	var shit: Mesh
+	
 	match wegafadence_bars:
 		16:
 			flash.flash(Color.WHITE, 1.5)

@@ -67,11 +67,11 @@ albedo_color = Color(1, 1, 1, 0.5)
 albedo_texture = ExtResource("4_5niun")
 texture_filter = 2
 
-[sub_resource type="SphereMesh" id="SphereMesh_5niun"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_exi62"]
 material = SubResource("StandardMaterial3D_bjl6n")
 flip_faces = true
 radius = 100.0
-height = 200.0
+height = 400.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pcnek"]
 transparency = 1
@@ -165,8 +165,7 @@ lap2_sky = SubResource("ProceduralSkyMaterial_pcnek")
 hot_particles = SubResource("BoxMesh_c0roo")
 
 [node name="the retros" type="MeshInstance3D" parent="."]
-visible = false
-mesh = SubResource("SphereMesh_5niun")
+mesh = SubResource("CapsuleMesh_exi62")
 
 [node name="particles" type="CPUParticles3D" parent="."]
 emitting = false
@@ -277,6 +276,9 @@ texture = ExtResource("7_bcxo4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
 player = NodePath("../Player")
 enable_manually = true
+dash_cooldown = 1.0
+dash_delay = 0.25
+dash_speed = 175.0
 line = NodePath("../maltigi line")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi"]
@@ -2074,6 +2076,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.558
 [node name="wegadoll178" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
+[connection signal="timeout" from="GUI/Message/DisplayTimer" to="GUI/Message" method="_on_display_timer_timeout"]
 [connection signal="body_entered" from="So Retro!/Area3D" to="." method="_on_so_retro_body_entered"]
 [connection signal="beat" from="wegafadence beat" to="." method="_on_rhythm_notifier_beat"]
 [connection signal="timeout" from="Lap2StartPause" to="." method="_on_lap_2_start_pause_timeout"]

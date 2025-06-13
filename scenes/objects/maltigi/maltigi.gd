@@ -1,19 +1,17 @@
 extends Sprite3D
 
-## The CharacterBody3D node that Maltigi will target.
-@export var player: CharacterBody3D
-## The time it takes for Maltigi to enable.
-@export var time_to_enable: float = 3
-## If set to [code]true[/code], Wega will not enable automatically. To enable him, another script must change [code]enabled[/code] to [code]true[/code]. False by default.
-@export var enable_manually = false
-## The time it takes for Maltigi to dash again.
-@export var dash_cooldown: float = 3
-## The time between Maltigi choosing a target position, and dashing towards it.
-@export var dash_delay: float = 0.5
-@export var kill = true
+
+@export var player: CharacterBody3D ## The CharacterBody3D node that Maltigi will target.
+@export var time_to_enable: float = 3 ## The time it takes for Maltigi to enable automatically.
+@export var enable_manually = false ## If set to [code]true[/code], Maltigi will not enable automatically. To enable him, another script must change [code]enabled[/code] to [code]true[/code]. False by default.
+@export var dash_cooldown: float = 1.5 ## The time it takes for Maltigi to dash again.
+@export var dash_delay: float = 0.5 ## The time between Maltigi choosing a target position, and dashing towards it.
+@export var dash_speed: float = 125 ## How quickly Maltigi will dash. Keep in mind this will be "multiplied" by delta.
+@export var kill = true ## If set to [code]false[/code], Maltigi cannot kill the player.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
-## Must be set to $"maltigi line". Used for drawing the red line from Maltigi to his target position.
-@export var line: MeshInstance3D
+@export var line: MeshInstance3D ## Must be set to $"maltigi line". Used for drawing the red line from Maltigi to his target position.
+@export var smart = false ## If set to [code]true[/code], Maltigi will predict the targets's movement (using their velocity) and dash where they're going. Otherwise, he will just dash at their position.
+@export var smart_multiplier: float = 1.2 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
 
 @onready var start_timer: Timer = $StartTimer
 @onready var dash_cooldown_timer: Timer = $StartTimer
@@ -38,7 +36,10 @@ func _process(delta: float) -> void:
 		
 		if dash_cooldown_timer.is_stopped():
 			moving = false
-			target_position = player.position #+ Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(0.3, 0.3, 0.3)
+			if smart:
+				target_position = player.position + Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(smart_multiplier, smart_multiplier, smart_multiplier)
+			else:
+				target_position = player.position
 			dash_delay_timer.start(dash_delay)
 			line.draw(position, target_position)
 			#draw the line

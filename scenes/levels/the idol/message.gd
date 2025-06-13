@@ -8,6 +8,7 @@ func _ready() -> void:
 	modulate = Color.TRANSPARENT
 
 func say(message: String, duration: float = 1.0) -> void:
+	print("message: saying ", message)
 	text = message
 	modulate = Color.WHITE
 	fadeout = false

@@ -25,7 +25,7 @@ signal wegadoll_collected
 
 
 func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
-	print("wegadoll")
+	#print("wegadoll")
 	
 	wegadoll_collected.emit()
 	
