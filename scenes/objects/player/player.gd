@@ -37,10 +37,13 @@ var dashes_left: int = max_dashes
 @onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
+@onready var boosted: Timer = $Boosted
 var coyote: bool
 var coyote_disabled: bool
 @export var fly: bool = false
 @export var disable_collecting_wegadolls: bool = false
+@export var fall_saves: int = 0
+var saveable_fall = false
 
 #region Main control flow 
 
@@ -62,6 +65,7 @@ func _physics_process(delta: float) -> void:
 			coyote = true
 	else:
 		coyote_disabled = false
+		saveable_fall = false
 	
 	if fly:
 		if !is_on_floor():
@@ -115,12 +119,19 @@ func _physics_process(delta: float) -> void:
 	
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED * dash_multiplier
-		velocity.z = direction.z * SPEED * dash_multiplier
+	if boosted.is_stopped():
+		if direction:
+			velocity.x = direction.x * SPEED * dash_multiplier
+			velocity.z = direction.z * SPEED * dash_multiplier
+		else:
+			velocity.x = move_toward(velocity.x, 0, 300 * delta)
+			velocity.z = move_toward(velocity.z, 0, 300 * delta) 
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED) 
+		if direction:
+			pass
+		else:
+			velocity.x = move_toward(velocity.x, 0, 30 * delta)
+			velocity.z = move_toward(velocity.z, 0, 30 * delta) 
 	
 	camera.fov = SettingsHandler.fov
 	mouse_sensitivity = SettingsHandler.sensitivity

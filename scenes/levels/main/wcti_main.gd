@@ -20,6 +20,7 @@ extends Node3D
 @onready var so_retro_area: Area3D = $"So Retro!/Area3D"
 @onready var wega: Sprite3D = $Wega
 @onready var maltigi: Sprite3D = $Maltigi
+@onready var rorys: AnimatedSprite3D = $Rorys
 
 #the three benches
 @onready var shoe_bench_timer: Control = $"Shoe Bench Timer"
@@ -93,6 +94,12 @@ func _process(delta: float) -> void:
 		wegasleft = group_of_wegas_TWO.get_child_count()
 		label.text = "wegas left: %s" % wegasleft
 	
+	if wegasleft <= 150:
+		if rorys_started == false:
+			rorys.enabled = true
+			message.say("PUNCH RORYS", 2.0)
+			rorys_started = true
+	
 	if wegasleft <= 100:
 		if maltigi_started == false:
 			maltigi.start(true)
@@ -105,7 +112,7 @@ func _process(delta: float) -> void:
 			message.say("WEGA IS ENRAGED", 2.0)
 			wega_started = true
 	
-	if wegasleft <= 170 and lap != 2:
+	if wegasleft <= 0 and lap != 2:
 		lap1exit_started = true
 		lap2_startable = true
 		so_retro.show()
@@ -117,6 +124,9 @@ func _process(delta: float) -> void:
 		maltigi.enabled = false
 		maltigi.kill = false
 		maltigi.hide()
+		rorys.enabled = false
+		rorys.position.y = -100
+		rorys.hide()
 		Global.timer_stopped = true
 		player.fade_out_gui(delta)
 		label.modulate = label.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
@@ -141,13 +151,14 @@ func _process(delta: float) -> void:
 		var minutes = snapped(time_left, 60) / 60
 		you_have_3_minutes_left_to_live.text = str(time_left)
 		#you_have_3_minutes_left_to_live.text = str(minutes, ":", time_left - minutes * 60) 
-
+	
 	so_retro.rotation.y -= PI * 2 * delta
 	the_retros.rotation.y -= PI * 0.1 * delta
 	
 	if shoe_bench_timer_slide_in == true:
 		var tween = create_tween()
 		tween.tween_property(shoe_bench_timer, "position", Vector2(0, 0), 2.0).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	
 
 
 func _on_so_retro_body_entered(body: Node3D) -> void:
@@ -227,10 +238,10 @@ func _on_lap_2_start_pause_timeout() -> void:
 func shoe_bench_timer_bounce() -> void:
 	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then
 		bounce(bench_bar, Vector2(0.975, 1.025), Vector2(1.0, 1.0))
-		bounce(the_man_himself, Vector2(0.8, 1.2) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
+		bounce(the_man_himself, Vector2(0.7, 1.3) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
 	else: #if it's odd then
 		bounce(bench_bar, Vector2(1.025, 0.975), Vector2(1.0, 1.0))
-		bounce(the_man_himself, Vector2(1.2, 0.8) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
+		bounce(the_man_himself, Vector2(1.3, 0.7) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
 
 ## Makes the given node bounce. The node MUST have its pivot centered, and it MUST have a transform and scale property!
 func bounce(node: Node, start: Vector2 = Vector2(0.9, 1.1), end: Vector2 = Vector2(1.0, 1.0)) -> void:

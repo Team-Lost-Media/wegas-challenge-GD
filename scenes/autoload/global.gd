@@ -2,6 +2,7 @@ extends Node
 
 var points: int = 0
 var style: String = "none"#the idea is, once style != null itll display it in a style bar like ultrakill and then become null
+var style_number: float
 var wegadolls_left: int
 var max_wegadolls: int
 
@@ -51,9 +52,11 @@ func check_wegadoll_combo() -> void:
 		if wegadoll_combo > 99:
 			style = "+ULTRAWEGACOMBO"
 			points += 2500
+			StyleSFX.play_style_sfx(6)
 		else:
 			style = str("+WEGACOMBO ", wegadoll_combo, "X")
 			points += 9 * wegadoll_combo * max(1, wegadoll_combo / 40)
+			StyleSFX.play_style_sfx(0, true)
 		print(str("+WEGACOMBO ", wegadoll_combo, "X"))
 	wegadoll_combo = 0
 

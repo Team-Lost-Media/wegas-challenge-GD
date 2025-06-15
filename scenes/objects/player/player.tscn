@@ -166,8 +166,11 @@ libraries = {
 wait_time = 1.5
 one_shot = true
 
+[node name="Boosted" type="Timer" parent="."]
+one_shot = true
+
 [node name="JustDashed" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.6
 one_shot = true
 
 [node name="JustJumped" type="Timer" parent="."]

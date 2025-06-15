@@ -85,6 +85,7 @@ func _process(delta: float) -> void:
 		if rage > 1000 and rage < 999999 and wcti_enrage == false:
 			#enrage
 			Global.style = "+ENRAGED"
+			StyleSFX.play_style_sfx(6)
 			Global.points += 400
 			modulate = Color.RED
 			enrage_color_timer.start()
@@ -95,6 +96,7 @@ func _process(delta: float) -> void:
 			if Global.wegadolls_left <= enrage_when_x_left and texture != wcti_enraged_texture:
 				Global.style = "+ENRAGED"
 				Global.points += 400
+				StyleSFX.play_style_sfx()
 				texture = wcti_enraged_texture
 				pixel_size = new_texture_pixel_size
 				speed = wcti_enraged_speed
@@ -117,6 +119,7 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 			Global.points += 200
 			Global.style = "+ABOVE"
 			print("ABOVE")
+			StyleSFX.play_style_sfx()
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
@@ -128,3 +131,4 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 			Global.points += 400
 			Global.style = "+JUKED"
 			print("JUKED")
+			StyleSFX.play_style_sfx()

@@ -26,7 +26,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	points_label.text = str(Global.points)
-	
+	Global.style_number = style_meter_value
 	
 	if Global.wegadoll_combo > 20:
 		if Global.wegadoll_combo > 99:
@@ -118,8 +118,12 @@ func style_meter(delta: float) -> void: #executed every frame
 	
 	if x_seconds_passed(delta, 0.01) == true:
 		if style_meter_value > 0:
-			if style_meter_value > 1000:
-				style_meter_value -= 2.4
+			if style_meter_value > 2000:
+				style_meter_value -= 8.0
+			elif style_meter_value > 1500:
+				style_meter_value -= 6.0
+			elif style_meter_value > 1000:
+				style_meter_value -= 4.0
 			elif style_meter_value > 700:
 				style_meter_value -= 0.8
 			else:

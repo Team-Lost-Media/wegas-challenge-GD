@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqaickaks7ggn"
+path="res://.godot/imported/i will save you.wav-86c32455f083a0f0cc21bdda23baf35c.sample"
+
+[deps]
+
+source_file="res://assets/SFX/i will save you.wav"
+dest_files=["res://.godot/imported/i will save you.wav-86c32455f083a0f0cc21bdda23baf35c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

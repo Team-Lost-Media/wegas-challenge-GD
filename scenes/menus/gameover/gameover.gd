@@ -6,6 +6,7 @@ extends Node2D
 @onready var button_but_not_really_a_button_i_just_use_this_to_check_if_youre_hovering_over_label4: Button = $Label/Label4/Button
 
 func _ready() -> void:
+	Engine.time_scale = 1.0
 	#calculate final_score
 	var score
 	var score_multiplier

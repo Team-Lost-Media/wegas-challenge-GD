@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://bx4ofdrp8dc2v"]
+[gd_scene load_steps=52 format=3 uid="uid://bx4ofdrp8dc2v"]
 
 [ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_2any5"]
 [ext_resource type="Script" uid="uid://cf2srb56vlwde" path="res://scenes/levels/the idol/maltigi_line.gd" id="2_1a3yk"]
@@ -20,8 +20,11 @@
 [ext_resource type="PackedScene" uid="uid://c2ya7342irkd8" path="res://scenes/objects/wegadoll/wegadoll.tscn" id="9_4fuep"]
 [ext_resource type="Texture2D" uid="uid://dyg3r2t2utgsr" path="res://assets/Models/soretrotexture.png" id="10_sr6d7"]
 [ext_resource type="AudioStream" uid="uid://bl5jwa2w0x6nl" path="res://assets/BGM/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav" id="10_y2ang"]
+[ext_resource type="PackedScene" uid="uid://ros1h8daiee" path="res://scenes/objects/rorys/rorys.tscn" id="12_bjl6n"]
 [ext_resource type="Script" uid="uid://0bwhpwuks7h3" path="res://addons/rhythm_notifier/rhythm_notifier.gd" id="12_kracn"]
+[ext_resource type="AudioStream" uid="uid://bbpilhi58oh6e" path="res://assets/SFX/deltarune-explosion.mp3" id="13_5niun"]
 [ext_resource type="Texture2D" uid="uid://bcmtl55f8hmrw" path="res://assets/textures/FIRE.jpg" id="13_bcxo4"]
+[ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="13_c0roo"]
 
 [sub_resource type="Gradient" id="Gradient_rcnw4"]
 
@@ -121,6 +124,10 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(1, 1, 0, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c0roo"]
+transparency = 1
+albedo_color = Color(0, 0, 1, 1)
+
 [sub_resource type="Gradient" id="Gradient_1a3yk"]
 colors = PackedColorArray(0.0175, 0.009, 0.06, 1, 0.924, 0.81, 1, 1)
 
@@ -165,6 +172,7 @@ lap2_sky = SubResource("ProceduralSkyMaterial_pcnek")
 hot_particles = SubResource("BoxMesh_c0roo")
 
 [node name="the retros" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("CapsuleMesh_exi62")
 
 [node name="particles" type="CPUParticles3D" parent="."]
@@ -303,6 +311,22 @@ light_energy = 7.5
 shadow_enabled = true
 omni_range = 10.0
 
+[node name="Rorys" parent="." node_paths=PackedStringArray("group_of_wegas", "player", "flash") instance=ExtResource("12_bjl6n")]
+transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999, -0.000726419, 0.00129934, 0.000728062, 0.999999, 0, -605, 0)
+visible = false
+enable_manually = true
+group_of_wegas = NodePath("../group of wegas")
+targeted_wegadoll_material = SubResource("StandardMaterial3D_c0roo")
+player = NodePath("../Player")
+punch_sfx = ExtResource("13_c0roo")
+explosion_sfx = ExtResource("13_5niun")
+flash = NodePath("../Flash")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Rorys"]
+light_color = Color(0, 0, 1, 1)
+light_energy = 7.5
+omni_range = 10.0
+
 [node name="Player" parent="." instance=ExtResource("3_k8crp")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.538, 2.3513, 8.212)
 wall_min_slide_angle = 0.785398
@@ -310,6 +334,7 @@ floor_constant_speed = true
 floor_snap_length = 0.2
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
+fall_saves = 1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.333, 0)
@@ -416,7 +441,7 @@ bus = &"BGM"
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_7jrn3")
-volume_db = -5.0
+volume_db = -10.0
 pitch_scale = 1.7
 bus = &"SFX"
 
