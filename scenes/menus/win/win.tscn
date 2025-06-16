@@ -108,7 +108,7 @@ label_settings = SubResource("LabelSettings_svv80")
 [node name="new high score2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "
-wr: 12643
+wr: 14482
 holder: somerandomguy21"
 label_settings = SubResource("LabelSettings_kqcem")
 

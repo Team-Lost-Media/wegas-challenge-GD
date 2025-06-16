@@ -29,6 +29,7 @@ var interactionsEnabled := true # can the player interact with Interactibles3D?
 # MY variables!!!!!!!!!!!!
 var dash_multiplier: float = 1
 var dashes_left: int = max_dashes
+@onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
 @onready var dash_cooldown_bar: ProgressBar = $DashCooldownBar

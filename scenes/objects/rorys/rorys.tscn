@@ -322,6 +322,10 @@ shape = SubResource("CylinderShape3D_sf834")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
 shape = SubResource("CapsuleShape3D_sf834")
 
+[node name="PissOffTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
 [node name="StayStillTimer" type="Timer" parent="."]
 wait_time = 4.0
 one_shot = true
@@ -347,6 +351,11 @@ visible = false
 offset_right = 1153.0
 offset_bottom = 648.0
 mouse_filter = 2
+
+[node name="rory" type="Sprite2D" parent="."]
+position = Vector2(586, 319)
+scale = Vector2(5.04478, 2.5597)
+texture = ExtResource("1_o823t")
 
 [connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
 [connection signal="body_entered" from="PunchableArea3D" to="." method="_on_punchable_area_3d_body_entered"]

@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3dna7fg7ywau"]
+
+[ext_resource type="Script" uid="uid://c3lmu6tvp12cy" path="res://scenes/menus/wcti_gameover/wcti_gameover.gd" id="1_6avms"]
+[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="3_dsy3w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 100
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
+font_size = 55
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_w6fnf"]
+font_size = 33
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgope"]
+font_size = 80
+font_color = Color(1, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6avms")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -1.0
+offset_right = 1151.0
+offset_bottom = 648.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Maltigi" type="Sprite2D" parent="."]
+position = Vector2(84, 321)
+texture = ExtResource("3_dsy3w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 288.0
+offset_top = 22.0
+offset_right = 1091.0
+offset_bottom = 177.0
+text = "rip green lawson"
+label_settings = SubResource("LabelSettings_i3kce")
+horizontal_alignment = 1
+
+[node name="you died to" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -78.0
+offset_top = 159.0
+offset_right = 865.0
+offset_bottom = 314.0
+text = "you died to GUYWHOKILLEDYOU"
+label_settings = SubResource("LabelSettings_7xr85")
+horizontal_alignment = 1
+
+[node name="tips" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -78.0
+offset_top = 252.0
+offset_right = 865.0
+offset_bottom = 500.0
+text = "Golden Sigma will only save you once from falling!
+(The only exception is the Rorys Explosion)
+
+Don't underestimate how easy it is to die to falling!"
+label_settings = SubResource("LabelSettings_w6fnf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 488.0
+offset_right = 781.0
+offset_bottom = 643.0
+text = "press space to retry"
+label_settings = SubResource("LabelSettings_tgope")
+horizontal_alignment = 1

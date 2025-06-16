@@ -62,6 +62,7 @@ func _on_dash_delay_timeout() -> void:
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if kill == true:
+			Global.died_to = "maltigi"
 			get_tree().change_scene_to_file(death_scene)
 
 func start(timer = false) -> void:

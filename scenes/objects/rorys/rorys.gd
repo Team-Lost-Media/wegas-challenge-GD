@@ -1,6 +1,7 @@
 extends AnimatedSprite3D
 
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
+@export var kill = false
 @export var piss_off = true
 @export var enable_manually = false
 @export var group_of_wegas: Node3D
@@ -18,6 +19,8 @@ extends AnimatedSprite3D
 @onready var sfx: AudioStreamPlayer = $SFX
 @onready var hitstop_flash: ColorRect = $Flash
 @onready var stun_timer: Timer = $StunTimer
+@onready var rory: Sprite2D = $rory
+@onready var piss_off_timer: Timer = $PissOffTimer
 
 var enabled = false
 var punchable = false 
@@ -42,6 +45,7 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("attack"):
 		if punchable:
+			piss_off_timer.stop()
 			if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material
 			punchable = false
 			sfx.stream = punch_sfx
@@ -51,6 +55,20 @@ func _process(delta: float) -> void:
 			Engine.time_scale = 0.0
 			hitstop_flash.hide()
 	
+	if !piss_off_timer.is_stopped():
+		rory.show()
+		frame_timer += 1
+		if frame_timer == 3:
+			randomize()
+			frame_timer = 0
+			rory.position = Vector2(rng.randf_range(100, 1000), rng.randf_range(50, 500))
+			rory.scale = Vector2(rng.randf_range(2.5, 6), rng.randf_range(2, 5))
+			rory.rotation = randf_range(-360, 360)
+	else:
+		rory.hide()
+var frame_timer: int
+var rng = RandomNumberGenerator.new()
+
 func _on_hitstop_timeout() -> void:
 	Engine.time_scale = 1.0
 	pixel_size = 0.05
@@ -60,6 +78,7 @@ func _on_hitstop_timeout() -> void:
 	StyleSFX.play_style_sfx()
 	sfx.stream = explosion_sfx
 	sfx.play()
+	piss_off_timer.stop()
 	stay_still_timer.stop()
 	stun_timer.start()
 	flash.flash(Color.from_string("ffffffaa", Color.RED), 0.6)
@@ -81,9 +100,11 @@ func _on_stay_still_timer_timeout() -> void:
 		pass
 
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
-	if body is PlayerCharacter:
-		if piss_off == true:
+	if body is PlayerCharacter and animation == "default":
+		if kill == true:
 			get_tree().change_scene_to_file(death_scene)
+		elif piss_off == true:
+			piss_off_timer.start()
 
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:

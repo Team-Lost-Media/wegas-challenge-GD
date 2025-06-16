@@ -5,6 +5,7 @@ extends Panel
 @onready var ResolutionOption = $VBoxContainer/ResolutionOptionButton
 @onready var FullscreenToggle = $VBoxContainer/FullscreenCheckBox
 @onready var VSyncToggle = $VBoxContainer/VSyncCheckBox
+@onready var epilepsy_mode = $VBoxContainer/EpilepsyModeCheckBox
 @onready var AudioSlider = $VBoxContainer/SFXSlider
 @onready var MusicSlider = $VBoxContainer/BGMSlider
 @onready var FOVSlider = $VBoxContainer/FOVSlider
@@ -34,6 +35,7 @@ func _on_apply_settings() -> void:
 	var vsync = VSyncToggle.button_pressed
 	resolution = resolution.split("x")
 	resolution = [int(resolution[0]), int(resolution[1])]
+	print(epilepsy_mode)
 	SettingsHandler.SettingsDict = {"selected resolution": ResolutionOption.selected, "resolution": resolution, "vsync": vsync, "fullscreen": fullscreen, "sfx volume": AudioSlider.value, "music volume": MusicSlider.value, "fov" : FOVSlider.value, "sensitivity" : SensitivitySlider.value}
 	
 	SettingsHandler._apply_settings()

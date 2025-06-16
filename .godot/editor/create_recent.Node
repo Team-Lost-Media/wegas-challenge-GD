@@ -1,15 +1,14 @@
+Timer
+Sprite2D
 OmniLight3D
 Label
 AudioStreamPlayer
 TextureRect
 ColorRect
-Timer
 AnimatedSprite3D
 SpotLight3D
 Sprite3D
-Sprite2D
 MeshInstance3D
 CanvasLayer
 CSGSphere3D
 ProgressBar
-Control

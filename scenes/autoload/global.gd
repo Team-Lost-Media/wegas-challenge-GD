@@ -5,6 +5,7 @@ var style: String = "none"#the idea is, once style != null itll display it in a 
 var style_number: float
 var wegadolls_left: int
 var max_wegadolls: int
+var died_to: String
 
 var tutorial = false
 var timer_stopped = false
@@ -18,6 +19,7 @@ func reset(): #execited when the player retries after a game over or win
 	points = 0
 	style = "none"
 	wegadoll_combo = 0
+	died_to = ""
 
 var newtimer = Timer
 var wegadoll_combo_timer = newtimer.new()
@@ -48,7 +50,7 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 
 
 func check_wegadoll_combo() -> void:
-	if wegadoll_combo > 6:
+	if wegadoll_combo > 16:
 		if wegadoll_combo > 99:
 			style = "+ULTRAWEGACOMBO"
 			points += 2500

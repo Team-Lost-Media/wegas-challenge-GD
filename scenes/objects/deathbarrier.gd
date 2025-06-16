@@ -19,6 +19,7 @@ func _on_body_entered(body: Node3D) -> void:
 			body.fall_saves -= 1
 			i_will_save_you(body)
 		else:
+			Global.died_to = "fall"
 			get_tree().change_scene_to_file(death_scene)
 
 func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
@@ -32,3 +33,8 @@ func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
 	audio_stream_player.play()
 	var tween = create_tween()
 	tween.tween_property(texture_rect, "modulate", Color.TRANSPARENT, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+	#note: DONT MAKE THIS USE collision.disabled!!!!!!!!!!!!!!!!! collision.disabled IS BROKEN!!!!! I DONT KNOW WHY BUT IT DOESNT DO ANYTHING JUST USE THIS INSTEAD
+	var shit = body.collision_mask
+	body.collision_mask = 0
+	await get_tree().create_timer(0.5).timeout
+	body.collision_mask = shit
