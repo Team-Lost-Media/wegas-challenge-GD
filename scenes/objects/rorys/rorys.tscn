@@ -1,9 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://ros1h8daiee"]
+[gd_scene load_steps=48 format=3 uid="uid://ros1h8daiee"]
 
 [ext_resource type="Texture2D" uid="uid://ce4ks01kxult8" path="res://assets/textures/Rory.png" id="1_o823t"]
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
 [ext_resource type="Texture2D" uid="uid://d1t21utirnpcc" path="res://assets/textures/spritesheetboom.png" id="2_sf834"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="3_oyc7v"]
+[ext_resource type="AudioStream" uid="uid://03fbe2ya4f4i" path="res://assets/SFX/rory being an asshole.ogg" id="5_aoh5m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aoh5m"]
 atlas = ExtResource("2_sf834")
@@ -346,6 +347,11 @@ stream = ExtResource("3_oyc7v")
 volume_db = 5.0
 bus = &"SFX"
 
+[node name="PissOffSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_aoh5m")
+volume_db = 5.0
+bus = &"SFX"
+
 [node name="Flash" type="ColorRect" parent="."]
 visible = false
 offset_right = 1153.0
@@ -353,7 +359,8 @@ offset_bottom = 648.0
 mouse_filter = 2
 
 [node name="rory" type="Sprite2D" parent="."]
-position = Vector2(586, 319)
+visible = false
+position = Vector2(586, 1032)
 scale = Vector2(5.04478, 2.5597)
 texture = ExtResource("1_o823t")
 

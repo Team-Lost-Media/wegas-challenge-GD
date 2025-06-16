@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://03fbe2ya4f4i"
+path="res://.godot/imported/rory being an asshole.ogg-a55c301bab69500b76c739f285490bfa.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/SFX/rory being an asshole.ogg"
+dest_files=["res://.godot/imported/rory being an asshole.ogg-a55c301bab69500b76c739f285490bfa.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

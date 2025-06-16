@@ -52,8 +52,13 @@ var tips = ["In CLASSIC mode, Wega speeds up as you collect more Wegadolls.",
 "The hitboxes for the platform tiles are much more forgiving than you think!",
 "Fun fact: you can reach WEGAKILL rank before collecting any Wegadolls!",
 "Your final score is your points multiplied by a special number that gets smaller the more time you take to collect all Wegadolls.",
-"Maltigi is in the game.",
 "Wega emits a colored light at all times! If the environment around you is changing color, he might be near.",
 "It takes Wega exactly three seconds to run after you.",
-"WATLM tomorrow"
+"WATLM tomorrow",
+"In THE IDOL, Rorys can only spawn on Wegadolls, so make sure to punch him with ATTACK (Left Click).",
+"In THE IDOL, if you press ATTACK (Left Click) while near Rorys, you'll punch him, which stuns him and gives you a large boost of velocity.",
+"In THE IDOL, the first time you fall, Golden Sigma will save you! He will also always save you after a Rorys Explosion.",
+"In THE IDOL, Maltigi can be easily dodged by just walking forward.",
+"In THE IDOL, punching Rorys (with ATTACK ATTACK (Left Click)) causes a Rorys Explosion, which gives you a large boost in velocity. If you fall due to a Rorys Explosion, Golden Sigma will save you!",
+"You cannot run from Shoe Bench."
 ]

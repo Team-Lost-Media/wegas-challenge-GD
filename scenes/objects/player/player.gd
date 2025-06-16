@@ -45,6 +45,7 @@ var coyote_disabled: bool
 @export var disable_collecting_wegadolls: bool = false
 @export var fall_saves: int = 0
 var saveable_fall = false
+@export var testing_grapples = false
 
 #region Main control flow 
 
@@ -115,8 +116,12 @@ func _physics_process(delta: float) -> void:
 		dashes_left -= 1
 		dash_cooldown.start()
 	
+	if Input.is_action_just_pressed("attack") and testing_grapples == true:
+		velocity = -camera.global_basis.z * Vector3(40, 40, 40)
+		boosted.start(0.5)
+	
 	if dash_multiplier > 1:
-		dash_multiplier = move_toward(dash_multiplier, 1, 0.2)
+		dash_multiplier = move_toward(dash_multiplier, 1, 12 * delta)
 	
 	var input_dir := Input.get_vector("left", "right", "up", "down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

@@ -5,7 +5,10 @@ extends Node2D
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
-	you_died_to.text = str("you died to ", str(Global.died_to).to_upper())
+	if Global.died_to == "fall":
+		you_died_to.text = "you FELL"
+	else:
+		you_died_to.text = str("you died to ", str(Global.died_to).to_upper())
 	match Global.died_to:
 		"fall":
 			tips.text = '''Golden Sigma will only save you once from falling!

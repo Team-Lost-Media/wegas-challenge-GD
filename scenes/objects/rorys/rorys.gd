@@ -17,6 +17,7 @@ extends AnimatedSprite3D
 @onready var start_timer: Timer = $StartTimer
 @onready var hitstop: Timer = $Hitstop
 @onready var sfx: AudioStreamPlayer = $SFX
+@onready var piss_off_sfx: AudioStreamPlayer = $PissOffSFX
 @onready var hitstop_flash: ColorRect = $Flash
 @onready var stun_timer: Timer = $StunTimer
 @onready var rory: Sprite2D = $rory
@@ -57,6 +58,7 @@ func _process(delta: float) -> void:
 	
 	if !piss_off_timer.is_stopped():
 		rory.show()
+		if piss_off_sfx.playing == false: piss_off_sfx.play()
 		frame_timer += 1
 		if frame_timer == 3:
 			randomize()
@@ -66,6 +68,7 @@ func _process(delta: float) -> void:
 			rory.rotation = randf_range(-360, 360)
 	else:
 		rory.hide()
+		piss_off_sfx.stop()
 var frame_timer: int
 var rng = RandomNumberGenerator.new()
 
