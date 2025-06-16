@@ -134,6 +134,7 @@ func _process(delta: float) -> void:
 		wexecution.volume_linear = lerp(wexecution.volume_linear, 0.0, clamp(0.6 * delta, 0.0, 1.0))
 	
 	if lap == 2:
+		maltigi.enabled = false
 		lap_2_gridmap.position.y = lerp(lap_2_gridmap.position.y, 0.0, clamp(5.0 * delta, 0.0, 1.0))
 		group_of_wegas_TWO.position.y = lerp(group_of_wegas_TWO.position.y, 1.0, clamp(5.0 * delta, 0.0, 1.0))
 		if FUCK == false:

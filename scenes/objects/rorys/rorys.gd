@@ -108,6 +108,9 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			get_tree().change_scene_to_file(death_scene)
 		elif piss_off == true:
 			piss_off_timer.start()
+			stay_still_timer.stop()
+			position.y = -100
+			hide()
 
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:
