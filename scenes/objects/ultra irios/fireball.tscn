@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://drsny1mofw07m"]
+
+[ext_resource type="Script" uid="uid://evsqqhh83yht" path="res://scenes/objects/ultra irios/fireball.gd" id="1_pf310"]
+[ext_resource type="Texture2D" uid="uid://dpbgfokopf2jg" path="res://assets/textures/fireball.png" id="2_j36qb"]
+[ext_resource type="AudioStream" uid="uid://xwy3ii53lc8y" path="res://assets/SFX/this lit my fire.mp3" id="3_j36qb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pf310"]
+friction = 0.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pf310"]
+radius = 0.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_28n5o"]
+radius = 1.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf310"]
+transparency = 1
+albedo_color = Color(2, 0.501961, 0, 0.501961)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_j36qb"]
+material = SubResource("StandardMaterial3D_pf310")
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+mass = 0.001
+physics_material_override = SubResource("PhysicsMaterial_pf310")
+gravity_scale = 0.0
+script = ExtResource("1_pf310")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.2
+billboard = 1
+texture_filter = 2
+texture = ExtResource("2_j36qb")
+
+[node name="DeathArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea"]
+shape = SubResource("SphereShape3D_pf310")
+
+[node name="CloseCallArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CloseCallArea"]
+shape = SubResource("SphereShape3D_28n5o")
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+mesh = SubResource("BoxMesh_j36qb")
+emission_shape = 2
+emission_sphere_radius = 1.0
+direction = Vector3(0.5, 1, 0.5)
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 1.0
+
+[node name="THY END IS NOW" type="Timer" parent="."]
+wait_time = 7.5
+one_shot = true
+autostart = true
+
+[node name="CloseCallCooldown" type="Timer" parent="."]
+wait_time = 0.75
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_j36qb")
+volume_db = 10.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="DeathArea" to="." method="_on_death_area_body_entered"]
+[connection signal="body_entered" from="CloseCallArea" to="." method="_on_close_call_area_body_entered"]
+[connection signal="body_exited" from="CloseCallArea" to="." method="_on_close_call_area_body_exited"]
+[connection signal="timeout" from="THY END IS NOW" to="." method="THY_END_IS_NOW"]
+[connection signal="timeout" from="CloseCallCooldown" to="." method="THY_END_IS_NOW"]

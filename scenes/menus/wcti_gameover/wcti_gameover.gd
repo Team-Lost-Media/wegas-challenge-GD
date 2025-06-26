@@ -7,12 +7,14 @@ func _ready() -> void:
 	Engine.time_scale = 1.0
 	if Global.died_to == "fall":
 		you_died_to.text = "you FELL"
+	elif Global.died_to == "ultra irios fireball":
+		you_died_to.text = "you died to a FIREBALL"
 	else:
 		you_died_to.text = str("you died to ", str(Global.died_to).to_upper())
 	match Global.died_to:
 		"fall":
 			tips.text = '''Golden Sigma will only save you once from falling!
-(The only exception is the Rorys Explosion)
+(The only exceptions are explosions, such as the Rorys Explosion)
 
 Don't underestimate how easy it is to die to falling!'''
 		"wega":
@@ -24,8 +26,21 @@ out of all of the lap 1 enemies.'''
 Maltigi might be very fast, but he's also very stupid.
 He will not predict your movement whatsoever:
 just by walking, you are dodging Maltigi.'''
+		"rorys":
+			tips.text = '''Remember to punch Rorys with ATTACK (Left Click)!
+It gives you an extremely helpful movement boost.
+Also, Golden Sigma is guaranteed to save you if you fall right after punching Rorys.'''
+		"ultra irios":
+			tips.text = '''Never underestimate Ultra Irios!
+Even if he is slower than Wega, he will still instakill you if you touch him!'''
+		"ultra irios fireball":
+			tips.text = '''Keep your distance from Ultra Irios!
+If you hear him shooting, get away as fast as possible.
+The fireballs, while faster than you, are extremely easy to dodge if you keep your distance: the only time they're truly dangerous is when you're close to Ultra Irios. '''
 		"shoe bench":
 			tips.text = "idk lmao just go fast"
+		
+			
 		_:
 			tips.text = "if youre seeing this then you died to something \n that i didnt give a built-in tip yet \n \n please report this"
 

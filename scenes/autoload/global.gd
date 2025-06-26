@@ -6,6 +6,7 @@ var style_number: float
 var wegadolls_left: int
 var max_wegadolls: int
 var died_to: String
+var health: float
 
 var tutorial = false
 var timer_stopped = false
@@ -20,6 +21,7 @@ func reset(): #execited when the player retries after a game over or win
 	style = "none"
 	wegadoll_combo = 0
 	died_to = ""
+	health = 100
 
 var newtimer = Timer
 var wegadoll_combo_timer = newtimer.new()
@@ -62,8 +64,11 @@ func check_wegadoll_combo() -> void:
 		print(str("+WEGACOMBO ", wegadoll_combo, "X"))
 	wegadoll_combo = 0
 
+var health_time: float
 func _process(delta: float) -> void:
-	pass
+	health_time += delta
+	if health_time > 1 and health < 100:
+		health += 0.05
 
 
 ## Requires [code]delta[/code] and [code]x[/code] as parameters. Returns [code]true[/code] when [code]x[/code] seconds have passed. Can be used with any interval, namely multiples of 10 such as 0.01, 0.1 and 1.

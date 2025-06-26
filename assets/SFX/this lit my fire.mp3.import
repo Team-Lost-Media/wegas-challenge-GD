@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xwy3ii53lc8y"
+path="res://.godot/imported/this lit my fire.mp3-0e33415ee4ac5d128ff93287bf749783.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/this lit my fire.mp3"
+dest_files=["res://.godot/imported/this lit my fire.mp3-0e33415ee4ac5d128ff93287bf749783.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

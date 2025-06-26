@@ -1,7 +1,7 @@
 extends Sprite3D
 
-## The CharacterBody3D node whose position Wega will move towards.
-@export var playerpos: CharacterBody3D
+## The node whose position Wega will move towards.
+@export var playerpos: Node3D
 ## The speed at which Wega will move towards the player. Usually higher than the player's default speed.
 @export var speed: float
 ## The time it takes for Wega to enable.

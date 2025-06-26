@@ -21,6 +21,7 @@ extends Node3D
 @onready var wega: Sprite3D = $Wega
 @onready var maltigi: Sprite3D = $Maltigi
 @onready var rorys: AnimatedSprite3D = $Rorys
+@onready var ultra_irios: Sprite3D = $"Ultra Irios"
 
 #the three benches
 @onready var shoe_bench_timer: Control = $"Shoe Bench Timer"
@@ -33,6 +34,7 @@ extends Node3D
 var wegafadence_bars: int = 0
 @onready var gridmap: GridMap = $Main/GridMap
 @onready var lap_2_gridmap: GridMap = $Main/Lap2GridMap
+@onready var the_idol_gridmap: GridMap = $"Main/The Idol GridMap"
 @onready var lap_2_start_pause: Timer = $Lap2StartPause
 @onready var flash: CanvasLayer = $Flash
 @onready var the_retros: MeshInstance3D = $"the retros"
@@ -68,6 +70,8 @@ func _ready() -> void:
 	lap_2_gridmap.hide()
 	group_of_wegas_TWO.position.y = -30
 	group_of_wegas_TWO.hide()
+	the_idol_gridmap.position.y = -50
+	the_idol_gridmap.hide()
 	
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, gridmap.mesh_library.get_item_mesh(0).surface_get_material(0))
 	#flash.flash(Color.WHITE, 1.5)
@@ -78,6 +82,7 @@ var wega_started: bool = false
 var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
+var the_idol_outro_started: bool = false
 func _process(delta: float) -> void:
 	delta_but_the_one_i_used_for_the_transition_to_lap_2 = delta
 	
@@ -94,25 +99,25 @@ func _process(delta: float) -> void:
 		wegasleft = group_of_wegas_TWO.get_child_count()
 		label.text = "wegas left: %s" % wegasleft
 	
-	if wegasleft <= 150:
+	if wegasleft <= 150  and lap == 1:
 		if rorys_started == false:
 			rorys.enabled = true
 			message.say("PUNCH RORYS", 2.0)
 			rorys_started = true
 	
-	if wegasleft <= 100:
+	if wegasleft <= 100  and lap == 1:
 		if maltigi_started == false:
 			maltigi.start(true)
 			message.say("MALTIGI IS COMING", 2.0)
 			maltigi_started = true
 	
 	
-	if wegasleft <= 50:
+	if wegasleft <= 50  and lap == 1:
 		if wega_started == false:
 			message.say("WEGA IS ENRAGED", 2.0)
 			wega_started = true
 	
-	if wegasleft <= 0 and lap != 2:
+	if wegasleft <= 0 and lap == 1:
 		lap1exit_started = true
 		lap2_startable = true
 		so_retro.show()
@@ -139,7 +144,19 @@ func _process(delta: float) -> void:
 		group_of_wegas_TWO.position.y = lerp(group_of_wegas_TWO.position.y, 1.0, clamp(5.0 * delta, 0.0, 1.0))
 		if FUCK == false:
 			sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
-	
+		
+		#if wegasleft <= 
+		
+		
+		
+		if wegasleft <= 0:
+			the_idol_gridmap.position.y = lerp(the_idol_gridmap.position.y, 0.0, clamp(5.0 * delta, 0.0, 1.0))
+			if the_idol_outro_started == false:
+				the_idol_gridmap.show()
+				message.say("GET THE IDOL", 2.0)
+				the_idol_outro_started = true
+			
+		
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
@@ -235,13 +252,14 @@ func _on_lap_2_start_pause_timeout() -> void:
 	gridmap.mesh_library.get_item_mesh(1).surface_set_material(0, so_retro_material)
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, so_retro_material)
 	shoe_bench_timer_slide_in = true
+	ultra_irios.enabled = true
+	ultra_irios.cooldown_timer.start(ultra_irios.cooldown)
+	ultra_irios.show()
 
 func shoe_bench_timer_bounce() -> void:
 	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then
-		bounce(bench_bar, Vector2(0.975, 1.025), Vector2(1.0, 1.0))
 		bounce(the_man_himself, Vector2(0.7, 1.3) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
 	else: #if it's odd then
-		bounce(bench_bar, Vector2(1.025, 0.975), Vector2(1.0, 1.0))
 		bounce(the_man_himself, Vector2(1.3, 0.7) * shoe_bench_scale, Vector2(1.0, 1.0) * shoe_bench_scale)
 
 ## Makes the given node bounce. The node MUST have its pivot centered, and it MUST have a transform and scale property!

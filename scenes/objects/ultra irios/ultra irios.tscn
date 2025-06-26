@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs226fu3xw4bi"]
+
+[ext_resource type="Texture2D" uid="uid://berbfshx2for4" path="res://assets/textures/ultra irios.png" id="1_eiiug"]
+[ext_resource type="Script" uid="uid://hhyoblj0j7l7" path="res://scenes/objects/ultra irios/ultra irios.gd" id="2_7qcql"]
+[ext_resource type="PackedScene" uid="uid://drsny1mofw07m" path="res://scenes/objects/ultra irios/fireball.tscn" id="3_7qcql"]
+[ext_resource type="AudioStream" uid="uid://p0g34g4707b5" path="res://assets/SFX/mario-fireball.mp3" id="4_7qcql"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vniee"]
+height = 1.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7nkvs"]
+height = 3.57553
+radius = 2.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vniee"]
+size = Vector3(2.12158, 1.51551, 0.214844)
+
+[node name="Ultra Irios" type="Sprite3D"]
+pixel_size = 0.02
+billboard = 1
+texture = ExtResource("1_eiiug")
+region_rect = Rect2(20, 0, 0, 0)
+script = ExtResource("2_7qcql")
+fireball = ExtResource("3_7qcql")
+fireball_speed = 2500.0
+
+[node name="DeathArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
+shape = SubResource("CylinderShape3D_vniee")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_7qcql")
+volume_db = -4.0
+bus = &"SFX"
+
+[node name="AboveWegaArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AboveWegaArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.00276, 0)
+shape = SubResource("CylinderShape3D_7nkvs")
+
+[node name="JukeArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.3, 0)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.3, 0)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.3, 1.5)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.3, -1.5)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="JukeTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="EnrageColorTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="CooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
+[connection signal="body_entered" from="AboveWegaArea3D" to="." method="_on_above_wega_area_3d_body_entered"]
+[connection signal="body_entered" from="JukeArea3D" to="." method="_on_juke_area_3d_body_entered"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="timeout" from="CooldownTimer" to="." method="_on_cooldown_timer_timeout"]

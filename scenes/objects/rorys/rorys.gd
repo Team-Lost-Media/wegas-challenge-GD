@@ -12,6 +12,7 @@ extends AnimatedSprite3D
 @export var punch_sfx: AudioStream
 @export var explosion_sfx: AudioStream
 @export var flash: CanvasLayer
+@export var damage: float = 70
 
 @onready var stay_still_timer: Timer = $StayStillTimer
 @onready var start_timer: Timer = $StartTimer
@@ -45,8 +46,7 @@ func _process(delta: float) -> void:
 			stay_still_timer.start(stay_still_time)
 	
 	if Input.is_action_just_pressed("attack"):
-		if punchable:
-			piss_off_timer.stop()
+		if punchable and piss_off_timer.is_stopped():
 			if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material
 			punchable = false
 			sfx.stream = punch_sfx
@@ -60,7 +60,7 @@ func _process(delta: float) -> void:
 		rory.show()
 		if piss_off_sfx.playing == false: piss_off_sfx.play()
 		frame_timer += 1
-		if frame_timer == 3:
+		if frame_timer == 6:
 			randomize()
 			frame_timer = 0
 			rory.position = Vector2(rng.randf_range(100, 1000), rng.randf_range(50, 500))
@@ -84,6 +84,11 @@ func _on_hitstop_timeout() -> void:
 	piss_off_timer.stop()
 	stay_still_timer.stop()
 	stun_timer.start()
+	if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material
+	flash.flash(Color.from_string("ffffffaa", Color.RED), 0.6)
+	player.velocity = player.camera.global_basis.z * Vector3(40, 40, 40) + Vector3(0, 3, 0)
+	player.boosted.start(0.5)
+	player.saveable_fall_leniency_timer.start()
 	flash.flash(Color.from_string("ffffffaa", Color.RED), 0.6)
 	player.velocity = player.camera.global_basis.z * Vector3(40, 40, 40) + Vector3(0, 3, 0)
 	player.boosted.start(0.5)
@@ -105,12 +110,18 @@ func _on_stay_still_timer_timeout() -> void:
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and animation == "default":
 		if kill == true:
+			Global.died_to = "rorys"
 			get_tree().change_scene_to_file(death_scene)
 		elif piss_off == true:
 			piss_off_timer.start()
 			stay_still_timer.stop()
 			position.y = -100
+			Global.health -= damage
+			if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material
 			hide()
+			if Global.health <= 0:
+				Global.died_to = "rorys"
+				get_tree().change_scene_to_file(death_scene)
 
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:

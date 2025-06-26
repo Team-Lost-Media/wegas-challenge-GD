@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c80hipafjggcf"
-path.s3tc="res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.s3tc.ctex"
+path="res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/textures/so retro! so retro! so retro! so retro! so retro!.png"
-dest_files=["res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.s3tc.ctex"]
+dest_files=["res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

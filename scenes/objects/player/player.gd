@@ -38,7 +38,9 @@ var dashes_left: int = max_dashes
 @onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
+@onready var damage_effects: Control = $"Damage Effects" #IMOPORTANTANTNNATSNOTN USED FOR THE HTOINGISES TIST TUSES USED FOR THE THINGIES WHEN YO UGET DAMAGED THE THINGS THAT DAMAGE U CALL THIS
 @onready var boosted: Timer = $Boosted
+@onready var saveable_fall_leniency_timer: Timer = $SaveableFallLeniencyTimer
 var coyote: bool
 var coyote_disabled: bool
 @export var fly: bool = false
@@ -60,6 +62,7 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	
+	
 	if not is_on_floor():
 		velocity.y += -55 * delta
 		if coyote_timer.is_stopped() and !coyote and !coyote_disabled:
@@ -67,7 +70,7 @@ func _physics_process(delta: float) -> void:
 			coyote = true
 	else:
 		coyote_disabled = false
-		saveable_fall = false
+		if saveable_fall_leniency_timer.is_stopped(): saveable_fall = false
 	
 	if fly:
 		if !is_on_floor():
@@ -87,10 +90,10 @@ func _physics_process(delta: float) -> void:
 			else:
 				$"../Wega".enabled = true
 	
-	#if Input.is_action_just_pressed("debug"):
-	#	style_panel.hide()
-	#	$DashCooldownBar.hide()
-	#	$SuperJumpCooldownBar.hide()
+	if Input.is_action_just_pressed("debug"):
+		style_panel.hide()
+		$DashCooldownBar.hide()
+		$SuperJumpCooldownBar.hide()
 	
 	if Input.is_action_just_pressed("debug"):
 		var date = Time.get_date_string_from_system().replace(".","_")
@@ -142,11 +145,19 @@ func _physics_process(delta: float) -> void:
 	camera.fov = SettingsHandler.fov
 	mouse_sensitivity = SettingsHandler.sensitivity
 	
+	
 	# All of the other processing functions go here
 	_process_interact()
 	_handle_states()
 	
 	move_and_slide()
+	
+	#camera bs
+	head.rotation_degrees.x = clamp(head.rotation_degrees.x, -90, 90)
+	if Input.is_action_pressed("lookback"):
+		head.rotation_degrees.y = 180 #rotation_degrees.y - 180
+	else:
+		head.rotation_degrees.y = 0
 
 func _on_dash_cooldown_timeout() -> void:
 	dashes_left = max_dashes

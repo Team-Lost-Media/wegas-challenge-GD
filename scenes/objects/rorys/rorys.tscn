@@ -340,16 +340,17 @@ one_shot = true
 ignore_time_scale = true
 
 [node name="StunTimer" type="Timer" parent="."]
+wait_time = 4.0
 one_shot = true
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_oyc7v")
-volume_db = 5.0
+volume_db = 8.0
 bus = &"SFX"
 
 [node name="PissOffSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_aoh5m")
-volume_db = 5.0
+volume_db = 8.0
 bus = &"SFX"
 
 [node name="Flash" type="ColorRect" parent="."]

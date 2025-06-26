@@ -1,6 +1,7 @@
 extends Area3D
 
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
+@export var saveable = true
 @export var default_save: Texture2D
 @export var rorys_save: Texture2D
 
@@ -10,14 +11,18 @@ extends Area3D
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		if default_save: texture_rect.texture = default_save
-		if body.saveable_fall == true:
-			if rorys_save: texture_rect.texture = rorys_save
-			body.saveable_fall = false
-			i_will_save_you(body, false)
-		elif body.fall_saves > 0:
-			body.fall_saves -= 1
-			i_will_save_you(body)
+		if saveable:
+			if default_save: texture_rect.texture = default_save
+			if body.saveable_fall == true:
+				if rorys_save: texture_rect.texture = rorys_save
+				body.saveable_fall = false
+				i_will_save_you(body, false)
+			elif body.fall_saves > 0:
+				body.fall_saves -= 1
+				i_will_save_you(body)
+			else:
+				Global.died_to = "fall"
+				get_tree().change_scene_to_file(death_scene)
 		else:
 			Global.died_to = "fall"
 			get_tree().change_scene_to_file(death_scene)
