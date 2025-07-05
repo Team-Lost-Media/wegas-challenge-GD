@@ -20,8 +20,8 @@ extends Sprite3D
 @export var fireball: PackedScene
 @export var fireball_death_scene = "res://scenes/menus/gameover/gameover.tscn"
 ## The time in seconds Ultra Irios will take to fire.
-@export var cooldown: float
-@export var fireball_speed: float = 250
+@export var cooldown: float = 1.0
+@export var fireball_speed: float = 17.5
 @export var fireball_damage: float = 40
 
 @onready var start_timer: Timer = $StartTimer
@@ -126,8 +126,10 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 			print("JUKED")
 			StyleSFX.play_style_sfx()
 
-
+var fireball_number: int
 func _on_cooldown_timer_timeout() -> void:
+	fireball_number += 1
+	#shoot fireball
 	var shot = fireball.instantiate()
 	add_sibling(shot)
 	shot.transform = global_transform
@@ -138,4 +140,4 @@ func _on_cooldown_timer_timeout() -> void:
 	shot.damage = fireball_damage
 	audio.pitch_scale = randf_range(0.9, 1.1)
 	audio.play()
-	cooldown_timer.start()
+	cooldown_timer.start(cooldown)

@@ -20,7 +20,8 @@ Don't underestimate how easy it is to die to falling!'''
 		"wega":
 			tips.text = '''Don't let the other enemies (especially Rorys) distract you!
 Wega is still the most dangerous threat
-out of all of the lap 1 enemies.'''
+out of all of the lap 1 enemies.
+Never underestimate him when he's enraged!'''
 		"maltigi":
 			tips.text = '''Always stay on the move!
 Maltigi might be very fast, but he's also very stupid.

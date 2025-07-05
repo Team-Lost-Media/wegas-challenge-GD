@@ -33,6 +33,7 @@ func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
 	else:
 		saves_left.show()
 		saves_left.text = str(body.fall_saves)
+	body.this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area.start()
 	body.velocity.y = 50
 	texture_rect.modulate = Color.WHITE
 	audio_stream_player.play()

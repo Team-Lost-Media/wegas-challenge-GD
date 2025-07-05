@@ -12,6 +12,7 @@ extends Sprite3D
 @export var line: MeshInstance3D ## Must be set to $"maltigi line". Used for drawing the red line from Maltigi to his target position.
 @export var smart = false ## If set to [code]true[/code], Maltigi will predict the targets's movement (using their velocity) and dash where they're going. Otherwise, he will just dash at their position.
 @export var smart_multiplier: float = 1.2 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
+@export var enable_overshoot: bool = true ## If set to [code]true[/code], Maltigi will overshoot the target.
 
 @onready var start_timer: Timer = $StartTimer
 @onready var dash_cooldown_timer: Timer = $StartTimer
@@ -37,9 +38,9 @@ func _process(delta: float) -> void:
 		if dash_cooldown_timer.is_stopped():
 			moving = false
 			if smart:
-				target_position = player.position + Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(smart_multiplier, smart_multiplier, smart_multiplier)
+				target_position = player.position + ((position.direction_to(player.position) * position.distance_to(player.position) * 0.5) * float(enable_overshoot)) + (Vector3(player.velocity.x, player.velocity.y * float(player.just_jumped.is_stopped()), player.velocity.z) * Vector3(smart_multiplier, smart_multiplier, smart_multiplier))
 			else:
-				target_position = player.position
+				target_position = player.position + ((position.direction_to(player.position) * position.distance_to(player.position) * 0.25) * float(enable_overshoot))
 			dash_delay_timer.start(dash_delay)
 			line.draw(position, target_position)
 			#draw the line

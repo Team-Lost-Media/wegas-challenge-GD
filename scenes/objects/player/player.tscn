@@ -242,6 +242,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_auuwx")
 }
 
+[node name="this timer only exists to prevent a bug where if you dash right after being saved you clip through the death area" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
 [node name="DashCooldown" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
@@ -311,7 +315,7 @@ text = "HP: 100.0"
 label_settings = SubResource("LabelSettings_ponut")
 horizontal_alignment = 2
 
-[node name="BenchBarOutline" type="ColorRect" parent="."]
+[node name="HealthBarOutline" type="ColorRect" parent="."]
 offset_left = 778.0
 offset_top = 593.0
 offset_right = 1146.0

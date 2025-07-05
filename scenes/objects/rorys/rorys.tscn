@@ -1,6 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://ros1h8daiee"]
+[gd_scene load_steps=49 format=3 uid="uid://ros1h8daiee"]
 
 [ext_resource type="Texture2D" uid="uid://ce4ks01kxult8" path="res://assets/textures/Rory.png" id="1_o823t"]
+[ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="1_pabep"]
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
 [ext_resource type="Texture2D" uid="uid://d1t21utirnpcc" path="res://assets/textures/spritesheetboom.png" id="2_sf834"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="3_oyc7v"]
@@ -166,7 +167,7 @@ region = Rect2(0, 1000, 250, 250)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_o823t")
+"texture": ExtResource("1_pabep")
 }],
 "loop": true,
 "name": &"default",
@@ -308,7 +309,6 @@ billboard = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_avj1d")
 animation = &"explode"
-frame_progress = 0.398303
 script = ExtResource("2_hipyo")
 
 [node name="DeathArea3D" type="Area3D" parent="."]

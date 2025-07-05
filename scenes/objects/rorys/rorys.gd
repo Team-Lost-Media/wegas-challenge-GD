@@ -57,6 +57,7 @@ func _process(delta: float) -> void:
 			hitstop_flash.hide()
 	
 	if !piss_off_timer.is_stopped():
+		punchable = false
 		rory.show()
 		if piss_off_sfx.playing == false: piss_off_sfx.play()
 		frame_timer += 1
@@ -115,6 +116,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 		elif piss_off == true:
 			piss_off_timer.start()
 			stay_still_timer.stop()
+			punchable = false
 			position.y = -100
 			Global.health -= damage
 			if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material

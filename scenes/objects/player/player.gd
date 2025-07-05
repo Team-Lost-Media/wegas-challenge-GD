@@ -37,6 +37,7 @@ var dashes_left: int = max_dashes
 @onready var just_dashed: Timer = $JustDashed
 @onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
+@onready var this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area: Timer = $"this timer only exists to prevent a bug where if you dash right after being saved you clip through the death area"
 @onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
 @onready var damage_effects: Control = $"Damage Effects" #IMOPORTANTANTNNATSNOTN USED FOR THE HTOINGISES TIST TUSES USED FOR THE THINGIES WHEN YO UGET DAMAGED THE THINGS THAT DAMAGE U CALL THIS
 @onready var boosted: Timer = $Boosted
@@ -48,6 +49,10 @@ var coyote_disabled: bool
 @export var fall_saves: int = 0
 var saveable_fall = false
 @export var testing_grapples = false
+@export var show_hp = true
+@onready var health_label: Label = $HealthLabel
+@onready var health_bar_outline: ColorRect = $HealthBarOutline
+@onready var health_bar: ProgressBar = $Health
 
 #region Main control flow 
 
@@ -55,8 +60,14 @@ func _ready():
 	$MeshInstance3D.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GameManager.player = self
-	
-
+	if show_hp == true:
+		health_bar.show()
+		health_bar_outline.show()
+		health_label.show()
+	else:
+		health_bar.hide()
+		health_bar_outline.hide()
+		health_label.hide()
 func _physics_process(delta: float) -> void:
 	if !inputEnabled:
 		return
@@ -111,7 +122,7 @@ func _physics_process(delta: float) -> void:
 				just_jumped.start()
 		coyote_disabled = true
 	
-	if Input.is_action_just_pressed("sprint") and dashes_left > 0:
+	if Input.is_action_just_pressed("sprint") and dashes_left > 0 and this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area.is_stopped():
 		dash_cooldown.stop()
 		just_dashed.start()
 		dash_multiplier = 5

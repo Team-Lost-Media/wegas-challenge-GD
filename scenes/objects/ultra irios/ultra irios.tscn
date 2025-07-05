@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cs226fu3xw4bi"]
 
-[ext_resource type="Texture2D" uid="uid://berbfshx2for4" path="res://assets/textures/ultra irios.png" id="1_eiiug"]
+[ext_resource type="Texture2D" uid="uid://7o4npgo68ncp" path="res://assets/textures/ultra irios accurate.png" id="1_7qcql"]
 [ext_resource type="Script" uid="uid://hhyoblj0j7l7" path="res://scenes/objects/ultra irios/ultra irios.gd" id="2_7qcql"]
 [ext_resource type="PackedScene" uid="uid://drsny1mofw07m" path="res://scenes/objects/ultra irios/fireball.tscn" id="3_7qcql"]
 [ext_resource type="AudioStream" uid="uid://p0g34g4707b5" path="res://assets/SFX/mario-fireball.mp3" id="4_7qcql"]
@@ -18,11 +18,10 @@ size = Vector3(2.12158, 1.51551, 0.214844)
 [node name="Ultra Irios" type="Sprite3D"]
 pixel_size = 0.02
 billboard = 1
-texture = ExtResource("1_eiiug")
+texture = ExtResource("1_7qcql")
 region_rect = Rect2(20, 0, 0, 0)
 script = ExtResource("2_7qcql")
 fireball = ExtResource("3_7qcql")
-fireball_speed = 2500.0
 
 [node name="DeathArea3D" type="Area3D" parent="."]
 
