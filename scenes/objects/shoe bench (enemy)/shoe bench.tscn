@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1dn67n1ycfir"]
+
+[ext_resource type="Texture2D" uid="uid://bt4kg26lwevja" path="res://assets/textures/shoe bench murder mode.png" id="1_6ovgo"]
+[ext_resource type="Script" uid="uid://dkar4yjkwtli5" path="res://scenes/objects/shoe bench (enemy)/shoe_bench.gd" id="2_inm0f"]
+[ext_resource type="AudioStream" uid="uid://boqg6v6tagpu2" path="res://assets/SFX/shoebench.mp3" id="3_6ovgo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vniee"]
+height = 1.5
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7nkvs"]
+height = 3.57553
+radius = 2.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vniee"]
+size = Vector3(2.12158, 1.51551, 0.214844)
+
+[node name="Wega" type="Sprite3D"]
+pixel_size = 0.0025
+billboard = 1
+texture = ExtResource("1_6ovgo")
+region_rect = Rect2(20, 0, 0, 0)
+script = ExtResource("2_inm0f")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_6ovgo")
+volume_db = 4.0
+max_db = 6.0
+bus = &"SFX"
+
+[node name="DeathArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
+shape = SubResource("CylinderShape3D_vniee")
+
+[node name="AboveWegaArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AboveWegaArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.018, 0)
+shape = SubResource("CylinderShape3D_7nkvs")
+
+[node name="JukeArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.3, 0)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.3, 0)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.3, 1.5)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="JukeArea3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0.3, -1.5)
+shape = SubResource("BoxShape3D_vniee")
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="JukeTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="EnrageColorTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
+[connection signal="body_entered" from="AboveWegaArea3D" to="." method="_on_above_wega_area_3d_body_entered"]
+[connection signal="body_entered" from="JukeArea3D" to="." method="_on_juke_area_3d_body_entered"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

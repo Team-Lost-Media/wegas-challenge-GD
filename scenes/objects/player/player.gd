@@ -112,7 +112,7 @@ func _physics_process(delta: float) -> void:
 		var img = get_viewport().get_texture().get_image()
 		img.save_png("res://screenshots/" + date + time + ".png")
 	
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_pressed("jump"):
 		if is_on_floor() or coyote:
 			if Input.is_action_pressed("superjump") and superjump_cooldown.is_stopped():
 				velocity.y = JUMP_VELOCITY * 2.5

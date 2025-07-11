@@ -22,6 +22,8 @@ extends Node3D
 @onready var maltigi: Sprite3D = $Maltigi
 @onready var rorys: AnimatedSprite3D = $Rorys
 @onready var ultra_irios: Sprite3D = $"Ultra Irios"
+@onready var shoe_bench: Sprite3D = $"Shoe Bench"
+@onready var super_john: CharacterBody3D = $SuperJohn
 
 #the three benches
 @onready var shoe_bench_timer: Control = $"Shoe Bench Timer"
@@ -30,7 +32,6 @@ extends Node3D
 @onready var the_man_himself: Sprite2D = $"Shoe Bench Timer/the man himself"
 
 @onready var player: PlayerCharacter = $Player
-@onready var wegafadence_beat: RhythmNotifier = $"wegafadence beat" #emits a signal every bar
 var wegafadence_bars: int = 0
 @onready var gridmap: GridMap = $Main/GridMap
 @onready var lap_2_gridmap: GridMap = $Main/Lap2GridMap
@@ -38,12 +39,13 @@ var wegafadence_bars: int = 0
 @onready var lap_2_start_pause: Timer = $Lap2StartPause
 @onready var flash: CanvasLayer = $Flash
 @onready var the_retros: MeshInstance3D = $"the retros"
-
+@onready var wegafadence_beat_timer: Timer = $"wegafadence beat"
 
 @export var so_retro_material: Material
 @export var lap2_sun_color: Color
 @export var lap2_sky: ProceduralSkyMaterial
 @export var hot_particles: Mesh
+@export var shoe_bench_murder_mode: Texture2D
 
 var delta_but_the_one_i_used_for_the_transition_to_lap_2: float
 var lap1_sky: Sky
@@ -60,7 +62,6 @@ func _ready() -> void:
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
 	shoe_bench_timer.position.y += 200
-	wegafadence_beat.running = false
 	wegafadence_bars = 0
 	lap1_sky = environment.environment.sky
 	message.text = ""
@@ -77,12 +78,14 @@ func _ready() -> void:
 	#flash.flash(Color.WHITE, 1.5)
 
 var time_passed = 0.0
+var time_left: float
 
 var wega_started: bool = false
 var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
 var the_idol_outro_started: bool = false
+var FUCK2: bool
 func _process(delta: float) -> void:
 	delta_but_the_one_i_used_for_the_transition_to_lap_2 = delta
 	
@@ -145,7 +148,11 @@ func _process(delta: float) -> void:
 		if FUCK == false:
 			sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
 		
-		#if wegasleft <= 
+		if wegasleft <= 300:
+			message.say("PUNCH SUPER JOHN")
+			super_john.show()
+			super_john.enabled = true
+			super_john.position.y = 0 
 		
 		
 		
@@ -162,22 +169,30 @@ func _process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
+	#region shoe bench timer
 	if wegafadence.playing:
-		
 		time_passed += delta
-		var time_left = abs(snapped(time_passed - 170.0, 0.1))
-		var minutes = snapped(time_left, 60) / 60
-		you_have_3_minutes_left_to_live.text = str(time_left)
-		#you_have_3_minutes_left_to_live.text = str(minutes, ":", time_left - minutes * 60) 
-	
-	so_retro.rotation.y -= PI * 2 * delta
-	the_retros.rotation.y -= PI * 0.1 * delta
+		if FUCK2 == false: time_left = abs(snapped(time_passed - 170.0, 0.1))
+		print(time_left)
+		if time_left > 0:
+			if FUCK2 == false:
+				you_have_3_minutes_left_to_live.text = str(time_left)
+		else:
+			FUCK2 = true
+			time_left = 1
+			you_have_3_minutes_left_to_live.text = "youre gna die"
+			the_man_himself.texture = shoe_bench_murder_mode
+			var tween = create_tween()
+			tween.tween_property(the_man_himself, "position", Vector2(the_man_himself.position.x, 1400), 2.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
+			shoe_bench_is_going_to_fucking_murder_you()
 	
 	if shoe_bench_timer_slide_in == true:
 		var tween = create_tween()
 		tween.tween_property(shoe_bench_timer, "position", Vector2(0, 0), 2.0).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	#endregion
 	
-
+	so_retro.rotation.y -= PI * 2 * delta
+	the_retros.rotation.y -= PI * 0.1 * delta
 
 func _on_so_retro_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and lap2_startable == true:
@@ -204,7 +219,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 
 var FUCK = false
 var shit: Mesh
-func _on_rhythm_notifier_beat(current_beat: int) -> void:
+func _on_wegafadence_beat() -> void:
 	wegafadence_bars += 1
 	bench_bar.value = wegafadence_bars
 	shoe_bench_timer_bounce()
@@ -242,9 +257,24 @@ func _on_rhythm_notifier_beat(current_beat: int) -> void:
 			flash.flash(Color.INDIAN_RED, 1.5)
 			skybox.show()
 			particles.mesh = hot_particles
+		112:
+			flash.flash(Color.WHITE, 1.5)
+			skybox.hide()
+			the_retros.hide()
+			particles.mesh = shit
+			FUCK = true
+			sun.light_color = Color.from_rgba8(123, 22, 224)
+			sun.light_energy = 4.0
+			environment.environment.sky = lap1_sky
+		128:
+			flash.flash(Color.WHITE, 1.5)
+			sun.light_color = Color.BLACK
+			particles.emitting = false
+			#ultra_irios.playerpos = ultra_irios.position + Vector3(0, 100, 0)
 
 func _on_lap_2_start_pause_timeout() -> void:
 	wegafadence.play()
+	wegafadence_beat_timer.start()
 	message.stop()
 	flash.flash(Color.WHITE, 1.5)
 	environment.environment.sky.sky_material = lap2_sky
@@ -255,6 +285,7 @@ func _on_lap_2_start_pause_timeout() -> void:
 	ultra_irios.enabled = true
 	ultra_irios.cooldown_timer.start(ultra_irios.cooldown)
 	ultra_irios.show()
+	lap = 2
 
 func shoe_bench_timer_bounce() -> void:
 	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then
@@ -267,3 +298,9 @@ func bounce(node: Node, start: Vector2 = Vector2(0.9, 1.1), end: Vector2 = Vecto
 	var tween = create_tween()
 	tween.tween_property(node, "scale", start, 0.05).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(node, "scale", end, 0.4).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+
+func shoe_bench_is_going_to_fucking_murder_you() -> void:
+	await get_tree().create_timer(1.0).timeout
+	shoe_bench.show()
+	shoe_bench.enabled = true
+	shoe_bench.position.y = 0

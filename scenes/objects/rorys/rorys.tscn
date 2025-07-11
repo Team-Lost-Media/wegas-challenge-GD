@@ -1,6 +1,5 @@
 [gd_scene load_steps=49 format=3 uid="uid://ros1h8daiee"]
 
-[ext_resource type="Texture2D" uid="uid://ce4ks01kxult8" path="res://assets/textures/Rory.png" id="1_o823t"]
 [ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="1_pabep"]
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
 [ext_resource type="Texture2D" uid="uid://d1t21utirnpcc" path="res://assets/textures/spritesheetboom.png" id="2_sf834"]
@@ -297,7 +296,10 @@ animations = [{
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sf834"]
-radius = 0.75
+radius = 0.8
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aoh5m"]
+height = 2.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sf834"]
 radius = 4.0
@@ -308,7 +310,6 @@ transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999
 billboard = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_avj1d")
-animation = &"explode"
 script = ExtResource("2_hipyo")
 
 [node name="DeathArea3D" type="Area3D" parent="."]
@@ -316,6 +317,13 @@ script = ExtResource("2_hipyo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
 shape = SubResource("CylinderShape3D_sf834")
+
+[node name="FuckYouArea3D" type="Area3D" parent="."]
+transform = Transform3D(1, -2.31182e-10, 2.32831e-10, 1.23919e-11, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuckYouArea3D"]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
+shape = SubResource("CapsuleShape3D_aoh5m")
 
 [node name="PunchableArea3D" type="Area3D" parent="."]
 
@@ -353,19 +361,14 @@ stream = ExtResource("5_aoh5m")
 volume_db = 8.0
 bus = &"SFX"
 
-[node name="Flash" type="ColorRect" parent="."]
-visible = false
-offset_right = 1153.0
-offset_bottom = 648.0
-mouse_filter = 2
-
 [node name="rory" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(586, 1032)
 scale = Vector2(5.04478, 2.5597)
-texture = ExtResource("1_o823t")
+texture = ExtResource("1_pabep")
 
 [connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
+[connection signal="body_entered" from="FuckYouArea3D" to="." method="_on_fuck_you_area_3d_body_entered"]
 [connection signal="body_entered" from="PunchableArea3D" to="." method="_on_punchable_area_3d_body_entered"]
 [connection signal="body_exited" from="PunchableArea3D" to="." method="_on_punchable_area_3d_body_exited"]
 [connection signal="timeout" from="StayStillTimer" to="." method="_on_stay_still_timer_timeout"]

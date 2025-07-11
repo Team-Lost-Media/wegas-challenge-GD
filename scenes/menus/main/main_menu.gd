@@ -42,6 +42,7 @@ func _on_close_button() -> void:
 	buttons.show() 
 
 func _ready() -> void:
+	StyleSFX.stop()
 	randomize()
 	tips_text.text = tips.pick_random()
 

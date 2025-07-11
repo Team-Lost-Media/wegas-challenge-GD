@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://bx4ofdrp8dc2v"]
+[gd_scene load_steps=62 format=3 uid="uid://bx4ofdrp8dc2v"]
 
 [ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_2any5"]
 [ext_resource type="Script" uid="uid://cf2srb56vlwde" path="res://scenes/levels/the idol/maltigi_line.gd" id="2_1a3yk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://ca4hmppmj846s" path="res://scenes/levels/the idol/flash.gd" id="3_7ixl2"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_k8crp"]
 [ext_resource type="PackedScene" uid="uid://c8e8i7oo5k8rm" path="res://scenes/objects/maltigi/maltigi.tscn" id="3_qn1fo"]
+[ext_resource type="Texture2D" uid="uid://bt4kg26lwevja" path="res://assets/textures/shoe bench murder mode.png" id="3_vtxl0"]
 [ext_resource type="Texture2D" uid="uid://b5npf3t0v1emx" path="res://assets/textures/so retroer! so retroer! so retroer! so retroer!.png" id="4_5niun"]
 [ext_resource type="Script" uid="uid://benjx0bkvjl3f" path="res://scenes/levels/the idol/message.gd" id="4_ll2y4"]
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="6_goutp"]
@@ -21,10 +22,11 @@
 [ext_resource type="Texture2D" uid="uid://dyg3r2t2utgsr" path="res://assets/Models/soretrotexture.png" id="10_sr6d7"]
 [ext_resource type="AudioStream" uid="uid://bl5jwa2w0x6nl" path="res://assets/BGM/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav" id="10_y2ang"]
 [ext_resource type="PackedScene" uid="uid://ros1h8daiee" path="res://scenes/objects/rorys/rorys.tscn" id="12_bjl6n"]
-[ext_resource type="Script" uid="uid://0bwhpwuks7h3" path="res://addons/rhythm_notifier/rhythm_notifier.gd" id="12_kracn"]
 [ext_resource type="AudioStream" uid="uid://bbpilhi58oh6e" path="res://assets/SFX/deltarune-explosion.mp3" id="13_5niun"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="13_c0roo"]
 [ext_resource type="PackedScene" uid="uid://cs226fu3xw4bi" path="res://scenes/objects/ultra irios/ultra irios.tscn" id="15_lr4ys"]
+[ext_resource type="PackedScene" uid="uid://b1dn67n1ycfir" path="res://scenes/objects/shoe bench (enemy)/shoe bench.tscn" id="17_vtxl0"]
+[ext_resource type="PackedScene" uid="uid://5fyklqfajuef" path="res://scenes/objects/super john/super john.tscn" id="18_7ytgl"]
 [ext_resource type="Texture2D" uid="uid://bmyvtstlhdqae" path="res://assets/textures/fire lowquality skybox version.png" id="19_lr4ys"]
 
 [sub_resource type="Gradient" id="Gradient_rcnw4"]
@@ -185,6 +187,11 @@ so_retro_material = SubResource("StandardMaterial3D_7ixl2")
 lap2_sun_color = Color(0.878431, 0.298039, 0.0862745, 1)
 lap2_sky = SubResource("ProceduralSkyMaterial_pcnek")
 hot_particles = SubResource("BoxMesh_c0roo")
+shoe_bench_murder_mode = ExtResource("3_vtxl0")
+
+[node name="wegafadence beat" type="Timer" parent="."]
+wait_time = 1.311
+ignore_time_scale = true
 
 [node name="retro collision" type="StaticBody3D" parent="."]
 visible = false
@@ -328,7 +335,7 @@ omni_range = 10.0
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_cqmtp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
-speed = 10.0
+speed = 11.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 wcti_enrage = true
 enrage_when_x_left = 50
@@ -372,6 +379,29 @@ fireball_death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 light_color = Color(1, 0, 0.0156863, 1)
 light_energy = 7.5
 omni_range = 10.0
+
+[node name="Shoe Bench" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("17_vtxl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -41.6904, 58.2354)
+visible = false
+playerpos = NodePath("../Player")
+speed = 25.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Shoe Bench"]
+light_color = Color(1, 0, 0.0156863, 1)
+light_energy = 15.0
+omni_range = 20.0
+
+[node name="SuperJohn" parent="." node_paths=PackedStringArray("player") instance=ExtResource("18_7ytgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.52543, 86.0179)
+visible = false
+player = NodePath("../Player")
+speed = 26.0
+inaccuracy = 0.99
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SuperJohn"]
+light_color = Color(1, 0.433333, 0, 1)
+light_energy = 7.5
+omni_range = 20.0
 
 [node name="Player" parent="." instance=ExtResource("3_k8crp")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.538, 2.3513, 8.212)
@@ -512,17 +542,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_kracn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979556, 0)
 shape = SubResource("CapsuleShape3D_mok1j")
 
-[node name="wegafadence beat" type="Node" parent="." node_paths=PackedStringArray("audio_stream_player")]
-script = ExtResource("12_kracn")
-bpm = 45.7498
-beat_length = 1.31148
-audio_stream_player = NodePath("../WEGAFADENCE")
-running = true
-metadata/_custom_type_script = "uid://0bwhpwuks7h3"
-
 [node name="Lap2StartPause" type="Timer" parent="."]
 wait_time = 1.5
 one_shot = true
+ignore_time_scale = true
 
 [node name="group of wegas" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00006, 0)
@@ -2150,9 +2173,9 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.558
 [node name="wegadoll178" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
+[connection signal="timeout" from="wegafadence beat" to="." method="_on_wegafadence_beat"]
 [connection signal="timeout" from="GUI/Message/DisplayTimer" to="GUI/Message" method="_on_display_timer_timeout"]
 [connection signal="body_entered" from="So Retro!/Area3D" to="." method="_on_so_retro_body_entered"]
-[connection signal="beat" from="wegafadence beat" to="." method="_on_rhythm_notifier_beat"]
 [connection signal="timeout" from="Lap2StartPause" to="." method="_on_lap_2_start_pause_timeout"]
 
 [editable path="Main/deathbarrier2"]

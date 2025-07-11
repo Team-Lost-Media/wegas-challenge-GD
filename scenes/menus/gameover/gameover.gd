@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
+	StyleSFX.stop()
 	#calculate final_score
 	var score
 	var score_multiplier

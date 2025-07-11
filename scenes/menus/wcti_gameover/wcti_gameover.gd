@@ -5,6 +5,7 @@ extends Node2D
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
+	StyleSFX.stop()
 	if Global.died_to == "fall":
 		you_died_to.text = "you FELL"
 	elif Global.died_to == "ultra irios fireball":
@@ -23,14 +24,14 @@ Wega is still the most dangerous threat
 out of all of the lap 1 enemies.
 Never underestimate him when he's enraged!'''
 		"maltigi":
-			tips.text = '''Always stay on the move!
-Maltigi might be very fast, but he's also very stupid.
-He will not predict your movement whatsoever:
-just by walking, you are dodging Maltigi.'''
+			tips.text = '''Always keep the Maltigi Red Line in mind!
+Maltigi will always telegraph his trajectory with the Maltigi Red Line.
+If you're about to go through it, either take a different path or jump over it.'''
 		"rorys":
 			tips.text = '''Remember to punch Rorys with ATTACK (Left Click)!
 It gives you an extremely helpful movement boost.
-Also, Golden Sigma is guaranteed to save you if you fall right after punching Rorys.'''
+Also, Golden Sigma is guaranteed to save you if you fall right after punching Rorys.
+Rorys can only spawn on Wegadolls: the Wegadoll he will spawn on will be marked blue.'''
 		"ultra irios":
 			tips.text = '''Never underestimate Ultra Irios!
 Even if he is slower than Wega, he will still instakill you if you touch him!'''

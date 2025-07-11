@@ -62,7 +62,7 @@ environment = SubResource("Environment_wcvh3")
 transform = Transform3D(1, 0, 0, 0, 0.996345, 0.0854169, 0, -0.0854169, 0.996345, 6.17167, 9.17757, 0)
 light_color = Color(0.372549, 0.0980392, 0.690196, 1)
 light_energy = 1.57
-light_angular_distance = 15.0
+light_angular_distance = 20.0
 shadow_enabled = true
 shadow_opacity = 0.8
 

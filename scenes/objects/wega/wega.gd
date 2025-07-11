@@ -45,8 +45,6 @@ var rage: int #rage number. it goes up with style bonuses and if it goes above 1
 func _ready() -> void:
 	start_timer.wait_time = time_to_enable
 	start_timer.start()
-	if enable_manually == true:
-		pass
 
 func _process(delta: float) -> void:
 	if enabled:
@@ -124,6 +122,14 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
+		if enabled and !body.boosted.is_stopped():
+			status = "JUKED"
+			rage += 1000
+			Global.points += 1000
+			Global.style = "+EXPLOSION JUKE"
+			print("EXPLOSION JUKE")
+			StyleSFX.play_style_sfx()
+			return
 		if enabled and !body.just_dashed.is_stopped() and juke_timer.is_stopped():
 			juke_timer.start()
 			juke_speed_multiplier = 0.5

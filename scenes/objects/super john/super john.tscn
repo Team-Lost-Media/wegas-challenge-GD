@@ -1,0 +1,135 @@
+[gd_scene load_steps=16 format=3 uid="uid://5fyklqfajuef"]
+
+[ext_resource type="Script" uid="uid://cpflohj6r70us" path="res://scenes/objects/super john/super_john.gd" id="1_fhbc6"]
+[ext_resource type="Texture2D" uid="uid://daxy2g8buut62" path="res://assets/textures/super john.png" id="2_odear"]
+[ext_resource type="Texture2D" uid="uid://bbwe6npxmker8" path="res://assets/textures/super john dash upscaled.png" id="2_v2ata"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_odear"]
+[ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="5_v810m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v810m"]
+atlas = ExtResource("2_v2ata")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c084g"]
+atlas = ExtResource("2_v2ata")
+region = Rect2(800, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8ehy"]
+atlas = ExtResource("2_v2ata")
+region = Rect2(1600, 0, 800, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v2ata"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v810m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c084g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8ehy")
+}],
+"loop": true,
+"name": &"dash",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_odear")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_v2ata"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0, 0.24, 0.25, 0.26)
+colors = PackedColorArray(1, 1, 1, 0, 0.35, 0.221667, 0, 0, 1, 0.5, 0, 1, 0.54, 0.36612, 0.1674, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v810m"]
+gradient = SubResource("Gradient_v2ata")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(2, 1)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fhbc6"]
+radius = 0.8
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_odear"]
+radius = 8.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2ata"]
+transparency = 1
+albedo_color = Color(1, 0.482353, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_v810m"]
+material = SubResource("StandardMaterial3D_v2ata")
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="SuperJohn" type="CharacterBody3D"]
+script = ExtResource("1_fhbc6")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.0033
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_v2ata")
+autoplay = "default"
+frame_progress = 0.221967
+
+[node name="Ring Of John" type="Sprite3D" parent="."]
+pixel_size = 0.0915
+billboard = 1
+texture = SubResource("GradientTexture2D_v810m")
+
+[node name="DeathArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+shape = SubResource("CylinderShape3D_fhbc6")
+
+[node name="PunchableArea3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PunchableArea3D"]
+shape = SubResource("SphereShape3D_odear")
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="HitStop Flash" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.392157)
+
+[node name="debug label" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36977, 0)
+billboard = 1
+text = "1"
+font = ExtResource("3_odear")
+font_size = 164
+outline_size = 82
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v810m")
+volume_db = 8.0
+
+[node name="Particles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+amount = 16
+mesh = SubResource("BoxMesh_v810m")
+emission_shape = 2
+emission_sphere_radius = 1.75
+direction = Vector3(0, 0, 0)
+spread = 25.0
+gravity = Vector3(0, 1, 0)
+initial_velocity_max = 2.0
+
+[connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]
+[connection signal="body_entered" from="PunchableArea3D" to="." method="_on_punchable_area_3d_body_entered"]
+[connection signal="body_exited" from="PunchableArea3D" to="." method="_on_punchable_area_3d_body_exited"]
+[connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]

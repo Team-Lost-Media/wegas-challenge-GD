@@ -19,10 +19,10 @@ extends AnimatedSprite3D
 @onready var hitstop: Timer = $Hitstop
 @onready var sfx: AudioStreamPlayer = $SFX
 @onready var piss_off_sfx: AudioStreamPlayer = $PissOffSFX
-@onready var hitstop_flash: ColorRect = $Flash
 @onready var stun_timer: Timer = $StunTimer
 @onready var rory: Sprite2D = $rory
 @onready var piss_off_timer: Timer = $PissOffTimer
+@onready var death_area: Area3D = $DeathArea3D
 
 var enabled = false
 var punchable = false 
@@ -52,9 +52,8 @@ func _process(delta: float) -> void:
 			sfx.stream = punch_sfx
 			sfx.play(0.1)
 			hitstop.start()
-			hitstop_flash.show()
 			Engine.time_scale = 0.0
-			hitstop_flash.hide()
+			death_area.monitoring = false
 	
 	if !piss_off_timer.is_stopped():
 		punchable = false
@@ -76,6 +75,7 @@ var rng = RandomNumberGenerator.new()
 func _on_hitstop_timeout() -> void:
 	Engine.time_scale = 1.0
 	pixel_size = 0.05
+	death_area.monitoring = true
 	Global.points += 400
 	Global.style = "+EXPLODED"
 	play("explode")
@@ -90,9 +90,6 @@ func _on_hitstop_timeout() -> void:
 	player.velocity = player.camera.global_basis.z * Vector3(40, 40, 40) + Vector3(0, 3, 0)
 	player.boosted.start(0.5)
 	player.saveable_fall_leniency_timer.start()
-	flash.flash(Color.from_string("ffffffaa", Color.RED), 0.6)
-	player.velocity = player.camera.global_basis.z * Vector3(40, 40, 40) + Vector3(0, 3, 0)
-	player.boosted.start(0.5)
 	player.saveable_fall = true
 	await animation_looped
 	position.y = -100
@@ -125,10 +122,17 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 				Global.died_to = "rorys"
 				get_tree().change_scene_to_file(death_scene)
 
+func _on_fuck_you_area_3d_body_entered(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		await get_tree().create_timer(0.5).timeout
+		if piss_off_timer.is_stopped() and stun_timer.is_stopped():
+			Global.points += 600
+			Global.style = "+FUCK YOU RORYS"
+			StyleSFX.play_style_sfx()
+
 func _on_start_timer_timeout() -> void:
 	if enable_manually == false:
 		enabled = true
-
 
 func _on_punchable_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
