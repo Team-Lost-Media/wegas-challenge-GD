@@ -1,11 +1,14 @@
-extends Node2D
+extends Control
 
-@onready var you_died_to: Label = $"Label/you died to"
-@onready var tips: Label = $Label/tips
+@onready var you_died_to: Label = $"you died to"
+@onready var tips: Label = $"tips"
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
 	StyleSFX.stop()
+	if Global.died_to_override != "":
+		Global.died_to = Global.died_to_override
+	
 	if Global.died_to == "fall":
 		you_died_to.text = "you FELL"
 	elif Global.died_to == "ultra irios fireball":
@@ -39,6 +42,10 @@ Even if he is slower than Wega, he will still instakill you if you touch him!'''
 			tips.text = '''Keep your distance from Ultra Irios!
 If you hear him shooting, get away as fast as possible.
 The fireballs, while faster than you, are extremely easy to dodge if you keep your distance: the only time they're truly dangerous is when you're close to Ultra Irios. '''
+		"super john":
+			tips.text = '''Super John can only hit you when he's at 20 speed or higher! When he can hit you, he will play a unique animation and will also have extra particles!
+Keeping track of where Super John is is much easier if you pay attention to the line sticking out of him, as it keeps track of his velocity!
+Super John, like Rorys, can be punched with ATTACK (Left Click)! Doing so will reverse his velocity.'''
 		"shoe bench":
 			tips.text = "idk lmao just go fast"
 		

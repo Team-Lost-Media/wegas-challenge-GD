@@ -63,6 +63,7 @@ radius = 8.0
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2ata"]
 transparency = 1
 albedo_color = Color(1, 0.482353, 0, 1)
+emission = Color(1, 0.482353, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_v810m"]
 material = SubResource("StandardMaterial3D_v2ata")
@@ -97,6 +98,18 @@ shape = SubResource("SphereShape3D_odear")
 wait_time = 3.0
 one_shot = true
 
+[node name="PlayerPunchCooldown" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="mom i just got punched" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="mom i just super john bowling\'d all over the place" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
 [node name="HitStop Flash" type="ColorRect" parent="."]
 visible = false
 anchors_preset = 15
@@ -106,7 +119,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.392157)
 
-[node name="debug label" type="Label3D" parent="."]
+[node name="Speed Label" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.36977, 0)
 billboard = 1
 text = "1"
@@ -123,7 +136,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 amount = 16
 mesh = SubResource("BoxMesh_v810m")
 emission_shape = 2
-emission_sphere_radius = 1.75
+emission_sphere_radius = 2.0
 direction = Vector3(0, 0, 0)
 spread = 25.0
 gravity = Vector3(0, 1, 0)

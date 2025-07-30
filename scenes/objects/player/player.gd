@@ -33,12 +33,14 @@ var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
 @onready var dash_cooldown_bar: ProgressBar = $DashCooldownBar
+@onready var dash_cooldown_bar_outline: ProgressBar = $DashCooldownBarOutline
 @onready var superjump_cooldown_bar: ProgressBar = $SuperJumpCooldownBar
+@onready var super_jump_cooldown_bar_outline: ProgressBar = $SuperJumpCooldownBarOutline
 @onready var just_dashed: Timer = $JustDashed
 @onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
 @onready var this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area: Timer = $"this timer only exists to prevent a bug where if you dash right after being saved you clip through the death area"
-@onready var style_panel: PanelContainer = $PanelContainer #currently only used for the tutorial to show/hide the panel
+@onready var style_panel: PanelContainer = $SubViewport/PanelContainer#currently only used for the tutorial to show/hide the panel
 @onready var damage_effects: Control = $"Damage Effects" #IMOPORTANTANTNNATSNOTN USED FOR THE HTOINGISES TIST TUSES USED FOR THE THINGIES WHEN YO UGET DAMAGED THE THINGS THAT DAMAGE U CALL THIS
 @onready var boosted: Timer = $Boosted
 @onready var saveable_fall_leniency_timer: Timer = $SaveableFallLeniencyTimer
@@ -120,7 +122,8 @@ func _physics_process(delta: float) -> void:
 			else:
 				velocity.y = JUMP_VELOCITY
 				just_jumped.start()
-		coyote_disabled = true
+			coyote = false
+			coyote_disabled = true
 	
 	if Input.is_action_just_pressed("sprint") and dashes_left > 0 and this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area.is_stopped():
 		dash_cooldown.stop()
@@ -180,6 +183,8 @@ func fade_out_gui(delta: float) -> void:
 	style_panel.modulate = style_panel.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 	dash_cooldown_bar.modulate = dash_cooldown_bar.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 	superjump_cooldown_bar.modulate = superjump_cooldown_bar.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
+	dash_cooldown_bar_outline.modulate = dash_cooldown_bar_outline.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
+	super_jump_cooldown_bar_outline.modulate = super_jump_cooldown_bar_outline.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 
 
 #endregion
@@ -203,8 +208,8 @@ func _unhandled_input(event : InputEvent):
 		var mouseInput : Vector2
 		mouseInput.x += event.relative.x
 		mouseInput.y += event.relative.y
-		self.rotation_degrees.y -= mouseInput.x * mouse_sensitivity / 100
-		head.rotation_degrees.x -= mouseInput.y * mouse_sensitivity / 100
+		self.rotation_degrees.y -= mouseInput.x * mouse_sensitivity / 100 / 2
+		head.rotation_degrees.x -= mouseInput.y * mouse_sensitivity / 100 / 2
 
 #endregion
 

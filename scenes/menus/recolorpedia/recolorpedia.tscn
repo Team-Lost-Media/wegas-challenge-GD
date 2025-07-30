@@ -1,0 +1,1151 @@
+[gd_scene load_steps=21 format=3 uid="uid://b6tdk2e5p381g"]
+
+[ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="1_hi77o"]
+[ext_resource type="Script" uid="uid://shl1y2yctker" path="res://scenes/menus/recolorpedia/recolorpedia.gd" id="1_op700"]
+[ext_resource type="Texture2D" uid="uid://dp4074674wsar" path="res://assets/textures/recolorpedia/box5.png" id="2_di5py"]
+[ext_resource type="Texture2D" uid="uid://cw3edukcu2men" path="res://assets/textures/recolorpedia/box3hover.png" id="3_e7262"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="4_wlaik"]
+[ext_resource type="Texture2D" uid="uid://bm0pyqnxpxd36" path="res://assets/textures/recolorpedia/box4.png" id="5_op700"]
+[ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="6_gvf1e"]
+[ext_resource type="Texture2D" uid="uid://oup3grqiq2k6" path="res://assets/textures/maltigi enemy.webp" id="7_1gu1p"]
+[ext_resource type="Texture2D" uid="uid://7o4npgo68ncp" path="res://assets/textures/ultra irios accurate.png" id="8_ffk7d"]
+[ext_resource type="Texture2D" uid="uid://daxy2g8buut62" path="res://assets/textures/super john.png" id="9_hshvb"]
+[ext_resource type="FontFile" uid="uid://bcaeemqwsu7gf" path="res://assets/other/dogicapixel.ttf" id="10_wlaik"]
+[ext_resource type="Texture2D" uid="uid://n7i8h85wsg3w" path="res://assets/textures/recolorpedia/box7.png" id="11_op700"]
+[ext_resource type="Texture2D" uid="uid://b387uv10iqxtd" path="res://assets/textures/recolorpedia/box11.png" id="12_ffk7d"]
+[ext_resource type="Texture2D" uid="uid://0xwmt5f0dneo" path="res://assets/textures/recolorpedia/box8.png" id="13_gvf1e"]
+[ext_resource type="Texture2D" uid="uid://dwxq3y8hsoieh" path="res://assets/textures/recolorpedia/box9.png" id="14_1gu1p"]
+[ext_resource type="Texture2D" uid="uid://dvmuq144plfwk" path="res://assets/textures/recolorpedia/box3.png" id="14_hshvb"]
+
+[sub_resource type="Shader" id="Shader_ccdq0"]
+code = "shader_type canvas_item;
+
+uniform float scroll_speed : hint_range(0, 2) = 0.08;
+uniform float angle_degrees : hint_range(0, 360) = 45.0;
+uniform float repeat_x : hint_range(1, 20) = 20;
+uniform float repeat_y : hint_range(1, 20) = 12;
+uniform float row_offset : hint_range(0, 1) = 1;
+uniform sampler2D texture_to_scroll;
+
+void fragment() {
+ float angle_rad = radians(angle_degrees);
+
+ vec2 direction = vec2(cos(angle_rad), sin(angle_rad));
+
+ vec2 offset_uv = UV - (TIME * scroll_speed * direction);
+
+ float offset = fract(floor(offset_uv.y * repeat_y) * 0.5) > 0.0 ? (row_offset * 0.324) : 0.0;
+
+ offset_uv.x += offset;
+
+ vec2 scaled_uv = vec2(fract(offset_uv.x * repeat_x), 
+              fract(offset_uv.y * repeat_y));
+
+ vec2 texelSize = vec2(1.0) / vec2(textureSize(texture_to_scroll, 0));
+ vec2 snappedUV = round(scaled_uv / texelSize) * texelSize;
+
+ COLOR = texture(texture_to_scroll, snappedUV);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sn3w4"]
+shader = SubResource("Shader_ccdq0")
+shader_parameter/scroll_speed = 0.04
+shader_parameter/angle_degrees = 59.145
+shader_parameter/repeat_x = 10.0
+shader_parameter/repeat_y = 5.25
+shader_parameter/row_offset = 0.775
+shader_parameter/texture_to_scroll = ExtResource("1_hi77o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvf1e"]
+bg_color = Color(0.796078, 0.858824, 0.988235, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.796078, 0.858824, 0.988235, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_4v2tg"]
+font = ExtResource("4_wlaik")
+font_size = 41
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Recolorpedia" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_op700")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -1
+texture_filter = 1
+material = SubResource("ShaderMaterial_sn3w4")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_hi77o")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.847059)
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+
+[node name="Control" type="Control" parent="."]
+texture_filter = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Portrait" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.401
+anchor_top = 0.035
+anchor_right = 0.556
+anchor_bottom = 0.299
+offset_left = 882.96
+offset_top = 4.6
+offset_right = 1104.76
+offset_bottom = 222.04
+grow_horizontal = 2
+texture = ExtResource("5_op700")
+
+[node name="Wega" type="TextureRect" parent="Control/Portrait"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hi77o")
+expand_mode = 1
+
+[node name="Rorys" type="TextureRect" parent="Control/Portrait"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_gvf1e")
+expand_mode = 1
+
+[node name="Maltigi" type="TextureRect" parent="Control/Portrait"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_1gu1p")
+expand_mode = 1
+
+[node name="Ultra Irios" type="TextureRect" parent="Control/Portrait"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ffk7d")
+expand_mode = 1
+
+[node name="Super John" type="TextureRect" parent="Control/Portrait"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_hshvb")
+expand_mode = 1
+
+[node name="Name" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.581
+anchor_top = 0.031
+anchor_right = 1.0
+anchor_bottom = 0.159
+offset_left = 1158.76
+offset_top = 18.76
+offset_right = 1823.0
+offset_bottom = 87.64
+grow_horizontal = 0
+theme_override_constants/outline_size = 41
+theme_override_fonts/normal_font = ExtResource("4_wlaik")
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "Wega"
+vertical_alignment = 1
+
+[node name="Origin" type="RichTextLabel" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.586
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.198
+offset_left = 1161.56
+offset_top = 91.0
+offset_right = 1854.0
+offset_bottom = 116.08
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/outline_size = 8
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Origin: idk"
+
+[node name="HSeparator" type="HSeparator" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1142.0
+offset_top = 139.0
+offset_right = 1820.0
+offset_bottom = 153.0
+theme_override_styles/separator = SubResource("StyleBoxFlat_gvf1e")
+
+[node name="Behaviour" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 258.0
+offset_right = 1116.0
+offset_bottom = 658.0
+texture = ExtResource("11_op700")
+
+[node name="Title" type="RichTextLabel" parent="Control/Behaviour"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.072
+anchor_right = 0.95
+anchor_bottom = 0.212
+offset_left = 11.0
+offset_top = -19.8
+offset_right = -11.2
+offset_bottom = -19.8
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "BEHAVIOUR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Control/Behaviour"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.02
+anchor_top = 0.27
+anchor_right = 0.95
+anchor_bottom = 0.9
+offset_left = -0.12
+offset_top = -23.0
+offset_right = -0.200012
+offset_bottom = 12.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Wega constantly moves towards your position, phasing through obstacles.
+
+When touched, he instantly kills you."
+
+[node name="Tips" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 191.0
+offset_right = 1920.0
+offset_bottom = 658.0
+texture = ExtResource("13_gvf1e")
+
+[node name="Title" type="RichTextLabel" parent="Control/Tips"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.069
+anchor_right = 1.0
+anchor_bottom = 0.206
+offset_left = 40.05
+offset_top = -27.223
+offset_right = -29.0
+offset_bottom = -27.103
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "TIPS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Control/Tips"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046
+anchor_top = 0.21
+anchor_right = 0.983
+anchor_bottom = 0.921
+offset_left = -4.12
+offset_top = -14.07
+offset_right = 4.23999
+offset_bottom = 8.89301
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Wega is constantly chasing you, and so he must be constantly kept track of. Luckily, since his behaviour is so basic, it's rather easy to keep track of him.
+
+On top of that, he also has varying tells on how close-by he is, such as the red/purple light he emits and the sound he constantly plays."
+
+[node name="Info" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1200.0
+offset_top = 689.0
+offset_right = 1920.0
+offset_bottom = 1156.0
+texture = ExtResource("13_gvf1e")
+
+[node name="Title" type="RichTextLabel" parent="Control/Info"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.069
+anchor_right = 1.0
+anchor_bottom = 0.206
+offset_left = 11.0
+offset_top = -28.223
+offset_bottom = -28.063
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "INFO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Control/Info"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.046
+anchor_top = 0.21
+anchor_right = 0.983
+anchor_bottom = 0.932
+offset_left = -2.12
+offset_top = -14.07
+offset_right = 6.23999
+offset_bottom = 3.75601
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "* His scream is a cut sound from Half-Life 2, called \"hl2-stalker-scream.mp3\".
+
+* "
+
+[node name="Dev Commentary" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 689.0
+offset_right = 1166.0
+offset_bottom = 1156.0
+texture = ExtResource("13_gvf1e")
+flip_h = true
+
+[node name="Title" type="RichTextLabel" parent="Control/Dev Commentary"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.069
+anchor_right = 1.0
+anchor_bottom = 0.206
+offset_left = 49.0
+offset_top = -27.223
+offset_right = -17.0
+offset_bottom = -27.502
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "DEV NOTES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="RichTextLabel" parent="Control/Dev Commentary"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.099
+anchor_top = 0.218
+anchor_right = 0.954
+anchor_bottom = 0.924
+offset_left = -62.28
+offset_top = -17.806
+offset_right = 7.12
+offset_bottom = 14.492
+grow_horizontal = 0
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 4
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Wega is the main threat of the game, but, by himself, he's extremely easy to avoid (his chase in the tutorial should be proof of that).
+
+This is because Wega is most dangerous when there's other things pressuring you, such as the threat of falling, the need to rack up points or other enemies.
+
+The idea for \"STYLE\" came as a result of me adding jumping and dashing to Xetheon's port of Wega's Challenge to Godot. I found that juking around Wega with a dash was fun, and I wanted to incentivize doing so. I had also recently played ULTRAKILL, which was (and still is) a very big source of inspiration for this game's design."
+
+[node name="Style Bonuses Title" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 985.0
+offset_top = 1188.0
+offset_right = 1391.0
+offset_bottom = 1337.0
+texture = ExtResource("14_1gu1p")
+
+[node name="Text" type="RichTextLabel" parent="Control/Style Bonuses Title"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "STYLE BONUSES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Style Bonuses" type="Control" parent="Control"]
+texture_filter = 1
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 1371.0
+offset_right = 1871.0
+offset_bottom = 1521.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+JUKED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.12
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+400
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Juke Wega with a DASH.
+Temporarily slows Wega down."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 1500.0
+offset_right = 1871.0
+offset_bottom = 1650.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+ABOVE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.127
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_top = -0.0500011
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+200
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Jump above Wega with a SUPERJUMP.
+Combines well with +JUKED."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 1632.0
+offset_right = 1871.0
+offset_bottom = 1782.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+ENRAGED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.12
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+400
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Enrage Wega by styling on him fast enough.
+Only in CLASSIC."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 1764.0
+offset_right = 1871.0
+offset_bottom = 1914.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+EXPLOSION JUKE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.12
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+1000
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Juke Wega using a Rorys Explosion."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 1896.0
+offset_right = 1871.0
+offset_bottom = 2046.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+EXPLOSION JUKE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.12
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+1000
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Juke Wega using a Rorys Explosion."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Style Bonuses"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 446.0
+offset_top = 2028.0
+offset_right = 1871.0
+offset_bottom = 2178.0
+texture = ExtResource("12_ffk7d")
+
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.187
+anchor_right = 0.343
+anchor_bottom = 0.813
+offset_left = 0.432022
+offset_top = -0.0500031
+offset_right = -51.058
+offset_bottom = 0.0499954
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "+EXPLOSION JUKE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.363
+anchor_top = 0.12
+anchor_right = 0.464
+anchor_bottom = 0.827
+offset_left = -75.062
+offset_right = -74.858
+offset_bottom = 7.95
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_fonts/italics_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[i]ADDS:[/i]
+1000
+[i]points[/i]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.482
+anchor_top = 0.173
+anchor_right = 0.984
+anchor_bottom = 0.827
+offset_left = -91.4681
+offset_top = 0.0499973
+offset_right = 16.6899
+offset_bottom = -0.0500031
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 16
+theme_override_constants/line_separation = 10
+theme_override_fonts/normal_font = ExtResource("10_wlaik")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Juke Wega using a Rorys Explosion."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Selector" type="ColorRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.229
+anchor_bottom = 1.0
+offset_right = 6.32001
+offset_bottom = 2300.0
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Go Back" type="TextureButton" parent="Selector"]
+modulate = Color(1, 0, 0.345098, 1)
+texture_filter = 1
+layout_mode = 2
+offset_left = -1.52588e-05
+offset_right = 356.0
+offset_bottom = 89.0
+texture_normal = ExtResource("2_di5py")
+
+[node name="Wega Button" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -72.0
+offset_top = 100.0
+offset_right = 334.0
+offset_bottom = 190.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Wega Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wega"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[node name="Rorys Button" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -72.0
+offset_top = 200.0
+offset_right = 334.0
+offset_bottom = 290.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Rorys Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Rorys"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[node name="Maltigi Button" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -72.0
+offset_top = 300.0
+offset_right = 334.0
+offset_bottom = 390.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Maltigi Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Maltigi"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[node name="Ultra Irios Button" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -72.0
+offset_top = 400.0
+offset_right = 334.0
+offset_bottom = 490.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Ultra Irios Button"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ultra Irios"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[node name="Ultra Irios Button2" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 2
+offset_left = -72.0
+offset_top = 500.0
+offset_right = 334.0
+offset_bottom = 590.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Ultra Irios Button2"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Super John"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[connection signal="pressed" from="Selector/Go Back" to="." method="_on_go_back_pressed"]

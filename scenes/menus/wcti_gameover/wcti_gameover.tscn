@@ -4,64 +4,91 @@
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="3_dsy3w"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
-font_size = 100
+font_size = 160
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
-font_size = 55
+font_size = 88
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_w6fnf"]
-font_size = 33
+font_size = 50
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tgope"]
-font_size = 80
+font_size = 128
 font_color = Color(1, 0, 0, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_6avms")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -1.0
-offset_right = 1151.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Maltigi" type="Sprite2D" parent="."]
-position = Vector2(84, 321)
+position = Vector2(299, 530.5)
+scale = Vector2(2.65833, 2.14722)
 texture = ExtResource("3_dsy3w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
 [node name="Label" type="Label" parent="."]
-offset_left = 288.0
-offset_top = 22.0
-offset_right = 1091.0
-offset_bottom = 177.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -642.0
+offset_right = 1132.0
+offset_bottom = 219.0
+grow_horizontal = 2
 text = "rip green lawson"
 label_settings = SubResource("LabelSettings_i3kce")
 horizontal_alignment = 1
 
-[node name="you died to" type="Label" parent="Label"]
-layout_mode = 0
-offset_left = -78.0
-offset_top = 159.0
-offset_right = 865.0
-offset_bottom = 314.0
+[node name="you died to" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.24
+anchor_right = 0.5
+anchor_bottom = 0.24
+offset_left = -545.0
+offset_top = -0.199982
+offset_right = 1035.0
+offset_bottom = 154.8
+grow_horizontal = 2
 text = "you died to GUYWHOKILLEDYOU"
 label_settings = SubResource("LabelSettings_7xr85")
 horizontal_alignment = 1
 
-[node name="tips" type="Label" parent="Label"]
-layout_mode = 0
-offset_left = -78.0
-offset_top = 245.0
-offset_right = 865.0
-offset_bottom = 493.0
+[node name="tips" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -516.0
+offset_top = -165.0
+offset_right = 1006.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Golden Sigma will only save you once from falling!
 (The only exception is the Rorys Explosion)
 
@@ -71,12 +98,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Label" type="Label" parent="Label"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 505.0
-offset_right = 781.0
-offset_bottom = 660.0
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.975
+anchor_right = 0.5
+anchor_bottom = 0.975
+offset_left = -441.0
+offset_top = -175.0
+offset_right = 931.0
+grow_horizontal = 2
+grow_vertical = 0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1

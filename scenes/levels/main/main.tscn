@@ -13,8 +13,8 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_t52ot"]
 font = ExtResource("10_dwkvq")
-font_size = 41
-outline_size = 10
+font_size = 82
+outline_size = 41
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_osekl"]

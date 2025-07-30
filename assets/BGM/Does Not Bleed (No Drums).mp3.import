@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfikfhcvcr3u5"
+path="res://.godot/imported/Does Not Bleed (No Drums).mp3-95009e201cde84764a6150dc71d91f9e.mp3str"
+
+[deps]
+
+source_file="res://assets/BGM/Does Not Bleed (No Drums).mp3"
+dest_files=["res://.godot/imported/Does Not Bleed (No Drums).mp3-95009e201cde84764a6150dc71d91f9e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=24.0
+bpm=0
+beat_count=0
+bar_beats=4

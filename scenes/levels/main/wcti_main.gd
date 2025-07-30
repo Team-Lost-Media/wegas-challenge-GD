@@ -61,7 +61,8 @@ func _ready() -> void:
 	Global.style = "none"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
-	shoe_bench_timer.position.y += 200
+	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")
+	shoe_bench_timer.position.y += 600
 	wegafadence_bars = 0
 	lap1_sky = environment.environment.sky
 	message.text = ""
@@ -84,6 +85,7 @@ var wega_started: bool = false
 var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
+var john_started: bool = false
 var the_idol_outro_started: bool = false
 var FUCK2: bool
 func _process(delta: float) -> void:
@@ -115,7 +117,7 @@ func _process(delta: float) -> void:
 			maltigi_started = true
 	
 	
-	if wegasleft <= 50  and lap == 1:
+	if wegasleft <= 50 and lap == 1:
 		if wega_started == false:
 			message.say("WEGA IS ENRAGED", 2.0)
 			wega_started = true
@@ -149,11 +151,12 @@ func _process(delta: float) -> void:
 			sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
 		
 		if wegasleft <= 300:
-			message.say("PUNCH SUPER JOHN")
-			super_john.show()
-			super_john.enabled = true
-			super_john.position.y = 0 
-		
+			if john_started == false:
+				message.say("PUNCH SUPER JOHN")
+				super_john.position = player.position + Vector3(0, 0, 30)
+				super_john.show()
+				super_john.enabled = true
+				john_started = true
 		
 		
 		if wegasleft <= 0:
@@ -204,7 +207,9 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		message.say("IT'S RETRO TIME", 10.0)
 		label.modulate = Color.WHITE
 		player.style_panel.modulate = Color.WHITE
+		player.super_jump_cooldown_bar_outline.modulate = Color.WHITE
 		player.superjump_cooldown_bar.modulate = Color.WHITE
+		player.dash_cooldown_bar_outline.modulate = Color.WHITE
 		player.dash_cooldown_bar.modulate = Color.WHITE
 		
 		#change to lap 2
@@ -286,6 +291,9 @@ func _on_lap_2_start_pause_timeout() -> void:
 	ultra_irios.cooldown_timer.start(ultra_irios.cooldown)
 	ultra_irios.show()
 	lap = 2
+	
+	await get_tree().create_timer(2.0).timeout
+	SongCredits.show_song_credits("WEGAFADENCE", "GAMR")
 
 func shoe_bench_timer_bounce() -> void:
 	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then

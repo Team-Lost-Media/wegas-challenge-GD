@@ -6,6 +6,7 @@ var style_number: float
 var wegadolls_left: int
 var max_wegadolls: int
 var died_to: String
+var died_to_override: String #should be used carefully!!!!!!!!!!
 var health: float
 
 var tutorial = false
@@ -21,6 +22,7 @@ func reset(): #execited when the player retries after a game over or win
 	style = "none"
 	wegadoll_combo = 0
 	died_to = ""
+	died_to_override = ""
 	health = 100
 
 var newtimer = Timer

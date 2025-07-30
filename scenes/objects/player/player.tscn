@@ -1,18 +1,21 @@
-[gd_scene load_steps=48 format=3 uid="uid://brpt71jl5cg2q"]
+[gd_scene load_steps=69 format=3 uid="uid://brpt71jl5cg2q"]
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
 [ext_resource type="Script" uid="uid://brwcsx3yog6er" path="res://scenes/objects/player/health.gd" id="4_bdcal"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
+[ext_resource type="Shader" uid="uid://bnvqk864yprcf" path="res://assets/other/balatro.gdshader" id="5_japq8"]
 [ext_resource type="Script" uid="uid://cc3nhv7vlnl17" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
 [ext_resource type="Script" uid="uid://cx5silmovrt1o" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
-[ext_resource type="Script" uid="uid://b2olgww16r17y" path="res://scenes/objects/player/debug.gd" id="7_io36v"]
 [ext_resource type="Script" uid="uid://1tvrxarpsw8e" path="res://scenes/objects/player/damage_effects.gd" id="8_ponut"]
+[ext_resource type="Script" uid="uid://bjnmuqkarpray" path="res://scenes/objects/player/fps.gd" id="9_japq8"]
 [ext_resource type="Texture2D" uid="uid://bu1b53i7y6dgs" path="res://assets/textures/fire lowquality.jpeg" id="9_qfccq"]
 [ext_resource type="Texture2D" uid="uid://dbpnycyequ5bb" path="res://assets/textures/ouch spritesheet.png" id="10_ejlqc"]
 [ext_resource type="AudioStream" uid="uid://xwy3ii53lc8y" path="res://assets/SFX/this lit my fire.mp3" id="11_rp72t"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="12_ejlqc"]
+[ext_resource type="Texture2D" uid="uid://e3ra1nm3ufn6" path="res://assets/textures/super adventures of john.jpg" id="13_g65c7"]
+[ext_resource type="AudioStream" uid="uid://de0i1oa626uat" path="res://assets/SFX/strike!.mp3" id="14_japq8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_jse87"]
 
@@ -88,28 +91,70 @@ _data = {
 &"sprint": SubResource("Animation_px50k")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wim6f"]
-bg_color = Color(0.545098, 0.054902, 0.690196, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g65c7"]
+bg_color = Color(0.26095, 0.087, 0.3, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gmdvr"]
-bg_color = Color(0.141176, 0, 0.2, 1)
+[sub_resource type="Gradient" id="Gradient_absnx"]
+colors = PackedColorArray(0.69, 0.1932, 0.51612, 1, 0.62652, 0.0552, 0.69, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_a2h7i"]
+gradient = SubResource("Gradient_absnx")
+fill_from = Vector2(0.25, 0)
+fill_to = Vector2(1, 0.666667)
+metadata/_snap_count = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nqkks"]
+texture = SubResource("GradientTexture2D_a2h7i")
+
+[sub_resource type="Gradient" id="Gradient_jxhie"]
+colors = PackedColorArray(0.154, 0, 0.22, 1, 0.055, 0, 0.11, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8bans"]
+gradient = SubResource("Gradient_jxhie")
+fill_from = Vector2(0.25, 0)
+fill_to = Vector2(1, 0.666667)
+metadata/_snap_count = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vx2qb"]
+texture = SubResource("GradientTexture2D_8bans")
 
 [sub_resource type="LabelSettings" id="LabelSettings_nkbs0"]
 font = ExtResource("3_0a575")
 font_size = 41
-outline_size = 12
+outline_size = 21
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0a575"]
-bg_color = Color(0.368627, 0.054902, 0.690196, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibpxp"]
+bg_color = Color(0.14084, 0.0812, 0.28, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkbs0"]
-bg_color = Color(0.0901961, 0, 0.2, 1)
+[sub_resource type="Gradient" id="Gradient_5t4rm"]
+colors = PackedColorArray(0.49956, 0.0552, 0.69, 1, 0.368627, 0.054902, 0.690196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jx0p0"]
+gradient = SubResource("Gradient_5t4rm")
+fill_from = Vector2(0.25, 0)
+fill_to = Vector2(1, 0.666667)
+metadata/_snap_count = 4
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_578jl"]
+texture = SubResource("GradientTexture2D_jx0p0")
+
+[sub_resource type="Gradient" id="Gradient_c1gjl"]
+colors = PackedColorArray(0.126, 0, 0.28, 1, 0.0433333, 0, 0.13, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3j0tc"]
+gradient = SubResource("Gradient_c1gjl")
+fill_from = Vector2(0.25, 0)
+fill_to = Vector2(1, 0.666667)
+metadata/_snap_count = 6
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8a43"]
+texture = SubResource("GradientTexture2D_3j0tc")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ponut"]
 font = ExtResource("3_0a575")
-font_size = 41
-outline_size = 10
+font_size = 82
+outline_size = 41
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_dvfu2"]
@@ -137,6 +182,18 @@ colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1)
 gradient = SubResource("Gradient_japq8")
 width = 100
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_japq8"]
+viewport_path = NodePath("3D StylePanel")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_absnx"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_absnx"]
+shader = ExtResource("5_japq8")
+shader_parameter/center = Vector2(235, 167.5)
+shader_parameter/amplitude = 0.0
+shader_parameter/frequency = 0.0
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wim6f"]
 
 [sub_resource type="Gradient" id="Gradient_gmdvr"]
@@ -148,26 +205,46 @@ fill_to = Vector2(1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_gmdvr"]
 font = ExtResource("3_0a575")
-font_size = 41
-outline_size = 10
+font_size = 60
+outline_size = 41
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_io36v"]
-bg_color = Color(0.0928, 0.016, 0.16, 1)
+[sub_resource type="Gradient" id="Gradient_g65c7"]
+colors = PackedColorArray(0.0416, 0.008, 0.08, 1, 0.128, 0.02, 0.2, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdcal"]
-bg_color = Color(0.501961, 0, 1, 1)
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_japq8"]
+gradient = SubResource("Gradient_g65c7")
+fill_to = Vector2(1, 0.807692)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_absnx"]
+texture = SubResource("GradientTexture2D_japq8")
+
+[sub_resource type="Gradient" id="Gradient_a2h7i"]
+colors = PackedColorArray(0.44, 0, 0.88, 1, 0.633333, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nqkks"]
+gradient = SubResource("Gradient_a2h7i")
+fill_to = Vector2(1, 0.337607)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jxhie"]
+texture = SubResource("GradientTexture2D_nqkks")
 
 [sub_resource type="LabelSettings" id="LabelSettings_bdcal"]
 font = ExtResource("3_0a575")
-font_size = 41
-outline_size = 10
+font_size = 60
+outline_size = 41
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_io36v"]
 font = ExtResource("3_0a575")
-font_size = 41
-outline_size = 10
+font_size = 60
+outline_size = 41
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_absnx"]
+font = ExtResource("3_0a575")
+font_size = 32
+outline_size = 22
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g65c7"]
@@ -273,13 +350,30 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
+[node name="DashCooldownBarOutline" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -605.0
+offset_top = 10.0
+offset_right = -9.0
+offset_bottom = 86.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_g65c7")
+max_value = 1.0
+show_percentage = false
+
 [node name="DashCooldownBar" type="ProgressBar" parent="."]
-offset_left = 789.0
-offset_top = 3.0
-offset_right = 1150.0
-offset_bottom = 45.0
-theme_override_styles/background = SubResource("StyleBoxFlat_wim6f")
-theme_override_styles/fill = SubResource("StyleBoxFlat_gmdvr")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -595.0
+offset_top = 20.0
+offset_right = -19.0
+offset_bottom = 76.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxTexture_nqkks")
+theme_override_styles/fill = SubResource("StyleBoxTexture_vx2qb")
 max_value = 1.0
 show_percentage = false
 script = ExtResource("2_g10m2")
@@ -287,39 +381,57 @@ dash = true
 
 [node name="Label" type="Label" parent="DashCooldownBar"]
 layout_mode = 0
-offset_left = -352.0
-offset_right = -16.0
-offset_bottom = 37.0
+offset_left = -420.0
+offset_top = -2.0
+offset_right = -65.0
+offset_bottom = 46.0
 text = "dashes left: 2"
 label_settings = SubResource("LabelSettings_nkbs0")
 vertical_alignment = 1
 
+[node name="SuperJumpCooldownBarOutline" type="ProgressBar" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -605.0
+offset_top = 118.0
+offset_right = -9.0
+offset_bottom = 194.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
+max_value = 1.0
+show_percentage = false
+
 [node name="SuperJumpCooldownBar" type="ProgressBar" parent="."]
-offset_left = 789.0
-offset_top = 68.0
-offset_right = 1149.0
-offset_bottom = 109.0
-theme_override_styles/background = SubResource("StyleBoxFlat_0a575")
-theme_override_styles/fill = SubResource("StyleBoxFlat_nkbs0")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -595.0
+offset_top = 128.0
+offset_right = -19.0
+offset_bottom = 184.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxTexture_578jl")
+theme_override_styles/fill = SubResource("StyleBoxTexture_n8a43")
 max_value = 1.0
 show_percentage = false
 script = ExtResource("2_g10m2")
 superjump = true
 
 [node name="HealthLabel" type="Label" parent="."]
-offset_left = 782.0
-offset_top = 554.0
-offset_right = 1142.0
-offset_bottom = 591.0
+offset_left = 1460.0
+offset_top = 909.0
+offset_right = 1892.0
+offset_bottom = 982.0
 text = "HP: 100.0"
 label_settings = SubResource("LabelSettings_ponut")
 horizontal_alignment = 2
 
 [node name="HealthBarOutline" type="ColorRect" parent="."]
-offset_left = 778.0
-offset_top = 593.0
-offset_right = 1146.0
-offset_bottom = 642.0
+offset_left = 1314.0
+offset_top = 994.0
+offset_right = 1910.0
+offset_bottom = 1070.0
 color = Color(0, 0.08, 0.064, 1)
 
 [node name="Health" type="ProgressBar" parent="."]
@@ -328,10 +440,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -370.0
-offset_top = -51.0
-offset_right = -10.0
-offset_bottom = -10.0
+offset_left = -596.0
+offset_top = -76.0
+offset_right = -20.0
+offset_bottom = -20.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxTexture_qfccq")
@@ -342,60 +454,95 @@ show_percentage = false
 script = ExtResource("4_bdcal")
 health_label_text_color = SubResource("GradientTexture1D_absnx")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-offset_left = 789.0
-offset_top = 132.0
-offset_right = 1149.0
-offset_bottom = 323.0
+[node name="StyleTexture" type="TextureRect" parent="."]
+offset_left = 1293.0
+offset_top = 225.0
+offset_right = 1984.0
+offset_bottom = 916.0
+texture = SubResource("ViewportTexture_japq8")
+
+[node name="3D StylePanel" type="SubViewport" parent="."]
+own_world_3d = true
+transparent_bg = true
+
+[node name="Sprite3D" type="Sprite3D" parent="3D StylePanel"]
+transform = Transform3D(0.943922, 0, 0.330169, 0, 1, 0, -0.330169, 0, 0.943922, 0, 0, -10.8548)
+texture = SubResource("ViewportTexture_absnx")
+
+[node name="Camera3D" type="Camera3D" parent="3D StylePanel"]
+transform = Transform3D(0.764156, 0, 0.645031, 0, 1, 0, -0.645031, 0, 0.764156, 3.015, 1.21357, -8.03649)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(528, 610)
+
+[node name="PanelContainer" type="PanelContainer" parent="SubViewport"]
+material = SubResource("ShaderMaterial_absnx")
+offset_right = 528.0
+offset_bottom = 350.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wim6f")
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+[node name="TextureRect" type="TextureRect" parent="SubViewport/PanelContainer"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
 texture = SubResource("GradientTexture2D_io36v")
 
-[node name="StyleBar" type="VBoxContainer" parent="PanelContainer"]
+[node name="StyleBar" type="VBoxContainer" parent="SubViewport/PanelContainer"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
 theme = ExtResource("4_nkbs0")
 script = ExtResource("5_wim6f")
 wegakill = Color(0.529412, 0.27451, 2, 1)
 wegakill_outline = Color(1, 0, 1, 1)
 
-[node name="RankLabel" type="Label" parent="PanelContainer/StyleBar"]
+[node name="RankLabel" type="Label" parent="SubViewport/PanelContainer/StyleBar"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
-text = "SHOE BENCH"
+text = "ALBERT(SCARY!!)"
 label_settings = SubResource("LabelSettings_gmdvr")
 horizontal_alignment = 1
 
-[node name="RankBar" type="ProgressBar" parent="PanelContainer/StyleBar"]
+[node name="RankBar" type="ProgressBar" parent="SubViewport/PanelContainer/StyleBar"]
+material = SubResource("ShaderMaterial_absnx")
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
 theme_override_constants/outline_size = 5
 theme_override_font_sizes/font_size = 24
-theme_override_styles/background = SubResource("StyleBoxFlat_io36v")
-theme_override_styles/fill = SubResource("StyleBoxFlat_bdcal")
+theme_override_styles/background = SubResource("StyleBoxTexture_absnx")
+theme_override_styles/fill = SubResource("StyleBoxTexture_jxhie")
 max_value = 1000.0
 step = 0.1
 value = 500.0
 
-[node name="StyleLabel" type="Label" parent="PanelContainer/StyleBar"]
+[node name="StyleLabel" type="Label" parent="SubViewport/PanelContainer/StyleBar"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
 label_settings = SubResource("LabelSettings_bdcal")
 
-[node name="PointsLabel" type="Label" parent="PanelContainer/StyleBar"]
+[node name="PointsLabel" type="Label" parent="SubViewport/PanelContainer/StyleBar"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
-text = "points"
+text = "123456789012345"
 label_settings = SubResource("LabelSettings_bdcal")
 
-[node name="Timer" type="Label" parent="PanelContainer/StyleBar"]
+[node name="Timer" type="Label" parent="SubViewport/PanelContainer/StyleBar"]
+material = SubResource("ShaderMaterial_absnx")
 layout_mode = 2
 text = "0:0.00"
 label_settings = SubResource("LabelSettings_io36v")
 script = ExtResource("6_gmdvr")
 
-[node name="OLDTimerDONTUSE" type="Timer" parent="PanelContainer/StyleBar/Timer"]
+[node name="OLDTimerDONTUSE" type="Timer" parent="SubViewport/PanelContainer/StyleBar/Timer"]
 wait_time = 0.01
 autostart = true
+
+[node name="FPS" type="Label" parent="SubViewport/PanelContainer/StyleBar"]
+layout_mode = 2
+text = "FPS: "
+label_settings = SubResource("LabelSettings_absnx")
+script = ExtResource("9_japq8")
 
 [node name="Damage Effects" type="Control" parent="."]
 layout_mode = 3
@@ -425,7 +572,7 @@ grow_vertical = 2
 texture = ExtResource("9_qfccq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Damage Effects/Fireball"]
-position = Vector2(588, 153)
+position = Vector2(960, 270)
 scale = Vector2(2.11832, 2.11832)
 sprite_frames = SubResource("SpriteFrames_jxhie")
 frame_progress = 0.0276853
@@ -438,16 +585,28 @@ volume_db = 14.0
 stream = ExtResource("12_ejlqc")
 volume_db = 14.0
 
-[node name="Debug" type="Label" parent="."]
-visible = false
-offset_left = 281.0
-offset_top = 63.0
-offset_right = 957.0
-offset_bottom = 397.0
-scale = Vector2(1, 0.998576)
-script = ExtResource("7_io36v")
+[node name="Super John" type="Control" parent="Damage Effects"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Damage Effects/Super John"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_g65c7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Damage Effects/Super John"]
+stream = ExtResource("14_japq8")
 
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
-[connection signal="timeout" from="PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="PanelContainer/StyleBar" method="_on_timer_timeout"]
-[connection signal="timeout" from="PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]
+[connection signal="timeout" from="SubViewport/PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="SubViewport/PanelContainer/StyleBar" method="_on_timer_timeout"]
+[connection signal="timeout" from="SubViewport/PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="SubViewport/PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]

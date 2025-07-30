@@ -11,6 +11,9 @@ extends Panel
 @onready var FOVSlider = $VBoxContainer/FOVSlider
 @onready var SensitivitySlider = $VBoxContainer/SensitivitySlider
 
+
+@onready var animation_player: AnimationPlayer = $AnimatedSprite2D/AnimationPlayer
+
 signal Closing
 
 func _ready():

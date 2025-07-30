@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=14 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
 [ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
+[ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="2_yude8"]
 [ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
@@ -16,28 +17,120 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_oufcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yude8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_yude8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.138889, 0.0421238)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(150, -14)]
+}
+
+[sub_resource type="Animation" id="Animation_oufcy"]
+resource_name = "new_animation"
+length = 16.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 14.9, 15.3667, 15.5, 15.7667),
+"transitions": PackedFloat32Array(1, 2.63902, 0.353553, 1.62451, 1),
+"update": 0,
+"values": [Vector2(150, -275), Vector2(150, -275), Vector2(150, -14), Vector2(150, -40), Vector2(150, -14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 14.9, 15.3667, 15.5, 15.7667),
+"transitions": PackedFloat32Array(1, 1.56917, 0.329877, 1.51571, 1),
+"update": 0,
+"values": [Vector2(0.138889, 0.0421238), Vector2(0.09, 0.042), Vector2(0.02, 0.162), Vector2(0.15, 0.042), Vector2(0.138889, 0.0421238)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jbven"]
+_data = {
+&"RESET": SubResource("Animation_yude8"),
+&"new_animation": SubResource("Animation_oufcy")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_yude8"]
+font_size = 42
+
+[sub_resource type="LabelSettings" id="LabelSettings_oufcy"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_jbven"]
+font_size = 32
+
 [node name="Settings" type="Panel"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -112.0
-offset_top = -128.0
-offset_right = 110.0
-offset_bottom = 179.0
+offset_left = -222.0
+offset_top = -307.0
+offset_right = 222.0
+offset_bottom = 307.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
 script = ExtResource("1_36pg8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(150, -14)
+scale = Vector2(0.138889, 0.0421238)
+sprite_frames = SubResource("SpriteFrames_oufcy")
+autoplay = "default"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_jbven")
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.277528, 0.277528, 0.277528, 1)
 layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0
-offset_right = 221.0
-offset_bottom = 306.0
+offset_right = 441.0
+offset_bottom = 611.0
 mouse_filter = 2
 texture = ExtResource("2_cpgv8")
 expand_mode = 1
@@ -48,46 +141,54 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -107.0
+offset_left = -154.0
 offset_top = 6.0
-offset_right = 31.0
-offset_bottom = 29.0
+offset_right = 154.0
+offset_bottom = 66.0
 grow_horizontal = 2
 text = "Settings"
+label_settings = SubResource("LabelSettings_yude8")
+horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
 z_index = 1
-layout_mode = 0
-offset_left = 194.0
-offset_top = 2.5
-offset_right = 219.0
-offset_bottom = 30.5
-theme_override_font_sizes/font_size = 14
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -55.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 61.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 28
 text = "X"
 
 [node name="HSeparator" type="HSeparator" parent="."]
 z_index = 1
 layout_mode = 2
-offset_left = 4.0
-offset_top = 30.0
-offset_right = 218.0
-offset_bottom = 34.0
+offset_left = 7.0
+offset_top = 66.0
+offset_right = 435.0
+offset_bottom = 74.0
 grow_horizontal = 2
+theme_override_constants/separation = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_direction = 3
 layout_mode = 0
 offset_left = 4.0
-offset_top = 36.0
-offset_right = 109.0
-offset_bottom = 268.0
+offset_top = 87.0
+offset_right = 199.0
+offset_bottom = 432.0
 theme_override_constants/separation = 5
 
 [node name="ResolutionOptionButton" type="OptionButton" parent="VBoxContainer"]
 z_index = 1
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 26
 selected = 2
 item_count = 4
 popup/item_0/text = "1920x1080"
@@ -101,17 +202,19 @@ popup/item_3/id = 3
 
 [node name="FullscreenCheckBox" type="CheckBox" parent="VBoxContainer"]
 z_index = 1
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 
 [node name="VSyncCheckBox" type="CheckBox" parent="VBoxContainer"]
 z_index = 1
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 
 [node name="SFXSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-custom_minimum_size = Vector2(0, 23)
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 max_value = 1.0
@@ -120,7 +223,7 @@ value = 1.0
 
 [node name="BGMSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-custom_minimum_size = Vector2(0, 23)
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 max_value = 1.0
@@ -129,7 +232,7 @@ value = 1.0
 
 [node name="FOVSlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-custom_minimum_size = Vector2(0, 23)
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 min_value = 30.0
@@ -140,7 +243,7 @@ fov = true
 
 [node name="SensitivitySlider" type="HSlider" parent="VBoxContainer"]
 z_index = 1
-custom_minimum_size = Vector2(0, 23)
+custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
 layout_mode = 2
 min_value = 5.0
@@ -153,9 +256,9 @@ sensitivity = true
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 4.0
-offset_top = 36.0
-offset_right = 120.0
-offset_bottom = 268.0
+offset_top = 87.0
+offset_right = 219.0
+offset_bottom = 432.0
 theme_override_constants/separation = 5
 
 [node name="Resolution" type="Label" parent="VBoxContainer2"]
@@ -163,58 +266,79 @@ z_index = 1
 custom_minimum_size = Vector2(0, 26)
 layout_mode = 2
 text = "Resolution"
+label_settings = SubResource("LabelSettings_oufcy")
 
 [node name="Fullscreen" type="Label" parent="VBoxContainer2"]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 text = "Fullscreen"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="VSync" type="Label" parent="VBoxContainer2"]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 text = "VSync"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="SFX Volume" type="Label" parent="VBoxContainer2"]
 z_index = 1
 layout_mode = 2
 text = "SFX Volume"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="BGM Volume" type="Label" parent="VBoxContainer2"]
 z_index = 1
 layout_mode = 2
 text = "BGM Volume"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="FOV" type="Label" parent="VBoxContainer2"]
 z_index = 1
 layout_mode = 2
 text = "FOV: 75"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="Sensitivity" type="Label" parent="VBoxContainer2"]
 z_index = 1
 layout_mode = 2
 text = "Sensitivity: 10"
+label_settings = SubResource("LabelSettings_jbven")
 
 [node name="reset high score" type="Button" parent="."]
 z_index = 1
-layout_mode = 0
-offset_left = 5.0
-offset_top = 231.0
-offset_right = 217.0
-offset_bottom = 264.0
-theme_override_font_sizes/font_size = 15
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -165.0
+offset_right = 210.0
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
 text = "Reset High Score"
 script = ExtResource("4_ee6v7")
 
 [node name="Button" type="Button" parent="."]
 z_index = 1
-layout_mode = 0
-offset_left = 4.0
-offset_top = 269.0
-offset_right = 218.0
-offset_bottom = 304.0
-theme_override_font_sizes/font_size = 20
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -211.0
+offset_top = -89.0
+offset_right = 211.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
 text = "Apply"
 
 [connection signal="pressed" from="Button2" to="." method="_on_close"]

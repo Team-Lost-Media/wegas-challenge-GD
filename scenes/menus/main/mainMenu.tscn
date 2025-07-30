@@ -1,38 +1,53 @@
-[gd_scene load_steps=31 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene load_steps=36 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
+[ext_resource type="AudioStream" uid="uid://bfikfhcvcr3u5" path="res://assets/BGM/Does Not Bleed (No Drums).mp3" id="2_5jl5l"]
 [ext_resource type="Texture2D" uid="uid://ct2agqmwrxprp" path="res://assets/textures/wegakill.png" id="2_6osn1"]
 [ext_resource type="PackedScene" uid="uid://bs035oor8cgug" path="res://scenes/SettingsWindow.tscn" id="3_u5k1e"]
+[ext_resource type="AudioStream" uid="uid://bopsn36uffa10" path="res://assets/BGM/Does Not Bleed (Drums).mp3" id="3_ugs4v"]
 [ext_resource type="Shader" uid="uid://chc61cjknrihr" path="res://shaders/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
+[ext_resource type="FontFile" uid="uid://bcaeemqwsu7gf" path="res://assets/other/dogicapixel.ttf" id="6_2ct2e"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_yk1ip"]
 [ext_resource type="Texture2D" uid="uid://h510i4enqc80" path="res://assets/textures/thumbnails/classic.png" id="7_w6md1"]
 [ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
-shader_parameter/scroll_speed = 0.08
-shader_parameter/angle_degrees = 45.0
+shader_parameter/scroll_speed = 0.06
+shader_parameter/angle_degrees = 59.145
 shader_parameter/repeat_x = 10.0
-shader_parameter/repeat_y = 5.0
-shader_parameter/row_offset = 1.0
+shader_parameter/repeat_y = 5.25
+shader_parameter/row_offset = 0.775
 shader_parameter/texture_to_scroll = ExtResource("5_etru4")
+
+[sub_resource type="Gradient" id="Gradient_7dfbu"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.042, 0, 0.07, 0.713726)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sp6e7"]
+gradient = SubResource("Gradient_7dfbu")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv5wv"]
 bg_color = Color(0.392157, 0, 0.67451, 0.501961)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
 border_color = Color(0.152941, 0, 0.235294, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
 
 [sub_resource type="LabelSettings" id="LabelSettings_yk1ip"]
-font_size = 20
-outline_size = 16
+line_spacing = 18.0
+paragraph_spacing = 9.0
+font = ExtResource("6_2ct2e")
+font_size = 32
+outline_size = 32
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6osn1"]
@@ -106,53 +121,118 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mgf8r")
 
+[node name="No Drums" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5jl5l")
+autoplay = true
+
+[node name="Drums" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ugs4v")
+volume_db = -80.0
+autoplay = true
+
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
 material = SubResource("ShaderMaterial_jtjce")
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("5_etru4")
 expand_mode = 1
 
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_sp6e7")
+expand_mode = 1
+
 [node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 253.0
-offset_top = -24.0
-offset_right = 831.0
-offset_bottom = 344.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -289.0
+offset_right = 289.0
+offset_bottom = 368.0
+grow_horizontal = 2
 texture = ExtResource("2_6osn1")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 466.0
-offset_top = 300.0
-offset_right = 688.0
-offset_bottom = 482.0
+custom_minimum_size = Vector2(444, 72.8)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -182.0
+offset_right = 222.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-text = "Play"
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "PLAY"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-text = "Tutorial"
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "TUTORIAL"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-text = "Settings"
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "SETTINGS"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "RECOLORPEDIA"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
-text = "Exit to desktop"
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "QUIT"
 
 [node name="tips" type="Label" parent="."]
-layout_mode = 2
-offset_left = 218.0
-offset_top = 454.0
-offset_right = 936.0
-offset_bottom = 566.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.95
+anchor_right = 0.5
+anchor_bottom = 0.95
+offset_left = -718.0
+offset_top = -224.0
+offset_right = 718.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_nv5wv")
 text = "If you're seeing this, the randomization I used to select one of these tips at random failed.
 BWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGH"
@@ -162,26 +242,24 @@ autowrap_mode = 2
 
 [node name="Settings" parent="." instance=ExtResource("3_u5k1e")]
 visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 468.0
-offset_top = 239.0
-offset_right = 690.0
-offset_bottom = 546.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [node name="Gamemodes" type="Panel" parent="."]
 visible = false
-layout_mode = 0
-offset_left = 96.0
-offset_top = 54.0
-offset_right = 1056.0
-offset_bottom = 594.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -270.0
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.6, 1.6)
+pivot_offset = Vector2(480, 270)
 theme_override_styles/panel = SubResource("StyleBoxFlat_6osn1")
 
 [node name="Quit" type="Button" parent="Gamemodes"]
@@ -291,13 +369,13 @@ offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
 text = "Now with the WC:TI enemies.
-Idol not included.
-thnak you."
+And possibly more..."
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="." method="_recolorpedia"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]
 [connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]

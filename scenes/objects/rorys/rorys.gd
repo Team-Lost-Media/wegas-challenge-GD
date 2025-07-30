@@ -60,11 +60,11 @@ func _process(delta: float) -> void:
 		rory.show()
 		if piss_off_sfx.playing == false: piss_off_sfx.play()
 		frame_timer += 1
-		if frame_timer == 6:
+		if frame_timer == 12:
 			randomize()
 			frame_timer = 0
-			rory.position = Vector2(rng.randf_range(100, 1000), rng.randf_range(50, 500))
-			rory.scale = Vector2(rng.randf_range(2.5, 6), rng.randf_range(2, 5))
+			rory.position = Vector2(rng.randf_range(100, 1920), rng.randf_range(50, 1080))
+			rory.scale = Vector2(rng.randf_range(6, 10), rng.randf_range(5, 9))
 			rory.rotation = randf_range(-360, 360)
 	else:
 		rory.hide()

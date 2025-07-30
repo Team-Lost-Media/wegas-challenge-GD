@@ -13,6 +13,7 @@ func _ready() -> void:
 	Global.style = "none"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
+	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")
 
 func _process(delta: float) -> void:
 	if wegasleft != group_of_wegas.get_child_count():

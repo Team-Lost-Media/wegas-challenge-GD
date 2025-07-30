@@ -5,88 +5,99 @@
 [ext_resource type="Curve" uid="uid://2j4djjrll8hj" path="res://assets/other/points and time curve.tres" id="2_chhmu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
-font_size = 100
+font_size = 220
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tgope"]
-font_size = 65
+font_size = 120
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dwtvt"]
-font_size = 20
+font_size = 32
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_chhmu"]
-font_size = 35
+font_size = 64
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rubpt"]
-font_size = 15
+font_size = 32
 font_color = Color(1, 0, 0, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_40yjg")
 points_and_time_curve = ExtResource("2_chhmu")
 
-[node name="Maltigi" type="Sprite2D" parent="."]
-position = Vector2(286, 321)
-texture = ExtResource("2_2cmpw")
-
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
-offset_left = -1.0
-offset_right = 1151.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Maltigi" type="Sprite2D" parent="."]
+position = Vector2(372, 515.5)
+scale = Vector2(2.57917, 2.43611)
+texture = ExtResource("2_2cmpw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
 [node name="Label" type="Label" parent="."]
-offset_left = 558.0
-offset_top = 135.0
-offset_right = 1091.0
-offset_bottom = 290.0
+layout_mode = 0
+offset_left = 681.0
+offset_top = 67.0
+offset_right = 1854.0
+offset_bottom = 368.0
 text = "you suck!!!!"
 label_settings = SubResource("LabelSettings_i3kce")
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = -86.0
-offset_top = 208.0
-offset_right = 628.0
-offset_bottom = 363.0
+offset_left = 10.0
+offset_top = 393.0
+offset_right = 1152.0
+offset_bottom = 558.0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = -47.0
-offset_top = 305.0
-offset_right = 587.0
-offset_bottom = 460.0
+offset_left = 184.0
+offset_top = 571.0
+offset_right = 988.0
+offset_bottom = 726.0
 text = "(if it makes you feel any better, your final score was:"
 label_settings = SubResource("LabelSettings_dwtvt")
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = -47.0
-offset_top = 338.0
-offset_right = 581.0
-offset_bottom = 493.0
+offset_left = 266.0
+offset_top = 635.0
+offset_right = 894.0
+offset_bottom = 790.0
 text = "69420)"
 label_settings = SubResource("LabelSettings_chhmu")
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = -47.0
-offset_top = 383.0
-offset_right = 587.0
-offset_bottom = 538.0
+offset_left = 259.0
+offset_top = 727.0
+offset_right = 893.0
+offset_bottom = 882.0
 text = "(sort of)"
 label_settings = SubResource("LabelSettings_rubpt")
 horizontal_alignment = 1
@@ -94,9 +105,10 @@ horizontal_alignment = 1
 [node name="Label5" type="Label" parent="Label/Label4"]
 visible = false
 layout_mode = 0
-offset_top = 23.0
-offset_right = 634.0
-offset_bottom = 178.0
+offset_left = -326.0
+offset_top = 64.0
+offset_right = 998.0
+offset_bottom = 229.0
 text = "(you see, your score is calculated by adding a multiplier to your points based off of
 the time it took you to collect all the wegadolls. since your run ended prematurely,
 said time is actually faster than it wouldve been, had this run survived)"
@@ -106,7 +118,7 @@ horizontal_alignment = 1
 [node name="Button" type="Button" parent="Label/Label4"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 282.0
+offset_left = 244.0
 offset_top = 3.0
-offset_right = 352.0
-offset_bottom = 23.0
+offset_right = 394.0
+offset_bottom = 53.0

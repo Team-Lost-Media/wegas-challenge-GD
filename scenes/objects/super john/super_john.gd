@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export var player: Node3D
 ## The speed at which Super John will move towards the player.
 @export var speed: float
-## Super John's innacuracy. A value of 0 will result in perfect aim like Wega's, and a value of 1 will result in him basically never hitting you (he will still aim at you, just very badly).
+## Super John's innacuracy. I have no fucking idea how this works. I just stick to a value of 0.99. A lower value makes John go slower.
 @export_range(0.9, 1.0, 0.001) var inaccuracy: float = 0.0
 ## The time it takes for Super John to enable.
 @export var time_to_enable: float = 3
@@ -18,16 +18,23 @@ extends CharacterBody3D
 @export var damage: float = 40
 ## The scene to bring the player to if Super John kills them.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
+## The Super John Orange Line (tm). Just duplicate the Maltigi Red Line node for this.
+@export var line: MeshInstance3D
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var ring: Sprite3D = $"Ring Of John"
 @onready var start_timer: Timer = $StartTimer
+@onready var player_punch_cooldown: Timer = $PlayerPunchCooldown
+@onready var just_hit_player: Timer = $"mom i just super john bowling'd all over the place"
+@onready var just_got_hit: Timer = $"mom i just got punched"
 @onready var hitstop_flash: ColorRect = $"HitStop Flash"
 @onready var particles: CPUParticles3D = $Particles
 @onready var punch_sfx: AudioStreamPlayer = $AudioStreamPlayer
+@onready var speed_label: Label3D = $"Speed Label"
 
 var enabled = false
 var punchable = false
+var line_frame_timer: int = 0
 
 func _ready() -> void:
 	start_timer.wait_time = time_to_enable
@@ -41,14 +48,16 @@ func _process(delta: float) -> void:
 		#move
 		velocity = (global_position.direction_to(player.global_position + Vector3(0, 0.6, 0)) * speed * delta) + (velocity * inaccuracy)
 		
-		if Input.is_action_just_pressed("attack"):
-			if punchable:
+		if Input.is_action_just_pressed("attack") and player_punch_cooldown.is_stopped():
+			player_punch_cooldown.start()
+			if punchable and just_hit_player.is_stopped():
 				if velocity.length() >= minimum_push_speed:
 					punch_sfx.play()
 					Engine.time_scale = 0.0
-					await get_tree().create_timer(0.1, true, false, true).timeout
+					await get_tree().create_timer(0.07, true, false, true).timeout
+					just_got_hit.start()
 					Engine.time_scale = 1.0
-					velocity = -velocity
+					velocity = -velocity * 1.5
 					Global.points += 300
 					Global.style = "+DENIED"
 					print("DENIED")
@@ -56,17 +65,31 @@ func _process(delta: float) -> void:
 		
 		particles.look_at(player.position)
 		particles.rotation.x = 90
+		line_frame_timer += 1
+		if line_frame_timer == 1:
+			line_frame_timer = 0
+			line.mesh.clear_surfaces()
+			line.draw(global_position, global_position + velocity)
+		
+		if player.is_on_floor() == true:
+			Global.died_to_override = ""
 		
 		if velocity.length() >= minimum_push_speed:
 			particles.emitting = true
 			ring.show()
+			line.show()
+			speed_label.offset = Vector2(randf_range(-30, 30), randf_range(-30, 30))
+			speed_label.modulate = speed_label.modulate.lerp(Color.RED, clamp(5 * delta, 0.0, 1.0))
 			sprite.play("dash")
 		else:
 			particles.emitting = false
 			ring.hide()
+			line.hide()
+			speed_label.offset = Vector2(0, 0)
+			speed_label.modulate = speed_label.modulate.lerp(Color.WHITE, clamp(10 * delta, 0.0, 1.0))
 			sprite.play("default")
 		
-		$"debug label".text = str(snappedf(velocity.length(), 0.1))
+		speed_label.text = str(snappedf(velocity.length(), 0.1))
 		
 		move_and_slide()
 
@@ -75,7 +98,7 @@ func _on_start_timer_timeout() -> void:
 		enabled = true
 
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
-	if body is PlayerCharacter:
+	if body is PlayerCharacter and just_got_hit.is_stopped():
 		if kill == true:
 			Global.died_to = "super john"
 			get_tree().change_scene_to_file(death_scene)
@@ -84,8 +107,12 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			if Global.health <= 0:
 				Global.died_to = "super john"
 				get_tree().change_scene_to_file(death_scene)
-			body.velocity = velocity + Vector3(0, 30, 0)
+			body.damage_effects.play_damage_fx("super john")
+			punchable = false
+			body.velocity = velocity
+			body.velocity.y = 25
 			body.boosted.start(0.75)
+			Global.died_to_override = "super john"
 			velocity = -velocity
 
 

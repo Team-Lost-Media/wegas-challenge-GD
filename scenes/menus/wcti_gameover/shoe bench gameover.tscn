@@ -22,6 +22,7 @@ font_size = 80
 font_color = Color(1, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(1.67, 1.67)
 script = ExtResource("1_g5fek")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -31,6 +32,7 @@ offset_right = 1151.0
 offset_bottom = 648.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="Maltigi" type="Sprite2D" parent="."]
 position = Vector2(84, 321)
@@ -47,6 +49,7 @@ offset_bottom = 177.0
 text = "rip green lawson"
 label_settings = SubResource("LabelSettings_i3kce")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="you died to" type="Label" parent="Label"]
 layout_mode = 0
@@ -57,6 +60,7 @@ offset_bottom = 314.0
 text = "you died to SHOE BENCH"
 label_settings = SubResource("LabelSettings_7xr85")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="tips" type="Label" parent="Label"]
 layout_mode = 0
@@ -68,6 +72,7 @@ label_settings = SubResource("LabelSettings_w6fnf")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Label"]
 layout_mode = 0
@@ -78,6 +83,7 @@ offset_bottom = 643.0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="shoe bench" type="Sprite2D" parent="."]
 position = Vector2(84, 321)

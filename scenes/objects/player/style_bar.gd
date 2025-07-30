@@ -94,22 +94,22 @@ func style_meter(delta: float) -> void: #executed every frame
 			rank_label.text = "WEGAKILL"
 			rank_label.label_settings.font_color = wegakill
 			rank_label.label_settings.outline_color = wegakill_outline
-			rank_label.label_settings.outline_size = 20
+			rank_label.label_settings.outline_size = 60
 		"SHOE BENCH":
 			rank_label.text = "SHOE BENCH"
 			rank_label.label_settings.font_color = shoe_bench
 			rank_label.label_settings.outline_color = shoe_bench_outline
-			rank_label.label_settings.outline_size = 10
+			rank_label.label_settings.outline_size = 41
 		"ALBERT(SCARY!!)":
 			rank_label.text = "ALBERT(SCARY!!)"
 			rank_label.label_settings.font_color = albert
 			rank_label.label_settings.outline_color = albert_outline
-			rank_label.label_settings.outline_size = 10
+			rank_label.label_settings.outline_size = 41
 		"BEAR5":
 			rank_label.text = "BEAR5"
 			rank_label.label_settings.font_color = bear5
 			rank_label.label_settings.outline_color = bear5_outline
-			rank_label.label_settings.outline_size = 10
+			rank_label.label_settings.outline_size = 41
 		"NONE":
 			rank_label.text = ""
 			rank_label.label_settings.font_color = Color.from_rgba8(0, 0, 0)

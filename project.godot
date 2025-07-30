@@ -25,9 +25,12 @@ GameManager="*res://scenes/autoload/GameManager.gd"
 Global="*res://scenes/autoload/global.gd"
 Save="*res://scenes/autoload/save.gd"
 StyleSFX="*res://scenes/autoload/style sfx.tscn"
+SongCredits="*res://scenes/autoload/song credits.tscn"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/description=""
@@ -44,6 +47,39 @@ movie_writer/movie_file="C:/Users/natep/Downloads/New Recording (Wegas Challenge
 [editor_plugins]
 
 enabled=PackedStringArray()
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "red",
+"res://assets/BGM/": "orange",
+"res://assets/Models/": "green",
+"res://assets/SFX/": "blue",
+"res://assets/meshlibraries/": "yellow",
+"res://assets/other/": "teal",
+"res://assets/textures/": "purple",
+"res://scenes/": "orange",
+"res://scenes/autoload/": "red",
+"res://scenes/levels/main/": "red",
+"res://scenes/levels/tutorial/": "yellow",
+"res://scenes/menus/": "yellow",
+"res://scenes/menus/credits/": "red",
+"res://scenes/menus/gameover/": "orange",
+"res://scenes/menus/recolorpedia/": "green",
+"res://scenes/menus/recolorpedia/text/": "red",
+"res://scenes/menus/wcti_gameover/": "teal",
+"res://scenes/menus/win/": "blue",
+"res://scenes/objects/": "green",
+"res://scenes/objects/maltigi/": "red",
+"res://scenes/objects/player/": "orange",
+"res://scenes/objects/rorys/": "yellow",
+"res://scenes/objects/shoe bench (enemy)/": "green",
+"res://scenes/objects/super john/": "teal",
+"res://scenes/objects/ultra irios/": "blue",
+"res://scenes/objects/urio/": "purple",
+"res://scenes/objects/wega/": "pink",
+"res://scenes/objects/wegadoll/": "gray"
+}
 
 [input]
 
@@ -139,6 +175,11 @@ E={
 attack={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(186, 22),"global_position":Vector2(195, 70),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+cheat={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":92,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
 

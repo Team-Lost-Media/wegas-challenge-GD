@@ -92,9 +92,6 @@ func _process(delta: float) -> void:
 		
 		if wcti_enrage == true:
 			if Global.wegadolls_left <= enrage_when_x_left and texture != wcti_enraged_texture:
-				Global.style = "+ENRAGED"
-				Global.points += 400
-				StyleSFX.play_style_sfx()
 				texture = wcti_enraged_texture
 				pixel_size = new_texture_pixel_size
 				speed = wcti_enraged_speed

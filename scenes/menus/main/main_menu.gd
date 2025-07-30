@@ -12,6 +12,7 @@ extends Control
 func _play() -> void:
 	gamemodes.show()
 	buttons.hide()
+	crossfade(true)
 
 func _classic() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
@@ -23,6 +24,7 @@ func _the_idol() -> void:
 func on_gamemode_quit_pressed() -> void:
 	gamemodes.hide()
 	buttons.show()
+	crossfade(false)
 
 
 
@@ -33,6 +35,12 @@ func _tutorial() -> void:
 func _settings() -> void:
 	settings.show()
 	buttons.hide()
+	settings.animation_player.stop()
+	settings.animation_player.play("new_animation")
+
+func _recolorpedia() -> void:
+	get_tree().change_scene_to_file("res://scenes/menus/recolorpedia/recolorpedia.tscn")
+	Global.tutorial = true
 
 func _quit() -> void:
 	self.get_tree().quit()
@@ -40,8 +48,24 @@ func _quit() -> void:
 func _on_close_button() -> void:
 	settings.hide()
 	buttons.show() 
+	
+@onready var bgm_no_drums: AudioStreamPlayer = $"No Drums"
+@onready var bgm_drums: AudioStreamPlayer = $Drums
+
+func crossfade(drums: bool) -> void:
+	if drums == true:
+		var tween = create_tween()
+		tween.tween_property(bgm_no_drums, "volume_linear", 0.0, 1.0)
+		var tween2 = create_tween()
+		tween2.tween_property(bgm_drums, "volume_linear", 1.0, 1.0)
+	else:
+		var tween = create_tween()
+		tween.tween_property(bgm_no_drums, "volume_linear", 1.0, 1.0)
+		var tween2 = create_tween()
+		tween2.tween_property(bgm_drums, "volume_linear", 0.0, 1.0)
 
 func _ready() -> void:
+	SongCredits.show_song_credits("Does Not Bleed", "somerandomguy21 (me)")
 	StyleSFX.stop()
 	randomize()
 	tips_text.text = tips.pick_random()
@@ -56,11 +80,12 @@ var tips = ["In CLASSIC mode, Wega speeds up as you collect more Wegadolls.",
 "Wega emits a colored light at all times! If the environment around you is changing color, he might be near.",
 "It takes Wega exactly three seconds to run after you.",
 "WATLM tomorrow",
-"Hold LOOKBACK (Right Click) to look back. This can be especially useful when running from Wega",
+"Hold LOOKBACK (Right Click) to look back. This can be especially useful when running from Wega.",
 "In THE IDOL, Rorys can only spawn on Wegadolls, so make sure to punch him with ATTACK (Left Click).",
 "In THE IDOL, if you press ATTACK (Left Click) while near Rorys, you'll punch him, which stuns him and gives you a large boost of velocity.",
 "In THE IDOL, the first time you fall, Golden Sigma will save you! He will also always save you after a Rorys Explosion.",
-"In THE IDOL, Maltigi can be easily dodged by just walking forward.",
-"In THE IDOL, punching Rorys (with ATTACK ATTACK (Left Click)) causes a Rorys Explosion, which gives you a large boost in velocity. If you fall due to a Rorys Explosion, Golden Sigma will save you!",
-"You cannot run from Shoe Bench."
+"In THE IDOL, punching Rorys (with ATTACK (Left Click)) causes a Rorys Explosion, which gives you a large boost in velocity. If you fall due to a Rorys Explosion, Golden Sigma will save you!",
+"You cannot run from Shoe Bench.",
+"In THE IDOL, Super John can only hit you when he's going at high speed. To tell if he can hit you, look for his particles and for his unique dash animation!",
+"In THE IDOL, Super John can be deflected with ATTACK (Left Click)! If you are near him, try punching him. This should reverse his velocity!"
 ]

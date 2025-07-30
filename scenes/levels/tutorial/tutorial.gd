@@ -2,7 +2,8 @@ extends Node3D
 
 @onready var wega = $Wega
 @onready var wega_labels = $Main/Labels/WegaLabels
-@onready var music = $AudioStreamPlayer
+@onready var purple_sun_bgm: AudioStreamPlayer = $AudioStreamPlayer
+@onready var music: AudioStreamPlayer = $WEXECUTION
 @onready var sun = $Main/DirectionalLight3D
 @onready var wegagridmap = $Main/WegaGridMap
 @onready var player = $Player
@@ -13,13 +14,17 @@ var increase_sun = false
 @onready var wegasleft = group_of_wegas.get_child_count()
 @onready var sfx = $SFX
 
+const WEXECUTION = preload("res://assets/BGM/WEXECUTION.mp3")
+
 func _ready() -> void:
 	player.style_panel.hide()
 	wega.hide()
 	wega_labels.hide()
 	wegagridmap.hide()
+	StyleSFX.stop()
 	Global.points = 0
 	Global.style = "none"
+	Global.reset()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
@@ -48,4 +53,5 @@ func _on_wegadoll_collected() -> void: #this only applies to the first one dw
 	wegagridmap.show()
 	wegagridmap.collision_layer = 1
 	increase_sun = true
+	purple_sun_bgm.stop()
 	music.play()

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 ## literally just copied from gameover.gd smh
 ##haha not anymore xeth
