@@ -24,6 +24,7 @@ extends Node3D
 @onready var ultra_irios: Sprite3D = $"Ultra Irios"
 @onready var shoe_bench: Sprite3D = $"Shoe Bench"
 @onready var super_john: CharacterBody3D = $SuperJohn
+@onready var glitchigi: Sprite3D = $Glitchigi
 
 #the three benches
 @onready var shoe_bench_timer: Control = $"Shoe Bench Timer"
@@ -67,6 +68,7 @@ func _ready() -> void:
 	lap1_sky = environment.environment.sky
 	message.text = ""
 	maltigi.stop()
+	glitchigi.stop()
 	shoe_bench_scale = the_man_himself.scale
 	lap_2_gridmap.position.y = -30
 	lap_2_gridmap.hide()
@@ -86,6 +88,7 @@ var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
 var john_started: bool = false
+var glitchigi_started: bool = false
 var the_idol_outro_started: bool = false
 var FUCK2: bool
 func _process(delta: float) -> void:
@@ -158,6 +161,11 @@ func _process(delta: float) -> void:
 				super_john.enabled = true
 				john_started = true
 		
+		if wegasleft <= 200:
+			if glitchigi_started == false:
+				message.say("GLITCHIGI IS COMING")
+				glitchigi.start(true)
+				glitchigi_started = true
 		
 		if wegasleft <= 0:
 			the_idol_gridmap.position.y = lerp(the_idol_gridmap.position.y, 0.0, clamp(5.0 * delta, 0.0, 1.0))
@@ -199,6 +207,10 @@ func _process(delta: float) -> void:
 
 func _on_so_retro_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and lap2_startable == true:
+		
+		#comment this out for lap 2
+		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+		
 		lap = 2
 		wexecution.stop()
 		Global.timer_stopped = false
@@ -219,8 +231,6 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		#lap_2_gridmap.position.y = lerp(lap_2_gridmap.position.y, 0.0, clamp(5.0 * delta_but_the_one_i_used_for_the_transition_to_lap_2, 0.0, 1.0))
 		lap_2_start_pause.start()
 		
-		#currently used as a placeholder
-		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 
 var FUCK = false
 var shit: Mesh

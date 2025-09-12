@@ -46,6 +46,10 @@ The fireballs, while faster than you, are extremely easy to dodge if you keep yo
 			tips.text = '''Super John can only hit you when he's at 20 speed or higher! When he can hit you, he will play a unique animation and will also have extra particles!
 Keeping track of where Super John is is much easier if you pay attention to the line sticking out of him, as it keeps track of his velocity!
 Super John, like Rorys, can be punched with ATTACK (Left Click)! Doing so will reverse his velocity.'''
+		"glitchigi":
+			tips.text = '''Glitchigi behaves the same as Maltigi, except he occasionally rushes at you a LOT faster than he usually does!
+Despite this, however, hes still just a faster Maltigi.
+The same tips against Maltigi will function just as well against Glitchigi!'''
 		"shoe bench":
 			tips.text = "idk lmao just go fast"
 		

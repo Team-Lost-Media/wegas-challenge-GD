@@ -79,7 +79,6 @@ shadow_opacity = 0.8
 script = ExtResource("4_j726a")
 bgm_node = NodePath("../../AudioStreamPlayer")
 bgm = ExtResource("5_3yhub")
-enable_song_credits = true
 title = "Purple Sun"
 author = "somerandomguy21 (me)"
 

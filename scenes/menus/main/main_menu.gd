@@ -8,6 +8,7 @@ extends Control
 @onready var buttons = $VBoxContainer
 @onready var tips_text = $tips
 @onready var gamemodes = $Gamemodes
+@onready var recolorpedia: Control = $Recolorpedia
 
 func _play() -> void:
 	gamemodes.show()
@@ -20,13 +21,10 @@ func _classic() -> void:
 func _the_idol() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
 
-
 func on_gamemode_quit_pressed() -> void:
 	gamemodes.hide()
 	buttons.show()
 	crossfade(false)
-
-
 
 func _tutorial() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/tutorial/tutorial.tscn")
@@ -39,8 +37,14 @@ func _settings() -> void:
 	settings.animation_player.play("new_animation")
 
 func _recolorpedia() -> void:
-	get_tree().change_scene_to_file("res://scenes/menus/recolorpedia/recolorpedia.tscn")
-	Global.tutorial = true
+	recolorpedia.position = Vector2(0, 0)
+	position = Vector2(3000, 0)
+	crossfade(true)
+
+func _exit_recolorpedia() -> void:
+	recolorpedia.position = Vector2(3000, 0)
+	position = Vector2(0, 0)
+	crossfade(false)
 
 func _quit() -> void:
 	self.get_tree().quit()
@@ -65,6 +69,8 @@ func crossfade(drums: bool) -> void:
 		tween2.tween_property(bgm_drums, "volume_linear", 0.0, 1.0)
 
 func _ready() -> void:
+	recolorpedia.dont_change_scene_to_main_menu = true
+	recolorpedia.go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK.connect(_exit_recolorpedia)
 	SongCredits.show_song_credits("Does Not Bleed", "somerandomguy21 (me)")
 	StyleSFX.stop()
 	randomize()

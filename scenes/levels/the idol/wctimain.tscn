@@ -92,14 +92,13 @@ material = SubResource("StandardMaterial3D_pcnek")
 size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ytgl"]
+shading_mode = 0
 albedo_color = Color(1, 0, 0, 1)
-emission_enabled = true
-emission = Color(1, 0, 0, 1)
-emission_energy_multiplier = 56.2
 
 [sub_resource type="ImmediateMesh" id="ImmediateMesh_1a3yk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a3yk"]
+shading_mode = 0
 albedo_color = Color(1, 0.482353, 0, 1)
 
 [sub_resource type="ImmediateMesh" id="ImmediateMesh_7ytgl"]
@@ -342,8 +341,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
 visible = false
 player = NodePath("../Player")
 enable_manually = true
-dash_cooldown = 1.0
-dash_speed = 175.0
+dash_cooldown = 2.5
+dash_delay = 0.75
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 line = NodePath("../maltigi line")
 
@@ -426,6 +425,28 @@ line = NodePath("../super john line")
 light_color = Color(1, 0.433333, 0, 1)
 light_energy = 7.5
 omni_range = 20.0
+
+[node name="Glitchigi" parent="." node_paths=PackedStringArray("player", "line") instance=ExtResource("3_qn1fo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
+visible = false
+player = NodePath("../Player")
+enable_manually = true
+dash_cooldown = 2.0
+dash_speed = 150.0
+death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
+died_to = "glitchigi"
+line = NodePath("../maltigi line")
+malt_rush_enabled = true
+malt_rush_multiplier = 3.0
+malt_rush_duration = 4.0
+malt_rush_cooldown = 4.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Glitchigi"]
+light_color = Color(1, 0, 0.0166664, 1)
+light_energy = 250.0
+shadow_enabled = true
+omni_range = 7.0
+omni_attenuation = 2.0
 
 [node name="Player" parent="." instance=ExtResource("3_k8crp")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.538, 2.3513, 8.212)

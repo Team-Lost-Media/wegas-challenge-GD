@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene load_steps=38 format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
 [ext_resource type="AudioStream" uid="uid://bfikfhcvcr3u5" path="res://assets/BGM/Does Not Bleed (No Drums).mp3" id="2_5jl5l"]
@@ -7,10 +7,11 @@
 [ext_resource type="AudioStream" uid="uid://bopsn36uffa10" path="res://assets/BGM/Does Not Bleed (Drums).mp3" id="3_ugs4v"]
 [ext_resource type="Shader" uid="uid://chc61cjknrihr" path="res://shaders/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
-[ext_resource type="FontFile" uid="uid://bcaeemqwsu7gf" path="res://assets/other/dogicapixel.ttf" id="6_2ct2e"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_yk1ip"]
 [ext_resource type="Texture2D" uid="uid://h510i4enqc80" path="res://assets/textures/thumbnails/classic.png" id="7_w6md1"]
 [ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
+[ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="8_5jl5l"]
+[ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -45,7 +46,7 @@ corner_radius_bottom_left = 20
 [sub_resource type="LabelSettings" id="LabelSettings_yk1ip"]
 line_spacing = 18.0
 paragraph_spacing = 9.0
-font = ExtResource("6_2ct2e")
+font = ExtResource("8_5jl5l")
 font_size = 32
 outline_size = 32
 outline_color = Color(0, 0, 0, 1)
@@ -111,6 +112,12 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(4, 4)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7n6k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ugs4v"]
+font = ExtResource("6_yk1ip")
+font_size = 41
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -371,6 +378,28 @@ offset_bottom = 192.0
 text = "Now with the WC:TI enemies.
 And possibly more..."
 label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="Recolorpedia" parent="." instance=ExtResource("12_ugs4v")]
+top_level = true
+layout_mode = 1
+offset_left = 2334.0
+offset_right = 2334.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -40.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "demo2 beta"
+label_settings = SubResource("LabelSettings_ugs4v")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]

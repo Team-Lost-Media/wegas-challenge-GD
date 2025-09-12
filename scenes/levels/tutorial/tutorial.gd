@@ -55,3 +55,4 @@ func _on_wegadoll_collected() -> void: #this only applies to the first one dw
 	increase_sun = true
 	purple_sun_bgm.stop()
 	music.play()
+	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")

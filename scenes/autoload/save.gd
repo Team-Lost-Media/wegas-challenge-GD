@@ -1,19 +1,33 @@
 extends Node
 
-const SAVE_SCORE_FILE_PATH = "user://wegakill - highscore.sav"
+const CLASSIC_SAVE_SCORE_FILE_PATH = "user://wegakill - classic highscore.sav"
+const WCTI_SAVE_SCORE_FILE_PATH = "user://wegakill - the idol highscore.sav"
 const SAVE_ACHIEVEMENTS_FILE_PATH = "user://wegakill - achievements.sav"
 
 func save_score(score):
-	var file = FileAccess.open(SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
 	file.store_string(str(score))
 
 func load_score():
-	var file = FileAccess.open(SAVE_SCORE_FILE_PATH, FileAccess.READ)
+	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.READ)
 	var score = int(file.get_as_text())
 	return score
 
 func reset_score():
-	var file = FileAccess.open(SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	file.store_string(str(0))
+
+func save_wcti_score(score):
+	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	file.store_string(str(score))
+
+func load_wcti_score():
+	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.READ)
+	var score = int(file.get_as_text())
+	return score
+
+func reset_wcti_score():
+	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
 	file.store_string(str(0))
 
 var achievements_dict: Dictionary = {

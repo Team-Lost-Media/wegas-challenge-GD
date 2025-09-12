@@ -44,12 +44,18 @@ var char_to_entry_path_dict = {
 	"Wega" = "res://scenes/menus/recolorpedia/text/wega.txt",
 	"Rorys" = "res://scenes/menus/recolorpedia/text/rorys.txt",
 	"Maltigi" = "res://scenes/menus/recolorpedia/text/maltigi.txt",
-	"Ultra Irios" = 4,
-	"Super John" = 5,
+	"Ultra Irios" = "res://scenes/menus/recolorpedia/text/ultra irios.txt",
+	"Super John" = "res://scenes/menus/recolorpedia/text/super john.txt",
 }
 
+signal go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK
+
+var dont_change_scene_to_main_menu: bool = false
+
 func _on_go_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+	go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK.emit()
+	if dont_change_scene_to_main_menu == false:
+		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
 
 func _process(delta: float) -> void:
 	for child in selector.get_children():

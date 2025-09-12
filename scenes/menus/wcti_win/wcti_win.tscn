@@ -1,37 +1,37 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkj25ag02mueh"]
+[gd_scene load_steps=12 format=3 uid="uid://co0x1ueesrisf"]
 
-[ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
-[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_2ugug"]
-[ext_resource type="Curve" uid="uid://7jcnj2v5xp75" path="res://assets/other/wcti points and time curve.tres" id="2_aydif"]
-[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="3_25npl"]
-[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_gc12i"]
+[ext_resource type="Script" uid="uid://cbkbd0ife2she" path="res://scenes/menus/wcti_win/wcti_win.gd" id="1_5or1p"]
+[ext_resource type="Curve" uid="uid://7jcnj2v5xp75" path="res://assets/other/wcti points and time curve.tres" id="2_lasd8"]
+[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="3_bbgvn"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="4_e0xnn"]
+[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="5_c4v4b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 205
 font_color = Color(0.482353, 0.423529, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_aydif"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 41
 font_color = Color(0.823529, 0, 1, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_6ogbe"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 41
 
 [sub_resource type="LabelSettings" id="LabelSettings_dq4ij"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 82
 font_color = Color(1, 0.133333, 0.431373, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_svv80"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 41
 font_color = Color(0.405, 0.4145, 0.5, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_kqcem"]
-font = ExtResource("3_gc12i")
+font = ExtResource("4_e0xnn")
 font_size = 41
 font_color = Color(0.405, 0.4145, 0.5, 1)
 
@@ -42,8 +42,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rc6es")
-points_and_time_curve = ExtResource("2_aydif")
+script = ExtResource("1_5or1p")
+points_and_time_curve = ExtResource("2_lasd8")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
@@ -59,7 +59,7 @@ color = Color(0, 0, 0, 1)
 [node name="NOT Maltigi" type="Sprite2D" parent="."]
 position = Vector2(373, 525)
 scale = Vector2(3.85666, 3.42526)
-texture = ExtResource("2_2ugug")
+texture = ExtResource("3_bbgvn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -142,7 +142,7 @@ holder: somerandomguy21"
 label_settings = SubResource("LabelSettings_kqcem")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_25npl")
+stream = ExtResource("5_c4v4b")
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]

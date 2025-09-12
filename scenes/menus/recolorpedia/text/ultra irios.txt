@@ -1,0 +1,24 @@
+Rorys
+Origin: Golden Sigma "I will save you!" GIF
+Rorys picks a random Wegadoll to spawn on, tinting it blue. After enough time, he will appear on the Wegadoll. [br] [br]Touching Rorys will make you take 70 damage as he temporarily blinds you. [br] [br]Punching Rorys with ATTACK (Left Click) will make him explode, stunning him and sending you backwards in the direction of your camera. This can be used for a speed boost, or to gain height.
+Rorys is actually more beneficial than he seems: his explosion when punched is extremely useful, so learning how to best make use of it is essential to "mastering" him. [br] [br]Keep in mind that the direction of the boost his explosion gives you is based off of where you're pointing the camera. More specifically, it'll send you in the OPPOSITE direction of your camera.
+* His ability (taken from WC:TI) is based off of the original Golden Sigma GIF from where he originates from, where he's overlayed on top of Friend shaking and changing size. [br] [br]* "Is his name Rorys or Rory?" The answer is both. [br] [br]* The explosion sound and animation he uses are the same as Deltarune's. [br] [br]* He wants to kill Friend. [br] [br]* He is the main antagonist of the Super Golden Sigma games.
+In WC:TI, Rorys can be problematic because you often dont have an easy way of avoiding him. In WEGAKILL, this is not the case. You can easily go around him, either by jumping to a different path or by straight up jumping over him. [br] [br]As a result, I wanted Rorys to be more interesting. When implementing him, I had (once again) taken inspiration from ULTRAKILL. ULTRAKILL has a weapon where, if you slam into an enemy at high speed, it'll deal massive damage and send you flying backwards. I LOVE this weapon. So, I decided to do something similar for Rorys, and this was the end result. [br] [br]Small bonus: since there's no concept of acceleration and deceleration while moving, I had to resort to preventing you from moving for a short period when the Rorys Explosion starts.
++EXPLODED
+400
+Explode Rorys by punching him. [br]Also stuns Rorys and gives you momentum.
++FUCK YOU RORYS
+600
+Collect the Wegadoll Rorys is blocking without hitting or getting hit by Rorys. [br]This IS possible. Good luck.
+///
+.
+.
+///
+.
+.
+///
+.
+.
+///
+.
+.

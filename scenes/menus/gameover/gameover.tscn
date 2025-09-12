@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://x1oq3o7aaim7" path="res://scenes/menus/gameover/gameover.gd" id="1_40yjg"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_2cmpw"]
-[ext_resource type="Curve" uid="uid://2j4djjrll8hj" path="res://assets/other/points and time curve.tres" id="2_chhmu"]
+[ext_resource type="Curve" uid="uid://7jcnj2v5xp75" path="res://assets/other/wcti points and time curve.tres" id="2_chhmu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
 font_size = 220
