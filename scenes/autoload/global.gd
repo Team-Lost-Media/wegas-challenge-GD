@@ -24,6 +24,7 @@ func reset(): #execited when the player retries after a game over or win
 	died_to = ""
 	died_to_override = ""
 	health = 100
+	timer_stopped = false
 
 var newtimer = Timer
 var wegadoll_combo_timer = newtimer.new()

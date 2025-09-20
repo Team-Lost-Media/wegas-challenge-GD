@@ -209,7 +209,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and lap2_startable == true:
 		
 		#comment this out for lap 2
-		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
 		
 		lap = 2
 		wexecution.stop()
