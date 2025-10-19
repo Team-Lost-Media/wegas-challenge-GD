@@ -10,11 +10,11 @@ extends Sprite3D
 @export var kill = true ## If set to [code]false[/code], Maltigi cannot kill the player.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 @export var died_to: String = "maltigi" ## A special identifier used to set the tips in the THE IDOL game over screen. Best not to change this, unless its for Glitchigi.
-@export var line: MeshInstance3D ## Must be set to $"maltigi line". Used for drawing the red line from Maltigi to his target position.
 @export var smart = false ## If set to [code]true[/code], Maltigi will predict the targets's movement (using their velocity) and dash where they're going. Otherwise, he will just dash at their position.
 @export var smart_multiplier: float = 1.2 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
 @export var enable_overshoot: bool = true ## If set to [code]true[/code], Maltigi will overshoot the target.
 @export var overshoot_distance: float = 10 ## Only functions if [code]enable_overshoot[/code] is set to [code]true[/code].
+@export var line_color: Color
 @export_group("Malt Rush")
 @export var malt_rush_enabled: bool = false ## The Malt Rush makes Maltigi quickly dash for a brief period.
 @export var malt_rush_multiplier: float = 2 ## How much faster Maltigi's dashes will be during a Malt Rush.
@@ -37,6 +37,7 @@ var target_position: Vector3
 var delta_but_the_one_i_used_in_the_dash_function: float
 
 func _ready() -> void:
+	DebugDraw3D.new_scoped_config().set_thickness(0.01)
 	if enable_manually == false:
 		start_timer.start(time_to_enable)
 
@@ -53,7 +54,8 @@ func _process(delta: float) -> void:
 			else:
 				target_position = player.position + ((position.direction_to(player.position) * overshoot_distance) * float(enable_overshoot))
 			dash_delay_timer.start(dash_delay)
-			line.draw(position, target_position)
+			#line.draw(position, target_position)
+			DebugDraw3D.draw_line(position, target_position, line_color, dash_delay)
 			#draw the line
 			if malt_rushing:
 				dash_cooldown_timer.start(dash_cooldown / malt_rush_multiplier)
@@ -73,7 +75,7 @@ func _on_start_timer_timeout() -> void:
 
 func _on_dash_delay_timeout() -> void:
 	moving = true
-	line.mesh.clear_surfaces()
+	#line.mesh.clear_surfaces()
 	#EEEEEAIAIAIARARRHGHGHHARARA
 	audio.play()
 	print("player: ", player.position, "	target: ", target_position)

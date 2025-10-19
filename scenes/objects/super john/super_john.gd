@@ -19,7 +19,7 @@ extends CharacterBody3D
 ## The scene to bring the player to if Super John kills them.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 ## The Super John Orange Line (tm). Just duplicate the Maltigi Red Line node for this.
-@export var line: MeshInstance3D
+@export var line_color: Color
 
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var ring: Sprite3D = $"Ring Of John"
@@ -35,6 +35,7 @@ extends CharacterBody3D
 var enabled = false
 var punchable = false
 var line_frame_timer: int = 0
+var debugdraw_config: DebugDraw3DScopeConfig = DebugDraw3D.scoped_config()
 
 func _ready() -> void:
 	start_timer.wait_time = time_to_enable
@@ -68,8 +69,7 @@ func _process(delta: float) -> void:
 		line_frame_timer += 1
 		if line_frame_timer == 1:
 			line_frame_timer = 0
-			line.mesh.clear_surfaces()
-			line.draw(global_position, global_position + velocity)
+			DebugDraw3D.draw_line(global_position, global_position + velocity, line_color)
 		
 		if player.is_on_floor() == true:
 			Global.died_to_override = ""
@@ -77,14 +77,14 @@ func _process(delta: float) -> void:
 		if velocity.length() >= minimum_push_speed:
 			particles.emitting = true
 			ring.show()
-			line.show()
+			debugdraw_config.set_thickness(0.1)
 			speed_label.offset = Vector2(randf_range(-30, 30), randf_range(-30, 30))
 			speed_label.modulate = speed_label.modulate.lerp(Color.RED, clamp(5 * delta, 0.0, 1.0))
 			sprite.play("dash")
 		else:
 			particles.emitting = false
 			ring.hide()
-			line.hide()
+			debugdraw_config.set_thickness(0)
 			speed_label.offset = Vector2(0, 0)
 			speed_label.modulate = speed_label.modulate.lerp(Color.WHITE, clamp(10 * delta, 0.0, 1.0))
 			sprite.play("default")

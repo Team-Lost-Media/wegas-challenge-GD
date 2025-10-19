@@ -1,7 +1,6 @@
-[gd_scene load_steps=64 format=3 uid="uid://bx4ofdrp8dc2v"]
+[gd_scene load_steps=59 format=3 uid="uid://bx4ofdrp8dc2v"]
 
 [ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_2any5"]
-[ext_resource type="Script" uid="uid://cf2srb56vlwde" path="res://scenes/levels/the idol/maltigi_line.gd" id="2_1a3yk"]
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="2_cg5xk"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_cqmtp"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_sr6d7"]
@@ -90,18 +89,6 @@ emission_energy_multiplier = 2.0
 [sub_resource type="BoxMesh" id="BoxMesh_bcxo4"]
 material = SubResource("StandardMaterial3D_pcnek")
 size = Vector3(0.1, 0.1, 0.1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ytgl"]
-shading_mode = 0
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_1a3yk"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a3yk"]
-shading_mode = 0
-albedo_color = Color(1, 0.482353, 0, 1)
-
-[sub_resource type="ImmediateMesh" id="ImmediateMesh_7ytgl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t52ot"]
 font = ExtResource("2_sr6d7")
@@ -237,16 +224,6 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="maltigi line" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_7ytgl")
-mesh = SubResource("ImmediateMesh_1a3yk")
-script = ExtResource("2_1a3yk")
-
-[node name="super john line" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_1a3yk")
-mesh = SubResource("ImmediateMesh_7ytgl")
-script = ExtResource("2_1a3yk")
-
 [node name="GUI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="GUI"]
@@ -336,7 +313,7 @@ position = Vector2(589.62, 830)
 scale = Vector2(0.306, 0.154)
 texture = ExtResource("7_bcxo4")
 
-[node name="Maltigi" parent="." node_paths=PackedStringArray("player", "line") instance=ExtResource("3_qn1fo")]
+[node name="Maltigi" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
 visible = false
 player = NodePath("../Player")
@@ -344,7 +321,7 @@ enable_manually = true
 dash_cooldown = 2.5
 dash_delay = 0.75
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
-line = NodePath("../maltigi line")
+line_color = Color(1, 0, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi"]
 light_color = Color(1, 0, 0.0166664, 1)
@@ -411,7 +388,7 @@ light_color = Color(1, 0, 0.0156863, 1)
 light_energy = 15.0
 omni_range = 20.0
 
-[node name="SuperJohn" parent="." node_paths=PackedStringArray("player", "line") instance=ExtResource("18_7ytgl")]
+[node name="SuperJohn" parent="." node_paths=PackedStringArray("player") instance=ExtResource("18_7ytgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 86.018)
 visible = false
 player = NodePath("../Player")
@@ -419,14 +396,14 @@ speed = 26.0
 inaccuracy = 0.99
 damage = 20.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
-line = NodePath("../super john line")
+line_color = Color(1, 0.5019608, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SuperJohn"]
 light_color = Color(1, 0.433333, 0, 1)
 light_energy = 7.5
 omni_range = 20.0
 
-[node name="Glitchigi" parent="." node_paths=PackedStringArray("player", "line") instance=ExtResource("3_qn1fo")]
+[node name="Glitchigi" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
 player = NodePath("../Player")
@@ -435,7 +412,7 @@ dash_cooldown = 2.0
 dash_speed = 150.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 died_to = "glitchigi"
-line = NodePath("../maltigi line")
+line_color = Color(0.47058824, 0, 0, 1)
 malt_rush_enabled = true
 malt_rush_multiplier = 3.0
 malt_rush_duration = 4.0

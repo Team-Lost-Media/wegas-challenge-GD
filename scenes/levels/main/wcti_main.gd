@@ -209,8 +209,9 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and lap2_startable == true:
 		
 		#comment this out for lap 2
-		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
+		#get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
 		
+		#change to lap 2
 		lap = 2
 		wexecution.stop()
 		Global.timer_stopped = false
@@ -224,8 +225,6 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		player.dash_cooldown_bar_outline.modulate = Color.WHITE
 		player.dash_cooldown_bar.modulate = Color.WHITE
 		
-		#change to lap 2
-		#blahblahblah idk how ill do this lmao ill figure something out
 		lap_2_gridmap.show()
 		group_of_wegas_TWO.show()
 		#lap_2_gridmap.position.y = lerp(lap_2_gridmap.position.y, 0.0, clamp(5.0 * delta_but_the_one_i_used_for_the_transition_to_lap_2, 0.0, 1.0))
