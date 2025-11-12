@@ -63,35 +63,35 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ct2e"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxm30"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jl5l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugs4v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfbu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6e7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_524vu"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vnt"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_524vu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_if2gh"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6e7"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3myg"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfbu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugs4v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jl5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxm30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ct2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77ybs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxb73"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77ybs"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3myg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_if2gh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w6md1"]
 font = ExtResource("6_yk1ip")
@@ -270,7 +270,7 @@ pivot_offset = Vector2(480, 270)
 theme_override_styles/panel = SubResource("StyleBoxFlat_6osn1")
 
 [node name="Quit" type="Button" parent="Gamemodes"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 5.0
 offset_right = 949.0
 offset_bottom = 50.0
@@ -278,17 +278,17 @@ theme_override_constants/outline_size = 20
 theme_override_constants/h_separation = 0
 theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w6md1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2ct2e")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nxm30")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5jl5l")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugs4v")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_7dfbu")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sp6e7")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_524vu")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_04vnt")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qyi5k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_04vnt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_524vu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sp6e7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7dfbu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugs4v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5jl5l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nxm30")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2ct2e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w6md1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
 text = "CLOSE"
 flat = true
 
@@ -307,10 +307,10 @@ grow_vertical = 2
 [node name="Classic" type="Button" parent="Gamemodes/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
 [node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/Classic"]
 layout_mode = 0
@@ -347,10 +347,10 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_g7n6k")
 [node name="The Idol" type="Button" parent="Gamemodes/VBoxContainer"]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
 [node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/The Idol"]
 layout_mode = 0
@@ -398,7 +398,7 @@ offset_right = -3.0
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "demo2 beta"
+text = "demo2 alpha.0"
 label_settings = SubResource("LabelSettings_ugs4v")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]

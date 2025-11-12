@@ -507,7 +507,6 @@ death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 [node name="deathbarrier2" parent="Main" instance=ExtResource("6_goutp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
-saveable = false
 
 [node name="CollisionShape3D" parent="Main/deathbarrier2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.214, 6.25702, -38.1552)

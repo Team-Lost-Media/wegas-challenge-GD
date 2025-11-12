@@ -23,6 +23,18 @@ func get_value(value_key : String):
 
 ## Applies settings from SettingsDict
 func _apply_settings():
+	#region fullscreen and vsync
+	if SettingsDict.fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_WINDOWED)
+	
+	if SettingsDict.vsync:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+	else:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	#endregion
+	#region window size
 	DisplayServer.window_set_size(Vector2(SettingsDict.resolution[0], SettingsDict.resolution[1]))
 	
 	# Center the window
@@ -34,19 +46,11 @@ func _apply_settings():
 	window_pos.y = screen_size.y / 2 - window_size.y / 2
 	
 	DisplayServer.window_set_position(window_pos)
-	
-	if SettingsDict.fullscreen:
-		DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WindowMode.WINDOW_MODE_WINDOWED)
-	
-	if SettingsDict.vsync:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
-	else:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
-	
+	#endregion
+	#region audio
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(get_value("sfx volume")))
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BGM"), linear_to_db(get_value("music volume")))
+	#endregion
 
 ## Loads settings from settings file
 func _load_settings():

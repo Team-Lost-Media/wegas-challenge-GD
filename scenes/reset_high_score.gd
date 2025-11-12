@@ -19,3 +19,4 @@ func _on_pressed() -> void:
 		4:
 			text = "High score reset!"
 			Save.reset_score()
+			Save.reset_wcti_score()

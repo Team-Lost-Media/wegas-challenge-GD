@@ -163,8 +163,8 @@ func _process(delta: float) -> void:
 		
 		if wegasleft <= 200:
 			if glitchigi_started == false:
-				message.say("GLITCHIGI IS COMING")
-				glitchigi.start(true)
+				#message.say("GLITCHIGI IS COMING")
+				#glitchigi.start(true)
 				glitchigi_started = true
 		
 		if wegasleft <= 0:
@@ -209,7 +209,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and lap2_startable == true:
 		
 		#comment this out for lap 2
-		#get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
+		if not Global.do_lap_2: get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
 		
 		#change to lap 2
 		lap = 2

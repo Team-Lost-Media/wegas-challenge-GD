@@ -12,6 +12,8 @@ var health: float
 var tutorial = false
 var timer_stopped = false
 
+var do_lap_2 = false
+
 #region end screen variables
 var time_as_string: String
 var time_in_seconds: float

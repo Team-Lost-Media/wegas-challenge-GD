@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=18 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
 [ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_cpgv8"]
 [ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="2_yude8"]
 [ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
+[ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="4_oufcy"]
+[ext_resource type="Script" uid="uid://c0rhnbvywjqnm" path="res://scenes/menus/main/special_debug_lap_2_checkbox.gd" id="6_jbven"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
@@ -89,14 +91,38 @@ _data = {
 &"new_animation": SubResource("Animation_oufcy")
 }
 
-[sub_resource type="LabelSettings" id="LabelSettings_yude8"]
-font_size = 42
+[sub_resource type="Gradient" id="Gradient_jbven"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qmete"]
+gradient = SubResource("Gradient_jbven")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ka1j2"]
+font = ExtResource("4_oufcy")
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t16pp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [sub_resource type="LabelSettings" id="LabelSettings_oufcy"]
+font = ExtResource("4_oufcy")
 font_size = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_jbven"]
-font_size = 32
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Settings" type="Panel"]
 anchors_preset = 8
@@ -104,16 +130,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -222.0
-offset_top = -307.0
-offset_right = 222.0
-offset_bottom = 307.0
+offset_left = -664.0
+offset_top = -416.0
+offset_right = 664.0
+offset_bottom = 416.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
 script = ExtResource("1_36pg8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(150, -14)
 scale = Vector2(0.138889, 0.0421238)
 sprite_frames = SubResource("SpriteFrames_oufcy")
@@ -124,16 +151,25 @@ libraries = {
 &"": SubResource("AnimationLibrary_jbven")
 }
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="."]
+clip_children = 2
+layout_mode = 0
+offset_right = 1328.0
+offset_bottom = 832.0
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_qmete")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
 modulate = Color(0.277528, 0.277528, 0.277528, 1)
 layout_mode = 0
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 441.0
-offset_bottom = 611.0
+offset_left = -62.0
+offset_top = -18.0
+offset_right = 1328.0
+offset_bottom = 845.0
 mouse_filter = 2
 texture = ExtResource("2_cpgv8")
-expand_mode = 1
+expand_mode = 2
 
 [node name="Label" type="Label" parent="."]
 z_index = 1
@@ -147,7 +183,7 @@ offset_right = 154.0
 offset_bottom = 66.0
 grow_horizontal = 2
 text = "Settings"
-label_settings = SubResource("LabelSettings_yude8")
+label_settings = SubResource("LabelSettings_ka1j2")
 horizontal_alignment = 1
 
 [node name="Button2" type="Button" parent="."]
@@ -161,34 +197,37 @@ offset_top = 5.0
 offset_right = -5.0
 offset_bottom = 61.0
 grow_horizontal = 0
-theme_override_font_sizes/font_size = 28
-text = "X"
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_oufcy")
+theme_override_font_sizes/font_size = 32
+text = "Go Back"
 
 [node name="HSeparator" type="HSeparator" parent="."]
 z_index = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = 7.0
 offset_top = 66.0
-offset_right = 435.0
+offset_right = 1328.0
 offset_bottom = 74.0
-grow_horizontal = 2
 theme_override_constants/separation = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_direction = 3
-layout_mode = 0
-offset_left = 4.0
-offset_top = 87.0
-offset_right = 199.0
-offset_bottom = 432.0
-theme_override_constants/separation = 5
+[node name="Interactable" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="ResolutionOptionButton" type="OptionButton" parent="VBoxContainer"]
+[node name="ResolutionOptionButton" type="OptionButton" parent="Interactable"]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
-layout_mode = 2
-theme_override_font_sizes/font_size = 26
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 87.0
+offset_right = 1324.0
+offset_bottom = 132.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_oufcy")
+theme_override_font_sizes/font_size = 32
 selected = 2
 item_count = 4
 popup/item_0/text = "1920x1080"
@@ -200,52 +239,81 @@ popup/item_2/id = 2
 popup/item_3/text = "640x360"
 popup/item_3/id = 3
 
-[node name="FullscreenCheckBox" type="CheckBox" parent="VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="Interactable"]
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 137.0
+offset_right = 1153.0
+offset_bottom = 161.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
+
+[node name="FullscreenCheckBox" type="CheckBox" parent="Interactable/PanelContainer"]
 z_index = 1
-custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="Interactable"]
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 178.0
+offset_right = 1153.0
+offset_bottom = 202.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
+
+[node name="VSyncCheckBox" type="CheckBox" parent="Interactable/PanelContainer2"]
+z_index = 1
 layout_direction = 2
 layout_mode = 2
 
-[node name="VSyncCheckBox" type="CheckBox" parent="VBoxContainer"]
+[node name="SFXSlider" type="HSlider" parent="Interactable"]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
-layout_mode = 2
-
-[node name="SFXSlider" type="HSlider" parent="VBoxContainer"]
-z_index = 1
-custom_minimum_size = Vector2(0, 45)
-layout_direction = 2
-layout_mode = 2
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 237.0
+offset_right = 1324.0
+offset_bottom = 282.0
 max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="BGMSlider" type="HSlider" parent="VBoxContainer"]
+[node name="BGMSlider" type="HSlider" parent="Interactable"]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
-layout_mode = 2
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 287.0
+offset_right = 1324.0
+offset_bottom = 332.0
 max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="FOVSlider" type="HSlider" parent="VBoxContainer"]
+[node name="FOVSlider" type="HSlider" parent="Interactable"]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
-layout_mode = 2
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 337.0
+offset_right = 1324.0
+offset_bottom = 382.0
 min_value = 30.0
 max_value = 150.0
 value = 75.0
 script = ExtResource("2_007d3")
 fov = true
 
-[node name="SensitivitySlider" type="HSlider" parent="VBoxContainer"]
+[node name="SensitivitySlider" type="HSlider" parent="Interactable"]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
-layout_mode = 2
+layout_mode = 0
+offset_left = 1129.0
+offset_top = 387.0
+offset_right = 1324.0
+offset_bottom = 432.0
 min_value = 5.0
 max_value = 30.0
 step = 0.5
@@ -253,58 +321,111 @@ value = 10.0
 script = ExtResource("2_007d3")
 sensitivity = true
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="PanelContainer3" type="PanelContainer" parent="Interactable"]
 layout_mode = 0
+offset_left = 551.0
+offset_top = 495.0
+offset_right = 575.0
+offset_bottom = 519.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
+
+[node name="special debug lap 2 checkbox" type="CheckBox" parent="Interactable/PanelContainer3"]
+z_index = 1
+layout_mode = 2
+script = ExtResource("6_jbven")
+
+[node name="Labels" type="Control" parent="."]
+anchors_preset = 0
 offset_left = 4.0
 offset_top = 87.0
 offset_right = 219.0
-offset_bottom = 432.0
-theme_override_constants/separation = 5
+offset_bottom = 87.0
 
-[node name="Resolution" type="Label" parent="VBoxContainer2"]
+[node name="Resolution" type="Label" parent="Labels"]
 z_index = 1
 custom_minimum_size = Vector2(0, 26)
-layout_mode = 2
+layout_mode = 0
+offset_right = 215.0
+offset_bottom = 45.0
 text = "Resolution"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="Fullscreen" type="Label" parent="VBoxContainer2"]
+[node name="Fullscreen" type="Label" parent="Labels"]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
-layout_mode = 2
+layout_mode = 0
+offset_top = 50.0
+offset_right = 215.0
+offset_bottom = 95.0
 text = "Fullscreen"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="VSync" type="Label" parent="VBoxContainer2"]
+[node name="VSync" type="Label" parent="Labels"]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
-layout_mode = 2
+layout_mode = 0
+offset_top = 100.0
+offset_right = 215.0
+offset_bottom = 145.0
 text = "VSync"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="SFX Volume" type="Label" parent="VBoxContainer2"]
+[node name="SFX Volume" type="Label" parent="Labels"]
 z_index = 1
-layout_mode = 2
+layout_mode = 0
+offset_top = 150.0
+offset_right = 215.0
+offset_bottom = 195.0
 text = "SFX Volume"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="BGM Volume" type="Label" parent="VBoxContainer2"]
+[node name="BGM Volume" type="Label" parent="Labels"]
 z_index = 1
-layout_mode = 2
+layout_mode = 0
+offset_top = 200.0
+offset_right = 215.0
+offset_bottom = 245.0
 text = "BGM Volume"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="FOV" type="Label" parent="VBoxContainer2"]
+[node name="FOV" type="Label" parent="Labels"]
 z_index = 1
-layout_mode = 2
+layout_mode = 0
+offset_top = 250.0
+offset_right = 215.0
+offset_bottom = 295.0
 text = "FOV: 75"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="Sensitivity" type="Label" parent="VBoxContainer2"]
+[node name="Sensitivity" type="Label" parent="Labels"]
 z_index = 1
-layout_mode = 2
+layout_mode = 0
+offset_top = 300.0
+offset_right = 215.0
+offset_bottom = 345.0
 text = "Sensitivity: 10"
-label_settings = SubResource("LabelSettings_jbven")
+label_settings = SubResource("LabelSettings_oufcy")
+
+[node name="Lap 2" type="Label" parent="Labels"]
+z_index = 1
+layout_mode = 0
+offset_left = 72.0
+offset_top = 405.0
+offset_right = 934.0
+offset_bottom = 472.0
+text = "SPECIAL DEBUG OPTION: LAP 2"
+label_settings = SubResource("LabelSettings_oufcy")
+
+[node name="Sensitivity2" type="Label" parent="Labels"]
+z_index = 1
+layout_mode = 0
+offset_left = 382.0
+offset_top = 506.0
+offset_right = 1244.0
+offset_bottom = 573.0
+text = "note: this menu is wip as hell
+gonna change it soon but i wanted to get the demo out sooner"
+label_settings = SubResource("LabelSettings_oufcy")
 
 [node name="reset high score" type="Button" parent="."]
 z_index = 1

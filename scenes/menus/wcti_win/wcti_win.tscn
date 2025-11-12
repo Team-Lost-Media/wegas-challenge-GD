@@ -120,6 +120,11 @@ layout_mode = 2
 text = "press space to go to menu"
 label_settings = SubResource("LabelSettings_6ogbe")
 
+[node name="SPECIAL DEBUG THING DISYABLE THIS PLEASE" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "(also you can turn on lap 2 in settings)"
+label_settings = SubResource("LabelSettings_6ogbe")
+
 [node name="seperator" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
@@ -137,8 +142,8 @@ label_settings = SubResource("LabelSettings_svv80")
 layout_mode = 2
 text = "
 
-wr: 14482
-holder: somerandomguy21"
+wr: 
+holder: "
 label_settings = SubResource("LabelSettings_kqcem")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -3,8 +3,8 @@ extends HSlider
 @export var fov: bool
 @export var sensitivity: bool
 
-@onready var fov_label: Label = $"../../VBoxContainer2/FOV"
-@onready var sensitivity_label: Label = $"../../VBoxContainer2/Sensitivity"
+@onready var fov_label: Label = $"../../Labels/FOV"
+@onready var sensitivity_label: Label = $"../../Labels/Sensitivity"
 
 func _physics_process(delta: float) -> void:
 	if fov:

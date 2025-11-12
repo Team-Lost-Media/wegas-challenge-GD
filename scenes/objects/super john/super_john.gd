@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 					just_got_hit.start()
 					Engine.time_scale = 1.0
 					velocity = -velocity * 1.5
-					Global.points += 300
+					Global.points += 200
 					Global.style = "+DENIED"
 					print("DENIED")
 					StyleSFX.play_style_sfx()
