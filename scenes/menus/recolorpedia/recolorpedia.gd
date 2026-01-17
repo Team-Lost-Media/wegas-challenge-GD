@@ -41,12 +41,12 @@ extends Control
 @onready var style6_description: RichTextLabel = $"Control/Style Bonuses/TextureRect6/Description"
 
 var char_to_entry_path_dict = {
-	"Wega" = "res://scenes/menus/recolorpedia/text/wega.txt",
-	"Rorys" = "res://scenes/menus/recolorpedia/text/rorys.txt",
-	"Maltigi" = "res://scenes/menus/recolorpedia/text/maltigi.txt",
-	"Ultra Irios" = "res://scenes/menus/recolorpedia/text/ultra irios.txt",
-	"Super John" = "res://scenes/menus/recolorpedia/text/super john.txt",
-	"Shoe Bench" = "res://scenes/menus/recolorpedia/text/shoe bench.txt",
+	"Wega" = "res://text/recolorpedia/wega.txt",
+	"Rorys" = "res://text/recolorpedia/rorys.txt",
+	"Maltigi" = "res://text/recolorpedia/maltigi.txt",
+	"Ultra Irios" = "res://text/recolorpedia/ultra irios.txt",
+	"Super John" = "res://text/recolorpedia/super john.txt",
+	"Shoe Bench" = "res://text/recolorpedia/shoe bench.txt",
 }
 
 signal go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK
@@ -93,7 +93,7 @@ func _input(event: InputEvent) -> void:
 	recolorpedia.position.y = clampf(recolorpedia.position.y, -1000, 0)
 
 func _ready() -> void:
-	set_recolorpedia_to_entry_file("res://scenes/menus/recolorpedia/text/wega.txt")
+	set_recolorpedia_to_entry_file("res://text/recolorpedia/wega.txt")
 
 func set_recolorpedia_to_entry_file(entry_filepath: String) -> void:
 	#region look at the function name

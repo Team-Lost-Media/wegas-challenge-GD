@@ -1,0 +1,24 @@
+Super John
+Origin: The Super John games
+Super John gradually accelerates towards you, with a speedometer above his head. If he's fast enough (indicated by the speedometer text becoming red and the Super John Orange Line appearing), he can hit you, knocking you away and dealing 20 damage. If he knocks you away, Golden Sigma will NOT save you! [br] [br]Once he's at the speed treshold, the Super John Orange Line will appear, showing the direction he's headed in.
+Rorys is actually more beneficial than he seems: his explosion when punched is extremely useful, so learning how to best make use of it is essential to "mastering" him. [br] [br]Keep in mind that the direction of the boost his explosion gives you is based off of where you're pointing the camera. More specifically, it'll send you in the OPPOSITE direction of your camera.
+* His ability (taken from WC:TI) is based off of the original Golden Sigma GIF from where he originates from, where he's overlayed on top of Friend shaking and changing size. [br] [br]* "Is his name Rorys or Rory?" The answer is both. [br] [br]* The explosion sound and animation he uses are the same as Deltarune's. [br] [br]* He wants to kill Friend. [br] [br]* He is the main antagonist of the Super Golden Sigma games.
+I'm going to be frank with you: I think WC:TI's lap 2 is very flawed. Ultra Irios is an interesting sidegrade to Wega, but Golden Rorys is annoying more than anything and Fried Maltigi is just a souped up Maltigi. My main issue with it is Golden Rorys: a powered up version of Rorys that makes him chase after you like Wega after spawning, often closing in on you with no way to avoid besides tanking the distraction that is often guaranteed to kill you. He isn't fun to deal with, isn't enjoyable to juke, and is generally just a very uninspired enemy. Rorys, but stronger. [br][br]Later, during development of THE IDOL, I realized: this isn't a WC:TI clone. And I don't want it to be. WC:TI is a great game, but I don't want WEGAKILL to just be seen as a WC:TI fangame: I want it to be a WEGA game, not a WC:TI one. So, I decided to not just make THE IDOL "wcti but with wegakill movement", but to make it my own take on WC:TI, using WEGAKILL. This is what led to the Rorys Explosion, which is now one of my favourite parts of the game. And, later on, while developing Lap 2, I followed the same philosophy: not to make a WC:TI clone, but to make a mode inspired by my favourite parts of it. So, when I had the option to replace my least favourite parts of Lap 2 with my own ideas, I took it. This is what led to Super John. [br][br]Despite deciding to make new enemies for Lap 2, I struggled figuring out a suitable mechanic for one. (In fact, I struggled trying to think of a 3rd Lap 2 enemy for a while before settling on just Ultra Irios and Super John. I considered Fried Maltigi, but I found him to be too hard and inconsistent to dodge; it often felt like you were gambling, hoping he wouldn't hit you.) In the end, I decided to make Super John home into the player and shove them aside if he hits, an ability based off of his ramming move in Super John 2, and an ability I'm personally very proud of. [br][br]super john bowling
++EXPLODED
+400
+Explode Rorys by punching him. [br]Also stuns Rorys and gives you momentum.
++FUCK YOU RORYS
+600
+Collect the Wegadoll Rorys is blocking without hitting or getting hit by Rorys. [br]This IS possible. Good luck.
+///
+.
+.
+///
+.
+.
+///
+.
+.
+///
+.
+.

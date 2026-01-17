@@ -31,6 +31,7 @@ extends CharacterBody3D
 @onready var particles: CPUParticles3D = $Particles
 @onready var punch_sfx: AudioStreamPlayer = $AudioStreamPlayer
 @onready var speed_label: Label3D = $"Speed Label"
+@onready var punchable_indicator: Sprite3D = $"punchable indicator"
 
 var enabled = false
 var punchable = false
@@ -90,6 +91,8 @@ func _process(delta: float) -> void:
 			sprite.play("default")
 		
 		speed_label.text = str(snappedf(velocity.length(), 0.1))
+		
+		punchable_indicator.visible = punchable and velocity.length() >= minimum_push_speed
 		
 		move_and_slide()
 

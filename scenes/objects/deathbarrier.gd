@@ -37,6 +37,7 @@ func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
 	body.velocity.y = 50
 	texture_rect.modulate = Color.WHITE
 	audio_stream_player.play()
+	#Achievements.award("thnak you.")
 	var tween = create_tween()
 	tween.tween_property(texture_rect, "modulate", Color.TRANSPARENT, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	#note: DONT MAKE THIS USE collision.disabled!!!!!!!!!!!!!!!!! collision.disabled IS BROKEN!!!!! I DONT KNOW WHY BUT IT DOESNT DO ANYTHING JUST USE THIS INSTEAD

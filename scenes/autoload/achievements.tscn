@@ -1,0 +1,189 @@
+[gd_scene load_steps=16 format=3 uid="uid://csinyb322p1fv"]
+
+[ext_resource type="Script" uid="uid://qamcchwnyeji" path="res://scenes/autoload/achievements.gd" id="1_ca4jy"]
+[ext_resource type="Texture2D" uid="uid://ohy868mffp8k" path="res://assets/textures/MusicClipmask.png" id="2_r4lde"]
+[ext_resource type="Texture2D" uid="uid://ba21qkbob8m4v" path="res://assets/textures/achievements/placeholder.png" id="3_rxuod"]
+[ext_resource type="Shader" uid="uid://d3yhtkt4tafka" path="res://assets/other/scrolling line bg.gdshader" id="4_i1qok"]
+[ext_resource type="Texture2D" uid="uid://crwldbtpbhuiu" path="res://assets/textures/squaresloop.png" id="5_kut8r"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_gnch5"]
+
+[sub_resource type="Animation" id="Animation_tqm77"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(2000, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_7osof"]
+resource_name = "achievement"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 2),
+"points": PackedFloat32Array(1920, -0.25, 0, 0.2, -1184, 1080, -0.19999999, -85.333374, 0, 0, 1080, 0, 0, 0.46, 0, 2176.5334, -0.26666665, -460.44446, 0, 0),
+"times": PackedFloat32Array(0, 0.6, 3, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b5y1y"]
+_data = {
+&"RESET": SubResource("Animation_tqm77"),
+&"achievement": SubResource("Animation_7osof")
+}
+
+[sub_resource type="Gradient" id="Gradient_cyt3r"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.6333332, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f8hjj"]
+gradient = SubResource("Gradient_cyt3r")
+fill_to = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ddyyt"]
+shader = ExtResource("4_i1qok")
+shader_parameter/color_one = Color(0.072, 0, 0.18, 0.168627)
+shader_parameter/color_two = Color(0.0341667, 0, 0.05, 0.478431)
+shader_parameter/angle = -60.0
+shader_parameter/line_count = 20.0
+shader_parameter/speed = 2.0
+shader_parameter/blur = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mvkjw"]
+shader = ExtResource("4_i1qok")
+shader_parameter/color_one = Color(0.05, 0.05, 0.05, 1)
+shader_parameter/color_two = Color(0, 0, 0, 1)
+shader_parameter/angle = 45.0
+shader_parameter/line_count = 20.0
+shader_parameter/speed = 2.0
+shader_parameter/blur = 0.0
+
+[sub_resource type="Gradient" id="Gradient_14aot"]
+colors = PackedColorArray(0.393333, 0, 0.59, 1, 0.69, 0, 0.9, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1qjqg"]
+gradient = SubResource("Gradient_14aot")
+width = 128
+height = 96
+fill_to = Vector2(1, 0.417508)
+
+[node name="Achievements" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ca4jy")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+clip_children = 2
+z_index = 3620
+layout_mode = 0
+offset_left = 2000.0
+offset_top = 895.0
+offset_right = 3164.0073
+offset_bottom = 1080.0
+texture = ExtResource("2_r4lde")
+stretch_mode = 4
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_b5y1y")
+}
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+z_index = 1
+layout_mode = 0
+offset_left = 691.0
+offset_top = 29.0
+offset_right = 819.0
+offset_bottom = 157.0
+texture = ExtResource("3_rxuod")
+
+[node name="Border" type="TextureRect" parent="TextureRect/TextureRect"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 132.0
+offset_bottom = 132.0
+texture = SubResource("GradientTexture2D_f8hjj")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect/Border"]
+material = SubResource("ShaderMaterial_ddyyt")
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+texture = ExtResource("5_kut8r")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect"]
+material = SubResource("ShaderMaterial_mvkjw")
+layout_mode = 0
+offset_left = -27.0
+offset_top = -32.0
+offset_right = 1074.0
+offset_bottom = 252.0
+texture = ExtResource("5_kut8r")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 6.0
+offset_right = 1149.0
+offset_bottom = 102.0
+texture = SubResource("GradientTexture2D_1qjqg")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect2"]
+material = SubResource("ShaderMaterial_ddyyt")
+layout_mode = 0
+offset_right = 852.0
+offset_bottom = 96.0
+texture = ExtResource("5_kut8r")
+
+[node name="MARKER GO HIDE THIS HIDE HIDE IDE HIDE HIDE HIDEH DIEHOUFNUAGSDFA" type="TextureRect" parent="TextureRect/TextureRect2"]
+modulate = Color(0, 0, 0, 0.5921569)
+layout_mode = 0
+offset_left = 681.0
+offset_right = 1533.0
+offset_bottom = 96.0
+texture = ExtResource("5_kut8r")
+
+[node name="achievement get" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 12.0
+offset_right = 675.0
+offset_bottom = 98.0
+theme_override_constants/outline_size = 35
+theme_override_fonts/normal_font = ExtResource("6_gnch5")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "ACHIEVEMENT!"
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="name" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 111.0
+offset_right = 658.0
+offset_bottom = 197.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_gnch5")
+theme_override_font_sizes/normal_font_size = 30
+text = "fell for it again award"
+horizontal_alignment = 2
+vertical_alignment = 1

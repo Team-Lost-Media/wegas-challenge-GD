@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Wegas Challenge: WEGAKILL"
-config/description="wega's challenge but with more stuff, this is based off of a port of wega's challenge to godot made by xetheon"
+config/name="Wega's Challenge: WEGAKILL"
+config/description="wega's challenge but with jumping, dashing and STYLE
+based off of wegas-challenge-gd by xetheon"
 config/version="1.0"
 config/tags=PackedStringArray("random\'s_main_project", "shitpost", "wega")
 run/main_scene="res://scenes/menus/main/mainMenu.tscn"
@@ -22,10 +23,11 @@ config/icon="uid://bei5enh7oagrt"
 
 SettingsHandler="*res://scenes/autoload/SettingsHandler.gd"
 GameManager="*res://scenes/autoload/GameManager.gd"
-Global="*res://scenes/autoload/global.gd"
 Save="*res://scenes/autoload/save.gd"
+Global="*res://scenes/autoload/global.gd"
 StyleSFX="*res://scenes/autoload/style sfx.tscn"
 SongCredits="*res://scenes/autoload/song credits.tscn"
+Achievements="*res://scenes/autoload/achievements.tscn"
 
 [debug_draw_3d]
 
@@ -70,7 +72,6 @@ folder_colors={
 "res://scenes/menus/credits/": "red",
 "res://scenes/menus/gameover/": "orange",
 "res://scenes/menus/recolorpedia/": "green",
-"res://scenes/menus/recolorpedia/text/": "red",
 "res://scenes/menus/wcti_gameover/": "teal",
 "res://scenes/menus/wcti_win/": "blue",
 "res://scenes/menus/win/": "purple",
@@ -83,7 +84,8 @@ folder_colors={
 "res://scenes/objects/ultra irios/": "blue",
 "res://scenes/objects/urio/": "purple",
 "res://scenes/objects/wega/": "pink",
-"res://scenes/objects/wegadoll/": "gray"
+"res://scenes/objects/wegadoll/": "gray",
+"res://text/": "gray"
 }
 
 [input]

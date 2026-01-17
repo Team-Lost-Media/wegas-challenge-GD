@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://5fyklqfajuef"]
+[gd_scene load_steps=17 format=3 uid="uid://5fyklqfajuef"]
 
 [ext_resource type="Script" uid="uid://cpflohj6r70us" path="res://scenes/objects/super john/super_john.gd" id="1_fhbc6"]
+[ext_resource type="Texture2D" uid="uid://b88xh2xnkblfl" path="res://assets/textures/punchable.png" id="2_c084g"]
 [ext_resource type="Texture2D" uid="uid://daxy2g8buut62" path="res://assets/textures/super john.png" id="2_odear"]
 [ext_resource type="Texture2D" uid="uid://bbwe6npxmker8" path="res://assets/textures/super john dash upscaled.png" id="2_v2ata"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_odear"]
@@ -71,6 +72,13 @@ size = Vector3(0.2, 0.2, 0.2)
 
 [node name="SuperJohn" type="CharacterBody3D"]
 script = ExtResource("1_fhbc6")
+
+[node name="punchable indicator" type="Sprite3D" parent="."]
+transform = Transform3D(1, -5.8042815e-10, 5.820766e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.0020247025, 1.5986884, -0.0011613148)
+billboard = 1
+texture_filter = 2
+render_priority = 1
+texture = ExtResource("2_c084g")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.0033

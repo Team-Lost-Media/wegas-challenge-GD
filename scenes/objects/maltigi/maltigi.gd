@@ -37,7 +37,7 @@ var target_position: Vector3
 var delta_but_the_one_i_used_in_the_dash_function: float
 
 func _ready() -> void:
-	DebugDraw3D.new_scoped_config().set_thickness(0.01)
+	DebugDraw3D.new_scoped_config().set_thickness(0.1)
 	if enable_manually == false:
 		start_timer.start(time_to_enable)
 

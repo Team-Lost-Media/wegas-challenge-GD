@@ -1,0 +1,95 @@
+[gd_scene load_steps=5 format=3 uid="uid://24cdojk8liul"]
+
+[ext_resource type="Script" uid="uid://wcaubw3eaijm" path="res://scenes/menus/save error/save_error_menu.gd" id="1_lleid"]
+[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_vv3lg"]
+[ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="3_li1nm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v256l"]
+font_size = 32
+
+[node name="SaveErrorMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lleid")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.35, 0.35, 0.35, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vv3lg")
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("3_li1nm")
+bbcode_enabled = true
+text = "[font_size=128][center][br][wave amp=100]whoops![/wave][br][br][font_size=64]your save is incompatible with this game version!
+this is normal if you're going from 1 version to the next
+
+as such, to continue, you must [color=fff000]reset your save.[color=666666]
+[font_size=32](this will make your save incompatible with previous versions)"
+
+[node name="ResetButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.905
+anchor_right = 0.3
+anchor_bottom = 0.905
+offset_left = -373.64532
+offset_top = -104.60004
+offset_right = 373.64526
+offset_bottom = 73.60004
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "update my save"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7
+anchor_top = 0.905
+anchor_right = 0.7
+anchor_bottom = 0.905
+offset_left = -373.64532
+offset_top = -104.60004
+offset_right = 373.64526
+offset_bottom = 73.60004
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "you will never take my save
+ "
+
+[node name="Label" type="Label" parent="QuitButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = 3.1000366
+offset_right = 255.99997
+offset_bottom = 48.100037
+grow_horizontal = 2
+grow_vertical = 2
+text = "(quit the game without resetting)"
+label_settings = SubResource("LabelSettings_v256l")
+
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
