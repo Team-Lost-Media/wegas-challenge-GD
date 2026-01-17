@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		sfx.play()
 		Global.wegadolls_left = group_of_wegas.get_child_count()
 	wegasleft = group_of_wegas.get_child_count()
-	label.text = "wegas left: %s" % wegasleft
+	label.text = "--" + str(wegasleft) + "--"
 	if wegasleft == 0:
 		#get_tree().change_scene_to_file("res://scenes/levels/main/main2.tscn") #go to main2
 		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win

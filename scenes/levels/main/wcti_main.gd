@@ -99,13 +99,13 @@ func _process(delta: float) -> void:
 			sfx.play()
 			Global.wegadolls_left = group_of_wegas.get_child_count()
 		wegasleft = group_of_wegas.get_child_count()
-		label.text = "wegas left: %s" % wegasleft
+		label.text = "--" + str(wegasleft) + "--"
 	elif lap == 2:
 		if wegasleft != group_of_wegas_TWO.get_child_count():
 			sfx.play()
 			Global.wegadolls_left = group_of_wegas_TWO.get_child_count()
 		wegasleft = group_of_wegas_TWO.get_child_count()
-		label.text = "wegas left: %s" % wegasleft
+		label.text = "--" + str(wegasleft) + "--"
 	
 	if wegasleft <= 150  and lap == 1:
 		if rorys_started == false:

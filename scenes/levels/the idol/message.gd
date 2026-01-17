@@ -1,6 +1,7 @@
 extends Label
 
 @onready var display_timer: Timer = $DisplayTimer
+@onready var wegasleftlabel: Label = $"../Label"
 
 var fadeout: bool = false
 
@@ -13,10 +14,18 @@ func say(message: String, duration: float = 1.0) -> void:
 	modulate = Color.WHITE
 	fadeout = false
 	display_timer.start(duration)
+	wegasleftlabel.hide()
 
 func _process(delta: float) -> void:
 	if fadeout == true:
 		modulate = modulate.lerp(Color.TRANSPARENT, clamp(2 * delta, 0.0, 1.0))
+	
+	if modulate.a < 0.2 and wegasleftlabel.visible == false:
+		wegasleftlabel.modulate.a = 0
+		wegasleftlabel.show()
+		var tween = create_tween()
+		tween.tween_property(wegasleftlabel, "modulate:a", 1, 2)
+	
 	#if modulate.is_equal_approx(Color.TRANSPARENT):
 	#	fadeout = false
 

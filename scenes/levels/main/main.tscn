@@ -465,12 +465,20 @@ script = ExtResource("1_g51f3")
 [node name="GUI" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="GUI"]
-offset_left = 4.0
-offset_right = 292.0
-offset_bottom = 37.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = 369.0
+offset_right = 288.0
+offset_bottom = 442.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "wegas left: "
 label_settings = SubResource("LabelSettings_t52ot")
-metadata/_edit_use_anchors_ = true
+horizontal_alignment = 1
 
 [node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_o8krw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)

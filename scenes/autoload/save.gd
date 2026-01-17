@@ -5,34 +5,40 @@ const WCTI_SAVE_SCORE_FILE_PATH = "user://wegakill - the idol highscore.sav"
 const SAVE_ACHIEVEMENTS_FILE_PATH = "user://wegakill - achievements.sav"
 
 func save_score(score):
-	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
-	file.store_string(str(score))
+	pass
+	#var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	#file.store_string(str(score))
 
 func load_score():
-	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.READ)
-	var score: int
-	if file != null:
-		score = int(file.get_as_text())
-	return score
+	return 0
+	#var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.READ)
+	#var score: int
+	#if file != null:
+	#	score = int(file.get_as_text())
+	#return score
 
 func reset_score():
-	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
-	file.store_string(str(0))
+	pass
+	#var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	#file.store_string(str(0))
 
 func save_wcti_score(score):
-	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
-	file.store_string(str(score))
+	pass
+	#var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	#file.store_string(str(score))
 
 func load_wcti_score():
-	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.READ)
-	var score: int
-	if file != null:
-		score = int(file.get_as_text())
-	return score
+	return 0
+	#var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.READ)
+	#var score: int
+	#if file != null:
+	#	score = int(file.get_as_text())
+	#return score
 
 func reset_wcti_score():
-	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
-	file.store_string(str(0))
+	pass
+	#var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
+	#file.store_string(str(0))
 
 var achievements_dict: Dictionary = {
 	"winga": false, #beat classic mode
@@ -55,14 +61,16 @@ var achievements_dict: Dictionary = {
 }
 
 func save_achievements():
-	var file = FileAccess.open(SAVE_ACHIEVEMENTS_FILE_PATH, FileAccess.WRITE)
-	var json_string = JSON.stringify(achievements_dict)
+	pass
+	#var file = FileAccess.open(SAVE_ACHIEVEMENTS_FILE_PATH, FileAccess.WRITE)
+	#var json_string = JSON.stringify(achievements_dict)
 
 func load_achievements():
-	var file = FileAccess.open(SAVE_ACHIEVEMENTS_FILE_PATH, FileAccess.READ)
-	var contents = file.get_as_text()
-	print(JSON.parse_string(contents))
-	return JSON.parse_string(contents)
+	pass
+	#var file = FileAccess.open(SAVE_ACHIEVEMENTS_FILE_PATH, FileAccess.READ)
+	#var contents = file.get_as_text()
+	#print(JSON.parse_string(contents))
+	#return JSON.parse_string(contents)
 
 
 '''

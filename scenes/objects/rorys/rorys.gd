@@ -23,6 +23,7 @@ extends AnimatedSprite3D
 @onready var rory: Sprite2D = $rory
 @onready var piss_off_timer: Timer = $PissOffTimer
 @onready var death_area: Area3D = $DeathArea3D
+@onready var punchable_indicator: Sprite3D = $"punchable indicator"
 
 var enabled = false
 var punchable = false 
@@ -69,6 +70,8 @@ func _process(delta: float) -> void:
 	else:
 		rory.hide()
 		piss_off_sfx.stop()
+	
+	punchable_indicator.visible = punchable
 var frame_timer: int
 var rng = RandomNumberGenerator.new()
 

@@ -46,6 +46,7 @@ var char_to_entry_path_dict = {
 	"Maltigi" = "res://scenes/menus/recolorpedia/text/maltigi.txt",
 	"Ultra Irios" = "res://scenes/menus/recolorpedia/text/ultra irios.txt",
 	"Super John" = "res://scenes/menus/recolorpedia/text/super john.txt",
+	"Shoe Bench" = "res://scenes/menus/recolorpedia/text/shoe bench.txt",
 }
 
 signal go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK
@@ -95,6 +96,7 @@ func _ready() -> void:
 	set_recolorpedia_to_entry_file("res://scenes/menus/recolorpedia/text/wega.txt")
 
 func set_recolorpedia_to_entry_file(entry_filepath: String) -> void:
+	#region look at the function name
 	var file = get_file_as_string(entry_filepath)
 	var entry_text = file.split("\n")
 	name_text.text = entry_text.get(0).replace("[br]", "\n")
@@ -148,6 +150,8 @@ func set_recolorpedia_to_entry_file(entry_filepath: String) -> void:
 		style6.hide()
 	else:
 		style6.show()
+	#endregion
+	#endregion
 
 func get_file_as_string(file_to_load: String):
 	var file = FileAccess.open(file_to_load, FileAccess.READ)

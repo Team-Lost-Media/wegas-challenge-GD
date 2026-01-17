@@ -1,9 +1,10 @@
-[gd_scene load_steps=49 format=3 uid="uid://ros1h8daiee"]
+[gd_scene load_steps=50 format=3 uid="uid://ros1h8daiee"]
 
 [ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="1_pabep"]
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
 [ext_resource type="Texture2D" uid="uid://d1t21utirnpcc" path="res://assets/textures/spritesheetboom.png" id="2_sf834"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="3_oyc7v"]
+[ext_resource type="Texture2D" uid="uid://b88xh2xnkblfl" path="res://assets/textures/punchable.png" id="4_pabep"]
 [ext_resource type="AudioStream" uid="uid://03fbe2ya4f4i" path="res://assets/SFX/rory being an asshole.ogg" id="5_aoh5m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aoh5m"]
@@ -310,12 +311,21 @@ transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999
 billboard = 1
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_avj1d")
+frame_progress = 0.62619656
 script = ExtResource("2_hipyo")
+
+[node name="punchable indicator" type="Sprite3D" parent="."]
+transform = Transform3D(1, -5.8042815e-10, 5.820766e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.0020247025, 1.5986884, -0.0011613148)
+billboard = 1
+texture_filter = 2
+render_priority = 1
+texture = ExtResource("4_pabep")
 
 [node name="DeathArea3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
+visible = false
 shape = SubResource("CylinderShape3D_sf834")
 
 [node name="FuckYouArea3D" type="Area3D" parent="."]
@@ -332,7 +342,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976
 shape = SubResource("CapsuleShape3D_sf834")
 
 [node name="PissOffTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 4.0
 one_shot = true
 
 [node name="StayStillTimer" type="Timer" parent="."]

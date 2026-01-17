@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b6tdk2e5p381g"]
+[gd_scene load_steps=23 format=3 uid="uid://b6tdk2e5p381g"]
 
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="1_hi77o"]
 [ext_resource type="Script" uid="uid://shl1y2yctker" path="res://scenes/menus/recolorpedia/recolorpedia.gd" id="1_op700"]
@@ -9,9 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="6_gvf1e"]
 [ext_resource type="Texture2D" uid="uid://oup3grqiq2k6" path="res://assets/textures/maltigi enemy.webp" id="7_1gu1p"]
 [ext_resource type="Texture2D" uid="uid://7o4npgo68ncp" path="res://assets/textures/ultra irios accurate.png" id="8_ffk7d"]
+[ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="8_l5cyt"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="9_4v2tg"]
 [ext_resource type="Texture2D" uid="uid://daxy2g8buut62" path="res://assets/textures/super john.png" id="9_hshvb"]
 [ext_resource type="Texture2D" uid="uid://n7i8h85wsg3w" path="res://assets/textures/recolorpedia/box7.png" id="11_op700"]
+[ext_resource type="Texture2D" uid="uid://dxqh170tb0juh" path="res://assets/textures/recolorpedia/box8.5.png" id="12_4v2tg"]
 [ext_resource type="Texture2D" uid="uid://b387uv10iqxtd" path="res://assets/textures/recolorpedia/box11.png" id="12_ffk7d"]
 [ext_resource type="Texture2D" uid="uid://0xwmt5f0dneo" path="res://assets/textures/recolorpedia/box8.png" id="13_gvf1e"]
 [ext_resource type="Texture2D" uid="uid://dwxq3y8hsoieh" path="res://assets/textures/recolorpedia/box9.png" id="14_1gu1p"]
@@ -221,6 +223,23 @@ grow_vertical = 2
 texture = ExtResource("9_hshvb")
 expand_mode = 1
 
+[node name="Shoe Bench" type="TextureRect" parent="Control/Portrait"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -96.0
+offset_right = 96.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_l5cyt")
+expand_mode = 1
+
 [node name="Name" type="RichTextLabel" parent="Control"]
 texture_filter = 1
 layout_mode = 1
@@ -312,8 +331,8 @@ offset_top = -23.0
 offset_right = -0.200012
 offset_bottom = 12.0
 grow_horizontal = 0
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 4
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -363,8 +382,8 @@ offset_top = -14.07
 offset_right = 4.23999
 offset_bottom = 8.89301
 grow_horizontal = 0
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 4
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -373,6 +392,7 @@ text = "Wega is constantly chasing you, and so he must be constantly kept track 
 On top of that, he also has varying tells on how close-by he is, such as the red/purple light he emits and the sound he constantly plays."
 
 [node name="Info" type="TextureRect" parent="Control"]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 1200.0
@@ -413,8 +433,8 @@ offset_top = -14.07
 offset_right = 6.23999
 offset_bottom = 3.75601
 grow_horizontal = 0
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 4
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -429,7 +449,7 @@ offset_left = 446.0
 offset_top = 689.0
 offset_right = 1166.0
 offset_bottom = 1156.0
-texture = ExtResource("13_gvf1e")
+texture = ExtResource("12_4v2tg")
 flip_h = true
 
 [node name="Title" type="RichTextLabel" parent="Control/Dev Commentary"]
@@ -465,8 +485,8 @@ offset_top = -17.806
 offset_right = 7.12
 offset_bottom = 14.492
 grow_horizontal = 0
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 4
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -530,8 +550,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -552,12 +572,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 400
@@ -579,8 +599,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -612,8 +632,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -635,12 +655,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 200
@@ -662,8 +682,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -695,8 +715,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -717,12 +737,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 400
@@ -744,8 +764,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -777,8 +797,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -799,12 +819,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 1000
@@ -826,8 +846,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -858,8 +878,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -880,12 +900,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 1000
@@ -907,8 +927,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -939,8 +959,8 @@ offset_right = -51.058
 offset_bottom = 0.0499954
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 33
 bbcode_enabled = true
@@ -961,12 +981,12 @@ offset_right = -74.858
 offset_bottom = 7.95
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_fonts/italics_font = ExtResource("9_4v2tg")
-theme_override_font_sizes/italics_font_size = 17
 theme_override_font_sizes/normal_font_size = 33
+theme_override_font_sizes/italics_font_size = 17
 bbcode_enabled = true
 text = "[i]ADDS:[/i]
 1000
@@ -988,8 +1008,8 @@ offset_right = 16.6899
 offset_bottom = -0.0500031
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 16
 theme_override_constants/line_separation = 10
+theme_override_constants/outline_size = 16
 theme_override_fonts/normal_font = ExtResource("9_4v2tg")
 theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
@@ -1011,7 +1031,7 @@ color = Color(0, 0, 0, 1)
 [node name="Go Back" type="TextureButton" parent="Selector"]
 modulate = Color(1, 0, 0.345098, 1)
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -1.52588e-05
 offset_right = 356.0
 offset_bottom = 89.0
@@ -1019,7 +1039,7 @@ texture_normal = ExtResource("2_di5py")
 
 [node name="Wega Button" type="TextureButton" parent="Selector"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -72.0
 offset_top = 100.0
 offset_right = 334.0
@@ -1046,7 +1066,7 @@ horizontal_alignment = 2
 
 [node name="Rorys Button" type="TextureButton" parent="Selector"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -72.0
 offset_top = 200.0
 offset_right = 334.0
@@ -1073,7 +1093,7 @@ horizontal_alignment = 2
 
 [node name="Maltigi Button" type="TextureButton" parent="Selector"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -72.0
 offset_top = 300.0
 offset_right = 334.0
@@ -1100,7 +1120,7 @@ horizontal_alignment = 2
 
 [node name="Ultra Irios Button" type="TextureButton" parent="Selector"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -72.0
 offset_top = 400.0
 offset_right = 334.0
@@ -1127,7 +1147,7 @@ horizontal_alignment = 2
 
 [node name="Ultra Irios Button2" type="TextureButton" parent="Selector"]
 texture_filter = 1
-layout_mode = 2
+layout_mode = 0
 offset_left = -72.0
 offset_top = 500.0
 offset_right = 334.0
@@ -1149,6 +1169,33 @@ offset_right = -0.0160217
 grow_horizontal = 2
 grow_vertical = 2
 text = "Super John"
+label_settings = SubResource("LabelSettings_4v2tg")
+horizontal_alignment = 2
+
+[node name="Ultra Irios Button3" type="TextureButton" parent="Selector"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -72.0
+offset_top = 600.0
+offset_right = 334.0
+offset_bottom = 690.0
+texture_normal = ExtResource("14_hshvb")
+texture_hover = ExtResource("3_e7262")
+
+[node name="Label" type="Label" parent="Selector/Ultra Irios Button3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.177
+anchor_top = 0.289
+anchor_right = 0.936
+anchor_bottom = 0.7
+offset_left = 0.138
+offset_top = -0.0100002
+offset_right = -0.0160217
+grow_horizontal = 2
+grow_vertical = 2
+text = "Shoe Bench"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
