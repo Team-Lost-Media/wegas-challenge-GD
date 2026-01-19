@@ -105,6 +105,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if kill == true:
 			Global.died_to = "wega"
+			Global.player_died.emit()
 			get_tree().change_scene_to_file(death_scene)
 
 

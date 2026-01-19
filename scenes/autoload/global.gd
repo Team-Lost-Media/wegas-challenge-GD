@@ -12,7 +12,12 @@ var health: float
 var tutorial = false
 var timer_stopped = false
 
-var do_lap_2 = false
+var lap: int = 0
+var mode: String = "" #classic for CLASSIC, wcti for THE IDOL,
+
+var do_lap_2 = false #this is for the setting
+
+signal player_died
 
 #region end screen variables
 var time_as_string: String
@@ -62,6 +67,7 @@ func check_wegadoll_combo() -> void:
 			style = "+ULTRAWEGACOMBO"
 			points += 2500
 			StyleSFX.play_style_sfx(6)
+			Achievements.award("ULTRAWEGACOMBO")
 		else:
 			style = str("+WEGACOMBO ", wegadoll_combo, "X")
 			points += 9 * wegadoll_combo * max(1, wegadoll_combo / 40)

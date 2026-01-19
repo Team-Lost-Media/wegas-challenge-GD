@@ -36,6 +36,10 @@ func _ready() -> void:
 			Save.save_score(snapped(score, 1))
 			high_score_label.label_settings.font_color = Color(1, 0, 0)
 			high_score = true
+		
+		Achievements.award("winga")
+		if score > 10000:
+			Achievements.award("ultra winga")
 
 func _process(delta: float) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

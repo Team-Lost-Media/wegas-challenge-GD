@@ -11,6 +11,7 @@ extends Node3D
 func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
+	Global.mode = "classic"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
 	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")
@@ -23,6 +24,8 @@ func _process(delta: float) -> void:
 	label.text = "--" + str(wegasleft) + "--"
 	if wegasleft == 0:
 		#get_tree().change_scene_to_file("res://scenes/levels/main/main2.tscn") #go to main2
+		if Global.time_in_seconds < 40:
+			Achievements.award("Speedrunner")
 		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 		
 	

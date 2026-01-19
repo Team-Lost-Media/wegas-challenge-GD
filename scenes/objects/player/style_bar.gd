@@ -70,6 +70,7 @@ func style_meter(delta: float) -> void: #executed every frame
 		rank_bar.max_value = 2000
 		rank_bar.min_value = 1000
 		rank_bar.show()
+		Achievements.award("WEGAKILL")
 	elif style_meter_value >= 700: 
 		style_meter_rank = "SHOE BENCH"
 		rank_bar.max_value = 1000

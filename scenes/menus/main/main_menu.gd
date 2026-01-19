@@ -33,6 +33,7 @@ func _tutorial() -> void:
 func _settings() -> void:
 	settings.show()
 	buttons.hide()
+	crossfade(true)
 	settings.animation_player.stop()
 	settings.animation_player.play("new_animation")
 
@@ -40,17 +41,22 @@ func _recolorpedia() -> void:
 	recolorpedia.position = Vector2(0, 0)
 	position = Vector2(3000, 0)
 	crossfade(true)
+	Achievements.award("certified wega expert")
 
 func _exit_recolorpedia() -> void:
 	recolorpedia.position = Vector2(3000, 0)
 	position = Vector2(0, 0)
 	crossfade(false)
 
+func _achievements() -> void:
+	pass # Replace with function body.
+
 func _quit() -> void:
 	self.get_tree().quit()
 
-func _on_close_button() -> void:
+func _on_close_button() -> void: #settings
 	settings.hide()
+	crossfade(false)
 	buttons.show() 
 	
 @onready var bgm_no_drums: AudioStreamPlayer = $"No Drums"

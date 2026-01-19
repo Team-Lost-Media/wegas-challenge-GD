@@ -22,10 +22,15 @@ func _on_body_entered(body: Node3D) -> void:
 				i_will_save_you(body)
 			else:
 				Global.died_to = "fall"
+				Global.player_died.emit()
 				get_tree().change_scene_to_file(death_scene)
+				
 		else:
 			Global.died_to = "fall"
+			Global.player_died.emit()
+			await get_tree().process_frame
 			get_tree().change_scene_to_file(death_scene)
+			
 
 func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
 	if show_saves_left == false:
@@ -37,7 +42,7 @@ func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
 	body.velocity.y = 50
 	texture_rect.modulate = Color.WHITE
 	audio_stream_player.play()
-	#Achievements.award("thnak you.")
+	Achievements.award("thnak you.")
 	var tween = create_tween()
 	tween.tween_property(texture_rect, "modulate", Color.TRANSPARENT, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 	#note: DONT MAKE THIS USE collision.disabled!!!!!!!!!!!!!!!!! collision.disabled IS BROKEN!!!!! I DONT KNOW WHY BUT IT DOESNT DO ANYTHING JUST USE THIS INSTEAD

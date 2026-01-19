@@ -62,6 +62,7 @@ func _ready() -> void:
 	Global.style = "none"
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
+	Global.mode = "wcti"
 	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")
 	shoe_bench_timer.position.y += 600
 	wegafadence_bars = 0
@@ -94,6 +95,8 @@ var FUCK2: bool
 func _process(delta: float) -> void:
 	delta_but_the_one_i_used_for_the_transition_to_lap_2 = delta
 	
+	Global.lap = lap
+	
 	if lap == 1:
 		if wegasleft != group_of_wegas.get_child_count():
 			sfx.play()
@@ -110,7 +113,7 @@ func _process(delta: float) -> void:
 	if wegasleft <= 150  and lap == 1:
 		if rorys_started == false:
 			rorys.enabled = true
-			message.say("PUNCH RORYS", 2.0)
+			message.say("RORYS IS COMING", 2.0)
 			rorys_started = true
 	
 	if wegasleft <= 100  and lap == 1:
@@ -145,6 +148,7 @@ func _process(delta: float) -> void:
 		label.modulate = label.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 		wexecution.pitch_scale = lerp(wexecution.pitch_scale, 0.5, clamp(0.6 * delta, 0.0, 1.0))
 		wexecution.volume_linear = lerp(wexecution.volume_linear, 0.0, clamp(0.6 * delta, 0.0, 1.0))
+		Achievements.award("WEXECUTION")
 	
 	if lap == 2:
 		maltigi.enabled = false
@@ -155,7 +159,7 @@ func _process(delta: float) -> void:
 		
 		if wegasleft <= 300:
 			if john_started == false:
-				message.say("PUNCH SUPER JOHN")
+				message.say("SUPER JOHN IS COMING")
 				super_john.position = player.position + Vector3(0, 0, 30)
 				super_john.show()
 				super_john.enabled = true
@@ -230,6 +234,11 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		#lap_2_gridmap.position.y = lerp(lap_2_gridmap.position.y, 0.0, clamp(5.0 * delta_but_the_one_i_used_for_the_transition_to_lap_2, 0.0, 1.0))
 		lap_2_start_pause.start()
 		
+
+func wassup_guys_its_me_the_idol(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
+
 
 var FUCK = false
 var shit: Mesh

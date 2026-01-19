@@ -46,6 +46,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if kill == true:
 			Global.died_to = "shoe bench"
+			Global.player_died.emit()
 			get_tree().change_scene_to_file(death_scene)
 
 func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
@@ -56,6 +57,7 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 			Global.points += 1600
 			Global.style = "+SHOE BENCH"
 			print("SHOE BENCH")
+			Achievements.award("shoe bench")
 			StyleSFX.play_style_sfx()
 
 func _on_juke_area_3d_body_entered(body: Node3D) -> void:

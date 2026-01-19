@@ -7,8 +7,12 @@ extends Node3D
 @onready var sun = $Main/DirectionalLight3D
 @onready var wegagridmap = $Main/WegaGridMap
 @onready var player = $Player
+@onready var is_the_player_in_the_room: Area3D = $"Main/is the player in the room"
 
 var increase_sun = false
+
+var final_wegadoll_collected = false
+var punch_tutorial_initiated = false
 
 @onready var group_of_wegas = $"group of wegas"
 @onready var wegasleft = group_of_wegas.get_child_count()
@@ -41,8 +45,26 @@ func _process(delta: float) -> void:
 		sfx.play()
 	wegasleft = group_of_wegas.get_child_count()
 	if wegasleft == 0:
-		get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
-		Global.tutorial = false
+		if final_wegadoll_collected == false:
+			player.velocity.y = 60
+			player.collision.disabled = true
+		final_wegadoll_collected = true
+		
+		if player.position.y > 35 and punch_tutorial_initiated == false:
+			punch_tutorial_initiated = true
+			player.collision.disabled = false
+			var player_in_room: bool = false
+			for body in is_the_player_in_the_room.get_overlapping_bodies():
+				if body is PlayerCharacter:
+					player_in_room = true
+			if !player_in_room: player.position = Vector3(-173.5, 31.521, -4.855)
+			player.position.y = 31.521
+			#player.velocity.y = 4
+			wega.enabled = false
+			wega.position.y = -9999999
+		
+		#get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
+		#Global.tutorial = false
 
 
 func _on_wegadoll_collected() -> void: #this only applies to the first one dw

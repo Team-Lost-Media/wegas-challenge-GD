@@ -92,7 +92,7 @@ z_index = 3620
 layout_mode = 0
 offset_left = 2000.0
 offset_top = 895.0
-offset_right = 3164.0073
+offset_right = 3164.005
 offset_bottom = 1080.0
 texture = ExtResource("2_r4lde")
 stretch_mode = 4
@@ -103,7 +103,7 @@ libraries = {
 &"": SubResource("AnimationLibrary_b5y1y")
 }
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+[node name="achievement icon" type="TextureRect" parent="TextureRect"]
 z_index = 1
 layout_mode = 0
 offset_left = 691.0
@@ -112,7 +112,7 @@ offset_right = 819.0
 offset_bottom = 157.0
 texture = ExtResource("3_rxuod")
 
-[node name="Border" type="TextureRect" parent="TextureRect/TextureRect"]
+[node name="Border" type="TextureRect" parent="TextureRect/achievement icon"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = -4.0
@@ -121,7 +121,7 @@ offset_right = 132.0
 offset_bottom = 132.0
 texture = SubResource("GradientTexture2D_f8hjj")
 
-[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect/Border"]
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect/achievement icon/Border"]
 material = SubResource("ShaderMaterial_ddyyt")
 layout_mode = 0
 offset_right = 136.0
@@ -176,6 +176,108 @@ horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="name" type="RichTextLabel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 111.0
+offset_right = 658.0
+offset_bottom = 197.0
+theme_override_constants/outline_size = 20
+theme_override_fonts/normal_font = ExtResource("6_gnch5")
+theme_override_font_sizes/normal_font_size = 30
+text = "fell for it again award"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+clip_children = 2
+z_index = 3620
+layout_mode = 0
+offset_left = 2000.0
+offset_top = 712.0
+offset_right = 3164.008
+offset_bottom = 897.0
+texture = ExtResource("2_r4lde")
+stretch_mode = 4
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect2"]
+libraries = {
+&"": SubResource("AnimationLibrary_b5y1y")
+}
+
+[node name="achievement icon 2" type="TextureRect" parent="TextureRect2"]
+z_index = 1
+layout_mode = 0
+offset_left = 691.0
+offset_top = 29.0
+offset_right = 819.0
+offset_bottom = 157.0
+texture = ExtResource("3_rxuod")
+
+[node name="Border" type="TextureRect" parent="TextureRect2/achievement icon 2"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 132.0
+offset_bottom = 132.0
+texture = SubResource("GradientTexture2D_f8hjj")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect2/achievement icon 2/Border"]
+material = SubResource("ShaderMaterial_ddyyt")
+layout_mode = 0
+offset_right = 136.0
+offset_bottom = 136.0
+texture = ExtResource("5_kut8r")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect2"]
+material = SubResource("ShaderMaterial_mvkjw")
+layout_mode = 0
+offset_left = -27.0
+offset_top = -32.0
+offset_right = 1074.0
+offset_bottom = 252.0
+texture = ExtResource("5_kut8r")
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 6.0
+offset_right = 1149.0
+offset_bottom = 102.0
+texture = SubResource("GradientTexture2D_1qjqg")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect2/TextureRect2"]
+material = SubResource("ShaderMaterial_ddyyt")
+layout_mode = 0
+offset_right = 852.0
+offset_bottom = 96.0
+texture = ExtResource("5_kut8r")
+
+[node name="MARKER GO HIDE THIS HIDE HIDE IDE HIDE HIDE HIDEH DIEHOUFNUAGSDFA" type="TextureRect" parent="TextureRect2/TextureRect2"]
+modulate = Color(0, 0, 0, 0.5921569)
+layout_mode = 0
+offset_left = 681.0
+offset_right = 1533.0
+offset_bottom = 96.0
+texture = ExtResource("5_kut8r")
+
+[node name="achievement get" type="RichTextLabel" parent="TextureRect2"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 12.0
+offset_right = 675.0
+offset_bottom = 98.0
+theme_override_constants/outline_size = 35
+theme_override_fonts/normal_font = ExtResource("6_gnch5")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "ACHIEVEMENT!"
+scroll_active = false
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="name" type="RichTextLabel" parent="TextureRect2"]
 layout_mode = 0
 offset_left = 131.0
 offset_top = 111.0

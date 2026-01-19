@@ -204,13 +204,13 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "TUTORIAL"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
 theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
-text = "SETTINGS"
+text = "ACHIEVEMENTS"
 
 [node name="Button5" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 72)
@@ -219,6 +219,14 @@ theme_override_constants/outline_size = 41
 theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "RECOLORPEDIA"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 2
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+text = "SETTINGS"
 
 [node name="Button4" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 72)
@@ -335,9 +343,9 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Typical WEGAKILL.       note: the image
-There's only Wega.      is 1918 x 406
-Collect all Wegadolls."
+text = "Only one enemy.         note: the image
+Collect all Wegadolls.  is 1918 x 406
+"
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [node name="HSeparator" type="HSeparator" parent="Gamemodes/VBoxContainer"]
@@ -375,8 +383,8 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Now with the WC:TI enemies.
-And possibly more..."
+text = "Collect the Idol.
+Whatever it takes."
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [node name="Recolorpedia" parent="." instance=ExtResource("12_ugs4v")]
@@ -403,8 +411,9 @@ label_settings = SubResource("LabelSettings_ugs4v")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
+[connection signal="pressed" from="VBoxContainer/Button6" to="." method="_achievements"]
 [connection signal="pressed" from="VBoxContainer/Button5" to="." method="_recolorpedia"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]
 [connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]

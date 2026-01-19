@@ -94,6 +94,7 @@ func _on_hitstop_timeout() -> void:
 	player.boosted.start(0.5)
 	player.saveable_fall_leniency_timer.start()
 	player.saveable_fall = true
+	Achievements.award("+EXPLODED")
 	await animation_looped
 	position.y = -100
 	hide()
@@ -112,6 +113,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and animation == "default":
 		if kill == true:
 			Global.died_to = "rorys"
+			Global.player_died.emit()
 			get_tree().change_scene_to_file(death_scene)
 		elif piss_off == true:
 			piss_off_timer.start()
@@ -123,6 +125,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			hide()
 			if Global.health <= 0:
 				Global.died_to = "rorys"
+				Global.player_died.emit()
 				get_tree().change_scene_to_file(death_scene)
 
 func _on_fuck_you_area_3d_body_entered(body: Node3D) -> void:
