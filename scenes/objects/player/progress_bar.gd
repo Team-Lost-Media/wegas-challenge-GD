@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	if dash:
 		max_value = dash_cooldown.wait_time
 		value = dash_cooldown.time_left
-		label.text = str("dashes left: ", str(player.dashes_left))
+		label.text = str(player.dashes_left)
 		match player.dashes_left:
 			2:
 				label.label_settings.font_color = Color.from_rgba8(0, 255, 0)

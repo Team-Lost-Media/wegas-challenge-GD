@@ -378,6 +378,7 @@ enable_manually = true
 dash_cooldown = 2.5
 dash_delay = 0.75
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
+overshoot_distance = 13.0
 line_color = Color(1, 0, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi"]

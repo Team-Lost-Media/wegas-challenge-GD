@@ -13,7 +13,7 @@ extends Sprite3D
 @export var smart = false ## If set to [code]true[/code], Maltigi will predict the targets's movement (using their velocity) and dash where they're going. Otherwise, he will just dash at their position.
 @export var smart_multiplier: float = 1.2 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
 @export var enable_overshoot: bool = true ## If set to [code]true[/code], Maltigi will overshoot the target.
-@export var overshoot_distance: float = 10 ## Only functions if [code]enable_overshoot[/code] is set to [code]true[/code].
+@export var overshoot_distance: float = 10 ## Only functions if [code]enable_overshoot[/code] is set to [code]true[/code]. Maltigi will overshoot the player by this distance. This is added onto the final target and is NOT a multiplier.
 @export var line_color: Color
 @export_group("Malt Rush")
 @export var malt_rush_enabled: bool = false ## The Malt Rush makes Maltigi quickly dash for a brief period.

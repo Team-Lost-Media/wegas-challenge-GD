@@ -33,9 +33,9 @@ var dashes_left: int = max_dashes
 @onready var dash_cooldown: Timer = $DashCooldown
 @onready var superjump_cooldown: Timer = $SuperJumpCooldown
 @onready var dash_cooldown_bar: ProgressBar = $DashCooldownBar
-@onready var dash_cooldown_bar_outline: ProgressBar = $DashCooldownBarOutline
+@onready var dash_cooldown_bar_outline: ProgressBar = $DashCooldownBar/DashCooldownBarOutline
 @onready var superjump_cooldown_bar: ProgressBar = $SuperJumpCooldownBar
-@onready var super_jump_cooldown_bar_outline: ProgressBar = $SuperJumpCooldownBarOutline
+@onready var super_jump_cooldown_bar_outline: ProgressBar = $SuperJumpCooldownBar/SuperJumpCooldownBarOutline
 @onready var just_dashed: Timer = $JustDashed
 @onready var just_jumped: Timer = $JustJumped
 @onready var coyote_timer: Timer = $CoyoteTimer
@@ -53,7 +53,7 @@ var saveable_fall = false
 @export var testing_grapples = false
 @export var show_hp = true
 @onready var health_label: Label = $HealthLabel
-@onready var health_bar_outline: ColorRect = $HealthBarOutline
+@onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
 
 #region Main control flow 

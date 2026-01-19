@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c8e8i7oo5k8rm"]
 
-[ext_resource type="Texture2D" uid="uid://oup3grqiq2k6" path="res://assets/textures/maltigi enemy.webp" id="1_b73rg"]
+[ext_resource type="Texture2D" uid="uid://b3jpcq473qemx" path="res://assets/textures/maltigi enemy.png" id="1_b73rg"]
 [ext_resource type="Script" uid="uid://dn4tj451acebl" path="res://scenes/objects/maltigi/maltigi.gd" id="2_48lxq"]
 [ext_resource type="AudioStream" uid="uid://cqtjmmx0cgoo5" path="res://assets/SFX/maltscream.wav" id="3_48lxq"]
 
@@ -8,9 +8,8 @@
 height = 2.5293
 
 [node name="Maltigi" type="Sprite3D"]
-pixel_size = 0.005
+pixel_size = 0.008
 billboard = 1
-transparent = false
 texture = ExtResource("1_b73rg")
 script = ExtResource("2_48lxq")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene load_steps=17 format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
 [ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="2_yude8"]
 [ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="4_oufcy"]
-[ext_resource type="Script" uid="uid://c0rhnbvywjqnm" path="res://scenes/menus/main/special_debug_lap_2_checkbox.gd" id="6_jbven"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
@@ -321,19 +320,6 @@ value = 10.0
 script = ExtResource("2_007d3")
 sensitivity = true
 
-[node name="PanelContainer3" type="PanelContainer" parent="Interactable"]
-layout_mode = 0
-offset_left = 551.0
-offset_top = 495.0
-offset_right = 575.0
-offset_bottom = 519.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
-
-[node name="special debug lap 2 checkbox" type="CheckBox" parent="Interactable/PanelContainer3"]
-z_index = 1
-layout_mode = 2
-script = ExtResource("6_jbven")
-
 [node name="Labels" type="Control" parent="."]
 anchors_preset = 0
 offset_left = 4.0
@@ -404,16 +390,6 @@ offset_top = 300.0
 offset_right = 215.0
 offset_bottom = 345.0
 text = "Sensitivity: 10"
-label_settings = SubResource("LabelSettings_oufcy")
-
-[node name="Lap 2" type="Label" parent="Labels"]
-z_index = 1
-layout_mode = 0
-offset_left = 72.0
-offset_top = 405.0
-offset_right = 934.0
-offset_bottom = 472.0
-text = "SPECIAL DEBUG OPTION: LAP 2"
 label_settings = SubResource("LabelSettings_oufcy")
 
 [node name="Sensitivity2" type="Label" parent="Labels"]

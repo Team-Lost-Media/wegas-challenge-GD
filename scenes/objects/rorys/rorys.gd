@@ -132,7 +132,7 @@ func _on_fuck_you_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		await get_tree().create_timer(0.5).timeout
 		if piss_off_timer.is_stopped() and stun_timer.is_stopped():
-			Global.points += 600
+			Global.points += 700
 			Global.style = "+FUCK YOU RORYS"
 			StyleSFX.play_style_sfx()
 

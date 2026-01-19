@@ -20,3 +20,6 @@ func play_damage_fx(id: String):
 			super_john_audio.play()
 			var tween = create_tween()
 			tween.tween_property(super_john, "modulate:a", 0, 1.0)
+
+func _ready() -> void:
+	show()

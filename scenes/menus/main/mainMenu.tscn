@@ -131,11 +131,13 @@ script = ExtResource("1_mgf8r")
 [node name="No Drums" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_5jl5l")
 autoplay = true
+bus = &"BGM"
 
 [node name="Drums" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ugs4v")
 volume_db = -80.0
 autoplay = true
+bus = &"BGM"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
@@ -343,8 +345,9 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Only one enemy.         note: the image
+text = "Only Wega.              note: the image
 Collect all Wegadolls.  is 1918 x 406
+Go for a high score.
 "
 label_settings = SubResource("LabelSettings_2ct2e")
 

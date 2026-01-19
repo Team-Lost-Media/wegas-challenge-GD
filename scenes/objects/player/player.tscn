@@ -91,9 +91,6 @@ _data = {
 &"sprint": SubResource("Animation_px50k")
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g65c7"]
-bg_color = Color(0.26095, 0.087, 0.3, 1)
-
 [sub_resource type="Gradient" id="Gradient_absnx"]
 colors = PackedColorArray(0.69, 0.1932, 0.51612, 1, 0.62652, 0.0552, 0.69, 1)
 
@@ -124,8 +121,8 @@ font_size = 41
 outline_size = 21
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibpxp"]
-bg_color = Color(0.14084, 0.0812, 0.28, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g65c7"]
+bg_color = Color(0.26095, 0.087, 0.3, 1)
 
 [sub_resource type="Gradient" id="Gradient_5t4rm"]
 colors = PackedColorArray(0.49956, 0.0552, 0.69, 1, 0.368627, 0.054902, 0.690196, 1)
@@ -151,10 +148,13 @@ metadata/_snap_count = 6
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8a43"]
 texture = SubResource("GradientTexture2D_3j0tc")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibpxp"]
+bg_color = Color(0.14084, 0.0812, 0.28, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_ponut"]
 font = ExtResource("3_0a575")
-font_size = 82
-outline_size = 41
+font_size = 41
+outline_size = 21
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_dvfu2"]
@@ -350,27 +350,14 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
-[node name="DashCooldownBarOutline" type="ProgressBar" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -605.0
-offset_top = 10.0
-offset_right = -9.0
-offset_bottom = 86.0
-grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_g65c7")
-max_value = 1.0
-show_percentage = false
-
 [node name="DashCooldownBar" type="ProgressBar" parent="."]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -595.0
+offset_left = -303.0
 offset_top = 20.0
 offset_right = -19.0
-offset_bottom = 76.0
+offset_bottom = 48.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxTexture_nqkks")
 theme_override_styles/fill = SubResource("StyleBoxTexture_vx2qb")
@@ -381,24 +368,27 @@ dash = true
 
 [node name="Label" type="Label" parent="DashCooldownBar"]
 layout_mode = 0
-offset_left = -420.0
-offset_top = -2.0
-offset_right = -65.0
-offset_bottom = 46.0
-text = "dashes left: 2"
+offset_left = -370.0
+offset_top = -13.0
+offset_right = -15.0
+offset_bottom = 35.0
+text = "2"
 label_settings = SubResource("LabelSettings_nkbs0")
+horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="SuperJumpCooldownBarOutline" type="ProgressBar" parent="."]
+[node name="DashCooldownBarOutline" type="ProgressBar" parent="DashCooldownBar"]
+show_behind_parent = true
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -605.0
-offset_top = 118.0
-offset_right = -9.0
-offset_bottom = 194.0
+offset_left = -289.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 33.0
 grow_horizontal = 0
-theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
+theme_override_styles/background = SubResource("StyleBoxFlat_g65c7")
 max_value = 1.0
 show_percentage = false
 
@@ -406,10 +396,10 @@ show_percentage = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -595.0
-offset_top = 128.0
+offset_left = -303.0
+offset_top = 75.0
 offset_right = -19.0
-offset_bottom = 184.0
+offset_bottom = 103.0
 grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxTexture_578jl")
 theme_override_styles/fill = SubResource("StyleBoxTexture_n8a43")
@@ -417,6 +407,21 @@ max_value = 1.0
 show_percentage = false
 script = ExtResource("2_g10m2")
 superjump = true
+
+[node name="SuperJumpCooldownBarOutline" type="ProgressBar" parent="SuperJumpCooldownBar"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -289.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 33.0
+grow_horizontal = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
+max_value = 1.0
+show_percentage = false
 
 [node name="HealthLabel" type="Label" parent="."]
 offset_left = 1460.0
@@ -426,13 +431,7 @@ offset_bottom = 982.0
 text = "HP: 100.0"
 label_settings = SubResource("LabelSettings_ponut")
 horizontal_alignment = 2
-
-[node name="HealthBarOutline" type="ColorRect" parent="."]
-offset_left = 1314.0
-offset_top = 994.0
-offset_right = 1910.0
-offset_bottom = 1070.0
-color = Color(0, 0.08, 0.064, 1)
+vertical_alignment = 2
 
 [node name="Health" type="ProgressBar" parent="."]
 anchors_preset = 3
@@ -440,10 +439,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -596.0
-offset_top = -76.0
-offset_right = -20.0
-offset_bottom = -20.0
+offset_left = -578.0
+offset_top = -66.0
+offset_right = -10.0
+offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/background = SubResource("StyleBoxTexture_qfccq")
@@ -453,6 +452,15 @@ value = 100.0
 show_percentage = false
 script = ExtResource("4_bdcal")
 health_label_text_color = SubResource("GradientTexture1D_absnx")
+
+[node name="HealthBarOutline" type="ColorRect" parent="Health"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 573.0
+offset_bottom = 61.0
+color = Color(0, 0.08, 0.064, 1)
 
 [node name="StyleTexture" type="TextureRect" parent="."]
 offset_left = 1293.0
@@ -545,6 +553,7 @@ label_settings = SubResource("LabelSettings_absnx")
 script = ExtResource("9_japq8")
 
 [node name="Damage Effects" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
