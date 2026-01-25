@@ -56,6 +56,7 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 			status = "BENCH"
 			Global.points += 1600
 			Global.style = "+SHOE BENCH"
+			Global.health += 1600/20#handlestylehealthregen
 			print("SHOE BENCH")
 			Achievements.award("shoe bench")
 			StyleSFX.play_style_sfx()
@@ -68,5 +69,6 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 			status = "BENCH"
 			Global.points += 1200
 			Global.style = "+SHOE BENCH"
+			Global.health += 1200/20#handlestylehealthregen
 			print("SHOE BENCH")
 			StyleSFX.play_style_sfx()

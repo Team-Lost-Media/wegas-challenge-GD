@@ -85,6 +85,7 @@ func _process(delta: float) -> void:
 			Global.style = "+ENRAGED"
 			StyleSFX.play_style_sfx(6)
 			Global.points += 400
+			Global.health += 400/20#handlestylehealthregen
 			modulate = Color.RED
 			enrage_color_timer.start()
 			rage = 99999999
@@ -114,6 +115,7 @@ func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
 		if enabled:
 			rage += 200
 			Global.points += 200
+			Global.health += 200/20#handlestylehealthregen
 			Global.style = "+ABOVE"
 			print("ABOVE")
 			StyleSFX.play_style_sfx()
@@ -123,6 +125,7 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 		if enabled and !body.boosted.is_stopped():
 			status = "JUKED"
 			rage += 1000
+			Global.health += 1000/20#handlestylehealthregen
 			Global.points += 1000
 			Global.style = "+EXPLOSION JUKE"
 			print("EXPLOSION JUKE")
@@ -135,5 +138,6 @@ func _on_juke_area_3d_body_entered(body: Node3D) -> void:
 			rage += 400
 			Global.points += 400
 			Global.style = "+JUKED"
+			Global.health += 400/20#handlestylehealthregen
 			print("JUKED")
 			StyleSFX.play_style_sfx()

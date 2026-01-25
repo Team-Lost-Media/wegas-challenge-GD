@@ -35,6 +35,7 @@ func _on_close_call_area_body_exited(body: Node3D) -> void:
 	if body is PlayerCharacter and close_call == true:
 		Global.points += 200
 		Global.style = "+CLOSE CALL"
+		Global.health += 200/20#handlestylehealthregen
 		audio.play()
 		StyleSFX.play_style_sfx(0, true)
 		close_call = false

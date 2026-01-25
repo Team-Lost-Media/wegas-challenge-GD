@@ -56,6 +56,8 @@ var saveable_fall = false
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
 
+const OVERHEAL_DRAIN_CURVE = preload("res://assets/other/overheal drain curve.tres")
+
 #region Main control flow 
 
 func _ready():
@@ -113,6 +115,11 @@ func _physics_process(delta: float) -> void:
 		var time :String = Time.get_time_string_from_system().replace(":","")
 		var img = get_viewport().get_texture().get_image()
 		img.save_png("res://screenshots/" + date + time + ".png")
+	
+	if Global.health < Global.max_health:
+		Global.health = clampf(Global.health + 0.25 * delta, 0 , 100)
+	else:
+		Global.health -= 1 * delta * OVERHEAL_DRAIN_CURVE.sample(Global.health / Global.max_health)
 	
 	if Input.is_action_pressed("jump"):
 		if is_on_floor() or coyote:

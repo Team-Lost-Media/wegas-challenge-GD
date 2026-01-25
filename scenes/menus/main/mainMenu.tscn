@@ -364,6 +364,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
 [node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/The Idol"]
+visible = false
 layout_mode = 0
 offset_right = 944.0
 offset_bottom = 200.0
@@ -388,6 +389,15 @@ offset_right = 538.0
 offset_bottom = 192.0
 text = "Collect the Idol.
 Whatever it takes."
+label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="Label3" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+layout_mode = 0
+offset_left = 421.99997
+offset_top = 50.499992
+offset_right = 950.0
+offset_bottom = 167.5
+text = "no image yet"
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [node name="Recolorpedia" parent="." instance=ExtResource("12_ugs4v")]

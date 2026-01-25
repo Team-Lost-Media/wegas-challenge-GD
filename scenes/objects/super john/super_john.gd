@@ -62,6 +62,7 @@ func _process(delta: float) -> void:
 					velocity = -velocity * 1.5
 					Global.points += 200
 					Global.style = "+DENIED"
+					Global.health += 200/20#handlestylehealthregen
 					print("DENIED")
 					StyleSFX.play_style_sfx()
 		

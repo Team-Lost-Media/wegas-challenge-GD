@@ -80,6 +80,7 @@ func _on_hitstop_timeout() -> void:
 	pixel_size = 0.05
 	death_area.monitoring = true
 	Global.points += 400
+	Global.health += 400/20#handlestylehealthregen
 	Global.style = "+EXPLODED"
 	play("explode")
 	StyleSFX.play_style_sfx()
@@ -134,6 +135,7 @@ func _on_fuck_you_area_3d_body_entered(body: Node3D) -> void:
 		if piss_off_timer.is_stopped() and stun_timer.is_stopped():
 			Global.points += 700
 			Global.style = "+FUCK YOU RORYS"
+			Global.health += 700/20#handlestylehealthregen
 			StyleSFX.play_style_sfx()
 
 func _on_start_timer_timeout() -> void:

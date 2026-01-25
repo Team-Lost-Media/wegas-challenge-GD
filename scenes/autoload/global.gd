@@ -8,6 +8,7 @@ var max_wegadolls: int
 var died_to: String
 var died_to_override: String #should be used carefully!!!!!!!!!!
 var health: float
+var max_health: float = 100
 
 var tutorial = false
 var timer_stopped = false
@@ -72,12 +73,6 @@ func check_wegadoll_combo() -> void:
 			StyleSFX.play_style_sfx(0, true)
 		print(str("+WEGACOMBO ", wegadoll_combo, "X"))
 	wegadoll_combo = 0
-
-var health_time: float
-func _process(delta: float) -> void:
-	health_time += delta
-	if health_time > 1 and health < 100:
-		health += 0.05
 
 
 ## Requires [code]delta[/code] and [code]x[/code] as parameters. Returns [code]true[/code] when [code]x[/code] seconds have passed. Can be used with any interval, namely multiples of 10 such as 0.01, 0.1 and 1.

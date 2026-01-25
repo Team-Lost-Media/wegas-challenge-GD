@@ -110,7 +110,7 @@ func _process(delta: float) -> void:
 		wegasleft = group_of_wegas_TWO.get_child_count()
 		label.text = "--" + str(wegasleft) + "--"
 	
-	if wegasleft <= 150  and lap == 1:
+	if wegasleft <= 150 and lap == 1:
 		if rorys_started == false:
 			rorys.enabled = true
 			message.say("RORYS IS COMING", 2.0)
@@ -164,11 +164,16 @@ func _process(delta: float) -> void:
 				super_john.show()
 				super_john.enabled = true
 				john_started = true
+				
+				#	rorys.group_of_wegas = self.group_of_wegas_TWO
+				#rorys.enabled = true
+				#rorys.stay_still_time = 8
+				
 		
 		if wegasleft <= 200:
 			if glitchigi_started == false:
-				#message.say("GLITCHIGI IS COMING")
-				#glitchigi.start(true)
+				message.say("GLITCHIGI IS COMING")
+				glitchigi.start(true)
 				glitchigi_started = true
 		
 		if wegasleft <= 0:

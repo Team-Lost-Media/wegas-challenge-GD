@@ -297,7 +297,7 @@ animations = [{
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sf834"]
-radius = 0.8
+radius = 0.75
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aoh5m"]
 height = 2.5
@@ -325,7 +325,6 @@ texture = ExtResource("4_pabep")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
-visible = false
 shape = SubResource("CylinderShape3D_sf834")
 
 [node name="FuckYouArea3D" type="Area3D" parent="."]
