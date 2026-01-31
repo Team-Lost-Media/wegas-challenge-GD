@@ -16,14 +16,15 @@ func _on_body_entered(body: Node3D) -> void:
 			if body.saveable_fall == true:
 				if rorys_save: texture_rect.texture = rorys_save
 				body.saveable_fall = false
-				i_will_save_you(body, false)
-			elif body.fall_saves > 0:
-				body.fall_saves -= 1
 				i_will_save_you(body)
 			else:
-				Global.died_to = "fall"
-				Global.player_died.emit()
-				get_tree().change_scene_to_file(death_scene)
+				Global.health -= 100
+				if Global.health < 0:
+					Global.died_to = "fall"
+					Global.player_died.emit()
+					get_tree().change_scene_to_file(death_scene)
+				else:
+					i_will_save_you(body)
 				
 		else:
 			Global.died_to = "fall"
@@ -32,12 +33,7 @@ func _on_body_entered(body: Node3D) -> void:
 			get_tree().change_scene_to_file(death_scene)
 			
 
-func i_will_save_you(body: Node3D, show_saves_left = true) -> void:
-	if show_saves_left == false:
-		saves_left.hide()
-	else:
-		saves_left.show()
-		saves_left.text = str(body.fall_saves)
+func i_will_save_you(body: Node3D) -> void:
 	body.this_timer_only_exists_to_prevent_a_bug_where_if_you_dash_right_after_being_saved_you_clip_through_the_death_area.start()
 	body.velocity.y = 50
 	texture_rect.modulate = Color.WHITE

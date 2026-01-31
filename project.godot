@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Wega's Challenge: WEGAKILL"
@@ -16,13 +20,12 @@ based off of wegas-challenge-gd by xetheon"
 config/version="1.0"
 config/tags=PackedStringArray("random\'s_main_project", "shitpost", "wega")
 run/main_scene="res://scenes/menus/main/mainMenu.tscn"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://bei5enh7oagrt"
 
 [autoload]
 
 SettingsHandler="*res://scenes/autoload/SettingsHandler.gd"
-GameManager="*res://scenes/autoload/GameManager.gd"
 Save="*res://scenes/autoload/save.gd"
 Global="*res://scenes/autoload/global.gd"
 StyleSFX="*res://scenes/autoload/style sfx.tscn"

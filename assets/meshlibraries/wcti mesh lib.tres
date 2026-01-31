@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=21 format=3 uid="uid://cr4mwxcsmnvgd"]
+[gd_resource type="MeshLibrary" format=3 uid="uid://cr4mwxcsmnvgd"]
 
 [ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="1_ohei7"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_y0458"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dq1kfv87e6bxm"
+path="res://.godot/imported/Purple Sun V2 part1.mp3-bb10d455612414bab6d60315745c5fef.mp3str"
+
+[deps]
+
+source_file="res://assets/BGM/Purple Sun V2 part1.mp3"
+dest_files=["res://.godot/imported/Purple Sun V2 part1.mp3-bb10d455612414bab6d60315745c5fef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

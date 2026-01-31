@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=45 format=4 uid="uid://bmnr2t3cooaoj"]
+[gd_resource type="MeshLibrary" format=4 uid="uid://bmnr2t3cooaoj"]
 
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="1_3xsmi"]
 [ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="2_507ib"]

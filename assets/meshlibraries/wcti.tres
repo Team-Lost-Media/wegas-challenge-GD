@@ -1,4 +1,4 @@
-[gd_resource type="MeshLibrary" load_steps=31 format=4 uid="uid://bmnbm4yqrd70q"]
+[gd_resource type="MeshLibrary" format=4 uid="uid://bmnbm4yqrd70q"]
 
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="1_4rftf"]
 [ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="2_cxfmb"]
@@ -256,9 +256,9 @@ item/6/navigation_layers = 1
 item/6/preview = SubResource("ImageTexture_p6ejs")
 item/7/name = "MeshInstance3D5"
 item/7/mesh = SubResource("BoxMesh_4rftf")
-item/7/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/7/mesh_transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 item/7/mesh_cast_shadow = 1
-item/7/shapes = [SubResource("BoxShape3D_7bmcu"), Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0205078, 5.96046e-07, 0.00145221)]
+item/7/shapes = [SubResource("BoxShape3D_7bmcu"), Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0.021, 0, 0.001)]
 item/7/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 item/7/navigation_layers = 1
 item/7/preview = SubResource("ImageTexture_di23d")

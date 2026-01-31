@@ -22,6 +22,8 @@ var currentState : CharacterState = CharacterState.WALKING
 @export var SPRINT_SPEED := 3.5
 @export var CROUCH_SPEED := 1.5
 @export var max_dashes: int = 2
+@export var overheal_drain_curve: Curve = preload("res://assets/other/overheal drain curve.tres")
+@export var max_health: float = 100
 var inputEnabled := true # can the player move?
 var aimlookEnabled := true # can the player look around?
 var interactionsEnabled := true # can the player interact with Interactibles3D?
@@ -56,14 +58,16 @@ var saveable_fall = false
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
 
-const OVERHEAL_DRAIN_CURVE = preload("res://assets/other/overheal drain curve.tres")
+var gravity: Vector3 = Vector3(0, -55, 0)
+#var jump_dir: Vector3 = Vector3(0, 1, 0)
 
 #region Main control flow 
 
 func _ready():
+	Global.max_health = max_health
 	$MeshInstance3D.hide()
+	Engine.max_fps = 9999
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	GameManager.player = self
 	if show_hp == true:
 		health_bar.show()
 		health_bar_outline.show()
@@ -77,9 +81,8 @@ func _physics_process(delta: float) -> void:
 		return
 	
 	
-	
 	if not is_on_floor():
-		velocity.y += -55 * delta
+		velocity += gravity * delta
 		if coyote_timer.is_stopped() and !coyote and !coyote_disabled:
 			coyote_timer.start()
 			coyote = true
@@ -119,7 +122,7 @@ func _physics_process(delta: float) -> void:
 	if Global.health < Global.max_health:
 		Global.health = clampf(Global.health + 0.25 * delta, 0 , 100)
 	else:
-		Global.health -= 1 * delta * OVERHEAL_DRAIN_CURVE.sample(Global.health / Global.max_health)
+		Global.health -= 1 * delta * overheal_drain_curve.sample(Global.health / Global.max_health)
 	
 	if Input.is_action_pressed("jump"):
 		if is_on_floor() or coyote:
@@ -163,7 +166,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, 30 * delta)
 			velocity.z = move_toward(velocity.z, 0, 30 * delta) 
 	
-	camera.fov = SettingsHandler.fov
+	camera.fov = 110 #SettingsHandler.fov
 	mouse_sensitivity = SettingsHandler.sensitivity
 	
 	
