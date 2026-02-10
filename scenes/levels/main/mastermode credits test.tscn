@@ -39,6 +39,7 @@ script = ExtResource("1_p4khq")
 
 [node name="Maltigi" parent="." unique_id=735102003 node_paths=PackedStringArray("player") instance=ExtResource("2_p4khq")]
 player = NodePath("../Player")
+death_scene = "res://scenes/menus/credits gameover/credits gameover.tscn"
 line_color = Color(1, 0, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi" unique_id=2123013516]
@@ -51,6 +52,7 @@ omni_range = 10.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
 speed = 12.0
+death_scene = "res://scenes/menus/credits gameover/credits gameover.tscn"
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Wega" unique_id=140723179]
 light_color = Color(0.5, 0, 1, 1)
@@ -88,6 +90,7 @@ metadata/_editor_floor_ = Vector3(0, 10, 0)
 
 [node name="deathbarrier" parent="Main" unique_id=1444480047 instance=ExtResource("6_w03b6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -31.782814, 0)
+death_scene = "res://scenes/menus/credits gameover/credits gameover.tscn"
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Main/deathbarrier" unique_id=873431957]
 shape = SubResource("WorldBoundaryShape3D_p4khq")

@@ -60,8 +60,8 @@ func _process(delta: float) -> void:
 		punchable = false
 		rory.show()
 		if piss_off_sfx.playing == false: piss_off_sfx.play()
-		frame_timer += 1
-		if frame_timer == 12:
+		frame_timer += 1 * delta * 60
+		if frame_timer > 12:
 			randomize()
 			frame_timer = 0
 			rory.position = Vector2(rng.randf_range(100, 1920), rng.randf_range(50, 1080))
@@ -72,7 +72,7 @@ func _process(delta: float) -> void:
 		piss_off_sfx.stop()
 	
 	punchable_indicator.visible = punchable
-var frame_timer: int
+var frame_timer: float
 var rng = RandomNumberGenerator.new()
 
 func _on_hitstop_timeout() -> void:

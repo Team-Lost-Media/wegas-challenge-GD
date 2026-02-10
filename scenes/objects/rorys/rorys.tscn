@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ros1h8daiee"]
+[gd_scene format=3 uid="uid://ros1h8daiee"]
 
 [ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="1_pabep"]
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
@@ -306,7 +306,7 @@ height = 2.5
 radius = 4.0
 height = 10.0
 
-[node name="Rorys" type="AnimatedSprite3D"]
+[node name="Rorys" type="AnimatedSprite3D" unique_id=958867044]
 transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999, -0.000726419, 0.00129934, 0.000728062, 0.999999, 0, 0, 0)
 billboard = 1
 texture_filter = 2
@@ -314,63 +314,63 @@ sprite_frames = SubResource("SpriteFrames_avj1d")
 frame_progress = 0.62619656
 script = ExtResource("2_hipyo")
 
-[node name="punchable indicator" type="Sprite3D" parent="."]
+[node name="punchable indicator" type="Sprite3D" parent="." unique_id=2135218005]
 transform = Transform3D(1, -5.8042815e-10, 5.820766e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.0020247025, 1.5986884, -0.0011613148)
 billboard = 1
 texture_filter = 2
 render_priority = 1
 texture = ExtResource("4_pabep")
 
-[node name="DeathArea3D" type="Area3D" parent="."]
+[node name="DeathArea3D" type="Area3D" parent="." unique_id=758375523]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D" unique_id=1995881195]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
 shape = SubResource("CylinderShape3D_sf834")
 
-[node name="FuckYouArea3D" type="Area3D" parent="."]
+[node name="FuckYouArea3D" type="Area3D" parent="." unique_id=1640371599]
 transform = Transform3D(1, -2.31182e-10, 2.32831e-10, 1.23919e-11, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FuckYouArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FuckYouArea3D" unique_id=1257648815]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
 shape = SubResource("CapsuleShape3D_aoh5m")
 
-[node name="PunchableArea3D" type="Area3D" parent="."]
+[node name="PunchableArea3D" type="Area3D" parent="." unique_id=794347913]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="PunchableArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PunchableArea3D" unique_id=195429837]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
 shape = SubResource("CapsuleShape3D_sf834")
 
-[node name="PissOffTimer" type="Timer" parent="."]
+[node name="PissOffTimer" type="Timer" parent="." unique_id=298170865]
 wait_time = 4.0
 one_shot = true
 
-[node name="StayStillTimer" type="Timer" parent="."]
+[node name="StayStillTimer" type="Timer" parent="." unique_id=1624420402]
 wait_time = 4.0
 one_shot = true
 
-[node name="StartTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="." unique_id=1157230977]
 one_shot = true
 
-[node name="Hitstop" type="Timer" parent="."]
+[node name="Hitstop" type="Timer" parent="." unique_id=1533092968]
 wait_time = 0.5
 one_shot = true
 ignore_time_scale = true
 
-[node name="StunTimer" type="Timer" parent="."]
+[node name="StunTimer" type="Timer" parent="." unique_id=941564885]
 wait_time = 4.0
 one_shot = true
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1271907445]
 stream = ExtResource("3_oyc7v")
 volume_db = 8.0
 bus = &"SFX"
 
-[node name="PissOffSFX" type="AudioStreamPlayer" parent="."]
+[node name="PissOffSFX" type="AudioStreamPlayer" parent="." unique_id=1672986626]
 stream = ExtResource("5_aoh5m")
 volume_db = 8.0
 bus = &"SFX"
 
-[node name="rory" type="Sprite2D" parent="."]
+[node name="rory" type="Sprite2D" parent="." unique_id=1204472601]
 visible = false
 position = Vector2(586, 1032)
 scale = Vector2(5.04478, 2.5597)

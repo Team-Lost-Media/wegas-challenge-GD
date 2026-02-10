@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://brl72ngdvi1wf"]
+
+[ext_resource type="Script" uid="uid://bxdqer27aaliu" path="res://scenes/menus/credits gameover/credits_gameover.gd" id="1_12ugt"]
+[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_c6hq5"]
+
+[sub_resource type="Curve" id="Curve_vq8fu"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 220
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tgope"]
+font_size = 120
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dwtvt"]
+font_size = 32
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_chhmu"]
+font_size = 64
+font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rubpt"]
+font_size = 32
+font_color = Color(1, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=680969376]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_12ugt")
+points_and_time_curve = SubResource("Curve_vq8fu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=582100262]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Maltigi" type="Sprite2D" parent="." unique_id=1276110249]
+position = Vector2(372, 515.5)
+scale = Vector2(2.57917, 2.43611)
+texture = ExtResource("2_c6hq5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1203135958]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="." unique_id=1112357944]
+layout_mode = 0
+offset_left = 681.0
+offset_top = 67.0
+offset_right = 1854.0
+offset_bottom = 368.0
+text = "you suck!!!!"
+label_settings = SubResource("LabelSettings_i3kce")
+
+[node name="Label" type="Label" parent="Label" unique_id=879007169]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 393.0
+offset_right = 1152.0
+offset_bottom = 558.0
+text = "press space to retry"
+label_settings = SubResource("LabelSettings_tgope")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Label" unique_id=360956412]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 571.0
+offset_right = 988.0
+offset_bottom = 726.0
+text = "(if it makes you feel any better, your final score was:"
+label_settings = SubResource("LabelSettings_dwtvt")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Label" unique_id=1176069186]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 635.0
+offset_right = 894.0
+offset_bottom = 790.0
+text = "69420)"
+label_settings = SubResource("LabelSettings_chhmu")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Label" unique_id=1391850375]
+layout_mode = 0
+offset_left = 259.0
+offset_top = 727.0
+offset_right = 893.0
+offset_bottom = 882.0
+text = "(sort of)"
+label_settings = SubResource("LabelSettings_rubpt")
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Label/Label4" unique_id=2000120563]
+visible = false
+layout_mode = 0
+offset_left = -326.0
+offset_top = 64.0
+offset_right = 998.0
+offset_bottom = 229.0
+text = "(you see, your score is calculated by adding a multiplier to your points based off of
+the time it took you to collect all the wegadolls. since your run ended prematurely,
+said time is actually faster than it wouldve been, had this run survived)"
+label_settings = SubResource("LabelSettings_rubpt")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Label/Label4" unique_id=1717952835]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 244.0
+offset_top = 3.0
+offset_right = 394.0
+offset_bottom = 53.0

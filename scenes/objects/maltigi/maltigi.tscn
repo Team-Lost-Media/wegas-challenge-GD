@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8e8i7oo5k8rm"]
+[gd_scene format=3 uid="uid://c8e8i7oo5k8rm"]
 
 [ext_resource type="Texture2D" uid="uid://b3jpcq473qemx" path="res://assets/textures/maltigi enemy.png" id="1_b73rg"]
 [ext_resource type="Script" uid="uid://dn4tj451acebl" path="res://scenes/objects/maltigi/maltigi.gd" id="2_48lxq"]
@@ -7,40 +7,40 @@
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kulab"]
 height = 2.5293
 
-[node name="Maltigi" type="Sprite3D"]
+[node name="Maltigi" type="Sprite3D" unique_id=550283990]
 pixel_size = 0.008
 billboard = 1
 texture = ExtResource("1_b73rg")
 script = ExtResource("2_48lxq")
 
-[node name="DeathArea3D" type="Area3D" parent="."]
+[node name="DeathArea3D" type="Area3D" parent="." unique_id=361359840]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DeathArea3D" unique_id=735760355]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463257, 0.0695038, 0.00976563)
 shape = SubResource("CylinderShape3D_kulab")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=497988430]
 stream = ExtResource("3_48lxq")
 volume_db = -3.0
 max_db = 1.5
 bus = &"SFX"
 
-[node name="StartTimer" type="Timer" parent="."]
+[node name="StartTimer" type="Timer" parent="." unique_id=1687026197]
 wait_time = 3.0
 one_shot = true
 
-[node name="DashCooldownTimer" type="Timer" parent="."]
+[node name="DashCooldownTimer" type="Timer" parent="." unique_id=1496069809]
 wait_time = 3.0
 one_shot = true
 
-[node name="DashDelay" type="Timer" parent="."]
+[node name="DashDelay" type="Timer" parent="." unique_id=1244311578]
 wait_time = 0.25
 one_shot = true
 
-[node name="MaltRushActiveTimer" type="Timer" parent="."]
+[node name="MaltRushActiveTimer" type="Timer" parent="." unique_id=1011856252]
 one_shot = true
 
-[node name="MaltRushCooldownTimer" type="Timer" parent="."]
+[node name="MaltRushCooldownTimer" type="Timer" parent="." unique_id=1673763345]
 one_shot = true
 
 [connection signal="body_entered" from="DeathArea3D" to="." method="_on_death_area_3d_body_entered"]

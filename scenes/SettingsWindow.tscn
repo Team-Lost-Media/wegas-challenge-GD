@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bs035oor8cgug"]
+[gd_scene format=3 uid="uid://bs035oor8cgug"]
 
 [ext_resource type="Script" uid="uid://ctiqwlfv3kn0r" path="res://scenes/settings_window.gd" id="1_36pg8"]
 [ext_resource type="Script" uid="uid://dujk86c4t3d30" path="res://scenes/settings_slider.gd" id="2_007d3"]
@@ -123,7 +123,7 @@ font_size = 32
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Settings" type="Panel"]
+[node name="Settings" type="Panel" unique_id=192393489]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -138,19 +138,16 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_e2lxl")
 script = ExtResource("1_36pg8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2078117620]
 position = Vector2(150, -14)
 scale = Vector2(0.138889, 0.0421238)
 sprite_frames = SubResource("SpriteFrames_oufcy")
 autoplay = "default"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
-libraries = {
-&"": SubResource("AnimationLibrary_jbven")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=549807000]
+libraries/ = SubResource("AnimationLibrary_jbven")
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=532813959]
 clip_children = 2
 layout_mode = 0
 offset_right = 1328.0
@@ -159,7 +156,7 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_qmete")
 expand_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="TextureRect2"]
+[node name="TextureRect" type="TextureRect" parent="TextureRect2" unique_id=1400635133]
 modulate = Color(0.277528, 0.277528, 0.277528, 1)
 layout_mode = 0
 offset_left = -62.0
@@ -170,7 +167,7 @@ mouse_filter = 2
 texture = ExtResource("2_cpgv8")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=377429181]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -185,7 +182,7 @@ text = "Settings"
 label_settings = SubResource("LabelSettings_ka1j2")
 horizontal_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=717482014]
 z_index = 1
 layout_mode = 1
 anchors_preset = 1
@@ -201,7 +198,7 @@ theme_override_fonts/font = ExtResource("4_oufcy")
 theme_override_font_sizes/font_size = 32
 text = "Go Back"
 
-[node name="HSeparator" type="HSeparator" parent="."]
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1038176739]
 z_index = 1
 layout_mode = 0
 offset_left = 7.0
@@ -210,12 +207,12 @@ offset_right = 1328.0
 offset_bottom = 74.0
 theme_override_constants/separation = 0
 
-[node name="Interactable" type="Control" parent="."]
+[node name="Interactable" type="Control" parent="." unique_id=467301096]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ResolutionOptionButton" type="OptionButton" parent="Interactable"]
+[node name="ResolutionOptionButton" type="OptionButton" parent="Interactable" unique_id=1969836407]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
@@ -238,7 +235,7 @@ popup/item_2/id = 2
 popup/item_3/text = "640x360"
 popup/item_3/id = 3
 
-[node name="PanelContainer" type="PanelContainer" parent="Interactable"]
+[node name="PanelContainer" type="PanelContainer" parent="Interactable" unique_id=815176737]
 layout_mode = 0
 offset_left = 1129.0
 offset_top = 137.0
@@ -246,11 +243,11 @@ offset_right = 1153.0
 offset_bottom = 161.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
 
-[node name="FullscreenCheckBox" type="CheckBox" parent="Interactable/PanelContainer"]
+[node name="FullscreenCheckBox" type="CheckBox" parent="Interactable/PanelContainer" unique_id=1835280748]
 z_index = 1
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="Interactable"]
+[node name="PanelContainer2" type="PanelContainer" parent="Interactable" unique_id=903995159]
 layout_mode = 0
 offset_left = 1129.0
 offset_top = 178.0
@@ -258,12 +255,12 @@ offset_right = 1153.0
 offset_bottom = 202.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_t16pp")
 
-[node name="VSyncCheckBox" type="CheckBox" parent="Interactable/PanelContainer2"]
+[node name="VSyncCheckBox" type="CheckBox" parent="Interactable/PanelContainer2" unique_id=778693174]
 z_index = 1
 layout_direction = 2
 layout_mode = 2
 
-[node name="SFXSlider" type="HSlider" parent="Interactable"]
+[node name="SFXSlider" type="HSlider" parent="Interactable" unique_id=387413199]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
@@ -276,7 +273,7 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="BGMSlider" type="HSlider" parent="Interactable"]
+[node name="BGMSlider" type="HSlider" parent="Interactable" unique_id=918346957]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
@@ -289,7 +286,7 @@ max_value = 1.0
 step = 0.05
 value = 1.0
 
-[node name="FOVSlider" type="HSlider" parent="Interactable"]
+[node name="FOVSlider" type="HSlider" parent="Interactable" unique_id=41256356]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
@@ -304,7 +301,7 @@ value = 75.0
 script = ExtResource("2_007d3")
 fov = true
 
-[node name="SensitivitySlider" type="HSlider" parent="Interactable"]
+[node name="SensitivitySlider" type="HSlider" parent="Interactable" unique_id=490285079]
 z_index = 1
 custom_minimum_size = Vector2(0, 45)
 layout_direction = 2
@@ -320,14 +317,14 @@ value = 10.0
 script = ExtResource("2_007d3")
 sensitivity = true
 
-[node name="Labels" type="Control" parent="."]
+[node name="Labels" type="Control" parent="." unique_id=2050059378]
 anchors_preset = 0
 offset_left = 4.0
 offset_top = 87.0
 offset_right = 219.0
 offset_bottom = 87.0
 
-[node name="Resolution" type="Label" parent="Labels"]
+[node name="Resolution" type="Label" parent="Labels" unique_id=88668495]
 z_index = 1
 custom_minimum_size = Vector2(0, 26)
 layout_mode = 0
@@ -336,7 +333,7 @@ offset_bottom = 45.0
 text = "Resolution"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="Fullscreen" type="Label" parent="Labels"]
+[node name="Fullscreen" type="Label" parent="Labels" unique_id=1582648474]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 0
@@ -346,7 +343,7 @@ offset_bottom = 95.0
 text = "Fullscreen"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="VSync" type="Label" parent="Labels"]
+[node name="VSync" type="Label" parent="Labels" unique_id=1041606763]
 z_index = 1
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 0
@@ -356,7 +353,7 @@ offset_bottom = 145.0
 text = "VSync"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="SFX Volume" type="Label" parent="Labels"]
+[node name="SFX Volume" type="Label" parent="Labels" unique_id=265495480]
 z_index = 1
 layout_mode = 0
 offset_top = 150.0
@@ -365,7 +362,7 @@ offset_bottom = 195.0
 text = "SFX Volume"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="BGM Volume" type="Label" parent="Labels"]
+[node name="BGM Volume" type="Label" parent="Labels" unique_id=723761401]
 z_index = 1
 layout_mode = 0
 offset_top = 200.0
@@ -374,7 +371,7 @@ offset_bottom = 245.0
 text = "BGM Volume"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="FOV" type="Label" parent="Labels"]
+[node name="FOV" type="Label" parent="Labels" unique_id=1381095591]
 z_index = 1
 layout_mode = 0
 offset_top = 250.0
@@ -383,7 +380,7 @@ offset_bottom = 295.0
 text = "FOV: 75"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="Sensitivity" type="Label" parent="Labels"]
+[node name="Sensitivity" type="Label" parent="Labels" unique_id=330062347]
 z_index = 1
 layout_mode = 0
 offset_top = 300.0
@@ -392,18 +389,7 @@ offset_bottom = 345.0
 text = "Sensitivity: 10"
 label_settings = SubResource("LabelSettings_oufcy")
 
-[node name="Sensitivity2" type="Label" parent="Labels"]
-z_index = 1
-layout_mode = 0
-offset_left = 382.0
-offset_top = 506.0
-offset_right = 1244.0
-offset_bottom = 573.0
-text = "note: this menu is wip as hell
-gonna change it soon but i wanted to get the demo out sooner"
-label_settings = SubResource("LabelSettings_oufcy")
-
-[node name="reset high score" type="Button" parent="."]
+[node name="reset high score" type="Button" parent="." unique_id=1104872035]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
@@ -421,7 +407,7 @@ theme_override_font_sizes/font_size = 40
 text = "Reset High Score"
 script = ExtResource("4_ee6v7")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=758835068]
 z_index = 1
 layout_mode = 1
 anchors_preset = 7
