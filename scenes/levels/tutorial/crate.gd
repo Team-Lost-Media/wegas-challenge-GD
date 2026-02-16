@@ -19,9 +19,14 @@ func _on_punchable_body_exited(body: Node3D) -> void:
 		punchable = false
 
 func _process(delta: float) -> void:
-	punchable_indicator.visible = punchable
+	punchable_indicator.visible = punchable and !punched
 	if Input.is_action_just_pressed("attack") and punchable and !punched:
 		collision.queue_free()
 		mesh.queue_free()
 		sfx.play()
 		particles.emitting = true
+		punched = true
+		Global.style = "+CRATE"
+		Global.points += 200
+		Global.health += 200/20#handlestylehealthregen
+		StyleSFX.play_style_sfx()

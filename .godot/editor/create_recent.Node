@@ -1,3 +1,6 @@
+TextureRect
+ScrollContainer
+Sprite2D
 GPUParticles3D
 GPUParticlesCollisionBox3D
 CPUParticles3D
@@ -10,6 +13,3 @@ Node3D
 Sprite3D
 Label3D
 Label
-Button
-RichTextLabel
-TextureRect

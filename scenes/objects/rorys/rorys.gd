@@ -95,6 +95,7 @@ func _on_hitstop_timeout() -> void:
 	player.boosted.start(0.5)
 	player.saveable_fall_leniency_timer.start()
 	player.saveable_fall = true
+	player.golden_sigma.modulate = Color("ffffff")
 	Achievements.award("+EXPLODED")
 	await animation_looped
 	position.y = -100

@@ -19,7 +19,7 @@ var achievement_to_icon_dict: Dictionary = {
 	"thnak you.": "res://assets/textures/achievements/thnak you.png", #get saved by golden sigma "your wcleom."
 	"+EXPLODED": "res://assets/textures/achievements/exploded.png", #punch rorys "fuck you rorys"
 	"certified wega expert": "res://assets/textures/achievements/certified wega expert.png", #open the recolorpedia "pdhd in media"
-	"Speedrunner": false, #beat classic mode in less than 40 seconds "you really are a speedy runner"
+	"Speedrunner": "res://assets/textures/achievements/speedrunner.png", #beat classic mode in less than 40 seconds "you really are a speedy runner"
 	"WEGAKILL": "res://assets/textures/achievements/wegakill.png", #reach wegakill rank "oh my god itsl ike the game wegas and the meme lodia"
 	"shoe bench": "res://assets/textures/achievements/shoe bench.png", #get +SHOE BENCH "shoe bench"
 	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"

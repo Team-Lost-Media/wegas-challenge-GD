@@ -10,12 +10,13 @@
 [ext_resource type="AudioStream" uid="uid://n6lujls2y0vf" path="res://assets/SFX/wood tap.mp3" id="8_c4cir"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="9_ki1l2"]
 [ext_resource type="Texture2D" uid="uid://b3vgo8tacnak" path="res://assets/textures/achievements/thnak you.png" id="10_77wv7"]
+[ext_resource type="Texture2D" uid="uid://bip4pwu3ajgva" path="res://assets/textures/godot logo white.png" id="11_th6le"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_osekl"]
 sky_top_color = Color(0.17, 0.085, 0, 1)
-sky_horizon_color = Color(0.1, 0, 0, 1)
+sky_horizon_color = Color(0.101960786, 0, 0, 1)
 sky_curve = 5.51375
-ground_bottom_color = Color(0.06, 0.007999999, 0, 1)
+ground_bottom_color = Color(0.05882353, 0.007843138, 0, 1)
 ground_horizon_color = Color(0.54, 0.15299998, 0, 1)
 ground_curve = 0.0527804
 sun_angle_max = 123.1
@@ -332,12 +333,17 @@ font = ExtResource("9_ki1l2")
 font_size = 41
 
 [node name="thnaks" type="Label3D" parent="Credits Parent/Credits/special thnaks" unique_id=2089258346]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 89.0751, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 76.5751, 0)
 pixel_size = 0.1
-text = "Team Lost Media
-"
+text = "Xetheon
+All of Team Lost Media
+kbzalk & coffee
+GAMR
+Peeblo
+alpha.zero"
 font = ExtResource("9_ki1l2")
 font_size = 50
+line_spacing = 32.0
 
 [node name="Seperator6" type="Label3D" parent="Credits Parent/Credits" unique_id=548193097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -329.7136, 0)
@@ -347,12 +353,37 @@ text = "----------------------------------------
 font = ExtResource("9_ki1l2")
 font_size = 41
 
+[node name="made with godot" type="Node3D" parent="Credits Parent/Credits" unique_id=1788962591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -341.2312, 0)
+
+[node name="music used" type="Label3D" parent="Credits Parent/Credits/made with godot" unique_id=1872910488]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.6738586, 0)
+pixel_size = 0.1
+text = "Made with Godot 4.6"
+font = ExtResource("9_ki1l2")
+font_size = 41
+
+[node name="Sprite3D" type="Sprite3D" parent="Credits Parent/Credits/made with godot" unique_id=1877562590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20.826141, 0)
+pixel_size = 0.03
+texture = ExtResource("11_th6le")
+
+[node name="Seperator7" type="Label3D" parent="Credits Parent/Credits" unique_id=642216275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -386.5136, 0)
+pixel_size = 0.1
+text = "----------------------------------------
+"
+font = ExtResource("9_ki1l2")
+font_size = 41
+
 [node name="thanks for playing" type="Node3D" parent="Credits Parent/Credits" unique_id=359297216]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -348.43118, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -405.2312, 0)
 
 [node name="music used" type="Label3D" parent="Credits Parent/Credits/thanks for playing" unique_id=1802948525]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.826141, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1738586, 0)
 pixel_size = 0.1
 text = "Thanks for playing! :D"
 font = ExtResource("9_ki1l2")
 font_size = 41
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

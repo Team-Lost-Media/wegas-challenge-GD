@@ -21,6 +21,9 @@ func _classic() -> void:
 func _the_idol() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
 
+func _credits() -> void:
+	get_tree().change_scene_to_file("res://scenes/levels/main/mastermode credits test.tscn")
+
 func on_gamemode_quit_pressed() -> void:
 	gamemodes.hide()
 	buttons.show()
@@ -99,5 +102,5 @@ var tips = ["In CLASSIC mode, Wega speeds up as you collect more Wegadolls.",
 "Golden Sigma will always save you after a Rorys Explosion!",
 "You cannot run from Shoe Bench.",
 "Super John can only hit you when he's going at high speed. To tell if he can hit you, look for his particles and for his unique dash animation!",
-"ISuper John can be deflected with ATTACK (Left Click), reversing his velocity."
+"Super John can be deflected with ATTACK (Left Click), reversing his velocity."
 ]

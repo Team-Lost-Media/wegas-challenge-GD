@@ -19,11 +19,13 @@ var punch_tutorial_initiated = false
 @onready var sfx = $SFX
 
 const WEXECUTION = preload("res://assets/BGM/WEXECUTION.mp3")
+@onready var so_retro: Node3D = $"Main/So Retro!"
 
 func _ready() -> void:
 	player.style_panel.hide()
 	wega.hide()
 	wega_labels.hide()
+	so_retro.hide()
 	wegagridmap.hide()
 	StyleSFX.stop()
 	Global.points = 0
@@ -44,6 +46,9 @@ func _process(delta: float) -> void:
 	if wegasleft != group_of_wegas.get_child_count():
 		sfx.play()
 	wegasleft = group_of_wegas.get_child_count()
+	
+	so_retro.rotation.y -= PI * 2 * delta
+	
 	if wegasleft == 0:
 		if final_wegadoll_collected == false:
 			player.velocity.y = 60
@@ -62,6 +67,7 @@ func _process(delta: float) -> void:
 			#player.velocity.y = 4
 			wega.enabled = false
 			wega.position.y = -9999999
+			so_retro.show()
 		
 		#get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
 		#Global.tutorial = false
@@ -78,3 +84,9 @@ func _on_wegadoll_collected() -> void: #this only applies to the first one dw
 	purple_sun_bgm.stop()
 	music.play()
 	SongCredits.show_song_credits("WEXECUTION", "Kiwiquest")
+
+
+func So_Retro(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
+		Global.tutorial = false

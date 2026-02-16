@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
+[ext_resource type="Texture2D" uid="uid://dlf23nb3wl5ra" path="res://assets/textures/golden sigma.png" id="4_absnx"]
 [ext_resource type="Script" uid="uid://brwcsx3yog6er" path="res://scenes/objects/player/health.gd" id="4_bdcal"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
 [ext_resource type="Shader" uid="uid://bnvqk864yprcf" path="res://assets/other/balatro.gdshader" id="5_japq8"]
@@ -420,6 +421,12 @@ grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
 max_value = 1.0
 show_percentage = false
+
+[node name="golden sigma" type="Sprite2D" parent="." unique_id=849221440]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(1785.0625, 961.875)
+scale = Vector2(1.7072227, 0.43444413)
+texture = ExtResource("4_absnx")
 
 [node name="HealthLabel" type="Label" parent="." unique_id=426940117]
 offset_left = 1460.0

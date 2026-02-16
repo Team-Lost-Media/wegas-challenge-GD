@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://bx4ofdrp8dc2v"]
+[gd_scene format=3 uid="uid://bx4ofdrp8dc2v"]
 
 [ext_resource type="Script" uid="uid://dvp0qgaefpsjf" path="res://scenes/levels/main/wcti_main.gd" id="1_2any5"]
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="2_cg5xk"]
@@ -224,7 +224,7 @@ albedo_texture = ExtResource("10_sr6d7")
 radius = 1.0
 height = 4.0
 
-[node name="Node3D2" type="Node3D"]
+[node name="Node3D2" type="Node3D" unique_id=773796077]
 script = ExtResource("1_2any5")
 so_retro_material = SubResource("StandardMaterial3D_7ixl2")
 lap2_sun_color = Color(0.878431, 0.298039, 0.0862745, 1)
@@ -232,21 +232,21 @@ lap2_sky = SubResource("ProceduralSkyMaterial_pcnek")
 hot_particles = SubResource("BoxMesh_c0roo")
 shoe_bench_murder_mode = ExtResource("3_vtxl0")
 
-[node name="wegafadence beat" type="Timer" parent="."]
+[node name="wegafadence beat" type="Timer" parent="." unique_id=386089634]
 wait_time = 1.311
 ignore_time_scale = true
 
-[node name="retro collision" type="StaticBody3D" parent="."]
+[node name="retro collision" type="StaticBody3D" parent="." unique_id=680508113]
 visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="retro collision"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="retro collision" unique_id=550637678]
 shape = SubResource("ConcavePolygonShape3D_c0roo")
 
-[node name="the retros" type="MeshInstance3D" parent="."]
+[node name="the retros" type="MeshInstance3D" parent="." unique_id=1386283399]
 visible = false
 mesh = SubResource("CapsuleMesh_exi62")
 
-[node name="particles" type="CPUParticles3D" parent="."]
+[node name="particles" type="CPUParticles3D" parent="." unique_id=1513543473]
 emitting = false
 amount = 512
 lifetime = 6.0
@@ -259,11 +259,11 @@ initial_velocity_max = 1.0
 angular_velocity_min = -60.0
 angular_velocity_max = 60.0
 
-[node name="Flash" type="CanvasLayer" parent="."]
+[node name="Flash" type="CanvasLayer" parent="." unique_id=921842660]
 layer = 100
 script = ExtResource("3_7ixl2")
 
-[node name="ColorRect" type="ColorRect" parent="Flash"]
+[node name="ColorRect" type="ColorRect" parent="Flash" unique_id=1591892910]
 z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
@@ -273,9 +273,9 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="GUI" type="CanvasLayer" parent="."]
+[node name="GUI" type="CanvasLayer" parent="." unique_id=900655831]
 
-[node name="Label" type="Label" parent="GUI"]
+[node name="Label" type="Label" parent="GUI" unique_id=619170581]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -291,7 +291,7 @@ text = "wegas left: "
 label_settings = SubResource("LabelSettings_t52ot")
 horizontal_alignment = 1
 
-[node name="Message" type="Label" parent="GUI"]
+[node name="Message" type="Label" parent="GUI" unique_id=1081605994]
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.95
@@ -306,10 +306,10 @@ label_settings = SubResource("LabelSettings_mok1j")
 horizontal_alignment = 1
 script = ExtResource("4_ll2y4")
 
-[node name="DisplayTimer" type="Timer" parent="GUI/Message"]
+[node name="DisplayTimer" type="Timer" parent="GUI/Message" unique_id=1417010590]
 one_shot = true
 
-[node name="Shoe Bench Timer" type="Control" parent="."]
+[node name="Shoe Bench Timer" type="Control" parent="." unique_id=1336264306]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -318,7 +318,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="YOU HAVE 3 MINUTES LEFT TO LIVE" type="Label" parent="Shoe Bench Timer"]
+[node name="YOU HAVE 3 MINUTES LEFT TO LIVE" type="Label" parent="Shoe Bench Timer" unique_id=221462669]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -335,7 +335,7 @@ pivot_offset = Vector2(48, 18.5)
 text = "2:51"
 label_settings = SubResource("LabelSettings_exi62")
 
-[node name="BenchBarOutline" type="ColorRect" parent="Shoe Bench Timer"]
+[node name="BenchBarOutline" type="ColorRect" parent="Shoe Bench Timer" unique_id=1223973170]
 layout_mode = 0
 offset_left = 595.62
 offset_top = 791.0
@@ -343,7 +343,7 @@ offset_right = 1338.62
 offset_bottom = 864.0
 color = Color(0.15, 0, 0, 1)
 
-[node name="BenchBar" type="ProgressBar" parent="Shoe Bench Timer"]
+[node name="BenchBar" type="ProgressBar" parent="Shoe Bench Timer" unique_id=649124695]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -365,12 +365,12 @@ step = 1.0
 fill_mode = 1
 show_percentage = false
 
-[node name="the man himself" type="Sprite2D" parent="Shoe Bench Timer"]
+[node name="the man himself" type="Sprite2D" parent="Shoe Bench Timer" unique_id=890965655]
 position = Vector2(589.62, 830)
 scale = Vector2(0.306, 0.154)
 texture = ExtResource("7_bcxo4")
 
-[node name="Maltigi" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
+[node name="Maltigi" parent="." unique_id=507587384 node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
 visible = false
 player = NodePath("../Player")
@@ -381,13 +381,13 @@ death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 overshoot_distance = 13.0
 line_color = Color(1, 0, 0, 1)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Maltigi"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Maltigi" unique_id=829047433]
 light_color = Color(1, 0, 0.0166664, 1)
 light_energy = 7.5
 shadow_enabled = true
 omni_range = 10.0
 
-[node name="Wega" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("2_cqmtp")]
+[node name="Wega" parent="." unique_id=1153250286 node_paths=PackedStringArray("playerpos") instance=ExtResource("2_cqmtp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43857, 2.07934, 13.9563)
 playerpos = NodePath("../Player")
 speed = 11.5
@@ -398,13 +398,13 @@ wcti_enraged_speed = 13.0
 wcti_enraged_texture = ExtResource("7_mok1j")
 new_texture_pixel_size = 0.008
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Wega"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Wega" unique_id=485080973]
 light_color = Color(1, 0, 0.0166664, 1)
 light_energy = 7.5
 shadow_enabled = true
 omni_range = 10.0
 
-[node name="Rorys" parent="." node_paths=PackedStringArray("group_of_wegas", "player", "flash") instance=ExtResource("12_bjl6n")]
+[node name="Rorys" parent="." unique_id=1286628605 node_paths=PackedStringArray("group_of_wegas", "player", "flash") instance=ExtResource("12_bjl6n")]
 transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999, -0.000726419, 0.00129934, 0.000728062, 0.999999, 0, -605, 0)
 visible = false
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
@@ -417,12 +417,12 @@ explosion_sfx = ExtResource("13_5niun")
 flash = NodePath("../Flash")
 damage = 99.0
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Rorys"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Rorys" unique_id=1668091159]
 light_color = Color(0, 0, 1, 1)
 light_energy = 7.5
 omni_range = 10.0
 
-[node name="Ultra Irios" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("15_lr4ys")]
+[node name="Ultra Irios" parent="." unique_id=552207570 node_paths=PackedStringArray("playerpos") instance=ExtResource("15_lr4ys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.0667, 5.38595, 0)
 visible = false
 playerpos = NodePath("../Player")
@@ -431,23 +431,23 @@ enable_manually = true
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 fireball_death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Ultra Irios"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Ultra Irios" unique_id=1281598300]
 light_color = Color(1, 0, 0.0156863, 1)
 light_energy = 7.5
 omni_range = 10.0
 
-[node name="Shoe Bench" parent="." node_paths=PackedStringArray("playerpos") instance=ExtResource("17_vtxl0")]
+[node name="Shoe Bench" parent="." unique_id=828339901 node_paths=PackedStringArray("playerpos") instance=ExtResource("17_vtxl0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -41.6904, 58.2354)
 visible = false
 playerpos = NodePath("../Player")
 speed = 25.0
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Shoe Bench"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Shoe Bench" unique_id=1714625924]
 light_color = Color(1, 0, 0.0156863, 1)
 light_energy = 15.0
 omni_range = 20.0
 
-[node name="SuperJohn" parent="." node_paths=PackedStringArray("player") instance=ExtResource("18_7ytgl")]
+[node name="SuperJohn" parent="." unique_id=1271437271 node_paths=PackedStringArray("player") instance=ExtResource("18_7ytgl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 86.018)
 visible = false
 player = NodePath("../Player")
@@ -457,18 +457,18 @@ damage = 20.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 line_color = Color(1, 0.5019608, 0, 1)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="SuperJohn"]
+[node name="OmniLight3D" type="OmniLight3D" parent="SuperJohn" unique_id=279060872]
 light_color = Color(1, 0.433333, 0, 1)
 light_energy = 7.5
 omni_range = 20.0
 
-[node name="Glitchigi" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
+[node name="Glitchigi" parent="." unique_id=1705860827 node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
 player = NodePath("../Player")
 enable_manually = true
 dash_cooldown = 2.0
-dash_delay = 0.75
+dash_delay = 1.25
 dash_speed = 150.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 died_to = "glitchigi"
@@ -479,14 +479,14 @@ malt_rush_multiplier = 3.0
 malt_rush_duration = 4.0
 malt_rush_cooldown = 4.0
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Glitchigi"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Glitchigi" unique_id=496142872]
 light_color = Color(1, 0, 0.0166664, 1)
 light_energy = 250.0
 shadow_enabled = true
 omni_range = 7.0
 omni_attenuation = 2.0
 
-[node name="Player" parent="." instance=ExtResource("3_k8crp")]
+[node name="Player" parent="." unique_id=1837101770 instance=ExtResource("3_k8crp")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.538, 2.3513, 8.212)
 wall_min_slide_angle = 0.785398
 floor_constant_speed = true
@@ -495,27 +495,27 @@ DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
 fall_saves = 1
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Player"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=410377228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.333, 0)
 light_color = Color(1, 0.87, 0.926333, 1)
 light_energy = 5.0
 omni_range = 20.0
 omni_attenuation = 2.0
 
-[node name="Main" type="Node3D" parent="."]
+[node name="Main" type="Node3D" parent="." unique_id=800051952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485046, 0.712285, 0.156724)
 
-[node name="WorldEnvironment2" type="WorldEnvironment" parent="Main"]
+[node name="WorldEnvironment2" type="WorldEnvironment" parent="Main" unique_id=201667071]
 environment = SubResource("Environment_dwkvq")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Main"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Main" unique_id=132583276]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, 6.65672, 8.46529, -0.156724)
 light_color = Color(0.484, 0.088, 0.88, 1)
 light_energy = 8.0
 light_angular_distance = 15.0
 shadow_enabled = true
 
-[node name="GridMap" type="GridMap" parent="Main"]
+[node name="GridMap" type="GridMap" parent="Main" unique_id=2092990733]
 mesh_library = ExtResource("7_1a3yk")
 cell_size = Vector3(2, 1.2, 2)
 data = {
@@ -523,7 +523,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 10, 0)
 
-[node name="Lap2GridMap" type="GridMap" parent="Main"]
+[node name="Lap2GridMap" type="GridMap" parent="Main" unique_id=1880690839]
 mesh_library = ExtResource("7_1a3yk")
 cell_size = Vector3(2, 1.2, 2)
 data = {
@@ -531,7 +531,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="The Idol GridMap" type="GridMap" parent="Main"]
+[node name="The Idol GridMap" type="GridMap" parent="Main" unique_id=1725865075]
 mesh_library = ExtResource("7_1a3yk")
 cell_size = Vector3(2, 1.2, 2)
 data = {
@@ -539,9 +539,9 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 24, 0)
 
-[node name="Idol Text" type="Node3D" parent="Main/The Idol GridMap"]
+[node name="Idol Text" type="Node3D" parent="Main/The Idol GridMap" unique_id=2075134712]
 
-[node name="THE IDOL" type="Label3D" parent="Main/The Idol GridMap/Idol Text"]
+[node name="THE IDOL" type="Label3D" parent="Main/The Idol GridMap/Idol Text" unique_id=144534411]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -114.672, 71.1992, -2.86287)
 pixel_size = 0.5
 alpha_cut = 1
@@ -551,7 +551,7 @@ font = ExtResource("2_sr6d7")
 font_size = 41
 outline_size = 21
 
-[node name="THE IDOL2" type="Label3D" parent="Main/The Idol GridMap/Idol Text"]
+[node name="THE IDOL2" type="Label3D" parent="Main/The Idol GridMap/Idol Text" unique_id=166982393]
 transform = Transform3D(-4.37114e-08, 0, 1, -1, -4.37114e-08, -4.37114e-08, 4.37114e-08, -1, 1.91069e-15, -114.672, 49.2074, -1.58921)
 pixel_size = 0.5
 alpha_cut = 1
@@ -561,31 +561,29 @@ font = ExtResource("2_sr6d7")
 font_size = 41
 outline_size = 21
 
-[node name="the idol" type="Node3D" parent="Main/The Idol GridMap"]
+[node name="the idol" type="Node3D" parent="Main/The Idol GridMap" unique_id=1162645203]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -119, 30, -3)
 
-[node name="WegaDoll" type="MeshInstance3D" parent="Main/The Idol GridMap/the idol"]
+[node name="WegaDoll" type="MeshInstance3D" parent="Main/The Idol GridMap/the idol" unique_id=693038159]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 material_overlay = SubResource("StandardMaterial3D_sw7cd")
 mesh = ExtResource("20_7ytgl")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Main/The Idol GridMap/the idol"]
-libraries = {
-&"": SubResource("AnimationLibrary_xrb3n")
-}
-autoplay = "spin"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main/The Idol GridMap/the idol" unique_id=1527136279]
+libraries/ = SubResource("AnimationLibrary_xrb3n")
+autoplay = &"spin"
 
-[node name="Area3D" type="Area3D" parent="Main/The Idol GridMap/the idol"]
+[node name="Area3D" type="Area3D" parent="Main/The Idol GridMap/the idol" unique_id=1468425492]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Main/The Idol GridMap/the idol/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Main/The Idol GridMap/the idol/Area3D" unique_id=1772207565]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
 shape = SubResource("CapsuleShape3D_fror2")
 
-[node name="deathbarrier" parent="Main" instance=ExtResource("6_goutp")]
+[node name="deathbarrier" parent="Main" unique_id=828394307 instance=ExtResource("6_goutp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 
-[node name="deathbarrier2" parent="Main" instance=ExtResource("6_goutp")]
+[node name="deathbarrier2" parent="Main" unique_id=1665937858 instance=ExtResource("6_goutp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 
@@ -593,16 +591,16 @@ death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.214, 6.25702, -38.1552)
 shape = SubResource("BoxShape3D_lr4ys")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Main/deathbarrier2"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Main/deathbarrier2" unique_id=364894512]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2151, 6.25702, -91.4692)
 shape = SubResource("BoxShape3D_vtxl0")
 
-[node name="skybox" type="Node3D" parent="Main"]
+[node name="skybox" type="Node3D" parent="Main" unique_id=1774836930]
 visible = false
 
-[node name="Node3D" type="Node3D" parent="Main/skybox"]
+[node name="Node3D" type="Node3D" parent="Main/skybox" unique_id=1959530087]
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Main/skybox/Node3D"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Main/skybox/Node3D" unique_id=617032021]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 56, 0)
 light_color = Color(1, 0.333333, 0, 1)
 light_energy = 1000.0
@@ -611,1690 +609,1690 @@ light_size = 11.785
 spot_range = 500.0
 spot_angle = 60.0
 
-[node name="Sprite3D" type="Sprite3D" parent="Main/skybox"]
+[node name="Sprite3D" type="Sprite3D" parent="Main/skybox" unique_id=188789926]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 840, 1500)
 pixel_size = 10.0
 transparent = false
 texture = ExtResource("19_lr4ys")
 
-[node name="Sprite3D2" type="Sprite3D" parent="Main/skybox"]
+[node name="Sprite3D2" type="Sprite3D" parent="Main/skybox" unique_id=1982803440]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 840, -1500)
 pixel_size = 10.0
 transparent = false
 texture = ExtResource("19_lr4ys")
 
-[node name="Sprite3D3" type="Sprite3D" parent="Main/skybox"]
+[node name="Sprite3D3" type="Sprite3D" parent="Main/skybox" unique_id=1460728036]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1500, 840, 0)
 pixel_size = 10.0
 transparent = false
 texture = ExtResource("19_lr4ys")
 
-[node name="Sprite3D4" type="Sprite3D" parent="Main/skybox"]
+[node name="Sprite3D4" type="Sprite3D" parent="Main/skybox" unique_id=1903167566]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1500, 840, 0)
 pixel_size = 10.0
 transparent = false
 texture = ExtResource("19_lr4ys")
 
-[node name="WEXECUTION" type="AudioStreamPlayer" parent="."]
+[node name="WEXECUTION" type="AudioStreamPlayer" parent="." unique_id=1659792650]
 stream = ExtResource("7_50t62")
 autoplay = true
 bus = &"BGM"
 parameters/looping = true
 
-[node name="WEGAFADENCE" type="AudioStreamPlayer" parent="."]
+[node name="WEGAFADENCE" type="AudioStreamPlayer" parent="." unique_id=704039080]
 stream = ExtResource("10_y2ang")
 bus = &"BGM"
 
-[node name="SFX" type="AudioStreamPlayer" parent="."]
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1985738882]
 stream = ExtResource("8_7jrn3")
 volume_db = -12.0
 pitch_scale = 1.7
 bus = &"SFX"
 
-[node name="So Retro!" type="Node3D" parent="."]
+[node name="So Retro!" type="Node3D" parent="." unique_id=2055064379]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.5, 1.99608, 8)
 visible = false
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="So Retro!"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="So Retro!" unique_id=745414268]
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0.0944268, 0, 0)
 mesh = ExtResource("8_qo4dl")
 surface_material_override/0 = SubResource("StandardMaterial3D_kracn")
 
-[node name="Area3D" type="Area3D" parent="So Retro!"]
+[node name="Area3D" type="Area3D" parent="So Retro!" unique_id=240702812]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="So Retro!/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="So Retro!/Area3D" unique_id=2093745991]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.979556, 0)
 shape = SubResource("CapsuleShape3D_mok1j")
 
-[node name="Lap2StartPause" type="Timer" parent="."]
+[node name="Lap2StartPause" type="Timer" parent="." unique_id=1557167924]
 wait_time = 1.5
 one_shot = true
 ignore_time_scale = true
 
-[node name="group of wegas" type="Node3D" parent="."]
+[node name="group of wegas" type="Node3D" parent="." unique_id=1704071538]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00006, 0)
 
-[node name="wegadoll" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll" parent="group of wegas" unique_id=1087938238 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -0.7)
 
-[node name="wegadoll2" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll2" parent="group of wegas" unique_id=1091418229 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -2.8)
 
-[node name="wegadoll3" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll3" parent="group of wegas" unique_id=1613802963 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -4.9)
 
-[node name="wegadoll4" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll4" parent="group of wegas" unique_id=511633082 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -7)
 
-[node name="wegadoll5" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll5" parent="group of wegas" unique_id=857119803 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -9.1)
 
-[node name="wegadoll6" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll6" parent="group of wegas" unique_id=703429876 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -11.2)
 
-[node name="wegadoll7" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll7" parent="group of wegas" unique_id=1943325144 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -13.3)
 
-[node name="wegadoll165" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll165" parent="group of wegas" unique_id=237418793 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 1, -12.8586)
 
-[node name="wegadoll173" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll173" parent="group of wegas" unique_id=301651683 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -4.83254)
 
-[node name="wegadoll174" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll174" parent="group of wegas" unique_id=162589840 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -2.69792)
 
-[node name="wegadoll175" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll175" parent="group of wegas" unique_id=1586800881 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -0.792882)
 
-[node name="wegadoll176" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll176" parent="group of wegas" unique_id=714989007 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, 1.25439)
 
-[node name="wegadoll177" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll177" parent="group of wegas" unique_id=664786270 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, 3.22363)
 
-[node name="wegadoll180" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll180" parent="group of wegas" unique_id=1129364400 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 1, 9.05208)
 
-[node name="wegadoll181" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll181" parent="group of wegas" unique_id=1069537904 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.502, 1, 9.05208)
 
-[node name="wegadoll182" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll182" parent="group of wegas" unique_id=1916685887 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55744, 1, 9.05208)
 
-[node name="wegadoll183" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll183" parent="group of wegas" unique_id=1471268441 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59509, 1, 9.05208)
 
-[node name="wegadoll188" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll188" parent="group of wegas" unique_id=919154661 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 19.2166)
 
-[node name="wegadoll213" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll213" parent="group of wegas" unique_id=1852771157 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 18.9786)
 
-[node name="wegadoll226" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll226" parent="group of wegas" unique_id=1330708063 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 21.0121)
 
-[node name="wegadoll227" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll227" parent="group of wegas" unique_id=1764842413 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 23.1598)
 
-[node name="wegadoll230" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll230" parent="group of wegas" unique_id=777521903 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 29.2467)
 
-[node name="wegadoll214" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll214" parent="group of wegas" unique_id=1108164496 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 17.0431)
 
-[node name="wegadoll217" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll217" parent="group of wegas" unique_id=1979452685 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 11.1869)
 
-[node name="wegadoll218" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll218" parent="group of wegas" unique_id=1200531100 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 9.14304)
 
-[node name="wegadoll219" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll219" parent="group of wegas" unique_id=1737081238 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3973, 1, 9.14304)
 
-[node name="wegadoll221" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll221" parent="group of wegas" unique_id=1911471353 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 9.14304)
 
-[node name="wegadoll222" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll222" parent="group of wegas" unique_id=854851374 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 6.95665)
 
-[node name="wegadoll223" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll223" parent="group of wegas" unique_id=540838361 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 4.98853)
 
-[node name="wegadoll224" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll224" parent="group of wegas" unique_id=131963420 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 3.00107)
 
-[node name="wegadoll225" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll225" parent="group of wegas" unique_id=812195224 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 1.07829)
 
-[node name="wegadoll198" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll198" parent="group of wegas" unique_id=1986802584 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75557, -2.62066, 19.2166)
 
-[node name="wegadoll199" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll199" parent="group of wegas" unique_id=1726170497 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88142, -2.62066, 19.2166)
 
-[node name="wegadoll200" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll200" parent="group of wegas" unique_id=1088910373 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9756, -2.62066, 19.2166)
 
-[node name="wegadoll201" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll201" parent="group of wegas" unique_id=1751418527 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.862, -2.62066, 19.2166)
 
-[node name="wegadoll202" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll202" parent="group of wegas" unique_id=1659915842 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8679, -2.62066, 19.2166)
 
-[node name="wegadoll166" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll166" parent="group of wegas" unique_id=468033259 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5268, 1, -12.8586)
 
-[node name="wegadoll167" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll167" parent="group of wegas" unique_id=977427178 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.518, 1, -12.8586)
 
-[node name="wegadoll168" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll168" parent="group of wegas" unique_id=1019543681 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4288, 1, -12.8586)
 
-[node name="wegadoll169" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll169" parent="group of wegas" unique_id=1786357896 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.42, 1, -12.8586)
 
-[node name="wegadoll8" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll8" parent="group of wegas" unique_id=211279066 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -15.4)
 
-[node name="wegadoll9" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll9" parent="group of wegas" unique_id=433012840 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -17.5)
 
-[node name="wegadoll10" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll10" parent="group of wegas" unique_id=1616398964 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -19.6)
 
-[node name="wegadoll11" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll11" parent="group of wegas" unique_id=996372676 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -21.7)
 
-[node name="wegadoll12" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll12" parent="group of wegas" unique_id=166740254 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.703953, 1, -0.767226)
 
-[node name="wegadoll13" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll13" parent="group of wegas" unique_id=138809661 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.80336, 1, -0.816996)
 
-[node name="wegadoll14" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll14" parent="group of wegas" unique_id=508758760 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.90277, 1, -0.866764)
 
-[node name="wegadoll15" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll15" parent="group of wegas" unique_id=127762801 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00218, 1, -0.916533)
 
-[node name="wegadoll16" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll16" parent="group of wegas" unique_id=1903221003 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.10159, 1, -0.966302)
 
-[node name="wegadoll17" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll17" parent="group of wegas" unique_id=429303952 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.201, 1, -1.01607)
 
-[node name="wegadoll20" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll20" parent="group of wegas" unique_id=1558963230 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.672, 1.0077, -0.833434)
 
-[node name="wegadoll34" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll34" parent="group of wegas" unique_id=881426397 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.672, 1.0077, -0.833434)
 
-[node name="wegadoll23" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll23" parent="group of wegas" unique_id=1426169174 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3873, 1, -2.71805)
 
-[node name="wegadoll24" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll24" parent="group of wegas" unique_id=1041850092 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4173, 1, -4.81783)
 
-[node name="wegadoll25" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll25" parent="group of wegas" unique_id=374883357 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4473, 1, -6.91762)
 
-[node name="wegadoll26" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll26" parent="group of wegas" unique_id=2064648485 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4773, 1, -9.0174)
 
-[node name="wegadoll27" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll27" parent="group of wegas" unique_id=712075065 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5073, 1, -11.1172)
 
-[node name="wegadoll28" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll28" parent="group of wegas" unique_id=1982921230 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5372, 1, -13.217)
 
-[node name="wegadoll29" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll29" parent="group of wegas" unique_id=339731512 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5672, 1, -15.3168)
 
-[node name="wegadoll30" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll30" parent="group of wegas" unique_id=996255393 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5972, 1, -17.4165)
 
-[node name="wegadoll31" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll31" parent="group of wegas" unique_id=1013877871 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6272, 1, -19.5163)
 
-[node name="wegadoll32" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll32" parent="group of wegas" unique_id=1765505761 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6572, 1, -21.6161)
 
-[node name="wegadoll33" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll33" parent="group of wegas" unique_id=688960825 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.996101, 0, 0.0882163, 0, 1, 0, -0.0882163, 0, 0.996101, 10.5882, 1, -23.9164)
 
-[node name="wegadoll36" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll36" parent="group of wegas" unique_id=1692346708 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, 2.86897, 1, -22.6467)
 
-[node name="wegadoll37" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll37" parent="group of wegas" unique_id=987200974 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, 0.769001, 1, -22.6578)
 
-[node name="wegadoll38" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll38" parent="group of wegas" unique_id=1295248995 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -1.33097, 1, -22.6688)
 
-[node name="wegadoll39" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll39" parent="group of wegas" unique_id=2017016146 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -3.43094, 1, -22.6799)
 
-[node name="wegadoll40" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll40" parent="group of wegas" unique_id=792405836 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -5.53091, 1, -22.691)
 
-[node name="wegadoll41" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll41" parent="group of wegas" unique_id=1392831185 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -7.63088, 1, -22.702)
 
-[node name="wegadoll42" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll42" parent="group of wegas" unique_id=1056987858 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -9.73085, 1, -22.7131)
 
-[node name="wegadoll43" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll43" parent="group of wegas" unique_id=1751872788 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.4558, 1, -22.7242)
 
-[node name="wegadoll44" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll44" parent="group of wegas" unique_id=1062895231 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8308, 1, -22.7242)
 
-[node name="wegadoll45" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll45" parent="group of wegas" unique_id=1470138875 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5513, 1, -22.7242)
 
-[node name="wegadoll46" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll46" parent="group of wegas" unique_id=1183823137 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.4849, 1, -22.7242)
 
-[node name="wegadoll47" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll47" parent="group of wegas" unique_id=687432511 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.5457, 1, -22.7242)
 
-[node name="wegadoll48" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll48" parent="group of wegas" unique_id=1031098694 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.4485, 1, -22.7242)
 
-[node name="wegadoll49" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll49" parent="group of wegas" unique_id=732509824 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.4004, 1, -22.7242)
 
-[node name="wegadoll54" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll54" parent="group of wegas" unique_id=1787457333 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503, 0.0995803, -1, 0, -4.37114e-08, -23.4004, 1, -32.807)
 
-[node name="wegadoll55" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll55" parent="group of wegas" unique_id=1330360089 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5378, 1, -32.807)
 
-[node name="wegadoll56" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll56" parent="group of wegas" unique_id=554725838 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.6397, 1, -32.807)
 
-[node name="wegadoll57" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll57" parent="group of wegas" unique_id=848071258 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.5653, 1, -32.807)
 
-[node name="wegadoll58" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll58" parent="group of wegas" unique_id=57254609 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5135, 1, -32.807)
 
-[node name="wegadoll59" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll59" parent="group of wegas" unique_id=877964955 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5446, 1, -32.807)
 
-[node name="wegadoll60" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll60" parent="group of wegas" unique_id=727369300 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.5049, 1, -32.807)
 
-[node name="wegadoll61" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll61" parent="group of wegas" unique_id=766831947 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54871, 1, -32.807)
 
-[node name="wegadoll62" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll62" parent="group of wegas" unique_id=770903115 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.48555, 1, -32.807)
 
-[node name="wegadoll63" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll63" parent="group of wegas" unique_id=1410723588 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.45715, 1, -32.807)
 
-[node name="wegadoll64" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll64" parent="group of wegas" unique_id=1449148775 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.49922, 1, -32.807)
 
-[node name="wegadoll65" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll65" parent="group of wegas" unique_id=1943036593 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5772, 1, -32.807)
 
-[node name="wegadoll66" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll66" parent="group of wegas" unique_id=70798511 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.40608, 1, -32.807)
 
-[node name="wegadoll67" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll67" parent="group of wegas" unique_id=1830674809 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -32.807)
 
-[node name="wegadoll231" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll231" parent="group of wegas" unique_id=1628008754 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -30.5086)
 
-[node name="wegadoll232" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll232" parent="group of wegas" unique_id=469900337 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -28.6455)
 
-[node name="wegadoll233" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll233" parent="group of wegas" unique_id=1695915352 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -26.7444)
 
-[node name="wegadoll234" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll234" parent="group of wegas" unique_id=984392734 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -24.6279)
 
-[node name="wegadoll68" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll68" parent="group of wegas" unique_id=1376911371 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, -32.807)
 
-[node name="wegadoll69" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll69" parent="group of wegas" unique_id=411385236 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.44176, 1, -32.807)
 
-[node name="wegadoll70" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll70" parent="group of wegas" unique_id=1961489418 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.42419, 1, -32.807)
 
-[node name="wegadoll71" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll71" parent="group of wegas" unique_id=2107717638 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4864, 1, -32.807)
 
-[node name="wegadoll72" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll72" parent="group of wegas" unique_id=55347233 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.4666, 1, -32.807)
 
-[node name="wegadoll73" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll73" parent="group of wegas" unique_id=2042425247 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4937, 1, -32.807)
 
-[node name="wegadoll74" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll74" parent="group of wegas" unique_id=853544073 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5214, 1, -32.807)
 
-[node name="wegadoll75" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll75" parent="group of wegas" unique_id=1792190415 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.4566, 1, -32.807)
 
-[node name="wegadoll76" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll76" parent="group of wegas" unique_id=506782738 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.4723, 1, -32.807)
 
-[node name="wegadoll77" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll77" parent="group of wegas" unique_id=92792483 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.4535, 1, -32.807)
 
-[node name="wegadoll110" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll110" parent="group of wegas" unique_id=1448302103 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503, 0.0995803, -1, 0, -4.37114e-08, -23.4004, 4.58861, 31.1929)
 
-[node name="wegadoll111" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll111" parent="group of wegas" unique_id=1021830323 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5378, 4.58861, 31.1929)
 
-[node name="wegadoll112" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll112" parent="group of wegas" unique_id=1106247928 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.6397, 4.58861, 31.1929)
 
-[node name="wegadoll113" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll113" parent="group of wegas" unique_id=1357678681 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.5653, 4.58861, 31.1929)
 
-[node name="wegadoll114" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll114" parent="group of wegas" unique_id=1899263305 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5135, 4.58861, 31.1929)
 
-[node name="wegadoll115" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll115" parent="group of wegas" unique_id=105170178 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5446, 4.58861, 31.1929)
 
-[node name="wegadoll116" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll116" parent="group of wegas" unique_id=1757467826 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.5049, 4.58861, 31.1929)
 
-[node name="wegadoll117" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll117" parent="group of wegas" unique_id=1252741643 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54871, 4.58861, 31.1929)
 
-[node name="wegadoll118" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll118" parent="group of wegas" unique_id=1152094817 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.48555, 4.58861, 31.1929)
 
-[node name="wegadoll119" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll119" parent="group of wegas" unique_id=189399174 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.45715, 4.58861, 31.1929)
 
-[node name="wegadoll123" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll123" parent="group of wegas" unique_id=207178138 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, 31.1929)
 
-[node name="wegadoll124" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll124" parent="group of wegas" unique_id=1950176102 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 31.1929)
 
-[node name="wegadoll125" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll125" parent="group of wegas" unique_id=1336756102 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.44176, 1, 31.1929)
 
-[node name="wegadoll126" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll126" parent="group of wegas" unique_id=842030228 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.42419, 1, 31.1929)
 
-[node name="wegadoll127" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll127" parent="group of wegas" unique_id=111748131 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4864, 1, 31.1929)
 
-[node name="wegadoll128" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll128" parent="group of wegas" unique_id=1707775768 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.4666, 1, 31.1929)
 
-[node name="wegadoll129" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll129" parent="group of wegas" unique_id=384737401 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4937, 1, 31.1929)
 
-[node name="wegadoll130" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll130" parent="group of wegas" unique_id=1504203230 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5214, 1, 31.1929)
 
-[node name="wegadoll131" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll131" parent="group of wegas" unique_id=1744027921 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.4566, 1, 31.1929)
 
-[node name="wegadoll132" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll132" parent="group of wegas" unique_id=1273926959 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.4723, 1, 31.1929)
 
-[node name="wegadoll133" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll133" parent="group of wegas" unique_id=909849406 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.4535, 1, 31.1929)
 
-[node name="wegadoll78" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll78" parent="group of wegas" unique_id=196568055 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, -30.8486)
 
-[node name="wegadoll79" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll79" parent="group of wegas" unique_id=1773575792 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -20.65)
 
-[node name="wegadoll80" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll80" parent="group of wegas" unique_id=1719481356 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -18.6977)
 
-[node name="wegadoll81" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll81" parent="group of wegas" unique_id=575240193 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -16.6714)
 
-[node name="wegadoll82" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll82" parent="group of wegas" unique_id=1431744411 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -14.6101)
 
-[node name="wegadoll83" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll83" parent="group of wegas" unique_id=824498365 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -12.6767)
 
-[node name="wegadoll84" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll84" parent="group of wegas" unique_id=2093670635 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -10.5235)
 
-[node name="wegadoll85" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll85" parent="group of wegas" unique_id=2014482759 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -8.66616)
 
-[node name="wegadoll86" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll86" parent="group of wegas" unique_id=275313936 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -6.64276)
 
-[node name="wegadoll87" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll87" parent="group of wegas" unique_id=2062515198 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -4.58066)
 
-[node name="wegadoll88" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll88" parent="group of wegas" unique_id=920606588 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -2.53526)
 
-[node name="wegadoll89" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll89" parent="group of wegas" unique_id=1441625707 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -0.554787)
 
-[node name="wegadoll90" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll90" parent="group of wegas" unique_id=955586889 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 1.45345)
 
-[node name="wegadoll91" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll91" parent="group of wegas" unique_id=77601283 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 3.24413)
 
-[node name="wegadoll92" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll92" parent="group of wegas" unique_id=1895344279 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 5.29426)
 
-[node name="wegadoll99" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll99" parent="group of wegas" unique_id=327290301 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.88108, 7.12672)
 
-[node name="wegadoll100" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll100" parent="group of wegas" unique_id=1463362329 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 10.7483)
 
-[node name="wegadoll101" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll101" parent="group of wegas" unique_id=381433925 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 12.6613)
 
-[node name="wegadoll102" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll102" parent="group of wegas" unique_id=874268373 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 14.6757)
 
-[node name="wegadoll103" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll103" parent="group of wegas" unique_id=139755760 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 16.8146)
 
-[node name="wegadoll104" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll104" parent="group of wegas" unique_id=1251875136 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.82446, 8.86411)
 
-[node name="wegadoll107" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll107" parent="group of wegas" unique_id=904715532 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 27.3341)
 
-[node name="wegadoll135" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll135" parent="group of wegas" unique_id=729382738 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -14.7019)
 
-[node name="wegadoll158" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll158" parent="group of wegas" unique_id=33225103 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -16.8381)
 
-[node name="wegadoll159" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll159" parent="group of wegas" unique_id=116683593 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -18.7599)
 
-[node name="wegadoll160" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll160" parent="group of wegas" unique_id=1143382844 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -20.8298)
 
-[node name="wegadoll136" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll136" parent="group of wegas" unique_id=607830601 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -12.6398)
 
-[node name="wegadoll137" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll137" parent="group of wegas" unique_id=473588913 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -10.5944)
 
-[node name="wegadoll138" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll138" parent="group of wegas" unique_id=1196425887 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -8.61393)
 
-[node name="wegadoll139" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll139" parent="group of wegas" unique_id=335557929 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -6.60569)
 
-[node name="wegadoll140" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll140" parent="group of wegas" unique_id=972983188 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -4.81501)
 
-[node name="wegadoll141" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll141" parent="group of wegas" unique_id=1632956784 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -2.76488)
 
-[node name="wegadoll142" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll142" parent="group of wegas" unique_id=1789654818 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -0.800866)
 
-[node name="wegadoll143" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll143" parent="group of wegas" unique_id=906123072 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 1.18609)
 
-[node name="wegadoll144" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll144" parent="group of wegas" unique_id=2115873840 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 3.2661)
 
-[node name="wegadoll145" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll145" parent="group of wegas" unique_id=1247660785 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 5.27509)
 
-[node name="wegadoll146" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll146" parent="group of wegas" unique_id=1989027509 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 7.34194)
 
-[node name="wegadoll147" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll147" parent="group of wegas" unique_id=1755255667 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 9.38286)
 
-[node name="wegadoll148" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll148" parent="group of wegas" unique_id=1429406115 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 11.4018)
 
-[node name="wegadoll149" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll149" parent="group of wegas" unique_id=206295627 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 13.3687)
 
-[node name="wegadoll150" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll150" parent="group of wegas" unique_id=485458095 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 15.2817)
 
-[node name="wegadoll151" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll151" parent="group of wegas" unique_id=932030350 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 17.2961)
 
-[node name="wegadoll152" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll152" parent="group of wegas" unique_id=1887910819 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 19.435)
 
-[node name="wegadoll108" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll108" parent="group of wegas" unique_id=344005947 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 29.2013)
 
-[node name="wegadoll109" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll109" parent="group of wegas" unique_id=168356043 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 31.1571)
 
-[node name="wegadoll178" parent="group of wegas" instance=ExtResource("9_4fuep")]
+[node name="wegadoll178" parent="group of wegas" unique_id=140787544 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
-[node name="group of wegas TWO" type="Node3D" parent="."]
+[node name="group of wegas TWO" type="Node3D" parent="." unique_id=93993854]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00006, 0)
 
-[node name="wegadoll" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll" parent="group of wegas TWO" unique_id=1325561178 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -0.7)
 
-[node name="wegadoll2" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll2" parent="group of wegas TWO" unique_id=344275217 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -2.8)
 
-[node name="wegadoll3" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll3" parent="group of wegas TWO" unique_id=1000443902 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -4.9)
 
-[node name="wegadoll4" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll4" parent="group of wegas TWO" unique_id=1972727143 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -7)
 
-[node name="wegadoll5" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll5" parent="group of wegas TWO" unique_id=2089553261 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -9.1)
 
-[node name="wegadoll6" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll6" parent="group of wegas TWO" unique_id=394207772 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -11.2)
 
-[node name="wegadoll7" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll7" parent="group of wegas TWO" unique_id=1031618798 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -13.3)
 
-[node name="wegadoll165" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll165" parent="group of wegas TWO" unique_id=650102931 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 1, -12.8586)
 
-[node name="wegadoll173" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll173" parent="group of wegas TWO" unique_id=698106422 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -4.83254)
 
-[node name="wegadoll174" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll174" parent="group of wegas TWO" unique_id=1754526616 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -2.69792)
 
-[node name="wegadoll175" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll175" parent="group of wegas TWO" unique_id=1025520625 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -0.792882)
 
-[node name="wegadoll176" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll176" parent="group of wegas TWO" unique_id=2086281239 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, 1.25439)
 
-[node name="wegadoll177" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll177" parent="group of wegas TWO" unique_id=464776444 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, 3.22363)
 
-[node name="wegadoll180" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll180" parent="group of wegas TWO" unique_id=1453006847 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 1, 9.05208)
 
-[node name="wegadoll181" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll181" parent="group of wegas TWO" unique_id=380899177 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.502, 1, 9.05208)
 
-[node name="wegadoll182" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll182" parent="group of wegas TWO" unique_id=2076087114 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.55744, 1, 9.05208)
 
-[node name="wegadoll183" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll183" parent="group of wegas TWO" unique_id=101126406 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59509, 1, 9.05208)
 
-[node name="wegadoll188" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll188" parent="group of wegas TWO" unique_id=1947551099 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 19.2166)
 
-[node name="wegadoll194" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll194" parent="group of wegas TWO" unique_id=1324940194 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 21.6153)
 
-[node name="wegadoll195" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll195" parent="group of wegas TWO" unique_id=557262750 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 23.2986)
 
-[node name="wegadoll196" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll196" parent="group of wegas TWO" unique_id=576755905 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 25.2986)
 
-[node name="wegadoll197" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll197" parent="group of wegas TWO" unique_id=1528922884 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 29.2986)
 
-[node name="wegadoll203" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll203" parent="group of wegas TWO" unique_id=594445605 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 27.2986)
 
-[node name="wegadoll204" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll204" parent="group of wegas TWO" unique_id=1919283206 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 31.2986)
 
-[node name="wegadoll205" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll205" parent="group of wegas TWO" unique_id=346378030 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 33.2986)
 
-[node name="wegadoll206" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll206" parent="group of wegas TWO" unique_id=883891200 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 35.2986)
 
-[node name="wegadoll207" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll207" parent="group of wegas TWO" unique_id=92374287 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 37.2986)
 
-[node name="wegadoll208" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll208" parent="group of wegas TWO" unique_id=2101419297 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.69596, -2.62066, 39.2986)
 
-[node name="wegadoll209" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll209" parent="group of wegas TWO" unique_id=1241005838 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.69596, -2.62066, 39.2986)
 
-[node name="wegadoll189" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll189" parent="group of wegas TWO" unique_id=2024906517 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39417, -2.62066, 19.2166)
 
-[node name="wegadoll190" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll190" parent="group of wegas TWO" unique_id=580483085 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00858, -2.62066, 19.2166)
 
-[node name="wegadoll191" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll191" parent="group of wegas TWO" unique_id=171864406 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11557, -2.62066, 19.2166)
 
-[node name="wegadoll192" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll192" parent="group of wegas TWO" unique_id=1896825695 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.387586, -2.62066, 19.2166)
 
-[node name="wegadoll193" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll193" parent="group of wegas TWO" unique_id=1012152172 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54279, -2.62066, 19.2166)
 
-[node name="wegadoll213" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll213" parent="group of wegas TWO" unique_id=1593058471 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 18.9786)
 
-[node name="wegadoll240" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll240" parent="group of wegas TWO" unique_id=1964443263 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4191, -1.33666, 18.9786)
 
-[node name="wegadoll226" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll226" parent="group of wegas TWO" unique_id=1476671865 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 21.0121)
 
-[node name="wegadoll227" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll227" parent="group of wegas TWO" unique_id=502044484 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 23.1598)
 
-[node name="wegadoll230" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll230" parent="group of wegas TWO" unique_id=648717497 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 29.2467)
 
-[node name="wegadoll214" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll214" parent="group of wegas TWO" unique_id=1619723655 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, -1.33666, 17.0431)
 
-[node name="wegadoll217" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll217" parent="group of wegas TWO" unique_id=1628926456 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 11.1869)
 
-[node name="wegadoll218" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll218" parent="group of wegas TWO" unique_id=1925722085 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4191, 1, 9.14304)
 
-[node name="wegadoll219" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll219" parent="group of wegas TWO" unique_id=703417224 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.3973, 1, 9.14304)
 
-[node name="wegadoll221" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll221" parent="group of wegas TWO" unique_id=1035530161 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 9.14304)
 
-[node name="wegadoll222" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll222" parent="group of wegas TWO" unique_id=958602952 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 6.95665)
 
-[node name="wegadoll223" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll223" parent="group of wegas TWO" unique_id=1961823378 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 4.98853)
 
-[node name="wegadoll224" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll224" parent="group of wegas TWO" unique_id=1362102731 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 3.00107)
 
-[node name="wegadoll225" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll225" parent="group of wegas TWO" unique_id=963962184 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5457, 1, 1.07829)
 
-[node name="wegadoll198" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll198" parent="group of wegas TWO" unique_id=1978835961 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.75557, -2.62066, 19.2166)
 
-[node name="wegadoll199" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll199" parent="group of wegas TWO" unique_id=792717213 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.88142, -2.62066, 19.2166)
 
-[node name="wegadoll200" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll200" parent="group of wegas TWO" unique_id=1572629628 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9756, -2.62066, 19.2166)
 
-[node name="wegadoll201" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll201" parent="group of wegas TWO" unique_id=1219060621 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.862, -2.62066, 19.2166)
 
-[node name="wegadoll202" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll202" parent="group of wegas TWO" unique_id=1934589559 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8679, -2.62066, 19.2166)
 
-[node name="wegadoll166" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll166" parent="group of wegas TWO" unique_id=531768447 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.5268, 1, -12.8586)
 
-[node name="wegadoll167" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll167" parent="group of wegas TWO" unique_id=1837555247 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.518, 1, -12.8586)
 
-[node name="wegadoll168" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll168" parent="group of wegas TWO" unique_id=1039332488 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.4288, 1, -12.8586)
 
-[node name="wegadoll169" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll169" parent="group of wegas TWO" unique_id=1468041659 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.42, 1, -12.8586)
 
-[node name="wegadoll8" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll8" parent="group of wegas TWO" unique_id=2046341452 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -15.4)
 
-[node name="wegadoll9" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll9" parent="group of wegas TWO" unique_id=1653448819 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -17.5)
 
-[node name="wegadoll10" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll10" parent="group of wegas TWO" unique_id=1182294336 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -19.6)
 
-[node name="wegadoll11" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll11" parent="group of wegas TWO" unique_id=1355164907 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, -21.7)
 
-[node name="wegadoll12" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll12" parent="group of wegas TWO" unique_id=1716549042 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.703953, 1, -0.767226)
 
-[node name="wegadoll13" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll13" parent="group of wegas TWO" unique_id=2141640022 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.80336, 1, -0.816996)
 
-[node name="wegadoll14" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll14" parent="group of wegas TWO" unique_id=134510718 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.90277, 1, -0.866764)
 
-[node name="wegadoll15" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll15" parent="group of wegas TWO" unique_id=980081665 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00218, 1, -0.916533)
 
-[node name="wegadoll16" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll16" parent="group of wegas TWO" unique_id=879957648 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.10159, 1, -0.966302)
 
-[node name="wegadoll17" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll17" parent="group of wegas TWO" unique_id=1810528912 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11.201, 1, -1.01607)
 
-[node name="wegadoll20" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll20" parent="group of wegas TWO" unique_id=64043159 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14.672, 1.0077, -0.833434)
 
-[node name="wegadoll34" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll34" parent="group of wegas TWO" unique_id=291121955 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.672, 1.0077, -0.833434)
 
-[node name="wegadoll21" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll21" parent="group of wegas TWO" unique_id=333326388 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.6574, 1, -0.777413)
 
-[node name="wegadoll22" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll22" parent="group of wegas TWO" unique_id=736970556 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.575, 1, -0.936266)
 
-[node name="wegadoll23" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll23" parent="group of wegas TWO" unique_id=1960561209 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3873, 1, -2.71805)
 
-[node name="wegadoll24" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll24" parent="group of wegas TWO" unique_id=118836458 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4173, 1, -4.81783)
 
-[node name="wegadoll25" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll25" parent="group of wegas TWO" unique_id=455414397 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4473, 1, -6.91762)
 
-[node name="wegadoll26" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll26" parent="group of wegas TWO" unique_id=1227030573 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4773, 1, -9.0174)
 
-[node name="wegadoll27" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll27" parent="group of wegas TWO" unique_id=614913640 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5073, 1, -11.1172)
 
-[node name="wegadoll28" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll28" parent="group of wegas TWO" unique_id=790465818 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5372, 1, -13.217)
 
-[node name="wegadoll29" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll29" parent="group of wegas TWO" unique_id=2020183564 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5672, 1, -15.3168)
 
-[node name="wegadoll35" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll35" parent="group of wegas TWO" unique_id=1818666326 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5672, 1, -15.3168)
 
-[node name="wegadoll50" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll50" parent="group of wegas TWO" unique_id=1705631340 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5672, 1, -15.3168)
 
-[node name="wegadoll122" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll122" parent="group of wegas TWO" unique_id=1526899316 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -14.4806)
 
-[node name="wegadoll241" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll241" parent="group of wegas TWO" unique_id=1046726482 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5672, 1, -14.4806)
 
-[node name="wegadoll242" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll242" parent="group of wegas TWO" unique_id=829440900 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5672, 1, -14.4806)
 
-[node name="wegadoll243" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll243" parent="group of wegas TWO" unique_id=601661546 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5672, 1, -14.4806)
 
-[node name="wegadoll244" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll244" parent="group of wegas TWO" unique_id=1507228281 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -14.4806)
 
-[node name="wegadoll251" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll251" parent="group of wegas TWO" unique_id=1906457400 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -2.48064)
 
-[node name="wegadoll252" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll252" parent="group of wegas TWO" unique_id=130143325 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5672, 1, -2.48064)
 
-[node name="wegadoll253" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll253" parent="group of wegas TWO" unique_id=1547258037 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5672, 1, -2.48064)
 
-[node name="wegadoll254" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll254" parent="group of wegas TWO" unique_id=1925464251 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5672, 1, -2.48064)
 
-[node name="wegadoll245" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll245" parent="group of wegas TWO" unique_id=639223007 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -12.4806)
 
-[node name="wegadoll246" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll246" parent="group of wegas TWO" unique_id=13002140 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -10.4806)
 
-[node name="wegadoll247" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll247" parent="group of wegas TWO" unique_id=1667545101 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -8.48064)
 
-[node name="wegadoll248" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll248" parent="group of wegas TWO" unique_id=737801354 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -6.48064)
 
-[node name="wegadoll249" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll249" parent="group of wegas TWO" unique_id=786722612 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -4.48064)
 
-[node name="wegadoll255" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll255" parent="group of wegas TWO" unique_id=232606780 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -10.4806)
 
-[node name="wegadoll256" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll256" parent="group of wegas TWO" unique_id=534765454 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -8.48064)
 
-[node name="wegadoll257" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll257" parent="group of wegas TWO" unique_id=416414495 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -6.48064)
 
-[node name="wegadoll258" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll258" parent="group of wegas TWO" unique_id=2002016557 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5672, 1, -4.48064)
 
-[node name="wegadoll250" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll250" parent="group of wegas TWO" unique_id=1575631546 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5672, 1, -2.48064)
 
-[node name="wegadoll51" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll51" parent="group of wegas TWO" unique_id=1713755466 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.567, -1.4, -14.9038)
 
-[node name="wegadoll52" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll52" parent="group of wegas TWO" unique_id=1091194250 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.567, -1.4, -14.4808)
 
-[node name="wegadoll53" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll53" parent="group of wegas TWO" unique_id=1452158662 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.567, -1.4, -14.4808)
 
-[node name="wegadoll121" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll121" parent="group of wegas TWO" unique_id=816948702 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.567, -1.4, -14.4808)
 
-[node name="wegadoll30" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll30" parent="group of wegas TWO" unique_id=959432935 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5972, 1, -17.4165)
 
-[node name="wegadoll31" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll31" parent="group of wegas TWO" unique_id=1100420989 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6272, 1, -19.5163)
 
-[node name="wegadoll32" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll32" parent="group of wegas TWO" unique_id=101111339 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6572, 1, -21.6161)
 
-[node name="wegadoll33" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll33" parent="group of wegas TWO" unique_id=1835644068 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.996101, 0, 0.0882163, 0, 1, 0, -0.0882163, 0, 0.996101, 10.5882, 1, -24.3422)
 
-[node name="wegadoll36" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll36" parent="group of wegas TWO" unique_id=575758515 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, 2.86897, 1, -22.6467)
 
-[node name="wegadoll37" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll37" parent="group of wegas TWO" unique_id=540721978 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, 0.769001, 1, -22.6578)
 
-[node name="wegadoll38" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll38" parent="group of wegas TWO" unique_id=1284605001 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -1.33097, 1, -22.6688)
 
-[node name="wegadoll39" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll39" parent="group of wegas TWO" unique_id=522559700 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -3.43094, 1, -22.6799)
 
-[node name="wegadoll40" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll40" parent="group of wegas TWO" unique_id=1737417843 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -5.53091, 1, -22.691)
 
-[node name="wegadoll41" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll41" parent="group of wegas TWO" unique_id=307954933 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -7.63088, 1, -22.702)
 
-[node name="wegadoll42" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll42" parent="group of wegas TWO" unique_id=1734067604 instance=ExtResource("9_4fuep")]
 transform = Transform3D(0.0354053, 0, 0.999373, 0, 1, 0, -0.999373, 0, 0.0354053, -9.73085, 1, -22.7131)
 
-[node name="wegadoll43" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll43" parent="group of wegas TWO" unique_id=1113638342 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.4558, 1, -22.7242)
 
-[node name="wegadoll44" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll44" parent="group of wegas TWO" unique_id=48075476 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.8308, 1, -22.7242)
 
-[node name="wegadoll45" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll45" parent="group of wegas TWO" unique_id=2079064916 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5513, 1, -22.7242)
 
-[node name="wegadoll46" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll46" parent="group of wegas TWO" unique_id=388069403 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.4849, 1, -22.7242)
 
-[node name="wegadoll47" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll47" parent="group of wegas TWO" unique_id=1707172574 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.5457, 1, -22.7242)
 
-[node name="wegadoll48" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll48" parent="group of wegas TWO" unique_id=2079249935 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.4485, 1, -22.7242)
 
-[node name="wegadoll49" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll49" parent="group of wegas TWO" unique_id=1380018364 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.4004, 1, -22.7242)
 
-[node name="wegadoll54" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll54" parent="group of wegas TWO" unique_id=484685599 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503, 0.0995803, -1, 0, -4.37114e-08, -23.4004, 1, -32.807)
 
-[node name="wegadoll55" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll55" parent="group of wegas TWO" unique_id=781777254 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5378, 1, -32.807)
 
-[node name="wegadoll304" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll304" parent="group of wegas TWO" unique_id=1646014368 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5378, 4.65146, -32.807)
 
-[node name="wegadoll312" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll312" parent="group of wegas TWO" unique_id=1186108308 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -32.807)
 
-[node name="wegadoll318" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll318" parent="group of wegas TWO" unique_id=142721122 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -30.807)
 
-[node name="wegadoll319" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll319" parent="group of wegas TWO" unique_id=1998114086 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -28.807)
 
-[node name="wegadoll320" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll320" parent="group of wegas TWO" unique_id=1984602191 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -26.807)
 
-[node name="wegadoll321" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll321" parent="group of wegas TWO" unique_id=1268317659 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -24.807)
 
-[node name="wegadoll322" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll322" parent="group of wegas TWO" unique_id=770143662 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -22.807)
 
-[node name="wegadoll323" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll323" parent="group of wegas TWO" unique_id=341189062 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -20.807)
 
-[node name="wegadoll324" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll324" parent="group of wegas TWO" unique_id=2020775570 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -18.807)
 
-[node name="wegadoll325" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll325" parent="group of wegas TWO" unique_id=855421865 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -16.807)
 
-[node name="wegadoll326" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll326" parent="group of wegas TWO" unique_id=921226291 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -14.807)
 
-[node name="wegadoll327" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll327" parent="group of wegas TWO" unique_id=1409369350 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5378, 4.65146, -12.807)
 
-[node name="wegadoll328" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll328" parent="group of wegas TWO" unique_id=321629920 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5378, 4.65146, -12.807)
 
-[node name="wegadoll313" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll313" parent="group of wegas TWO" unique_id=1967238763 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.5378, 4.65146, -32.807)
 
-[node name="wegadoll314" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll314" parent="group of wegas TWO" unique_id=1260959758 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.5378, 4.65146, -32.807)
 
-[node name="wegadoll315" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll315" parent="group of wegas TWO" unique_id=1732835417 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -32.807)
 
-[node name="wegadoll316" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll316" parent="group of wegas TWO" unique_id=1124812327 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -30.807)
 
-[node name="wegadoll317" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll317" parent="group of wegas TWO" unique_id=1678843540 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 4.65146, -28.807)
 
-[node name="wegadoll329" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll329" parent="group of wegas TWO" unique_id=886914998 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -20.807)
 
-[node name="wegadoll330" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll330" parent="group of wegas TWO" unique_id=1571824076 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -18.807)
 
-[node name="wegadoll331" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll331" parent="group of wegas TWO" unique_id=1799485687 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -16.807)
 
-[node name="wegadoll332" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll332" parent="group of wegas TWO" unique_id=1386460619 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -14.807)
 
-[node name="wegadoll333" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll333" parent="group of wegas TWO" unique_id=474196234 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5378, 8.22502, -12.807)
 
-[node name="wegadoll340" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll340" parent="group of wegas TWO" unique_id=321274526 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -47.5378, 8.22502, -20.807)
 
-[node name="wegadoll341" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll341" parent="group of wegas TWO" unique_id=1041256998 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -18.807)
 
-[node name="wegadoll342" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll342" parent="group of wegas TWO" unique_id=1186322621 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -16.807)
 
-[node name="wegadoll343" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll343" parent="group of wegas TWO" unique_id=690277352 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -14.807)
 
-[node name="wegadoll344" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll344" parent="group of wegas TWO" unique_id=330646030 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 8.22502, -12.807)
 
-[node name="wegadoll348" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll348" parent="group of wegas TWO" unique_id=933188019 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, -2.807)
 
-[node name="wegadoll349" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll349" parent="group of wegas TWO" unique_id=482058663 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, -0.806999)
 
-[node name="wegadoll350" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll350" parent="group of wegas TWO" unique_id=1731852590 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -47.5378, 13.0845, 1.193)
 
-[node name="wegadoll351" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll351" parent="group of wegas TWO" unique_id=249038737 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, -2.807)
 
-[node name="wegadoll352" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll352" parent="group of wegas TWO" unique_id=71473014 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, -0.806999)
 
-[node name="wegadoll353" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll353" parent="group of wegas TWO" unique_id=336648063 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 1.193)
 
-[node name="wegadoll366" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll366" parent="group of wegas TWO" unique_id=886949725 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 3.193)
 
-[node name="wegadoll367" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll367" parent="group of wegas TWO" unique_id=874611919 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 5.193)
 
-[node name="wegadoll368" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll368" parent="group of wegas TWO" unique_id=960493184 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -27.5378, 13.0845, 7.193)
 
-[node name="wegadoll369" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll369" parent="group of wegas TWO" unique_id=1984282465 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -4.807)
 
-[node name="wegadoll370" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll370" parent="group of wegas TWO" unique_id=20808256 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -2.807)
 
-[node name="wegadoll371" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll371" parent="group of wegas TWO" unique_id=2114428289 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, -0.806999)
 
-[node name="wegadoll372" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll372" parent="group of wegas TWO" unique_id=1027091980 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, 1.193)
 
-[node name="wegadoll373" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll373" parent="group of wegas TWO" unique_id=486165574 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -17.5378, 13.0845, 3.193)
 
-[node name="wegadoll374" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll374" parent="group of wegas TWO" unique_id=972435124 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -19.5378, 13.0845, 3.193)
 
-[node name="wegadoll375" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll375" parent="group of wegas TWO" unique_id=121020798 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -21.5378, 13.0845, 3.193)
 
-[node name="wegadoll354" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll354" parent="group of wegas TWO" unique_id=955233329 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 9.193)
 
-[node name="wegadoll357" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll357" parent="group of wegas TWO" unique_id=425046851 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 7.193)
 
-[node name="wegadoll358" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll358" parent="group of wegas TWO" unique_id=1478829589 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -41.5378, 13.0845, 7.193)
 
-[node name="wegadoll359" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll359" parent="group of wegas TWO" unique_id=1192316243 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -39.5378, 13.0845, 7.193)
 
-[node name="wegadoll360" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll360" parent="group of wegas TWO" unique_id=1588677191 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -37.5378, 13.0845, 7.193)
 
-[node name="wegadoll361" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll361" parent="group of wegas TWO" unique_id=1095611694 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -35.5378, 13.0845, 7.193)
 
-[node name="wegadoll362" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll362" parent="group of wegas TWO" unique_id=1982825955 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -33.5378, 13.0845, 7.193)
 
-[node name="wegadoll363" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll363" parent="group of wegas TWO" unique_id=1111039608 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -37.5378, 13.0845, 13.193)
 
-[node name="wegadoll364" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll364" parent="group of wegas TWO" unique_id=199694274 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -35.5378, 13.0845, 13.193)
 
-[node name="wegadoll365" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll365" parent="group of wegas TWO" unique_id=46212504 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -33.5378, 13.0845, 13.193)
 
-[node name="wegadoll355" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll355" parent="group of wegas TWO" unique_id=980712828 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 11.193)
 
-[node name="wegadoll356" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll356" parent="group of wegas TWO" unique_id=1388714244 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37112e-08, 0.00300196, 0.999995, 1.3122e-10, 0.999995, -0.00300196, -1, 0, -4.37114e-08, -43.5378, 13.0845, 13.193)
 
-[node name="wegadoll334" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll334" parent="group of wegas TWO" unique_id=1522277136 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41.5378, 8.22502, -12.807)
 
-[node name="wegadoll335" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll335" parent="group of wegas TWO" unique_id=693584253 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5378, 8.22502, -12.807)
 
-[node name="wegadoll336" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll336" parent="group of wegas TWO" unique_id=673223732 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -45.5378, 8.22502, -12.807)
 
-[node name="wegadoll337" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll337" parent="group of wegas TWO" unique_id=64521442 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -45.5378, 8.22502, -20.807)
 
-[node name="wegadoll338" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll338" parent="group of wegas TWO" unique_id=377881311 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.5378, 8.22502, -20.807)
 
-[node name="wegadoll339" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll339" parent="group of wegas TWO" unique_id=1096346675 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -41.5378, 8.22502, -20.807)
 
-[node name="wegadoll56" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll56" parent="group of wegas TWO" unique_id=1549439082 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.6397, 1, -32.807)
 
-[node name="wegadoll57" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll57" parent="group of wegas TWO" unique_id=1947406471 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.5653, 1, -32.807)
 
-[node name="wegadoll58" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll58" parent="group of wegas TWO" unique_id=835163479 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5135, 1, -32.807)
 
-[node name="wegadoll59" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll59" parent="group of wegas TWO" unique_id=2055037391 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5446, 1, -32.807)
 
-[node name="wegadoll60" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll60" parent="group of wegas TWO" unique_id=555655366 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.5049, 1, -32.807)
 
-[node name="wegadoll61" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll61" parent="group of wegas TWO" unique_id=188201076 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54871, 1, -32.807)
 
-[node name="wegadoll62" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll62" parent="group of wegas TWO" unique_id=1068543552 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.48555, 1, -32.807)
 
-[node name="wegadoll63" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll63" parent="group of wegas TWO" unique_id=1569914370 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.45715, 1, -32.807)
 
-[node name="wegadoll64" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll64" parent="group of wegas TWO" unique_id=1308920012 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.49922, 1, -32.807)
 
-[node name="wegadoll65" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll65" parent="group of wegas TWO" unique_id=322857689 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5772, 1, -32.807)
 
-[node name="wegadoll66" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll66" parent="group of wegas TWO" unique_id=1124919653 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.40608, 1, -32.807)
 
-[node name="wegadoll67" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll67" parent="group of wegas TWO" unique_id=281751239 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -32.807)
 
-[node name="wegadoll231" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll231" parent="group of wegas TWO" unique_id=63464344 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -30.5086)
 
-[node name="wegadoll232" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll232" parent="group of wegas TWO" unique_id=776674268 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -28.6455)
 
-[node name="wegadoll233" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll233" parent="group of wegas TWO" unique_id=1866447240 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -26.7444)
 
-[node name="wegadoll234" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll234" parent="group of wegas TWO" unique_id=424400433 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, -24.6279)
 
-[node name="wegadoll68" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll68" parent="group of wegas TWO" unique_id=1063794572 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, -32.807)
 
-[node name="wegadoll69" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll69" parent="group of wegas TWO" unique_id=289310899 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.44176, 1, -32.807)
 
-[node name="wegadoll70" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll70" parent="group of wegas TWO" unique_id=1903347822 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.42419, 1, -32.807)
 
-[node name="wegadoll71" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll71" parent="group of wegas TWO" unique_id=2068764894 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4864, 1, -32.807)
 
-[node name="wegadoll72" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll72" parent="group of wegas TWO" unique_id=1695134696 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.4666, 1, -32.807)
 
-[node name="wegadoll73" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll73" parent="group of wegas TWO" unique_id=1372141116 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4937, 1, -32.807)
 
-[node name="wegadoll74" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll74" parent="group of wegas TWO" unique_id=389115507 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5214, 1, -32.807)
 
-[node name="wegadoll75" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll75" parent="group of wegas TWO" unique_id=2004196556 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.4566, 1, -32.807)
 
-[node name="wegadoll76" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll76" parent="group of wegas TWO" unique_id=109514604 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.4723, 1, -32.807)
 
-[node name="wegadoll77" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll77" parent="group of wegas TWO" unique_id=79009332 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.4535, 1, -32.807)
 
-[node name="wegadoll110" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll110" parent="group of wegas TWO" unique_id=1219527736 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503, 0.0995803, -1, 0, -4.37114e-08, -23.4004, 4.58861, 31.1929)
 
-[node name="wegadoll120" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll120" parent="group of wegas TWO" unique_id=63517991 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.34941e-08, -0.0995803, 0.99503, -4.35279e-09, 0.99503, 0.0995803, -1, 0, -4.37114e-08, -25.4004, 4.58861, 31.1929)
 
-[node name="wegadoll111" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll111" parent="group of wegas TWO" unique_id=483857429 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.5378, 4.58861, 31.1929)
 
-[node name="wegadoll112" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll112" parent="group of wegas TWO" unique_id=1318544052 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19.6397, 4.58861, 31.1929)
 
-[node name="wegadoll113" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll113" parent="group of wegas TWO" unique_id=1743491538 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.5653, 4.58861, 31.1929)
 
-[node name="wegadoll114" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll114" parent="group of wegas TWO" unique_id=1091152578 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.5135, 4.58861, 31.1929)
 
-[node name="wegadoll115" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll115" parent="group of wegas TWO" unique_id=1415637872 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.5446, 4.58861, 31.1929)
 
-[node name="wegadoll116" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll116" parent="group of wegas TWO" unique_id=1043197629 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.5049, 4.58861, 31.1929)
 
-[node name="wegadoll117" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll117" parent="group of wegas TWO" unique_id=2089294224 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.54871, 4.58861, 31.1929)
 
-[node name="wegadoll118" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll118" parent="group of wegas TWO" unique_id=1833984177 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.48555, 4.58861, 31.1929)
 
-[node name="wegadoll119" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll119" parent="group of wegas TWO" unique_id=784610952 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.45715, 4.58861, 31.1929)
 
-[node name="wegadoll123" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll123" parent="group of wegas TWO" unique_id=2137989356 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.43334, 1, 31.1929)
 
-[node name="wegadoll124" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll124" parent="group of wegas TWO" unique_id=1775462447 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 31.1929)
 
-[node name="wegadoll134" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll134" parent="group of wegas TWO" unique_id=15318296 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 33.2391)
 
-[node name="wegadoll153" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll153" parent="group of wegas TWO" unique_id=1168100223 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 34.9544)
 
-[node name="wegadoll154" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll154" parent="group of wegas TWO" unique_id=891820803 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 37.1372)
 
-[node name="wegadoll155" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll155" parent="group of wegas TWO" unique_id=428310655 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.40263, 1, 38.9707)
 
-[node name="wegadoll125" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll125" parent="group of wegas TWO" unique_id=889525909 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.44176, 1, 31.1929)
 
-[node name="wegadoll126" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll126" parent="group of wegas TWO" unique_id=1381147543 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.42419, 1, 31.1929)
 
-[node name="wegadoll127" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll127" parent="group of wegas TWO" unique_id=494715614 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4864, 1, 31.1929)
 
-[node name="wegadoll128" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll128" parent="group of wegas TWO" unique_id=945015798 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.4666, 1, 31.1929)
 
-[node name="wegadoll129" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll129" parent="group of wegas TWO" unique_id=213080831 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.4937, 1, 31.1929)
 
-[node name="wegadoll130" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll130" parent="group of wegas TWO" unique_id=443644515 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5214, 1, 31.1929)
 
-[node name="wegadoll131" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll131" parent="group of wegas TWO" unique_id=1892326768 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.4566, 1, 31.1929)
 
-[node name="wegadoll132" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll132" parent="group of wegas TWO" unique_id=885799526 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.4723, 1, 31.1929)
 
-[node name="wegadoll78" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll78" parent="group of wegas TWO" unique_id=415874364 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, -30.8486)
 
-[node name="wegadoll79" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll79" parent="group of wegas TWO" unique_id=1819141405 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -20.65)
 
-[node name="wegadoll80" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll80" parent="group of wegas TWO" unique_id=164034780 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -18.6977)
 
-[node name="wegadoll81" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll81" parent="group of wegas TWO" unique_id=1062008676 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -16.6714)
 
-[node name="wegadoll82" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll82" parent="group of wegas TWO" unique_id=1375472540 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -14.6101)
 
-[node name="wegadoll83" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll83" parent="group of wegas TWO" unique_id=583785639 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -12.6767)
 
-[node name="wegadoll259" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll259" parent="group of wegas TWO" unique_id=865583259 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.5114, 9.5694, -12.7184)
 
-[node name="wegadoll260" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll260" parent="group of wegas TWO" unique_id=354777636 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5114, 9.5694, -12.7184)
 
-[node name="wegadoll261" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll261" parent="group of wegas TWO" unique_id=1944402635 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.5114, 9.5694, -12.7184)
 
-[node name="wegadoll262" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll262" parent="group of wegas TWO" unique_id=797727708 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.51145, 9.5694, -12.7184)
 
-[node name="wegadoll263" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll263" parent="group of wegas TWO" unique_id=1387381828 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.51145, 9.5694, -14.7184)
 
-[node name="wegadoll264" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll264" parent="group of wegas TWO" unique_id=2108228736 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.51145, 9.5694, -16.7184)
 
-[node name="wegadoll265" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll265" parent="group of wegas TWO" unique_id=1997296699 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.51145, 9.5694, -18.7184)
 
-[node name="wegadoll266" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll266" parent="group of wegas TWO" unique_id=91135869 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -18.7184)
 
-[node name="wegadoll267" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll267" parent="group of wegas TWO" unique_id=1303430752 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -20.7184)
 
-[node name="wegadoll268" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll268" parent="group of wegas TWO" unique_id=903261958 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -22.7184)
 
-[node name="wegadoll269" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll269" parent="group of wegas TWO" unique_id=1346651481 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -24.7184)
 
-[node name="wegadoll270" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll270" parent="group of wegas TWO" unique_id=802510235 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -26.7184)
 
-[node name="wegadoll271" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll271" parent="group of wegas TWO" unique_id=277200128 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.5114, 13.0295, -28.7184)
 
-[node name="wegadoll272" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll272" parent="group of wegas TWO" unique_id=2114612510 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.51145, 13.0295, -28.7184)
 
-[node name="wegadoll273" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll273" parent="group of wegas TWO" unique_id=653530843 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.51145, 13.0295, -28.7184)
 
-[node name="wegadoll274" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll274" parent="group of wegas TWO" unique_id=1784860705 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.51145, 13.0295, -28.7184)
 
-[node name="wegadoll275" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll275" parent="group of wegas TWO" unique_id=1778247395 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -28.7184)
 
-[node name="wegadoll276" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll276" parent="group of wegas TWO" unique_id=107010913 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -18.7184)
 
-[node name="wegadoll277" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll277" parent="group of wegas TWO" unique_id=674464567 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -16.7184)
 
-[node name="wegadoll278" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll278" parent="group of wegas TWO" unique_id=1830429345 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -14.7184)
 
-[node name="wegadoll279" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll279" parent="group of wegas TWO" unique_id=508991973 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -12.7184)
 
-[node name="wegadoll280" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll280" parent="group of wegas TWO" unique_id=1161163940 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -10.7184)
 
-[node name="wegadoll281" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll281" parent="group of wegas TWO" unique_id=449695709 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -8.71842)
 
-[node name="wegadoll282" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll282" parent="group of wegas TWO" unique_id=1383016677 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -6.71842)
 
-[node name="wegadoll297" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll297" parent="group of wegas TWO" unique_id=1566359375 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, -6.71842)
 
-[node name="wegadoll298" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll298" parent="group of wegas TWO" unique_id=2082981111 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, -4.71842)
 
-[node name="wegadoll299" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll299" parent="group of wegas TWO" unique_id=668025827 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, -2.71842)
 
-[node name="wegadoll300" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll300" parent="group of wegas TWO" unique_id=1711909435 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, -0.718422)
 
-[node name="wegadoll301" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll301" parent="group of wegas TWO" unique_id=57780776 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, 1.28158)
 
-[node name="wegadoll302" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll302" parent="group of wegas TWO" unique_id=334529651 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, 3.28158)
 
-[node name="wegadoll303" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll303" parent="group of wegas TWO" unique_id=1898988430 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, 5.28158)
 
-[node name="wegadoll305" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll305" parent="group of wegas TWO" unique_id=156613233 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 5.28158)
 
-[node name="wegadoll306" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll306" parent="group of wegas TWO" unique_id=2039909726 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 7.28158)
 
-[node name="wegadoll307" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll307" parent="group of wegas TWO" unique_id=1817176612 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 9.28158)
 
-[node name="wegadoll308" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll308" parent="group of wegas TWO" unique_id=2018594458 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 11.2816)
 
-[node name="wegadoll309" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll309" parent="group of wegas TWO" unique_id=1423337044 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 13.2816)
 
-[node name="wegadoll310" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll310" parent="group of wegas TWO" unique_id=237293863 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, 15.2816)
 
-[node name="wegadoll283" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll283" parent="group of wegas TWO" unique_id=979137259 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.511448, 13.0295, -4.71842)
 
-[node name="wegadoll284" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll284" parent="group of wegas TWO" unique_id=620810206 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.51145, 13.0295, -4.71842)
 
-[node name="wegadoll285" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll285" parent="group of wegas TWO" unique_id=1218901953 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.51145, 13.0295, -4.71842)
 
-[node name="wegadoll286" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll286" parent="group of wegas TWO" unique_id=1210664760 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.51145, 13.0295, -4.71842)
 
-[node name="wegadoll287" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll287" parent="group of wegas TWO" unique_id=2010367207 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 8.51145, 13.0295, -4.71842)
 
-[node name="wegadoll288" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll288" parent="group of wegas TWO" unique_id=770652023 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.5114, 13.0295, -4.71842)
 
-[node name="wegadoll289" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll289" parent="group of wegas TWO" unique_id=1339467229 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12.5114, 13.0295, -4.71842)
 
-[node name="wegadoll290" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll290" parent="group of wegas TWO" unique_id=946486489 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -17.4886, 13.0295, -8.71842)
 
-[node name="wegadoll291" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll291" parent="group of wegas TWO" unique_id=1025788718 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.4886, 13.0295, -8.71842)
 
-[node name="wegadoll292" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll292" parent="group of wegas TWO" unique_id=558815333 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -13.4886, 13.0295, -8.71842)
 
-[node name="wegadoll293" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll293" parent="group of wegas TWO" unique_id=267594224 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -11.4886, 13.0295, -8.71842)
 
-[node name="wegadoll294" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll294" parent="group of wegas TWO" unique_id=1256122653 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.48855, 13.0295, -8.71842)
 
-[node name="wegadoll295" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll295" parent="group of wegas TWO" unique_id=2097677249 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.48855, 13.0295, -8.71842)
 
-[node name="wegadoll296" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll296" parent="group of wegas TWO" unique_id=934855588 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.48855, 13.0295, -8.71842)
 
-[node name="wegadoll84" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll84" parent="group of wegas TWO" unique_id=1202186458 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -10.5235)
 
-[node name="wegadoll85" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll85" parent="group of wegas TWO" unique_id=628052709 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -8.66616)
 
-[node name="wegadoll86" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll86" parent="group of wegas TWO" unique_id=1820245793 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -6.64276)
 
-[node name="wegadoll87" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll87" parent="group of wegas TWO" unique_id=956303867 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -4.58066)
 
-[node name="wegadoll88" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll88" parent="group of wegas TWO" unique_id=174173044 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -2.53526)
 
-[node name="wegadoll89" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll89" parent="group of wegas TWO" unique_id=368774676 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, -0.554787)
 
-[node name="wegadoll90" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll90" parent="group of wegas TWO" unique_id=1531528513 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 1.45345)
 
-[node name="wegadoll91" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll91" parent="group of wegas TWO" unique_id=394477108 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 3.24413)
 
-[node name="wegadoll92" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll92" parent="group of wegas TWO" unique_id=1547456031 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.87286, 5.29426)
 
-[node name="wegadoll93" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll93" parent="group of wegas TWO" unique_id=1467952029 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, -0.800866)
 
-[node name="wegadoll94" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll94" parent="group of wegas TWO" unique_id=1858816607 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 1.18609)
 
-[node name="wegadoll95" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll95" parent="group of wegas TWO" unique_id=854570942 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 3.2661)
 
-[node name="wegadoll96" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll96" parent="group of wegas TWO" unique_id=695624533 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 5.27509)
 
-[node name="wegadoll97" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll97" parent="group of wegas TWO" unique_id=1289363741 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 7.34194)
 
-[node name="wegadoll98" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll98" parent="group of wegas TWO" unique_id=71560003 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.7627, 1, 9.38286)
 
-[node name="wegadoll99" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll99" parent="group of wegas TWO" unique_id=626125121 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.88108, 7.12672)
 
-[node name="wegadoll100" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll100" parent="group of wegas TWO" unique_id=1359630683 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 10.7483)
 
-[node name="wegadoll101" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll101" parent="group of wegas TWO" unique_id=1147249927 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 12.6613)
 
-[node name="wegadoll102" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll102" parent="group of wegas TWO" unique_id=851448651 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 14.6757)
 
-[node name="wegadoll103" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll103" parent="group of wegas TWO" unique_id=1210128341 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.85115, 16.8146)
 
-[node name="wegadoll104" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll104" parent="group of wegas TWO" unique_id=891608978 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 5.82446, 8.86411)
 
-[node name="wegadoll105" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll105" parent="group of wegas TWO" unique_id=698134366 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 16.6256, 1, 9.18578)
 
-[node name="wegadoll106" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll106" parent="group of wegas TWO" unique_id=134136614 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 18.6016, 1, 9.27703)
 
-[node name="wegadoll107" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll107" parent="group of wegas TWO" unique_id=1279795448 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 27.3341)
 
-[node name="wegadoll135" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll135" parent="group of wegas TWO" unique_id=1382505635 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -14.7019)
 
-[node name="wegadoll158" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll158" parent="group of wegas TWO" unique_id=1051352740 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -16.8381)
 
-[node name="wegadoll159" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll159" parent="group of wegas TWO" unique_id=1874097889 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -18.7599)
 
-[node name="wegadoll160" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll160" parent="group of wegas TWO" unique_id=1882430312 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -20.8298)
 
-[node name="wegadoll136" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll136" parent="group of wegas TWO" unique_id=2083127114 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -12.6398)
 
-[node name="wegadoll137" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll137" parent="group of wegas TWO" unique_id=178822985 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -10.5944)
 
-[node name="wegadoll138" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll138" parent="group of wegas TWO" unique_id=1042093828 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -8.61393)
 
-[node name="wegadoll139" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll139" parent="group of wegas TWO" unique_id=2089210135 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -6.60569)
 
-[node name="wegadoll140" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll140" parent="group of wegas TWO" unique_id=1965635275 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -4.81501)
 
-[node name="wegadoll141" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll141" parent="group of wegas TWO" unique_id=1336204116 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -2.76488)
 
-[node name="wegadoll142" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll142" parent="group of wegas TWO" unique_id=1475716932 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, -0.800866)
 
-[node name="wegadoll143" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll143" parent="group of wegas TWO" unique_id=1757791498 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 1.18609)
 
-[node name="wegadoll239" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll239" parent="group of wegas TWO" unique_id=533643714 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.5126, 1, 1.18609)
 
-[node name="wegadoll144" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll144" parent="group of wegas TWO" unique_id=375486448 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 3.2661)
 
-[node name="wegadoll145" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll145" parent="group of wegas TWO" unique_id=140562103 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 5.27509)
 
-[node name="wegadoll146" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll146" parent="group of wegas TWO" unique_id=1207278159 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 7.34194)
 
-[node name="wegadoll147" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll147" parent="group of wegas TWO" unique_id=1860030307 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 9.38286)
 
-[node name="wegadoll148" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll148" parent="group of wegas TWO" unique_id=666748096 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 11.4018)
 
-[node name="wegadoll149" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll149" parent="group of wegas TWO" unique_id=425529676 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 13.3687)
 
-[node name="wegadoll150" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll150" parent="group of wegas TWO" unique_id=882378808 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 15.2817)
 
-[node name="wegadoll151" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll151" parent="group of wegas TWO" unique_id=486751201 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 17.2961)
 
-[node name="wegadoll152" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll152" parent="group of wegas TWO" unique_id=7086032 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -23.5126, 1, 19.435)
 
-[node name="wegadoll156" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll156" parent="group of wegas TWO" unique_id=1464849965 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -25.5126, 1, 19.435)
 
-[node name="wegadoll157" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll157" parent="group of wegas TWO" unique_id=204219028 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.5126, 1, 19.435)
 
-[node name="wegadoll161" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll161" parent="group of wegas TWO" unique_id=1003734348 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.5126, 1, 19.435)
 
-[node name="wegadoll162" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll162" parent="group of wegas TWO" unique_id=629504032 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5126, 1, 19.435)
 
-[node name="wegadoll163" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll163" parent="group of wegas TWO" unique_id=749891136 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.5126, 1, 19.435)
 
-[node name="wegadoll164" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll164" parent="group of wegas TWO" unique_id=690476900 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.5126, 1, 19.435)
 
-[node name="wegadoll170" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll170" parent="group of wegas TWO" unique_id=1312218483 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.5126, 1, 19.435)
 
-[node name="wegadoll171" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll171" parent="group of wegas TWO" unique_id=304278695 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 19.435)
 
-[node name="wegadoll215" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll215" parent="group of wegas TWO" unique_id=1887522178 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 4.61674, 11.1964)
 
-[node name="wegadoll216" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll216" parent="group of wegas TWO" unique_id=4397769 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 4.61674, 9.19643)
 
-[node name="wegadoll220" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll220" parent="group of wegas TWO" unique_id=1576931245 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 4.61674, 7.19643)
 
-[node name="wegadoll228" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll228" parent="group of wegas TWO" unique_id=601001372 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 4.61674, 5.19643)
 
-[node name="wegadoll229" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll229" parent="group of wegas TWO" unique_id=1653746332 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 4.61674, 3.19643)
 
-[node name="wegadoll235" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll235" parent="group of wegas TWO" unique_id=976277373 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.328, 4.61674, 1.19643)
 
-[node name="wegadoll236" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll236" parent="group of wegas TWO" unique_id=861825449 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.328, 4.61674, 1.19643)
 
-[node name="wegadoll237" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll237" parent="group of wegas TWO" unique_id=731740217 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.328, 4.61674, 1.19643)
 
-[node name="wegadoll238" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll238" parent="group of wegas TWO" unique_id=1783293724 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.328, 4.61674, 1.19643)
 
-[node name="wegadoll172" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll172" parent="group of wegas TWO" unique_id=266284360 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 21.435)
 
-[node name="wegadoll179" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll179" parent="group of wegas TWO" unique_id=462154050 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 23.435)
 
-[node name="wegadoll184" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll184" parent="group of wegas TWO" unique_id=1216966061 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 25.435)
 
-[node name="wegadoll185" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll185" parent="group of wegas TWO" unique_id=1684807634 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 27.435)
 
-[node name="wegadoll186" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll186" parent="group of wegas TWO" unique_id=1001571945 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 29.435)
 
-[node name="wegadoll187" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll187" parent="group of wegas TWO" unique_id=1179278378 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.5126, 1, 31.435)
 
-[node name="wegadoll210" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll210" parent="group of wegas TWO" unique_id=463119675 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.5126, 1, 31.435)
 
-[node name="wegadoll211" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll211" parent="group of wegas TWO" unique_id=1560792199 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -35.5126, 1, 31.435)
 
-[node name="wegadoll212" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll212" parent="group of wegas TWO" unique_id=1855506360 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.5126, 1, 31.435)
 
-[node name="wegadoll108" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll108" parent="group of wegas TWO" unique_id=35257699 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 29.2013)
 
-[node name="wegadoll109" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll109" parent="group of wegas TWO" unique_id=965679936 instance=ExtResource("9_4fuep")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 22.5585, 1, 31.1571)
 
-[node name="wegadoll178" parent="group of wegas TWO" instance=ExtResource("9_4fuep")]
+[node name="wegadoll178" parent="group of wegas TWO" unique_id=841281907 instance=ExtResource("9_4fuep")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3485, 3.39649, -6.749)
 
 [connection signal="timeout" from="wegafadence beat" to="." method="_on_wegafadence_beat"]

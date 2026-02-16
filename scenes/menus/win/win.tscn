@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bkj25ag02mueh"]
+[gd_scene format=3 uid="uid://bkj25ag02mueh"]
 
 [ext_resource type="Script" uid="uid://c2i67tojvjo1x" path="res://scenes/menus/win/win.gd" id="1_rc6es"]
 [ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="2_2ugug"]
@@ -35,7 +35,7 @@ font = ExtResource("3_gc12i")
 font_size = 41
 font_color = Color(0.405, 0.4145, 0.5, 1)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=369298361]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,7 +45,7 @@ grow_vertical = 2
 script = ExtResource("1_rc6es")
 points_and_time_curve = ExtResource("2_aydif")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1804241328]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -56,15 +56,15 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="NOT Maltigi" type="Sprite2D" parent="."]
+[node name="NOT Maltigi" type="Sprite2D" parent="." unique_id=704559672]
 position = Vector2(373, 525)
 scale = Vector2(3.85666, 3.42526)
 texture = ExtResource("2_2ugug")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=784210753]
 anchor_mode = 0
 
-[node name="you win" type="Label" parent="."]
+[node name="you win" type="Label" parent="." unique_id=307853292]
 z_index = 1
 layout_mode = 0
 offset_left = 597.0
@@ -74,66 +74,67 @@ offset_bottom = 184.0
 text = "you winga!"
 label_settings = SubResource("LabelSettings_i3kce")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=383964315]
 layout_mode = 0
 offset_left = 912.0
 offset_top = 291.0
 offset_right = 1896.0
 offset_bottom = 984.0
 
-[node name="time" type="Label" parent="VBoxContainer"]
+[node name="time" type="Label" parent="VBoxContainer" unique_id=770217258]
 layout_mode = 2
 text = "time: 0:12:34"
 label_settings = SubResource("LabelSettings_aydif")
 
-[node name="seperator3" type="Label" parent="VBoxContainer"]
+[node name="seperator3" type="Label" parent="VBoxContainer" unique_id=1308772687]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="points" type="Label" parent="VBoxContainer"]
+[node name="points" type="Label" parent="VBoxContainer" unique_id=1492054187]
 layout_mode = 2
 text = "points: 1234567890"
 label_settings = SubResource("LabelSettings_aydif")
 
-[node name="seperator4" type="Label" parent="VBoxContainer"]
+[node name="seperator4" type="Label" parent="VBoxContainer" unique_id=745871637]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="final score text" type="Label" parent="VBoxContainer"]
+[node name="final score text" type="Label" parent="VBoxContainer" unique_id=583686682]
 layout_mode = 2
 text = "FINAL SCORE: "
 label_settings = SubResource("LabelSettings_dq4ij")
 horizontal_alignment = 1
 
-[node name="final score number" type="Label" parent="VBoxContainer"]
+[node name="final score number" type="Label" parent="VBoxContainer" unique_id=965651215]
 layout_mode = 2
 text = "1234567890123"
 label_settings = SubResource("LabelSettings_dq4ij")
 horizontal_alignment = 1
 
-[node name="seperator5" type="Label" parent="VBoxContainer"]
+[node name="seperator5" type="Label" parent="VBoxContainer" unique_id=1619230758]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="go to menu" type="Label" parent="VBoxContainer"]
+[node name="go to menu" type="Label" parent="VBoxContainer" unique_id=284499197]
 layout_mode = 2
 text = "press space to go to menu"
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="seperator" type="Label" parent="VBoxContainer"]
+[node name="seperator" type="Label" parent="VBoxContainer" unique_id=1672054676]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="seperator2" type="Label" parent="VBoxContainer"]
+[node name="seperator2" type="Label" parent="VBoxContainer" unique_id=1404007196]
 layout_mode = 2
 label_settings = SubResource("LabelSettings_6ogbe")
 
-[node name="new high score" type="Label" parent="VBoxContainer"]
+[node name="new high score" type="Label" parent="VBoxContainer" unique_id=1819736995]
 layout_mode = 2
 text = "previous high score: ass"
 label_settings = SubResource("LabelSettings_svv80")
 
-[node name="new high score2" type="Label" parent="VBoxContainer"]
+[node name="new high score2" type="Label" parent="VBoxContainer" unique_id=1089263924]
+visible = false
 layout_mode = 2
 text = "
 
@@ -141,10 +142,10 @@ wr: 14482
 holder: somerandomguy21"
 label_settings = SubResource("LabelSettings_kqcem")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1105420446]
 stream = ExtResource("3_25npl")
 autoplay = true
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1675613683]
 wait_time = 0.5
 one_shot = true

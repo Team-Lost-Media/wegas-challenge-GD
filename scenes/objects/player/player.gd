@@ -57,6 +57,7 @@ var saveable_fall = false
 @onready var health_label: Label = $HealthLabel
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
+@onready var golden_sigma: Sprite2D = $"golden sigma"
 
 var gravity: Vector3 = Vector3(0, -55, 0)
 #var jump_dir: Vector3 = Vector3(0, 1, 0)
@@ -123,6 +124,9 @@ func _physics_process(delta: float) -> void:
 		Global.health = clampf(Global.health + 0.25 * delta, 0 , 100)
 	else:
 		Global.health -= 1 * delta * overheal_drain_curve.sample(Global.health / Global.max_health)
+	golden_sigma.visible = saveable_fall and health_bar.visible
+	if golden_sigma.modulate != Color(0.5, 0.5, 0.5):
+		golden_sigma.modulate = golden_sigma.modulate.lerp(Color(0.5, 0.5, 0.5), 0.2 * delta)
 	
 	if Input.is_action_pressed("jump"):
 		if is_on_floor() or coyote:
@@ -166,7 +170,7 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, 30 * delta)
 			velocity.z = move_toward(velocity.z, 0, 30 * delta) 
 	
-	camera.fov = 110 #SettingsHandler.fov
+	camera.fov = SettingsHandler.fov #110
 	mouse_sensitivity = SettingsHandler.sensitivity
 	
 	

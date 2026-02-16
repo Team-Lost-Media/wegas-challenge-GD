@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ee6lb27nmpu1"]
+[gd_scene format=3 uid="uid://ee6lb27nmpu1"]
 
 [ext_resource type="Script" uid="uid://cnyb344qrb0um" path="res://scenes/menus/main/main_menu.gd" id="1_mgf8r"]
 [ext_resource type="AudioStream" uid="uid://bfikfhcvcr3u5" path="res://assets/BGM/Does Not Bleed (No Drums).mp3" id="2_5jl5l"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://h510i4enqc80" path="res://assets/textures/thumbnails/classic.png" id="7_w6md1"]
 [ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="8_5jl5l"]
+[ext_resource type="Script" uid="uid://dij7go4ky6al7" path="res://scenes/menus/main/gamemodes scroll.gd" id="10_7dfbu"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
@@ -85,6 +86,13 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
 
+[sub_resource type="Gradient" id="Gradient_sp6e7"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_524vu"]
+gradient = SubResource("Gradient_sp6e7")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77ybs"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxb73"]
@@ -119,7 +127,7 @@ font_size = 41
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=746212455]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -128,18 +136,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mgf8r")
 
-[node name="No Drums" type="AudioStreamPlayer" parent="."]
+[node name="No Drums" type="AudioStreamPlayer" parent="." unique_id=1131693430]
 stream = ExtResource("2_5jl5l")
 autoplay = true
 bus = &"BGM"
 
-[node name="Drums" type="AudioStreamPlayer" parent="."]
+[node name="Drums" type="AudioStreamPlayer" parent="." unique_id=422147337]
 stream = ExtResource("3_ugs4v")
 volume_db = -80.0
 autoplay = true
 bus = &"BGM"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1579029920]
 z_index = -1
 material = SubResource("ShaderMaterial_jtjce")
 layout_mode = 1
@@ -152,7 +160,7 @@ mouse_filter = 2
 texture = ExtResource("5_etru4")
 expand_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="."]
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1821549832]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -164,7 +172,7 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_sp6e7")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=135111099]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -175,7 +183,7 @@ offset_bottom = 368.0
 grow_horizontal = 2
 texture = ExtResource("2_6osn1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=677183292]
 custom_minimum_size = Vector2(444, 72.8)
 layout_mode = 1
 anchors_preset = 8
@@ -190,7 +198,7 @@ offset_bottom = 182.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=680130197]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -198,7 +206,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "PLAY"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=169319800]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -206,7 +214,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "TUTORIAL"
 
-[node name="Button6" type="Button" parent="VBoxContainer"]
+[node name="Button6" type="Button" parent="VBoxContainer" unique_id=2143891640]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -214,7 +222,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "ACHIEVEMENTS"
 
-[node name="Button5" type="Button" parent="VBoxContainer"]
+[node name="Button5" type="Button" parent="VBoxContainer" unique_id=54654350]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -222,7 +230,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "RECOLORPEDIA"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1027482015]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -230,7 +238,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "SETTINGS"
 
-[node name="Button4" type="Button" parent="VBoxContainer"]
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1574056533]
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -238,7 +246,7 @@ theme_override_fonts/font = ExtResource("6_yk1ip")
 theme_override_font_sizes/font_size = 41
 text = "QUIT"
 
-[node name="tips" type="Label" parent="."]
+[node name="tips" type="Label" parent="." unique_id=764668553]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -257,11 +265,11 @@ label_settings = SubResource("LabelSettings_yk1ip")
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Settings" parent="." instance=ExtResource("3_u5k1e")]
+[node name="Settings" parent="." unique_id=1743679837 instance=ExtResource("3_u5k1e")]
 visible = false
 layout_mode = 1
 
-[node name="Gamemodes" type="Panel" parent="."]
+[node name="Gamemodes" type="Panel" parent="." unique_id=1377070472]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -278,8 +286,9 @@ grow_vertical = 2
 scale = Vector2(1.6, 1.6)
 pivot_offset = Vector2(480, 270)
 theme_override_styles/panel = SubResource("StyleBoxFlat_6osn1")
+script = ExtResource("10_7dfbu")
 
-[node name="Quit" type="Button" parent="Gamemodes"]
+[node name="Quit" type="Button" parent="Gamemodes" unique_id=4701906]
 layout_mode = 0
 offset_left = 5.0
 offset_right = 949.0
@@ -302,19 +311,27 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
 text = "CLOSE"
 flat = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Gamemodes"]
+[node name="TextureRect" type="TextureRect" parent="Gamemodes" unique_id=1259225552]
+clip_children = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 50.0
+offset_right = 952.0
+offset_bottom = 534.0
+texture = SubResource("GradientTexture2D_524vu")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Gamemodes/TextureRect" unique_id=1123819995]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 50.0
-offset_right = -8.0
-offset_bottom = -6.0
+offset_right = -16.0
+offset_bottom = 1651.6248
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Classic" type="Button" parent="Gamemodes/VBoxContainer"]
+[node name="Classic" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=2131180857]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
@@ -322,7 +339,7 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
-[node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/Classic"]
+[node name="TextureRect" type="TextureRect" parent="Gamemodes/TextureRect/VBoxContainer/Classic" unique_id=399859540]
 layout_mode = 0
 offset_right = 944.0
 offset_bottom = 200.0
@@ -330,7 +347,7 @@ texture = ExtResource("7_w6md1")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Gamemodes/VBoxContainer/Classic"]
+[node name="Label" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Classic" unique_id=402401236]
 layout_mode = 0
 offset_left = 10.0
 offset_top = -6.0
@@ -339,7 +356,7 @@ offset_bottom = 67.0
 text = "CLASSIC"
 label_settings = SubResource("LabelSettings_w6md1")
 
-[node name="Label2" type="Label" parent="Gamemodes/VBoxContainer/Classic"]
+[node name="Label2" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Classic" unique_id=1302534769]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 75.0
@@ -351,11 +368,11 @@ Go for a high score.
 "
 label_settings = SubResource("LabelSettings_2ct2e")
 
-[node name="HSeparator" type="HSeparator" parent="Gamemodes/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=93812326]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxEmpty_g7n6k")
 
-[node name="The Idol" type="Button" parent="Gamemodes/VBoxContainer"]
+[node name="The Idol" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1494533699]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
@@ -363,7 +380,7 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
 theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
-[node name="TextureRect" type="TextureRect" parent="Gamemodes/VBoxContainer/The Idol"]
+[node name="TextureRect" type="TextureRect" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=2093642963]
 visible = false
 layout_mode = 0
 offset_right = 944.0
@@ -372,7 +389,7 @@ texture = ExtResource("8_2ct2e")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Label" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+[node name="Label" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=1258710720]
 layout_mode = 0
 offset_left = 10.0
 offset_top = -6.0
@@ -381,7 +398,7 @@ offset_bottom = 67.0
 text = "THE IDOL"
 label_settings = SubResource("LabelSettings_w6md1")
 
-[node name="Label2" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+[node name="Label2" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=1527446805]
 layout_mode = 0
 offset_left = 10.0
 offset_top = 75.0
@@ -391,7 +408,7 @@ text = "Collect the Idol.
 Whatever it takes."
 label_settings = SubResource("LabelSettings_2ct2e")
 
-[node name="Label3" type="Label" parent="Gamemodes/VBoxContainer/The Idol"]
+[node name="Label3" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=135944689]
 layout_mode = 0
 offset_left = 421.99997
 offset_top = 50.499992
@@ -400,13 +417,57 @@ offset_bottom = 167.5
 text = "no image yet"
 label_settings = SubResource("LabelSettings_2ct2e")
 
-[node name="Recolorpedia" parent="." instance=ExtResource("12_ugs4v")]
+[node name="Credits" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1389887946]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_jxb73")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
+
+[node name="TextureRect" type="TextureRect" parent="Gamemodes/TextureRect/VBoxContainer/Credits" unique_id=910510157]
+visible = false
+layout_mode = 0
+offset_right = 944.0
+offset_bottom = 200.0
+texture = ExtResource("8_2ct2e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Credits" unique_id=257661378]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -6.0
+offset_right = 346.0
+offset_bottom = 67.0
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_w6md1")
+
+[node name="Label2" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Credits" unique_id=1553026719]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 75.0
+offset_right = 538.0
+offset_bottom = 192.0
+text = "Thanks for playing!"
+label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="Label3" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Credits" unique_id=542619771]
+layout_mode = 0
+offset_left = 421.99997
+offset_top = 50.499992
+offset_right = 950.0
+offset_bottom = 167.5
+text = "no image yet"
+label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="Recolorpedia" parent="." unique_id=393970587 instance=ExtResource("12_ugs4v")]
 top_level = true
 layout_mode = 1
 offset_left = 2334.0
 offset_right = 2334.0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1018771620]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -430,5 +491,6 @@ label_settings = SubResource("LabelSettings_ugs4v")
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]
 [connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]
-[connection signal="pressed" from="Gamemodes/VBoxContainer/Classic" to="." method="_classic"]
-[connection signal="pressed" from="Gamemodes/VBoxContainer/The Idol" to="." method="_the_idol"]
+[connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Classic" to="." method="_classic"]
+[connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/The Idol" to="." method="_the_idol"]
+[connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Credits" to="." method="_credits"]
