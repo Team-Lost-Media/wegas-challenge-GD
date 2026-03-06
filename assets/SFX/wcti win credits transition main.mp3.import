@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clnedh3a6b8k8"
+path="res://.godot/imported/wcti win credits transition main.mp3-2c4e9f4868a4276581fa5013a63597c6.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/wcti win credits transition main.mp3"
+dest_files=["res://.godot/imported/wcti win credits transition main.mp3-2c4e9f4868a4276581fa5013a63597c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

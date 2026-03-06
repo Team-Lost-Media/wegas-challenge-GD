@@ -2,6 +2,8 @@ extends Node3D
 
 @onready var wegadoll: MeshInstance3D = $WegaDoll
 
+@export var add_points: bool = true
+
 signal collected
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
@@ -9,7 +11,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		if body.disable_collecting_wegadolls == false:
 			collected.connect(Global.collect_wegadoll)
 			collected.emit()
-			Global.points += 1
+			if add_points: Global.points += 1
 			queue_free()
 
 var cheat = false

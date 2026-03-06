@@ -49,9 +49,9 @@ var achievements_dict: Dictionary = {
 	"winga": false, #beat classic mode "you winga!"
 	"WEXECUTION": false, #beat lap 1 "i cant believe green lawson got wexecuted :pensive:"
 	"WEGAFADENCE": false, #beat lap 2 "this really was our wegafadence"
-	"so close, yet so far": false, #fail to collect the idol "you're almost there! keep trying!"
+	"so close, yet so far": false, #fail to collect the idol "one must imagine me happy because im not"
 	"idiot": false, #die in the pause before transition to lap 2 "guy stupid"
-	"Task Failed Succesfully!": false, #die to every enemy "insert fanfare here"
+	#"Task Failed Succesfully!": false, #die to every enemy "insert fanfare here"
 	"haha": false, #die with 1 wegadoll left "point and laugh"
 	"super john bowling": false, #super john bowling "super john bowling"
 	"thnak you.": false, #get saved by golden sigma "your wcleom."
@@ -62,7 +62,7 @@ var achievements_dict: Dictionary = {
 	"shoe bench": false, #get +SHOE BENCH "shoe bench"
 	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
 	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
-	"ouroboros": false, #do 100 runs "this really was our oboros"
+	#"ouroboros": false, #do 100 runs "this really was our oboros"
 }
 
 func save_achievements():

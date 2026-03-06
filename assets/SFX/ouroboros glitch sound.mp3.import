@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csiyk12myfxgk"
+path="res://.godot/imported/ouroboros glitch sound.mp3-7abc306cf1c08443dd159cdaa83d5612.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/ouroboros glitch sound.mp3"
+dest_files=["res://.godot/imported/ouroboros glitch sound.mp3-7abc306cf1c08443dd159cdaa83d5612.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

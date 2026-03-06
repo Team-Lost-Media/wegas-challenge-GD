@@ -54,6 +54,7 @@ func _process(delta: float) -> void:
 				target_position = player.position + ((position.direction_to(player.position) * overshoot_distance) * float(enable_overshoot))
 			dash_delay_timer.start(dash_delay)
 			#line.draw(position, target_position)
+			DebugDraw3D.scoped_config().set_thickness(0.1)
 			DebugDraw3D.draw_line(position, target_position, line_color, dash_delay)
 			#draw the line
 			if malt_rushing:

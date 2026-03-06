@@ -1,41 +1,24 @@
-[gd_scene load_steps=12 format=3 uid="uid://co0x1ueesrisf"]
+[gd_scene format=3 uid="uid://co0x1ueesrisf"]
 
 [ext_resource type="Script" uid="uid://cbkbd0ife2she" path="res://scenes/menus/wcti_win/wcti_win.gd" id="1_5or1p"]
-[ext_resource type="Curve" uid="uid://7jcnj2v5xp75" path="res://assets/other/wcti points and time curve.tres" id="2_lasd8"]
-[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="3_bbgvn"]
-[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="4_e0xnn"]
-[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="5_c4v4b"]
+[ext_resource type="AudioStream" uid="uid://br23vdl0niiq4" path="res://assets/SFX/wcti win text sound.mp3" id="3_a8hyr"]
+[ext_resource type="AudioStream" uid="uid://dduilbp5oqgi7" path="res://assets/SFX/wcti win DRAMATIC SOUND!!!!!!!!!.mp3" id="3_w02rk"]
+[ext_resource type="AudioStream" uid="uid://bqghna1073bat" path="res://assets/SFX/wcti win glitch 1.mp3" id="4_5or1p"]
+[ext_resource type="Script" uid="uid://2f4fi75scxes" path="res://addons/richtext2/richer_text_label.gd" id="4_a8hyr"]
+[ext_resource type="AudioStream" uid="uid://clnedh3a6b8k8" path="res://assets/SFX/wcti win credits transition main.mp3" id="5_bbgvn"]
+[ext_resource type="Script" uid="uid://4mittkdxo7ig" path="res://addons/richtext2/text_effects/effects/rte_cuss.gd" id="5_lasd8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
-font = ExtResource("4_e0xnn")
-font_size = 205
-font_color = Color(0.482353, 0.423529, 1, 1)
+[sub_resource type="RichTextEffect" id="RichTextEffect_bbgvn"]
+resource_name = "cuss"
+script = ExtResource("5_lasd8")
+metadata/rt = 1882655370280
 
-[sub_resource type="LabelSettings" id="LabelSettings_aydif"]
-font = ExtResource("4_e0xnn")
-font_size = 41
-font_color = Color(0.823529, 0, 1, 1)
+[sub_resource type="RichTextEffect" id="RichTextEffect_e0xnn"]
+resource_name = "cuss"
+script = ExtResource("5_lasd8")
+metadata/rt = 1883276127287
 
-[sub_resource type="LabelSettings" id="LabelSettings_6ogbe"]
-font = ExtResource("4_e0xnn")
-font_size = 41
-
-[sub_resource type="LabelSettings" id="LabelSettings_dq4ij"]
-font = ExtResource("4_e0xnn")
-font_size = 82
-font_color = Color(1, 0.133333, 0.431373, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_svv80"]
-font = ExtResource("4_e0xnn")
-font_size = 41
-font_color = Color(0.405, 0.4145, 0.5, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_kqcem"]
-font = ExtResource("4_e0xnn")
-font_size = 41
-font_color = Color(0.405, 0.4145, 0.5, 1)
-
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -43,113 +26,197 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5or1p")
-points_and_time_curve = ExtResource("2_lasd8")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1056658527]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -345.0
+offset_top = -192.0
+offset_right = 345.0
+offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="NOT Maltigi" type="Sprite2D" parent="."]
-position = Vector2(373, 525)
-scale = Vector2(3.85666, 3.42526)
-texture = ExtResource("3_bbgvn")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2112841691]
 anchor_mode = 0
 
-[node name="you win" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 597.0
-offset_top = 3.0
-offset_right = 1798.0
-offset_bottom = 184.0
-text = "you winga!"
-label_settings = SubResource("LabelSettings_i3kce")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 912.0
-offset_top = 291.0
-offset_right = 1896.0
-offset_bottom = 984.0
-
-[node name="time" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "time: 0:12:34"
-label_settings = SubResource("LabelSettings_aydif")
-
-[node name="seperator3" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="points" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "points: 1234567890"
-label_settings = SubResource("LabelSettings_aydif")
-
-[node name="seperator4" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="final score text" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "FINAL SCORE: "
-label_settings = SubResource("LabelSettings_dq4ij")
-horizontal_alignment = 1
-
-[node name="final score number" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "1234567890123"
-label_settings = SubResource("LabelSettings_dq4ij")
-horizontal_alignment = 1
-
-[node name="seperator5" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="go to menu" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "press space to go to menu"
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="SPECIAL DEBUG THING DISYABLE THIS PLEASE" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "(also you can turn on lap 2 in settings)"
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="seperator" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="seperator2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-label_settings = SubResource("LabelSettings_6ogbe")
-
-[node name="new high score" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "previous high score: ass"
-label_settings = SubResource("LabelSettings_svv80")
-
-[node name="new high score2" type="Label" parent="VBoxContainer"]
-layout_mode = 2
-text = "
-
-wr: 
-holder: "
-label_settings = SubResource("LabelSettings_kqcem")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_c4v4b")
+[node name="DRAMATIC SOUND!!!!!!!!!!!" type="AudioStreamPlayer" parent="." unique_id=111794539]
+stream = ExtResource("3_w02rk")
 autoplay = true
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
+[node name="text sound" type="AudioStreamPlayer" parent="." unique_id=2127795703]
+stream = ExtResource("3_a8hyr")
+volume_db = 4.0
+
+[node name="glitch sound" type="AudioStreamPlayer" parent="." unique_id=1397630700]
+stream = ExtResource("4_5or1p")
+volume_db = 1.0
+
+[node name="final sound" type="AudioStreamPlayer" parent="." unique_id=1695307013]
+stream = ExtResource("5_bbgvn")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=801796536]
+clip_contents = false
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117000006
+anchor_top = 0.256
+anchor_right = 0.883
+anchor_bottom = 0.744
+offset_left = -0.64001465
+offset_top = 0.519989
+offset_right = 0.64001465
+offset_bottom = -0.52001953
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.19999999, 0.19999999, 0.19999999, 1)
+theme_override_font_sizes/normal_font_size = 81
+theme_override_font_sizes/bold_font_size = 81
+theme_override_font_sizes/bold_italics_font_size = 81
+theme_override_font_sizes/italics_font_size = 81
+theme_override_font_sizes/mono_font_size = 81
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+custom_effects = [SubResource("RichTextEffect_bbgvn")]
+script = ExtResource("4_a8hyr")
+bbcode = "[i][cuss]GOLDEN SIGMA[] HAS ESCAPED,"
+effects = 2
+alignment = 1
+color = Color(1, 1, 1, 1)
+emoji_scale = 1.0
+font = "VCR_OSD_MONO_1.001"
+font_auto_setup = true
+font_size = 81
+font_bold_weight = 1.5
+font_italics_slant = 0.25
+font_italics_weight = -0.25
+shadow_enabled = false
+shadow_offset = 0.08
+shadow_alpha = 0.25
+shadow_outline_size = 0.1
+outline_size = 0
+outline_mode = 1
+outline_adjust = 0.8
+outline_hue_adjust = 0.0125
+nicer_quotes_enabled = false
+nicer_quotes_format = "“%s”"
+markdown_enabled = false
+markdown_format_bold = "[b]%s[]"
+markdown_format_italics = "[i]%s[]"
+markdown_format_bold_italics = "[bi]%s[]"
+markdown_format_highlight = "[green;sin]%s[]"
+markdown_format_bold2 = "[b]*%s*[]"
+markdown_format_italics2 = "[i;gray]*%s*[]"
+markdown_format_bold_italics2 = "%s"
+context_enabled = true
+context_path = NodePath("/root/State")
+context_state = {}
+context_rich_objects = true
+context_rich_ints = true
+context_rich_array = true
+autostyle_numbers = true
+autostyle_numbers_tag = "[salmon]%s[]"
+autostyle_numbers_pad_decimals = true
+autostyle_numbers_decimals = 2
+autostyle_emojis = true
+effect_weight = 0.0
+image_path = "res://"
+image_resize_to_font_size = true
+image_scale = 1.0
+meta_auto_https = true
+meta_cursor = 2
+override_bbcodeEnabled = true
+override_clipContents = false
+override_fitContent = true
+metadata/rand = Array[int]([4166596066, 2311825059, 3620013441, 2491450470, 2802296603, 4189874552, 2171329054, 714522236, 929522988, 2347524900, 418486099, 3525743868, 288189149, 2624946251, 3898360931, 93071924, 2508389781, 1157054666, 1562066045, 3455807971, 911074143, 2641914425, 949242924, 37395370, 595863887])
+metadata/mouse_position = Vector2(1981.9634, 30.366425)
+metadata/frame = 47647
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=718557037]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.117000006
+anchor_top = 0.256
+anchor_right = 0.883
+anchor_bottom = 0.744
+offset_left = -0.64001465
+offset_top = 0.519989
+offset_right = 0.64001465
+offset_bottom = -0.52001953
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.19999999, 0.19999999, 0.19999999, 1)
+theme_override_font_sizes/normal_font_size = 81
+theme_override_font_sizes/bold_font_size = 81
+theme_override_font_sizes/bold_italics_font_size = 81
+theme_override_font_sizes/italics_font_size = 81
+theme_override_font_sizes/mono_font_size = 81
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+custom_effects = [SubResource("RichTextEffect_e0xnn")]
+script = ExtResource("4_a8hyr")
+bbcode = "[i][cuss]GREEN LAWSON[] HAS ESCAPED,"
+effects = 2
+alignment = 1
+color = Color(1, 1, 1, 1)
+emoji_scale = 1.0
+font = "VCR_OSD_MONO_1.001"
+font_auto_setup = true
+font_size = 81
+font_bold_weight = 1.5
+font_italics_slant = 0.25
+font_italics_weight = -0.25
+shadow_enabled = false
+shadow_offset = 0.08
+shadow_alpha = 0.25
+shadow_outline_size = 0.1
+outline_size = 0
+outline_mode = 1
+outline_adjust = 0.8
+outline_hue_adjust = 0.0125
+nicer_quotes_enabled = false
+nicer_quotes_format = "“%s”"
+markdown_enabled = false
+markdown_format_bold = "[b]%s[]"
+markdown_format_italics = "[i]%s[]"
+markdown_format_bold_italics = "[bi]%s[]"
+markdown_format_highlight = "[green;sin]%s[]"
+markdown_format_bold2 = "[b]*%s*[]"
+markdown_format_italics2 = "[i;gray]*%s*[]"
+markdown_format_bold_italics2 = "%s"
+context_enabled = true
+context_path = NodePath("/root/State")
+context_state = {}
+context_rich_objects = true
+context_rich_ints = true
+context_rich_array = true
+autostyle_numbers = true
+autostyle_numbers_tag = "[salmon]%s[]"
+autostyle_numbers_pad_decimals = true
+autostyle_numbers_decimals = 2
+autostyle_emojis = true
+effect_weight = 0.0
+image_path = "res://"
+image_resize_to_font_size = true
+image_scale = 1.0
+meta_auto_https = true
+meta_cursor = 2
+override_bbcodeEnabled = true
+override_clipContents = false
+override_fitContent = true
+metadata/rand = Array[int]([4166596066, 2311825059, 3620013441, 2491450470, 2802296603, 4189874552, 2171329054, 714522236, 929522988, 2347524900, 418486099, 3525743868, 288189149, 2624946251, 3898360931, 93071924, 2508389781, 1157054666, 1562066045, 3455807971, 911074143, 2641914425, 949242924, 37395370, 595863887])
+metadata/mouse_position = Vector2(1981.9634, 30.366425)
+metadata/frame = 47647

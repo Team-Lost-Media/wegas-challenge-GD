@@ -418,6 +418,7 @@ text = "no image yet"
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [node name="Credits" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1389887946]
+visible = false
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_77ybs")

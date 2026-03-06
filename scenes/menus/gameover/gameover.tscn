@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cax2yqkm1rgqx"]
+[gd_scene format=3 uid="uid://cax2yqkm1rgqx"]
 
 [ext_resource type="Script" uid="uid://x1oq3o7aaim7" path="res://scenes/menus/gameover/gameover.gd" id="1_40yjg"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_2cmpw"]
@@ -14,17 +14,22 @@ font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dwtvt"]
 font_size = 32
-font_color = Color(1, 0, 0, 1)
+font_color = Color(0.7, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_chhmu"]
 font_size = 64
-font_color = Color(1, 0, 0, 1)
+font_color = Color(0.7019608, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rubpt"]
+line_spacing = -20.0
 font_size = 32
-font_color = Color(1, 0, 0, 1)
+font_color = Color(0.45, 0, 0, 1)
 
-[node name="Control" type="Control"]
+[sub_resource type="LabelSettings" id="LabelSettings_vvgnp"]
+line_spacing = -9.0
+font_color = Color(0.45, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1451159069]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,7 +39,7 @@ grow_vertical = 2
 script = ExtResource("1_40yjg")
 points_and_time_curve = ExtResource("2_chhmu")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=208022236]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -45,77 +50,76 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Maltigi" type="Sprite2D" parent="."]
+[node name="Maltigi" type="Sprite2D" parent="." unique_id=1665270155]
 position = Vector2(372, 515.5)
 scale = Vector2(2.57917, 2.43611)
 texture = ExtResource("2_2cmpw")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1204490540]
 anchor_mode = 0
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=504075295]
 layout_mode = 0
 offset_left = 681.0
 offset_top = 67.0
 offset_right = 1854.0
 offset_bottom = 368.0
-text = "you suck!!!!"
+text = "game over"
 label_settings = SubResource("LabelSettings_i3kce")
 
-[node name="Label" type="Label" parent="Label"]
+[node name="Label" type="Label" parent="Label" unique_id=1646298259]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 393.0
-offset_right = 1152.0
-offset_bottom = 558.0
+offset_top = 494.0
+offset_right = 1153.0
+offset_bottom = 659.0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Label"]
+[node name="Label2" type="Label" parent="Label" unique_id=530136225]
 layout_mode = 0
 offset_left = 184.0
-offset_top = 571.0
+offset_top = 701.0
 offset_right = 988.0
-offset_bottom = 726.0
-text = "(if it makes you feel any better, your final score was:"
+offset_bottom = 856.0
+text = "if you won, your score wouldve been:"
 label_settings = SubResource("LabelSettings_dwtvt")
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="Label"]
+[node name="Label3" type="Label" parent="Label" unique_id=53435581]
 layout_mode = 0
 offset_left = 266.0
-offset_top = 635.0
+offset_top = 736.0
 offset_right = 894.0
-offset_bottom = 790.0
-text = "69420)"
+offset_bottom = 891.0
+text = "69420"
 label_settings = SubResource("LabelSettings_chhmu")
 horizontal_alignment = 1
 
-[node name="Label4" type="Label" parent="Label"]
+[node name="Label4" type="Label" parent="Label" unique_id=1605465694]
 layout_mode = 0
 offset_left = 259.0
-offset_top = 727.0
+offset_top = 810.0
 offset_right = 893.0
-offset_bottom = 882.0
+offset_bottom = 965.0
 text = "(sort of)"
 label_settings = SubResource("LabelSettings_rubpt")
 horizontal_alignment = 1
 
-[node name="Label5" type="Label" parent="Label/Label4"]
-visible = false
+[node name="Label5" type="Label" parent="Label/Label4" unique_id=923197372]
 layout_mode = 0
 offset_left = -326.0
-offset_top = 64.0
+offset_top = 63.0
 offset_right = 998.0
-offset_bottom = 229.0
+offset_bottom = 228.0
 text = "(you see, your score is calculated by adding a multiplier to your points based off of
 the time it took you to collect all the wegadolls. since your run ended prematurely,
 said time is actually faster than it wouldve been, had this run survived)"
-label_settings = SubResource("LabelSettings_rubpt")
+label_settings = SubResource("LabelSettings_vvgnp")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="Label/Label4"]
+[node name="Button" type="Button" parent="Label/Label4" unique_id=605331720]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 244.0

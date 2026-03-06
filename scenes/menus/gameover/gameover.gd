@@ -15,7 +15,7 @@ func _ready() -> void:
 	score = Global.points * score_multiplier
 	print("score multiplier = ", score_multiplier)
 	#actually display it
-	final_score.text = str(snapped(score, 1), ")")
+	final_score.text = str(snapped(score, 1))
 
 func _process(delta: float) -> void:
 	
@@ -34,3 +34,6 @@ func _process(delta: float) -> void:
 		else:
 			get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
 			Global.reset()
+	if Input.is_action_just_pressed("escape"):
+		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

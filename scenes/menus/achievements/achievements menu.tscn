@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://2i7t43dgb712"]
+[gd_scene format=3 uid="uid://2i7t43dgb712"]
 
 [ext_resource type="Script" uid="uid://dqsq7f0fc50wd" path="res://scenes/menus/achievements/achievements menu.gd" id="1_nrm0g"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_t21ta"]
@@ -77,7 +77,7 @@ font_size = 41
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Achievements Menu" type="Control"]
+[node name="Achievements Menu" type="Control" unique_id=1580315916]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -87,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nrm0g")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=323370861]
 z_index = -1
 texture_filter = 1
 material = SubResource("ShaderMaterial_sn3w4")
@@ -101,7 +101,7 @@ mouse_filter = 2
 texture = ExtResource("2_t21ta")
 expand_mode = 1
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=411731113]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -111,19 +111,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.847059)
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera" type="Camera2D" parent="." unique_id=847361561]
 limit_left = 0
 limit_top = 0
 limit_right = 1920
 limit_bottom = 1080
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=1534417161]
 texture_filter = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Portrait" type="TextureRect" parent="Control"]
+[node name="Portrait" type="TextureRect" parent="Control" unique_id=1120386589]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -138,7 +138,7 @@ offset_bottom = 222.04
 grow_horizontal = 2
 texture = ExtResource("3_4scsl")
 
-[node name="Wega" type="TextureRect" parent="Control/Portrait"]
+[node name="Wega" type="TextureRect" parent="Control/Portrait" unique_id=1654553461]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -155,7 +155,7 @@ grow_vertical = 2
 texture = ExtResource("2_t21ta")
 expand_mode = 1
 
-[node name="Rorys" type="TextureRect" parent="Control/Portrait"]
+[node name="Rorys" type="TextureRect" parent="Control/Portrait" unique_id=1188218310]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -172,7 +172,7 @@ grow_vertical = 2
 texture = ExtResource("4_6juv8")
 expand_mode = 1
 
-[node name="Maltigi" type="TextureRect" parent="Control/Portrait"]
+[node name="Maltigi" type="TextureRect" parent="Control/Portrait" unique_id=355955721]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -189,7 +189,7 @@ grow_vertical = 2
 texture = ExtResource("5_vvl1d")
 expand_mode = 1
 
-[node name="Ultra Irios" type="TextureRect" parent="Control/Portrait"]
+[node name="Ultra Irios" type="TextureRect" parent="Control/Portrait" unique_id=322067067]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -206,7 +206,7 @@ grow_vertical = 2
 texture = ExtResource("6_w25ue")
 expand_mode = 1
 
-[node name="Super John" type="TextureRect" parent="Control/Portrait"]
+[node name="Super John" type="TextureRect" parent="Control/Portrait" unique_id=11878370]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -223,7 +223,7 @@ grow_vertical = 2
 texture = ExtResource("7_dfkc3")
 expand_mode = 1
 
-[node name="Shoe Bench" type="TextureRect" parent="Control/Portrait"]
+[node name="Shoe Bench" type="TextureRect" parent="Control/Portrait" unique_id=908792738]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -240,7 +240,7 @@ grow_vertical = 2
 texture = ExtResource("8_vp1es")
 expand_mode = 1
 
-[node name="Name" type="RichTextLabel" parent="Control"]
+[node name="Name" type="RichTextLabel" parent="Control" unique_id=1210387788]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -260,7 +260,7 @@ bbcode_enabled = true
 text = "Wega"
 vertical_alignment = 1
 
-[node name="Origin" type="RichTextLabel" parent="Control"]
+[node name="Origin" type="RichTextLabel" parent="Control" unique_id=1623666970]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -280,7 +280,7 @@ theme_override_font_sizes/normal_font_size = 17
 bbcode_enabled = true
 text = "Origin: idk"
 
-[node name="HSeparator" type="HSeparator" parent="Control"]
+[node name="HSeparator" type="HSeparator" parent="Control" unique_id=1988471560]
 texture_filter = 1
 layout_mode = 0
 offset_left = 1142.0
@@ -289,7 +289,7 @@ offset_right = 1820.0
 offset_bottom = 153.0
 theme_override_styles/separator = SubResource("StyleBoxFlat_gvf1e")
 
-[node name="Behaviour" type="TextureRect" parent="Control"]
+[node name="Behaviour" type="TextureRect" parent="Control" unique_id=1534339460]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -298,7 +298,7 @@ offset_right = 1116.0
 offset_bottom = 658.0
 texture = ExtResource("11_np6i5")
 
-[node name="Title" type="RichTextLabel" parent="Control/Behaviour"]
+[node name="Title" type="RichTextLabel" parent="Control/Behaviour" unique_id=2077766967]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -318,7 +318,7 @@ text = "BEHAVIOUR"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Text" type="RichTextLabel" parent="Control/Behaviour"]
+[node name="Text" type="RichTextLabel" parent="Control/Behaviour" unique_id=1762698178]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -340,7 +340,7 @@ text = "Wega constantly moves towards your position, phasing through obstacles.
 
 When touched, he instantly kills you."
 
-[node name="Tips" type="TextureRect" parent="Control"]
+[node name="Tips" type="TextureRect" parent="Control" unique_id=1745007494]
 texture_filter = 1
 layout_mode = 0
 offset_left = 1200.0
@@ -349,7 +349,7 @@ offset_right = 1920.0
 offset_bottom = 658.0
 texture = ExtResource("12_kgccw")
 
-[node name="Title" type="RichTextLabel" parent="Control/Tips"]
+[node name="Title" type="RichTextLabel" parent="Control/Tips" unique_id=1204766193]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -369,7 +369,7 @@ text = "TIPS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Text" type="RichTextLabel" parent="Control/Tips"]
+[node name="Text" type="RichTextLabel" parent="Control/Tips" unique_id=735426462]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -391,7 +391,7 @@ text = "Wega is constantly chasing you, and so he must be constantly kept track 
 
 On top of that, he also has varying tells on how close-by he is, such as the red/purple light he emits and the sound he constantly plays."
 
-[node name="Info" type="TextureRect" parent="Control"]
+[node name="Info" type="TextureRect" parent="Control" unique_id=1298214996]
 visible = false
 texture_filter = 1
 layout_mode = 0
@@ -401,7 +401,7 @@ offset_right = 1920.0
 offset_bottom = 1156.0
 texture = ExtResource("12_kgccw")
 
-[node name="Title" type="RichTextLabel" parent="Control/Info"]
+[node name="Title" type="RichTextLabel" parent="Control/Info" unique_id=1925092713]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -420,7 +420,7 @@ text = "INFO"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Text" type="RichTextLabel" parent="Control/Info"]
+[node name="Text" type="RichTextLabel" parent="Control/Info" unique_id=2127551333]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -442,7 +442,7 @@ text = "* His scream is a cut sound from Half-Life 2, called \"hl2-stalker-screa
 
 * "
 
-[node name="Dev Commentary" type="TextureRect" parent="Control"]
+[node name="Dev Commentary" type="TextureRect" parent="Control" unique_id=20302583]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -452,7 +452,7 @@ offset_bottom = 1156.0
 texture = ExtResource("13_bv6mq")
 flip_h = true
 
-[node name="Title" type="RichTextLabel" parent="Control/Dev Commentary"]
+[node name="Title" type="RichTextLabel" parent="Control/Dev Commentary" unique_id=722954611]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -472,7 +472,7 @@ text = "DEV NOTES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Text" type="RichTextLabel" parent="Control/Dev Commentary"]
+[node name="Text" type="RichTextLabel" parent="Control/Dev Commentary" unique_id=590346073]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -496,7 +496,7 @@ This is because Wega is most dangerous when there's other things pressuring you,
 
 The idea for \"STYLE\" came as a result of me adding jumping and dashing to Xetheon's port of Wega's Challenge to Godot. I found that juking around Wega with a dash was fun, and I wanted to incentivize doing so. I had also recently played ULTRAKILL, which was (and still is) a very big source of inspiration for this game's design."
 
-[node name="Style Bonuses Title" type="TextureRect" parent="Control"]
+[node name="Style Bonuses Title" type="TextureRect" parent="Control" unique_id=101461580]
 texture_filter = 1
 layout_mode = 0
 offset_left = 985.0
@@ -505,7 +505,7 @@ offset_right = 1391.0
 offset_bottom = 1337.0
 texture = ExtResource("14_6dnbs")
 
-[node name="Text" type="RichTextLabel" parent="Control/Style Bonuses Title"]
+[node name="Text" type="RichTextLabel" parent="Control/Style Bonuses Title" unique_id=571408660]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -521,13 +521,13 @@ text = "STYLE BONUSES"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Style Bonuses" type="Control" parent="Control"]
+[node name="Style Bonuses" type="Control" parent="Control" unique_id=1360846982]
 texture_filter = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect" type="TextureRect" parent="Control/Style Bonuses" unique_id=1702125587]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -536,7 +536,7 @@ offset_right = 1871.0
 offset_bottom = 1521.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=308602007]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -559,7 +559,7 @@ text = "+JUKED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=156872805]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -585,7 +585,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=1842954255]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -609,7 +609,7 @@ Temporarily slows Wega down."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect2" type="TextureRect" parent="Control/Style Bonuses" unique_id=2017998622]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -618,7 +618,7 @@ offset_right = 1871.0
 offset_bottom = 1650.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=564752141]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -641,7 +641,7 @@ text = "+ABOVE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=782323119]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -668,7 +668,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=2001386130]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -692,7 +692,7 @@ Combines well with +JUKED."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect3" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect3" type="TextureRect" parent="Control/Style Bonuses" unique_id=1241274575]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -701,7 +701,7 @@ offset_right = 1871.0
 offset_bottom = 1782.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=984353462]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -724,7 +724,7 @@ text = "+ENRAGED"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=1252845921]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -750,7 +750,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=1282912367]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -774,7 +774,7 @@ Only in CLASSIC."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect4" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect4" type="TextureRect" parent="Control/Style Bonuses" unique_id=1836741653]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -783,7 +783,7 @@ offset_right = 1871.0
 offset_bottom = 1914.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=1538719829]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -806,7 +806,7 @@ text = "+EXPLOSION JUKE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=1425051638]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -832,7 +832,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=811224082]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -855,7 +855,7 @@ text = "Juke Wega using a Rorys Explosion."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect5" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect5" type="TextureRect" parent="Control/Style Bonuses" unique_id=938647492]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -864,7 +864,7 @@ offset_right = 1871.0
 offset_bottom = 2046.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=1882199866]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -887,7 +887,7 @@ text = "+EXPLOSION JUKE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=818567385]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -913,7 +913,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=213089679]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -936,7 +936,7 @@ text = "Juke Wega using a Rorys Explosion."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect6" type="TextureRect" parent="Control/Style Bonuses"]
+[node name="TextureRect6" type="TextureRect" parent="Control/Style Bonuses" unique_id=173070257]
 texture_filter = 1
 layout_mode = 0
 offset_left = 446.0
@@ -945,7 +945,7 @@ offset_right = 1871.0
 offset_bottom = 2178.0
 texture = ExtResource("15_trny7")
 
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=665662584]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -968,7 +968,7 @@ text = "+EXPLOSION JUKE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=54775120]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -994,7 +994,7 @@ text = "[i]ADDS:[/i]
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6"]
+[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=1078062745]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1017,7 +1017,7 @@ text = "Juke Wega using a Rorys Explosion."
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Selector" type="ColorRect" parent="."]
+[node name="Selector" type="ColorRect" parent="." unique_id=1990149975]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1028,7 +1028,7 @@ offset_bottom = 2300.0
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Go Back" type="TextureButton" parent="Selector"]
+[node name="Go Back" type="TextureButton" parent="Selector" unique_id=581916168]
 modulate = Color(1, 0, 0.345098, 1)
 texture_filter = 1
 layout_mode = 0
@@ -1037,7 +1037,7 @@ offset_right = 356.0
 offset_bottom = 89.0
 texture_normal = ExtResource("16_hoycn")
 
-[node name="Wega Button" type="TextureButton" parent="Selector"]
+[node name="Wega Button" type="TextureButton" parent="Selector" unique_id=1599538014]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1047,7 +1047,7 @@ offset_bottom = 190.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Wega Button"]
+[node name="Label" type="Label" parent="Selector/Wega Button" unique_id=229334722]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1064,7 +1064,7 @@ text = "Wega"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
-[node name="Rorys Button" type="TextureButton" parent="Selector"]
+[node name="Rorys Button" type="TextureButton" parent="Selector" unique_id=1361718340]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1074,7 +1074,7 @@ offset_bottom = 290.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Rorys Button"]
+[node name="Label" type="Label" parent="Selector/Rorys Button" unique_id=151256269]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1091,7 +1091,7 @@ text = "Rorys"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
-[node name="Maltigi Button" type="TextureButton" parent="Selector"]
+[node name="Maltigi Button" type="TextureButton" parent="Selector" unique_id=1907152380]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1101,7 +1101,7 @@ offset_bottom = 390.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Maltigi Button"]
+[node name="Label" type="Label" parent="Selector/Maltigi Button" unique_id=1628274528]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1118,7 +1118,7 @@ text = "Maltigi"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
-[node name="Ultra Irios Button" type="TextureButton" parent="Selector"]
+[node name="Ultra Irios Button" type="TextureButton" parent="Selector" unique_id=411226048]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1128,7 +1128,7 @@ offset_bottom = 490.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Ultra Irios Button"]
+[node name="Label" type="Label" parent="Selector/Ultra Irios Button" unique_id=302401474]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1145,7 +1145,7 @@ text = "Ultra Irios"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
-[node name="Ultra Irios Button2" type="TextureButton" parent="Selector"]
+[node name="Super John Button" type="TextureButton" parent="Selector" unique_id=1975578584]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1155,7 +1155,7 @@ offset_bottom = 590.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Ultra Irios Button2"]
+[node name="Label" type="Label" parent="Selector/Super John Button" unique_id=89672419]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1172,7 +1172,7 @@ text = "Super John"
 label_settings = SubResource("LabelSettings_4v2tg")
 horizontal_alignment = 2
 
-[node name="Ultra Irios Button3" type="TextureButton" parent="Selector"]
+[node name="Shoe Bench Button" type="TextureButton" parent="Selector" unique_id=1239948371]
 texture_filter = 1
 layout_mode = 0
 offset_left = -72.0
@@ -1182,7 +1182,7 @@ offset_bottom = 690.0
 texture_normal = ExtResource("17_qidij")
 texture_hover = ExtResource("18_deacs")
 
-[node name="Label" type="Label" parent="Selector/Ultra Irios Button3"]
+[node name="Label" type="Label" parent="Selector/Shoe Bench Button" unique_id=2039006943]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

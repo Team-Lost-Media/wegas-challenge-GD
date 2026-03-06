@@ -208,8 +208,8 @@ _data = {
 &"spin": SubResource("Animation_2hahg")
 }
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fror2"]
-height = 2.5
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ytgl"]
+size = Vector3(3, 3, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lr4ys"]
 size = Vector3(67.5195, 1, 141.088)
@@ -467,8 +467,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
 player = NodePath("../Player")
 enable_manually = true
-dash_cooldown = 2.0
-dash_delay = 1.25
+dash_cooldown = 2.5
+dash_delay = 0.75
 dash_speed = 150.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 died_to = "glitchigi"
@@ -576,8 +576,15 @@ autoplay = &"spin"
 [node name="Area3D" type="Area3D" parent="Main/The Idol GridMap/the idol" unique_id=1468425492]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Main/The Idol GridMap/the idol/Area3D" unique_id=1772207565]
-transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
-shape = SubResource("CapsuleShape3D_fror2")
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.2576485, 0)
+shape = SubResource("BoxShape3D_7ytgl")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Main/The Idol GridMap/the idol" unique_id=243147125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2000008, 0)
+light_color = Color(1, 0.7666667, 0, 1)
+light_energy = 40.0
+omni_range = 25.0
+omni_attenuation = 2.0
 
 [node name="deathbarrier" parent="Main" unique_id=828394307 instance=ExtResource("6_goutp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
