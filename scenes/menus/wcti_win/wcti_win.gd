@@ -21,7 +21,9 @@ func anim() -> void:
 	label.show()
 	label.text = "[i]GOLDEN SIGMA HAS ESCAPED,"
 	text_sound.play()
-	await get_tree().create_timer(1.1).timeout
+	await get_tree().create_timer(1.0).timeout
+	change_text()
+	await get_tree().create_timer(0.1).timeout
 	glitch_sound.play()
 	label.text = "[i]!OLDEN S#GMA HAS ESCAPED,"
 	await get_tree().create_timer(0.1).timeout

@@ -81,8 +81,9 @@ func _process(delta: float) -> void:
 	#player.gravity = Vector3(0, -30, 0) + (player.gravity.rotated(Vector3(0, 0, 1), 0.33 * delta) * 0.5)
 	#player.gravity = Vector3(0, -55, 0) + player.global_position.direction_to(grid_map.global_position)
 	
-	if bgm.get_playback_position() > 60:
-		bgm.queue_free()
+	if bgm:
+		if bgm.get_playback_position() > 60:
+			bgm.queue_free()
 	
 	#if Input.is_action_just_pressed("attack"): flash()
 	

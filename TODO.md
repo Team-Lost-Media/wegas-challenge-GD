@@ -5,6 +5,8 @@ TODO
 ## credits
 - add music timing shit for the last half
 - add a winscreen
+## misc
+- maybe rework maltigi like how wcti reworked him? hes pretty easy rn
 
 # menus
 - achievements menu

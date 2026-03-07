@@ -1,48 +1,51 @@
-res://assets/meshlibraries/main.tres::ac1381af550e25874c3753bde2fc1b02::1769693371::res://.godot/exported/133200997/export-e1655654f65c73583551a7bfce2ed774-main.res
+res://assets/meshlibraries/main.tres::ac1381af550e25874c3753bde2fc1b02::1772836505::res://.godot/exported/133200997/export-e1655654f65c73583551a7bfce2ed774-main.res
 res://assets/meshlibraries/main_node.tscn::68055662f4af1b759db2d26af40fbaf7::1757370101::res://.godot/exported/133200997/export-51f9074e4177ebd5bfcf6eb423a508ac-main_node.scn
-res://scenes/menus/gameover/gameover.tscn::abd0d5373ff6bf9ddefe8973db184bf7::1757370100::res://.godot/exported/133200997/export-44e307c698f270905b213a8067c82029-gameover.scn
-res://scenes/menus/main/mainMenu.tscn::ed56d760c6342d99f56d316697982293::1769295560::res://.godot/exported/133200997/export-3e8c53b8cfa8835ce2123d82e44eac51-mainMenu.scn
-res://scenes/menus/win/win.tscn::8a9708964ce92cd25f749a8b57034b88::1757370100::res://.godot/exported/133200997/export-7c61c3b0c3193f7d180812b6adc2bd64-win.scn
-res://scenes/objects/player/player.tscn::cb83659c001b0eb6014b5d62ff30ad4b::1769453661::res://.godot/exported/133200997/export-2276a51087c81b031e3f5ae748ea0216-player.scn
+res://scenes/menus/gameover/gameover.tscn::8979d85145cabfc564b8d92d33890805::1772360540::res://.godot/exported/133200997/export-44e307c698f270905b213a8067c82029-gameover.scn
+res://scenes/menus/main/mainMenu.tscn::faf5fc2209eccd8f98466cb1dd9813c5::1772825929::res://.godot/exported/133200997/export-3e8c53b8cfa8835ce2123d82e44eac51-mainMenu.scn
+res://scenes/menus/win/win.tscn::ab66438e5592e54228ab95b9d70e9a20::1770924936::res://.godot/exported/133200997/export-7c61c3b0c3193f7d180812b6adc2bd64-win.scn
+res://scenes/objects/player/player.tscn::56a03b3b53bd9f1d24c23d86ed8f75ab::1772747511::res://.godot/exported/133200997/export-2276a51087c81b031e3f5ae748ea0216-player.scn
 res://scenes/objects/urio/urio.tscn::26c43447da181fcf805d69691b3b7bb8::1757370100::res://.godot/exported/133200997/export-0e539ca9549bd6ffdc7921493ee2ff49-urio.scn
-res://scenes/objects/wega/wega.tscn::12938e02f516f814bd8d8057ec287c06::1757370098::res://.godot/exported/133200997/export-f2b2f4f84d4877ff2af1a91e9ddec8f3-wega.scn
+res://scenes/objects/wega/wega.tscn::f52f05aebc4a3ced8a3623382527ce42::1772361167::res://.godot/exported/133200997/export-f2b2f4f84d4877ff2af1a91e9ddec8f3-wega.scn
 res://scenes/objects/wegadoll/wegadoll.tscn::95efc48555836d33bb6527fad916d103::1757370099::res://.godot/exported/133200997/export-ebedb2ff38c10c2e9cb2f0adf3588fea-wegadoll.scn
 res://scenes/objects/deathbarrier.tscn::53c0141fd2f0d6dc93bc8bb0dc623554::1768688964::res://.godot/exported/133200997/export-55001a860bc5539f64d99d7562274ffb-deathbarrier.scn
-res://scenes/SettingsWindow.tscn::a8cdc62cadb33a3c4947d0a92a3f838b::1768832433::res://.godot/exported/133200997/export-0c0da958d4fcdc240005a36d33fdd44d-SettingsWindow.scn
-res://assets/other/tutorial_black_texture.tres::e1f6ed33dade35788d74421ea4a4aeb8::1769693370::res://.godot/exported/133200997/export-1d28ff0907ce961eb157ae353b23e1ce-tutorial_black_texture.res
+res://scenes/SettingsWindow.tscn::12f2f4f8c6fca6f8c9bb7e91e453bae9::1770741770::res://.godot/exported/133200997/export-0c0da958d4fcdc240005a36d33fdd44d-SettingsWindow.scn
+res://assets/other/tutorial_black_texture.tres::e1f6ed33dade35788d74421ea4a4aeb8::1772836505::res://.godot/exported/133200997/export-1d28ff0907ce961eb157ae353b23e1ce-tutorial_black_texture.res
 res://assets/other/vcr_osd_mono.tres::3c4059fd3cda8b83dd53262bb9e36e3e::1748971302::res://.godot/exported/133200997/export-a30ce10f7c43af53d6c3067dc6ff0ee0-vcr_osd_mono.res
 res://scenes/levels/main/main2.tscn::5e5f9b076ba197ee1d2d7217e2cfea05::1757370097::res://.godot/exported/133200997/export-e62328e8e2adcef6512b7df12b26a1dd-main2.scn
-res://scenes/levels/main/main.tscn::945a8689a3f6c12b19d90bb34c2dfbab::1768738413::res://.godot/exported/133200997/export-3880aff7e95068f08131f8a2d0aff9ae-main.scn
-res://scenes/levels/tutorial/tutorial.tscn::186d1b11f4de4d6e3ca5cfd78b26651b::1768750424::res://.godot/exported/133200997/export-5e4eaaf47c35a38f6daa7fbe2d5da84f-tutorial.scn
+res://scenes/levels/main/main.tscn::19b2adabc5b6a0b9fec38e661d29b5ba::1769698432::res://.godot/exported/133200997/export-3880aff7e95068f08131f8a2d0aff9ae-main.scn
+res://scenes/levels/tutorial/tutorial.tscn::36851404a443164992dac88a1ff3c864::1772360949::res://.godot/exported/133200997/export-5e4eaaf47c35a38f6daa7fbe2d5da84f-tutorial.scn
 res://scenes/menus/win/tutorial win.tscn::8ac83e9b2e6429851ba2aeb44b3aa172::1757370101::res://.godot/exported/133200997/export-3005f818491426ff32b1fbfbe0b0c602-tutorial win.scn
 res://main.tscn::8ce6d321a945129e42e5c036cd666712::1747563943::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
 res://scenes/levels/main/testytest.tscn::12dcfb4304920eb78f61fb28323d94f3::1757370101::res://.godot/exported/133200997/export-3e0983bcf6194885c9d474b776d6588d-testytest.scn
 res://default_bus_layout.tres::5bbb5a229887d33c8fa585267678c61a::1749592043::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
 res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres::d69e2be9e7d1b97f8919a17fdca1b335::1757369251::res://.godot/exported/133200997/export-b11f8bd124009eef165d54d6992a4566-default percentage of wegadolls collected to wega speed multiplier curve.res
 res://assets/other/points and time curve.tres::ea37cff4d3a16a4d1ca58d30974d61c7::1757369251::res://.godot/exported/133200997/export-706bc618fefc8ce2252489568c5b0e6b-points and time curve.res
-res://assets/meshlibraries/wcti mesh lib.tres::15df1372cc23c3da5875006a4f8728ac::1769693370::res://.godot/exported/133200997/export-4dcb9b93991ca22624adeef26a80c39f-wcti mesh lib.res
+res://assets/meshlibraries/wcti mesh lib.tres::15df1372cc23c3da5875006a4f8728ac::1772836505::res://.godot/exported/133200997/export-4dcb9b93991ca22624adeef26a80c39f-wcti mesh lib.res
 res://assets/meshlibraries/wcti meshlib.tscn::22e0b32b68d0d3c80ab417658746d924::1757370102::res://.godot/exported/133200997/export-95acaa4e47e04d8de88f503fcc6ffa51-wcti meshlib.scn
-res://assets/meshlibraries/wcti.tres::d2683ce5308c5c60c68915bcf9bb3c48::1769693371::res://.godot/exported/133200997/export-439eb956171c026d88be5985b26126e1-wcti.res
+res://assets/meshlibraries/wcti.tres::d2683ce5308c5c60c68915bcf9bb3c48::1772836505::res://.godot/exported/133200997/export-439eb956171c026d88be5985b26126e1-wcti.res
 res://scenes/autoload/style sfx.tscn::289844a427fff2eb96fcd785a15c68a5::1757370102::res://.godot/exported/133200997/export-b85767ade412e65389953d5a8cbeeb21-style sfx.scn
-res://scenes/levels/the idol/wctimain.tscn::7bb68f478960bf83694d8bee870f936d::1769443308::res://.godot/exported/133200997/export-6d04d14a61a54a9d1ce6b2952f8a9d5d-wctimain.scn
+res://scenes/levels/the idol/wctimain.tscn::7e1a5ca90badd1601445351c761906f5::1772825693::res://.godot/exported/133200997/export-6d04d14a61a54a9d1ce6b2952f8a9d5d-wctimain.scn
 res://scenes/menus/wcti_gameover/wcti_gameover.tscn::bec85f29c41f451711aace515bc30c47::1768671022::res://.godot/exported/133200997/export-ca5f5b9dd05fd86a97d655e73fadcb00-wcti_gameover.scn
-res://scenes/objects/maltigi/maltigi.tscn::a3f2166cdde5b11cad9dc52cb4faec65::1768834369::res://.godot/exported/133200997/export-49e5726bbb0093e4d41e6e92336e7678-maltigi.scn
-res://scenes/objects/rorys/rorys.tscn::c1bcc29418f912200c62feb3d982d270::1769295560::res://.godot/exported/133200997/export-3d9756ace6deb065f50026a6c9942def-rorys.scn
+res://scenes/objects/maltigi/maltigi.tscn::896e1967be7876a522d3d5a3c7818b97::1770062704::res://.godot/exported/133200997/export-49e5726bbb0093e4d41e6e92336e7678-maltigi.scn
+res://scenes/objects/rorys/rorys.tscn::e68b788a9b035b0e1c070955eaa3cff0::1772357491::res://.godot/exported/133200997/export-3d9756ace6deb065f50026a6c9942def-rorys.scn
 res://addons/debug_draw_3d/examples_dd3d/addon_icon.tscn::9111585cef3db0fab086ad8e5fb86d7d::1762960392::res://.godot/exported/133200997/export-9b7ed1433050ef23bb25e8be1a7b9550-addon_icon.scn
 res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoScene.tscn::1d92db744b73c564015141dde45f3aa0::1762960392::res://.godot/exported/133200997/export-4fb7a69f1ffafc9e85b38a544f08e168-DebugDrawDemoScene.scn
 res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoSceneCS.tscn::f268d7fe4324f388f91375e70deed6ad::1762960392::res://.godot/exported/133200997/export-afd0a5013c1fe323ddbac38246e4af8c-DebugDrawDemoSceneCS.scn
 res://addons/debug_draw_3d/examples_dd3d/VisualizerAudioBus.tres::2ebe1fe004375fdc32edeb3abbf0c3b2::1762960392::res://.godot/exported/133200997/export-1df6c853f7f93f66fc52562f2a721671-VisualizerAudioBus.res
 res://assets/other/wcti points and time curve.tres::4a40e89144f0964fb7363dca9de6a21a::1757369777::res://.godot/exported/133200997/export-ac035fb489fe5693bd61ffd0f503d60d-wcti points and time curve.res
 res://scenes/autoload/song credits.tscn::a6b1b749681356082ae0685e2bf50f82::1757370103::res://.godot/exported/133200997/export-73334b1ddb021f42c516f43830c17ba6-song credits.scn
-res://scenes/menus/recolorpedia/recolorpedia.tscn::ff511372c05c9d358cb993078a24fda0::1768834398::res://.godot/exported/133200997/export-25a35e2f9dbda55ba35d649fe51a77b4-recolorpedia.scn
+res://scenes/menus/recolorpedia/recolorpedia.tscn::bdf9002a8366ec34dda917568ec4ba4b::1772358354::res://.godot/exported/133200997/export-25a35e2f9dbda55ba35d649fe51a77b4-recolorpedia.scn
 res://scenes/menus/wcti_gameover/shoe bench gameover.tscn::65dbeaea06bc6a0c55acb461ad01fccf::1757370102::res://.godot/exported/133200997/export-8f9a3f85c857eb89e3bbf9115f317330-shoe bench gameover.scn
-res://scenes/menus/wcti_win/wcti_win.tscn::4776ef69242b96fe039f0b74038f4af6::1762958398::res://.godot/exported/133200997/export-3a93392099d3bebdc0fdef6e00c86bb3-wcti_win.scn
+res://scenes/menus/wcti_win/wcti_win.tscn::8abc8b9205951d3cf74f230e277d80e5::1772828734::res://.godot/exported/133200997/export-3a93392099d3bebdc0fdef6e00c86bb3-wcti_win.scn
 res://scenes/objects/shoe bench (enemy)/shoe bench.tscn::ddc42de356a1b985dc15346dd4bc05a6::1757370099::res://.godot/exported/133200997/export-2d0d38b3f106f6854339a73bdee5fafb-shoe bench.scn
 res://scenes/objects/super john/super john.tscn::34a4d85cc2c81c25c09524c6d4d207d4::1768831262::res://.godot/exported/133200997/export-e8405c9b2e030364e02649bb6df873cd-super john.scn
 res://scenes/objects/ultra irios/fireball.tscn::41780aa2a9063fea89cc6d3c7bac5102::1757370099::res://.godot/exported/133200997/export-ebf04fc7e816f0a7bdbd38dda4c7e6d8-fireball.scn
 res://scenes/objects/ultra irios/ultra irios.tscn::7bafbd863cd50d35bf944f5a81583dd8::1757370098::res://.godot/exported/133200997/export-0d832b2f5fb85670ba35a425c993bcdb-ultra irios.scn
 res://assets/other/overheal drain curve.tres::e7390e8c073b879859c9f3426a6f5c84::1769532689::res://.godot/exported/133200997/export-cd9173b77bead3341777507d3fda9415-overheal drain curve.res
 res://scenes/autoload/achievements.tscn::9b906d53bad662e81aa01489900a3ed1::1768693896::res://.godot/exported/133200997/export-aa590db44d556feeeda376704b530535-achievements.scn
-res://scenes/levels/main/mastermode credits test.tscn::72150c06d251bee6f932275416e0cdf5::1769696445::res://.godot/exported/133200997/export-8bcb26bfe4e8cfaa1fa17d89d90f108b-mastermode credits test.scn
-res://scenes/menus/achievements/achievements menu.tscn::7b28141a830ecfde808f09a48649417e::1768841264::res://.godot/exported/133200997/export-3e22ca6de534d6ae119e3e6450f6cae2-achievements menu.scn
+res://scenes/levels/main/mastermode credits test.tscn::7630d021c4cb1587962f200b568b5d1e::1771268202::res://.godot/exported/133200997/export-8bcb26bfe4e8cfaa1fa17d89d90f108b-mastermode credits test.scn
+res://scenes/menus/achievements/achievements menu.tscn::1c2068327bc69bbc8dbd1dfa6252750c::1771773367::res://.godot/exported/133200997/export-3e22ca6de534d6ae119e3e6450f6cae2-achievements menu.scn
 res://scenes/menus/save error/save error menu.tscn::442b96b1f5eb36d11f77e62fa592c5fb::1768687129::res://.godot/exported/133200997/export-7ba3bcd272759d3670fb0451f59b25a6-save error menu.scn
+res://scenes/levels/main/musictest.tscn::eed5ad1f60dab487e931a6c7de17d503::1772838314::res://.godot/exported/133200997/export-83a5f345ca86ecb3f039679a745d931d-musictest.scn
+res://scenes/levels/the idol/wcti credits.tscn::eabe14496ce247344b81c65fb63b5ee8::1772828036::res://.godot/exported/133200997/export-3f304ea70bf9071838c8545fadb4d0c2-wcti credits.scn
+res://scenes/menus/credits gameover/credits gameover.tscn::7c9332e0da9e5720d0e31df0e6513a22::1772360403::res://.godot/exported/133200997/export-371b13053a8608f5ce7d8966902415ec-credits gameover.scn
