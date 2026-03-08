@@ -38,7 +38,7 @@ func _ready() -> void:
 func start() -> void:
 	bgm.play()
 	music_timer.start()
-	SongCredits.show_song_credits("Staff Roll", "TGM2 OST")
+	SongCredits.show_song_credits("Staff Roll", "From: TGM2 OST	By: Ayako Saso")
 	
 	credits_parent.show()
 	

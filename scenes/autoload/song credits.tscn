@@ -1,10 +1,45 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcgwl10ps0huy"]
+[gd_scene format=3 uid="uid://dcgwl10ps0huy"]
 
 [ext_resource type="Script" uid="uid://lp8g4aslrs3d" path="res://scenes/autoload/song_credits.gd" id="1_shimm"]
 [ext_resource type="Texture2D" uid="uid://ohy868mffp8k" path="res://assets/textures/MusicClipmask.png" id="2_7xefc"]
 [ext_resource type="Shader" uid="uid://d3yhtkt4tafka" path="res://assets/other/scrolling line bg.gdshader" id="3_02ppp"]
 [ext_resource type="Texture2D" uid="uid://crwldbtpbhuiu" path="res://assets/textures/squaresloop.png" id="4_3wsfk"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="5_sjag8"]
+
+[sub_resource type="Animation" id="Animation_shimm"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-970, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_7xefc"]
+resource_name = "show"
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 2, 2, 2),
+"points": PackedFloat32Array(-870, -0.017054195, -24.941761, 0.1, 326.73145, -102.5993, -0.07628323, -40.55805, 0.13333333, 70.890274, -100, -0.06730002, 22.308098, 0, 0, -100, 0, 0, 0, 0, -91.10358, -0.13461386, 15.474834, 0.29999995, -34.48716, -886.2242, -0.06666684, 220.3346, 0.020361794, -67.29595),
+"times": PackedFloat32Array(0, 0.33, 0.7, 2.8333333, 3.2333333, 3.6666667)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_02ppp"]
+_data = {
+&"RESET": SubResource("Animation_shimm"),
+&"show": SubResource("Animation_7xefc")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s1fm6"]
 shader = ExtResource("3_02ppp")
@@ -33,20 +68,24 @@ shader_parameter/line_count = 20.0
 shader_parameter/speed = 2.0
 shader_parameter/blur = 0.0
 
-[node name="SongCredits" type="Node2D"]
+[node name="SongCredits" type="Node2D" unique_id=2084228282]
 script = ExtResource("1_shimm")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=119375601]
+self_modulate = Color(1, 1, 1, 0.78039217)
 clip_children = 2
 z_index = 3620
-offset_left = -900.0
+offset_left = -970.0
 offset_top = 895.0
-offset_right = 264.0
+offset_right = 194.0
 offset_bottom = 1080.0
 texture = ExtResource("2_7xefc")
 stretch_mode = 4
 
-[node name="Scrolling BG" type="TextureRect" parent="TextureRect"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect" unique_id=1091445487]
+libraries/ = SubResource("AnimationLibrary_02ppp")
+
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect" unique_id=1942810672]
 material = SubResource("ShaderMaterial_s1fm6")
 layout_mode = 0
 offset_left = -27.0
@@ -55,7 +94,7 @@ offset_right = 1074.0
 offset_bottom = 252.0
 texture = ExtResource("4_3wsfk")
 
-[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=10119480]
 layout_mode = 0
 offset_left = -21.0
 offset_top = 6.0
@@ -63,14 +102,14 @@ offset_right = 969.0
 offset_bottom = 102.0
 texture = SubResource("GradientTexture2D_xx73p")
 
-[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect2"]
+[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect2" unique_id=1451966127]
 material = SubResource("ShaderMaterial_shimm")
 layout_mode = 0
 offset_right = 852.0
 offset_bottom = 96.0
 texture = ExtResource("4_3wsfk")
 
-[node name="Title" type="RichTextLabel" parent="TextureRect"]
+[node name="Title" type="RichTextLabel" parent="TextureRect" unique_id=732261088]
 layout_mode = 0
 offset_left = 122.0
 offset_top = 12.0
@@ -84,7 +123,7 @@ text = " Does Not Bleed"
 scroll_active = false
 vertical_alignment = 1
 
-[node name="Author" type="RichTextLabel" parent="TextureRect"]
+[node name="Author" type="RichTextLabel" parent="TextureRect" unique_id=680366962]
 layout_mode = 0
 offset_left = 160.0
 offset_top = 109.0
