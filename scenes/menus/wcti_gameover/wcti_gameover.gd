@@ -2,13 +2,17 @@ extends Control
 
 @onready var you_died_to: Label = $"you died to"
 @onready var tips: Label = $"tips"
+@onready var insta_exit_prevention: Timer = $insta_exit_prevention
+@onready var press_space_to_retry: Label = $"press space to retry"
+@onready var death_fx: Control = $DeathFX
 
 func _ready() -> void:
 	Engine.time_scale = 1.0
 	StyleSFX.stop()
 	if Global.died_to_override != "":
 		Global.died_to = Global.died_to_override
-	
+	do_the_fx()
+	#region old stuff
 	if Global.died_to == "fall":
 		you_died_to.text = "you FELL"
 	elif Global.died_to == "ultra irios fireball":
@@ -56,12 +60,23 @@ The same tips against Maltigi will function just as well against Glitchigi!'''
 			
 		_:
 			tips.text = "if youre seeing this then you died to something \n that i didnt give a built-in tip yet \n \n please report this"
+			#endregion
+	await get_tree().create_timer(1.0).timeout
+	var tween = create_tween()
+	tween.tween_property(press_space_to_retry, "modulate:a", 0.7, 1)
 
 func _process(delta: float) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	if Input.is_action_just_pressed("jump"):
-		get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
-		Global.reset()
-	if Input.is_action_just_pressed("escape"):
-		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if insta_exit_prevention.is_stopped():
+		if Input.is_action_just_pressed("jump"):
+			get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
+			Global.reset()
+		if Input.is_action_just_pressed("escape"):
+			get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func do_the_fx() -> void:
+	match Global.died_to:
+		"wega":
+			death_fx.wega.show()
+			death_fx.wega.anim()

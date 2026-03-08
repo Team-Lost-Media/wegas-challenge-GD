@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://crcgrrsoxo7av"]
+[gd_scene format=3 uid="uid://crcgrrsoxo7av"]
 
 [ext_resource type="Script" uid="uid://c68awu5bc55m7" path="res://scenes/menus/wcti_gameover/shoe_bench_gameover.gd" id="1_g5fek"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_oj7fw"]

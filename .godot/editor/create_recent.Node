@@ -1,14 +1,14 @@
+AudioStreamPlayer
+Control
+TextureRect
 Timer
 OmniLight3D
 Label
 RichTextLabel
-TextureRect
 ScrollContainer
 Sprite2D
 GPUParticles3D
 GPUParticlesCollisionBox3D
 CPUParticles3D
-AudioStreamPlayer
 CollisionShape3D
 Area3D
-StaticBody3D

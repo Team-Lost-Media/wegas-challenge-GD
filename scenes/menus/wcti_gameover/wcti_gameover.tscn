@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3dna7fg7ywau"]
+[gd_scene format=3 uid="uid://b3dna7fg7ywau"]
 
 [ext_resource type="Script" uid="uid://c3lmu6tvp12cy" path="res://scenes/menus/wcti_gameover/wcti_gameover.gd" id="1_6avms"]
-[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="3_dsy3w"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
-font_size = 160
-font_color = Color(1, 0, 0, 1)
+[ext_resource type="Script" uid="uid://cvmxy24dfs6n6" path="res://scenes/menus/wcti_gameover/death_fx.gd" id="2_w6fnf"]
+[ext_resource type="Script" uid="uid://ck5rmkur8lyp2" path="res://scenes/menus/wcti_gameover/wega death.gd" id="3_cehb5"]
+[ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="4_5agj2"]
+[ext_resource type="AudioStream" uid="uid://ddbsp3pytmph6" path="res://assets/SFX/hl2 stalker scream.mp3" id="5_cehb5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
 font_size = 88
@@ -16,10 +15,9 @@ font_size = 50
 font_color = Color(1, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_tgope"]
-font_size = 128
-font_color = Color(1, 0, 0, 1)
+font_size = 64
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=533021969]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6avms")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=644157798]
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -39,28 +37,11 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Maltigi" type="Sprite2D" parent="."]
-position = Vector2(299, 530.5)
-scale = Vector2(2.65833, 2.14722)
-texture = ExtResource("3_dsy3w")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1126733366]
 anchor_mode = 0
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -642.0
-offset_right = 1132.0
-offset_bottom = 219.0
-grow_horizontal = 2
-text = "rip green lawson"
-label_settings = SubResource("LabelSettings_i3kce")
-horizontal_alignment = 1
-
-[node name="you died to" type="Label" parent="."]
+[node name="you died to" type="Label" parent="." unique_id=1447704427]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -76,7 +57,7 @@ text = "you died to GUYWHOKILLEDYOU"
 label_settings = SubResource("LabelSettings_7xr85")
 horizontal_alignment = 1
 
-[node name="tips" type="Label" parent="."]
+[node name="tips" type="Label" parent="." unique_id=2018811507]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -99,18 +80,52 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="."]
+[node name="DeathFX" type="Control" parent="." unique_id=919658281]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_w6fnf")
+
+[node name="Wega" type="Control" parent="DeathFX" unique_id=1655642778]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_cehb5")
+
+[node name="TextureRect" type="TextureRect" parent="DeathFX/Wega" unique_id=366272688]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1880.0
+offset_bottom = 1040.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_5agj2")
+expand_mode = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Wega" unique_id=678708196]
+stream = ExtResource("5_cehb5")
+
+[node name="press space to retry" type="Label" parent="." unique_id=893651568]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.975
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.975
-offset_left = -441.0
+anchor_bottom = 1.0
+offset_left = -686.0
 offset_top = -175.0
-offset_right = 931.0
+offset_right = 686.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "press space to retry"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1
+
+[node name="insta_exit_prevention" type="Timer" parent="." unique_id=113860781]
+wait_time = 0.2
+one_shot = true
+autostart = true

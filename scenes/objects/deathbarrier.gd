@@ -9,7 +9,6 @@ extends Area3D
 @onready var texture_rect: TextureRect = $TextureRect
 @onready var save_sfx: AudioStreamPlayer = $"i will save you"
 @onready var fall_sfx: AudioStreamPlayer = $"i will not save you"
-@onready var saves_left: Label = $"TextureRect/saves left"
 
 func _on_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:

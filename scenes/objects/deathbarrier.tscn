@@ -2,17 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b322j1ofjv30t" path="res://scenes/objects/deathbarrier.gd" id="1_c4n1k"]
 [ext_resource type="Texture2D" uid="uid://vru7bi0xt3er" path="res://assets/textures/i will save you.png" id="2_77hxc"]
-[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_fnq34"]
 [ext_resource type="AudioStream" uid="uid://dqaickaks7ggn" path="res://assets/SFX/i will save you.wav" id="3_r8o3s"]
 [ext_resource type="AudioStream" uid="uid://358qooyp4wkr" path="res://assets/SFX/fall.wav" id="5_7sigv"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_v8v3t"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_7sigv"]
-font = ExtResource("3_fnq34")
-font_size = 162
-outline_size = 81
-outline_color = Color(0, 0, 0, 1)
 
 [node name="deathbarrier" type="Area3D" unique_id=736598807]
 script = ExtResource("1_c4n1k")
@@ -34,23 +27,6 @@ offset_bottom = 464.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_77hxc")
-
-[node name="saves left" type="Label" parent="TextureRect" unique_id=1938054439]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -338.0
-offset_top = -155.0
-offset_right = 326.0
-offset_bottom = -12.0
-grow_horizontal = 2
-grow_vertical = 0
-text = "0"
-label_settings = SubResource("LabelSettings_7sigv")
-horizontal_alignment = 1
 
 [node name="i will save you" type="AudioStreamPlayer" parent="." unique_id=439009039]
 stream = ExtResource("3_r8o3s")
