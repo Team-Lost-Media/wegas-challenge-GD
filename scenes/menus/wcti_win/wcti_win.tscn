@@ -11,12 +11,12 @@
 [sub_resource type="RichTextEffect" id="RichTextEffect_bbgvn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1882655370280
+metadata/rt = 1872186387525
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_e0xnn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1883276127287
+metadata/rt = 1872740035660
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
@@ -92,7 +92,7 @@ effects = 2
 alignment = 1
 color = Color(1, 1, 1, 1)
 emoji_scale = 1.0
-font = "VCR_OSD_MONO_1.001"
+font = "Inconsolata-VariableFont_wdth,wght"
 font_auto_setup = true
 font_size = 81
 font_bold_weight = 1.5
@@ -173,7 +173,7 @@ effects = 2
 alignment = 1
 color = Color(1, 1, 1, 1)
 emoji_scale = 1.0
-font = "VCR_OSD_MONO_1.001"
+font = "Inconsolata-VariableFont_wdth,wght"
 font_auto_setup = true
 font_size = 81
 font_bold_weight = 1.5

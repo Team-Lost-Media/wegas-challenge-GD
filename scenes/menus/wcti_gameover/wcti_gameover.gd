@@ -3,10 +3,18 @@ extends Control
 @onready var you_died_to: Label = $"you died to"
 @onready var tips: Label = $"tips"
 @onready var insta_exit_prevention: Timer = $insta_exit_prevention
-@onready var press_space_to_retry: Label = $"press space to retry"
+@onready var results: Control = $results
+@onready var stats: Label = $results/stats
 @onready var death_fx: Control = $DeathFX
 
 func _ready() -> void:
+	results.modulate.a = 0
+	stats.text = "died at lap " + str(Global.lap) + " with " + str(Global.wegadolls_left) + " wegadolls left\n" + "
+	time: " + Global.time_as_string + "
+	style: " + str(Global.points)
+	
+	
+	
 	Engine.time_scale = 1.0
 	StyleSFX.stop()
 	if Global.died_to_override != "":
@@ -61,9 +69,11 @@ The same tips against Maltigi will function just as well against Glitchigi!'''
 		_:
 			tips.text = "if youre seeing this then you died to something \n that i didnt give a built-in tip yet \n \n please report this"
 			#endregion
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(1.5).timeout
 	var tween = create_tween()
-	tween.tween_property(press_space_to_retry, "modulate:a", 0.7, 1)
+	tween.tween_property(results, "modulate:a", 0.9, 1)
+	var tween2 = create_tween()
+	tween2.tween_property(death_fx, "modulate:v", 0.3, 1)
 
 func _process(delta: float) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
@@ -80,3 +90,10 @@ func do_the_fx() -> void:
 		"wega":
 			death_fx.wega.show()
 			death_fx.wega.anim()
+		"maltigi":
+			if randi_range(1, 2) == 1:
+				death_fx.malt1.show()
+				death_fx.malt1.anim()
+			else:
+				death_fx.malt2.show()
+				death_fx.malt2.anim()

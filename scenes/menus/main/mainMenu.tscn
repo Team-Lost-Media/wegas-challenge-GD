@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="8_5jl5l"]
 [ext_resource type="Script" uid="uid://dij7go4ky6al7" path="res://scenes/menus/main/gamemodes scroll.gd" id="10_7dfbu"]
+[ext_resource type="Script" uid="uid://lmpnwg3dlk32" path="res://scenes/menus/main/high_score_label.gd" id="12_sp6e7"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
@@ -116,6 +117,15 @@ font_size = 41
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 15
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="LabelSettings" id="LabelSettings_524vu"]
+font = ExtResource("6_yk1ip")
+font_size = 20
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(4, 4)
 
@@ -362,11 +372,29 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Only Wega.              note: the image
-Collect all Wegadolls.  is 1918 x 406
+text = "Only Wega.
+Collect all Wegadolls.
 Go for a high score.
 "
 label_settings = SubResource("LabelSettings_2ct2e")
+
+[node name="Label3" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/Classic" unique_id=348590673]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -528.0
+offset_top = -157.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "HIGH SCORE: 33333
+"
+label_settings = SubResource("LabelSettings_524vu")
+horizontal_alignment = 2
+vertical_alignment = 2
+script = ExtResource("12_sp6e7")
 
 [node name="HSeparator" type="HSeparator" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=93812326]
 layout_mode = 2

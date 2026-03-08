@@ -5,7 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://cqtjmmx0cgoo5" path="res://assets/SFX/maltscream.wav" id="3_48lxq"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_kulab"]
-height = 2.5293
+height = 2.3
+radius = 0.6
 
 [node name="Maltigi" type="Sprite3D" unique_id=550283990]
 pixel_size = 0.008

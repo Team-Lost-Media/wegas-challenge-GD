@@ -18,7 +18,8 @@ TODO
 
 # misc
 - some achievement icons
-- thumbnails for the idol and credits
+- thumbnails for the idol
 - finish recolorpedia
-- redo the deathbarrier iwilsaevyou thingy
+- COMPLETED redo the deathbarrier iwilsaevyou thingy
 - maybe redo how hitstop functions? it breaks when trying to hit super john and rorys at the same time
+- make the hp label green during overheal

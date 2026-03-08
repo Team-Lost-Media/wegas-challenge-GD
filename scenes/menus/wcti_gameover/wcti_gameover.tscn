@@ -5,6 +5,11 @@
 [ext_resource type="Script" uid="uid://ck5rmkur8lyp2" path="res://scenes/menus/wcti_gameover/wega death.gd" id="3_cehb5"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="4_5agj2"]
 [ext_resource type="AudioStream" uid="uid://ddbsp3pytmph6" path="res://assets/SFX/hl2 stalker scream.mp3" id="5_cehb5"]
+[ext_resource type="Script" uid="uid://b7uvc5wlbc1of" path="res://scenes/menus/wcti_gameover/malt_1.gd" id="6_0amst"]
+[ext_resource type="Texture2D" uid="uid://govpoynpoaej" path="res://assets/textures/malttweak.png" id="7_a65hn"]
+[ext_resource type="AudioStream" uid="uid://cqtjmmx0cgoo5" path="res://assets/SFX/maltscream.wav" id="8_gxqhm"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="9_a65hn"]
+[ext_resource type="Texture2D" uid="uid://ckaxwpalaa0v1" path="res://assets/textures/maltigi scary small.png" id="9_gxqhm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
 font_size = 88
@@ -14,8 +19,229 @@ font_color = Color(1, 0, 0, 1)
 font_size = 50
 font_color = Color(1, 0, 0, 1)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocd30"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(0, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5k1s"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(250, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb8bt"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(500, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cslis"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(750, 0, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlufn"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(0, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hou3e"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(250, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lsbc"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(500, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiujo"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(750, 250, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3obx"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(0, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejqpf"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(250, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxw1a"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(500, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4rvh"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(750, 500, 250, 250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iq8ya"]
+atlas = ExtResource("7_a65hn")
+region = Rect2(0, 750, 250, 250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jepl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocd30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5k1s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb8bt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cslis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlufn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hou3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lsbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiujo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3obx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejqpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxw1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4rvh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iq8ya")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jepl"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(0, 0, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4h13t"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(144, 0, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw4l4"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(288, 0, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfkll"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(0, 108, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pxhn"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(144, 108, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_risr2"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(288, 108, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrjia"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(0, 216, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve3go"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(144, 216, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_um05c"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(288, 216, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8xui"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(0, 324, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bnfn"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(144, 324, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj63s"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(288, 324, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0exo3"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(0, 432, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i3o4"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(144, 432, 144, 108)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4bjg"]
+atlas = ExtResource("9_gxqhm")
+region = Rect2(288, 432, 144, 108)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r5odr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jepl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4h13t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw4l4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfkll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8pxhn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_risr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrjia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve3go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_um05c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8xui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bnfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj63s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0exo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6i3o4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4bjg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gxqhm"]
+font = ExtResource("9_a65hn")
+font_size = 82
+outline_size = 40
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_tgope"]
-font_size = 64
+font = ExtResource("9_a65hn")
+font_size = 41
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=533021969]
 layout_mode = 3
@@ -107,21 +333,84 @@ expand_mode = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Wega" unique_id=678708196]
 stream = ExtResource("5_cehb5")
+volume_db = 3.0
 
-[node name="press space to retry" type="Label" parent="." unique_id=893651568]
-modulate = Color(1, 1, 1, 0)
+[node name="Malt1" type="Control" parent="DeathFX" unique_id=417276893]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_0amst")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DeathFX/Malt1" unique_id=1966900256]
+visible = false
+modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(960, 540)
+scale = Vector2(7.68, 4.32)
+sprite_frames = SubResource("SpriteFrames_2jepl")
+frame_progress = 0.9953043
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Malt1" unique_id=464780476]
+stream = ExtResource("8_gxqhm")
+volume_db = -2.0
+
+[node name="Malt2" type="Control" parent="DeathFX" unique_id=740824024]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_0amst")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DeathFX/Malt2" unique_id=880924101]
+visible = false
+position = Vector2(960, 540)
+scale = Vector2(13.333332, 10)
+sprite_frames = SubResource("SpriteFrames_r5odr")
+frame = 14
+frame_progress = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Malt2" unique_id=905572730]
+stream = ExtResource("8_gxqhm")
+volume_db = -2.0
+
+[node name="results" type="Control" parent="." unique_id=1479479000]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="press space to retry" type="Label" parent="results" unique_id=893651568]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -686.0
-offset_top = -175.0
-offset_right = 686.0
+offset_left = 254.0
+offset_top = 865.0
+offset_right = 1626.0
+offset_bottom = 1040.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "press space to retry"
+label_settings = SubResource("LabelSettings_gxqhm")
+horizontal_alignment = 1
+
+[node name="stats" type="Label" parent="results" unique_id=1375774736]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 254.0
+offset_top = 37.0
+offset_right = 1626.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "died at lap x with x wegadolls left
+time: x
+style: x"
 label_settings = SubResource("LabelSettings_tgope")
 horizontal_alignment = 1
 

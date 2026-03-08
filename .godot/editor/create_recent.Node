@@ -1,5 +1,6 @@
-AudioStreamPlayer
 Control
+AnimatedSprite2D
+AudioStreamPlayer
 TextureRect
 Timer
 OmniLight3D
@@ -11,4 +12,3 @@ GPUParticles3D
 GPUParticlesCollisionBox3D
 CPUParticles3D
 CollisionShape3D
-Area3D

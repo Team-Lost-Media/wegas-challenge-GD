@@ -9,5 +9,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	value = Global.health
 	health_label.text = "HP: " + str(snappedf(Global.health, 0.1))
-	health_label.label_settings.font_color = health_label_text_color.gradient.sample(Global.health / 100)
+	health_label.label_settings.font_color = health_label_text_color.gradient.sample(Global.health / 200)
 	#print(health_label_text_color.gradient.sample(Global.health / 100))

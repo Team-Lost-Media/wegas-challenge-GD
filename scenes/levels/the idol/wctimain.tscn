@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cs226fu3xw4bi" path="res://scenes/objects/ultra irios/ultra irios.tscn" id="15_lr4ys"]
 [ext_resource type="PackedScene" uid="uid://b1dn67n1ycfir" path="res://scenes/objects/shoe bench (enemy)/shoe bench.tscn" id="17_vtxl0"]
 [ext_resource type="PackedScene" uid="uid://5fyklqfajuef" path="res://scenes/objects/super john/super john.tscn" id="18_7ytgl"]
+[ext_resource type="Texture2D" uid="uid://cq2irodw42bm2" path="res://assets/textures/Friedmaltigi1.png" id="18_sw7cd"]
 [ext_resource type="Texture2D" uid="uid://bmyvtstlhdqae" path="res://assets/textures/fire lowquality skybox version.png" id="19_lr4ys"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="20_7ytgl"]
 
@@ -465,13 +466,14 @@ omni_range = 20.0
 [node name="Glitchigi" parent="." unique_id=1705860827 node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
+pixel_size = 0.009
+texture = ExtResource("18_sw7cd")
 player = NodePath("../Player")
 enable_manually = true
 dash_cooldown = 2.5
 dash_delay = 0.75
 dash_speed = 150.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
-died_to = "glitchigi"
 smart = true
 smart_multiplier = 1.3
 line_color = Color(1, 0, 0, 1)
@@ -594,7 +596,7 @@ death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.83823, 0)
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 
-[node name="CollisionShape3D" parent="Main/deathbarrier2" index="0"]
+[node name="CollisionShape3D" parent="Main/deathbarrier2" index="0" unique_id=781558343]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.214, 6.25702, -38.1552)
 shape = SubResource("BoxShape3D_lr4ys")
 

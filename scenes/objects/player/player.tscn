@@ -178,11 +178,12 @@ gradient = SubResource("Gradient_ejlqc")
 texture = SubResource("GradientTexture2D_rp72t")
 
 [sub_resource type="Gradient" id="Gradient_japq8"]
-colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.5, 0.7, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1, 0.48000002, 1, 0.62733334, 1, 0, 0.49, 0.26133332, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_absnx"]
 gradient = SubResource("Gradient_japq8")
-width = 100
+width = 200
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_japq8"]
 viewport_path = NodePath("3D StylePanel")

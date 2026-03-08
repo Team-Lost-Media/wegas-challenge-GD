@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://daau2y37t3uou"
-path="res://.godot/imported/VCR_OSD_MONO_1.001.ttf-905c1285cda89614f92068ac4b12e303.fontdata"
+uid="uid://dd50r7j70dwad"
+path="res://.godot/imported/Inconsolata-VariableFont_wdth,wght.ttf-7c7ce0fc8fad441027e2eb6df441bf0d.fontdata"
 
 [deps]
 
-source_file="res://assets/other/VCR_OSD_MONO_1.001.ttf"
-dest_files=["res://.godot/imported/VCR_OSD_MONO_1.001.ttf-905c1285cda89614f92068ac4b12e303.fontdata"]
+source_file="res://assets/other/Inconsolata-VariableFont_wdth,wght.ttf"
+dest_files=["res://.godot/imported/Inconsolata-VariableFont_wdth,wght.ttf-7c7ce0fc8fad441027e2eb6df441bf0d.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
@@ -30,12 +30,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}
