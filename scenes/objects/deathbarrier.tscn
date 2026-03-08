@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b10h4jeg5fnr5"]
+[gd_scene format=3 uid="uid://b10h4jeg5fnr5"]
 
 [ext_resource type="Script" uid="uid://b322j1ofjv30t" path="res://scenes/objects/deathbarrier.gd" id="1_c4n1k"]
 [ext_resource type="Texture2D" uid="uid://vru7bi0xt3er" path="res://assets/textures/i will save you.png" id="2_77hxc"]
-[ext_resource type="Texture2D" uid="uid://cnvlqbqivoxep" path="res://assets/textures/i will save you from rorys.png" id="3_7sigv"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_fnq34"]
 [ext_resource type="AudioStream" uid="uid://dqaickaks7ggn" path="res://assets/SFX/i will save you.wav" id="3_r8o3s"]
+[ext_resource type="AudioStream" uid="uid://358qooyp4wkr" path="res://assets/SFX/fall.wav" id="5_7sigv"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_v8v3t"]
 
@@ -14,15 +14,13 @@ font_size = 162
 outline_size = 81
 outline_color = Color(0, 0, 0, 1)
 
-[node name="deathbarrier" type="Area3D"]
+[node name="deathbarrier" type="Area3D" unique_id=736598807]
 script = ExtResource("1_c4n1k")
-default_save = ExtResource("2_77hxc")
-rorys_save = ExtResource("3_7sigv")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=781558343]
 shape = SubResource("WorldBoundaryShape3D_v8v3t")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=183449591]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,7 +35,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_77hxc")
 
-[node name="saves left" type="Label" parent="TextureRect"]
+[node name="saves left" type="Label" parent="TextureRect" unique_id=1938054439]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -54,9 +52,14 @@ text = "0"
 label_settings = SubResource("LabelSettings_7sigv")
 horizontal_alignment = 1
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="i will save you" type="AudioStreamPlayer" parent="." unique_id=439009039]
 stream = ExtResource("3_r8o3s")
 volume_db = -4.0
+bus = &"SFX"
+
+[node name="i will not save you" type="AudioStreamPlayer" parent="." unique_id=1149447863]
+stream = ExtResource("5_7sigv")
+volume_db = 4.0
 bus = &"SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

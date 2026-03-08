@@ -132,6 +132,7 @@ func _process(delta: float) -> void:
 		lap1exit_started = true
 		lap2_startable = true
 		so_retro.show()
+		
 		wega.enabled = false
 		wega.kill = false
 		wega.position.y = -100.0
@@ -143,8 +144,10 @@ func _process(delta: float) -> void:
 		rorys.enabled = false
 		rorys.position.y = -100
 		rorys.hide()
+		
 		Global.timer_stopped = true
 		player.fade_out_gui(delta)
+		player.heal_health = false
 		label.modulate = label.modulate.lerp(Color.from_rgba8(255, 255, 255, 0), clamp(1.5 * delta, 0.0, 1.0))
 		wexecution.pitch_scale = lerp(wexecution.pitch_scale, 0.5, clamp(0.6 * delta, 0.0, 1.0))
 		wexecution.volume_linear = lerp(wexecution.volume_linear, 0.0, clamp(0.6 * delta, 0.0, 1.0))
@@ -228,11 +231,13 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 		so_retro.hide()
 		message.say("IT'S RETRO TIME", 10.0)
 		label.modulate = Color.WHITE
+		
 		player.style_panel.modulate = Color.WHITE
 		player.super_jump_cooldown_bar_outline.modulate = Color.WHITE
 		player.superjump_cooldown_bar.modulate = Color.WHITE
 		player.dash_cooldown_bar_outline.modulate = Color.WHITE
 		player.dash_cooldown_bar.modulate = Color.WHITE
+		player.heal_health = true
 		
 		lap_2_gridmap.show()
 		group_of_wegas_TWO.show()

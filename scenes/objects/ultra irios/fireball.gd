@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 func _on_death_area_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		Global.health -= damage
+		body.health_label.shake_intensity = 5
 		close_call = false
 		body.damage_effects.play_damage_fx("fireball")
 		if Global.health <= 0:

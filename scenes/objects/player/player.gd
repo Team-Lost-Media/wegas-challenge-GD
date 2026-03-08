@@ -54,6 +54,7 @@ var coyote_disabled: bool
 var saveable_fall = false
 @export var testing_grapples = false
 @export var show_hp = true
+@export var heal_health = true
 @onready var health_label: Label = $HealthLabel
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
@@ -121,7 +122,8 @@ func _physics_process(delta: float) -> void:
 		img.save_png("res://screenshots/" + date + time + ".png")
 	
 	if Global.health < Global.max_health:
-		Global.health = clampf(Global.health + 0.25 * delta, 0 , 100)
+		if heal_health:
+			Global.health = clampf(Global.health + 0.25 * delta, 0 , 100)
 	else:
 		Global.health -= 1 * delta * overheal_drain_curve.sample(Global.health / Global.max_health)
 	golden_sigma.visible = saveable_fall and health_bar.visible

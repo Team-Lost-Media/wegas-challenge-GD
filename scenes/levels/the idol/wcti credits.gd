@@ -15,6 +15,7 @@ extends Node3D
 @onready var maltigi: Sprite3D = $Maltigi
 
 @onready var music_timer: Timer = $"music timer"
+@onready var particles: CPUParticles3D = $particles
 
 var rotating: bool = false
 
@@ -46,7 +47,7 @@ func start() -> void:
 	var tween = create_tween()
 	tween.tween_property(sun, "light_energy", 10, 1)
 	var tween2 = create_tween()
-	tween.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 1, 1)
+	tween2.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 1, 1)
 	
 	wega.show()
 	wega.kill = true #ok weve done the joke already pack it up go home
@@ -55,6 +56,8 @@ func start() -> void:
 	await get_tree().create_timer(1.2).timeout
 	rotating = true
 	await get_tree().create_timer(0.1).timeout
+	tween.kill()
+	tween2.kill()
 	flash()
 	await get_tree().create_timer(2).timeout
 	wega.enabled = true
@@ -64,7 +67,7 @@ func start() -> void:
 func _process(delta: float) -> void:
 	if not Global.timer_stopped: time += delta
 	if time > 60:
-		#Achievements.award("thanks for playing!")
+		Achievements.award("thanks for playing!")
 		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 		
 	credits_parent.rotation.y = player.global_rotation.y + 90 + 45.125
@@ -94,21 +97,12 @@ func _process(delta: float) -> void:
 
 
 func flash() -> void:
-	environment.environment.sky.sky_material.sky_horizon_color.r = 0.4
-	environment.environment.sky.sky_material.sky_horizon_color.g = 0.1
-	environment.environment.sky.sky_material.ground_horizon_color.v = 1.0
-	environment.environment.sky.sky_material.ground_bottom_color.v = 0.2
 	sun.light_energy += 50
-	var horizontween = create_tween()
-	horizontween.tween_property(environment, "environment:sky:sky_material:sky_horizon_color:r", 0.01, 1)
-	var horizontween2 = create_tween()
-	horizontween2.tween_property(environment, "environment:sky:sky_material:sky_horizon_color:g", 0.00, 1)
-	var horizontween3 = create_tween()
-	horizontween3.tween_property(environment, "environment:sky:sky_material:ground_horizon_color:v", 0.54, 1)
-	var horizontween4 = create_tween()
-	horizontween4.tween_property(environment, "environment:sky:sky_material:ground_bottom_color:v", 0.06, 1)
 	var suntween = create_tween()
 	suntween.tween_property(sun, "light_energy", 10, 1)
+	environment.environment.sky.sky_material.energy_multiplier = 2
+	var environmenttween = create_tween()
+	environmenttween.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 1, 1)
 
 
 
@@ -129,7 +123,29 @@ func _on_music_timer_timeout() -> void:
 	#64 is the bigger part with extra squarewaves
 	#80 is the end 
 	#also remember all of these are actually +1 cus of Music but
+	
+	
 	if music_bars > 48 and music_bars%2 == 1:
 		flash()
 	
+	match music_bars:
+		17:
+			particles.emitting = true
+		32:
+			particles.emitting = false
+			var tween = create_tween()
+			tween.tween_property(sun, "light_energy", 2, 1)
+			var tween2 = create_tween()
+			tween2.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 0.5, 1)
+		47:
+			var tween = create_tween()
+			tween.tween_property(sun, "light_energy", 20, 1)
+			var tween2 = create_tween()
+			tween2.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 1, 1)
+		65:
+			particles.emitting = true
+		80:
+			await get_tree().create_timer(0.365, true, false, true).timeout
+			flash()
+
 	

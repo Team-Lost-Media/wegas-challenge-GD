@@ -123,6 +123,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			punchable = false
 			position.y = -100
 			Global.health -= damage
+			body.health_label.shake_intensity = 5
 			if wegadoll: wegadoll.wegadoll.material_overlay = normal_wegadoll_material
 			hide()
 			if Global.health <= 0:

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dlf23nb3wl5ra" path="res://assets/textures/golden sigma.png" id="4_absnx"]
 [ext_resource type="Script" uid="uid://brwcsx3yog6er" path="res://scenes/objects/player/health.gd" id="4_bdcal"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
+[ext_resource type="Script" uid="uid://bxicvannoy5f4" path="res://scenes/objects/player/health_label.gd" id="5_a2h7i"]
 [ext_resource type="Shader" uid="uid://bnvqk864yprcf" path="res://assets/other/balatro.gdshader" id="5_japq8"]
 [ext_resource type="Script" uid="uid://cc3nhv7vlnl17" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
 [ext_resource type="Script" uid="uid://cx5silmovrt1o" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
@@ -437,6 +438,7 @@ text = "HP: 100.0"
 label_settings = SubResource("LabelSettings_ponut")
 horizontal_alignment = 2
 vertical_alignment = 2
+script = ExtResource("5_a2h7i")
 
 [node name="Health" type="ProgressBar" parent="." unique_id=262076614]
 anchors_preset = 3
