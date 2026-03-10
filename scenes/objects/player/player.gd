@@ -50,7 +50,6 @@ var coyote: bool
 var coyote_disabled: bool
 @export var fly: bool = false
 @export var disable_collecting_wegadolls: bool = false
-@export var fall_saves: int = 0
 var saveable_fall = false
 @export var testing_grapples = false
 @export var show_hp = true

@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dij7go4ky6al7" path="res://scenes/menus/main/gamemodes scroll.gd" id="10_7dfbu"]
 [ext_resource type="Script" uid="uid://lmpnwg3dlk32" path="res://scenes/menus/main/high_score_label.gd" id="12_sp6e7"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
+[ext_resource type="Texture2D" uid="uid://cxbawji40rfht" path="res://assets/textures/thumbnails/wcti2.png" id="13_524vu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -65,28 +66,6 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vnt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_524vu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6e7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfbu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugs4v"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jl5l"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxm30"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ct2e"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
-
 [sub_resource type="Gradient" id="Gradient_sp6e7"]
 offsets = PackedFloat32Array(1)
 colors = PackedColorArray(1, 1, 1, 1)
@@ -129,7 +108,50 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(4, 4)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g7n6k"]
+[sub_resource type="Gradient" id="Gradient_04vnt"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qyi5k"]
+gradient = SubResource("Gradient_04vnt")
+width = 1
+height = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k3myg"]
+texture = SubResource("GradientTexture2D_qyi5k")
+texture_margin_top = 15.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_04vnt"]
+font = ExtResource("6_yk1ip")
+font_size = 20
+font_color = Color(1, 1, 1, 0.29803923)
+outline_size = 10
+outline_color = Color(0, 0, 0, 0.35686275)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 0.30980393)
+shadow_offset = Vector2(4, 4)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vnt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_524vu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sp6e7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7dfbu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugs4v"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5jl5l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxm30"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2ct2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ugs4v"]
 font = ExtResource("6_yk1ip")
@@ -298,33 +320,10 @@ pivot_offset = Vector2(480, 270)
 theme_override_styles/panel = SubResource("StyleBoxFlat_6osn1")
 script = ExtResource("10_7dfbu")
 
-[node name="Quit" type="Button" parent="Gamemodes" unique_id=4701906]
-layout_mode = 0
-offset_left = 5.0
-offset_right = 949.0
-offset_bottom = 50.0
-theme_override_constants/outline_size = 20
-theme_override_constants/h_separation = 0
-theme_override_fonts/font = ExtResource("6_yk1ip")
-theme_override_font_sizes/font_size = 41
-theme_override_styles/normal = SubResource("StyleBoxEmpty_qyi5k")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_04vnt")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_524vu")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sp6e7")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_7dfbu")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugs4v")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5jl5l")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nxm30")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_2ct2e")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w6md1")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
-text = "CLOSE"
-flat = true
-
 [node name="TextureRect" type="TextureRect" parent="Gamemodes" unique_id=1259225552]
 clip_children = 1
 layout_mode = 0
-offset_left = 8.0
+offset_left = 8.000008
 offset_top = 50.0
 offset_right = 952.0
 offset_bottom = 534.0
@@ -398,7 +397,7 @@ script = ExtResource("12_sp6e7")
 
 [node name="HSeparator" type="HSeparator" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=93812326]
 layout_mode = 2
-theme_override_styles/separator = SubResource("StyleBoxEmpty_g7n6k")
+theme_override_styles/separator = SubResource("StyleBoxTexture_k3myg")
 
 [node name="The Idol" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1494533699]
 custom_minimum_size = Vector2(0, 200)
@@ -409,12 +408,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k3myg")
 theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_if2gh")
 
 [node name="TextureRect" type="TextureRect" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=2093642963]
-visible = false
 layout_mode = 0
 offset_right = 944.0
 offset_bottom = 200.0
-texture = ExtResource("8_2ct2e")
-expand_mode = 1
+texture = ExtResource("13_524vu")
 stretch_mode = 5
 
 [node name="Label" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=1258710720]
@@ -436,14 +433,17 @@ text = "Collect the Idol.
 Whatever it takes."
 label_settings = SubResource("LabelSettings_2ct2e")
 
-[node name="Label3" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=135944689]
-layout_mode = 0
-offset_left = 421.99997
-offset_top = 50.499992
-offset_right = 950.0
-offset_bottom = 167.5
-text = "no image yet"
-label_settings = SubResource("LabelSettings_2ct2e")
+[node name="ArtCredits" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=164697244]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -528.0
+offset_bottom = 157.0
+grow_horizontal = 0
+text = "art by Goobimore"
+label_settings = SubResource("LabelSettings_04vnt")
+horizontal_alignment = 2
 
 [node name="Credits" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1389887946]
 visible = false
@@ -490,6 +490,29 @@ offset_bottom = 167.5
 text = "no image yet"
 label_settings = SubResource("LabelSettings_2ct2e")
 
+[node name="Quit" type="Button" parent="Gamemodes" unique_id=4701906]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 949.0
+offset_bottom = 50.0
+theme_override_constants/outline_size = 20
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("6_yk1ip")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qyi5k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_04vnt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_524vu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_sp6e7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7dfbu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ugs4v")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_5jl5l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nxm30")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2ct2e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w6md1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
+text = "CLOSE"
+flat = true
+
 [node name="Recolorpedia" parent="." unique_id=393970587 instance=ExtResource("12_ugs4v")]
 top_level = true
 layout_mode = 1
@@ -519,7 +542,7 @@ label_settings = SubResource("LabelSettings_ugs4v")
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_settings"]
 [connection signal="pressed" from="VBoxContainer/Button4" to="." method="_quit"]
 [connection signal="Closing" from="Settings" to="." method="_on_close_button"]
-[connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Classic" to="." method="_classic"]
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/The Idol" to="." method="_the_idol"]
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Credits" to="." method="_credits"]
+[connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]

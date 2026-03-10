@@ -48,7 +48,7 @@ func reset_wcti_score():
 var achievements_dict: Dictionary = {
 	"winga": false, #beat classic mode "you winga!"
 	"WEXECUTION": false, #beat lap 1 "i cant believe green lawson got wexecuted :pensive:"
-	"WEGAFADENCE": false, #beat lap 2 "this really was our wegafadence"
+	"WEGAFADENCE": false, #beat lap 2 "Don't get caught."
 	"so close, yet so far": false, #fail to collect the idol "one must imagine me happy because im not"
 	"idiot": false, #die in the pause before transition to lap 2 "guy stupid"
 	#"Task Failed Succesfully!": false, #die to every enemy "insert fanfare here"

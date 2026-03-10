@@ -495,7 +495,6 @@ floor_constant_speed = true
 floor_snap_length = 0.2
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
-fall_saves = 1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=410377228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.333, 0)
