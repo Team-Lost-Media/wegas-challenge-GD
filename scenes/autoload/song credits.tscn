@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://dcgwl10ps0huy"]
 
 [ext_resource type="Script" uid="uid://lp8g4aslrs3d" path="res://scenes/autoload/song_credits.gd" id="1_shimm"]
-[ext_resource type="Texture2D" uid="uid://ohy868mffp8k" path="res://assets/textures/MusicClipmask.png" id="2_7xefc"]
-[ext_resource type="Shader" uid="uid://d3yhtkt4tafka" path="res://assets/other/scrolling line bg.gdshader" id="3_02ppp"]
-[ext_resource type="Texture2D" uid="uid://crwldbtpbhuiu" path="res://assets/textures/squaresloop.png" id="4_3wsfk"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="5_sjag8"]
 
 [sub_resource type="Animation" id="Animation_shimm"]
@@ -11,12 +8,12 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position:x")
+tracks/0/path = NodePath("../Control:position:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-970, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(200, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 
@@ -26,13 +23,13 @@ length = 4.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position:x")
+tracks/0/path = NodePath("../Control:position:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 2, 2, 2),
-"points": PackedFloat32Array(-870, -0.017054195, -24.941761, 0.1, 326.73145, -102.5993, -0.07628323, -40.55805, 0.13333333, 70.890274, -100, -0.06730002, 22.308098, 0, 0, -100, 0, 0, 0, 0, -91.10358, -0.13461386, 15.474834, 0.29999995, -34.48716, -886.2242, -0.06666684, 220.3346, 0.020361794, -67.29595),
-"times": PackedFloat32Array(0, 0.33, 0.7, 2.8333333, 3.2333333, 3.6666667)
+"handle_modes": PackedInt32Array(2, 0, 2, 2),
+"points": PackedFloat32Array(200, -0.020469535, 61.00246, 0.033333335, -99.33862, 0, -0.13333334, 1.4550296, 0.19, 0, 0, 0, 0, 0.5, 14.782565, 212.46135, -0.08888888, -3.7698417, 0, 0),
+"times": PackedFloat32Array(0, 0.46666667, 2.7, 3.5)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_02ppp"]
@@ -41,80 +38,25 @@ _data = {
 &"show": SubResource("Animation_7xefc")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_s1fm6"]
-shader = ExtResource("3_02ppp")
-shader_parameter/color_one = Color(0.05, 0.05, 0.05, 1)
-shader_parameter/color_two = Color(0, 0, 0, 1)
-shader_parameter/angle = 45.0
-shader_parameter/line_count = 20.0
-shader_parameter/speed = 2.0
-shader_parameter/blur = 0.0
-
-[sub_resource type="Gradient" id="Gradient_14aot"]
-colors = PackedColorArray(0.393333, 0, 0.59, 1, 0.69, 0, 0.9, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xx73p"]
-gradient = SubResource("Gradient_14aot")
-width = 128
-height = 96
-fill_to = Vector2(1, 0.417508)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_shimm"]
-shader = ExtResource("3_02ppp")
-shader_parameter/color_one = Color(0.072, 0, 0.18, 0.168627)
-shader_parameter/color_two = Color(0.0341667, 0, 0.05, 0.478431)
-shader_parameter/angle = -60.0
-shader_parameter/line_count = 20.0
-shader_parameter/speed = 2.0
-shader_parameter/blur = 0.0
-
-[node name="SongCredits" type="Node2D" unique_id=2084228282]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=473871367]
 script = ExtResource("1_shimm")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=119375601]
-self_modulate = Color(1, 1, 1, 0.78039217)
-clip_children = 2
-z_index = 3620
-offset_left = -970.0
-offset_top = 895.0
-offset_right = 194.0
-offset_bottom = 1080.0
-texture = ExtResource("2_7xefc")
-stretch_mode = 4
+[node name="Control" type="Control" parent="." unique_id=918076886]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 200.0
+offset_right = 40.0
+offset_bottom = 239.99998
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect" unique_id=1091445487]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control" unique_id=1091445487]
 libraries/ = SubResource("AnimationLibrary_02ppp")
 
-[node name="Scrolling BG" type="TextureRect" parent="TextureRect" unique_id=1942810672]
-material = SubResource("ShaderMaterial_s1fm6")
+[node name="Title" type="RichTextLabel" parent="Control" unique_id=732261088]
 layout_mode = 0
-offset_left = -27.0
-offset_top = -32.0
-offset_right = 1074.0
-offset_bottom = 252.0
-texture = ExtResource("4_3wsfk")
-
-[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=10119480]
-layout_mode = 0
-offset_left = -21.0
-offset_top = 6.0
-offset_right = 969.0
-offset_bottom = 102.0
-texture = SubResource("GradientTexture2D_xx73p")
-
-[node name="Scrolling BG" type="TextureRect" parent="TextureRect/TextureRect2" unique_id=1451966127]
-material = SubResource("ShaderMaterial_shimm")
-layout_mode = 0
-offset_right = 852.0
-offset_bottom = 96.0
-texture = ExtResource("4_3wsfk")
-
-[node name="Title" type="RichTextLabel" parent="TextureRect" unique_id=732261088]
-layout_mode = 0
-offset_left = 122.0
-offset_top = 12.0
-offset_right = 759.0
-offset_bottom = 98.0
+offset_left = 19.0
+offset_top = 907.0
+offset_right = 656.0
+offset_bottom = 993.0
 theme_override_constants/outline_size = 35
 theme_override_fonts/normal_font = ExtResource("5_sjag8")
 theme_override_font_sizes/normal_font_size = 60
@@ -123,14 +65,15 @@ text = " Does Not Bleed"
 scroll_active = false
 vertical_alignment = 1
 
-[node name="Author" type="RichTextLabel" parent="TextureRect" unique_id=680366962]
+[node name="Author" type="RichTextLabel" parent="Control" unique_id=680366962]
 layout_mode = 0
-offset_left = 160.0
-offset_top = 109.0
-offset_right = 1107.0
-offset_bottom = 195.0
+offset_left = 57.0
+offset_top = 969.0
+offset_right = 1004.0
+offset_bottom = 1055.0
 theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("5_sjag8")
 theme_override_font_sizes/normal_font_size = 30
-text = "By: somerandomguy21"
+text = " By: somerandomguy21"
+scroll_active = false
 vertical_alignment = 1

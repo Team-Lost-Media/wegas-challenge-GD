@@ -1,14 +1,12 @@
-extends Node2D
+extends CanvasLayer
 
-@onready var texture_rect: TextureRect = $TextureRect
+@onready var title_label: RichTextLabel = $Control/Title
+@onready var author_label: RichTextLabel = $Control/Author
+@onready var animation_player: AnimationPlayer = $Control/AnimationPlayer
 
-@onready var title_label: RichTextLabel = $TextureRect/Title
-@onready var author_label: RichTextLabel = $TextureRect/Author
-@onready var animation_player: AnimationPlayer = $TextureRect/AnimationPlayer
-
-func show_song_credits(title: String, author: String):
+func show_song_credits(title: String, origin: String, author: String):
 	title_label.text = " " + title
-	author_label.text = author
+	author_label.text = " " + origin + "\n " + author
 	
 	animation_player.stop()
 	animation_player.play("show")

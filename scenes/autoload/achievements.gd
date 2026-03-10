@@ -25,6 +25,7 @@ var achievement_to_icon_dict: Dictionary = {
 	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
 	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
 	"ouroboros": "res://assets/textures/achievements/ouroboros.png", #do 100 runs "this really was our oboros"
+	"embrace the malt": false #run into maltigi while he's not dashing
 }
 
 func _ready() -> void:
@@ -35,6 +36,7 @@ func award(achievement: String) -> void:
 	if Save.achievements_dict.has(achievement):
 		if Save.achievements_dict.get(achievement) == false:
 			Save.achievements_dict.set(achievement, true)
+			
 			if animation_player.is_playing() == false: 
 				achievement_name.text = achievement
 				achievement_icon.texture = load(achievement_to_icon_dict.get(achievement, "res://assets/textures/achievements/placeholder.png"))
@@ -43,6 +45,7 @@ func award(achievement: String) -> void:
 				achievement_name2.text = achievement
 				achievement_icon2.texture = load(achievement_to_icon_dict.get(achievement, "res://assets/textures/achievements/placeholder.png"))
 				animation_player2.play("achievement")
+				
 			Save.save_achievements()
 
 func on_player_death() -> void:

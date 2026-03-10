@@ -6,7 +6,8 @@ extends Area3D
 @export_group("Credits")
 @export var enable_song_credits: bool = false
 @export var title: String
-@export var author: String
+@export var origin: String = "From: "
+@export var author: String = "By: "
 
 var used = false
 
@@ -17,8 +18,8 @@ func _on_body_entered(body: Node3D) -> void:
 				used = true
 				bgm_node.stream = bgm
 				bgm_node.play()
-				if enable_song_credits: SongCredits.show_song_credits(title, author)
+				if enable_song_credits: SongCredits.show_song_credits(title, origin, author)
 		else:
 				bgm_node.stream = bgm
 				bgm_node.play()
-				if enable_song_credits: SongCredits.show_song_credits(title, author)
+				if enable_song_credits: SongCredits.show_song_credits(title, origin, author)

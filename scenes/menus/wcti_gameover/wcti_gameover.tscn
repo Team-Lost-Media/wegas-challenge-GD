@@ -10,6 +10,9 @@
 [ext_resource type="AudioStream" uid="uid://cqtjmmx0cgoo5" path="res://assets/SFX/maltscream.wav" id="8_gxqhm"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="9_a65hn"]
 [ext_resource type="Texture2D" uid="uid://ckaxwpalaa0v1" path="res://assets/textures/maltigi scary small.png" id="9_gxqhm"]
+[ext_resource type="Script" uid="uid://bpaw0yxusr0mg" path="res://scenes/menus/wcti_gameover/fall_deathfx.gd" id="10_lb8bt"]
+[ext_resource type="AudioStream" uid="uid://b0nisytr0gbwg" path="res://assets/SFX/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg" id="11_lb8bt"]
+[ext_resource type="Texture2D" uid="uid://c5pditabpfpnt" path="res://assets/textures/green lawson.png" id="12_hlufn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
 font_size = 88
@@ -231,6 +234,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_hou3e"]
+font_size = 64
+
 [sub_resource type="LabelSettings" id="LabelSettings_gxqhm"]
 font = ExtResource("9_a65hn")
 font_size = 82
@@ -372,6 +378,34 @@ frame_progress = 1.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Malt2" unique_id=905572730]
 stream = ExtResource("8_gxqhm")
 volume_db = -2.0
+
+[node name="Fall1" type="Control" parent="DeathFX" unique_id=401736265]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("10_lb8bt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Fall1" unique_id=2077906700]
+stream = ExtResource("11_lb8bt")
+volume_db = 8.0
+
+[node name="Label" type="Label" parent="DeathFX/Fall1" unique_id=1933952824]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 148.0
+offset_top = 191.0
+offset_right = 601.0
+offset_bottom = 279.0
+scale = Vector2(3.0452974, 1.2501764)
+text = "rip gre n   lawso "
+label_settings = SubResource("LabelSettings_hou3e")
+
+[node name="Sprite2D" type="Sprite2D" parent="DeathFX/Fall1" unique_id=1400900601]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(480, 554.5)
+scale = Vector2(3.288889, 1.2708334)
+texture = ExtResource("12_hlufn")
 
 [node name="results" type="Control" parent="." unique_id=1479479000]
 anchors_preset = 0

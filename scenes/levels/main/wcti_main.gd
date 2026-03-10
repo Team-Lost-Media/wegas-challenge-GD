@@ -63,7 +63,7 @@ func _ready() -> void:
 	Global.wegadolls_left = wegasleft
 	Global.max_wegadolls = wegasleft
 	Global.mode = "wcti"
-	SongCredits.show_song_credits("WEXECUTION", "By: Kiwiquest")
+	SongCredits.show_song_credits("WEXECUTION", "From: Wega's Wadness", "By: Kiwiquest")
 	shoe_bench_timer.position.y += 600
 	wegafadence_bars = 0
 	lap1_sky = environment.environment.sky
@@ -321,7 +321,7 @@ func _on_lap_2_start_pause_timeout() -> void:
 	lap = 2
 	
 	await get_tree().create_timer(2.0).timeout
-	SongCredits.show_song_credits("WEGAFADENCE", "By: GAMR")
+	SongCredits.show_song_credits("WEGAFADENCE", "From: WC:TI OST", "By: GAMR")
 
 func shoe_bench_timer_bounce() -> void:
 	if snapped(wegafadence_bars / 2.0, 1) == wegafadence_bars / 2.0: #if it's even then

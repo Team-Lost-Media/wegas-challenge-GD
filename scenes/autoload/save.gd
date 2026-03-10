@@ -63,6 +63,7 @@ var achievements_dict: Dictionary = {
 	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
 	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
 	#"ouroboros": false, #do 100 runs "this really was our oboros"
+	"embrace the malt": false, #run into maltigi while he's not moving
 }
 
 func save_achievements():

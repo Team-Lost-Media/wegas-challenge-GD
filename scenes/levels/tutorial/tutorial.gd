@@ -83,7 +83,7 @@ func _on_wegadoll_collected() -> void: #this only applies to the first one dw
 	increase_sun = true
 	purple_sun_bgm.stop()
 	music.play()
-	SongCredits.show_song_credits("WEXECUTION", "By: Kiwiquest")
+	SongCredits.show_song_credits("WEXECUTION", "From: Wega's Wadness", "By: Kiwiquest")
 
 
 func So_Retro(body: Node3D) -> void:

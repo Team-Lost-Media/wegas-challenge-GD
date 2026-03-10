@@ -80,7 +80,7 @@ func crossfade(drums: bool) -> void:
 func _ready() -> void:
 	recolorpedia.dont_change_scene_to_main_menu = true
 	recolorpedia.go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK.connect(_exit_recolorpedia)
-	SongCredits.show_song_credits("Does Not Bleed", "By: somerandomguy21 (that's me!)")
+	SongCredits.show_song_credits("Does Not Bleed", "From: WEGAKILL OST", "By: somerandomguy21")
 	StyleSFX.stop()
 	randomize()
 	tips_text.text = tips.pick_random()

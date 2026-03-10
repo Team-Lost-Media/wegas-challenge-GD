@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://djc18acibk26s"
+path="res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-56859f8ae6e94b50fa5f369512ee7883.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/SFX/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg"
+dest_files=["res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-56859f8ae6e94b50fa5f369512ee7883.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

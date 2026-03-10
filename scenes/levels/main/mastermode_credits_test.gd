@@ -20,7 +20,7 @@ func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
 	Global.mode = "credits"
-	SongCredits.show_song_credits("Staff Roll", "From: TGM2 OST	By: Ayako Saso")
+	SongCredits.show_song_credits("Staff Roll", "From: TGM2 OST", "By: Ayako Saso")
 	bgm.play()
 	await get_tree().create_timer(1.2).timeout
 	rotating = true
