@@ -9,7 +9,7 @@ extends Control
 
 var achievement_to_icon_dict: Dictionary = {
 	"winga": "res://assets/textures/achievements/winga.png", #beat classic mode "you winga!"
-	"WEXECUTION": "res://assets/textures/achievements/placeholder.png", #beat lap 1 "i cant believe green lawson got wexecuted :pensive:"
+	"WEXECUTION": "res://assets/textures/achievements/wexecution.png", #beat lap 1 "i cant believe green lawson got wexecuted :pensive:"
 	"WEGAFADENCE": "res://assets/textures/achievements/placeholder.png", #beat lap 2 "this really was our wegafadence"
 	"so close, yet so far": "res://assets/textures/achievements/so close yet so far.png", #fail to collect the idol "you're almost there! keep trying!"
 	"idiot": "res://assets/textures/achievements/idiot.png", #die in the pause before transition to lap 2 "guy stupid"

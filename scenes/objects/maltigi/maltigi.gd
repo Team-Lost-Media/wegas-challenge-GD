@@ -83,10 +83,9 @@ func _on_dash_delay_timeout() -> void:
 func _on_death_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		if kill == true:
-			#region hugmaltigiachievement
+			print("you die d")
 			if moving == false:
 				Achievements.award("embrace the malt")
-			#endregion
 			
 			Global.died_to = died_to
 			Global.player_died.emit()
