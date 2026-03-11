@@ -13,13 +13,16 @@ TODO
 - achievements menu
 - options menu
 - slightly edit the classic deathscreen
-- remake the wcti deathscreen (could use vids?)
+- PARTIALLY COMPLETED remake the wcti deathscreen (could use vids?)
 - switch the music credits to using an animation player instead of a tween
 
 # misc
 - some achievement icons
-- thumbnails for the idol
+- COMPLETED (thanks goobimore) thumbnails for the idol
 - finish recolorpedia
 - COMPLETED redo the deathbarrier iwilsaevyou thingy
-- maybe redo how hitstop functions? it breaks when trying to hit super john and rorys at the same time
-- make the hp label green during overheal
+- add "fake" hitstop for john that stops the player from moving for a very short time
+- COMPLETED make the hp label green during overheal
+- maybe redo how the rorys exploding sprite works to make it a new object instead of an anim rorys themself plays? would be way easier
+- make it so that if an enemy's death scene is "" or "none" then it skips the change_scene_to_file() thing (this is for the transition to the results from the theidol credits)
+- cmon surely you can make the style panel at the side work like regular ultrakill instead of only showing the latest style right (maybe use vboxcontainer?)

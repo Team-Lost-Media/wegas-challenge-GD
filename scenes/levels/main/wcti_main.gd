@@ -168,9 +168,9 @@ func _process(delta: float) -> void:
 				super_john.enabled = true
 				john_started = true
 				
-				#	rorys.group_of_wegas = self.group_of_wegas_TWO
-				#rorys.enabled = true
-				#rorys.stay_still_time = 8
+				rorys.group_of_wegas = self.group_of_wegas_TWO
+				rorys.enabled = true
+				rorys.stay_still_time = 8
 				
 		
 		if wegasleft <= 200:
