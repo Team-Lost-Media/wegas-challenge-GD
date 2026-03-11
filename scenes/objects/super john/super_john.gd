@@ -55,10 +55,10 @@ func _process(delta: float) -> void:
 			if punchable and just_hit_player.is_stopped():
 				if velocity.length() >= minimum_push_speed:
 					punch_sfx.play()
-					Engine.time_scale = 0.0
-					await get_tree().create_timer(0.07, true, false, true).timeout
+					#Engine.time_scale = 0.0
+					#await get_tree().create_timer(0.07, true, false, true).timeout
+					#Engine.time_scale = 1.0
 					just_got_hit.start()
-					Engine.time_scale = 1.0
 					velocity = -velocity * 1.5
 					Global.points += 200
 					Global.style = "+DENIED"
