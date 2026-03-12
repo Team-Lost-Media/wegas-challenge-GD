@@ -8,6 +8,7 @@ extends Node3D
 @onready var credits_parent: Node3D = $"Credits Parent"
 @onready var credits: Node3D = $"Credits Parent/Credits"
 @onready var bgm: AudioStreamPlayer = $AudioStreamPlayer
+@onready var color_rect: ColorRect = $ColorRect
 
 @onready var environment: WorldEnvironment = $Main/WorldEnvironment2
 @onready var sun: DirectionalLight3D = $Main/DirectionalLight3D
@@ -18,6 +19,7 @@ extends Node3D
 @onready var particles: CPUParticles3D = $particles
 
 var rotating: bool = false
+var cleared: bool = false
 
 var time: float = 0
 
@@ -28,6 +30,8 @@ func _ready() -> void:
 	
 	wega.kill = false #WEGAKILL?????????
 	music_timer.wait_time = 0.3647*2
+	
+	Global.player_died.connect(end)
 	
 	Global.points = 0
 	Global.style = "none"
@@ -68,7 +72,9 @@ func _process(delta: float) -> void:
 	if not Global.timer_stopped: time += delta
 	if time > 60:
 		Achievements.award("thanks for playing!")
-		get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
+		cleared = true
+		end()
 		
 	credits_parent.rotation.y = player.global_rotation.y + 90 + 45.125
 	credits_parent.position = Vector3(player.position.x, credits_parent.position.y, player.position.z)
@@ -91,9 +97,9 @@ func _process(delta: float) -> void:
 	#if Input.is_action_just_pressed("attack"): flash()
 	
 	if Input.is_action_just_pressed("escape"):
-		
-		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		pass
+		#get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+		#Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 
 func flash() -> void:
@@ -109,6 +115,18 @@ func flash() -> void:
 func _on_wegadoll_collected() -> void:
 	start()
 	sfx.play()
+
+
+func end() -> void:
+	if bgm: bgm.stop()
+	Engine.time_scale = 0
+	var tween = create_tween()
+	tween.set_ignore_time_scale(true)
+	tween.tween_property(color_rect, "position:y", 0, 1.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	await tween.finished
+	Engine.time_scale = 1
+	await get_tree().create_timer(1, true, false, true).timeout
+	get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_results.tscn")
 
 
 var music_bars: int = -1
@@ -147,5 +165,6 @@ func _on_music_timer_timeout() -> void:
 		80:
 			await get_tree().create_timer(0.365, true, false, true).timeout
 			flash()
+			music_bars = 0
 
 	

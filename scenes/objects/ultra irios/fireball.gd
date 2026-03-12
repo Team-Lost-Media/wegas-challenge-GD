@@ -20,7 +20,7 @@ func _on_death_area_body_entered(body: Node3D) -> void:
 		if Global.health <= 0:
 			Global.died_to = "ultra irios fireball"
 			Global.player_died.emit()
-			get_tree().change_scene_to_file(death_scene)
+			if death_scene != "": get_tree().change_scene_to_file(death_scene)
 
 
 func THY_END_IS_NOW() -> void:

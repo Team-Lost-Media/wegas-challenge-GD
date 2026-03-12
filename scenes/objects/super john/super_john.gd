@@ -106,13 +106,13 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 		if kill == true:
 			Global.died_to = "super john"
 			Global.player_died.emit()
-			get_tree().change_scene_to_file(death_scene)
+			if death_scene != "": get_tree().change_scene_to_file(death_scene)
 		elif velocity.length() >= minimum_push_speed:
 			Global.health -= damage
 			body.health_label.shake_intensity = 5
 			if Global.health <= 0:
 				Global.died_to = "super john"
-				get_tree().change_scene_to_file(death_scene)
+				if death_scene != "": get_tree().change_scene_to_file(death_scene)
 			body.damage_effects.play_damage_fx("super john")
 			punchable = false
 			body.velocity = velocity
