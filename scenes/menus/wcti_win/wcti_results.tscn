@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dc6eoivljd7or"]
+
+[ext_resource type="Script" uid="uid://d3cc1pwke4hbx" path="res://scenes/menus/wcti_win/wcti_results.gd" id="1_wojt0"]
+
+[node name="Control" type="Control" unique_id=499590777]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wojt0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1056658527]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -345.0
+offset_top = -192.0
+offset_right = 345.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2112841691]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="." unique_id=1249797169]
+layout_mode = 0
+offset_left = 647.0
+offset_top = 617.0
+offset_right = 687.0
+offset_bottom = 640.0
+scale = Vector2(2.6379547, 6.5357423)
+text = "this is the results screen but i havent implemented it yet"

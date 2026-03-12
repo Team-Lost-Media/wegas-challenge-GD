@@ -116,7 +116,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 		if kill == true:
 			Global.died_to = "rorys"
 			Global.player_died.emit()
-			get_tree().change_scene_to_file(death_scene)
+			if death_scene != "": get_tree().change_scene_to_file(death_scene)
 		elif piss_off == true:
 			piss_off_timer.start()
 			stay_still_timer.stop()
@@ -129,7 +129,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			if Global.health <= 0:
 				Global.died_to = "rorys"
 				Global.player_died.emit()
-				get_tree().change_scene_to_file(death_scene)
+				if death_scene != "": get_tree().change_scene_to_file(death_scene)
 
 func _on_fuck_you_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:

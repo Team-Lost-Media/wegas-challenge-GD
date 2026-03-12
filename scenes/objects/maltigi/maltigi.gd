@@ -89,7 +89,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			
 			Global.died_to = died_to
 			Global.player_died.emit()
-			get_tree().change_scene_to_file(death_scene)
+			if death_scene != "": get_tree().change_scene_to_file(death_scene)
 
 func start(timer = false) -> void:
 	DebugDraw3D.new_scoped_config().set_thickness(4)
