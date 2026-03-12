@@ -32,11 +32,11 @@ func reset(): #execited when the player retries after a game over or win
 	health = 100
 	timer_stopped = false
 
+#region wegacombo
 var newtimer = Timer
 var wegadoll_combo_timer = newtimer.new()
 var wegadoll_combo: int = 0
 signal wegadoll_collected
-
 
 func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	#print("wegadoll")
@@ -44,7 +44,9 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	wegadoll_collected.emit()
 	
 	wegadoll_combo_timer.one_shot = true
-	wegadoll_combo_timer.wait_time = 0.4
+	var timeleft = wegadoll_combo_timer.time_left
+	wegadoll_combo_timer.wait_time = 0.35 + (timeleft / 2)
+	print(wegadoll_combo_timer.wait_time)
 	
 	
 	add_child(wegadoll_combo_timer)
@@ -73,7 +75,7 @@ func check_wegadoll_combo() -> void:
 			StyleSFX.play_style_sfx(0, true)
 		print(str("+WEGACOMBO ", wegadoll_combo, "X"))
 	wegadoll_combo = 0
-
+#endregion
 
 ## Requires [code]delta[/code] and [code]x[/code] as parameters. Returns [code]true[/code] when [code]x[/code] seconds have passed. Can be used with any interval, namely multiples of 10 such as 0.01, 0.1 and 1.
 func x_seconds_passed(delta: float, x: float):
