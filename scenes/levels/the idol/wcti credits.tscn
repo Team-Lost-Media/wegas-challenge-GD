@@ -73,6 +73,11 @@ angular_velocity_max = 60.0
 wait_time = 0.365
 ignore_time_scale = true
 
+[node name="switch to results timer" type="Timer" parent="." unique_id=283673737]
+wait_time = 2.5
+one_shot = true
+ignore_time_scale = true
+
 [node name="Maltigi" parent="." unique_id=735102003 node_paths=PackedStringArray("player") instance=ExtResource("2_hmh42")]
 visible = false
 player = NodePath("../Player")

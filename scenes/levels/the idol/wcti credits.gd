@@ -68,13 +68,14 @@ func start() -> void:
 	maltigi.start()
 	
 
+var ended: bool = false
 func _process(delta: float) -> void:
 	if not Global.timer_stopped: time += delta
 	if time > 60:
 		Achievements.award("thanks for playing!")
 		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
 		cleared = true
-		end()
+		if !ended: end()
 		
 	credits_parent.rotation.y = player.global_rotation.y + 90 + 45.125
 	credits_parent.position = Vector3(player.position.x, credits_parent.position.y, player.position.z)
@@ -116,16 +117,17 @@ func _on_wegadoll_collected() -> void:
 	start()
 	sfx.play()
 
-
+@onready var switch_to_results_timer: Timer = $"switch to results timer"
 func end() -> void:
+	ended = true
+	
 	if bgm: bgm.stop()
-	Engine.time_scale = 0
+	switch_to_results_timer.start()
+	Engine.time_scale = 0.0
 	var tween = create_tween()
 	tween.set_ignore_time_scale(true)
 	tween.tween_property(color_rect, "position:y", 0, 1.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
-	await tween.finished
-	Engine.time_scale = 1
-	await get_tree().create_timer(1, true, false, true).timeout
+	await switch_to_results_timer.timeout
 	get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_results.tscn")
 
 

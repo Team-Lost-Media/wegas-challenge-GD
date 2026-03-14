@@ -14,10 +14,12 @@ func flash(color: Color, duration_in_seconds: float = 1.0) -> void:
 	change_color = false
 
 
-
+var tween: Tween
 func _process(delta: float) -> void:
 	if change_color == true:
-		var tween = create_tween()
+		if tween:
+			tween.stop()
+		tween = create_tween()
 		tween.tween_property(color_rect, "color", Color.TRANSPARENT, duration)
 	
 	# DELETE THIS ONCE YOU FIGURE OUT HOW TO MAKE FLASHES FOR A SPECIFIC DURATION OF TIME
