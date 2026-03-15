@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://lmpnwg3dlk32" path="res://scenes/menus/main/high_score_label.gd" id="12_sp6e7"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 [ext_resource type="Texture2D" uid="uid://cxbawji40rfht" path="res://assets/textures/thumbnails/wcti2.png" id="13_524vu"]
+[ext_resource type="Script" uid="uid://bb414cs0wgp7p" path="res://scenes/menus/main/camera_style.gd" id="15_04vnt"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -152,6 +153,9 @@ shadow_offset = Vector2(4, 4)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6md1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk1ip"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyi5k"]
+font = ExtResource("6_yk1ip")
 
 [sub_resource type="LabelSettings" id="LabelSettings_ugs4v"]
 font = ExtResource("6_yk1ip")
@@ -513,6 +517,35 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_yk1ip")
 text = "CLOSE"
 flat = true
 
+[node name="GameOpt" type="Control" parent="Gamemodes" unique_id=2136904221]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OptionButton" type="OptionButton" parent="Gamemodes/GameOpt" unique_id=1418135739]
+layout_mode = 0
+offset_left = 797.50006
+offset_top = 486.25003
+offset_right = 942.50006
+offset_bottom = 517.25
+theme_override_fonts/font = ExtResource("6_yk1ip")
+selected = 0
+item_count = 2
+popup/item_0/text = "First Person"
+popup/item_0/id = 0
+popup/item_1/text = "Third person"
+popup/item_1/id = 1
+script = ExtResource("15_04vnt")
+
+[node name="Label" type="Label" parent="Gamemodes/GameOpt" unique_id=780880499]
+layout_mode = 0
+offset_left = 813.75006
+offset_top = 465.00003
+offset_right = 926.75006
+offset_bottom = 488.00003
+text = "Camera Style"
+label_settings = SubResource("LabelSettings_qyi5k")
+
 [node name="Recolorpedia" parent="." unique_id=393970587 instance=ExtResource("12_ugs4v")]
 top_level = true
 layout_mode = 1
@@ -546,3 +579,4 @@ label_settings = SubResource("LabelSettings_ugs4v")
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/The Idol" to="." method="_the_idol"]
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Credits" to="." method="_credits"]
 [connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]
+[connection signal="item_selected" from="Gamemodes/GameOpt/OptionButton" to="Gamemodes/GameOpt/OptionButton" method="_on_item_selected"]

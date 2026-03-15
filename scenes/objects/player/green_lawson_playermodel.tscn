@@ -1,0 +1,177 @@
+[gd_scene format=3 uid="uid://c3ojar3wabijr"]
+
+[ext_resource type="PackedScene" uid="uid://ctkki2gdb88vn" path="res://assets/Models/green lawson/green lawson.fbx" id="1_64h6q"]
+[ext_resource type="AnimationLibrary" uid="uid://dun876h03naaa" path="res://assets/Models/green lawson/Animations/Male Dynamic Pose.fbx" id="2_3sby2"]
+[ext_resource type="AnimationLibrary" uid="uid://dmw7rq108w7ex" path="res://assets/Models/green lawson/Animations/Falling.fbx" id="2_r0xjb"]
+[ext_resource type="AnimationLibrary" uid="uid://cb8k2p7jacypb" path="res://assets/Models/green lawson/Animations/Fast Run.fbx" id="2_vbhb4"]
+[ext_resource type="AnimationLibrary" uid="uid://cvjydx1m51p2o" path="res://assets/Models/green lawson/Animations/Idle.fbx" id="3_61av2"]
+[ext_resource type="AnimationLibrary" uid="uid://d2vaxp5csnlgi" path="res://assets/Models/green lawson/Animations/Jump.fbx" id="3_cifub"]
+[ext_resource type="AnimationLibrary" uid="uid://cpe0g5vjd0017" path="res://assets/Models/green lawson/Animations/Male Sitting Pose.fbx" id="3_vbhb4"]
+[ext_resource type="AnimationLibrary" uid="uid://pawneu1sg3ve" path="res://assets/Models/green lawson/Animations/Male Standing Pose.fbx" id="4_cifub"]
+
+[sub_resource type="Gradient" id="Gradient_r0xjb"]
+interpolation_mode = 2
+colors = PackedColorArray(0, 0, 0, 1, 0.5251013, 0.5251013, 0.5251013, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r0xjb"]
+noise_type = 4
+seed = 205
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vkcxr"]
+noise = SubResource("FastNoiseLite_r0xjb")
+color_ramp = SubResource("Gradient_r0xjb")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkcxr"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0xjb"]
+next_pass = SubResource("StandardMaterial3D_vkcxr")
+shading_mode = 0
+albedo_color = Color(0, 0.8627451, 0.05490196, 1)
+detail_enabled = true
+detail_mask = SubResource("NoiseTexture2D_vkcxr")
+detail_blend_mode = 2
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l5ly7"]
+next_pass = SubResource("StandardMaterial3D_vkcxr")
+shading_mode = 0
+albedo_color = Color(0, 0.5176471, 0.14117648, 1)
+detail_enabled = true
+detail_mask = SubResource("NoiseTexture2D_vkcxr")
+detail_blend_mode = 2
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3nibj"]
+next_pass = SubResource("StandardMaterial3D_vkcxr")
+shading_mode = 0
+albedo_color = Color(1.92523e-07, 0.3557921, 0.008242054, 1)
+detail_enabled = true
+detail_mask = SubResource("NoiseTexture2D_vkcxr")
+detail_blend_mode = 2
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hurg0"]
+next_pass = SubResource("StandardMaterial3D_vkcxr")
+shading_mode = 0
+albedo_color = Color(0, 0.5176471, 0.14117648, 1)
+detail_enabled = true
+detail_mask = SubResource("NoiseTexture2D_vkcxr")
+detail_blend_mode = 2
+stencil_mode = 1
+stencil_flags = 2
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vkcxr"]
+
+[node name="GreenLawsonPlayermodel" type="Node3D" unique_id=1960023287]
+
+[node name="green lawson" parent="." unique_id=706897028 instance=ExtResource("1_64h6q")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Skeleton3D" parent="green lawson" index="0" unique_id=1822382672]
+bones/0/position = Vector3(0.019291818, 0.43046418, -0.08862729)
+bones/0/rotation = Quaternion(0.6458458, 0.04723874, 0.023417361, 0.7616453)
+bones/1/rotation = Quaternion(-0.02333125, 0.0017364805, 0.0073027387, 0.99969965)
+bones/2/position = Vector3(0, 0.08807785, -7.65844e-12)
+bones/2/rotation = Quaternion(0.007833845, -0.018246833, -0.0060369377, 0.9997846)
+bones/3/position = Vector3(0, 0.10066039, 8.673645e-11)
+bones/3/rotation = Quaternion(0.007721808, -0.018278532, -0.00606666, 0.9997847)
+bones/4/rotation = Quaternion(-0.07748282, 0.0012197437, -0.040947057, 0.9961518)
+bones/5/position = Vector3(1.6940659e-21, 0.043985825, 0.008698905)
+bones/5/rotation = Quaternion(0.061831474, -0.058454804, 0.13064682, 0.987771)
+bones/7/rotation = Quaternion(-0.5754055, -0.43058947, 0.53865266, -0.43972096)
+bones/8/position = Vector3(1.0899642e-11, 0.13918827, 3.8838777e-10)
+bones/8/rotation = Quaternion(0.2546949, -0.30374154, -0.15508167, 0.90488744)
+bones/9/position = Vector3(8.1314705e-11, 0.103137314, 8.246159e-11)
+bones/9/rotation = Quaternion(0.023929326, -0.0016551539, 0.51726574, 0.85548866)
+bones/10/position = Vector3(-9.383823e-11, 0.17643787, 9.4604324e-12)
+bones/10/rotation = Quaternion(-0.20790939, -0.14783113, 0.1439068, 0.95614356)
+bones/11/position = Vector3(-4.8643745e-10, 0.19788662, 2.2200575e-11)
+bones/11/rotation = Quaternion(0.10207582, -0.59911716, 0.102348, 0.78750503)
+bones/12/position = Vector3(-5.926961e-10, 0.04185735, 1.5634577e-09)
+bones/12/rotation = Quaternion(0.40747958, -0.04299483, 0.025329862, 0.9118499)
+bones/13/rotation = Quaternion(-0.3216479, 0.007908227, -0.08281182, 0.9431979)
+bones/15/rotation = Quaternion(0.45829147, -0.5160048, 0.579646, 0.43326497)
+bones/16/position = Vector3(-3.203963e-11, 0.13918827, 3.8721704e-10)
+bones/16/rotation = Quaternion(-0.083799556, 0.5525537, -0.25620458, 0.78868324)
+bones/17/position = Vector3(2.2738607e-10, 0.10335423, 1.5588475e-10)
+bones/17/rotation = Quaternion(0.015442538, 0.0024478529, -0.35879123, 0.9332869)
+bones/18/position = Vector3(-2.6113804e-11, 0.17650597, 4.5186077e-11)
+bones/18/rotation = Quaternion(-0.18979977, 0.17819186, 0.029508144, 0.9650664)
+bones/19/position = Vector3(-5.574893e-10, 0.1400128, 5.0040416e-11)
+bones/19/rotation = Quaternion(0.15399623, 0.020932237, -0.15459171, 0.97567844)
+bones/20/rotation = Quaternion(0.0959635, -0.027925774, 0.14566024, 0.9842735)
+bones/21/rotation = Quaternion(-0.062190346, 0.06504622, -0.26349354, 0.96045434)
+bones/23/rotation = Quaternion(0.18503219, 0.45067862, 0.7720513, -0.40815285)
+bones/24/rotation = Quaternion(-0.4530848, 0.0710608, -0.08463201, 0.8845915)
+bones/25/position = Vector3(1.901064e-10, 0.098320894, -1.6531398e-10)
+bones/25/rotation = Quaternion(-0.3195118, -0.15980673, -0.34136966, 0.869391)
+bones/26/rotation = Quaternion(0.45415643, -0.023605349, 0.005541321, 0.890592)
+bones/28/rotation = Quaternion(-0.2284916, 0.14043954, 0.79305106, 0.54693544)
+bones/29/position = Vector3(-1.3877788e-17, 0.1331833, -1.4975254e-10)
+bones/29/rotation = Quaternion(-0.064225875, -0.06783486, 0.020800404, 0.9954099)
+bones/30/rotation = Quaternion(-0.06459482, 0.24058361, 0.50034255, 0.82921916)
+bones/31/rotation = Quaternion(0.42406088, 0.020312218, -0.008481171, 0.90536624)
+
+[node name="n2b1" parent="green lawson/Skeleton3D" index="0" unique_id=1432210989]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n1b0" parent="green lawson/Skeleton3D" index="1" unique_id=1999881348]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_l5ly7")
+
+[node name="n5b4" parent="green lawson/Skeleton3D" index="2" unique_id=489899401]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n4b3" parent="green lawson/Skeleton3D" index="3" unique_id=1866617947]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n3b2" parent="green lawson/Skeleton3D" index="4" unique_id=485801604]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_3nibj")
+
+[node name="n6b5" parent="green lawson/Skeleton3D" index="5" unique_id=1322463695]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n7b6" parent="green lawson/Skeleton3D" index="6" unique_id=645381883]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n8b7" parent="green lawson/Skeleton3D" index="7" unique_id=757107392]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_r0xjb")
+
+[node name="n0b8" parent="green lawson/Skeleton3D" index="8" unique_id=313650699]
+gi_mode = 0
+surface_material_override/0 = SubResource("StandardMaterial3D_hurg0")
+
+[node name="AnimationPlayer" parent="green lawson" index="1" unique_id=1129215559]
+libraries/ = SubResource("AnimationLibrary_vkcxr")
+
+[node name="MainAnimationPlayer" type="AnimationPlayer" parent="green lawson" unique_id=1286337616]
+libraries/Falling = ExtResource("2_r0xjb")
+"libraries/Fast Run" = ExtResource("2_vbhb4")
+libraries/Idle = ExtResource("3_61av2")
+libraries/Jump = ExtResource("3_cifub")
+"libraries/Male Dynamic Pose" = ExtResource("2_3sby2")
+"libraries/Male Sitting Pose" = ExtResource("3_vbhb4")
+"libraries/Male Standing Pose" = ExtResource("4_cifub")
+
+[editable path="green lawson"]

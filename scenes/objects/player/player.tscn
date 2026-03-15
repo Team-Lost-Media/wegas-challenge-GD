@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
+[ext_resource type="PackedScene" uid="uid://c3ojar3wabijr" path="res://scenes/objects/player/green_lawson_playermodel.tscn" id="2_nqkks"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
+[ext_resource type="Script" uid="uid://cikkptwswnpau" path="res://scenes/objects/player/camera_3d.gd" id="3_jxhie"]
 [ext_resource type="Texture2D" uid="uid://dlf23nb3wl5ra" path="res://assets/textures/golden sigma.png" id="4_absnx"]
 [ext_resource type="Script" uid="uid://brwcsx3yog6er" path="res://scenes/objects/player/health.gd" id="4_bdcal"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
@@ -298,8 +300,12 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
 mouse_sensitivity = 10.0
 
+[node name="GreenLawsonPlayermodel" parent="." unique_id=1960023287 instance=ExtResource("2_nqkks")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2117002596]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.295367, 0)
+visible = false
 mesh = SubResource("CapsuleMesh_jse87")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1595654555]
@@ -310,7 +316,8 @@ shape = SubResource("CapsuleShape3D_p0oft")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468065, 0)
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1544105980]
-transform = Transform3D(0.666667, 0, 0, 0, 0.666667, 0, 0, 0, 0.666667, 0, 0, 0)
+transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0)
+script = ExtResource("3_jxhie")
 
 [node name="RayCast3D" type="RayCast3D" parent="head" unique_id=2110452444]
 target_position = Vector3(0, 0, -0.91)
@@ -630,3 +637,6 @@ bus = &"SFX"
 [connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
 [connection signal="timeout" from="SubViewport/PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="SubViewport/PanelContainer/StyleBar" method="_on_timer_timeout"]
 [connection signal="timeout" from="SubViewport/PanelContainer/StyleBar/Timer/OLDTimerDONTUSE" to="SubViewport/PanelContainer/StyleBar/Timer" method="_on_timer_timeout"]
+
+[editable path="GreenLawsonPlayermodel"]
+[editable path="GreenLawsonPlayermodel/green lawson"]

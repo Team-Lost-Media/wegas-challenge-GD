@@ -12,6 +12,8 @@ enum CharacterState {
 @onready var InteractRaycast := $head/RayCast3D
 @onready var camera := $head/Camera3D
 @onready var animator := $AnimationPlayer
+@onready var character_animation: AnimationPlayer = $"GreenLawsonPlayermodel/green lawson/MainAnimationPlayer"
+
 var currentState : CharacterState = CharacterState.WALKING
 @onready var SPEED = DEFAULT_SPEED # DEFAULT_SPEED doesn't load until _ready(), so we have to use @onready (you could also just move SPEED a bit to the bottom)
 
@@ -58,9 +60,25 @@ var saveable_fall = false
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
 @onready var golden_sigma: Sprite2D = $"golden sigma"
+@onready var green_lawson_playermodel: Node3D = $GreenLawsonPlayermodel
 
 var gravity: Vector3 = Vector3(0, -55, 0)
 #var jump_dir: Vector3 = Vector3(0, 1, 0)
+
+var animation_blend: float = 0.5
+var do_animations: bool = true
+
+func do_a_funny() -> void:
+	do_animations = false
+	green_lawson_playermodel.rotation_degrees.y = 180
+	match randi_range(0,2):
+		0:
+			character_animation.play("Male Dynamic Pose/mixamo_com", 0.1)
+		1:
+			character_animation.play("Male Sitting Pose/mixamo_com", 0.1)
+		2:
+			character_animation.play("Male Standing Pose/mixamo_com", 0.1)
+	do_animations = true
 
 #region Main control flow 
 
@@ -74,20 +92,27 @@ func _ready():
 		health_bar_outline.show()
 		health_label.show()
 	else:
-		health_bar.hide()
+		health_bar.hide()	
 		health_bar_outline.hide()
 		health_label.hide()
+
 func _physics_process(delta: float) -> void:
+	green_lawson_playermodel.rotation_degrees.y = lerpf(green_lawson_playermodel.rotation_degrees.y, -180, 0.1)
+	
 	if !inputEnabled:
 		return
 	
 	
 	if not is_on_floor():
 		velocity += gravity * delta
+		if do_animations:
+			character_animation.play("Falling/mixamo_com", animation_blend)
 		if coyote_timer.is_stopped() and !coyote and !coyote_disabled:
 			coyote_timer.start()
 			coyote = true
 	else:
+		if do_animations and Input.get_vector("left", "right", "up", "down") == Vector2(0,0):
+			character_animation.play("Idle/mixamo_com", animation_blend)
 		coyote_disabled = false
 		if saveable_fall_leniency_timer.is_stopped(): saveable_fall = false
 	
@@ -131,6 +156,8 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("jump"):
 		if is_on_floor() or coyote:
+			if do_animations:
+				character_animation.play("Jump/mixamo_com", animation_blend)
 			if Input.is_action_pressed("superjump") and superjump_cooldown.is_stopped():
 				velocity.y = JUMP_VELOCITY * 2.5
 				superjump_cooldown.start()
@@ -155,10 +182,12 @@ func _physics_process(delta: float) -> void:
 	if dash_multiplier > 1:
 		dash_multiplier = move_toward(dash_multiplier, 1, 12 * delta)
 	
-	var input_dir := Input.get_vector("left", "right", "up", "down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var input_dir = Input.get_vector("left", "right", "up", "down")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if boosted.is_stopped():
 		if direction:
+			if do_animations:
+				character_animation.play("Fast Run/mixamo_com", animation_blend)
 			velocity.x = direction.x * SPEED * dash_multiplier
 			velocity.z = direction.z * SPEED * dash_multiplier
 		else:
