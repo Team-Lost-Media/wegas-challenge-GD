@@ -33,6 +33,7 @@ func _ready() -> void:
 	
 	Global.player_died.connect(end)
 	
+	Global.lap = 3
 	#Global.points = 0
 	Global.style = "none"
 	#Global.mode = "credits"

@@ -41,7 +41,7 @@ func _ready() -> void:
 	await get_tree().create_timer(1.5).timeout
 	time.anim()
 	
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(3.3).timeout
 	style.anim()
 	
 	await get_tree().create_timer(5).timeout

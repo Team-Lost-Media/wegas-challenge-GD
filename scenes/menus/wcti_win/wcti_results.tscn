@@ -211,7 +211,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0.2, -0.25, 0, 0.73333335, 0.10304229, 3, -0.19999999, -1.2063491, 0.100000024, -0.23399472, 1.9366401, -0.06666666, 0.43928552, 0.03333336, -1.0310845, 0.9611111, -0.06666672, 0.17592591, 0.19999993, -0.05740738, 0.5, -0.25, 0, 0.25, 0, 0.3, -0.23333335, 0.14259261, 0.25, 0),
+"points": PackedFloat32Array(0.2, -0.25, 0, 0.73333335, 0.10304229, 3, -0.19999999, -1.2063491, 0.100000024, -0.23399472, 1.9366401, -0.06666666, 0.43928552, 0.03333336, -1.0310845, 0.9611111, -0.06666672, 0.17592591, 0.19999993, -0.05740738, 0.5, -0.25, 0, 0.13590693, 0.01666671, 0.4, -0.097426295, 0.042592615, 0.25, 0),
 "times": PackedFloat32Array(0, 0.56666666, 0.76666665, 0.93333334, 1.5666667, 2)
 }
 tracks/2/type = "bezier"
@@ -401,6 +401,7 @@ vertical_alignment = 1
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="style/style" unique_id=207842347]
 stream = ExtResource("5_qtyjn")
+volume_db = -3.0
 
 [node name="Timer" type="Timer" parent="style/style" unique_id=506719880]
 wait_time = 0.3
@@ -456,9 +457,9 @@ vertical_alignment = 1
 [node name="yes i beat the roll gimme orange line now" type="Label" parent="." unique_id=549563179]
 layout_mode = 0
 offset_left = 511.0
-offset_top = 1100.0
+offset_top = 782.0
 offset_right = 1411.0
-offset_bottom = 1245.0001
+offset_bottom = 927.0001
 pivot_offset = Vector2(450, 72)
 text = "YES"
 label_settings = SubResource("LabelSettings_n2by4")
@@ -475,9 +476,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -19.0
-offset_top = 360.0
+offset_top = 170.46185
 offset_right = 21.0
-offset_bottom = 400.00018
+offset_bottom = 210.46204
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)

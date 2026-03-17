@@ -88,6 +88,7 @@ var wega_started: bool = false
 var rorys_started: bool = false
 var maltigi_started: bool = false
 var lap1exit_started: bool = false
+var rorys2_started: bool = false
 var john_started: bool = false
 var glitchigi_started: bool = false
 var the_idol_outro_started: bool = false
@@ -161,21 +162,24 @@ func _process(delta: float) -> void:
 			sun.light_color = sun.light_color.lerp(lap2_sun_color, clamp(1.5 * delta, 0.0, 1.0))
 		
 		if wegasleft <= 300:
+			if rorys2_started == false:
+				message.say("RORYS IS COMING")
+				rorys.group_of_wegas = self.group_of_wegas_TWO
+				rorys.enabled = true
+				rorys.stay_still_time = 8
+				rorys2_started = true
+		
+		if wegasleft <= 250:
 			if john_started == false:
 				message.say("SUPER JOHN IS COMING")
 				super_john.position = player.position + Vector3(0, 0, 30)
 				super_john.show()
 				super_john.enabled = true
 				john_started = true
-				
-				rorys.group_of_wegas = self.group_of_wegas_TWO
-				rorys.enabled = true
-				rorys.stay_still_time = 8
-				
 		
 		if wegasleft <= 200:
 			if glitchigi_started == false:
-				message.say("GLITCHIGI IS COMING")
+				message.say("MALTIGI IS COMING")
 				glitchigi.start(true)
 				glitchigi_started = true
 		

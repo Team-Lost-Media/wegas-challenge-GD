@@ -452,7 +452,7 @@ visible = false
 player = NodePath("../Player")
 speed = 26.0
 inaccuracy = 0.99
-damage = 20.0
+damage = 10.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 line_color = Color(1, 0.5019608, 0, 1)
 
