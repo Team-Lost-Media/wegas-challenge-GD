@@ -16,6 +16,8 @@ var timer_stopped = false
 var lap: int = 0
 var mode: String = "" #classic for CLASSIC, wcti for THE IDOL,
 
+var credits_cleared: bool = false
+
 signal player_died
 
 #region end screen variables

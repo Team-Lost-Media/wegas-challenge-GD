@@ -52,6 +52,173 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.6831683)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_aw4ii"]
+font = ExtResource("2_oehvr")
+font_size = 82
+font_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n2by4"]
+font = ExtResource("2_oehvr")
+font_size = 164
+
+[sub_resource type="Animation" id="Animation_fqia4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [782.0]
+}
+
+[sub_resource type="Animation" id="Animation_a7sf3"]
+resource_name = "new_animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33333334),
+"transitions": PackedFloat32Array(2.0705297, 1),
+"update": 0,
+"values": [Vector2(10, 10), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate:a")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1.741101, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6, 1.2),
+"transitions": PackedFloat32Array(2.8284268, 1),
+"update": 0,
+"values": [782.0, 1100.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r6l32"]
+_data = {
+&"RESET": SubResource("Animation_fqia4"),
+&"new_animation": SubResource("Animation_a7sf3")
+}
+
+[sub_resource type="Animation" id="Animation_aw4ii"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_n2by4"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0.4, -0.25, 0, 0.16666663, 0.2777778, 1.049074, -0.07, -0.074, 0.090637386, 5.2017813, 30, -0.37602925, -5.271103, 0.16666663, 1.9256058, 32.314617, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6, 0.8, 1.5666667, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0.2, -0.25, 0, 0.73333335, 0.10304229, 3, -0.19999999, -1.2063491, 0.100000024, -0.23399472, 1.9366401, -0.06666666, 0.43928552, 0.03333336, -1.0310845, 0.9611111, -0.06666672, 0.17592591, 0.19999993, -0.05740738, 0.5, -0.25, 0, 0.25, 0, 0.3, -0.23333335, 0.14259261, 0.25, 0),
+"times": PackedFloat32Array(0, 0.56666666, 0.76666665, 0.93333334, 1.5666667, 2)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(900, -0.25, 0, 0.25, 0, 900, -0.06666668, 0.72314453, 0.23333332, -9.061462, 710.46185, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.26666668, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fqia4"]
+_data = {
+&"RESET": SubResource("Animation_aw4ii"),
+&"new_animation": SubResource("Animation_n2by4")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_fqia4"]
+font = ExtResource("2_oehvr")
+font_size = 41
+font_color = Color(0.5, 0.5, 0.5, 1)
+
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
 anchors_preset = 15
@@ -196,6 +363,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="style" type="RichTextLabel" parent="style" unique_id=562495997]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -243,5 +411,76 @@ scale_amount_max = 15.0
 scale_amount_curve = SubResource("Curve_sq7r8")
 color = Color(0.4, 0.4, 0.4, 0.64705884)
 color_ramp = SubResource("Gradient_qtyjn")
+
+[node name="beat roll" type="RigidBody2D" parent="." unique_id=797850022]
+position = Vector2(961, 864)
+freeze = true
+
+[node name="beat roll?" type="Label" parent="beat roll" unique_id=1757718626]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -433.0
+offset_top = -41.0
+offset_right = 431.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BEAT CREDITS ROLL?"
+label_settings = SubResource("LabelSettings_aw4ii")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="yes i beat the roll gimme orange line now" type="Label" parent="." unique_id=549563179]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 782.0
+offset_right = 1128.0
+offset_bottom = 927.0
+pivot_offset = Vector2(144, 72)
+text = "YES"
+label_settings = SubResource("LabelSettings_n2by4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="yes i beat the roll gimme orange line now" unique_id=58376389]
+libraries/ = SubResource("AnimationLibrary_r6l32")
+
+[node name="line" type="ColorRect" parent="." unique_id=1710482737]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = 360.0
+offset_right = 21.0
+offset_bottom = 400.00018
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1e-05, 1e-05)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="line_anim" type="AnimationPlayer" parent="line" unique_id=1371793851]
+libraries/ = SubResource("AnimationLibrary_fqia4")
+
+[node name="QUIT GO AWAY" type="Label" parent="." unique_id=1036308960]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -433.0
+offset_top = 415.0
+offset_right = 431.0
+offset_bottom = 488.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit out with ESC"
+label_settings = SubResource("LabelSettings_fqia4")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="style/style/Timer" to="style" method="_on_timer_timeout"]

@@ -66,6 +66,7 @@ var achievements_dict: Dictionary = {
 	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
 	#"ouroboros": false, #do 100 runs "this really was our oboros"
 	"embrace the malt": false, #run into maltigi while he's not moving
+	"thanks for playing!": false, #beat the credits roll "orange line? the fuck is that supposed to mean?"
 }
 
 func save_achievements():

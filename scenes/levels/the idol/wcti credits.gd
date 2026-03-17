@@ -37,6 +37,7 @@ func _ready() -> void:
 	Global.style = "none"
 	#Global.mode = "credits"
 	Global.timer_stopped = true
+	Global.credits_cleared = false
 
 
 func start() -> void:
@@ -74,7 +75,7 @@ func _process(delta: float) -> void:
 	if time > 60:
 		Achievements.award("thanks for playing!")
 		#get_tree().change_scene_to_file("res://scenes/menus/win/win.tscn") #win
-		cleared = true
+		Global.credits_cleared = true
 		if !ended: end()
 		
 	credits_parent.rotation.y = player.global_rotation.y + 90 + 45.125

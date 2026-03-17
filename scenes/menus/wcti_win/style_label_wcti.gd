@@ -9,6 +9,9 @@ var number: int = 0
 
 func anim() -> void:
 	timer.start()
+	sfx.play()
+	style.show()
+	
 	var tween = create_tween()
 	tween.tween_property(self, "number", Global.points, 4).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 
