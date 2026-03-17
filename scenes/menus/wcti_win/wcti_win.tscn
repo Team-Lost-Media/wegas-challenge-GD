@@ -11,12 +11,12 @@
 [sub_resource type="RichTextEffect" id="RichTextEffect_bbgvn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1872186387525
+metadata/rt = 1874870742138
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_e0xnn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1872740035660
+metadata/rt = 1875575385217
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
@@ -62,7 +62,7 @@ stream = ExtResource("5_bbgvn")
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=801796536]
 clip_contents = false
-custom_minimum_size = Vector2(0, 72)
+custom_minimum_size = Vector2(0, 86)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.117000006
@@ -143,7 +143,7 @@ metadata/frame = 47647
 [node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=718557037]
 visible = false
 clip_contents = false
-custom_minimum_size = Vector2(0, 72)
+custom_minimum_size = Vector2(0, 86)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.117000006

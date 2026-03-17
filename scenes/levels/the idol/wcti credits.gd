@@ -33,9 +33,9 @@ func _ready() -> void:
 	
 	Global.player_died.connect(end)
 	
-	Global.points = 0
+	#Global.points = 0
 	Global.style = "none"
-	Global.mode = "credits"
+	#Global.mode = "credits"
 	Global.timer_stopped = true
 
 
@@ -121,7 +121,7 @@ func _on_wegadoll_collected() -> void:
 func end() -> void:
 	ended = true
 	
-	if bgm: bgm.stop()
+	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
 	switch_to_results_timer.start()
 	Engine.time_scale = 0.0
 	var tween = create_tween()

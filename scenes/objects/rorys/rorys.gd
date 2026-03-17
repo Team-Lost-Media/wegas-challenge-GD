@@ -11,7 +11,7 @@ extends AnimatedSprite3D
 @export var player: PlayerCharacter
 @export var punch_sfx: AudioStream
 @export var explosion_sfx: AudioStream
-@export var flash: CanvasLayer
+@onready var flash: CanvasLayer = $Flash
 @export var damage: float = 70
 
 @onready var stay_still_timer: Timer = $StayStillTimer

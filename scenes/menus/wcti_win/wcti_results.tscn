@@ -1,6 +1,56 @@
 [gd_scene format=3 uid="uid://dc6eoivljd7or"]
 
 [ext_resource type="Script" uid="uid://d3cc1pwke4hbx" path="res://scenes/menus/wcti_win/wcti_results.gd" id="1_wojt0"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_oehvr"]
+[ext_resource type="Script" uid="uid://chbks77joeqln" path="res://scenes/menus/wcti_win/results_label_shaking_thing.gd" id="3_sq7r8"]
+[ext_resource type="AudioStream" uid="uid://358qooyp4wkr" path="res://assets/SFX/fall.wav" id="4_sq7r8"]
+[ext_resource type="Script" uid="uid://b42wikxkb5ru2" path="res://scenes/menus/wcti_win/time_label_wcti.gd" id="5_5v0ri"]
+[ext_resource type="AudioStream" uid="uid://c0436cx0h4an" path="res://assets/SFX/count.wav" id="5_qtyjn"]
+[ext_resource type="AudioStream" uid="uid://br23vdl0niiq4" path="res://assets/SFX/wcti win text sound.mp3" id="6_a7arc"]
+[ext_resource type="Script" uid="uid://dmtnwvnkivtod" path="res://scenes/menus/wcti_win/style_label_wcti.gd" id="7_aw4ii"]
+
+[sub_resource type="Animation" id="Animation_qtyjn"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_5v0ri"]
+resource_name = "show"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(2, 0, 0),
+"points": PackedFloat32Array(-1077.8944, -0.25, 0, 0.25, 0, -1026.0013, -0.25, 0, 0.13333333, 114.164734, -230, -0.06666666, -643.4739, 0.25, 0),
+"times": PackedFloat32Array(0, 0.33333334, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a7arc"]
+_data = {
+&"RESET": SubResource("Animation_qtyjn"),
+&"show": SubResource("Animation_5v0ri")
+}
+
+[sub_resource type="Curve" id="Curve_sq7r8"]
+_data = [Vector2(0, 0.9887641), 0.0, 0.027546057, 0, 0, Vector2(1, 0), -3.1917477, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_qtyjn"]
+offsets = PackedFloat32Array(0, 0.6831683)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
@@ -29,11 +79,169 @@ color = Color(0, 0, 0, 1)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2112841691]
 anchor_mode = 0
 
-[node name="Label" type="Label" parent="." unique_id=1249797169]
-layout_mode = 0
-offset_left = 647.0
-offset_top = 617.0
-offset_right = 687.0
-offset_bottom = 640.0
-scale = Vector2(2.6379547, 6.5357423)
-text = "this is the results screen but i havent implemented it yet"
+[node name="ResultsLabel" type="RichTextLabel" parent="." unique_id=1546008943]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -914.99976
+offset_right = 915.0
+offset_bottom = 891.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_oehvr")
+theme_override_font_sizes/normal_font_size = 164
+bbcode_enabled = true
+text = "RESULTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_sq7r8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResultsLabel" unique_id=224824808]
+libraries/ = SubResource("AnimationLibrary_a7arc")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ResultsLabel" unique_id=1094813549]
+stream = ExtResource("4_sq7r8")
+volume_db = 4.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ResultsLabel" unique_id=1829225909]
+show_behind_parent = true
+position = Vector2(913.99976, 480)
+emitting = false
+amount = 32
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.99
+lifetime_randomness = 0.8
+emission_shape = 3
+emission_rect_extents = Vector2(150, 10)
+direction = Vector2(0, -1)
+initial_velocity_min = 290.65
+initial_velocity_max = 1000.0
+angular_velocity_min = -65.41
+angular_velocity_max = 74.38
+scale_amount_min = 10.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_sq7r8")
+color = Color(0.4, 0.4, 0.4, 0.64705884)
+color_ramp = SubResource("Gradient_qtyjn")
+
+[node name="time" type="Control" parent="." unique_id=307106758]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_5v0ri")
+
+[node name="timetext" type="RichTextLabel" parent="time" unique_id=1692275558]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 195.0
+offset_top = 393.0
+offset_right = 706.41406
+offset_bottom = 642.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_oehvr")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "TIME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time" type="RichTextLabel" parent="time" unique_id=730425448]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 195.0
+offset_top = 484.0
+offset_right = 706.41406
+offset_bottom = 733.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_oehvr")
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "1:23.45"
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_characters_behavior = 4
+visible_ratio = 0.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="time" unique_id=1835139670]
+stream = ExtResource("6_a7arc")
+volume_db = 4.0
+
+[node name="style" type="Control" parent="." unique_id=2035457376]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_aw4ii")
+
+[node name="styletext" type="RichTextLabel" parent="style" unique_id=1231940324]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1162.0
+offset_top = 393.0
+offset_right = 1673.4141
+offset_bottom = 642.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_oehvr")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "STYLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="style" type="RichTextLabel" parent="style" unique_id=562495997]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1162.0
+offset_top = 484.0
+offset_right = 1673.4141
+offset_bottom = 733.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("2_oehvr")
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="style/style" unique_id=207842347]
+stream = ExtResource("5_qtyjn")
+
+[node name="Timer" type="Timer" parent="style/style" unique_id=506719880]
+wait_time = 0.3
+
+[node name="FallSFX" type="AudioStreamPlayer" parent="style/style" unique_id=905450323]
+stream = ExtResource("4_sq7r8")
+volume_db = 4.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="style" unique_id=462067592]
+show_behind_parent = true
+position = Vector2(1437, 640)
+emitting = false
+amount = 16
+lifetime = 3.0
+one_shot = true
+explosiveness = 0.99
+lifetime_randomness = 0.8
+emission_shape = 3
+emission_rect_extents = Vector2(100, 10)
+direction = Vector2(0, -1)
+initial_velocity_min = 290.65
+initial_velocity_max = 904.0
+angular_velocity_min = -65.41
+angular_velocity_max = 74.38
+scale_amount_min = 7.5
+scale_amount_max = 15.0
+scale_amount_curve = SubResource("Curve_sq7r8")
+color = Color(0.4, 0.4, 0.4, 0.64705884)
+color_ramp = SubResource("Gradient_qtyjn")
+
+[connection signal="timeout" from="style/style/Timer" to="style" method="_on_timer_timeout"]

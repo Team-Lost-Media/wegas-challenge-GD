@@ -99,6 +99,8 @@ func _process(delta: float) -> void:
 		glitch_sfx_times.remove_at(0)
 		change_text()
 		change_text()
+		if randi_range(1, 2) == 1: return
+		change_text()
 	
 
 func _physics_process(delta: float) -> void:

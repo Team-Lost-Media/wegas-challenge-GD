@@ -26,7 +26,6 @@
 [ext_resource type="PackedScene" uid="uid://cs226fu3xw4bi" path="res://scenes/objects/ultra irios/ultra irios.tscn" id="15_lr4ys"]
 [ext_resource type="PackedScene" uid="uid://b1dn67n1ycfir" path="res://scenes/objects/shoe bench (enemy)/shoe bench.tscn" id="17_vtxl0"]
 [ext_resource type="PackedScene" uid="uid://5fyklqfajuef" path="res://scenes/objects/super john/super john.tscn" id="18_7ytgl"]
-[ext_resource type="Texture2D" uid="uid://cq2irodw42bm2" path="res://assets/textures/Friedmaltigi1.png" id="18_sw7cd"]
 [ext_resource type="Texture2D" uid="uid://bmyvtstlhdqae" path="res://assets/textures/fire lowquality skybox version.png" id="19_lr4ys"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="20_7ytgl"]
 
@@ -405,7 +404,7 @@ light_energy = 7.5
 shadow_enabled = true
 omni_range = 10.0
 
-[node name="Rorys" parent="." unique_id=1286628605 node_paths=PackedStringArray("group_of_wegas", "player", "flash") instance=ExtResource("12_bjl6n")]
+[node name="Rorys" parent="." unique_id=1286628605 node_paths=PackedStringArray("group_of_wegas", "player") instance=ExtResource("12_bjl6n")]
 transform = Transform3D(0.999998, 0.00126553, -0.00130025, -0.00126648, 0.999999, -0.000726419, 0.00129934, 0.000728062, 0.999999, 0, -605, 0)
 visible = false
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
@@ -415,7 +414,6 @@ targeted_wegadoll_material = SubResource("StandardMaterial3D_c0roo")
 player = NodePath("../Player")
 punch_sfx = ExtResource("13_c0roo")
 explosion_sfx = ExtResource("13_5niun")
-flash = NodePath("../Flash")
 damage = 99.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Rorys" unique_id=1668091159]
@@ -466,8 +464,6 @@ omni_range = 20.0
 [node name="Glitchigi" parent="." unique_id=1705860827 node_paths=PackedStringArray("player") instance=ExtResource("3_qn1fo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
-pixel_size = 0.009
-texture = ExtResource("18_sw7cd")
 player = NodePath("../Player")
 enable_manually = true
 dash_cooldown = 2.5

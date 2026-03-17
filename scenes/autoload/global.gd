@@ -21,7 +21,10 @@ signal player_died
 #region end screen variables
 var time_as_string: String
 var time_in_seconds: float
+
+var saved_time_as_string: String = "test"
 #endregion
+
 
 func reset(): #execited when the player retries after a game over or win
 	points = 0
@@ -31,6 +34,10 @@ func reset(): #execited when the player retries after a game over or win
 	died_to_override = ""
 	health = 100
 	timer_stopped = false
+
+func _ready() -> void:
+	add_child(wegadoll_combo_timer)
+	wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
 
 #region wegacombo
 var newtimer = Timer
@@ -49,8 +56,8 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	print(wegadoll_combo_timer.wait_time)
 	
 	
-	add_child(wegadoll_combo_timer)
-	wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
+	
+	
 	
 	if wegadoll_combo_timer.is_stopped():
 		wegadoll_combo_timer.stop()

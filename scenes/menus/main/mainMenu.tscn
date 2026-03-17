@@ -124,7 +124,7 @@ texture_margin_top = 15.0
 [sub_resource type="LabelSettings" id="LabelSettings_04vnt"]
 font = ExtResource("6_yk1ip")
 font_size = 20
-font_color = Color(1, 1, 1, 0.29803923)
+font_color = Color(1, 1, 1, 0.46666667)
 outline_size = 10
 outline_color = Color(0, 0, 0, 0.35686275)
 shadow_size = 8
@@ -430,7 +430,7 @@ offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
 text = "Collect the Idol.
-Whatever it takes."
+Don't get caught."
 label_settings = SubResource("LabelSettings_2ct2e")
 
 [node name="ArtCredits" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=164697244]

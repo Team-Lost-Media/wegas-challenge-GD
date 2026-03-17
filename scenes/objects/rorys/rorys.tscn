@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://1bw8h0nquq5y" path="res://scenes/objects/rorys/rorys.gd" id="2_hipyo"]
 [ext_resource type="Texture2D" uid="uid://d1t21utirnpcc" path="res://assets/textures/spritesheetboom.png" id="2_sf834"]
 [ext_resource type="AudioStream" uid="uid://c6b31t80xgx6v" path="res://assets/SFX/Counter Strike Punch Sound Effect.mp3" id="3_oyc7v"]
+[ext_resource type="Script" uid="uid://ca4hmppmj846s" path="res://scenes/levels/the idol/flash.gd" id="4_iy12u"]
 [ext_resource type="Texture2D" uid="uid://b88xh2xnkblfl" path="res://assets/textures/punchable.png" id="4_pabep"]
 [ext_resource type="AudioStream" uid="uid://03fbe2ya4f4i" path="res://assets/SFX/rory being an asshole.ogg" id="5_aoh5m"]
 
@@ -313,6 +314,21 @@ texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_avj1d")
 frame_progress = 0.62619656
 script = ExtResource("2_hipyo")
+
+[node name="Flash" type="CanvasLayer" parent="." unique_id=187163895]
+layer = 100
+script = ExtResource("4_iy12u")
+
+[node name="ColorRect" type="ColorRect" parent="Flash" unique_id=992607126]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="punchable indicator" type="Sprite3D" parent="." unique_id=2135218005]
 transform = Transform3D(1, -5.8042815e-10, 5.820766e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.0020247025, 1.5986884, -0.0011613148)

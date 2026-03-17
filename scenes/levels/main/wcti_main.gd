@@ -247,6 +247,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 
 func wassup_guys_its_me_the_idol(body: Node3D) -> void:
 	if body is PlayerCharacter:
+		Global.saved_time_as_string = Global.time_as_string
 		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
 
 

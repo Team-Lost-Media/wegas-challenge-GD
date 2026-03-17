@@ -5,7 +5,7 @@ const WCTI_SAVE_SCORE_FILE_PATH = "user://wegakill - the idol highscore.sav"
 const SAVE_ACHIEVEMENTS_FILE_PATH = "user://wegakill - achievements.sav"
 const SAVEFILE_VERSION_FILE_PATH = "user://wegakill - savefile version.sav"
 
-var savefile_version = 2
+var savefile_version = 3
 
 var load_saves = true
 
@@ -13,7 +13,7 @@ func save_score(score):
 	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
 	file.store_string(str(score))
 
-func load_score():
+func load_score() -> int:
 	if load_saves:
 		var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.READ)
 		var score: int = 0
@@ -22,6 +22,7 @@ func load_score():
 		if score != null:
 			return score
 		else: return 0
+	return 0
 
 func reset_score():
 	var file = FileAccess.open(CLASSIC_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
@@ -31,7 +32,7 @@ func save_wcti_score(score):
 	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
 	file.store_string(str(score))
 
-func load_wcti_score():
+func load_wcti_score() -> int:
 	if load_saves:
 		var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.READ)
 		var score: int
@@ -40,6 +41,7 @@ func load_wcti_score():
 		if score != null:
 			return score
 		else: return 0
+	else: return 0
 
 func reset_wcti_score():
 	var file = FileAccess.open(WCTI_SAVE_SCORE_FILE_PATH, FileAccess.WRITE)
