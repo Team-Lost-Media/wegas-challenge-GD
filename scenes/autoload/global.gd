@@ -24,7 +24,7 @@ signal player_died
 var time_as_string: String
 var time_in_seconds: float
 
-var saved_time_as_string: String = "test"
+var saved_time_as_string: String = "0:00.00"
 #endregion
 
 

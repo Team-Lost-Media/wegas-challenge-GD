@@ -1,3 +1,4 @@
+TextureRect
 AnimationPlayer
 ColorRect
 RigidBody2D
@@ -7,7 +8,6 @@ AudioStreamPlayer
 Control
 CPUParticles2D
 RichTextLabel
-TextureRect
 Sprite2D
 CanvasLayer
 AnimatedSprite2D

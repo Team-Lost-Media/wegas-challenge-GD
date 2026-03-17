@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://c1dg4jbdv51dv" path="res://assets/SFX/wcti win credits transition end.mp3" id="10_2tipv"]
 [ext_resource type="Texture2D" uid="uid://b3vgo8tacnak" path="res://assets/textures/achievements/thnak you.png" id="10_cbipe"]
 [ext_resource type="Texture2D" uid="uid://bip4pwu3ajgva" path="res://assets/textures/godot logo white.png" id="11_84y4e"]
+[ext_resource type="Shader" uid="uid://d3yhtkt4tafka" path="res://assets/other/scrolling line bg.gdshader" id="14_oud1d"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tipv"]
 transparency = 1
@@ -51,6 +52,15 @@ font = ExtResource("9_16t81")
 font_size = 82
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b0fm6"]
+shader = ExtResource("14_oud1d")
+shader_parameter/color_one = Color(0.015686275, 0, 0.03529412, 1)
+shader_parameter/color_two = Color(0.05882353, 0.043137256, 0.06666667, 1)
+shader_parameter/angle = 29.775
+shader_parameter/line_count = 20.0
+shader_parameter/speed = 1.775
+shader_parameter/blur = 0.0
 
 [node name="Node3D" type="Node3D" unique_id=548201920]
 script = ExtResource("1_yrukk")
@@ -454,11 +464,17 @@ offset_bottom = 73.0
 text = "-1"
 label_settings = SubResource("LabelSettings_2tipv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2077355872]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2054818028]
+z_index = 274
+material = SubResource("ShaderMaterial_b0fm6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_top = -1500.0
-offset_right = 1920.0
-offset_bottom = -420.0
-color = Color(0, 0, 0, 1)
+offset_bottom = -1500.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [connection signal="timeout" from="music timer" to="." method="_on_music_timer_timeout"]
 [connection signal="collected" from="Main/wegadoll" to="." method="_on_wegadoll_collected"]

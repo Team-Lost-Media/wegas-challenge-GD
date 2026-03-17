@@ -34,11 +34,11 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(2).timeout
 	var tween1 = create_tween()
-	tween1.tween_property(time, "position:x", 0, 2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween1.tween_property(time, "position:x", 100, 2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
 	var tween2 = create_tween()
-	tween2.tween_property(style, "position:x", 0, 2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
+	tween2.tween_property(style, "position:x", -100, 2).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
 	
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1.5).timeout
 	time.anim()
 	
 	await get_tree().create_timer(3).timeout

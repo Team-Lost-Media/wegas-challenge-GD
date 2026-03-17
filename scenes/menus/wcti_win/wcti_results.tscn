@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc6eoivljd7or"]
 
 [ext_resource type="Script" uid="uid://d3cc1pwke4hbx" path="res://scenes/menus/wcti_win/wcti_results.gd" id="1_wojt0"]
+[ext_resource type="Shader" uid="uid://d3yhtkt4tafka" path="res://assets/other/scrolling line bg.gdshader" id="2_n2by4"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_oehvr"]
 [ext_resource type="Script" uid="uid://chbks77joeqln" path="res://scenes/menus/wcti_win/results_label_shaking_thing.gd" id="3_sq7r8"]
 [ext_resource type="AudioStream" uid="uid://358qooyp4wkr" path="res://assets/SFX/fall.wav" id="4_sq7r8"]
@@ -8,6 +9,15 @@
 [ext_resource type="AudioStream" uid="uid://c0436cx0h4an" path="res://assets/SFX/count.wav" id="5_qtyjn"]
 [ext_resource type="AudioStream" uid="uid://br23vdl0niiq4" path="res://assets/SFX/wcti win text sound.mp3" id="6_a7arc"]
 [ext_resource type="Script" uid="uid://dmtnwvnkivtod" path="res://scenes/menus/wcti_win/style_label_wcti.gd" id="7_aw4ii"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fqia4"]
+shader = ExtResource("2_n2by4")
+shader_parameter/color_one = Color(0.015686275, 0, 0.03529412, 1)
+shader_parameter/color_two = Color(0.05882353, 0.043137256, 0.06666667, 1)
+shader_parameter/angle = 29.775
+shader_parameter/line_count = 20.0
+shader_parameter/speed = 1.775
+shader_parameter/blur = 0.0
 
 [sub_resource type="Animation" id="Animation_qtyjn"]
 length = 0.001
@@ -52,14 +62,22 @@ point_count = 2
 offsets = PackedFloat32Array(0, 0.6831683)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aw4ii"]
+friction = 0.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_aw4ii"]
 font = ExtResource("2_oehvr")
 font_size = 82
 font_color = Color(0.5, 0.5, 0.5, 1)
+outline_size = 40
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_n2by4"]
 font = ExtResource("2_oehvr")
 font_size = 164
+font_color = Color(1, 1, 1, 0.75686276)
+outline_size = 41
+outline_color = Color(0, 0, 0, 0.7529412)
 
 [sub_resource type="Animation" id="Animation_fqia4"]
 length = 0.001
@@ -218,6 +236,8 @@ _data = {
 font = ExtResource("2_oehvr")
 font_size = 41
 font_color = Color(0.5, 0.5, 0.5, 1)
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
@@ -228,20 +248,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wojt0")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1056658527]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1803377306]
 z_index = -1
+material = SubResource("ShaderMaterial_fqia4")
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -345.0
-offset_top = -192.0
-offset_right = 345.0
-offset_bottom = 192.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0, 0, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2112841691]
 anchor_mode = 0
@@ -255,6 +271,7 @@ offset_left = -914.99976
 offset_right = 915.0
 offset_bottom = 891.0
 grow_horizontal = 2
+theme_override_constants/outline_size = 81
 theme_override_fonts/normal_font = ExtResource("2_oehvr")
 theme_override_font_sizes/normal_font_size = 164
 bbcode_enabled = true
@@ -325,6 +342,7 @@ offset_top = 484.0
 offset_right = 706.41406
 offset_bottom = 733.0
 grow_horizontal = 2
+theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("2_oehvr")
 theme_override_font_sizes/normal_font_size = 82
 bbcode_enabled = true
@@ -355,6 +373,7 @@ offset_top = 393.0
 offset_right = 1673.4141
 offset_bottom = 642.0
 grow_horizontal = 2
+theme_override_constants/outline_size = 20
 theme_override_fonts/normal_font = ExtResource("2_oehvr")
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
@@ -414,6 +433,7 @@ color_ramp = SubResource("Gradient_qtyjn")
 
 [node name="beat roll" type="RigidBody2D" parent="." unique_id=797850022]
 position = Vector2(961, 864)
+physics_material_override = SubResource("PhysicsMaterial_aw4ii")
 freeze = true
 
 [node name="beat roll?" type="Label" parent="beat roll" unique_id=1757718626]
@@ -435,13 +455,14 @@ vertical_alignment = 1
 
 [node name="yes i beat the roll gimme orange line now" type="Label" parent="." unique_id=549563179]
 layout_mode = 0
-offset_left = 840.0
-offset_top = 782.0
-offset_right = 1128.0
-offset_bottom = 927.0
-pivot_offset = Vector2(144, 72)
+offset_left = 511.0
+offset_top = 1100.0
+offset_right = 1411.0
+offset_bottom = 1245.0001
+pivot_offset = Vector2(450, 72)
 text = "YES"
 label_settings = SubResource("LabelSettings_n2by4")
+horizontal_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="yes i beat the roll gimme orange line now" unique_id=58376389]
 libraries/ = SubResource("AnimationLibrary_r6l32")
