@@ -78,6 +78,9 @@ func do_a_funny() -> void:
 			character_animation.play("Male Sitting Pose/mixamo_com", 0.1)
 		2:
 			character_animation.play("Male Standing Pose/mixamo_com", 0.1)
+		3:
+			character_animation.play("Silly Dancing/mixamo_com", 0.1)
+	await get_tree().create_timer(0.15).timeout
 	do_animations = true
 
 #region Main control flow 
