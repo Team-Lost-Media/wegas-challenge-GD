@@ -47,7 +47,7 @@ func _ready() -> void:
 	await get_tree().create_timer(5).timeout
 	var tween3 = create_tween()
 	tween3.tween_property(beat_roll, "position:y", 864.0, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(1.0).timeout
 	
 	if Global.credits_cleared:
 		did_you_beat_the_roll.text = "YES"
