@@ -1,9 +1,9 @@
+Label
 Camera3D
 Node3D
 SubViewport
 TextureRect
 Node
-Label
 Control
 OptionButton
 CheckBox
@@ -12,4 +12,3 @@ SpotLight3D
 AnimationPlayer
 Sprite2D
 ColorRect
-Sprite2D

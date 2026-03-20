@@ -431,6 +431,11 @@ theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
 max_value = 1.0
 show_percentage = false
 
+[node name="Label" type="Label" parent="SuperJumpCooldownBar" unique_id=1739261808]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="golden sigma" type="Sprite2D" parent="." unique_id=849221440]
 self_modulate = Color(0.5, 0.5, 0.5, 1)
 position = Vector2(1785.0625, 961.875)

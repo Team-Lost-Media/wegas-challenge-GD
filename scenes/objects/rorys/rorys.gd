@@ -31,7 +31,8 @@ var wegadoll: Node3D
 var normal_wegadoll_material: StandardMaterial3D
 
 func _ready() -> void:
-	start_timer.wait_time = time_to_enable
+	if time_to_enable > 0:
+		start_timer.wait_time = time_to_enable
 	start_timer.start()
 	play("default")
 	if enable_manually == true:

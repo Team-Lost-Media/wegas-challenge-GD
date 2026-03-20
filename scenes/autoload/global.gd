@@ -50,9 +50,10 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	wegadoll_combo_timer.wait_time = 0.35 + (timeleft / 2)
 	print(wegadoll_combo_timer.wait_time)
 	
-	
-	add_child(wegadoll_combo_timer)
-	wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
+	if not has_node("WegaDollComboTimer"):
+		wegadoll_combo_timer.name = "WegaDollComboTimer"
+		add_child(wegadoll_combo_timer)
+		wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
 	
 	if wegadoll_combo_timer.is_stopped():
 		wegadoll_combo_timer.stop()

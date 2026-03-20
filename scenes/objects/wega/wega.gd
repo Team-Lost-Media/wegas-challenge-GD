@@ -107,7 +107,7 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 		if kill == true:
 			Global.died_to = "wega"
 			Global.player_died.emit()
-			if death_scene != "": get_tree().change_scene_to_file(death_scene)
+			if death_scene != "": get_tree().call_deferred("change_scene_to_file", death_scene)
 
 
 func _on_above_wega_area_3d_body_entered(body: Node3D) -> void:
