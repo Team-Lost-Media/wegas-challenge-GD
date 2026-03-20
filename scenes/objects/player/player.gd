@@ -62,6 +62,7 @@ var saveable_fall = false
 @onready var health_bar: ProgressBar = $Health
 @onready var golden_sigma: Sprite2D = $"golden sigma"
 @onready var green_lawson_playermodel: Node3D = $GreenLawsonPlayermodel
+@onready var arm_animation: AnimationPlayer = $head/Camera3D/ArmsPlayerModel/run/AnimationPlayer
 
 var gravity: Vector3 = Vector3(0, -55, 0)
 #var jump_dir: Vector3 = Vector3(0, 1, 0)
@@ -196,6 +197,7 @@ func _physics_process(delta: float) -> void:
 		if direction:
 			if do_animations and is_on_floor():
 				character_animation.play("Fast Run/mixamo_com", animation_blend)
+				arm_animation.play("CINEMA_4D_Main")
 			velocity.x = direction.x * SPEED * dash_multiplier
 			velocity.z = direction.z * SPEED * dash_multiplier
 		else:

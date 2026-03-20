@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://brpt71jl5cg2q"]
 
 [ext_resource type="Script" uid="uid://bxefyivknb70g" path="res://scenes/objects/player/player.gd" id="1_yofdb"]
+[ext_resource type="PackedScene" uid="uid://11wwkdi5jul8" path="res://assets/Models/arms/run.fbx" id="2_8bans"]
 [ext_resource type="Script" uid="uid://oybmr27vjrco" path="res://scenes/objects/player/progress_bar.gd" id="2_g10m2"]
 [ext_resource type="PackedScene" uid="uid://c3ojar3wabijr" path="res://scenes/objects/player/green_lawson_playermodel.tscn" id="2_nqkks"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
@@ -26,6 +27,41 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p0oft"]
 radius = 0.150147
 height = 0.601342
+
+[sub_resource type="Gradient" id="Gradient_r0xjb"]
+interpolation_mode = 2
+colors = PackedColorArray(0, 0, 0, 1, 0.5251013, 0.5251013, 0.5251013, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_r0xjb"]
+noise_type = 4
+seed = 205
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vkcxr"]
+noise = SubResource("FastNoiseLite_r0xjb")
+color_ramp = SubResource("Gradient_r0xjb")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vkcxr"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+grow = true
+grow_amount = 0.01
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vx2qb"]
+next_pass = SubResource("StandardMaterial3D_vkcxr")
+shading_mode = 0
+albedo_color = Color(0, 0.8627451, 0.05490196, 1)
+detail_enabled = true
+detail_mask = SubResource("NoiseTexture2D_vkcxr")
+detail_blend_mode = 2
+stencil_mode = 1
+stencil_flags = 2
 
 [sub_resource type="Animation" id="Animation_fnymu"]
 length = 0.001
@@ -300,8 +336,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
 mouse_sensitivity = 10.0
 
-[node name="Node3D" type="Node3D" parent="." unique_id=995862903]
-
 [node name="GreenLawsonPlayermodel" parent="." unique_id=1960023287 instance=ExtResource("2_nqkks")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
@@ -320,6 +354,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.468065, 0)
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=1544105980]
 transform = Transform3D(0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0, 0.6666667, 0, 0, 0)
 script = ExtResource("3_jxhie")
+
+[node name="ArmsPlayerModel" type="Node3D" parent="head/Camera3D" unique_id=995862903]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.7020975, 0)
+
+[node name="run" parent="head/Camera3D/ArmsPlayerModel" unique_id=260492694 instance=ExtResource("2_8bans")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.655, 0, -1.333, 0.075)
+
+[node name="Skeleton3D" parent="head/Camera3D/ArmsPlayerModel/run/Null" parent_id_path=PackedInt32Array(260492694, 1599839975) index="0" unique_id=1024600005]
+bones/0/position = Vector3(2.0593922, 15.838834, 0.20279399)
+bones/0/rotation = Quaternion(0.02108387, -0.2243282, 0.95557344, -0.19003117)
+bones/1/rotation = Quaternion(0.07170557, -0.0019814065, -0.04268655, 0.99651)
+bones/25/position = Vector3(-2.6455328, 16.005583, -0.15901642)
+bones/25/rotation = Quaternion(-0.18328506, 0.15991315, 0.9604058, 0.13584962)
+bones/26/rotation = Quaternion(0.47915584, -0.01623144, 0.0354407, 0.87686384)
+
+[node name="armsMesh" parent="head/Camera3D/ArmsPlayerModel/run/Null/Skeleton3D" index="0" unique_id=1180680318]
+surface_material_override/0 = SubResource("StandardMaterial3D_vx2qb")
 
 [node name="RayCast3D" type="RayCast3D" parent="head" unique_id=2110452444]
 target_position = Vector3(0, 0, -0.91)
@@ -647,3 +698,4 @@ bus = &"SFX"
 
 [editable path="GreenLawsonPlayermodel"]
 [editable path="GreenLawsonPlayermodel/green lawson"]
+[editable path="head/Camera3D/ArmsPlayerModel/run"]
