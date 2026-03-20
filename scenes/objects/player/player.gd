@@ -26,6 +26,7 @@ var currentState : CharacterState = CharacterState.WALKING
 @export var max_dashes: int = 2
 @export var overheal_drain_curve: Curve = preload("res://assets/other/overheal drain curve.tres")
 @export var max_health: float = 100
+@export var always_dancing: bool = false ## CREDITS ONLY
 var inputEnabled := true # can the player move?
 var aimlookEnabled := true # can the player look around?
 var interactionsEnabled := true # can the player interact with Interactibles3D?
@@ -86,6 +87,10 @@ func do_a_funny() -> void:
 #region Main control flow 
 
 func _ready():
+	if always_dancing:
+		do_animations = false
+		character_animation.play("Silly Dancing/mixamo_com", 0.1)
+	
 	Global.max_health = max_health
 	$MeshInstance3D.hide()
 	Engine.max_fps = 9999

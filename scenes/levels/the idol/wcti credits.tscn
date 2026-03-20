@@ -120,6 +120,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 2.713, 8.212)
 floor_max_angle = 1.3962634
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
+always_dancing = true
 
 [node name="Main" type="Node3D" parent="." unique_id=916187648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485046, 0.712285, 0.156724)

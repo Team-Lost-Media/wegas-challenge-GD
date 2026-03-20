@@ -13,6 +13,9 @@ var max_health: float = 100
 var tutorial = false
 var timer_stopped = false
 
+var credits_cleared = false
+var saved_time_as_string: String = "0:00.000"
+
 var lap: int = 0
 var mode: String = "" #classic for CLASSIC, wcti for THE IDOL,
 

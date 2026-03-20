@@ -300,6 +300,8 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 script = ExtResource("1_yofdb")
 mouse_sensitivity = 10.0
 
+[node name="Node3D" type="Node3D" parent="." unique_id=995862903]
+
 [node name="GreenLawsonPlayermodel" parent="." unique_id=1960023287 instance=ExtResource("2_nqkks")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 
