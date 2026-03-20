@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://24cdojk8liul"]
+[gd_scene format=3 uid="uid://24cdojk8liul"]
 
 [ext_resource type="Script" uid="uid://wcaubw3eaijm" path="res://scenes/menus/save error/save_error_menu.gd" id="1_lleid"]
 [ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_vv3lg"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="3_li1nm"]
+[ext_resource type="PackedScene" uid="uid://c3ojar3wabijr" path="res://scenes/objects/player/green_lawson_playermodel.tscn" id="3_vv3lg"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_li1nm"]
+viewport_path = NodePath("TextureRect2/SubViewport")
 
 [sub_resource type="LabelSettings" id="LabelSettings_v256l"]
 font_size = 32
 
-[node name="SaveErrorMenu" type="Control"]
+[node name="SaveErrorMenu" type="Control" unique_id=100619957]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lleid")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=578812657]
 modulate = Color(0.35, 0.35, 0.35, 1)
 layout_mode = 1
 anchors_preset = 15
@@ -27,7 +31,53 @@ grow_vertical = 2
 texture = ExtResource("2_vv3lg")
 stretch_mode = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=327823670]
+layout_mode = 0
+offset_left = 687.0
+offset_top = 366.0
+offset_right = 1199.0
+offset_bottom = 878.0
+texture = SubResource("ViewportTexture_li1nm")
+
+[node name="SubViewport" type="SubViewport" parent="TextureRect2" unique_id=1493017960]
+transparent_bg = true
+
+[node name="Node3D" type="Node3D" parent="TextureRect2/SubViewport" unique_id=24948364]
+
+[node name="Camera3D" type="Camera3D" parent="TextureRect2/SubViewport/Node3D" unique_id=739457356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35132354, 0.62794006)
+
+[node name="GreenLawsonPlayermodel" parent="TextureRect2/SubViewport/Node3D" unique_id=1960023287 instance=ExtResource("3_vv3lg")]
+
+[node name="Skeleton3D" parent="TextureRect2/SubViewport/Node3D/GreenLawsonPlayermodel/green lawson" parent_id_path=PackedInt32Array(1960023287, 706897028) index="0" unique_id=1822382672]
+bones/0/position = Vector3(0.002567606, 0.38833508, 0.032551035)
+bones/0/rotation = Quaternion(-0.17659308, 0.18656404, 0.09331222, 0.96192604)
+bones/1/rotation = Quaternion(0.041123286, 0.0035779169, 0.08987383, 0.9950974)
+bones/2/rotation = Quaternion(0.038003758, 0.0062876726, 0.0022782057, 0.9992553)
+bones/3/rotation = Quaternion(0.038173072, 0.005405688, 0.0023549066, 0.99925375)
+bones/4/rotation = Quaternion(0.12933707, -0.019654425, 0.0127879465, 0.9913235)
+bones/5/rotation = Quaternion(-0.020059237, -0.05131489, -0.07118818, 0.99594015)
+bones/7/rotation = Quaternion(-0.59453464, -0.41979438, 0.45237797, -0.5154178)
+bones/8/rotation = Quaternion(0.25680557, -0.14341584, 0.1641908, 0.9415542)
+bones/9/rotation = Quaternion(0.03679259, -0.0095083965, 0.7953209, 0.60499626)
+bones/10/rotation = Quaternion(0.13300976, 0.23634961, -0.2861895, 0.9189902)
+bones/15/rotation = Quaternion(0.53636473, -0.46662107, 0.50593704, 0.4884726)
+bones/16/rotation = Quaternion(0.17965348, 0.030584201, -0.6206436, 0.7626209)
+bones/17/rotation = Quaternion(0.0244603, 0.008114219, -0.5683144, 0.82240784)
+bones/18/rotation = Quaternion(-0.014499643, -0.2870233, 0.16508447, 0.9434801)
+bones/23/rotation = Quaternion(0.026681948, 0.3039641, 0.92436796, -0.22899324)
+bones/24/rotation = Quaternion(-0.6407227, 0.08065496, -0.036416396, 0.7626553)
+bones/25/rotation = Quaternion(0.38311598, -0.041675013, -0.20647657, 0.89936244)
+bones/26/rotation = Quaternion(0.5809658, -0.040672623, -0.016044946, 0.8127527)
+bones/28/rotation = Quaternion(-0.05624024, -0.103696615, 0.9420857, 0.3139408)
+bones/29/rotation = Quaternion(-0.7363419, -0.11555184, 0.08429979, 0.6613183)
+bones/30/rotation = Quaternion(0.83524615, 0.095879525, 0.17380314, 0.5127998)
+bones/31/rotation = Quaternion(0.5229042, 0.030754762, 0.005422226, 0.85181916)
+
+[node name="MainAnimationPlayer" parent="TextureRect2/SubViewport/Node3D/GreenLawsonPlayermodel/green lawson" parent_id_path=PackedInt32Array(1960023287, 706897028) index="2" unique_id=1286337616]
+autoplay = &"Silly Dancing/mixamo_com"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=714537413]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,7 +92,7 @@ this is normal if you're going from 1 version to the next
 as such, to continue, you must [color=fff000]reset your save.[color=666666]
 [font_size=32](this will make your save incompatible with previous versions)"
 
-[node name="ResetButton" type="Button" parent="."]
+[node name="ResetButton" type="Button" parent="." unique_id=851229501]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3
@@ -58,7 +108,7 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 64
 text = "update my save"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="." unique_id=1542626867]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7
@@ -75,7 +125,7 @@ theme_override_font_sizes/font_size = 48
 text = "you will never take my save
  "
 
-[node name="Label" type="Label" parent="QuitButton"]
+[node name="Label" type="Label" parent="QuitButton" unique_id=1305121236]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -93,3 +143,6 @@ label_settings = SubResource("LabelSettings_v256l")
 
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+
+[editable path="TextureRect2/SubViewport/Node3D/GreenLawsonPlayermodel"]
+[editable path="TextureRect2/SubViewport/Node3D/GreenLawsonPlayermodel/green lawson"]

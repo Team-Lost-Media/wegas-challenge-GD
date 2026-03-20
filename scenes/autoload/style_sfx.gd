@@ -32,4 +32,6 @@ func play_style_sfx(rank = 0, no_p_style = false) -> void: ##Plays style sounds,
 			stream = load("res://assets/SFX/STYLE/rank_p.mp3")
 		_:
 			stream = load("res://assets/SFX/deltarune-explosion.mp3")
+	if get_tree().current_scene.has_node("Player"):
+		get_tree().current_scene.get_node("Player").do_a_funny()
 	play()

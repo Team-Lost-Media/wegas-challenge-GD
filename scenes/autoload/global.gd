@@ -16,17 +16,14 @@ var timer_stopped = false
 var lap: int = 0
 var mode: String = "" #classic for CLASSIC, wcti for THE IDOL,
 
-var credits_cleared: bool = false
+var camera_style: int = 0
 
 signal player_died
 
 #region end screen variables
 var time_as_string: String
 var time_in_seconds: float
-
-var saved_time_as_string: String = "0:00.000"
 #endregion
-
 
 func reset(): #execited when the player retries after a game over or win
 	points = 0
@@ -36,10 +33,6 @@ func reset(): #execited when the player retries after a game over or win
 	died_to_override = ""
 	health = 100
 	timer_stopped = false
-
-func _ready() -> void:
-	add_child(wegadoll_combo_timer)
-	wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
 
 #region wegacombo
 var newtimer = Timer
@@ -54,12 +47,12 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	
 	wegadoll_combo_timer.one_shot = true
 	var timeleft = wegadoll_combo_timer.time_left
-	wegadoll_combo_timer.wait_time = 0.4 #0.35 + (timeleft / 2)
+	wegadoll_combo_timer.wait_time = 0.35 + (timeleft / 2)
 	print(wegadoll_combo_timer.wait_time)
 	
 	
-	
-	
+	add_child(wegadoll_combo_timer)
+	wegadoll_combo_timer.timeout.connect(check_wegadoll_combo)
 	
 	if wegadoll_combo_timer.is_stopped():
 		wegadoll_combo_timer.stop()
