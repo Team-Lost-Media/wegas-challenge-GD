@@ -54,7 +54,7 @@ func collect_wegadoll() -> void: #executed whenever a wegadoll is collected
 	
 	wegadoll_combo_timer.one_shot = true
 	var timeleft = wegadoll_combo_timer.time_left
-	wegadoll_combo_timer.wait_time = 0.35 + (timeleft / 2)
+	wegadoll_combo_timer.wait_time = 0.4 #0.35 + (timeleft / 2)
 	print(wegadoll_combo_timer.wait_time)
 	
 	
