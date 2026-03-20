@@ -73,7 +73,7 @@ var do_animations: bool = true
 func do_a_funny() -> void:
 	do_animations = false
 	green_lawson_playermodel.rotation_degrees.y = 180
-	match randi_range(0,2):
+	match randi_range(0,9):
 		0:
 			character_animation.play("Male Dynamic Pose/mixamo_com", 0.1)
 		1:
@@ -81,8 +81,20 @@ func do_a_funny() -> void:
 		2:
 			character_animation.play("Male Standing Pose/mixamo_com", 0.1)
 		3:
-			character_animation.play("Silly Dancing/mixamo_com", 0.1)
-	await get_tree().create_timer(0.15).timeout
+			character_animation.play("Silly Dancing/mixamo_com", -1, 3)
+		4:
+			character_animation.play("Female Standing Pose/mixamo_com", 0.1)
+		5:
+			character_animation.play("Female Dance Pose/mixamo_com", 0.1)
+		6:
+			character_animation.play("Male Laying Pose/mixamo_com", 0.1)
+		7:
+			character_animation.play("Male Dynamic Pose/mixamo_com", 0.1)
+		8:
+			character_animation.play("Falling/mixamo_com", 0.1)
+		9:
+			character_animation.play("T-Pose/mixamo_com", 0.1)
+	await get_tree().create_timer(0.2).timeout
 	do_animations = true
 
 #region Main control flow 
@@ -106,7 +118,7 @@ func _ready():
 		health_label.hide()
 
 func _physics_process(delta: float) -> void:
-	green_lawson_playermodel.rotation_degrees.y = lerpf(green_lawson_playermodel.rotation_degrees.y, -180, 0.1)
+	green_lawson_playermodel.rotation_degrees.y = lerpf(green_lawson_playermodel.rotation_degrees.y, -180, 0.05)
 	
 	if !inputEnabled:
 		return

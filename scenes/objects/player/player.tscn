@@ -362,12 +362,12 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.7020975, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.655, 0, -1.333, 0.075)
 
 [node name="Skeleton3D" parent="head/Camera3D/ArmsPlayerModel/run/Null" parent_id_path=PackedInt32Array(260492694, 1599839975) index="0" unique_id=1024600005]
-bones/0/position = Vector3(2.0593922, 15.838834, 0.20279399)
-bones/0/rotation = Quaternion(0.02108387, -0.2243282, 0.95557344, -0.19003117)
-bones/1/rotation = Quaternion(0.07170557, -0.0019814065, -0.04268655, 0.99651)
-bones/25/position = Vector3(-2.6455328, 16.005583, -0.15901642)
-bones/25/rotation = Quaternion(-0.18328506, 0.15991315, 0.9604058, 0.13584962)
-bones/26/rotation = Quaternion(0.47915584, -0.01623144, 0.0354407, 0.87686384)
+bones/0/position = Vector3(2.0206308, 15.826982, 0.21058765)
+bones/0/rotation = Quaternion(0.018962694, -0.23557618, 0.95290923, -0.19002198)
+bones/1/rotation = Quaternion(0.059039008, -0.002532843, -0.042786762, 0.9973351)
+bones/25/position = Vector3(-2.663534, 16.010727, -0.16966331)
+bones/25/rotation = Quaternion(-0.18645021, 0.17101203, 0.9579114, 0.13563594)
+bones/26/rotation = Quaternion(0.49025548, -0.016742341, 0.035118263, 0.8707101)
 
 [node name="armsMesh" parent="head/Camera3D/ArmsPlayerModel/run/Null/Skeleton3D" index="0" unique_id=1180680318]
 surface_material_override/0 = SubResource("StandardMaterial3D_vx2qb")
