@@ -1,376 +1,376 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774103312
-default_bus_layout.tres::AudioBusLayout::785099390495628539::1774103297::0::1::::<><><>0<>0<><>::
-export_presets.cfg::TextFile::-1::1774103297::0::1::::<><><>0<>0<><>::
+::res://::1774104355
+default_bus_layout.tres::AudioBusLayout::785099390495628539::1774104215::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1774104215::0::1::::<><><>0<>0<><>::
 main.tscn::PackedScene/PackedScene::1070366442542408141::1747563943::0::1::::<><><>0<>0<><>::uid://ba87mwa8xsj6h::::res://scenes/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3
-README.md::TextFile::-1::1774103292::0::1::::<><><>0<>0<><>::
-TODO.md::TextFile::-1::1774103292::0::1::::<><><>0<>0<><>::
-::res://addons/::1774103294
-icon.png::CompressedTexture2D/CompressedTexture2D::5455354649467751846::1774103293::1774103320::1::::<><><>0<>0<>511f164c9499feff0f16e86283d1a731<>res://.godot/imported/icon.png-9184c917ae1432a53633fd28a90ce6a4.s3tc.ctex::
-::res://addons/debug_draw_3d/::1774103292
-debug_draw_3d.gdextension::GDExtension::1307723806687219837::1774103292::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1774103292::0::1::::<><><>0<>0<><>::
-::res://addons/debug_draw_3d/examples_dd3d/::1774103292
-addon_icon.gd::GDScript::4304834603696395689::1774103292::0::1::::<>Node3D<><>0<>1<><>::
-addon_icon.tscn::PackedScene::1848058559946837243::1774103292::0::1::::<><><>0<>0<><>::uid://b2lj85riqyno0::::res://addons/debug_draw_3d/examples_dd3d/addon_icon.gd
-DebugDrawDemoScene.gd::GDScript::2442653536324485478::1774103292::0::1::::<>Node3D<><>0<>1<><>::
-DebugDrawDemoScene.tscn::PackedScene::6775414103925589177::1774103292::0::1::::<><><>0<>0<><>::uid://ba2ie81p2x3x7::::res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoScene.gd<>uid://erdgllynwqkw::::res://addons/debug_draw_3d/examples_dd3d/Roboto-Bold.ttf<>uid://b5mdrjubj0lg5::::res://addons/debug_draw_3d/examples_dd3d/demo_camera_movement.gd<>uid://7am1h57ldd6::::res://addons/debug_draw_3d/examples_dd3d/PixelatedElegance.ttf<>uid://bebbekatkxaoe::::res://addons/debug_draw_3d/examples_dd3d/demo_music_visualizer.gd<>uid://83dhsep7l725::::res://addons/debug_draw_3d/examples_dd3d/demo_settings_panel.gd<>uid://hvx3t70syvkm::::res://addons/debug_draw_3d/examples_dd3d/demo_web_docs_version_select.gd
-DebugDrawDemoSceneCS.tscn::PackedScene::1312074525702841298::1774103292::0::1::::<><><>0<>0<><>::uid://c3sccy6x0ht5j::::res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoScene.tscn<>res://examples_dd3d/DebugDrawDemoSceneCS.cs
-demo_camera_movement.gd::GDScript::4517071539022170126::1774103292::0::1::::<>Camera3D<><>0<>0<><>::
-demo_music_visualizer.gd::GDScript::2669308822278718744::1774103292::0::1::::<>VBoxContainer<><>0<>1<><>::
-demo_settings_panel.gd::GDScript::2374230021028660716::1774103292::0::1::::<>Control<><>0<>1<><>::
-demo_web_docs_version_select.gd::GDScript::536121379902749364::1774103292::0::1::::<>HBoxContainer<><>0<>0<><>::
-PixelatedElegance.ttf::FontFile::66082895483767657::1774103292::1774103317::1::::<><><>0<>0<>1db66b526aed5ad46afb3d7d32a7bcff<>res://.godot/imported/PixelatedElegance.ttf-afa66bcfa5f4155ab81c9eb4b7feee72.fontdata::
-Roboto-Bold.ttf::FontFile::316043257971280746::1774103292::1774103317::1::::<><><>0<>0<>e4ee2d6fbff15efea9afafd64ca7cd55<>res://.godot/imported/Roboto-Bold.ttf-8898863a4b571640f76579de7e16a7d4.fontdata::
-VisualizerAudioBus.tres::AudioBusLayout::2284711204667567248::1774103292::0::1::::<><><>0<>0<><>::
-::res://addons/rhythm_notifier/::1774103294
-icon.svg::CompressedTexture2D/CompressedTexture2D::915565551177489870::1774103293::1774103320::1::::<><><>0<>0<>f8cc61bf8b2136d516e4d26df7e62389<>res://.godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex::
-rhythm_notifier.gd::GDScript::1758134565861831738::1774103294::0::1::::RhythmNotifier<>Node<>res://addons/rhythm_notifier/icon.svg<>0<>1<><>::
-::res://addons/richtext2/::1774103294
-emoji.gd::GDScript::6790777452550232943::1774103294::0::1::::Emoji<>RefCounted<><>0<>1<><>::
-font_helper.gd::GDScript::7531643313085518595::1774103294::0::1::::FontHelper<>Resource<><>0<>1<><>::
-plugin.cfg::TextFile::292818134523073770::1774103294::0::1::::<><><>0<>0<><>::
-plugin.gd::GDScript::625334180564991629::1774103294::0::1::::<>EditorPlugin<><>0<>1<><>::
-richer_text_label.gd::GDScript::1907190859764689766::1774103294::0::1::::RicherTextLabel<>RichTextLabel<><>0<>1<><>::
-rich_text_animation.gd::GDScript::4587141229000691393::1774103294::0::1::::RichTextAnimation<>RicherTextLabel<><>0<>1<><>::
-stack_state.gd::GDScript::8387231723873203956::1774103294::0::1::::<>RefCounted<><>0<>1<><>::
-::res://addons/richtext2/text_effects/::1774103294
-rich_text_effect_base.gd::GDScript::8335181345847243777::1774103294::0::1::::RichTextEffectBase<>RichTextEffect<><>0<>1<><>::
-::res://addons/richtext2/text_effects/anims/::1774103294
-rte_back.gd::GDScript::8935548021224016746::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_console.gd::GDScript::4114357143255428920::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_fader.gd::GDScript::2121443600897708513::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_fallin.gd::GDScript::3986088762534427341::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_focus.gd::GDScript::1524114770717682801::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_fromcursor.gd::GDScript::1159803692325548750::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_growin.gd::GDScript::807488094276503433::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_offin.gd::GDScript::3072140218323142030::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_prickle.gd::GDScript::9048737671225885010::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_redact.gd::GDScript::8025554890045706108::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_wfc.gd::GDScript::7317597616061718497::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-::res://addons/richtext2/text_effects/effects/::1774103294
-rte_beat.gd::GDScript::3489525788934799852::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_curspull.gd::GDScript::7654082686641730385::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_cuss.gd::GDScript::2060769678137307606::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_heart.gd::GDScript::4616386209975897224::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_jit2.gd::GDScript::6227128179392494520::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_jit.gd::GDScript::8153780142848412838::1774103294::0::1::::<>RichTextEffect<><>0<>1<><>::
-rte_jump2.gd::GDScript::5386049661568940727::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_jump.gd::GDScript::7500786370718914717::1774103294::0::1::::<>RichTextEffect<><>0<>1<><>::
-rte_l33t.gd::GDScript::8676570673387190533::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_off.gd::GDScript::1610504181725275790::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_rain.gd::GDScript::8618043789322006221::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_secret.gd::GDScript::5607124861429803271::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_sin.gd::GDScript::629708084987618391::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_sparkle.gd::GDScript::7768034327036495614::1774103294::0::1::::<>RichTextEffect<><>0<>1<><>::
-rte_sway.gd::GDScript::5264733979320943035::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_uwu.gd::GDScript::4365983844390959864::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_wack.gd::GDScript::4725233677108672969::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_wave.gd::GDScript::124711509494252836::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-rte_woo.gd::GDScript::2683587505639371934::1774103294::0::1::::<>RichTextEffectBase<><>0<>1<><>::
-::res://assets/::1774103295
-::res://assets/BGM/::1774103295
-Does Not Bleed (Drums).mp3::AudioStreamMP3/AudioStreamMP3::3401147801585339589::1774103294::1774103318::1::::<><><>0<>0<>2a1a10f3de05bf4e602c11bea339ff40<>res://.godot/imported/Does Not Bleed (Drums).mp3-b78fe1d5656b5b92ebe2e014144e2004.mp3str::
-Does Not Bleed (No Drums).mp3::AudioStreamMP3/AudioStreamMP3::2754496394523507966::1774103294::1774103318::1::::<><><>0<>0<>85a5f5f8fedda5d1c27fe99a36b9dea1<>res://.godot/imported/Does Not Bleed (No Drums).mp3-95009e201cde84764a6150dc71d91f9e.mp3str::
-Purple Sun V2 part1.mp3::AudioStreamMP3::8336574625219962646::1774103294::1774103318::1::::<><><>0<>0<>7de43905221fd31a5d96ae086daf5315<>res://.godot/imported/Purple Sun V2 part1.mp3-bb10d455612414bab6d60315745c5fef.mp3str::
-Purple Sun V2 part2.mp3::AudioStreamMP3::69462589219285879::1774103294::1774103318::1::::<><><>0<>0<>0869ac6306dae44ef42de63f01740a80<>res://.godot/imported/Purple Sun V2 part2.mp3-48de5697d8a1731dd3386811a32a1eee.mp3str::
-Purple Sun.mp3::AudioStreamMP3/AudioStreamMP3::4014029166852134338::1774103294::1774103318::1::::<><><>0<>0<>4195dde9724afbadb574accbd7425a13<>res://.godot/imported/Purple Sun.mp3-6c3d2b3161ca7dba98c450269bf1a4c6.mp3str::
-TAP Staff Roll.mp3::AudioStreamMP3::482826713362698650::1774103294::1774103318::1::::<><><>0<>0<>92eb80860a108147ecd3c4bf5b4ece02<>res://.godot/imported/TAP Staff Roll.mp3-ecf31393a0e2a9c4947a17b3779f618d.mp3str::
-WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav::AudioStreamWAV/AudioStreamWAV::3221015079477703689::1774103295::1774103322::1::::<><><>0<>0<>11e01c5f70bdc565457e72fb6cf327e0<>res://.godot/imported/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav-9f0d0ac2e9e211e9c60549f4ef5347c7.sample::
-WEGAFADENCE-—-Lap-II-Submission-2025-03-20-03_04_55.mp3::AudioStreamMP3/AudioStreamMP3::8452964404664280298::1774103295::1774103318::1::::<><><>0<>0<>dc799bcdf2d03edaf319dd51b22c10f0<>res://.godot/imported/WEGAFADENCE-—-Lap-II-Submission-2025-03-20-03_04_55.mp3-c341b7bc0f8599ad70295eb3be4a8ba7.mp3str::
+README.md::TextFile::-1::1774104214::0::1::::<><><>0<>0<><>::
+TODO.md::TextFile::-1::1774104214::0::1::::<><><>0<>0<><>::
+::res://addons/::1774104355
+icon.png::CompressedTexture2D/CompressedTexture2D::5455354649467751846::1774104215::1774104378::1::::<><><>0<>0<>511f164c9499feff0f16e86283d1a731<>res://.godot/imported/icon.png-9184c917ae1432a53633fd28a90ce6a4.s3tc.ctex::
+::res://addons/debug_draw_3d/::1774104214
+debug_draw_3d.gdextension::GDExtension::1307723806687219837::1774104214::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1774104214::0::1::::<><><>0<>0<><>::
+::res://addons/debug_draw_3d/examples_dd3d/::1774104355
+addon_icon.gd::GDScript::4304834603696395689::1774104214::0::1::::<>Node3D<><>0<>1<><>::
+addon_icon.tscn::PackedScene::1848058559946837243::1774104214::0::1::::<><><>0<>0<><>::uid://b2lj85riqyno0::::res://addons/debug_draw_3d/examples_dd3d/addon_icon.gd
+DebugDrawDemoScene.gd::GDScript::2442653536324485478::1774104214::0::1::::<>Node3D<><>0<>1<><>::
+DebugDrawDemoScene.tscn::PackedScene::6775414103925589177::1774104214::0::1::::<><><>0<>0<><>::uid://ba2ie81p2x3x7::::res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoScene.gd<>uid://erdgllynwqkw::::res://addons/debug_draw_3d/examples_dd3d/Roboto-Bold.ttf<>uid://b5mdrjubj0lg5::::res://addons/debug_draw_3d/examples_dd3d/demo_camera_movement.gd<>uid://7am1h57ldd6::::res://addons/debug_draw_3d/examples_dd3d/PixelatedElegance.ttf<>uid://bebbekatkxaoe::::res://addons/debug_draw_3d/examples_dd3d/demo_music_visualizer.gd<>uid://83dhsep7l725::::res://addons/debug_draw_3d/examples_dd3d/demo_settings_panel.gd<>uid://hvx3t70syvkm::::res://addons/debug_draw_3d/examples_dd3d/demo_web_docs_version_select.gd
+DebugDrawDemoSceneCS.tscn::PackedScene::1312074525702841298::1774104214::0::1::::<><><>0<>0<><>::uid://c3sccy6x0ht5j::::res://addons/debug_draw_3d/examples_dd3d/DebugDrawDemoScene.tscn<>res://examples_dd3d/DebugDrawDemoSceneCS.cs
+demo_camera_movement.gd::GDScript::4517071539022170126::1774104214::0::1::::<>Camera3D<><>0<>0<><>::
+demo_music_visualizer.gd::GDScript::2669308822278718744::1774104214::0::1::::<>VBoxContainer<><>0<>1<><>::
+demo_settings_panel.gd::GDScript::2374230021028660716::1774104214::0::1::::<>Control<><>0<>1<><>::
+demo_web_docs_version_select.gd::GDScript::536121379902749364::1774104214::0::1::::<>HBoxContainer<><>0<>0<><>::
+PixelatedElegance.ttf::FontFile::66082895483767657::1774104214::1774104377::1::::<><><>0<>0<>1db66b526aed5ad46afb3d7d32a7bcff<>res://.godot/imported/PixelatedElegance.ttf-afa66bcfa5f4155ab81c9eb4b7feee72.fontdata::
+Roboto-Bold.ttf::FontFile::316043257971280746::1774104214::1774104377::1::::<><><>0<>0<>e4ee2d6fbff15efea9afafd64ca7cd55<>res://.godot/imported/Roboto-Bold.ttf-8898863a4b571640f76579de7e16a7d4.fontdata::
+VisualizerAudioBus.tres::AudioBusLayout::2284711204667567248::1774104214::0::1::::<><><>0<>0<><>::
+::res://addons/rhythm_notifier/::1774104355
+icon.svg::CompressedTexture2D/CompressedTexture2D::915565551177489870::1774104215::1774104378::1::::<><><>0<>0<>f8cc61bf8b2136d516e4d26df7e62389<>res://.godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex::
+rhythm_notifier.gd::GDScript::1758134565861831738::1774104215::0::1::::RhythmNotifier<>Node<><>0<>1<><>::
+::res://addons/richtext2/::1774104215
+emoji.gd::GDScript::6790777452550232943::1774104215::0::1::::Emoji<>RefCounted<><>0<>1<><>::
+font_helper.gd::GDScript::7531643313085518595::1774104215::0::1::::FontHelper<>Resource<><>0<>1<><>::
+plugin.cfg::TextFile::292818134523073770::1774104215::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript::625334180564991629::1774104215::0::1::::<>EditorPlugin<><>0<>1<><>::
+richer_text_label.gd::GDScript::1907190859764689766::1774104215::0::1::::RicherTextLabel<>RichTextLabel<><>0<>1<><>::
+rich_text_animation.gd::GDScript::4587141229000691393::1774104215::0::1::::RichTextAnimation<>RicherTextLabel<><>0<>1<><>::
+stack_state.gd::GDScript::8387231723873203956::1774104215::0::1::::<>RefCounted<><>0<>1<><>::
+::res://addons/richtext2/text_effects/::1774104215
+rich_text_effect_base.gd::GDScript::8335181345847243777::1774104215::0::1::::RichTextEffectBase<>RichTextEffect<><>0<>1<><>::
+::res://addons/richtext2/text_effects/anims/::1774104215
+rte_back.gd::GDScript::8935548021224016746::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_console.gd::GDScript::4114357143255428920::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_fader.gd::GDScript::2121443600897708513::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_fallin.gd::GDScript::3986088762534427341::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_focus.gd::GDScript::1524114770717682801::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_fromcursor.gd::GDScript::1159803692325548750::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_growin.gd::GDScript::807488094276503433::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_offin.gd::GDScript::3072140218323142030::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_prickle.gd::GDScript::9048737671225885010::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_redact.gd::GDScript::8025554890045706108::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_wfc.gd::GDScript::7317597616061718497::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+::res://addons/richtext2/text_effects/effects/::1774104215
+rte_beat.gd::GDScript::3489525788934799852::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_curspull.gd::GDScript::7654082686641730385::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_cuss.gd::GDScript::2060769678137307606::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_heart.gd::GDScript::4616386209975897224::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_jit2.gd::GDScript::6227128179392494520::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_jit.gd::GDScript::8153780142848412838::1774104215::0::1::::<>RichTextEffect<><>0<>1<><>::
+rte_jump2.gd::GDScript::5386049661568940727::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_jump.gd::GDScript::7500786370718914717::1774104215::0::1::::<>RichTextEffect<><>0<>1<><>::
+rte_l33t.gd::GDScript::8676570673387190533::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_off.gd::GDScript::1610504181725275790::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_rain.gd::GDScript::8618043789322006221::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_secret.gd::GDScript::5607124861429803271::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_sin.gd::GDScript::629708084987618391::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_sparkle.gd::GDScript::7768034327036495614::1774104215::0::1::::<>RichTextEffect<><>0<>1<><>::
+rte_sway.gd::GDScript::5264733979320943035::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_uwu.gd::GDScript::4365983844390959864::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_wack.gd::GDScript::4725233677108672969::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_wave.gd::GDScript::124711509494252836::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+rte_woo.gd::GDScript::2683587505639371934::1774104215::0::1::::<>RichTextEffectBase<><>0<>1<><>::
+::res://assets/::1774104215
+::res://assets/BGM/::1774104355
+Does Not Bleed (Drums).mp3::AudioStreamMP3/AudioStreamMP3::3401147801585339589::1774104215::1774104377::1::::<><><>0<>0<>2a1a10f3de05bf4e602c11bea339ff40<>res://.godot/imported/Does Not Bleed (Drums).mp3-b78fe1d5656b5b92ebe2e014144e2004.mp3str::
+Does Not Bleed (No Drums).mp3::AudioStreamMP3/AudioStreamMP3::2754496394523507966::1774104215::1774104377::1::::<><><>0<>0<>85a5f5f8fedda5d1c27fe99a36b9dea1<>res://.godot/imported/Does Not Bleed (No Drums).mp3-95009e201cde84764a6150dc71d91f9e.mp3str::
+Purple Sun V2 part1.mp3::AudioStreamMP3::8336574625219962646::1774104215::1774104377::1::::<><><>0<>0<>7de43905221fd31a5d96ae086daf5315<>res://.godot/imported/Purple Sun V2 part1.mp3-bb10d455612414bab6d60315745c5fef.mp3str::
+Purple Sun V2 part2.mp3::AudioStreamMP3::69462589219285879::1774104215::1774104377::1::::<><><>0<>0<>0869ac6306dae44ef42de63f01740a80<>res://.godot/imported/Purple Sun V2 part2.mp3-48de5697d8a1731dd3386811a32a1eee.mp3str::
+Purple Sun.mp3::AudioStreamMP3/AudioStreamMP3::4014029166852134338::1774104215::1774104377::1::::<><><>0<>0<>4195dde9724afbadb574accbd7425a13<>res://.godot/imported/Purple Sun.mp3-6c3d2b3161ca7dba98c450269bf1a4c6.mp3str::
+TAP Staff Roll.mp3::AudioStreamMP3::482826713362698650::1774104215::1774104377::1::::<><><>0<>0<>92eb80860a108147ecd3c4bf5b4ece02<>res://.godot/imported/TAP Staff Roll.mp3-ecf31393a0e2a9c4947a17b3779f618d.mp3str::
+WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav::AudioStreamWAV/AudioStreamWAV::3221015079477703689::1774104215::1774104381::1::::<><><>0<>0<>11e01c5f70bdc565457e72fb6cf327e0<>res://.godot/imported/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav-9f0d0ac2e9e211e9c60549f4ef5347c7.sample::
+WEGAFADENCE-—-Lap-II-Submission-2025-03-20-03_04_55.mp3::AudioStreamMP3/AudioStreamMP3::8452964404664280298::1774104215::1774104377::1::::<><><>0<>0<>dc799bcdf2d03edaf319dd51b22c10f0<>res://.godot/imported/WEGAFADENCE-—-Lap-II-Submission-2025-03-20-03_04_55.mp3-c341b7bc0f8599ad70295eb3be4a8ba7.mp3str::
 WEXECUTION part2.mp3::AudioStreamMP3/AudioStreamMP3::425772264080042001::1739102790::1747606629::1::::<><><>0<>0<>057cd98e9acbda67b2c487c0468b2c4a<>res://.godot/imported/WEXECUTION part2.mp3-8664d0c1e2078ba67f274c4ba93043ba.mp3str::
 WEXECUTION.mp3::AudioStreamMP3/AudioStreamMP3::5267975667889712132::1748971293::1748971293::1::::<><><>0<>0<>af30244ecd7625dbafe62e93d80bb19b<>res://.godot/imported/WEXECUTION.mp3-c25d81b1ba3b246e0ad96efa52daa86f.mp3str::
-::res://assets/meshlibraries/::1774103295
-main.tres::MeshLibrary::3256605164773035509::1774103295::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres
-main_node.tscn::PackedScene::3628909229905760584::1774103295::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://tcpbqh6payhs::::res://assets/Models/lamp/Lamp base obj.obj<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://calfkgwgxmet8::::res://assets/Models/lamp/Lamp glass obj.obj<>uid://bjy0tbfcprkjc::::res://assets/Models/lamp/Lamp metal obj.obj
-wcti mesh lib.tres::MeshLibrary::6026687767440662667::1774103295::0::1::::<><><>0<>0<><>::uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://beoerbu073eqr::::res://assets/textures/wega.png
-wcti meshlib.tscn::PackedScene::8467485689607914529::1774103295::0::1::::<><><>0<>0<><>::uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://beoerbu073eqr::::res://assets/textures/wega.png
-wcti.tres::MeshLibrary::3255607425674192394::1774103295::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres
-::res://assets/Models/::1774103295
-7c33ed83.png::CompressedTexture2D/CompressedTexture2D::1762344265196924901::1739102790::1774103320::1::::<><><>0<>0<>0123eee9d04bbff48ba23ccddf539e9e<>res://.godot/imported/7c33ed83.png-9e7946f7198fd9369d2130ab490b89c6.s3tc.ctex::
-luigidoll.obj::Mesh/Mesh::1010693284744560514::1739102790::1774103323::1::::<><><>0<>0<>990c8233974721ff06e581efdd8535e1<>res://.godot/imported/luigidoll.obj-d2d0fc972949d3ef33b1e0eaba9f926a.mesh<*>res://.godot/imported/luigidoll.obj-d2d0fc972949d3ef33b1e0eaba9f926a.mesh::uid://0dxs11b638dl::::res://assets/Models/7c33ed83.png
-rocket texture.png::CompressedTexture2D/CompressedTexture2D::3979371749241726932::1774103295::1774103320::1::::<><><>0<>0<>c3d4b9d2227fb2ae14d9df715220374e<>res://.godot/imported/rocket texture.png-c565717b2b4d4684b641f656c504ffc5.s3tc.ctex::
-rocket.obj::Mesh/Mesh::1495611390456446582::1774103295::1774103323::1::::<><><>0<>0<>4a9bf4bfbf35821a4d70aa25cacb6c12<>res://.godot/imported/rocket.obj-12a78cd083ae90a3262a4c1706a674ed.mesh<*>res://.godot/imported/rocket.obj-12a78cd083ae90a3262a4c1706a674ed.mesh::
-sand dune test.obj::Mesh/Mesh::2729436338981315223::1774103295::1774103323::1::::<><><>0<>0<>6e402df7f2a6d8159e6fe4ebe4962975<>res://.godot/imported/sand dune test.obj-aa77c93534e9ada432661ccda28561f1.mesh<*>res://.godot/imported/sand dune test.obj-aa77c93534e9ada432661ccda28561f1.mesh::
-shoebenchtexture.png::CompressedTexture2D/CompressedTexture2D::7847108386467973330::1774103295::1774103319::1::::<><><>0<>0<>6f6d353a658cb80954ab381e49ed75e2<>res://.godot/imported/shoebenchtexture.png-923a160f5b7c62034f4a77b08122e6bc.s3tc.ctex::
-soretro.obj::Mesh/Mesh::3920237349304521559::1774103295::1774103323::1::::<><><>0<>0<>4ee634da622c8f6a8097ab0325a57620<>res://.godot/imported/soretro.obj-ae82b561d2576e225682dda1afdb7c96.mesh<*>res://.godot/imported/soretro.obj-ae82b561d2576e225682dda1afdb7c96.mesh::
-soretrotexture.png::CompressedTexture2D/CompressedTexture2D::8857912447946258565::1774103295::1774103319::1::::<><><>0<>0<>bfaeb3b9e8bad224af5e3649c19015ee<>res://.godot/imported/soretrotexture.png-a3cfe280b50804597a4eec92eeec6399.s3tc.ctex::
-::res://assets/Models/lamp/::1774103295
-Lamp base obj.obj::Mesh/Mesh::1338630177931941104::1774103295::1774103323::1::::<><><>0<>0<>84cf9e4a9b16a8ce1a6e107e8d4c805c<>res://.godot/imported/Lamp base obj.obj-558de67a0bbc1bd36e9e08efdae72b70.mesh<*>res://.godot/imported/Lamp base obj.obj-558de67a0bbc1bd36e9e08efdae72b70.mesh::
-Lamp glass obj.obj::Mesh/Mesh::4795871315013364167::1774103295::1774103323::1::::<><><>0<>0<>d9c0bfc0a047c7017023ef329f97860f<>res://.godot/imported/Lamp glass obj.obj-b5f46a30fb1e17da12e3c44ef9f21b5a.mesh<*>res://.godot/imported/Lamp glass obj.obj-b5f46a30fb1e17da12e3c44ef9f21b5a.mesh::
-Lamp metal obj.obj::Mesh/Mesh::3069217257795149908::1774103295::1774103323::1::::<><><>0<>0<>c1bd5dc3af68029be7528a543b0326c9<>res://.godot/imported/Lamp metal obj.obj-373b2ea205dc7df5e24520dcdce34e51.mesh<*>res://.godot/imported/Lamp metal obj.obj-373b2ea205dc7df5e24520dcdce34e51.mesh::
-::res://assets/other/::1774103296
-balatro.gdshader::Shader::3343218696155890021::1774103296::0::1::::<><><>0<>0<><>::
-Daydream.ttf::FontFile/FontFile::6615684542843289368::1774103295::1774103317::1::::<><><>0<>0<>5c71b81b350c2e590712ef758de10502<>res://.godot/imported/Daydream.ttf-53c8866f44617f41bb62179ed6491537.fontdata::
-default percentage of wegadolls collected to wega speed multiplier curve.tres::Curve::1174466207325013688::1774103296::0::1::::<><><>0<>0<><>::
-dogicapixel.ttf::FontFile/FontFile::2527049038137380305::1774103296::1774103317::1::::<><><>0<>0<>f7590d5c37b1ddb2ad92123a5f139ea4<>res://.godot/imported/dogicapixel.ttf-f222d18135671a1e8822eb52f29237f5.fontdata::
-Inconsolata-VariableFont_wdth,wght.ttf::FontFile::7433309894068668099::1774103296::1774103317::1::::<><><>0<>0<>455a01ac4e940912147412a9abd94e16<>res://.godot/imported/Inconsolata-VariableFont_wdth,wght.ttf-7c7ce0fc8fad441027e2eb6df441bf0d.fontdata::
-Mario-Kart-DS.ttf::FontFile/FontFile::1443301158491012979::1774103296::1774103317::1::::<><><>0<>0<>2a0f176a193dde3f175a4c8cf399c9b2<>res://.godot/imported/Mario-Kart-DS.ttf-2db78d63fa82fe559178686c4d2a55ed.fontdata::
-MP16REG.ttf::FontFile/FontFile::8456498455153944518::1774103296::1774103317::1::::<><><>0<>0<>d8ae7850b2be5ecd837cfb5f995e4492<>res://.godot/imported/MP16REG.ttf-067097c0dfbd111f751adb735455fe84.fontdata::
-overheal drain curve.tres::Curve::9137311905928740268::1774103296::0::1::::<><><>0<>0<><>::
-Pixellari.ttf::FontFile/FontFile::7505027158253386278::1774103296::1774103317::1::::<><><>0<>0<>c7d7dd5ce86555244ca44869be0b8a51<>res://.godot/imported/Pixellari.ttf-e17f02290930c045cd1eedd329ef7db6.fontdata::
-PKMN-Pinball.ttf::FontFile/FontFile::7991146626418353492::1774103296::1774103317::1::::<><><>0<>0<>56b3b6d49077bc5f2b4d334885f4958c<>res://.godot/imported/PKMN-Pinball.ttf-a12584625aeb2e8c6710a583ec96ebbf.fontdata::
-points and time curve.tres::Curve::1915444815586318179::1774103296::0::1::::<><><>0<>0<><>::
-scroll.gdshader::Shader::3226928520953206108::1774103296::0::1::::<><><>0<>0<><>::
-scrolling line bg.gdshader::Shader::9174554244003011960::1774103296::0::1::::<><><>0<>0<><>::
-SMW.Monospace.ttf::FontFile/FontFile::4451982850802647045::1774103296::1774103317::1::::<><><>0<>0<>30606c053d732fa65006af6f6bca9ab8<>res://.godot/imported/SMW.Monospace.ttf-82facba2be4fd689ecbde208cc0e428d.fontdata::
-SMW.ttf::FontFile/FontFile::6036893313046559868::1774103296::1774103317::1::::<><><>0<>0<>810f43c10505ed00113f4bb5016dbdd5<>res://.godot/imported/SMW.ttf-c1d3828901a08291b00d1eac19a38666.fontdata::
-Super-Mario-Bros--3.ttf::FontFile/FontFile::6345889327820322553::1774103296::1774103317::1::::<><><>0<>0<>6f11f60d6f9aac4b1760ecd359c3981a<>res://.godot/imported/Super-Mario-Bros--3.ttf-29dbc20ec616425f5f30f427d3c50dcc.fontdata::
-SuperMario256.ttf::FontFile/FontFile::6488624607315983315::1774103296::1774103317::1::::<><><>0<>0<>f07c63cd3d4e2d37876202ddc21bc0c1<>res://.godot/imported/SuperMario256.ttf-64c0c51caba16a4484a260e46e7cb8df.fontdata::
-texturescroll.gdshader::Shader::5270220805200180343::1774103296::0::1::::<><><>0<>0<><>::
-tips.txt::TextFile::-1::1774103296::0::1::::<><><>0<>0<><>::
-tutorial_black_texture.tres::StandardMaterial3D::1123837234146533157::1774103296::0::1::::<><><>0<>0<><>::
-vcr_osd_mono.tres::Theme::3247692464961855694::1774103296::0::1::::<><><>0<>0<><>::uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
-VCR_OSD_MONO_1.001.ttf::FontFile/FontFile::7160525912665439824::1774103296::1774103317::1::::<><><>0<>0<>efaf89d337ab89b9f00e1956a2ef14da<>res://.godot/imported/VCR_OSD_MONO_1.001.ttf-905c1285cda89614f92068ac4b12e303.fontdata::
-wcti points and time curve.tres::Curve::2264767560924897810::1774103296::0::1::::<><><>0<>0<><>::
-::res://assets/SFX/::1774103295
-BreakBlock.wav::AudioStreamWAV::6948650809754286304::1774103295::1774103320::1::::<><><>0<>0<>9732caa58fbf437bfc0bff5ab4541ea2<>res://.godot/imported/BreakBlock.wav-60fe6ba25d2bc1ca1b986a283f51b5bf.sample::
-count.wav::AudioStreamWAV::193799558539318825::1774103295::1774103320::1::::<><><>0<>0<>2eac46524e080bf92a7179ff6117b22c<>res://.godot/imported/count.wav-7d27ac6b4d84d1f9d8cb8da3ae83644b.sample::
-Counter Strike Punch Sound Effect.mp3::AudioStreamMP3/AudioStreamMP3::6952507454447337359::1774103295::1774103318::1::::<><><>0<>0<>222c50797595028ac8f7816d3e46e761<>res://.godot/imported/Counter Strike Punch Sound Effect.mp3-97a86599da340696254adf39a59e882c.mp3str::
-deltarune-explosion.mp3::AudioStreamMP3/AudioStreamMP3::2488080954746723198::1774103295::1774103318::1::::<><><>0<>0<>54d752cdfe80af99b96a23fb2087ef6a<>res://.godot/imported/deltarune-explosion.mp3-51149e451533ccf04786703b2b4eb508.mp3str::
+::res://assets/meshlibraries/::1774104215
+main.tres::MeshLibrary::3256605164773035509::1774104215::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres
+main_node.tscn::PackedScene::3628909229905760584::1774104215::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://tcpbqh6payhs::::res://assets/Models/lamp/Lamp base obj.obj<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://calfkgwgxmet8::::res://assets/Models/lamp/Lamp glass obj.obj<>uid://bjy0tbfcprkjc::::res://assets/Models/lamp/Lamp metal obj.obj
+wcti mesh lib.tres::MeshLibrary::6026687767440662667::1774104215::0::1::::<><><>0<>0<><>::uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://beoerbu073eqr::::res://assets/textures/wega.png
+wcti meshlib.tscn::PackedScene::8467485689607914529::1774104215::0::1::::<><><>0<>0<><>::uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://beoerbu073eqr::::res://assets/textures/wega.png
+wcti.tres::MeshLibrary::3255607425674192394::1774104215::0::1::::<><><>0<>0<><>::uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres
+::res://assets/Models/::1774104355
+7c33ed83.png::CompressedTexture2D/CompressedTexture2D::1762344265196924901::1739102790::1774104378::1::::<><><>0<>0<>0123eee9d04bbff48ba23ccddf539e9e<>res://.godot/imported/7c33ed83.png-9e7946f7198fd9369d2130ab490b89c6.s3tc.ctex::
+luigidoll.obj::Mesh/Mesh::1010693284744560514::1739102790::1774104382::1::::<><><>0<>0<>990c8233974721ff06e581efdd8535e1<>res://.godot/imported/luigidoll.obj-d2d0fc972949d3ef33b1e0eaba9f926a.mesh<*>res://.godot/imported/luigidoll.obj-d2d0fc972949d3ef33b1e0eaba9f926a.mesh::uid://0dxs11b638dl::::res://assets/Models/7c33ed83.png
+rocket texture.png::CompressedTexture2D/CompressedTexture2D::3979371749241726932::1774104215::1774104379::1::::<><><>0<>0<>c3d4b9d2227fb2ae14d9df715220374e<>res://.godot/imported/rocket texture.png-c565717b2b4d4684b641f656c504ffc5.s3tc.ctex::
+rocket.obj::Mesh/Mesh::1495611390456446582::1774104215::1774104382::1::::<><><>0<>0<>4a9bf4bfbf35821a4d70aa25cacb6c12<>res://.godot/imported/rocket.obj-12a78cd083ae90a3262a4c1706a674ed.mesh<*>res://.godot/imported/rocket.obj-12a78cd083ae90a3262a4c1706a674ed.mesh::
+sand dune test.obj::Mesh/Mesh::2729436338981315223::1774104215::1774104382::1::::<><><>0<>0<>6e402df7f2a6d8159e6fe4ebe4962975<>res://.godot/imported/sand dune test.obj-aa77c93534e9ada432661ccda28561f1.mesh<*>res://.godot/imported/sand dune test.obj-aa77c93534e9ada432661ccda28561f1.mesh::
+shoebenchtexture.png::CompressedTexture2D/CompressedTexture2D::7847108386467973330::1774104215::1774104379::1::::<><><>0<>0<>6f6d353a658cb80954ab381e49ed75e2<>res://.godot/imported/shoebenchtexture.png-923a160f5b7c62034f4a77b08122e6bc.s3tc.ctex::
+soretro.obj::Mesh/Mesh::3920237349304521559::1774104215::1774104382::1::::<><><>0<>0<>4ee634da622c8f6a8097ab0325a57620<>res://.godot/imported/soretro.obj-ae82b561d2576e225682dda1afdb7c96.mesh<*>res://.godot/imported/soretro.obj-ae82b561d2576e225682dda1afdb7c96.mesh::
+soretrotexture.png::CompressedTexture2D/CompressedTexture2D::8857912447946258565::1774104215::1774104379::1::::<><><>0<>0<>bfaeb3b9e8bad224af5e3649c19015ee<>res://.godot/imported/soretrotexture.png-a3cfe280b50804597a4eec92eeec6399.s3tc.ctex::
+::res://assets/Models/lamp/::1774104355
+Lamp base obj.obj::Mesh/Mesh::1338630177931941104::1774104215::1774104382::1::::<><><>0<>0<>84cf9e4a9b16a8ce1a6e107e8d4c805c<>res://.godot/imported/Lamp base obj.obj-558de67a0bbc1bd36e9e08efdae72b70.mesh<*>res://.godot/imported/Lamp base obj.obj-558de67a0bbc1bd36e9e08efdae72b70.mesh::
+Lamp glass obj.obj::Mesh/Mesh::4795871315013364167::1774104215::1774104382::1::::<><><>0<>0<>d9c0bfc0a047c7017023ef329f97860f<>res://.godot/imported/Lamp glass obj.obj-b5f46a30fb1e17da12e3c44ef9f21b5a.mesh<*>res://.godot/imported/Lamp glass obj.obj-b5f46a30fb1e17da12e3c44ef9f21b5a.mesh::
+Lamp metal obj.obj::Mesh/Mesh::3069217257795149908::1774104215::1774104382::1::::<><><>0<>0<>c1bd5dc3af68029be7528a543b0326c9<>res://.godot/imported/Lamp metal obj.obj-373b2ea205dc7df5e24520dcdce34e51.mesh<*>res://.godot/imported/Lamp metal obj.obj-373b2ea205dc7df5e24520dcdce34e51.mesh::
+::res://assets/other/::1774104356
+balatro.gdshader::Shader::3343218696155890021::1774104215::0::1::::<><><>0<>0<><>::
+Daydream.ttf::FontFile/FontFile::6615684542843289368::1774104215::1774104377::1::::<><><>0<>0<>5c71b81b350c2e590712ef758de10502<>res://.godot/imported/Daydream.ttf-53c8866f44617f41bb62179ed6491537.fontdata::
+default percentage of wegadolls collected to wega speed multiplier curve.tres::Curve::1174466207325013688::1774104215::0::1::::<><><>0<>0<><>::
+dogicapixel.ttf::FontFile/FontFile::2527049038137380305::1774104215::1774104377::1::::<><><>0<>0<>f7590d5c37b1ddb2ad92123a5f139ea4<>res://.godot/imported/dogicapixel.ttf-f222d18135671a1e8822eb52f29237f5.fontdata::
+Inconsolata-VariableFont_wdth,wght.ttf::FontFile::7433309894068668099::1774104215::1774104377::1::::<><><>0<>0<>455a01ac4e940912147412a9abd94e16<>res://.godot/imported/Inconsolata-VariableFont_wdth,wght.ttf-7c7ce0fc8fad441027e2eb6df441bf0d.fontdata::
+Mario-Kart-DS.ttf::FontFile/FontFile::1443301158491012979::1774104215::1774104377::1::::<><><>0<>0<>2a0f176a193dde3f175a4c8cf399c9b2<>res://.godot/imported/Mario-Kart-DS.ttf-2db78d63fa82fe559178686c4d2a55ed.fontdata::
+MP16REG.ttf::FontFile/FontFile::8456498455153944518::1774104215::1774104377::1::::<><><>0<>0<>d8ae7850b2be5ecd837cfb5f995e4492<>res://.godot/imported/MP16REG.ttf-067097c0dfbd111f751adb735455fe84.fontdata::
+overheal drain curve.tres::Curve::9137311905928740268::1774104215::0::1::::<><><>0<>0<><>::
+Pixellari.ttf::FontFile/FontFile::7505027158253386278::1774104215::1774104356::1::::<><><>0<>0<>c7d7dd5ce86555244ca44869be0b8a51<>res://.godot/imported/Pixellari.ttf-e17f02290930c045cd1eedd329ef7db6.fontdata::
+PKMN-Pinball.ttf::FontFile/FontFile::7991146626418353492::1774104215::1774104356::1::::<><><>0<>0<>56b3b6d49077bc5f2b4d334885f4958c<>res://.godot/imported/PKMN-Pinball.ttf-a12584625aeb2e8c6710a583ec96ebbf.fontdata::
+points and time curve.tres::Curve::1915444815586318179::1774104215::0::1::::<><><>0<>0<><>::
+scroll.gdshader::Shader::3226928520953206108::1774104215::0::1::::<><><>0<>0<><>::
+scrolling line bg.gdshader::Shader::9174554244003011960::1774104215::0::1::::<><><>0<>0<><>::
+SMW.Monospace.ttf::FontFile/FontFile::4451982850802647045::1774104215::1774104356::1::::<><><>0<>0<>30606c053d732fa65006af6f6bca9ab8<>res://.godot/imported/SMW.Monospace.ttf-82facba2be4fd689ecbde208cc0e428d.fontdata::
+SMW.ttf::FontFile/FontFile::6036893313046559868::1774104215::1774104356::1::::<><><>0<>0<>810f43c10505ed00113f4bb5016dbdd5<>res://.godot/imported/SMW.ttf-c1d3828901a08291b00d1eac19a38666.fontdata::
+Super-Mario-Bros--3.ttf::FontFile/FontFile::6345889327820322553::1774104215::1774104356::1::::<><><>0<>0<>6f11f60d6f9aac4b1760ecd359c3981a<>res://.godot/imported/Super-Mario-Bros--3.ttf-29dbc20ec616425f5f30f427d3c50dcc.fontdata::
+SuperMario256.ttf::FontFile/FontFile::6488624607315983315::1774104215::1774104356::1::::<><><>0<>0<>f07c63cd3d4e2d37876202ddc21bc0c1<>res://.godot/imported/SuperMario256.ttf-64c0c51caba16a4484a260e46e7cb8df.fontdata::
+texturescroll.gdshader::Shader::5270220805200180343::1774104215::0::1::::<><><>0<>0<><>::
+tips.txt::TextFile::-1::1774104215::0::1::::<><><>0<>0<><>::
+tutorial_black_texture.tres::StandardMaterial3D::1123837234146533157::1774104215::0::1::::<><><>0<>0<><>::
+vcr_osd_mono.tres::Theme::3247692464961855694::1774104215::0::1::::<><><>0<>0<><>::uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
+VCR_OSD_MONO_1.001.ttf::FontFile/FontFile::7160525912665439824::1774104215::1774104356::1::::<><><>0<>0<>efaf89d337ab89b9f00e1956a2ef14da<>res://.godot/imported/VCR_OSD_MONO_1.001.ttf-905c1285cda89614f92068ac4b12e303.fontdata::
+wcti points and time curve.tres::Curve::2264767560924897810::1774104215::0::1::::<><><>0<>0<><>::
+::res://assets/SFX/::1774104358
+BreakBlock.wav::AudioStreamWAV::6948650809754286304::1774104215::1774104358::1::::<><><>0<>0<>9732caa58fbf437bfc0bff5ab4541ea2<>res://.godot/imported/BreakBlock.wav-60fe6ba25d2bc1ca1b986a283f51b5bf.sample::
+count.wav::AudioStreamWAV::193799558539318825::1774104215::1774104358::1::::<><><>0<>0<>2eac46524e080bf92a7179ff6117b22c<>res://.godot/imported/count.wav-7d27ac6b4d84d1f9d8cb8da3ae83644b.sample::
+Counter Strike Punch Sound Effect.mp3::AudioStreamMP3/AudioStreamMP3::6952507454447337359::1774104215::1774104356::1::::<><><>0<>0<>222c50797595028ac8f7816d3e46e761<>res://.godot/imported/Counter Strike Punch Sound Effect.mp3-97a86599da340696254adf39a59e882c.mp3str::
+deltarune-explosion.mp3::AudioStreamMP3/AudioStreamMP3::2488080954746723198::1774104215::1774104356::1::::<><><>0<>0<>54d752cdfe80af99b96a23fb2087ef6a<>res://.godot/imported/deltarune-explosion.mp3-51149e451533ccf04786703b2b4eb508.mp3str::
 ding-sound-effect_2.mp3::AudioStreamMP3/AudioStreamMP3::8493367675932837558::1740080165::1747606629::1::::<><><>0<>0<>daf947bd0a247dec6e5415286fb85b74<>res://.godot/imported/ding-sound-effect_2.mp3-736bf1d3ca05f106af10181cb14d790f.mp3str::
-fall.wav::AudioStreamWAV::2029251946016296341::1774103295::1774103320::1::::<><><>0<>0<>7004fc010a1a9dd91b726f4b88e6c8b3<>res://.godot/imported/fall.wav-017d4aae947a404eca6fbb9cae1571c8.sample::
+fall.wav::AudioStreamWAV::2029251946016296341::1774104215::1774104358::1::::<><><>0<>0<>7004fc010a1a9dd91b726f4b88e6c8b3<>res://.godot/imported/fall.wav-017d4aae947a404eca6fbb9cae1571c8.sample::
 hl2 stalker scream.mp3::AudioStreamMP3/AudioStreamMP3::7373014147468029977::1739102790::1747606629::1::::<><><>0<>0<>12644f4110293b9069ed211cc6f54bfa<>res://.godot/imported/hl2 stalker scream.mp3-b9e098a172d3fbd3c8443e0a09ad0111.mp3str::
-i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg::AudioStreamOggVorbis::4168497856396843286::1774103295::1774103318::1::::<><><>0<>0<>180792f08b0096cff871549d2de542f3<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg-4c8b65d3acd6dc4c16e86b370063b2f1.oggvorbisstr::
-i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg::AudioStreamOggVorbis::7796727975795357692::1774103295::1774103318::1::::<><><>0<>0<>3d19691197da1f144a3569c2e8087e41<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-56859f8ae6e94b50fa5f369512ee7883.oggvorbisstr::
-i will save you.wav::AudioStreamWAV/AudioStreamWAV::8282773382530937425::1774103295::1774103320::1::::<><><>0<>0<>a1752681f7be2b2ac4ddd2a9c6cd7883<>res://.godot/imported/i will save you.wav-86c32455f083a0f0cc21bdda23baf35c.sample::
-maltscream.wav::AudioStreamWAV/AudioStreamWAV::5935654592333127010::1774103295::1774103320::1::::<><><>0<>0<>0fe4066203d94283b174d466e23055ac<>res://.godot/imported/maltscream.wav-effa353a0c4e2f68de196c1d16b937a2.sample::
-mario-fireball.mp3::AudioStreamMP3/AudioStreamMP3::1104857936415306408::1774103295::1774103318::1::::<><><>0<>0<>0c7dd4d8bd6059eb353b8bbc569c9b4d<>res://.godot/imported/mario-fireball.mp3-2fd61903c9fd6a5ad3bb5f62a21242fa.mp3str::
-ouroboros glitch sound.mp3::AudioStreamMP3::6054232048563050778::1774103295::1774103318::1::::<><><>0<>0<>186de6823980d609764c4de3b204fc4e<>res://.godot/imported/ouroboros glitch sound.mp3-7abc306cf1c08443dd159cdaa83d5612.mp3str::
-rory being an asshole.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::1812829291716937118::1774103295::1774103318::1::::<><><>0<>0<>79c6f03ae08cc82addf898c859355397<>res://.godot/imported/rory being an asshole.ogg-a55c301bab69500b76c739f285490bfa.oggvorbisstr::
-shoebench.mp3::AudioStreamMP3/AudioStreamMP3::3402515352000978255::1774103295::1774103318::1::::<><><>0<>0<>c58efab73ef623bd0a31786e4d8dfc31<>res://.godot/imported/shoebench.mp3-7ed0315a97a7a1dfe02324987169f944.mp3str::
-strike!.mp3::AudioStreamMP3/AudioStreamMP3::7492159772839308907::1774103295::1774103318::1::::<><><>0<>0<>6fbd759d59833a96a94ef3d53e82668e<>res://.godot/imported/strike!.mp3-e321ecfbb871d2183b46c141e5decc53.mp3str::
-this lit my fire.mp3::AudioStreamMP3/AudioStreamMP3::1661267358265944538::1774103295::1774103318::1::::<><><>0<>0<>d9ac3e0e81813c332eb37d8f1f0ccbdb<>res://.godot/imported/this lit my fire.mp3-0e33415ee4ac5d128ff93287bf749783.mp3str::
+i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg::AudioStreamOggVorbis::4168497856396843286::1774104215::1774104356::1::::<><><>0<>0<>180792f08b0096cff871549d2de542f3<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg-4c8b65d3acd6dc4c16e86b370063b2f1.oggvorbisstr::
+i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg::AudioStreamOggVorbis::7796727975795357692::1774104215::1774104356::1::::<><><>0<>0<>3d19691197da1f144a3569c2e8087e41<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-56859f8ae6e94b50fa5f369512ee7883.oggvorbisstr::
+i will save you.wav::AudioStreamWAV/AudioStreamWAV::8282773382530937425::1774104215::1774104358::1::::<><><>0<>0<>a1752681f7be2b2ac4ddd2a9c6cd7883<>res://.godot/imported/i will save you.wav-86c32455f083a0f0cc21bdda23baf35c.sample::
+maltscream.wav::AudioStreamWAV/AudioStreamWAV::5935654592333127010::1774104215::1774104358::1::::<><><>0<>0<>0fe4066203d94283b174d466e23055ac<>res://.godot/imported/maltscream.wav-effa353a0c4e2f68de196c1d16b937a2.sample::
+mario-fireball.mp3::AudioStreamMP3/AudioStreamMP3::1104857936415306408::1774104215::1774104356::1::::<><><>0<>0<>0c7dd4d8bd6059eb353b8bbc569c9b4d<>res://.godot/imported/mario-fireball.mp3-2fd61903c9fd6a5ad3bb5f62a21242fa.mp3str::
+ouroboros glitch sound.mp3::AudioStreamMP3::6054232048563050778::1774104215::1774104356::1::::<><><>0<>0<>186de6823980d609764c4de3b204fc4e<>res://.godot/imported/ouroboros glitch sound.mp3-7abc306cf1c08443dd159cdaa83d5612.mp3str::
+rory being an asshole.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::1812829291716937118::1774104215::1774104356::1::::<><><>0<>0<>79c6f03ae08cc82addf898c859355397<>res://.godot/imported/rory being an asshole.ogg-a55c301bab69500b76c739f285490bfa.oggvorbisstr::
+shoebench.mp3::AudioStreamMP3/AudioStreamMP3::3402515352000978255::1774104215::1774104356::1::::<><><>0<>0<>c58efab73ef623bd0a31786e4d8dfc31<>res://.godot/imported/shoebench.mp3-7ed0315a97a7a1dfe02324987169f944.mp3str::
+strike!.mp3::AudioStreamMP3/AudioStreamMP3::7492159772839308907::1774104215::1774104356::1::::<><><>0<>0<>6fbd759d59833a96a94ef3d53e82668e<>res://.godot/imported/strike!.mp3-e321ecfbb871d2183b46c141e5decc53.mp3str::
+this lit my fire.mp3::AudioStreamMP3/AudioStreamMP3::1661267358265944538::1774104215::1774104356::1::::<><><>0<>0<>d9ac3e0e81813c332eb37d8f1f0ccbdb<>res://.godot/imported/this lit my fire.mp3-0e33415ee4ac5d128ff93287bf749783.mp3str::
 urio.mp3::AudioStreamMP3/AudioStreamMP3::3915800145385139053::1739102790::1747606629::1::::<><><>0<>0<>e18741163fbabc4c722f8d0a1bdbf825<>res://.godot/imported/urio.mp3-3a056f491ed7674162798292b354711a.mp3str::
-wcti win credits transition end.mp3::AudioStreamMP3::6604360999637598531::1774103295::1774103318::1::::<><><>0<>0<>24660f282a42874a696ccc1be040a670<>res://.godot/imported/wcti win credits transition end.mp3-4241360fca3cf2891f58b33c21f40b0d.mp3str::
-wcti win credits transition main.mp3::AudioStreamMP3::5572004194519594865::1774103295::1774103318::1::::<><><>0<>0<>5c3aa73ab42c43e0cef1dfe98d91f284<>res://.godot/imported/wcti win credits transition main.mp3-2c4e9f4868a4276581fa5013a63597c6.mp3str::
-wcti win DRAMATIC SOUND!!!!!!!!!.mp3::AudioStreamMP3::7411621593827505320::1774103295::1774103318::1::::<><><>0<>0<>1136833cffe811d9505ef0f2fa0c94c5<>res://.godot/imported/wcti win DRAMATIC SOUND!!!!!!!!!.mp3-23ee15bfcd8d9548bec90602cd7b2044.mp3str::
-wcti win glitch 1.mp3::AudioStreamMP3::3522276724040771607::1774103295::1774103318::1::::<><><>0<>0<>f223485bf3eb665186ddc8095f1e3a4a<>res://.godot/imported/wcti win glitch 1.mp3-027791fac1448aadadbb045f9685f295.mp3str::
-wcti win text sound.mp3::AudioStreamMP3::3637106978085210573::1774103295::1774103318::1::::<><><>0<>0<>6adaddf04b610b52eca9d03f9c7e271b<>res://.godot/imported/wcti win text sound.mp3-6be6eba6e901b920aad33cc7acfe1a25.mp3str::
+wcti win credits transition end.mp3::AudioStreamMP3::6604360999637598531::1774104215::1774104356::1::::<><><>0<>0<>24660f282a42874a696ccc1be040a670<>res://.godot/imported/wcti win credits transition end.mp3-4241360fca3cf2891f58b33c21f40b0d.mp3str::
+wcti win credits transition main.mp3::AudioStreamMP3::5572004194519594865::1774104215::1774104356::1::::<><><>0<>0<>5c3aa73ab42c43e0cef1dfe98d91f284<>res://.godot/imported/wcti win credits transition main.mp3-2c4e9f4868a4276581fa5013a63597c6.mp3str::
+wcti win DRAMATIC SOUND!!!!!!!!!.mp3::AudioStreamMP3::7411621593827505320::1774104215::1774104356::1::::<><><>0<>0<>1136833cffe811d9505ef0f2fa0c94c5<>res://.godot/imported/wcti win DRAMATIC SOUND!!!!!!!!!.mp3-23ee15bfcd8d9548bec90602cd7b2044.mp3str::
+wcti win glitch 1.mp3::AudioStreamMP3::3522276724040771607::1774104215::1774104356::1::::<><><>0<>0<>f223485bf3eb665186ddc8095f1e3a4a<>res://.godot/imported/wcti win glitch 1.mp3-027791fac1448aadadbb045f9685f295.mp3str::
+wcti win text sound.mp3::AudioStreamMP3::3637106978085210573::1774104215::1774104356::1::::<><><>0<>0<>6adaddf04b610b52eca9d03f9c7e271b<>res://.godot/imported/wcti win text sound.mp3-6be6eba6e901b920aad33cc7acfe1a25.mp3str::
 wood tap.mp3::AudioStreamMP3/AudioStreamMP3::977154771026694563::1740080165::1747606629::1::::<><><>0<>0<>046fe05499388739dc0d3b97492d1795<>res://.godot/imported/wood tap.mp3-b13bd3c340a9608bcc3cdd8237822acf.mp3str::
 you're winner.mp3::AudioStreamMP3/AudioStreamMP3::4559864138229508788::1739102790::1747606629::1::::<><><>0<>0<>2b94f30e9080d0e0d5372a787157c11f<>res://.godot/imported/you're winner.mp3-3825f7ccf92bca1313da51e05ec7c6aa.mp3str::
-::res://assets/SFX/STYLE/::1774103295
-rank_a.mp3::AudioStreamMP3/AudioStreamMP3::5502104034371253883::1774103295::1774103318::1::::<><><>0<>0<>e6733b43d7b83a3e51b67e736a088471<>res://.godot/imported/rank_a.mp3-dc7607ac7557a427a5cf33a75ed36dd7.mp3str::
-rank_b.mp3::AudioStreamMP3/AudioStreamMP3::2731233350920507476::1774103295::1774103318::1::::<><><>0<>0<>bf2e3c64666b278c592b872e6c8b786a<>res://.godot/imported/rank_b.mp3-5c225ad6a4101d5141d25e47e93ef5da.mp3str::
-rank_c.mp3::AudioStreamMP3/AudioStreamMP3::3127662866333216591::1774103295::1774103318::1::::<><><>0<>0<>535312b856a87a03eed144ee3b667c6d<>res://.godot/imported/rank_c.mp3-5a6eeb82aaee1a663198a22998306bc1.mp3str::
-rank_d.mp3::AudioStreamMP3/AudioStreamMP3::2756681254453272744::1774103295::1774103318::1::::<><><>0<>0<>938f0bab85293b3da60cf2d38aa581c5<>res://.godot/imported/rank_d.mp3-d6cebb8d0d4852fb9e58044e2818db9f.mp3str::
-rank_p.mp3::AudioStreamMP3/AudioStreamMP3::6352071487233018808::1774103295::1774103318::1::::<><><>0<>0<>e098fa51cb01153787fa6f3ede3c595f<>res://.godot/imported/rank_p.mp3-658c73a41ee4d089011e946be119a6da.mp3str::
-rank_s.mp3::AudioStreamMP3/AudioStreamMP3::6474032315368261973::1774103295::1774103318::1::::<><><>0<>0<>4dd26919fa24556ee049418fb2e0b04f<>res://.godot/imported/rank_s.mp3-04f1b16ef8b22adfa5a74315446dfb42.mp3str::
-::res://assets/textures/::1774103315
-256x256 black pixels.png::CompressedTexture2D/CompressedTexture2D::8501962350739288297::1774103296::1774103320::1::::<><><>0<>0<>3173fc8f73c396261ac7f2f8a49c1f6e<>res://.godot/imported/256x256 black pixels.png-e9940bc7370ab24d428c1fc314f41bee.s3tc.ctex::
-crate texture.png::CompressedTexture2D::6477893012751904599::1774103296::1774103320::1::::<><><>0<>0<>675055c211636f58b02d078cd84f32bd<>res://.godot/imported/crate texture.png-0ce8c59264b2711aa0662fe526e8c48a.s3tc.ctex::
-fire lowquality skybox version.png::CompressedTexture2D/CompressedTexture2D::3279541835660079980::1774103296::1774103318::1::::<><><>0<>0<>6d55eb67ab09a981ab3d3ae5c4a9932d<>res://.godot/imported/fire lowquality skybox version.png-ac0a6e2925707e5ba8b1270ea5233e43.s3tc.ctex::
-fire lowquality.jpeg::CompressedTexture2D/CompressedTexture2D::3843987153368683362::1774103296::1774103318::1::::<><><>0<>0<>f1654f065e24bc3c75bed2d753ffb6c1<>res://.godot/imported/fire lowquality.jpeg-a18f75f3a6d18103b77d3468f4137570.ctex::
-FIRE.jpg::CompressedTexture2D/CompressedTexture2D::2552745792929602416::1774103296::1774103318::1::::<><><>0<>0<>02f07c1cf1c722cc788ca0bbaf674cc0<>res://.godot/imported/FIRE.jpg-13d9cf647dda6c3a0c833fd56a5d830f.s3tc.ctex::
-fireball.png::CompressedTexture2D/CompressedTexture2D::8214533065761287164::1774103296::1774103318::1::::<><><>0<>0<>b1aca6279d424f14dd374f2ea187ebc8<>res://.godot/imported/fireball.png-88e87414182d75c497f43ea4c2b9944c.ctex::
-Friedmaltigi1.png::CompressedTexture2D::5952117900393560287::1774103296::1774103318::1::::<><><>0<>0<>681d5b49051307a5cbb4382fc8e5a93f<>res://.godot/imported/Friedmaltigi1.png-067972c26c48ec53c9f2cf33bb789eea.s3tc.ctex::
-godot logo white.png::CompressedTexture2D::2980685866489402410::1774103296::1774103319::1::::<><><>0<>0<>5721d40f70b530f92ce094ce0c92cd74<>res://.godot/imported/godot logo white.png-52b8ef1c70a9e9f8342f436d3275f2d1.s3tc.ctex::
-godot logo.png::CompressedTexture2D::512512210414029119::1774103296::1774103319::1::::<><><>0<>0<>31a7c2ca29df18d169ae13dbed53eeb5<>res://.godot/imported/godot logo.png-263e5a04e22917382401c7a07c380c9f.s3tc.ctex::
-golden sigma.png::CompressedTexture2D::7943351266552405042::1774103296::1774103318::1::::<><><>0<>0<>5360ca137db56b65d8f93e2248c25680<>res://.godot/imported/golden sigma.png-41c7325a141d0ca2ddf222966b387fc2.ctex::
-green lawson.png::CompressedTexture2D::6909669778176956353::1774103296::1774103318::1::::<><><>0<>0<>53ee6e6eec58b90e574e3bd9672206f7<>res://.godot/imported/green lawson.png-bac929d4a2fe3492053b0485662654c4.ctex::
-i will save you from rorys.png::CompressedTexture2D/CompressedTexture2D::5729344804771132083::1774103296::1774103319::1::::<><><>0<>0<>ced3194901b7acf63e9ebbc674ea337e<>res://.godot/imported/i will save you from rorys.png-da2bca9c6748d297b57268906ec31a05.ctex::
-i will save you.png::CompressedTexture2D/CompressedTexture2D::1510331689527168305::1774103296::1774103319::1::::<><><>0<>0<>1b88fb5e45a167891f34220158b82ee0<>res://.godot/imported/i will save you.png-dfbee754a1b07f340d62fa89548ac83c.ctex::
-maltigi enemy.png::CompressedTexture2D::4371202918488767807::1774103296::1774103318::1::::<><><>0<>0<>2a6ce57bfcd936d399f6cfc2491f914b<>res://.godot/imported/maltigi enemy.png-24f2a92ce36dbc3a1c904cfd3bfadf8f.s3tc.ctex::
-maltigi scary small.png::CompressedTexture2D::5476166370416133800::1774103296::1774103318::1::::<><><>0<>0<>56d5010219103fb008a0cab75b2b3c27<>res://.godot/imported/maltigi scary small.png-09ce3a046ce5948ea0899ac6d6525331.ctex::
-maltigi transparent.webp::CompressedTexture2D::949296579902037181::1774103297::1774103319::1::::<><><>0<>0<>bf1511af2e19a6f153cec3e19c526db1<>res://.godot/imported/maltigi transparent.webp-937a1903380747a6c632f6f305975021.ctex::
-maltigi.jpg::CompressedTexture2D/CompressedTexture2D::1938301278932766979::1739102790::1774103319::1::::<><><>0<>0<>75d0590a3e0ce931b08a55948a27b142<>res://.godot/imported/maltigi.jpg-b923e9d8397a693d01fd22640640d356.s3tc.ctex::
-malttweak.png::CompressedTexture2D::451336967155164305::1774103297::1774103319::1::::<><><>0<>0<>3b3503d3b0e0a1558007da2d8d1f70ea<>res://.godot/imported/malttweak.png-c1d4e3aae987e662dcb205a85fa57bed.ctex::
-mario 16x16.png::CompressedTexture2D/CompressedTexture2D::4632203231354201895::1774103297::1774103319::1::::<><><>0<>0<>ebf68169b2fb334c4c916281bbc3d721<>res://.godot/imported/mario 16x16.png-b992ba3cd27984bc70258aaf620191a6.ctex::
-MusicClipmask.png::CompressedTexture2D/CompressedTexture2D::998612273990650464::1774103296::1774103318::1::::<><><>0<>0<>358c53180f6ea90efd4e221804730e27<>res://.godot/imported/MusicClipmask.png-905f27c9849f7975e5d3bff12d2af1bc.ctex::
-one white pixel.png::CompressedTexture2D/CompressedTexture2D::5362865998573988970::1774103297::1774103318::1::::<><><>0<>0<>de705886b8494245860e718889d783bf<>res://.godot/imported/one white pixel.png-3d4217ee9dff90db3b32feccff78bab8.s3tc.ctex::
-ouch spritesheet.png::CompressedTexture2D/CompressedTexture2D::7261248883313863867::1774103297::1774103318::1::::<><><>0<>0<>1a8809c19c3de83b93a9cd2d84599d6b<>res://.godot/imported/ouch spritesheet.png-ad9a113dfd653d9ae510020685e3ccff.ctex::
-punchable.png::CompressedTexture2D::4772187435288136809::1774103297::1774103318::1::::<><><>0<>0<>3f8f1f50c2fbb9ce2fbd372f55b67b27<>res://.godot/imported/punchable.png-0eb38061fa8d6d2015b32c31b33ae1b1.s3tc.ctex::
-red arrow.png::CompressedTexture2D/CompressedTexture2D::4227462745947614752::1774103297::1774103318::1::::<><><>0<>0<>7f9bc17d1a02f5593a9160db493a9e83<>res://.godot/imported/red arrow.png-532255904d7cd11a8eeaaf74e2105fcd.ctex::
-Rory.png::CompressedTexture2D/CompressedTexture2D::5114104364758575779::1774103296::1774103318::1::::<><><>0<>0<>e255770a04531c2295022d75046e2dc9<>res://.godot/imported/Rory.png-2915eaf2601edde3544f0c319a99d6af.s3tc.ctex::
-rorys accurate.png::CompressedTexture2D/CompressedTexture2D::6735127129975182671::1774103297::1774103318::1::::<><><>0<>0<>1cfdfec335571c81c9192517ec723cd5<>res://.godot/imported/rorys accurate.png-c9087190b0fa4f4b614a8e53ed41dec7.s3tc.ctex::
-shoe bench murder mode.png::CompressedTexture2D/CompressedTexture2D::3780495018923305510::1774103297::1774103319::1::::<><><>0<>0<>a6d117d0ccf4a4566573f410fa53f8c1<>res://.godot/imported/shoe bench murder mode.png-b3122b15373111469fbad7e72f657a89.s3tc.ctex::
-shoe bench.png::CompressedTexture2D/CompressedTexture2D::4235601564057194828::1774103297::1774103319::1::::<><><>0<>0<>2e1d0a7d3c0a9ac8431934b38deb16af<>res://.godot/imported/shoe bench.png-e83d100c3dcb85f7a7535a0d35dfa9b9.s3tc.ctex::
-shoe_bench.png::CompressedTexture2D::3414474368800384829::1768651037::1774103319::1::::<><><>0<>0<>a9babb97a3bd72f15399a6851d0ab6e2<>res://.godot/imported/shoe_bench.png-990f4e00df2412f3639ad49955246291.s3tc.ctex::
-so retro (crunched).png::CompressedTexture2D/CompressedTexture2D::1446608356333620121::1774103297::1774103319::1::::<><><>0<>0<>84a740b12de62733d4da2b0e912066b4<>res://.godot/imported/so retro (crunched).png-3eb154b7c0d01009dd15b61559121786.s3tc.ctex::
-so retro! so retro! so retro! so retro! so retro!.png::CompressedTexture2D/CompressedTexture2D::7141122744683068737::1774103297::1774103319::1::::<><><>0<>0<>57e61f8c7db5ceaffc7242b40e279c6d<>res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.ctex::
-so retroer! so retroer! so retroer! so retroer!.png::CompressedTexture2D/CompressedTexture2D::4519844088667934655::1774103297::1774103319::1::::<><><>0<>0<>f2c759b08650e025096d691cb91f58fa<>res://.godot/imported/so retroer! so retroer! so retroer! so retroer!.png-2290966924d353d5e47023aec62bc95a.ctex::
-SORETRO-1.png.32x32.png::CompressedTexture2D/CompressedTexture2D::2051477341454784960::1774103296::1774103319::1::::<><><>0<>0<>f4ac05b3c18afecdf04ce873f1e7d4ad<>res://.godot/imported/SORETRO-1.png.32x32.png-25b54d89e91efbd7fd6d8f9faaf5fe83.ctex::
-SORETRO-1.png.png::CompressedTexture2D/CompressedTexture2D::1909281577612996051::1739102790::1774103319::1::::<><><>0<>0<>73b9e4617bec690e959d637aa791e497<>res://.godot/imported/SORETRO-1.png.png-c80eaf8ff4eb4b722095cc77e21d95e4.ctex::
-spritesheetboom.png::CompressedTexture2D/CompressedTexture2D::9025082032646518970::1774103297::1774103319::1::::<><><>0<>0<>6afb24a99dee8a74cd7da2320ae99ca3<>res://.godot/imported/spritesheetboom.png-d91ea1d0e4c1b1abd920cbbec41d8005.s3tc.ctex::
-squaresloop.png::CompressedTexture2D/CompressedTexture2D::6012141346682013788::1774103297::1774103319::1::::<><><>0<>0<>3eee1fc8055987bb1f65bb4c7354a7e7<>res://.godot/imported/squaresloop.png-1f8207bb35b019e3cab05b89c9d99810.ctex::
-super adventures of john.jpg::CompressedTexture2D/CompressedTexture2D::339591526815829133::1774103297::1774103319::1::::<><><>0<>0<>cb96a82db1d896e10a83177e697ff84a<>res://.godot/imported/super adventures of john.jpg-d7e9ef48b8b10f3b5f5611becaf03320.ctex::
-super john dash upscaled.png::CompressedTexture2D/CompressedTexture2D::2502324772539633315::1774103297::1774103319::1::::<><><>0<>0<>08b05a27d34821cddf15598d00457cc5<>res://.godot/imported/super john dash upscaled.png-1eeff153533a04756f08f635b4b58082.s3tc.ctex::
-super john.png::CompressedTexture2D/CompressedTexture2D::7208248529876123205::1774103297::1774103319::1::::<><><>0<>0<>3c669e4366f4f5e4fcfcd5946b75e5a5<>res://.godot/imported/super john.png-4bdcc32547011eac0166d1ad4dfa0cc1.s3tc.ctex::
-super_john_bowling.png::CompressedTexture2D::5304354107875780080::1774103297::1774103319::1::::<><><>0<>0<>818e8646d982cc3cf45d92ef1edacaba<>res://.godot/imported/super_john_bowling.png-edfd26c887ccdfc81056797ce7c2d6af.ctex::
-ultra irios accurate.png::CompressedTexture2D/CompressedTexture2D::2276729090882777407::1774103297::1774103319::1::::<><><>0<>0<>ecb1a1d893fb7a45ec856af6bff555ba<>res://.godot/imported/ultra irios accurate.png-680ef3e27bf9201811b47aa780dd1c38.s3tc.ctex::
-ultra irios.png::CompressedTexture2D/CompressedTexture2D::2702341083341780367::1774103297::1774103319::1::::<><><>0<>0<>0de6af462c3edeb264c3939ca8af356c<>res://.godot/imported/ultra irios.png-9c9d3ad0dd9506ba068eeaf57bc6d08f.s3tc.ctex::
-urio.png::CompressedTexture2D/CompressedTexture2D::5153051984921413146::1739102790::1774103319::1::::<><><>0<>0<>d88e89f3afa7558d746d3ba26104c28a<>res://.godot/imported/urio.png-9b6241ab7c42e8bc9b1e3dadec0b0b95.s3tc.ctex::
-wch.png::CompressedTexture2D/CompressedTexture2D::3314274622497560799::1740080165::1774103319::1::::<><><>0<>0<>325d175459b915143cb1301af523a2a6<>res://.godot/imported/wch.png-00f79c7c7ce89430d722b059c471f417.s3tc.ctex::
-wega.png::CompressedTexture2D/CompressedTexture2D::2696350657868709057::1739102790::1774103319::1::::<><><>0<>0<>458670f3847c3db1051b3ebb9c018647<>res://.godot/imported/wega.png-8260b5f6fca527229bb11b7b6a039bb8.s3tc.ctex::
-WegaEnraged.webp::CompressedTexture2D/CompressedTexture2D::877167247439505278::1774103296::1774103319::1::::<><><>0<>0<>dc71fda7866cecb1b587f79b1cfa1eae<>res://.godot/imported/WegaEnraged.webp-26b9562fffd6c0aa6644ea094ba4a973.ctex::
-wegakill cover.png::CompressedTexture2D/CompressedTexture2D::2685520428326154893::1774103297::1774103319::1::::<><><>0<>0<>618bcaf938729528543b2ebb9b19e4b4<>res://.godot/imported/wegakill cover.png-29e6c8982dedacaaa44e946706ab7655.ctex::
-wegakill.png::CompressedTexture2D/CompressedTexture2D::6162179170566334997::1774103297::1774103319::1::::<><><>0<>0<>9e634833f188b59a8648b38e8adc9aa5<>res://.godot/imported/wegakill.png-92691f20f7bed36765147b7a3206ac90.ctex::
-you winga.png::CompressedTexture2D/CompressedTexture2D::8471274237064570921::1739102790::1774103319::1::::<><><>0<>0<>7bc93df5b3669d79570e325f2f1d4709<>res://.godot/imported/you winga.png-b985805c86822bc286ec2a4b8fa01a67.ctex::
-::res://assets/textures/achievements/::1774103315
-certified wega expert.png::CompressedTexture2D::6329427824691887516::1774103296::1774103319::1::::<><><>0<>0<>727a7adf262e0a1a087ed4c223d3e542<>res://.godot/imported/certified wega expert.png-8f658aa98641d5034ab451f090248df1.ctex::
-exploded.png::CompressedTexture2D::1092656971572824374::1774103296::1774103319::1::::<><><>0<>0<>36b1ee0ee2c3cdea03b22422c9d0bb1a<>res://.godot/imported/exploded.png-f92fdc47aa6ce99558eda50d00eb0402.ctex::
-idiot.png::CompressedTexture2D::692405980840844162::1774103296::1774103319::1::::<><><>0<>0<>a63facd07b63593f83bda8eaafab1d9e<>res://.godot/imported/idiot.png-35a877a43ba2bca9f933be5458405375.ctex::
-ouroboros.png::CompressedTexture2D::8857311301327422050::1774103296::1774103319::1::::<><><>0<>0<>bc2e6fd39a3696f4245dddf5519c2bf5<>res://.godot/imported/ouroboros.png-66450b588ae8069750f02093d3193ada.ctex::
-placeholder.png::CompressedTexture2D::2443766624984171447::1774103296::1774103315::1::::<><><>0<>0<>e019bfdfdf927b8b7b092617f4c90715<>res://.godot/imported/placeholder.png-019174ded0b73170a1c77bbc03925d44.ctex::
-shoe bench.png::CompressedTexture2D::2310504771095335522::1774103296::1774103319::1::::<><><>0<>0<>c2c9f7cd240047f3047354081fd42b4a<>res://.godot/imported/shoe bench.png-7d146bb5e3ba5d0297421f211f40feab.ctex::
-so close yet so far.png::CompressedTexture2D::6712544985897373279::1774103296::1774103319::1::::<><><>0<>0<>17ab91f4a72140b08a75f319015c3c64<>res://.godot/imported/so close yet so far.png-190962ff99827dc599804336c35bc799.ctex::
-speedrunner.png::CompressedTexture2D::8069533975499376290::1774103296::1774103319::1::::<><><>0<>0<>4d3628daaf180304c56da469afe159e3<>res://.godot/imported/speedrunner.png-fded0b1d0ccaddf1c32ec3fa9dc689de.ctex::
-style farmer.png::CompressedTexture2D::3438173383266954944::1774103296::1774103319::1::::<><><>0<>0<>cd815ce49166b4a8c6ea8db5848e7b51<>res://.godot/imported/style farmer.png-410c6dbab3af68e6860c078ca2da5b06.ctex::
-super john bowling.png::CompressedTexture2D::8812026623656105057::1774103296::1774103319::1::::<><><>0<>0<>dd5e05eea1f5d951f96073219169b308<>res://.godot/imported/super john bowling.png-334e7cef59a32db851daf2871c4b3428.ctex::
-task failed succesfully.png::CompressedTexture2D::2286087877715293534::1774103296::1774103319::1::::<><><>0<>0<>b64146919f549d134d758b786b20ae8a<>res://.godot/imported/task failed succesfully.png-b8f8a282d526782ef8f393ab7acb94a3.ctex::
-thnak you.png::CompressedTexture2D::129277979532045678::1774103296::1774103319::1::::<><><>0<>0<>e212a86dbf9b3c52d2dca1cf77d57429<>res://.godot/imported/thnak you.png-ecfd3b6472070799455ce365b0a21db5.s3tc.ctex::
-wegakill.png::CompressedTexture2D::9044951098208323423::1774103296::1774103320::1::::<><><>0<>0<>31fca75ccce682c55b9fd6010c4a04d1<>res://.godot/imported/wegakill.png-1f1b1b30b7319888a7d29360cf9de2e5.ctex::
-wexecution.png::CompressedTexture2D::8464488866432825862::1774103296::1774103320::1::::<><><>0<>0<>c26b8af288c9dbe9cef38177b6d105f4<>res://.godot/imported/wexecution.png-41997065c82673a94d20dbce8709d80c.ctex::
-winga.png::CompressedTexture2D::743059059424154319::1774103296::1774103320::1::::<><><>0<>0<>5cb8552e3159317d59d071710b6eccf4<>res://.godot/imported/winga.png-ac40be37c72393738d1f3f75c9713095.ctex::
-::res://assets/textures/recolorpedia/::1774103297
-box2.png::CompressedTexture2D/CompressedTexture2D::5558956876673165620::1774103297::1774103320::1::::<><><>0<>0<>8dd7d10eba7084d9df7a8e75dc8124e7<>res://.godot/imported/box2.png-3a389bc7780610c1813b268e076c5277.ctex::
-box3.png::CompressedTexture2D/CompressedTexture2D::8659244624829051186::1774103297::1774103320::1::::<><><>0<>0<>6280bec1ad3b89baf6525f2026e0a5dc<>res://.godot/imported/box3.png-92266f0172b6b5112266f98947905c5d.ctex::
-box3hover.png::CompressedTexture2D/CompressedTexture2D::6375047795923088669::1774103297::1774103320::1::::<><><>0<>0<>18de1d126d6e7e242817ec88f7f61ab8<>res://.godot/imported/box3hover.png-543f0ae83cb64df16b4ab778574d8a8a.ctex::
-box4.png::CompressedTexture2D/CompressedTexture2D::3281250726668226475::1774103297::1774103320::1::::<><><>0<>0<>13c74d2387288063ce23264cf0f5b675<>res://.godot/imported/box4.png-9d22ea41f2f7d3c870d4069a9086bfa8.ctex::
-box5.png::CompressedTexture2D/CompressedTexture2D::8273538303301304601::1774103297::1774103320::1::::<><><>0<>0<>f981d04c4bfc3c82c568a1514767575b<>res://.godot/imported/box5.png-ec05fea382aead3ff1a9192bbc20e871.ctex::
-box7.png::CompressedTexture2D/CompressedTexture2D::979060142600501334::1774103297::1774103320::1::::<><><>0<>0<>2988460cbdbf090dc3dce215f29781d2<>res://.godot/imported/box7.png-5eb9c0ec56815bd011aaf2870adacc2b.ctex::
-box8.5.png::CompressedTexture2D::8807108668642815051::1774103297::1774103320::1::::<><><>0<>0<>ffc56794ea6171f52d7097c415c42931<>res://.godot/imported/box8.5.png-46a9607944a117449a3633b2defe9f80.ctex::
-box8.png::CompressedTexture2D/CompressedTexture2D::1803560027210409234::1774103297::1774103320::1::::<><><>0<>0<>4d2197e3088f86ea2ef6bd80873512be<>res://.godot/imported/box8.png-a3e0db78c2a10b9fcb9b462177f44d7b.ctex::
-box9.png::CompressedTexture2D/CompressedTexture2D::8751920085454601823::1774103297::1774103320::1::::<><><>0<>0<>0301df018239ce77d396d2d08fe9972e<>res://.godot/imported/box9.png-c47d9cdbaa493f16d48d3c83a1fc51a2.ctex::
-box10.png::CompressedTexture2D/CompressedTexture2D::1088051319837200025::1774103297::1774103320::1::::<><><>0<>0<>ab22ab5b11ae76b4c7b32ea575c24a6f<>res://.godot/imported/box10.png-daebf8e33c1145d17504685770fd25c4.ctex::
-box11.png::CompressedTexture2D/CompressedTexture2D::4421812575391105413::1774103297::1774103320::1::::<><><>0<>0<>9180e7e8ff2cbdf5a0c1525b67f286fe<>res://.godot/imported/box11.png-c2ae188c6c5a41af6bcfc2d5a20e5b74.ctex::
-::res://assets/textures/thumbnails/::1774103297
-classic.png::CompressedTexture2D/CompressedTexture2D::554876989933446035::1774103297::1774103320::1::::<><><>0<>0<>957614e19753d537480ebc7d31852ecd<>res://.godot/imported/classic.png-67e68162fc88bc20e24e84b883e2ec32.ctex::
-wcti2.png::CompressedTexture2D::6389288922701210957::1774103297::1774103320::1::::<><><>0<>0<>bcc4abfb21e401a26182e8de0aed0273<>res://.godot/imported/wcti2.png-c0d1cf1a2f73ebf0f02ced164b6d73bb.ctex::
-wcti.png::CompressedTexture2D/CompressedTexture2D::1763121757857033053::1774103297::1774103320::1::::<><><>0<>0<>6eb6a50246588ea8eedfc8900f2f47fa<>res://.godot/imported/wcti.png-6b409c347d1f1cad311beaf1ca3b1cfc.ctex::
-::res://scenes/::1774103299
+::res://assets/SFX/STYLE/::1774104356
+rank_a.mp3::AudioStreamMP3/AudioStreamMP3::5502104034371253883::1774104215::1774104356::1::::<><><>0<>0<>e6733b43d7b83a3e51b67e736a088471<>res://.godot/imported/rank_a.mp3-dc7607ac7557a427a5cf33a75ed36dd7.mp3str::
+rank_b.mp3::AudioStreamMP3/AudioStreamMP3::2731233350920507476::1774104215::1774104356::1::::<><><>0<>0<>bf2e3c64666b278c592b872e6c8b786a<>res://.godot/imported/rank_b.mp3-5c225ad6a4101d5141d25e47e93ef5da.mp3str::
+rank_c.mp3::AudioStreamMP3/AudioStreamMP3::3127662866333216591::1774104215::1774104356::1::::<><><>0<>0<>535312b856a87a03eed144ee3b667c6d<>res://.godot/imported/rank_c.mp3-5a6eeb82aaee1a663198a22998306bc1.mp3str::
+rank_d.mp3::AudioStreamMP3/AudioStreamMP3::2756681254453272744::1774104215::1774104356::1::::<><><>0<>0<>938f0bab85293b3da60cf2d38aa581c5<>res://.godot/imported/rank_d.mp3-d6cebb8d0d4852fb9e58044e2818db9f.mp3str::
+rank_p.mp3::AudioStreamMP3/AudioStreamMP3::6352071487233018808::1774104215::1774104356::1::::<><><>0<>0<>e098fa51cb01153787fa6f3ede3c595f<>res://.godot/imported/rank_p.mp3-658c73a41ee4d089011e946be119a6da.mp3str::
+rank_s.mp3::AudioStreamMP3/AudioStreamMP3::6474032315368261973::1774104215::1774104356::1::::<><><>0<>0<>4dd26919fa24556ee049418fb2e0b04f<>res://.godot/imported/rank_s.mp3-04f1b16ef8b22adfa5a74315446dfb42.mp3str::
+::res://assets/textures/::1774104357
+256x256 black pixels.png::CompressedTexture2D/CompressedTexture2D::8501962350739288297::1774104215::1774104357::1::::<><><>0<>0<>3173fc8f73c396261ac7f2f8a49c1f6e<>res://.godot/imported/256x256 black pixels.png-e9940bc7370ab24d428c1fc314f41bee.s3tc.ctex::
+crate texture.png::CompressedTexture2D::6477893012751904599::1774104215::1774104357::1::::<><><>0<>0<>675055c211636f58b02d078cd84f32bd<>res://.godot/imported/crate texture.png-0ce8c59264b2711aa0662fe526e8c48a.s3tc.ctex::
+fire lowquality skybox version.png::CompressedTexture2D/CompressedTexture2D::3279541835660079980::1774104215::1774104357::1::::<><><>0<>0<>6d55eb67ab09a981ab3d3ae5c4a9932d<>res://.godot/imported/fire lowquality skybox version.png-ac0a6e2925707e5ba8b1270ea5233e43.s3tc.ctex::
+fire lowquality.jpeg::CompressedTexture2D/CompressedTexture2D::3843987153368683362::1774104215::1774104357::1::::<><><>0<>0<>f1654f065e24bc3c75bed2d753ffb6c1<>res://.godot/imported/fire lowquality.jpeg-a18f75f3a6d18103b77d3468f4137570.ctex::
+FIRE.jpg::CompressedTexture2D/CompressedTexture2D::2552745792929602416::1774104215::1774104357::1::::<><><>0<>0<>02f07c1cf1c722cc788ca0bbaf674cc0<>res://.godot/imported/FIRE.jpg-13d9cf647dda6c3a0c833fd56a5d830f.s3tc.ctex::
+fireball.png::CompressedTexture2D/CompressedTexture2D::8214533065761287164::1774104215::1774104357::1::::<><><>0<>0<>b1aca6279d424f14dd374f2ea187ebc8<>res://.godot/imported/fireball.png-88e87414182d75c497f43ea4c2b9944c.ctex::
+Friedmaltigi1.png::CompressedTexture2D::5952117900393560287::1774104215::1774104357::1::::<><><>0<>0<>681d5b49051307a5cbb4382fc8e5a93f<>res://.godot/imported/Friedmaltigi1.png-067972c26c48ec53c9f2cf33bb789eea.s3tc.ctex::
+godot logo white.png::CompressedTexture2D::2980685866489402410::1774104215::1774104357::1::::<><><>0<>0<>5721d40f70b530f92ce094ce0c92cd74<>res://.godot/imported/godot logo white.png-52b8ef1c70a9e9f8342f436d3275f2d1.s3tc.ctex::
+godot logo.png::CompressedTexture2D::512512210414029119::1774104215::1774104357::1::::<><><>0<>0<>31a7c2ca29df18d169ae13dbed53eeb5<>res://.godot/imported/godot logo.png-263e5a04e22917382401c7a07c380c9f.s3tc.ctex::
+golden sigma.png::CompressedTexture2D::7943351266552405042::1774104215::1774104357::1::::<><><>0<>0<>5360ca137db56b65d8f93e2248c25680<>res://.godot/imported/golden sigma.png-41c7325a141d0ca2ddf222966b387fc2.ctex::
+green lawson.png::CompressedTexture2D::6909669778176956353::1774104215::1774104379::1::::<><><>0<>0<>53ee6e6eec58b90e574e3bd9672206f7<>res://.godot/imported/green lawson.png-bac929d4a2fe3492053b0485662654c4.ctex::
+i will save you from rorys.png::CompressedTexture2D/CompressedTexture2D::5729344804771132083::1774104215::1774104379::1::::<><><>0<>0<>ced3194901b7acf63e9ebbc674ea337e<>res://.godot/imported/i will save you from rorys.png-da2bca9c6748d297b57268906ec31a05.ctex::
+i will save you.png::CompressedTexture2D/CompressedTexture2D::1510331689527168305::1774104215::1774104379::1::::<><><>0<>0<>1b88fb5e45a167891f34220158b82ee0<>res://.godot/imported/i will save you.png-dfbee754a1b07f340d62fa89548ac83c.ctex::
+maltigi enemy.png::CompressedTexture2D::4371202918488767807::1774104215::1774104379::1::::<><><>0<>0<>2a6ce57bfcd936d399f6cfc2491f914b<>res://.godot/imported/maltigi enemy.png-24f2a92ce36dbc3a1c904cfd3bfadf8f.s3tc.ctex::
+maltigi scary small.png::CompressedTexture2D::5476166370416133800::1774104215::1774104379::1::::<><><>0<>0<>56d5010219103fb008a0cab75b2b3c27<>res://.godot/imported/maltigi scary small.png-09ce3a046ce5948ea0899ac6d6525331.ctex::
+maltigi transparent.webp::CompressedTexture2D::949296579902037181::1774104215::1774104379::1::::<><><>0<>0<>bf1511af2e19a6f153cec3e19c526db1<>res://.godot/imported/maltigi transparent.webp-937a1903380747a6c632f6f305975021.ctex::
+maltigi.jpg::CompressedTexture2D/CompressedTexture2D::1938301278932766979::1739102790::1774104379::1::::<><><>0<>0<>75d0590a3e0ce931b08a55948a27b142<>res://.godot/imported/maltigi.jpg-b923e9d8397a693d01fd22640640d356.s3tc.ctex::
+malttweak.png::CompressedTexture2D::451336967155164305::1774104215::1774104379::1::::<><><>0<>0<>3b3503d3b0e0a1558007da2d8d1f70ea<>res://.godot/imported/malttweak.png-c1d4e3aae987e662dcb205a85fa57bed.ctex::
+mario 16x16.png::CompressedTexture2D/CompressedTexture2D::4632203231354201895::1774104215::1774104379::1::::<><><>0<>0<>ebf68169b2fb334c4c916281bbc3d721<>res://.godot/imported/mario 16x16.png-b992ba3cd27984bc70258aaf620191a6.ctex::
+MusicClipmask.png::CompressedTexture2D/CompressedTexture2D::998612273990650464::1774104215::1774104379::1::::<><><>0<>0<>358c53180f6ea90efd4e221804730e27<>res://.godot/imported/MusicClipmask.png-905f27c9849f7975e5d3bff12d2af1bc.ctex::
+one white pixel.png::CompressedTexture2D/CompressedTexture2D::5362865998573988970::1774104215::1774104379::1::::<><><>0<>0<>de705886b8494245860e718889d783bf<>res://.godot/imported/one white pixel.png-3d4217ee9dff90db3b32feccff78bab8.s3tc.ctex::
+ouch spritesheet.png::CompressedTexture2D/CompressedTexture2D::7261248883313863867::1774104215::1774104379::1::::<><><>0<>0<>1a8809c19c3de83b93a9cd2d84599d6b<>res://.godot/imported/ouch spritesheet.png-ad9a113dfd653d9ae510020685e3ccff.ctex::
+punchable.png::CompressedTexture2D::4772187435288136809::1774104215::1774104379::1::::<><><>0<>0<>3f8f1f50c2fbb9ce2fbd372f55b67b27<>res://.godot/imported/punchable.png-0eb38061fa8d6d2015b32c31b33ae1b1.s3tc.ctex::
+red arrow.png::CompressedTexture2D/CompressedTexture2D::4227462745947614752::1774104215::1774104379::1::::<><><>0<>0<>7f9bc17d1a02f5593a9160db493a9e83<>res://.godot/imported/red arrow.png-532255904d7cd11a8eeaaf74e2105fcd.ctex::
+Rory.png::CompressedTexture2D/CompressedTexture2D::5114104364758575779::1774104215::1774104379::1::::<><><>0<>0<>e255770a04531c2295022d75046e2dc9<>res://.godot/imported/Rory.png-2915eaf2601edde3544f0c319a99d6af.s3tc.ctex::
+rorys accurate.png::CompressedTexture2D/CompressedTexture2D::6735127129975182671::1774104215::1774104379::1::::<><><>0<>0<>1cfdfec335571c81c9192517ec723cd5<>res://.godot/imported/rorys accurate.png-c9087190b0fa4f4b614a8e53ed41dec7.s3tc.ctex::
+shoe bench murder mode.png::CompressedTexture2D/CompressedTexture2D::3780495018923305510::1774104215::1774104379::1::::<><><>0<>0<>a6d117d0ccf4a4566573f410fa53f8c1<>res://.godot/imported/shoe bench murder mode.png-b3122b15373111469fbad7e72f657a89.s3tc.ctex::
+shoe bench.png::CompressedTexture2D/CompressedTexture2D::4235601564057194828::1774104215::1774104379::1::::<><><>0<>0<>2e1d0a7d3c0a9ac8431934b38deb16af<>res://.godot/imported/shoe bench.png-e83d100c3dcb85f7a7535a0d35dfa9b9.s3tc.ctex::
+shoe_bench.png::CompressedTexture2D::3414474368800384829::1768651037::1774104379::1::::<><><>0<>0<>a9babb97a3bd72f15399a6851d0ab6e2<>res://.godot/imported/shoe_bench.png-990f4e00df2412f3639ad49955246291.s3tc.ctex::
+so retro (crunched).png::CompressedTexture2D/CompressedTexture2D::1446608356333620121::1774104215::1774104379::1::::<><><>0<>0<>84a740b12de62733d4da2b0e912066b4<>res://.godot/imported/so retro (crunched).png-3eb154b7c0d01009dd15b61559121786.s3tc.ctex::
+so retro! so retro! so retro! so retro! so retro!.png::CompressedTexture2D/CompressedTexture2D::7141122744683068737::1774104215::1774104378::1::::<><><>0<>0<>57e61f8c7db5ceaffc7242b40e279c6d<>res://.godot/imported/so retro! so retro! so retro! so retro! so retro!.png-31953c358d1b6f101a77b10bece5f820.ctex::
+so retroer! so retroer! so retroer! so retroer!.png::CompressedTexture2D/CompressedTexture2D::4519844088667934655::1774104215::1774104378::1::::<><><>0<>0<>f2c759b08650e025096d691cb91f58fa<>res://.godot/imported/so retroer! so retroer! so retroer! so retroer!.png-2290966924d353d5e47023aec62bc95a.ctex::
+SORETRO-1.png.32x32.png::CompressedTexture2D/CompressedTexture2D::2051477341454784960::1774104215::1774104378::1::::<><><>0<>0<>f4ac05b3c18afecdf04ce873f1e7d4ad<>res://.godot/imported/SORETRO-1.png.32x32.png-25b54d89e91efbd7fd6d8f9faaf5fe83.ctex::
+SORETRO-1.png.png::CompressedTexture2D/CompressedTexture2D::1909281577612996051::1739102790::1774104378::1::::<><><>0<>0<>73b9e4617bec690e959d637aa791e497<>res://.godot/imported/SORETRO-1.png.png-c80eaf8ff4eb4b722095cc77e21d95e4.ctex::
+spritesheetboom.png::CompressedTexture2D/CompressedTexture2D::9025082032646518970::1774104215::1774104378::1::::<><><>0<>0<>6afb24a99dee8a74cd7da2320ae99ca3<>res://.godot/imported/spritesheetboom.png-d91ea1d0e4c1b1abd920cbbec41d8005.s3tc.ctex::
+squaresloop.png::CompressedTexture2D/CompressedTexture2D::6012141346682013788::1774104215::1774104378::1::::<><><>0<>0<>3eee1fc8055987bb1f65bb4c7354a7e7<>res://.godot/imported/squaresloop.png-1f8207bb35b019e3cab05b89c9d99810.ctex::
+super adventures of john.jpg::CompressedTexture2D/CompressedTexture2D::339591526815829133::1774104215::1774104378::1::::<><><>0<>0<>cb96a82db1d896e10a83177e697ff84a<>res://.godot/imported/super adventures of john.jpg-d7e9ef48b8b10f3b5f5611becaf03320.ctex::
+super john dash upscaled.png::CompressedTexture2D/CompressedTexture2D::2502324772539633315::1774104215::1774104378::1::::<><><>0<>0<>08b05a27d34821cddf15598d00457cc5<>res://.godot/imported/super john dash upscaled.png-1eeff153533a04756f08f635b4b58082.s3tc.ctex::
+super john.png::CompressedTexture2D/CompressedTexture2D::7208248529876123205::1774104215::1774104378::1::::<><><>0<>0<>3c669e4366f4f5e4fcfcd5946b75e5a5<>res://.godot/imported/super john.png-4bdcc32547011eac0166d1ad4dfa0cc1.s3tc.ctex::
+super_john_bowling.png::CompressedTexture2D::5304354107875780080::1774104215::1774104378::1::::<><><>0<>0<>818e8646d982cc3cf45d92ef1edacaba<>res://.godot/imported/super_john_bowling.png-edfd26c887ccdfc81056797ce7c2d6af.ctex::
+ultra irios accurate.png::CompressedTexture2D/CompressedTexture2D::2276729090882777407::1774104215::1774104378::1::::<><><>0<>0<>ecb1a1d893fb7a45ec856af6bff555ba<>res://.godot/imported/ultra irios accurate.png-680ef3e27bf9201811b47aa780dd1c38.s3tc.ctex::
+ultra irios.png::CompressedTexture2D/CompressedTexture2D::2702341083341780367::1774104215::1774104378::1::::<><><>0<>0<>0de6af462c3edeb264c3939ca8af356c<>res://.godot/imported/ultra irios.png-9c9d3ad0dd9506ba068eeaf57bc6d08f.s3tc.ctex::
+urio.png::CompressedTexture2D/CompressedTexture2D::5153051984921413146::1739102790::1774104378::1::::<><><>0<>0<>d88e89f3afa7558d746d3ba26104c28a<>res://.godot/imported/urio.png-9b6241ab7c42e8bc9b1e3dadec0b0b95.s3tc.ctex::
+wch.png::CompressedTexture2D/CompressedTexture2D::3314274622497560799::1740080165::1774104378::1::::<><><>0<>0<>325d175459b915143cb1301af523a2a6<>res://.godot/imported/wch.png-00f79c7c7ce89430d722b059c471f417.s3tc.ctex::
+wega.png::CompressedTexture2D/CompressedTexture2D::2696350657868709057::1739102790::1774104378::1::::<><><>0<>0<>458670f3847c3db1051b3ebb9c018647<>res://.godot/imported/wega.png-8260b5f6fca527229bb11b7b6a039bb8.s3tc.ctex::
+WegaEnraged.webp::CompressedTexture2D/CompressedTexture2D::877167247439505278::1774104215::1774104378::1::::<><><>0<>0<>dc71fda7866cecb1b587f79b1cfa1eae<>res://.godot/imported/WegaEnraged.webp-26b9562fffd6c0aa6644ea094ba4a973.ctex::
+wegakill cover.png::CompressedTexture2D/CompressedTexture2D::2685520428326154893::1774104215::1774104378::1::::<><><>0<>0<>618bcaf938729528543b2ebb9b19e4b4<>res://.godot/imported/wegakill cover.png-29e6c8982dedacaaa44e946706ab7655.ctex::
+wegakill.png::CompressedTexture2D/CompressedTexture2D::6162179170566334997::1774104215::1774104378::1::::<><><>0<>0<>9e634833f188b59a8648b38e8adc9aa5<>res://.godot/imported/wegakill.png-92691f20f7bed36765147b7a3206ac90.ctex::
+you winga.png::CompressedTexture2D/CompressedTexture2D::8471274237064570921::1739102790::1774104378::1::::<><><>0<>0<>7bc93df5b3669d79570e325f2f1d4709<>res://.godot/imported/you winga.png-b985805c86822bc286ec2a4b8fa01a67.ctex::
+::res://assets/textures/achievements/::1774104356
+certified wega expert.png::CompressedTexture2D::6329427824691887516::1774104215::1774104356::1::::<><><>0<>0<>727a7adf262e0a1a087ed4c223d3e542<>res://.godot/imported/certified wega expert.png-8f658aa98641d5034ab451f090248df1.ctex::
+exploded.png::CompressedTexture2D::1092656971572824374::1774104215::1774104356::1::::<><><>0<>0<>36b1ee0ee2c3cdea03b22422c9d0bb1a<>res://.godot/imported/exploded.png-f92fdc47aa6ce99558eda50d00eb0402.ctex::
+idiot.png::CompressedTexture2D::692405980840844162::1774104215::1774104356::1::::<><><>0<>0<>a63facd07b63593f83bda8eaafab1d9e<>res://.godot/imported/idiot.png-35a877a43ba2bca9f933be5458405375.ctex::
+ouroboros.png::CompressedTexture2D::8857311301327422050::1774104215::1774104356::1::::<><><>0<>0<>bc2e6fd39a3696f4245dddf5519c2bf5<>res://.godot/imported/ouroboros.png-66450b588ae8069750f02093d3193ada.ctex::
+placeholder.png::CompressedTexture2D::2443766624984171447::1774104215::1774104356::1::::<><><>0<>0<>e019bfdfdf927b8b7b092617f4c90715<>res://.godot/imported/placeholder.png-019174ded0b73170a1c77bbc03925d44.ctex::
+shoe bench.png::CompressedTexture2D::2310504771095335522::1774104215::1774104356::1::::<><><>0<>0<>c2c9f7cd240047f3047354081fd42b4a<>res://.godot/imported/shoe bench.png-7d146bb5e3ba5d0297421f211f40feab.ctex::
+so close yet so far.png::CompressedTexture2D::6712544985897373279::1774104215::1774104356::1::::<><><>0<>0<>17ab91f4a72140b08a75f319015c3c64<>res://.godot/imported/so close yet so far.png-190962ff99827dc599804336c35bc799.ctex::
+speedrunner.png::CompressedTexture2D::8069533975499376290::1774104215::1774104356::1::::<><><>0<>0<>4d3628daaf180304c56da469afe159e3<>res://.godot/imported/speedrunner.png-fded0b1d0ccaddf1c32ec3fa9dc689de.ctex::
+style farmer.png::CompressedTexture2D::3438173383266954944::1774104215::1774104356::1::::<><><>0<>0<>cd815ce49166b4a8c6ea8db5848e7b51<>res://.godot/imported/style farmer.png-410c6dbab3af68e6860c078ca2da5b06.ctex::
+super john bowling.png::CompressedTexture2D::8812026623656105057::1774104215::1774104356::1::::<><><>0<>0<>dd5e05eea1f5d951f96073219169b308<>res://.godot/imported/super john bowling.png-334e7cef59a32db851daf2871c4b3428.ctex::
+task failed succesfully.png::CompressedTexture2D::2286087877715293534::1774104215::1774104356::1::::<><><>0<>0<>b64146919f549d134d758b786b20ae8a<>res://.godot/imported/task failed succesfully.png-b8f8a282d526782ef8f393ab7acb94a3.ctex::
+thnak you.png::CompressedTexture2D::129277979532045678::1774104215::1774104356::1::::<><><>0<>0<>e212a86dbf9b3c52d2dca1cf77d57429<>res://.godot/imported/thnak you.png-ecfd3b6472070799455ce365b0a21db5.s3tc.ctex::
+wegakill.png::CompressedTexture2D::9044951098208323423::1774104215::1774104356::1::::<><><>0<>0<>31fca75ccce682c55b9fd6010c4a04d1<>res://.godot/imported/wegakill.png-1f1b1b30b7319888a7d29360cf9de2e5.ctex::
+wexecution.png::CompressedTexture2D::8464488866432825862::1774104215::1774104356::1::::<><><>0<>0<>c26b8af288c9dbe9cef38177b6d105f4<>res://.godot/imported/wexecution.png-41997065c82673a94d20dbce8709d80c.ctex::
+winga.png::CompressedTexture2D::743059059424154319::1774104215::1774104356::1::::<><><>0<>0<>5cb8552e3159317d59d071710b6eccf4<>res://.godot/imported/winga.png-ac40be37c72393738d1f3f75c9713095.ctex::
+::res://assets/textures/recolorpedia/::1774104355
+box2.png::CompressedTexture2D/CompressedTexture2D::5558956876673165620::1774104215::1774104378::1::::<><><>0<>0<>8dd7d10eba7084d9df7a8e75dc8124e7<>res://.godot/imported/box2.png-3a389bc7780610c1813b268e076c5277.ctex::
+box3.png::CompressedTexture2D/CompressedTexture2D::8659244624829051186::1774104215::1774104378::1::::<><><>0<>0<>6280bec1ad3b89baf6525f2026e0a5dc<>res://.godot/imported/box3.png-92266f0172b6b5112266f98947905c5d.ctex::
+box3hover.png::CompressedTexture2D/CompressedTexture2D::6375047795923088669::1774104215::1774104378::1::::<><><>0<>0<>18de1d126d6e7e242817ec88f7f61ab8<>res://.godot/imported/box3hover.png-543f0ae83cb64df16b4ab778574d8a8a.ctex::
+box4.png::CompressedTexture2D/CompressedTexture2D::3281250726668226475::1774104215::1774104378::1::::<><><>0<>0<>13c74d2387288063ce23264cf0f5b675<>res://.godot/imported/box4.png-9d22ea41f2f7d3c870d4069a9086bfa8.ctex::
+box5.png::CompressedTexture2D/CompressedTexture2D::8273538303301304601::1774104215::1774104378::1::::<><><>0<>0<>f981d04c4bfc3c82c568a1514767575b<>res://.godot/imported/box5.png-ec05fea382aead3ff1a9192bbc20e871.ctex::
+box7.png::CompressedTexture2D/CompressedTexture2D::979060142600501334::1774104215::1774104378::1::::<><><>0<>0<>2988460cbdbf090dc3dce215f29781d2<>res://.godot/imported/box7.png-5eb9c0ec56815bd011aaf2870adacc2b.ctex::
+box8.5.png::CompressedTexture2D::8807108668642815051::1774104215::1774104378::1::::<><><>0<>0<>ffc56794ea6171f52d7097c415c42931<>res://.godot/imported/box8.5.png-46a9607944a117449a3633b2defe9f80.ctex::
+box8.png::CompressedTexture2D/CompressedTexture2D::1803560027210409234::1774104215::1774104378::1::::<><><>0<>0<>4d2197e3088f86ea2ef6bd80873512be<>res://.godot/imported/box8.png-a3e0db78c2a10b9fcb9b462177f44d7b.ctex::
+box9.png::CompressedTexture2D/CompressedTexture2D::8751920085454601823::1774104215::1774104378::1::::<><><>0<>0<>0301df018239ce77d396d2d08fe9972e<>res://.godot/imported/box9.png-c47d9cdbaa493f16d48d3c83a1fc51a2.ctex::
+box10.png::CompressedTexture2D/CompressedTexture2D::1088051319837200025::1774104215::1774104378::1::::<><><>0<>0<>ab22ab5b11ae76b4c7b32ea575c24a6f<>res://.godot/imported/box10.png-daebf8e33c1145d17504685770fd25c4.ctex::
+box11.png::CompressedTexture2D/CompressedTexture2D::4421812575391105413::1774104215::1774104378::1::::<><><>0<>0<>9180e7e8ff2cbdf5a0c1525b67f286fe<>res://.godot/imported/box11.png-c2ae188c6c5a41af6bcfc2d5a20e5b74.ctex::
+::res://assets/textures/thumbnails/::1774104355
+classic.png::CompressedTexture2D/CompressedTexture2D::554876989933446035::1774104215::1774104378::1::::<><><>0<>0<>957614e19753d537480ebc7d31852ecd<>res://.godot/imported/classic.png-67e68162fc88bc20e24e84b883e2ec32.ctex::
+wcti2.png::CompressedTexture2D::6389288922701210957::1774104215::1774104378::1::::<><><>0<>0<>bcc4abfb21e401a26182e8de0aed0273<>res://.godot/imported/wcti2.png-c0d1cf1a2f73ebf0f02ced164b6d73bb.ctex::
+wcti.png::CompressedTexture2D/CompressedTexture2D::1763121757857033053::1774104215::1774104378::1::::<><><>0<>0<>6eb6a50246588ea8eedfc8900f2f47fa<>res://.godot/imported/wcti.png-6b409c347d1f1cad311beaf1ca3b1cfc.ctex::
+::res://scenes/::1774104216
 pause_node.gd::GDScript/GDScript::4361520538087030940::1739102790::0::1::::<>Control<><>0<>0<><>::
-reset_high_score.gd::GDScript::2819844449588394574::1774103299::0::1::::<>Button<><>0<>0<><>::
-SettingsWindow.tscn::PackedScene::3703183720414537606::1774103297::0::1::::<><><>0<>0<><>::uid://ctiqwlfv3kn0r::::res://scenes/settings_window.gd<>uid://dujk86c4t3d30::::res://scenes/settings_slider.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://bgf7oqtpfm4pm::::res://scenes/reset_high_score.gd<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf
-settings_slider.gd::GDScript::8582286057410600973::1774103299::0::1::::<>HSlider<><>0<>0<><>::
-settings_window.gd::GDScript::6123955764364310663::1774103299::0::1::::<>Panel<><>0<>0<><>::
-::res://scenes/autoload/::1774103297
-achievements.gd::GDScript::1123753790587756634::1774103297::0::1::::<>Control<><>0<>0<><>::
-achievements.tscn::PackedScene::6053587851904275887::1774103297::0::1::::<><><>0<>0<><>::uid://qamcchwnyeji::::res://scenes/autoload/achievements.gd<>uid://ohy868mffp8k::::res://assets/textures/MusicClipmask.png<>uid://ba21qkbob8m4v::::res://assets/textures/achievements/placeholder.png<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader<>uid://crwldbtpbhuiu::::res://assets/textures/squaresloop.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
-global.gd::GDScript::1589799686723312401::1774103297::0::1::::<>Node<><>0<>0<><>::
-i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg::AudioStreamOggVorbis::9110356046617304339::1774103297::1774103318::1::::<><><>0<>0<>7808219ad87ec3e34180a200b94dc914<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-2b87663cfd0569efc4a43506d828cb86.oggvorbisstr::
-save.gd::GDScript::2025443034864928943::1774103297::0::1::::<>Node<><>0<>0<><>::
-SettingsHandler.gd::GDScript::4095861986682350876::1774103297::0::1::::<>Node<><>0<>0<><>::
-song credits.tscn::PackedScene::7313382827387333604::1774103297::0::1::::<><><>0<>0<><>::uid://lp8g4aslrs3d::::res://scenes/autoload/song_credits.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
-song_credits.gd::GDScript::805058845864356987::1774103297::0::1::::<>CanvasLayer<><>0<>0<><>::
-style sfx.tscn::PackedScene::6680812149203051884::1774103297::0::1::::<><><>0<>0<><>::uid://dmcgm8oha4ycf::::res://scenes/autoload/style_sfx.gd
-style_sfx.gd::GDScript::8006044416944301041::1774103297::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
-::res://scenes/levels/::1774103298
-::res://scenes/levels/main/::1774103298
-gameloop2.gd::GDScript::3443893526129044562::1774103297::0::1::::<>Node3D<><>0<>0<><>::
-gameloop.gd::GDScript::5892260977153818377::1774103297::0::1::::<>Node3D<><>0<>0<><>::
-main2.tscn::PackedScene::787912926650834485::1774103297::0::1::::<><><>0<>0<><>::uid://bpcionidbxdty::::res://scenes/levels/main/gameloop2.gd<>uid://dtvrk2opu62up::::res://scenes/objects/urio/urio.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://gcin3qcooyqb::::res://assets/BGM/WEXECUTION part2.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
-main.tscn::PackedScene::1070366442542408141::1774103297::0::1::::<><><>0<>0<><>::uid://cp7ixbdpto73r::::res://scenes/levels/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
-mastermode credits test.tscn::PackedScene::1800679867053352871::1774103297::0::1::::<><><>0<>0<><>::uid://12k2htvbyrsc::::res://scenes/levels/main/mastermode_credits_test.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnbm4yqrd70q::::res://assets/meshlibraries/wcti.tres<>uid://g45c50vp4upu::::res://assets/BGM/TAP Staff Roll.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://b3vgo8tacnak::::res://assets/textures/achievements/thnak you.png<>uid://bip4pwu3ajgva::::res://assets/textures/godot logo white.png
-mastermode_credits_test.gd::GDScript::1881303918282731482::1774103297::0::1::::<>Node3D<><>0<>0<><>::
-testy test.obj::Mesh/Mesh::1372675113993672806::1774103297::1774103323::1::::<><><>0<>0<>8cc49e416e2e8c055cff9295cdb66af5<>res://.godot/imported/testy test.obj-3be74cdb9e90f85109be0f788a78b59d.mesh<*>res://.godot/imported/testy test.obj-3be74cdb9e90f85109be0f788a78b59d.mesh::
-testytest.tscn::PackedScene::943289579771130321::1774103297::0::1::::<><><>0<>0<><>::uid://cp7ixbdpto73r::::res://scenes/levels/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
-wcti_main.gd::GDScript::8665740246639654727::1774103297::0::1::::<>Node3D<><>0<>0<><>::
-::res://scenes/levels/the idol/::1774103298
-flash.gd::GDScript::4833155582311061756::1774103298::0::1::::<>CanvasLayer<><>0<>0<><>::
-maltigi_line.gd::GDScript::5180647149606659274::1774103298::0::1::::<>MeshInstance3D<><>0<>0<><>::
-message.gd::GDScript::2694601810354061185::1774103298::0::1::::<>Label<><>0<>0<><>::
-wcti credits.gd::GDScript::312574205383161753::1774103298::0::1::::<>Node3D<><>0<>0<><>::
-wcti credits.tscn::PackedScene::3003446859159390204::1774103298::0::1::::<><><>0<>0<><>::uid://epob0r7vb51v::::res://scenes/levels/the idol/wcti credits.gd<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnbm4yqrd70q::::res://assets/meshlibraries/wcti.tres<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://g45c50vp4upu::::res://assets/BGM/TAP Staff Roll.mp3<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://c1dg4jbdv51dv::::res://assets/SFX/wcti win credits transition end.mp3<>uid://b3vgo8tacnak::::res://assets/textures/achievements/thnak you.png<>uid://bip4pwu3ajgva::::res://assets/textures/godot logo white.png<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader
-wctimain.gd::GDScript::2985435055401399478::1774103298::0::1::::<>Node3D<><>0<>0<><>::
-wctimain.tscn::PackedScene::4061490193661311483::1774103298::0::1::::<><><>0<>0<><>::uid://dvp0qgaefpsjf::::res://scenes/levels/main/wcti_main.gd<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://ca4hmppmj846s::::res://scenes/levels/the idol/flash.gd<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://bt4kg26lwevja::::res://assets/textures/shoe bench murder mode.png<>uid://b5npf3t0v1emx::::res://assets/textures/so retroer! so retroer! so retroer! so retroer!.png<>uid://benjx0bkvjl3f::::res://scenes/levels/the idol/message.gd<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://cr4mwxcsmnvgd::::res://assets/meshlibraries/wcti mesh lib.tres<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://mq5201fr415c::::res://assets/textures/WegaEnraged.webp<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://bv380bjbntfwp::::res://assets/Models/soretro.obj<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://dyg3r2t2utgsr::::res://assets/Models/soretrotexture.png<>uid://bl5jwa2w0x6nl::::res://assets/BGM/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav<>uid://ros1h8daiee::::res://scenes/objects/rorys/rorys.tscn<>uid://bbpilhi58oh6e::::res://assets/SFX/deltarune-explosion.mp3<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://cs226fu3xw4bi::::res://scenes/objects/ultra irios/ultra irios.tscn<>uid://b1dn67n1ycfir::::res://scenes/objects/shoe bench (enemy)/shoe bench.tscn<>uid://5fyklqfajuef::::res://scenes/objects/super john/super john.tscn<>uid://bmyvtstlhdqae::::res://assets/textures/fire lowquality skybox version.png<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
-::res://scenes/levels/tutorial/::1774103298
-crate.gd::GDScript::7440176584377910626::1774103298::0::1::::<>Node3D<><>0<>0<><>::
-music_fadeout_trigger.gd::GDScript::261564099661746313::1774103298::0::1::::<>Area3D<><>0<>0<><>::
-tutorial.gd::GDScript::6423882931823712231::1774103298::0::1::::<>Node3D<><>0<>0<><>::
-tutorial.tscn::PackedScene::6565914670270894469::1774103298::0::1::::<><><>0<>0<><>::uid://cxr1ob3fjb5qx::::res://scenes/levels/tutorial/tutorial.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://b2ld20c4esbtc::::res://scenes/objects/music_trigger.gd<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://dq1kfv87e6bxm::::res://assets/BGM/Purple Sun V2 part1.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://dyx6mogtbyqr::::res://scenes/levels/tutorial/music_fadeout_trigger.gd<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://8wbky5vpuip::::res://assets/BGM/Purple Sun V2 part2.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://deacveioa0x83::::res://scenes/levels/tutorial/crate.gd<>uid://bv380bjbntfwp::::res://assets/Models/soretro.obj<>uid://cyj67l6jxf1st::::res://assets/textures/crate texture.png<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://dj2gy1k146gm1::::res://assets/Models/shoebenchtexture.png<>uid://c588i70taaq5e::::res://assets/SFX/BreakBlock.wav
-::res://scenes/menus/::1774103298
-::res://scenes/menus/achievements/::1774103298
-achievements menu.gd::GDScript::8320471267618037059::1774103298::0::1::::<>Control<><>0<>0<><>::
-achievements menu.tscn::PackedScene::1913592240688151767::1774103298::0::1::::<><><>0<>0<><>::uid://dqsq7f0fc50wd::::res://scenes/menus/achievements/achievements menu.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://bm0pyqnxpxd36::::res://assets/textures/recolorpedia/box4.png<>uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://n7i8h85wsg3w::::res://assets/textures/recolorpedia/box7.png<>uid://0xwmt5f0dneo::::res://assets/textures/recolorpedia/box8.png<>uid://dxqh170tb0juh::::res://assets/textures/recolorpedia/box8.5.png<>uid://dwxq3y8hsoieh::::res://assets/textures/recolorpedia/box9.png<>uid://b387uv10iqxtd::::res://assets/textures/recolorpedia/box11.png<>uid://dp4074674wsar::::res://assets/textures/recolorpedia/box5.png<>uid://dvmuq144plfwk::::res://assets/textures/recolorpedia/box3.png<>uid://cw3edukcu2men::::res://assets/textures/recolorpedia/box3hover.png
+reset_high_score.gd::GDScript::2819844449588394574::1774104216::0::1::::<>Button<><>0<>0<><>::
+SettingsWindow.tscn::PackedScene::3703183720414537606::1774104215::0::1::::<><><>0<>0<><>::uid://ctiqwlfv3kn0r::::res://scenes/settings_window.gd<>uid://dujk86c4t3d30::::res://scenes/settings_slider.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://bgf7oqtpfm4pm::::res://scenes/reset_high_score.gd<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf
+settings_slider.gd::GDScript::8582286057410600973::1774104216::0::1::::<>HSlider<><>0<>0<><>::
+settings_window.gd::GDScript::6123955764364310663::1774104216::0::1::::<>Panel<><>0<>0<><>::
+::res://scenes/autoload/::1774104355
+achievements.gd::GDScript::1123753790587756634::1774104215::0::1::::<>Control<><>0<>0<><>::
+achievements.tscn::PackedScene::6053587851904275887::1774104215::0::1::::<><><>0<>0<><>::uid://qamcchwnyeji::::res://scenes/autoload/achievements.gd<>uid://ohy868mffp8k::::res://assets/textures/MusicClipmask.png<>uid://ba21qkbob8m4v::::res://assets/textures/achievements/placeholder.png<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader<>uid://crwldbtpbhuiu::::res://assets/textures/squaresloop.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
+global.gd::GDScript::1589799686723312401::1774104215::0::1::::<>Node<><>0<>0<><>::
+i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg::AudioStreamOggVorbis::9110356046617304339::1774104215::1774104378::1::::<><><>0<>0<>7808219ad87ec3e34180a200b94dc914<>res://.godot/imported/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin.ogg-2b87663cfd0569efc4a43506d828cb86.oggvorbisstr::
+save.gd::GDScript::2025443034864928943::1774104215::0::1::::<>Node<><>0<>0<><>::
+SettingsHandler.gd::GDScript::4095861986682350876::1774104215::0::1::::<>Node<><>0<>0<><>::
+song credits.tscn::PackedScene::7313382827387333604::1774104215::0::1::::<><><>0<>0<><>::uid://lp8g4aslrs3d::::res://scenes/autoload/song_credits.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
+song_credits.gd::GDScript::805058845864356987::1774104215::0::1::::<>CanvasLayer<><>0<>0<><>::
+style sfx.tscn::PackedScene::6680812149203051884::1774104215::0::1::::<><><>0<>0<><>::uid://dmcgm8oha4ycf::::res://scenes/autoload/style_sfx.gd
+style_sfx.gd::GDScript::8006044416944301041::1774104215::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
+::res://scenes/levels/::1774104216
+::res://scenes/levels/main/::1774104355
+gameloop2.gd::GDScript::3443893526129044562::1774104215::0::1::::<>Node3D<><>0<>0<><>::
+gameloop.gd::GDScript::5892260977153818377::1774104215::0::1::::<>Node3D<><>0<>0<><>::
+main2.tscn::PackedScene::787912926650834485::1774104215::0::1::::<><><>0<>0<><>::uid://bpcionidbxdty::::res://scenes/levels/main/gameloop2.gd<>uid://dtvrk2opu62up::::res://scenes/objects/urio/urio.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://gcin3qcooyqb::::res://assets/BGM/WEXECUTION part2.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
+main.tscn::PackedScene::1070366442542408141::1774104215::0::1::::<><><>0<>0<><>::uid://cp7ixbdpto73r::::res://scenes/levels/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
+mastermode credits test.tscn::PackedScene::1800679867053352871::1774104215::0::1::::<><><>0<>0<><>::uid://12k2htvbyrsc::::res://scenes/levels/main/mastermode_credits_test.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnbm4yqrd70q::::res://assets/meshlibraries/wcti.tres<>uid://g45c50vp4upu::::res://assets/BGM/TAP Staff Roll.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://b3vgo8tacnak::::res://assets/textures/achievements/thnak you.png<>uid://bip4pwu3ajgva::::res://assets/textures/godot logo white.png
+mastermode_credits_test.gd::GDScript::1881303918282731482::1774104215::0::1::::<>Node3D<><>0<>0<><>::
+testy test.obj::Mesh/Mesh::1372675113993672806::1774104215::1774104382::1::::<><><>0<>0<>8cc49e416e2e8c055cff9295cdb66af5<>res://.godot/imported/testy test.obj-3be74cdb9e90f85109be0f788a78b59d.mesh<*>res://.godot/imported/testy test.obj-3be74cdb9e90f85109be0f788a78b59d.mesh::
+testytest.tscn::PackedScene::943289579771130321::1774104215::0::1::::<><><>0<>0<><>::uid://cp7ixbdpto73r::::res://scenes/levels/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://qano16jjkcr2::::res://assets/other/tutorial_black_texture.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn
+wcti_main.gd::GDScript::8665740246639654727::1774104215::0::1::::<>Node3D<><>0<>0<><>::
+::res://scenes/levels/the idol/::1774104216
+flash.gd::GDScript::4833155582311061756::1774104216::0::1::::<>CanvasLayer<><>0<>0<><>::
+maltigi_line.gd::GDScript::5180647149606659274::1774104216::0::1::::<>MeshInstance3D<><>0<>0<><>::
+message.gd::GDScript::2694601810354061185::1774104216::0::1::::<>Label<><>0<>0<><>::
+wcti credits.gd::GDScript::312574205383161753::1774104216::0::1::::<>Node3D<><>0<>0<><>::
+wcti credits.tscn::PackedScene::3003446859159390204::1774104216::0::1::::<><><>0<>0<><>::uid://epob0r7vb51v::::res://scenes/levels/the idol/wcti credits.gd<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnbm4yqrd70q::::res://assets/meshlibraries/wcti.tres<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://g45c50vp4upu::::res://assets/BGM/TAP Staff Roll.mp3<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://c1dg4jbdv51dv::::res://assets/SFX/wcti win credits transition end.mp3<>uid://b3vgo8tacnak::::res://assets/textures/achievements/thnak you.png<>uid://bip4pwu3ajgva::::res://assets/textures/godot logo white.png<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader
+wctimain.gd::GDScript::2985435055401399478::1774104216::0::1::::<>Node3D<><>0<>0<><>::
+wctimain.tscn::PackedScene::4061490193661311483::1774104216::0::1::::<><><>0<>0<><>::uid://dvp0qgaefpsjf::::res://scenes/levels/main/wcti_main.gd<>uid://2g4uapwqkpjv::::res://assets/textures/SORETRO-1.png.png<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://ca4hmppmj846s::::res://scenes/levels/the idol/flash.gd<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://c8e8i7oo5k8rm::::res://scenes/objects/maltigi/maltigi.tscn<>uid://bt4kg26lwevja::::res://assets/textures/shoe bench murder mode.png<>uid://b5npf3t0v1emx::::res://assets/textures/so retroer! so retroer! so retroer! so retroer!.png<>uid://benjx0bkvjl3f::::res://scenes/levels/the idol/message.gd<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://cr4mwxcsmnvgd::::res://assets/meshlibraries/wcti mesh lib.tres<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://mq5201fr415c::::res://assets/textures/WegaEnraged.webp<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://bv380bjbntfwp::::res://assets/Models/soretro.obj<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://dyg3r2t2utgsr::::res://assets/Models/soretrotexture.png<>uid://bl5jwa2w0x6nl::::res://assets/BGM/WEGAFADENCE (Cut) -—-Lap-II-Submission-2025-03-20-03_04_55.wav<>uid://ros1h8daiee::::res://scenes/objects/rorys/rorys.tscn<>uid://bbpilhi58oh6e::::res://assets/SFX/deltarune-explosion.mp3<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://cs226fu3xw4bi::::res://scenes/objects/ultra irios/ultra irios.tscn<>uid://b1dn67n1ycfir::::res://scenes/objects/shoe bench (enemy)/shoe bench.tscn<>uid://5fyklqfajuef::::res://scenes/objects/super john/super john.tscn<>uid://bmyvtstlhdqae::::res://assets/textures/fire lowquality skybox version.png<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
+::res://scenes/levels/tutorial/::1774104216
+crate.gd::GDScript::7440176584377910626::1774104216::0::1::::<>Node3D<><>0<>0<><>::
+music_fadeout_trigger.gd::GDScript::261564099661746313::1774104216::0::1::::<>Area3D<><>0<>0<><>::
+tutorial.gd::GDScript::6423882931823712231::1774104216::0::1::::<>Node3D<><>0<>0<><>::
+tutorial.tscn::PackedScene::6565914670270894469::1774104216::0::1::::<><><>0<>0<><>::uid://cxr1ob3fjb5qx::::res://scenes/levels/tutorial/tutorial.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://b2ld20c4esbtc::::res://scenes/objects/music_trigger.gd<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://dq1kfv87e6bxm::::res://assets/BGM/Purple Sun V2 part1.mp3<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://dyx6mogtbyqr::::res://scenes/levels/tutorial/music_fadeout_trigger.gd<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3<>uid://8wbky5vpuip::::res://assets/BGM/Purple Sun V2 part2.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://deacveioa0x83::::res://scenes/levels/tutorial/crate.gd<>uid://bv380bjbntfwp::::res://assets/Models/soretro.obj<>uid://cyj67l6jxf1st::::res://assets/textures/crate texture.png<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://dj2gy1k146gm1::::res://assets/Models/shoebenchtexture.png<>uid://c588i70taaq5e::::res://assets/SFX/BreakBlock.wav
+::res://scenes/menus/::1774104216
+::res://scenes/menus/achievements/::1774104216
+achievements menu.gd::GDScript::8320471267618037059::1774104216::0::1::::<>Control<><>0<>0<><>::
+achievements menu.tscn::PackedScene::1913592240688151767::1774104216::0::1::::<><><>0<>0<><>::uid://dqsq7f0fc50wd::::res://scenes/menus/achievements/achievements menu.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://bm0pyqnxpxd36::::res://assets/textures/recolorpedia/box4.png<>uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://n7i8h85wsg3w::::res://assets/textures/recolorpedia/box7.png<>uid://0xwmt5f0dneo::::res://assets/textures/recolorpedia/box8.png<>uid://dxqh170tb0juh::::res://assets/textures/recolorpedia/box8.5.png<>uid://dwxq3y8hsoieh::::res://assets/textures/recolorpedia/box9.png<>uid://b387uv10iqxtd::::res://assets/textures/recolorpedia/box11.png<>uid://dp4074674wsar::::res://assets/textures/recolorpedia/box5.png<>uid://dvmuq144plfwk::::res://assets/textures/recolorpedia/box3.png<>uid://cw3edukcu2men::::res://assets/textures/recolorpedia/box3hover.png
 ::res://scenes/menus/credits/::1747655065
-::res://scenes/menus/credits gameover/::1774103298
-credits gameover.tscn::PackedScene::3604331033275361097::1774103298::0::1::::<><><>0<>0<><>::uid://bxdqer27aaliu::::res://scenes/menus/credits gameover/credits_gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
-credits_gameover.gd::GDScript::4007936771750526480::1774103298::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menus/gameover/::1774103298
-gameover.gd::GDScript::1668897329616516952::1774103298::0::1::::<>Control<><>0<>0<><>::
-gameover.tscn::PackedScene::4822005129990280951::1774103298::0::1::::<><><>0<>0<><>::uid://x1oq3o7aaim7::::res://scenes/menus/gameover/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://7jcnj2v5xp75::::res://assets/other/wcti points and time curve.tres
-::res://scenes/menus/main/::1774103298
-gamemodes scroll.gd::GDScript::7741306639115931662::1774103298::0::1::::<>Panel<><>0<>0<><>::
-high_score_label.gd::GDScript::797784949338509571::1774103298::0::1::::<>Label<><>0<>0<><>::
-mainMenu.tscn::PackedScene::290914851781947886::1774103298::0::1::::<><><>0<>0<><>::uid://cnyb344qrb0um::::res://scenes/menus/main/main_menu.gd<>uid://bfikfhcvcr3u5::::res://assets/BGM/Does Not Bleed (No Drums).mp3<>uid://ct2agqmwrxprp::::res://assets/textures/wegakill.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>uid://bopsn36uffa10::::res://assets/BGM/Does Not Bleed (Drums).mp3<>uid://chc61cjknrihr::::res://assets/other/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://h510i4enqc80::::res://assets/textures/thumbnails/classic.png<>uid://0ecmftjaqi74::::res://assets/textures/thumbnails/wcti.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://dij7go4ky6al7::::res://scenes/menus/main/gamemodes scroll.gd<>uid://lmpnwg3dlk32::::res://scenes/menus/main/high_score_label.gd<>uid://b6tdk2e5p381g::::res://scenes/menus/recolorpedia/recolorpedia.tscn<>uid://cxbawji40rfht::::res://assets/textures/thumbnails/wcti2.png
-main_menu.gd::GDScript::5734953688726396912::1774103298::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menus/recolorpedia/::1774103298
-recolorpedia.gd::GDScript::1278565450688963769::1774103298::0::1::::<>Control<><>0<>0<><>::
-recolorpedia.tscn::PackedScene::4601699448410507918::1774103298::0::1::::<><><>0<>0<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://shl1y2yctker::::res://scenes/menus/recolorpedia/recolorpedia.gd<>uid://dp4074674wsar::::res://assets/textures/recolorpedia/box5.png<>uid://cw3edukcu2men::::res://assets/textures/recolorpedia/box3hover.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://bm0pyqnxpxd36::::res://assets/textures/recolorpedia/box4.png<>uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://n7i8h85wsg3w::::res://assets/textures/recolorpedia/box7.png<>uid://dxqh170tb0juh::::res://assets/textures/recolorpedia/box8.5.png<>uid://b387uv10iqxtd::::res://assets/textures/recolorpedia/box11.png<>uid://0xwmt5f0dneo::::res://assets/textures/recolorpedia/box8.png<>uid://dwxq3y8hsoieh::::res://assets/textures/recolorpedia/box9.png<>uid://dvmuq144plfwk::::res://assets/textures/recolorpedia/box3.png
-::res://scenes/menus/save error/::1774103298
-save error menu.tscn::PackedScene::1955093274190892859::1774103298::0::1::::<><><>0<>0<><>::uid://wcaubw3eaijm::::res://scenes/menus/save error/save_error_menu.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf
-save_error_menu.gd::GDScript::1548319119209523998::1774103298::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menus/wcti_gameover/::1774103298
-death_fx.gd::GDScript::6273020429794459349::1774103298::0::1::::<>Control<><>0<>0<><>::
-fall_deathfx.gd::GDScript::3440635053976436458::1774103298::0::1::::<>Control<><>0<>0<><>::
-malt_1.gd::GDScript::4675031473814675017::1774103298::0::1::::<>Control<><>0<>0<><>::
-shoe bench gameover.tscn::PackedScene::5970576046564705077::1774103298::0::1::::<><><>0<>0<><>::uid://c68awu5bc55m7::::res://scenes/menus/wcti_gameover/shoe_bench_gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://boqg6v6tagpu2::::res://assets/SFX/shoebench.mp3
-shoe_bench_gameover.gd::GDScript::7016860370375544032::1774103298::0::1::::<>Node2D<><>0<>0<><>::
-wcti_gameover.gd::GDScript::6761603122887442408::1774103298::0::1::::<>Control<><>0<>0<><>::
-wcti_gameover.tscn::PackedScene::4358692448513721900::1774103298::0::1::::<><><>0<>0<><>::uid://c3lmu6tvp12cy::::res://scenes/menus/wcti_gameover/wcti_gameover.gd<>uid://cvmxy24dfs6n6::::res://scenes/menus/wcti_gameover/death_fx.gd<>uid://ck5rmkur8lyp2::::res://scenes/menus/wcti_gameover/wega death.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3<>uid://b7uvc5wlbc1of::::res://scenes/menus/wcti_gameover/malt_1.gd<>uid://govpoynpoaej::::res://assets/textures/malttweak.png<>uid://cqtjmmx0cgoo5::::res://assets/SFX/maltscream.wav<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://ckaxwpalaa0v1::::res://assets/textures/maltigi scary small.png<>uid://bpaw0yxusr0mg::::res://scenes/menus/wcti_gameover/fall_deathfx.gd<>uid://b0nisytr0gbwg::::res://assets/SFX/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg<>uid://c5pditabpfpnt::::res://assets/textures/green lawson.png
-wega death.gd::GDScript::5537715311738759553::1774103298::0::1::::<>Control<><>0<>0<><>::
-::res://scenes/menus/wcti_win/::1774103298
-results_label_shaking_thing.gd::GDScript::5266868695433190883::1774103298::0::1::::<>RichTextLabel<><>0<>0<><>::
-style_label_wcti.gd::GDScript::8041581083973402451::1774103298::0::1::::<>Control<><>0<>0<><>::
-time_label_wcti.gd::GDScript::4478985969968648583::1774103298::0::1::::<>Control<><>0<>0<><>::
-wcti_results.gd::GDScript::9128847115376186557::1774103298::0::1::::<>Control<><>0<>0<><>::
-wcti_results.tscn::PackedScene::7363903770956621365::1774103298::0::1::::<><><>0<>0<><>::uid://d3cc1pwke4hbx::::res://scenes/menus/wcti_win/wcti_results.gd<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://chbks77joeqln::::res://scenes/menus/wcti_win/results_label_shaking_thing.gd<>uid://358qooyp4wkr::::res://assets/SFX/fall.wav<>uid://b42wikxkb5ru2::::res://scenes/menus/wcti_win/time_label_wcti.gd<>uid://c0436cx0h4an::::res://assets/SFX/count.wav<>uid://br23vdl0niiq4::::res://assets/SFX/wcti win text sound.mp3<>uid://dmtnwvnkivtod::::res://scenes/menus/wcti_win/style_label_wcti.gd
-wcti_win.gd::GDScript::4863741388615107058::1774103298::0::1::::<>Control<><>0<>0<><>::
-wcti_win.tscn::PackedScene::5808538600498000177::1774103298::0::1::::<><><>0<>0<><>::uid://cbkbd0ife2she::::res://scenes/menus/wcti_win/wcti_win.gd<>uid://br23vdl0niiq4::::res://assets/SFX/wcti win text sound.mp3<>uid://dduilbp5oqgi7::::res://assets/SFX/wcti win DRAMATIC SOUND!!!!!!!!!.mp3<>uid://bqghna1073bat::::res://assets/SFX/wcti win glitch 1.mp3<>uid://2f4fi75scxes::::res://addons/richtext2/richer_text_label.gd<>uid://clnedh3a6b8k8::::res://assets/SFX/wcti win credits transition main.mp3<>uid://4mittkdxo7ig::::res://addons/richtext2/text_effects/effects/rte_cuss.gd
-::res://scenes/menus/win/::1774103298
-tutorial win.tscn::PackedScene::1728308722143432420::1774103298::0::1::::<><><>0<>0<><>::uid://c2i67tojvjo1x::::res://scenes/menus/win/win.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3
-win.gd::GDScript::6686395559834539003::1774103298::0::1::::<>Control<><>0<>0<><>::
-win.tscn::PackedScene::3108581462923092367::1774103298::0::1::::<><><>0<>0<><>::uid://c2i67tojvjo1x::::res://scenes/menus/win/win.gd<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://7jcnj2v5xp75::::res://assets/other/wcti points and time curve.tres<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
-::res://scenes/objects/::1774103298
-deathbarrier.gd::GDScript::4409103323341888685::1774103298::0::1::::<>Area3D<><>0<>0<><>::
-deathbarrier.tscn::PackedScene::4263417348308328412::1774103298::0::1::::<><><>0<>0<><>::uid://b322j1ofjv30t::::res://scenes/objects/deathbarrier.gd<>uid://vru7bi0xt3er::::res://assets/textures/i will save you.png<>uid://dqaickaks7ggn::::res://assets/SFX/i will save you.wav<>uid://358qooyp4wkr::::res://assets/SFX/fall.wav
-music_trigger.gd::GDScript::4304459302125408892::1774103298::0::1::::<>Area3D<><>0<>0<><>::
-::res://scenes/objects/maltigi/::1774103298
-maltigi.gd::GDScript::8132755238951855501::1774103298::0::1::::<>Sprite3D<><>0<>0<><>::
-maltigi.tscn::PackedScene::7099350368621126594::1774103298::0::1::::<><><>0<>0<><>::uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://dn4tj451acebl::::res://scenes/objects/maltigi/maltigi.gd<>uid://cqtjmmx0cgoo5::::res://assets/SFX/maltscream.wav
-red line.gd::GDScript::2120175362641912176::1774103298::0::1::::<>MeshInstance3D<><>0<>0<><>::
-::res://scenes/objects/player/::1774103298
-damage_effects.gd::GDScript::1865439736090691294::1774103298::0::1::::<>Control<><>0<>0<><>::
-fps.gd::GDScript::3045722362874438500::1774103298::0::1::::<>Label<><>0<>0<><>::
-health.gd::GDScript::3625202166805795365::1774103298::0::1::::<>ProgressBar<><>0<>0<><>::
-health_label.gd::GDScript::4017438065750664639::1774103298::0::1::::<>Label<><>0<>0<><>::
-player.gd::GDScript::4009368495501132464::1774103298::0::1::::PlayerCharacter<>CharacterBody3D<><>0<>0<><>::
-player.tscn::PackedScene::3611808840168377422::1774103298::0::1::::<><><>0<>0<><>::uid://bxefyivknb70g::::res://scenes/objects/player/player.gd<>uid://oybmr27vjrco::::res://scenes/objects/player/progress_bar.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://dlf23nb3wl5ra::::res://assets/textures/golden sigma.png<>uid://brwcsx3yog6er::::res://scenes/objects/player/health.gd<>uid://bmjhaxt70t64q::::res://assets/other/vcr_osd_mono.tres<>uid://bxicvannoy5f4::::res://scenes/objects/player/health_label.gd<>uid://bnvqk864yprcf::::res://assets/other/balatro.gdshader<>uid://cc3nhv7vlnl17::::res://scenes/objects/player/style_bar.gd<>uid://cx5silmovrt1o::::res://scenes/objects/player/timer.gd<>uid://1tvrxarpsw8e::::res://scenes/objects/player/damage_effects.gd<>uid://bjnmuqkarpray::::res://scenes/objects/player/fps.gd<>uid://bu1b53i7y6dgs::::res://assets/textures/fire lowquality.jpeg<>uid://dbpnycyequ5bb::::res://assets/textures/ouch spritesheet.png<>uid://xwy3ii53lc8y::::res://assets/SFX/this lit my fire.mp3<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://e3ra1nm3ufn6::::res://assets/textures/super adventures of john.jpg<>uid://de0i1oa626uat::::res://assets/SFX/strike!.mp3
-progress_bar.gd::GDScript::1032271959638554990::1774103298::0::1::::<>ProgressBar<><>0<>0<><>::
-style_bar.gd::GDScript::4971824606632701432::1774103298::0::1::::<>VBoxContainer<><>0<>0<><>::
-timer.gd::GDScript::6450223892863130342::1774103298::0::1::::<>Label<><>0<>0<><>::
-::res://scenes/objects/rorys/::1774103298
-rorys.gd::GDScript::1828369424279034452::1774103298::0::1::::<>AnimatedSprite3D<><>0<>0<><>::
-rorys.tscn::PackedScene::35977981932156860::1774103298::0::1::::<><><>0<>0<><>::uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://1bw8h0nquq5y::::res://scenes/objects/rorys/rorys.gd<>uid://d1t21utirnpcc::::res://assets/textures/spritesheetboom.png<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://ca4hmppmj846s::::res://scenes/levels/the idol/flash.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://03fbe2ya4f4i::::res://assets/SFX/rory being an asshole.ogg
-::res://scenes/objects/shoe bench (enemy)/::1774103298
-shoe bench.tscn::PackedScene::4218370134104277957::1774103298::0::1::::<><><>0<>0<><>::uid://bt4kg26lwevja::::res://assets/textures/shoe bench murder mode.png<>uid://dkar4yjkwtli5::::res://scenes/objects/shoe bench (enemy)/shoe_bench.gd<>uid://boqg6v6tagpu2::::res://assets/SFX/shoebench.mp3
-shoe_bench.gd::GDScript::7862235739308055506::1774103298::0::1::::<>Sprite3D<><>0<>0<><>::
-::res://scenes/objects/super john/::1774103298
-super john.tscn::PackedScene::2117462866377990853::1774103298::0::1::::<><><>0<>0<><>::uid://cpflohj6r70us::::res://scenes/objects/super john/super_john.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://bbwe6npxmker8::::res://assets/textures/super john dash upscaled.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3
-super_john.gd::GDScript::5836689181761280334::1774103298::0::1::::<>CharacterBody3D<><>0<>0<><>::
-::res://scenes/objects/ultra irios/::1774103298
-fireball.gd::GDScript::325229637510168305::1774103298::0::1::::<>RigidBody3D<><>0<>0<><>::
-fireball.tscn::PackedScene::8390464757247040240::1774103298::0::1::::<><><>0<>0<><>::uid://evsqqhh83yht::::res://scenes/objects/ultra irios/fireball.gd<>uid://dpbgfokopf2jg::::res://assets/textures/fireball.png<>uid://xwy3ii53lc8y::::res://assets/SFX/this lit my fire.mp3
-ultra irios.gd::GDScript::507254828644625870::1774103298::0::1::::<>Sprite3D<><>0<>0<><>::
-ultra irios.tscn::PackedScene::6093673765462810174::1774103298::0::1::::<><><>0<>0<><>::uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://hhyoblj0j7l7::::res://scenes/objects/ultra irios/ultra irios.gd<>uid://drsny1mofw07m::::res://scenes/objects/ultra irios/fireball.tscn<>uid://p0g34g4707b5::::res://assets/SFX/mario-fireball.mp3
-::res://scenes/objects/urio/::1774103298
-urio.tscn::PackedScene::8537253500320476731::1774103298::0::1::::<><><>0<>0<><>::uid://cfogapnt1wsr7::::res://assets/textures/urio.png<>uid://gnxufoxmdk25::::res://scenes/objects/wega/wega.gd<>uid://bv13wkw1r5qdh::::res://assets/SFX/urio.mp3
+::res://scenes/menus/credits gameover/::1774104216
+credits gameover.tscn::PackedScene::3604331033275361097::1774104216::0::1::::<><><>0<>0<><>::uid://bxdqer27aaliu::::res://scenes/menus/credits gameover/credits_gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg
+credits_gameover.gd::GDScript::4007936771750526480::1774104216::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/menus/gameover/::1774104216
+gameover.gd::GDScript::1668897329616516952::1774104216::0::1::::<>Control<><>0<>0<><>::
+gameover.tscn::PackedScene::4822005129990280951::1774104216::0::1::::<><><>0<>0<><>::uid://x1oq3o7aaim7::::res://scenes/menus/gameover/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://7jcnj2v5xp75::::res://assets/other/wcti points and time curve.tres
+::res://scenes/menus/main/::1774104216
+gamemodes scroll.gd::GDScript::7741306639115931662::1774104216::0::1::::<>Panel<><>0<>0<><>::
+high_score_label.gd::GDScript::797784949338509571::1774104216::0::1::::<>Label<><>0<>0<><>::
+mainMenu.tscn::PackedScene::290914851781947886::1774104216::0::1::::<><><>0<>0<><>::uid://cnyb344qrb0um::::res://scenes/menus/main/main_menu.gd<>uid://bfikfhcvcr3u5::::res://assets/BGM/Does Not Bleed (No Drums).mp3<>uid://ct2agqmwrxprp::::res://assets/textures/wegakill.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>uid://bopsn36uffa10::::res://assets/BGM/Does Not Bleed (Drums).mp3<>uid://chc61cjknrihr::::res://assets/other/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://h510i4enqc80::::res://assets/textures/thumbnails/classic.png<>uid://0ecmftjaqi74::::res://assets/textures/thumbnails/wcti.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://dij7go4ky6al7::::res://scenes/menus/main/gamemodes scroll.gd<>uid://lmpnwg3dlk32::::res://scenes/menus/main/high_score_label.gd<>uid://b6tdk2e5p381g::::res://scenes/menus/recolorpedia/recolorpedia.tscn<>uid://cxbawji40rfht::::res://assets/textures/thumbnails/wcti2.png
+main_menu.gd::GDScript::5734953688726396912::1774104216::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/menus/recolorpedia/::1774104216
+recolorpedia.gd::GDScript::1278565450688963769::1774104216::0::1::::<>Control<><>0<>0<><>::
+recolorpedia.tscn::PackedScene::4601699448410507918::1774104216::0::1::::<><><>0<>0<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://shl1y2yctker::::res://scenes/menus/recolorpedia/recolorpedia.gd<>uid://dp4074674wsar::::res://assets/textures/recolorpedia/box5.png<>uid://cw3edukcu2men::::res://assets/textures/recolorpedia/box3hover.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://bm0pyqnxpxd36::::res://assets/textures/recolorpedia/box4.png<>uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://n7i8h85wsg3w::::res://assets/textures/recolorpedia/box7.png<>uid://dxqh170tb0juh::::res://assets/textures/recolorpedia/box8.5.png<>uid://b387uv10iqxtd::::res://assets/textures/recolorpedia/box11.png<>uid://0xwmt5f0dneo::::res://assets/textures/recolorpedia/box8.png<>uid://dwxq3y8hsoieh::::res://assets/textures/recolorpedia/box9.png<>uid://dvmuq144plfwk::::res://assets/textures/recolorpedia/box3.png
+::res://scenes/menus/save error/::1774104216
+save error menu.tscn::PackedScene::1955093274190892859::1774104216::0::1::::<><><>0<>0<><>::uid://wcaubw3eaijm::::res://scenes/menus/save error/save_error_menu.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf
+save_error_menu.gd::GDScript::1548319119209523998::1774104216::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/menus/wcti_gameover/::1774104216
+death_fx.gd::GDScript::6273020429794459349::1774104216::0::1::::<>Control<><>0<>0<><>::
+fall_deathfx.gd::GDScript::3440635053976436458::1774104216::0::1::::<>Control<><>0<>0<><>::
+malt_1.gd::GDScript::4675031473814675017::1774104216::0::1::::<>Control<><>0<>0<><>::
+shoe bench gameover.tscn::PackedScene::5970576046564705077::1774104216::0::1::::<><><>0<>0<><>::uid://c68awu5bc55m7::::res://scenes/menus/wcti_gameover/shoe_bench_gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://boqg6v6tagpu2::::res://assets/SFX/shoebench.mp3
+shoe_bench_gameover.gd::GDScript::7016860370375544032::1774104216::0::1::::<>Node2D<><>0<>0<><>::
+wcti_gameover.gd::GDScript::6761603122887442408::1774104216::0::1::::<>Control<><>0<>0<><>::
+wcti_gameover.tscn::PackedScene::4358692448513721900::1774104216::0::1::::<><><>0<>0<><>::uid://c3lmu6tvp12cy::::res://scenes/menus/wcti_gameover/wcti_gameover.gd<>uid://cvmxy24dfs6n6::::res://scenes/menus/wcti_gameover/death_fx.gd<>uid://ck5rmkur8lyp2::::res://scenes/menus/wcti_gameover/wega death.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3<>uid://b7uvc5wlbc1of::::res://scenes/menus/wcti_gameover/malt_1.gd<>uid://govpoynpoaej::::res://assets/textures/malttweak.png<>uid://cqtjmmx0cgoo5::::res://assets/SFX/maltscream.wav<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://ckaxwpalaa0v1::::res://assets/textures/maltigi scary small.png<>uid://bpaw0yxusr0mg::::res://scenes/menus/wcti_gameover/fall_deathfx.gd<>uid://b0nisytr0gbwg::::res://assets/SFX/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg<>uid://c5pditabpfpnt::::res://assets/textures/green lawson.png
+wega death.gd::GDScript::5537715311738759553::1774104216::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/menus/wcti_win/::1774104216
+results_label_shaking_thing.gd::GDScript::5266868695433190883::1774104216::0::1::::<>RichTextLabel<><>0<>0<><>::
+style_label_wcti.gd::GDScript::8041581083973402451::1774104216::0::1::::<>Control<><>0<>0<><>::
+time_label_wcti.gd::GDScript::4478985969968648583::1774104216::0::1::::<>Control<><>0<>0<><>::
+wcti_results.gd::GDScript::9128847115376186557::1774104216::0::1::::<>Control<><>0<>0<><>::
+wcti_results.tscn::PackedScene::7363903770956621365::1774104216::0::1::::<><><>0<>0<><>::uid://d3cc1pwke4hbx::::res://scenes/menus/wcti_win/wcti_results.gd<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://chbks77joeqln::::res://scenes/menus/wcti_win/results_label_shaking_thing.gd<>uid://358qooyp4wkr::::res://assets/SFX/fall.wav<>uid://b42wikxkb5ru2::::res://scenes/menus/wcti_win/time_label_wcti.gd<>uid://c0436cx0h4an::::res://assets/SFX/count.wav<>uid://br23vdl0niiq4::::res://assets/SFX/wcti win text sound.mp3<>uid://dmtnwvnkivtod::::res://scenes/menus/wcti_win/style_label_wcti.gd
+wcti_win.gd::GDScript::4863741388615107058::1774104216::0::1::::<>Control<><>0<>0<><>::
+wcti_win.tscn::PackedScene::5808538600498000177::1774104216::0::1::::<><><>0<>0<><>::uid://cbkbd0ife2she::::res://scenes/menus/wcti_win/wcti_win.gd<>uid://br23vdl0niiq4::::res://assets/SFX/wcti win text sound.mp3<>uid://dduilbp5oqgi7::::res://assets/SFX/wcti win DRAMATIC SOUND!!!!!!!!!.mp3<>uid://bqghna1073bat::::res://assets/SFX/wcti win glitch 1.mp3<>uid://2f4fi75scxes::::res://addons/richtext2/richer_text_label.gd<>uid://clnedh3a6b8k8::::res://assets/SFX/wcti win credits transition main.mp3<>uid://4mittkdxo7ig::::res://addons/richtext2/text_effects/effects/rte_cuss.gd
+::res://scenes/menus/win/::1774104216
+tutorial win.tscn::PackedScene::1728308722143432420::1774104216::0::1::::<><><>0<>0<><>::uid://c2i67tojvjo1x::::res://scenes/menus/win/win.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3
+win.gd::GDScript::6686395559834539003::1774104216::0::1::::<>Control<><>0<>0<><>::
+win.tscn::PackedScene::3108581462923092367::1774104216::0::1::::<><><>0<>0<><>::uid://c2i67tojvjo1x::::res://scenes/menus/win/win.gd<>uid://dsxswci6f73lt::::res://assets/textures/you winga.png<>uid://7jcnj2v5xp75::::res://assets/other/wcti points and time curve.tres<>uid://b573kcl71uafk::::res://assets/SFX/you're winner.mp3<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
+::res://scenes/objects/::1774104216
+deathbarrier.gd::GDScript::4409103323341888685::1774104216::0::1::::<>Area3D<><>0<>0<><>::
+deathbarrier.tscn::PackedScene::4263417348308328412::1774104216::0::1::::<><><>0<>0<><>::uid://b322j1ofjv30t::::res://scenes/objects/deathbarrier.gd<>uid://vru7bi0xt3er::::res://assets/textures/i will save you.png<>uid://dqaickaks7ggn::::res://assets/SFX/i will save you.wav<>uid://358qooyp4wkr::::res://assets/SFX/fall.wav
+music_trigger.gd::GDScript::4304459302125408892::1774104216::0::1::::<>Area3D<><>0<>0<><>::
+::res://scenes/objects/maltigi/::1774104216
+maltigi.gd::GDScript::8132755238951855501::1774104216::0::1::::<>Sprite3D<><>0<>0<><>::
+maltigi.tscn::PackedScene::7099350368621126594::1774104216::0::1::::<><><>0<>0<><>::uid://b3jpcq473qemx::::res://assets/textures/maltigi enemy.png<>uid://dn4tj451acebl::::res://scenes/objects/maltigi/maltigi.gd<>uid://cqtjmmx0cgoo5::::res://assets/SFX/maltscream.wav
+red line.gd::GDScript::2120175362641912176::1774104216::0::1::::<>MeshInstance3D<><>0<>0<><>::
+::res://scenes/objects/player/::1774104216
+damage_effects.gd::GDScript::1865439736090691294::1774104216::0::1::::<>Control<><>0<>0<><>::
+fps.gd::GDScript::3045722362874438500::1774104216::0::1::::<>Label<><>0<>0<><>::
+health.gd::GDScript::3625202166805795365::1774104216::0::1::::<>ProgressBar<><>0<>0<><>::
+health_label.gd::GDScript::4017438065750664639::1774104216::0::1::::<>Label<><>0<>0<><>::
+player.gd::GDScript::4009368495501132464::1774104216::0::1::::PlayerCharacter<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::3611808840168377422::1774104216::0::1::::<><><>0<>0<><>::uid://bxefyivknb70g::::res://scenes/objects/player/player.gd<>uid://oybmr27vjrco::::res://scenes/objects/player/progress_bar.gd<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://dlf23nb3wl5ra::::res://assets/textures/golden sigma.png<>uid://brwcsx3yog6er::::res://scenes/objects/player/health.gd<>uid://bmjhaxt70t64q::::res://assets/other/vcr_osd_mono.tres<>uid://bxicvannoy5f4::::res://scenes/objects/player/health_label.gd<>uid://bnvqk864yprcf::::res://assets/other/balatro.gdshader<>uid://cc3nhv7vlnl17::::res://scenes/objects/player/style_bar.gd<>uid://cx5silmovrt1o::::res://scenes/objects/player/timer.gd<>uid://1tvrxarpsw8e::::res://scenes/objects/player/damage_effects.gd<>uid://bjnmuqkarpray::::res://scenes/objects/player/fps.gd<>uid://bu1b53i7y6dgs::::res://assets/textures/fire lowquality.jpeg<>uid://dbpnycyequ5bb::::res://assets/textures/ouch spritesheet.png<>uid://xwy3ii53lc8y::::res://assets/SFX/this lit my fire.mp3<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://e3ra1nm3ufn6::::res://assets/textures/super adventures of john.jpg<>uid://de0i1oa626uat::::res://assets/SFX/strike!.mp3
+progress_bar.gd::GDScript::1032271959638554990::1774104216::0::1::::<>ProgressBar<><>0<>0<><>::
+style_bar.gd::GDScript::4971824606632701432::1774104216::0::1::::<>VBoxContainer<><>0<>0<><>::
+timer.gd::GDScript::6450223892863130342::1774104216::0::1::::<>Label<><>0<>0<><>::
+::res://scenes/objects/rorys/::1774104216
+rorys.gd::GDScript::1828369424279034452::1774104216::0::1::::<>AnimatedSprite3D<><>0<>0<><>::
+rorys.tscn::PackedScene::35977981932156860::1774104216::0::1::::<><><>0<>0<><>::uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://1bw8h0nquq5y::::res://scenes/objects/rorys/rorys.gd<>uid://d1t21utirnpcc::::res://assets/textures/spritesheetboom.png<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://ca4hmppmj846s::::res://scenes/levels/the idol/flash.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://03fbe2ya4f4i::::res://assets/SFX/rory being an asshole.ogg
+::res://scenes/objects/shoe bench (enemy)/::1774104216
+shoe bench.tscn::PackedScene::4218370134104277957::1774104216::0::1::::<><><>0<>0<><>::uid://bt4kg26lwevja::::res://assets/textures/shoe bench murder mode.png<>uid://dkar4yjkwtli5::::res://scenes/objects/shoe bench (enemy)/shoe_bench.gd<>uid://boqg6v6tagpu2::::res://assets/SFX/shoebench.mp3
+shoe_bench.gd::GDScript::7862235739308055506::1774104216::0::1::::<>Sprite3D<><>0<>0<><>::
+::res://scenes/objects/super john/::1774104216
+super john.tscn::PackedScene::2117462866377990853::1774104216::0::1::::<><><>0<>0<><>::uid://cpflohj6r70us::::res://scenes/objects/super john/super_john.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://daxy2g8buut62::::res://assets/textures/super john.png<>uid://bbwe6npxmker8::::res://assets/textures/super john dash upscaled.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3
+super_john.gd::GDScript::5836689181761280334::1774104216::0::1::::<>CharacterBody3D<><>0<>0<><>::
+::res://scenes/objects/ultra irios/::1774104216
+fireball.gd::GDScript::325229637510168305::1774104216::0::1::::<>RigidBody3D<><>0<>0<><>::
+fireball.tscn::PackedScene::8390464757247040240::1774104216::0::1::::<><><>0<>0<><>::uid://evsqqhh83yht::::res://scenes/objects/ultra irios/fireball.gd<>uid://dpbgfokopf2jg::::res://assets/textures/fireball.png<>uid://xwy3ii53lc8y::::res://assets/SFX/this lit my fire.mp3
+ultra irios.gd::GDScript::507254828644625870::1774104216::0::1::::<>Sprite3D<><>0<>0<><>::
+ultra irios.tscn::PackedScene::6093673765462810174::1774104216::0::1::::<><><>0<>0<><>::uid://7o4npgo68ncp::::res://assets/textures/ultra irios accurate.png<>uid://hhyoblj0j7l7::::res://scenes/objects/ultra irios/ultra irios.gd<>uid://drsny1mofw07m::::res://scenes/objects/ultra irios/fireball.tscn<>uid://p0g34g4707b5::::res://assets/SFX/mario-fireball.mp3
+::res://scenes/objects/urio/::1774104216
+urio.tscn::PackedScene::8537253500320476731::1774104216::0::1::::<><><>0<>0<><>::uid://cfogapnt1wsr7::::res://assets/textures/urio.png<>uid://gnxufoxmdk25::::res://scenes/objects/wega/wega.gd<>uid://bv13wkw1r5qdh::::res://assets/SFX/urio.mp3
 wega.gd::GDScript/GDScript::2888241144745279171::1739102790::0::1::::<>Sprite3D<><>0<>0<><>::
-::res://scenes/objects/wega/::1774103298
-wega.gd::GDScript::449402464647891732::1774103298::0::1::::<>Sprite3D<><>0<>0<><>::
-wega.tscn::PackedScene::4617986234045561769::1774103298::0::1::::<><><>0<>0<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://gnxufoxmdk25::::res://scenes/objects/wega/wega.gd<>uid://qy6j0ucusih1::::res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
-::res://scenes/objects/wegadoll/::1774103299
-wegadoll.gd::GDScript::7016799929115607629::1774103298::0::1::::<>Node3D<><>0<>0<><>::
-wegadoll.tscn::PackedScene::6717543873806726871::1774103299::0::1::::<><><>0<>0<><>::uid://c678w1er04n1n::::res://scenes/objects/wegadoll/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
-::res://screenshots/::1774103299
-2026-03-10173206.png::CompressedTexture2D::5341059460885139027::1774103299::1774103320::1::::<><><>0<>0<>4631b12dd974d6147346dcba71e47e0d<>res://.godot/imported/2026-03-10173206.png-7d6c80f10ad9394011c7764495034df8.ctex::
-::res://text/::1774103299
-::res://text/recolorpedia/::1774103299
-maltigi.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-rorys.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-shoe bench.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-super john.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-template.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-ultra irios.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
-wega.txt::TextFile::-1::1774103299::0::1::::<><><>0<>0<><>::
+::res://scenes/objects/wega/::1774104216
+wega.gd::GDScript::449402464647891732::1774104216::0::1::::<>Sprite3D<><>0<>0<><>::
+wega.tscn::PackedScene::4617986234045561769::1774104216::0::1::::<><><>0<>0<><>::uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://gnxufoxmdk25::::res://scenes/objects/wega/wega.gd<>uid://qy6j0ucusih1::::res://assets/other/default percentage of wegadolls collected to wega speed multiplier curve.tres<>uid://ddbsp3pytmph6::::res://assets/SFX/hl2 stalker scream.mp3
+::res://scenes/objects/wegadoll/::1774104216
+wegadoll.gd::GDScript::7016799929115607629::1774104216::0::1::::<>Node3D<><>0<>0<><>::
+wegadoll.tscn::PackedScene::6717543873806726871::1774104216::0::1::::<><><>0<>0<><>::uid://c678w1er04n1n::::res://scenes/objects/wegadoll/wegadoll.gd<>uid://ont8af16353c::::res://assets/Models/luigidoll.obj
+::res://screenshots/::1774104355
+2026-03-10173206.png::CompressedTexture2D::5341059460885139027::1774104216::1774104379::1::::<><><>0<>0<>4631b12dd974d6147346dcba71e47e0d<>res://.godot/imported/2026-03-10173206.png-7d6c80f10ad9394011c7764495034df8.ctex::
+::res://text/::1774104216
+::res://text/recolorpedia/::1774104216
+maltigi.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+rorys.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+shoe bench.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+super john.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+template.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+ultra irios.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+wega.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
