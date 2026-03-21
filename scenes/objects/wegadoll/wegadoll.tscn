@@ -1,11 +1,28 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2ya7342irkd8"]
+[gd_scene format=3 uid="uid://c2ya7342irkd8"]
 
 [ext_resource type="Script" uid="uid://c678w1er04n1n" path="res://scenes/objects/wegadoll/wegadoll.gd" id="1_em6xu"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="1_s7v15"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8dsr2"]
+render_priority = 1
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0, 1, 1)
+grow = true
+grow_amount = 0.5
+stencil_mode = 3
+stencil_flags = 1
+stencil_compare = 5
+metadata/_stencil_owned = true
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0w5eh"]
+next_pass = SubResource("StandardMaterial3D_8dsr2")
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
+stencil_mode = 1
+stencil_flags = 2
+stencil_color = Color(1, 0, 1, 1)
+stencil_outline_thickness = 0.5
 
 [sub_resource type="Animation" id="Animation_rphn0"]
 length = 0.001
@@ -47,23 +64,22 @@ _data = {
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fror2"]
 height = 2.5
 
-[node name="wegadoll" type="Node3D"]
+[node name="wegadoll" type="Node3D" unique_id=802669651]
 script = ExtResource("1_em6xu")
 
-[node name="WegaDoll" type="MeshInstance3D" parent="."]
+[node name="WegaDoll" type="MeshInstance3D" parent="." unique_id=1155297875]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 material_overlay = SubResource("StandardMaterial3D_0w5eh")
 mesh = ExtResource("1_s7v15")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_xrb3n")
-}
-autoplay = "spin"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=730456805]
+libraries/ = SubResource("AnimationLibrary_xrb3n")
+autoplay = &"spin"
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." unique_id=1034784782]
+visible = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=721878004]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
 shape = SubResource("CapsuleShape3D_fror2")
 
