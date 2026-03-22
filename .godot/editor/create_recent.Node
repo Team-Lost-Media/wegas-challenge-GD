@@ -1,13 +1,13 @@
+Control
+RichTextLabel
+Label
 TextureRect
 AnimationPlayer
 ColorRect
 RigidBody2D
-Label
 Timer
 AudioStreamPlayer
-Control
 CPUParticles2D
-RichTextLabel
 Sprite2D
 CanvasLayer
 AnimatedSprite2D

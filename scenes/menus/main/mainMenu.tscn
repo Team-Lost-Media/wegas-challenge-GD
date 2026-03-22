@@ -8,6 +8,7 @@
 [ext_resource type="Shader" uid="uid://chc61cjknrihr" path="res://assets/other/texturescroll.gdshader" id="4_2qcjs"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="5_etru4"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="6_yk1ip"]
+[ext_resource type="FontFile" uid="uid://nm6pduxr8y0c" path="res://assets/other/BroshK.ttf" id="7_04vnt"]
 [ext_resource type="Texture2D" uid="uid://h510i4enqc80" path="res://assets/textures/thumbnails/classic.png" id="7_w6md1"]
 [ext_resource type="Texture2D" uid="uid://0ecmftjaqi74" path="res://assets/textures/thumbnails/wcti.png" id="8_2ct2e"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="8_5jl5l"]
@@ -33,6 +34,10 @@ colors = PackedColorArray(0.042, 0, 0.07, 0.713726)
 gradient = SubResource("Gradient_7dfbu")
 fill_from = Vector2(1, 0)
 fill_to = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyi5k"]
+font = ExtResource("6_yk1ip")
+font_size = 41
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nv5wv"]
 bg_color = Color(0.392157, 0, 0.67451, 0.501961)
@@ -91,6 +96,7 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(7, 7)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ct2e"]
+line_spacing = -16.0
 font = ExtResource("6_yk1ip")
 font_size = 41
 outline_size = 20
@@ -204,16 +210,46 @@ mouse_filter = 2
 texture = SubResource("GradientTexture2D_sp6e7")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=135111099]
+[node name="Control" type="Control" parent="." unique_id=206281488]
+anchors_preset = 0
+offset_left = 671.0
+offset_right = 711.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=135111099]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -289.0
-offset_right = 289.0
+offset_left = -20.0
+offset_right = 558.0
 offset_bottom = 368.0
 grow_horizontal = 2
 texture = ExtResource("2_6osn1")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=1846581250]
+layout_mode = 0
+offset_left = -520.0
+offset_top = -50.0
+offset_right = 1012.6526
+offset_bottom = 473.0
+theme_override_colors/font_outline_color = Color(0.18039216, 0.003921569, 0.09411765, 1)
+theme_override_fonts/normal_font = ExtResource("7_04vnt")
+theme_override_font_sizes/normal_font_size = 288
+bbcode_enabled = true
+text = " [outline_size=16][color=purple]Wega[/color][color=red]Kill[/color][/outline_size]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Control" unique_id=391652609]
+layout_mode = 0
+offset_left = -193.0
+offset_top = 75.0
+offset_right = 215.0
+offset_bottom = 112.0
+text = "WEGA'S CHALLENGE:"
+label_settings = SubResource("LabelSettings_qyi5k")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=677183292]
 custom_minimum_size = Vector2(444, 72.8)
