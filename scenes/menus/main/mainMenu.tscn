@@ -96,7 +96,6 @@ shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(7, 7)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2ct2e"]
-line_spacing = -16.0
 font = ExtResource("6_yk1ip")
 font_size = 41
 outline_size = 20
@@ -407,8 +406,7 @@ offset_left = 10.0
 offset_top = 75.0
 offset_right = 538.0
 offset_bottom = 192.0
-text = "Only Wega.
-Collect all Wegadolls.
+text = "There's only Wega.
 Go for a high score.
 "
 label_settings = SubResource("LabelSettings_2ct2e")

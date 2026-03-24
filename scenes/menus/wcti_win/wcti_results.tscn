@@ -263,6 +263,7 @@ mouse_filter = 2
 anchor_mode = 0
 
 [node name="ResultsLabel" type="RichTextLabel" parent="." unique_id=1546008943]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

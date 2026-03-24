@@ -25,6 +25,7 @@ func _ready() -> void:
 	
 	quit_go_away.modulate.a = 0
 	
+	results_label.show()
 	results_label_anim.play("show")
 	await results_label_anim.animation_finished
 	results_label.shake_intensity = 10

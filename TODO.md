@@ -1,20 +1,18 @@
 TODO
 # gameplay
 ## the idol
-- results screen
+-X results screen
 -X COMPLETED add a winscreen. pretty much done but i think it can get some more effects
 ## credits
 -X COMPLETED add music timing shit for the last half
 -X COMPLETED add a winscreen
-## misc
-- maybe rework maltigi like how wcti reworked him? hes pretty easy rn
 
 # menus
 - achievements menu
 - options menu
-- slightly edit the classic deathscreen
+-X slightly edit the classic deathscreen
 - PARTIALLY COMPLETED remake the wcti deathscreen (could use vids?)
-- switch the music credits to using an animation player instead of a tween
+-X switch the music credits to using an animation player instead of a tween
 
 # misc
 - some achievement icons
