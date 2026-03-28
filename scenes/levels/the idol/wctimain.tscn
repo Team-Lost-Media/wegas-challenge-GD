@@ -375,13 +375,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.60828, 0)
 visible = false
 player = NodePath("../Player")
 enable_manually = true
-dash_cooldown = 2.5
-dash_delay = 0.75
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 smart = true
-smart_multiplier = 1.3
-overshoot_distance = 13.0
-line_color = Color(1, 0, 0, 1)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi" unique_id=829047433]
 light_color = Color(1, 0, 0.0166664, 1)
@@ -468,13 +463,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.853, -5.185)
 visible = false
 player = NodePath("../Player")
 enable_manually = true
-dash_cooldown = 2.5
-dash_delay = 0.75
-dash_speed = 150.0
 death_scene = "res://scenes/menus/wcti_gameover/wcti_gameover.tscn"
 smart = true
-smart_multiplier = 1.3
-line_color = Color(1, 0, 0, 1)
 malt_rush_multiplier = 3.0
 malt_rush_duration = 4.0
 malt_rush_cooldown = 4.0

@@ -4,17 +4,17 @@ extends Sprite3D
 @export var player: CharacterBody3D ## The CharacterBody3D node that Maltigi will target.
 @export var time_to_enable: float = 3 ## The time it takes for Maltigi to enable automatically.
 @export var enable_manually = false ## If set to [code]true[/code], Maltigi will not enable automatically. To enable him, another script must change [code]enabled[/code] to [code]true[/code]. False by default.
-@export var dash_cooldown: float = 3 ## The time it takes for Maltigi to dash again.
-@export var dash_delay: float = 0.5 ## The time between Maltigi choosing a target position, and dashing towards it.
-@export var dash_speed: float = 125 ## How quickly Maltigi will dash. Keep in mind this will be "multiplied" by delta.
+@export var dash_cooldown: float = 2.5 ## The time it takes for Maltigi to dash again.
+@export var dash_delay: float = 0.75 ## The time between Maltigi choosing a target position, and dashing towards it.
+@export var dash_speed: float = 150 ## How quickly Maltigi will dash. Keep in mind this will be "multiplied" by delta.
 @export var kill = true ## If set to [code]false[/code], Maltigi cannot kill the player.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 @export var died_to: String = "maltigi" ## A special identifier used to set the tips in the THE IDOL game over screen. Best not to change this, unless its for Glitchigi.
 @export var smart = false ## If set to [code]true[/code], Maltigi will predict the targets's movement (using their velocity) and dash where they're going. Otherwise, he will just dash at their position.
-@export var smart_multiplier: float = 1.2 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
+@export var smart_multiplier: float = 1.3 ## Only functions if [code]smart[/code] is set to [code]true[/code]. Maltigi will multiply the target's velocity by this number in the movement prediction calculation.
 @export var enable_overshoot: bool = true ## If set to [code]true[/code], Maltigi will overshoot the target.
 @export var overshoot_distance: float = 10 ## Only functions if [code]enable_overshoot[/code] is set to [code]true[/code]. Maltigi will overshoot the player by this distance. This is added onto the final target and is NOT a multiplier.
-@export var line_color: Color
+@export var line_color: Color = Color(1.0, 0.0, 0.0, 1.0)
 @export_group("Malt Rush")
 @export var malt_rush_enabled: bool = false ## The Malt Rush makes Maltigi quickly dash for a brief period.
 @export var malt_rush_multiplier: float = 2 ## How much faster Maltigi's dashes will be during a Malt Rush.

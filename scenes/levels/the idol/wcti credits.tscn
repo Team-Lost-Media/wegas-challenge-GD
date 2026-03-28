@@ -93,7 +93,7 @@ visible = false
 player = NodePath("../Player")
 enable_manually = true
 death_scene = ""
-line_color = Color(1, 0, 0, 1)
+smart = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Maltigi" unique_id=2123013516]
 light_color = Color(1, 0, 0, 1)

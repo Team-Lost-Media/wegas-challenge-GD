@@ -106,3 +106,6 @@ func do_the_fx() -> void:
 					pass
 				3:
 					pass
+		"rorys":
+			death_fx.rorys.show()
+			death_fx.rorys.anim()
