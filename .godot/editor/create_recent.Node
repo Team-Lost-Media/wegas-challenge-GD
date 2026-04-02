@@ -1,8 +1,8 @@
-AnimatedSprite2D
 Control
+TextureRect
+AnimatedSprite2D
 RichTextLabel
 Label
-TextureRect
 AnimationPlayer
 ColorRect
 RigidBody2D

@@ -191,6 +191,18 @@ viewport_path = NodePath("3D StylePanel")
 [sub_resource type="ViewportTexture" id="ViewportTexture_absnx"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="Gradient" id="Gradient_nqkks"]
+offsets = PackedFloat32Array(0.69902915, 1)
+colors = PackedColorArray(1, 0.65, 0, 0, 0.32, 0.20799999, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jxhie"]
+gradient = SubResource("Gradient_nqkks")
+width = 512
+height = 512
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_absnx"]
 shader = ExtResource("5_japq8")
 shader_parameter/center = Vector2(235, 167.5)
@@ -424,12 +436,6 @@ theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
 max_value = 1.0
 show_percentage = false
 
-[node name="golden sigma" type="Sprite2D" parent="." unique_id=849221440]
-self_modulate = Color(0.5, 0.5, 0.5, 1)
-position = Vector2(1785.0625, 961.875)
-scale = Vector2(1.7072227, 0.43444413)
-texture = ExtResource("4_absnx")
-
 [node name="HealthLabel" type="Label" parent="." unique_id=426940117]
 offset_left = 1460.0
 offset_top = 909.0
@@ -487,6 +493,30 @@ texture = SubResource("ViewportTexture_absnx")
 
 [node name="Camera3D" type="Camera3D" parent="3D StylePanel" unique_id=60727826]
 transform = Transform3D(0.764156, 0, 0.645031, 0, 1, 0, -0.645031, 0, 0.764156, 3.015, 1.21357, -8.03649)
+
+[node name="golden sigma" type="Control" parent="." unique_id=848092244]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="golden sigma" type="Sprite2D" parent="golden sigma" unique_id=849221440]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+position = Vector2(1785.0625, 961.875)
+scale = Vector2(1.7072227, 0.43444413)
+texture = ExtResource("4_absnx")
+
+[node name="TextureRect" type="TextureRect" parent="golden sigma" unique_id=483378354]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_jxhie")
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=261468424]
 transparent_bg = true

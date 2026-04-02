@@ -57,7 +57,7 @@ var saveable_fall = false
 @onready var health_label: Label = $HealthLabel
 @onready var health_bar_outline: ColorRect = $Health/HealthBarOutline
 @onready var health_bar: ProgressBar = $Health
-@onready var golden_sigma: Sprite2D = $"golden sigma"
+@onready var golden_sigma: Control = $"golden sigma"
 
 var gravity: Vector3 = Vector3(0, -55, 0)
 #var jump_dir: Vector3 = Vector3(0, 1, 0)
