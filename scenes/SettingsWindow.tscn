@@ -297,7 +297,7 @@ offset_right = 1324.0
 offset_bottom = 382.0
 min_value = 30.0
 max_value = 150.0
-value = 75.0
+value = 100.0
 script = ExtResource("2_007d3")
 fov = true
 
@@ -377,7 +377,7 @@ layout_mode = 0
 offset_top = 250.0
 offset_right = 215.0
 offset_bottom = 295.0
-text = "FOV: 75"
+text = "FOV: 100"
 label_settings = SubResource("LabelSettings_oufcy")
 
 [node name="Sensitivity" type="Label" parent="Labels" unique_id=330062347]

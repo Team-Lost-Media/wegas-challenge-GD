@@ -5,7 +5,7 @@ const WCTI_SAVE_SCORE_FILE_PATH = "user://wegakill - the idol highscore.sav"
 const SAVE_ACHIEVEMENTS_FILE_PATH = "user://wegakill - achievements.sav"
 const SAVEFILE_VERSION_FILE_PATH = "user://wegakill - savefile version.sav"
 
-var savefile_version = 3
+var savefile_version = 4
 
 var load_saves = true
 
