@@ -1060,6 +1060,7 @@ expand_mode = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Wega" unique_id=678708196]
 stream = ExtResource("5_cehb5")
 volume_db = 3.0
+bus = &"SFX"
 
 [node name="Malt1" type="Control" parent="DeathFX" unique_id=417276893]
 visible = false
@@ -1079,6 +1080,7 @@ frame_progress = 0.9953043
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Malt1" unique_id=464780476]
 stream = ExtResource("8_gxqhm")
 volume_db = -2.0
+bus = &"SFX"
 
 [node name="Malt2" type="Control" parent="DeathFX" unique_id=740824024]
 visible = false
@@ -1098,6 +1100,7 @@ frame_progress = 1.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Malt2" unique_id=905572730]
 stream = ExtResource("8_gxqhm")
 volume_db = -2.0
+bus = &"SFX"
 
 [node name="Fall1" type="Control" parent="DeathFX" unique_id=401736265]
 visible = false
@@ -1109,6 +1112,7 @@ script = ExtResource("10_lb8bt")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Fall1" unique_id=2077906700]
 stream = ExtResource("11_lb8bt")
 volume_db = 8.0
+bus = &"SFX"
 
 [node name="Label" type="Label" parent="DeathFX/Fall1" unique_id=1933952824]
 modulate = Color(1, 1, 1, 0)
@@ -1136,11 +1140,12 @@ script = ExtResource("13_hou3e")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DeathFX/Rorys" unique_id=1116797869]
 stream = ExtResource("14_6lsbc")
+bus = &"SFX"
 
 [node name="the bells toll for thee" type="AudioStreamPlayer" parent="DeathFX/Rorys" unique_id=1032981661]
 stream = ExtResource("15_k3obx")
 volume_db = 2.0
-stream_paused = true
+bus = &"SFX"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="DeathFX/Rorys" unique_id=1310617263]
 position = Vector2(960, 540)

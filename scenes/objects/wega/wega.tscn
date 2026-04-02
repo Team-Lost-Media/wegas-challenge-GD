@@ -32,6 +32,7 @@ shape = SubResource("CylinderShape3D_vniee")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1408969326]
 stream = ExtResource("3_xnr02")
+attenuation_model = 1
 bus = &"SFX"
 
 [node name="AboveWegaArea3D" type="Area3D" parent="." unique_id=446533729]

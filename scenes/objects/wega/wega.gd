@@ -55,6 +55,15 @@ func _process(delta: float) -> void:
 		if not audio.playing:
 			audio.play()
 		
+		if global_position.distance_to(playerpos.global_position) < 4:
+			#audio.pitch_scale = 0.8
+			#audio.volume_db = 6
+			audio.max_db = 8
+		else:
+			#audio.pitch_scale = 1
+			#audio.volume_db = 0
+			audio.max_db = 3
+		
 		#handle speedup with less wegadolls
 		if speed_up_with_wegadolls:
 			if Global.max_wegadolls != 0:

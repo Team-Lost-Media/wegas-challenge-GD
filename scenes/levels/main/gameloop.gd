@@ -6,8 +6,6 @@ extends Node3D
 
 @onready var wegasleft = group_of_wegas.get_child_count()
 
-@onready var so_retro = $"So Retro!/Area3D"
-
 func _ready() -> void:
 	Global.points = 0
 	Global.style = "none"
