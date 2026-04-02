@@ -4,8 +4,8 @@ extends CharacterBody3D
 @export var player: Node3D
 ## The speed at which Super John will move towards the player.
 @export var speed: float
-## Super John's innacuracy. I have no fucking idea how this works. I just stick to a value of 0.99. A lower value makes John go slower.
-@export_range(0.9, 1.0, 0.001) var inaccuracy: float = 0.0
+## Super John's innacuracy. I have no fucking idea exactly what this does, but it works for what I'm trying to do. Best not to change it.
+@export_range(0.9, 1.0, 0.001) var inaccuracy: float = 0.99
 ## The time it takes for Super John to enable.
 @export var time_to_enable: float = 3
 ## If set to [code]true[/code], Super John will not enable automatically. To enable him, another script must change [code]enabled[/code] to [code]true[/code]. True by default.
@@ -15,7 +15,7 @@ extends CharacterBody3D
 ## The speed Super John must go at to be able to hit the player.
 @export var minimum_push_speed: float = 20 
 ## The damage the player will take from Super John. Only functions if [code]kill[/code] is set to [code]false[/code].
-@export var damage: float = 40
+@export var damage: float = 20
 ## The scene to bring the player to if Super John kills them.
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 ## The Super John Orange Line (tm). Just duplicate the Maltigi Red Line node for this.
