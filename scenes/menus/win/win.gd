@@ -14,47 +14,43 @@ extends Control
 var high_score: bool
 
 func _ready() -> void:
-	if tutorial == false:
-		timer.start()
-		
-		time.text = str("time: ", Global.time_as_string)
-		points.text = str("points: ", str(Global.points))
-		#calculate final_score
-		var score
-		var score_multiplier
-		score_multiplier = points_and_time_curve.sample(Global.time_in_seconds)
-		score = Global.points * score_multiplier
-		print("score multiplier = ", score_multiplier)
-		#actually display it
-		if score == 0:
-			final_score.text = "0! TOO SLOW"
-		else:
-			final_score.text = str(snapped(score, 1))
-		
-		#save it and show off if it's a high score
-		if Save.load_score() < snapped(score, 1):
-			Save.save_score(snapped(score, 1))
-			high_score_label.label_settings.font_color = Color(1, 0, 0)
-			high_score = true
-		
-		Achievements.award("winga")
-		if score > 10000:
-			Achievements.award("ultra winga")
+	timer.start()
+	
+	time.text = str("time: ", Global.time_as_string)
+	points.text = str("points: ", str(Global.points))
+	#calculate final_score
+	var score
+	var score_multiplier
+	score_multiplier = points_and_time_curve.sample(Global.time_in_seconds)
+	score = Global.points * score_multiplier
+	print("score multiplier = ", score_multiplier)
+	#actually display it
+	if score == 0:
+		final_score.text = "0! TOO SLOW"
+	else:
+		final_score.text = str(snapped(score, 1))
+	
+	#save it and show off if it's a high score
+	if Save.load_score() < snapped(score, 1):
+		Save.save_score(snapped(score, 1))
+		high_score_label.label_settings.font_color = Color(1, 0, 0)
+		high_score = true
+	
+	Achievements.award("winga")
+	Save.progress_dict.set("beat classic", true)
+	Save.save_progress()
+	if score > 10000:
+		Achievements.award("ultra winga")
 
 func _process(delta: float) -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	
-	if tutorial == false:
-		if high_score == true:
-			high_score_label.label_settings.font_color.h += 0.2 * delta
-			high_score_label.text = "NEW HIGH SCORE!"
-		else:
-			high_score_label.text = str("previous high score: ", Save.load_score())
-		
-		if Input.is_action_just_pressed("jump") and timer.is_stopped():
-			get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
-			Global.reset()
+	if high_score == true:
+		high_score_label.label_settings.font_color.h += 0.2 * delta
+		high_score_label.text = "NEW HIGH SCORE!"
 	else:
-		if Input.is_action_just_pressed("jump"):
-			get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
-			Global.reset()
+		high_score_label.text = str("previous high score: ", Save.load_score())
+	
+	if Input.is_action_just_pressed("jump") and timer.is_stopped():
+		get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
+		Global.reset()

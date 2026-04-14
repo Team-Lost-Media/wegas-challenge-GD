@@ -136,6 +136,21 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 0.30980393)
 shadow_offset = Vector2(4, 4)
 
+[sub_resource type="Gradient" id="Gradient_qyi5k"]
+offsets = PackedFloat32Array(0.75728154)
+colors = PackedColorArray(0, 0, 0, 0.83137256)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_k3myg"]
+gradient = SubResource("Gradient_qyi5k")
+width = 944
+height = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_g7n6k"]
+font = ExtResource("6_yk1ip")
+font_size = 41
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyi5k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_04vnt"]
@@ -274,6 +289,7 @@ theme_override_font_sizes/font_size = 41
 text = "PLAY"
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=169319800]
+visible = false
 custom_minimum_size = Vector2(0, 72)
 layout_mode = 2
 theme_override_constants/outline_size = 41
@@ -478,6 +494,34 @@ grow_horizontal = 0
 text = "art by Goobimore"
 label_settings = SubResource("LabelSettings_04vnt")
 horizontal_alignment = 2
+
+[node name="thing to show while the idol is locked" type="Control" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=1538981369]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect2" type="TextureRect" parent="Gamemodes/TextureRect/VBoxContainer/The Idol/thing to show while the idol is locked" unique_id=1563027183]
+layout_mode = 0
+offset_right = 944.0
+offset_bottom = 200.0
+texture = SubResource("GradientTexture2D_k3myg")
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Gamemodes/TextureRect/VBoxContainer/The Idol/thing to show while the idol is locked" unique_id=1945874549]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 176.0
+offset_top = 60.0
+offset_right = 728.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Beat CLASSIC to unlock!"
+label_settings = SubResource("LabelSettings_g7n6k")
 
 [node name="Credits" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1389887946]
 visible = false

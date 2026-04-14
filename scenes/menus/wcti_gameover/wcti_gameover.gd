@@ -98,12 +98,13 @@ func do_the_fx() -> void:
 				death_fx.malt2.show()
 				death_fx.malt2.anim()
 		"fall":
-			match randi_range(1, 1):
+			match randi_range(1, 2):
 				1:
 					death_fx.fall1.show()
 					death_fx.fall1.anim()
 				2:
-					pass
+					death_fx.fall2.show()
+					death_fx.fall2.anim()
 				3:
 					pass
 		"rorys":

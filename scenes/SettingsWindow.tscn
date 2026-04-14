@@ -95,11 +95,36 @@ _data = {
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qmete"]
 gradient = SubResource("Gradient_jbven")
 
-[sub_resource type="LabelSettings" id="LabelSettings_ka1j2"]
-font = ExtResource("4_oufcy")
-font_size = 64
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oufcy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbven"]
+bg_color = Color(0.25, 0.25, 0.25, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmete"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_top = 2
+border_color = Color(0.7333331, 0, 1, 0.7490196)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka1j2"]
+bg_color = Color(0.09, 0.09, 0.09, 1)
+
+[sub_resource type="Theme" id="Theme_t16pp"]
+default_font = ExtResource("4_oufcy")
+default_font_size = 16
+TabBar/font_sizes/font_size = 32
+TabContainer/font_sizes/font_size = 32
+TabContainer/styles/panel = null
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_oufcy")
+TabContainer/styles/tab_focus = null
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_jbven")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_qmete")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_ka1j2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t16pp"]
 content_margin_left = 0.0
@@ -167,20 +192,17 @@ mouse_filter = 2
 texture = ExtResource("2_cpgv8")
 expand_mode = 2
 
-[node name="Label" type="Label" parent="." unique_id=377429181]
-z_index = 1
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -154.0
-offset_top = 6.0
-offset_right = 154.0
-offset_bottom = 66.0
-grow_horizontal = 2
-text = "Settings"
-label_settings = SubResource("LabelSettings_ka1j2")
-horizontal_alignment = 1
+[node name="TabContainer" type="TabContainer" parent="." unique_id=573625549]
+layout_mode = 0
+offset_right = 1328.0
+offset_bottom = 832.0
+theme = SubResource("Theme_t16pp")
+theme_override_font_sizes/font_size = 64
+current_tab = 0
+
+[node name="Display" type="Control" parent="TabContainer" unique_id=1982788217]
+layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="Button2" type="Button" parent="." unique_id=717482014]
 z_index = 1

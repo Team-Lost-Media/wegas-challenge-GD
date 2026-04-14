@@ -50,6 +50,8 @@ func _process(delta: float) -> void:
 	so_retro.rotation.y -= PI * 2 * delta
 	
 	if wegasleft == 0:
+		get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
+		Global.tutorial = false
 		if final_wegadoll_collected == false:
 			player.velocity.y = 60
 			player.collision.disabled = true
@@ -69,8 +71,7 @@ func _process(delta: float) -> void:
 			wega.position.y = -9999999
 			so_retro.show()
 		
-		#get_tree().change_scene_to_file("res://scenes/menus/win/tutorial win.tscn")
-		#Global.tutorial = false
+		
 
 
 func _on_wegadoll_collected() -> void: #this only applies to the first one dw

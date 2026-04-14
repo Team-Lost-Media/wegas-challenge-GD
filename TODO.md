@@ -1,7 +1,7 @@
 TODO
 # gameplay
 ## the idol
--X results screen
+-X COMPLETED results screen
 -X COMPLETED add a winscreen. pretty much done but i think it can get some more effects
 ## credits
 -X COMPLETED add music timing shit for the last half
@@ -10,9 +10,9 @@ TODO
 # menus
 - achievements menu
 - options menu
--X slightly edit the classic deathscreen
+-X COMPLETED slightly edit the classic deathscreen
 - PARTIALLY COMPLETED remake the wcti deathscreen (could use vids?)
--X switch the music credits to using an animation player instead of a tween
+-X COMPLETED switch the music credits to using an animation player instead of a tween
 
 # misc
 - some achievement icons

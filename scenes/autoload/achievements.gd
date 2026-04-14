@@ -25,13 +25,13 @@ var achievement_to_icon_dict: Dictionary = {
 	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
 	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
 	"ouroboros": "res://assets/textures/achievements/ouroboros.png", #do 100 runs "this really was our oboros"
-	"embrace the malt": false #run into maltigi while he's not dashing
+	"embrace the malt": false, #run into maltigi while he's not dashing
+	"thanks for playing!": "res://assets/textures/achievements/thnak you.png" 
 	
 }
 
 func _ready() -> void:
 	Global.player_died.connect(on_player_death)
-	Save.load_achievements()
 
 func award(achievement: String) -> void:
 	if Save.achievements_dict.has(achievement):

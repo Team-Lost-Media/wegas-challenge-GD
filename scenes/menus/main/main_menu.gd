@@ -16,7 +16,11 @@ func _play() -> void:
 	crossfade(true)
 
 func _classic() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
+	if Save.progress_dict.get("beat classic tutorial") == true:
+		get_tree().change_scene_to_file("res://scenes/levels/main/main.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/tutorial/tutorial.tscn")
+
 
 func _the_idol() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")

@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://b0nisytr0gbwg" path="res://assets/SFX/i could hardly believe it when i heard the news today i had to come and get it straight from you they said you were leavin full.ogg" id="11_lb8bt"]
 [ext_resource type="Texture2D" uid="uid://c5pditabpfpnt" path="res://assets/textures/green lawson.png" id="12_hlufn"]
 [ext_resource type="Script" uid="uid://d2jphk831i1e7" path="res://scenes/menus/wcti_gameover/rorys.gd" id="13_hou3e"]
+[ext_resource type="Script" uid="uid://bfn3knhxgkcc5" path="res://scenes/menus/wcti_gameover/fall_deathfx_2.gd" id="13_k3obx"]
 [ext_resource type="AudioStream" uid="uid://ie4asegaj7qd" path="res://assets/SFX/golden sigma cut.mp3" id="14_6lsbc"]
 [ext_resource type="AudioStream" uid="uid://bm0k6wodboy7r" path="res://assets/SFX/church death bell.mp3" id="15_k3obx"]
 [ext_resource type="Texture2D" uid="uid://cxrd1fwrw6xh6" path="res://assets/textures/golden sigma gif cut.png" id="15_kiujo"]
@@ -241,6 +242,28 @@ animations = [{
 
 [sub_resource type="LabelSettings" id="LabelSettings_hou3e"]
 font_size = 64
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k3obx"]
+friction = 0.3
+bounce = 0.6
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejqpf"]
+size = Vector2(88, 118)
+
+[sub_resource type="Gradient" id="Gradient_lxw1a"]
+offsets = PackedFloat32Array(0, 0.99, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s4rvh"]
+gradient = SubResource("Gradient_lxw1a")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iq8ya"]
+radius = 64.00781
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r5odr"]
 atlas = ExtResource("15_kiujo")
@@ -1131,6 +1154,312 @@ position = Vector2(480, 554.5)
 scale = Vector2(3.288889, 1.2708334)
 texture = ExtResource("12_hlufn")
 
+[node name="Fall2" type="Control" parent="DeathFX" unique_id=1228026437]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("13_k3obx")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="DeathFX/Fall2" unique_id=49154074]
+position = Vector2(803, -130)
+physics_material_override = SubResource("PhysicsMaterial_k3obx")
+gravity_scale = 3.0
+freeze = true
+contact_monitor = true
+max_contacts_reported = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="DeathFX/Fall2/RigidBody2D" unique_id=860377512]
+scale = Vector2(0.48888886, 0.48888886)
+texture = ExtResource("12_hlufn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathFX/Fall2/RigidBody2D" unique_id=645001305]
+shape = SubResource("RectangleShape2D_ejqpf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DeathFX/Fall2" unique_id=525179280]
+
+[node name="Sprite2D" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=220190062]
+position = Vector2(688, 433)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1302029517]
+position = Vector2(688, 433)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D2" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1194062383]
+position = Vector2(990, 444)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1638456975]
+position = Vector2(990, 444)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D3" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1465525484]
+position = Vector2(1287, 404)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1215981663]
+position = Vector2(1287, 404)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D4" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1259694926]
+position = Vector2(1598, 481)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1591186551]
+position = Vector2(1598, 481)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D5" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1199221253]
+position = Vector2(1832, 298)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1257919914]
+position = Vector2(1832, 298)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D6" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=190317175]
+position = Vector2(234, 315)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1121804885]
+position = Vector2(234, 315)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D7" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=851903083]
+position = Vector2(439, 472)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1310879084]
+position = Vector2(439, 472)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D8" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=781466087]
+position = Vector2(488, 227)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=183828451]
+position = Vector2(488, 227)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D9" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=861359970]
+position = Vector2(1521, 210)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1555217662]
+position = Vector2(1521, 210)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D10" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=497631354]
+position = Vector2(793, 672)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=29818705]
+position = Vector2(793, 672)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D11" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1140956263]
+position = Vector2(271, 692)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=973742371]
+position = Vector2(271, 692)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D12" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1594807845]
+position = Vector2(516, 755)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=2001511771]
+position = Vector2(516, 755)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D13" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=75974792]
+position = Vector2(1058, 715)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=131338452]
+position = Vector2(1058, 715)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D14" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=59777965]
+position = Vector2(1369, 644)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=923790428]
+position = Vector2(1369, 644)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D15" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=2070511455]
+position = Vector2(1626, 781)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=671147453]
+position = Vector2(1626, 781)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D16" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1123336631]
+position = Vector2(1851, 638)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=388990692]
+position = Vector2(1851, 638)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D17" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1923391936]
+position = Vector2(145, 909)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=30061427]
+position = Vector2(145, 909)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D18" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1930639325]
+position = Vector2(91, 532)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1928272421]
+position = Vector2(91, 532)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D19" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=2061408515]
+position = Vector2(413, 949)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=734593743]
+position = Vector2(413, 949)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D20" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=2036721552]
+position = Vector2(717, 909)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1457524404]
+position = Vector2(717, 909)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D21" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=807630953]
+position = Vector2(1122, 973)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1288663649]
+position = Vector2(1122, 973)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D22" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1811888147]
+position = Vector2(1376, 850)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1952447942]
+position = Vector2(1376, 850)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D23" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1407014906]
+position = Vector2(1638, 1015)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=650288781]
+position = Vector2(1638, 1015)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D24" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=323360008]
+position = Vector2(1881, 889)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=209168845]
+position = Vector2(1881, 889)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D25" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1905074648]
+position = Vector2(742, 207)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=270945110]
+position = Vector2(742, 207)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D26" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=129056132]
+position = Vector2(999, 174)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=683577192]
+position = Vector2(999, 174)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D27" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=53103490]
+position = Vector2(1242, 201)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=984146369]
+position = Vector2(1242, 201)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D28" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=250223545]
+position = Vector2(1664, 64)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1832906350]
+position = Vector2(1664, 64)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D29" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=658700230]
+position = Vector2(1895, 10)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=770732646]
+position = Vector2(1895, 10)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D30" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1556617967]
+position = Vector2(1, 76)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1801170513]
+position = Vector2(1, 76)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D31" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1005937338]
+position = Vector2(258, 150)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1313025475]
+position = Vector2(258, 150)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D32" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1171289402]
+position = Vector2(472, -4)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=54936577]
+position = Vector2(472, -4)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D33" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=700464305]
+position = Vector2(7, 746)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1571629662]
+position = Vector2(7, 746)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D34" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=209686660]
+position = Vector2(210, 1071)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1720492960]
+position = Vector2(210, 1071)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="Sprite2D35" type="Sprite2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=524250249]
+position = Vector2(909, 1065)
+texture = SubResource("GradientTexture2D_s4rvh")
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="DeathFX/Fall2/StaticBody2D" unique_id=1685261179]
+position = Vector2(909, 1065)
+shape = SubResource("CircleShape2D_iq8ya")
+
+[node name="sfx" type="AudioStreamPlayer" parent="DeathFX/Fall2" unique_id=1289375978]
+
 [node name="Rorys" type="Control" parent="DeathFX" unique_id=146369988]
 visible = false
 anchors_preset = 0
@@ -1209,3 +1538,5 @@ horizontal_alignment = 1
 wait_time = 0.2
 one_shot = true
 autostart = true
+
+[connection signal="body_entered" from="DeathFX/Fall2/RigidBody2D" to="DeathFX/Fall2" method="_on_rigid_body_2d_body_entered"]
