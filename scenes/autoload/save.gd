@@ -115,7 +115,7 @@ func reset_everything():
 	achievements.store_string(achievements_json_string)
 	
 	var progress = FileAccess.open(PROGRESS_SAVE_FILE_PATH, FileAccess.WRITE)
-	var progress_json_string = JSON.stringify(progress_dict.values()))
+	var progress_json_string = JSON.stringify(progress_dict.values())
 	progress.store_string(progress_json_string)
 	
 	var savefileversion = FileAccess.open(SAVEFILE_VERSION_FILE_PATH, FileAccess.WRITE_READ)
