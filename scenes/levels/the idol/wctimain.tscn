@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="2_cg5xk"]
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_cqmtp"]
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_sr6d7"]
-[ext_resource type="Script" uid="uid://ca4hmppmj846s" path="res://scenes/levels/the idol/flash.gd" id="3_7ixl2"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_k8crp"]
 [ext_resource type="PackedScene" uid="uid://c8e8i7oo5k8rm" path="res://scenes/objects/maltigi/maltigi.tscn" id="3_qn1fo"]
 [ext_resource type="Texture2D" uid="uid://bt4kg26lwevja" path="res://assets/textures/shoe bench murder mode.png" id="3_vtxl0"]
 [ext_resource type="Texture2D" uid="uid://b5npf3t0v1emx" path="res://assets/textures/so retroer! so retroer! so retroer! so retroer!.png" id="4_5niun"]
 [ext_resource type="Script" uid="uid://benjx0bkvjl3f" path="res://scenes/levels/the idol/message.gd" id="4_ll2y4"]
+[ext_resource type="PackedScene" uid="uid://j2j3klxeveer" path="res://scenes/objects/flash.tscn" id="5_7ytgl"]
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="6_goutp"]
 [ext_resource type="MeshLibrary" uid="uid://cr4mwxcsmnvgd" path="res://assets/meshlibraries/wcti mesh lib.tres" id="7_1a3yk"]
 [ext_resource type="AudioStream" uid="uid://chb3131atdha7" path="res://assets/BGM/WEXECUTION.mp3" id="7_50t62"]
@@ -259,19 +259,7 @@ initial_velocity_max = 1.0
 angular_velocity_min = -60.0
 angular_velocity_max = 60.0
 
-[node name="Flash" type="CanvasLayer" parent="." unique_id=921842660]
-layer = 100
-script = ExtResource("3_7ixl2")
-
-[node name="ColorRect" type="ColorRect" parent="Flash" unique_id=1591892910]
-z_index = 100
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0)
+[node name="Flash" parent="." unique_id=371273496 instance=ExtResource("5_7ytgl")]
 
 [node name="GUI" type="CanvasLayer" parent="." unique_id=900655831]
 

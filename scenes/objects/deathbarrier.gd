@@ -3,6 +3,7 @@ extends Area3D
 @export var death_scene = "res://scenes/menus/gameover/gameover.tscn"
 @export var saveable = true
 @export var damage: float = 100.5
+@export var save_collision_reenabled_time: float = 0.5
 #@export var default_save: Texture2D
 #@export var rorys_save: Texture2D
 
@@ -16,7 +17,7 @@ func _on_body_entered(body: Node3D) -> void:
 			if body.saveable_fall == true:
 				body.saveable_fall = false
 				i_will_save_you(body, true)
-				Achievements.award("thnak you.")
+				#Achievements.award("thnak you.")
 			else:
 				Global.health -= damage
 				if Global.health < 0:
@@ -52,5 +53,5 @@ func i_will_save_you(body: Node3D, anim: bool = true) -> void:
 	#note: DONT MAKE THIS USE collision.disabled!!!!!!!!!!!!!!!!! collision.disabled IS BROKEN!!!!! I DONT KNOW WHY BUT IT DOESNT DO ANYTHING JUST USE THIS INSTEAD
 	var shit = body.collision_mask
 	body.collision_mask = 0
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(save_collision_reenabled_time).timeout
 	body.collision_mask = shit

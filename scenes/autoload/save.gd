@@ -5,7 +5,7 @@ const PROGRESS_SAVE_FILE_PATH = "user://wegakill - game progress.sav"
 const SAVE_ACHIEVEMENTS_FILE_PATH = "user://wegakill - achievements.sav"
 const SAVEFILE_VERSION_FILE_PATH = "user://wegakill - savefile version.sav"
 
-var savefile_version = 7
+var savefile_version = 8
 
 var load_saves = true
 

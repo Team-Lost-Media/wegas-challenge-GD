@@ -308,7 +308,8 @@ font_size = 41
 [node name="Label3D8" type="Label3D" parent="Main/Labels/WegaLabels" unique_id=1203733413]
 transform = Transform3D(-4.3711374e-08, 0.532876, 0.8461933, 0, 0.84619266, -0.53287643, -0.99999964, -2.329275e-08, -3.6988283e-08, -113.95, 14.6259, -4.77219)
 pixel_size = 0.015
-text = "You can +STYLE on Wega."
+text = "You can +STYLE on Wega.
+Experiment with your moveset."
 font = ExtResource("6_mgrr2")
 font_size = 41
 

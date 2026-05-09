@@ -70,6 +70,7 @@ folder_colors={
 "res://scenes/": "orange",
 "res://scenes/autoload/": "red",
 "res://scenes/levels/main/": "red",
+"res://scenes/levels/the idol tutorial/": "yellow",
 "res://scenes/levels/tutorial/": "yellow",
 "res://scenes/menus/": "yellow",
 "res://scenes/objects/": "green",

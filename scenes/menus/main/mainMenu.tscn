@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://lmpnwg3dlk32" path="res://scenes/menus/main/high_score_label.gd" id="12_sp6e7"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 [ext_resource type="Texture2D" uid="uid://cxbawji40rfht" path="res://assets/textures/thumbnails/wcti2.png" id="13_524vu"]
+[ext_resource type="PackedScene" uid="uid://2i7t43dgb712" path="res://scenes/menus/achievements/achievements menu.tscn" id="17_qyi5k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
 shader = ExtResource("4_2qcjs")
@@ -597,6 +598,11 @@ layout_mode = 1
 offset_left = 2334.0
 offset_right = 2334.0
 
+[node name="Achievements Menu" parent="." unique_id=1580315916 instance=ExtResource("17_qyi5k")]
+layout_mode = 1
+offset_left = -2334.0
+offset_right = -2334.0
+
 [node name="Label" type="Label" parent="." unique_id=1018771620]
 layout_mode = 1
 anchors_preset = 3
@@ -610,7 +616,7 @@ offset_right = -3.0
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "demo2 alpha.0"
+text = "demo2 alpha.1"
 label_settings = SubResource("LabelSettings_ugs4v")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]

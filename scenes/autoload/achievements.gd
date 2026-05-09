@@ -14,7 +14,7 @@ var achievement_to_icon_dict: Dictionary = {
 	"so close, yet so far": "res://assets/textures/achievements/so close yet so far.png", #fail to collect the idol "you're almost there! keep trying!"
 	"idiot": "res://assets/textures/achievements/idiot.png", #die in the pause before transition to lap 2 "guy stupid"
 	"Task Failed Succesfully!": "res://assets/textures/achievements/task failed succesfully.png", #die to every enemy "insert fanfare here"
-	"haha": "res://assets/textures/achievements/placeholder.png", #die with 1 wegadoll left "point and laugh"
+	"haha": "res://assets/textures/achievements/haha.png", #die with 1 wegadoll left "point and laugh"
 	"super john bowling": "res://assets/textures/achievements/super john bowling.png", #super john bowling "super john bowling"
 	"thnak you.": "res://assets/textures/achievements/thnak you.png", #get saved by golden sigma "your wcleom."
 	"+EXPLODED": "res://assets/textures/achievements/exploded.png", #punch rorys "fuck you rorys"

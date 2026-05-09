@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://j2j3klxeveer"]
+
+[ext_resource type="Script" uid="uid://ca4hmppmj846s" path="res://scenes/objects/flash.gd" id="1_7jwmd"]
+
+[node name="Flash" type="CanvasLayer" unique_id=371273496]
+layer = 100
+script = ExtResource("1_7jwmd")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1625341585]
+z_index = 100
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)

@@ -11,7 +11,7 @@ func _input(event: InputEvent) -> void:
 			modes_container.position.y += 25
 		if event.button_index == 5:
 			modes_container.position.y -= 25
-	modes_container.position.y = clampf(modes_container.position.y, -400, 0)
+	modes_container.position.y = clampf(modes_container.position.y, -100, 0)
 
 func _process(delta: float) -> void:
 	if Save.progress_dict.get("beat classic") == true:

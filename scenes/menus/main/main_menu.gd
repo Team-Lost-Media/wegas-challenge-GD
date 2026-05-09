@@ -1,14 +1,11 @@
 extends Control
 
-## Wega's Challenge Godot Port
-
-## most of the code here was stolen from a first person template lmao
-
 @onready var settings = $Settings
 @onready var buttons = $VBoxContainer
 @onready var tips_text = $tips
 @onready var gamemodes = $Gamemodes
 @onready var recolorpedia: Control = $Recolorpedia
+@onready var achievements_menu: Control = $"Achievements Menu"
 
 func _play() -> void:
 	gamemodes.show()
@@ -23,7 +20,11 @@ func _classic() -> void:
 
 
 func _the_idol() -> void:
-	get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
+	if Save.progress_dict.get("beat wcti tutorial") == true:
+		get_tree().change_scene_to_file("res://scenes/levels/the idol/wctimain.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scenes/levels/the idol tutorial/the idol tutorial.tscn")
+	
 
 func _credits() -> void:
 	get_tree().change_scene_to_file("res://scenes/levels/main/mastermode credits test.tscn")
@@ -46,17 +47,24 @@ func _settings() -> void:
 
 func _recolorpedia() -> void:
 	recolorpedia.position = Vector2(0, 0)
-	position = Vector2(3000, 0)
+	position = Vector2(30000, 0)
 	crossfade(true)
 	Achievements.award("certified wega expert")
 
 func _exit_recolorpedia() -> void:
-	recolorpedia.position = Vector2(3000, 0)
+	recolorpedia.position = Vector2(30000, 0)
 	position = Vector2(0, 0)
 	crossfade(false)
 
 func _achievements() -> void:
-	pass # Replace with function body.
+	achievements_menu.position = Vector2(0, 0)
+	position = Vector2(-30000, 0)
+	crossfade(true)
+
+func _exit_achievements() -> void:
+	achievements_menu.position = Vector2(-30000, 0)
+	position = Vector2(0, 0)
+	crossfade(false)
 
 func _quit() -> void:
 	self.get_tree().quit()

@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://c75wlcsnjpc7p"]
+
+[ext_resource type="Script" uid="uid://cml1mau6ihlih" path="res://scenes/menus/win/tutorial_win.gd" id="1_amoxg"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="2_ae0pr"]
+[ext_resource type="Texture2D" uid="uid://dsxswci6f73lt" path="res://assets/textures/you winga.png" id="3_tr74n"]
+[ext_resource type="AudioStream" uid="uid://b573kcl71uafk" path="res://assets/SFX/you're winner.mp3" id="4_qq0i7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3kce"]
+font_size = 160
+
+[sub_resource type="LabelSettings" id="LabelSettings_aydif"]
+font = ExtResource("2_ae0pr")
+font_size = 66
+outline_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_dq4ij"]
+font_size = 66
+
+[node name="Control" type="Control" unique_id=1279177832]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_amoxg")
+classic_tutorial = false
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1061982145]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1324466066]
+anchor_mode = 0
+
+[node name="Label" type="Label" parent="." unique_id=2047317445]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.265625
+anchor_top = -0.0583333
+anchor_right = 0.358854
+anchor_bottom = 0.000925926
+offset_left = 558.0
+offset_top = 135.0
+offset_right = 1091.0
+offset_bottom = 290.0
+text = "good job!"
+label_settings = SubResource("LabelSettings_i3kce")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Label" unique_id=387289440]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0463483
+anchor_top = 0.757991
+anchor_right = 0.0463483
+anchor_bottom = 0.757991
+offset_left = -44.0
+offset_top = 248.0
+offset_right = 685.0
+offset_bottom = 403.0
+text = "now do it for real"
+label_settings = SubResource("LabelSettings_aydif")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Label" unique_id=1242295687]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0280899
+anchor_top = 2.0
+anchor_right = 0.147472
+anchor_bottom = 2.0
+offset_left = -48.0
+offset_top = 296.0
+offset_right = 681.0
+offset_bottom = 451.0
+text = "press space to go to menu)"
+label_settings = SubResource("LabelSettings_dq4ij")
+metadata/_edit_use_anchors_ = true
+
+[node name="NOT Maltigi" type="Sprite2D" parent="." unique_id=1848231336]
+position = Vector2(486, 496.75)
+scale = Vector2(4.94195, 4.08505)
+texture = ExtResource("3_tr74n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=94677081]
+stream = ExtResource("4_qq0i7")
+autoplay = true

@@ -87,9 +87,6 @@ func _input(event: InputEvent) -> void:
 			if event.button_index == 5:
 				camera.zoom -= Vector2(0.2, 0.2)'''
 	
-	if camera.zoom <= Vector2(1, 1):
-		camera.zoom = Vector2(1, 1)
-		camera.offset = Vector2(0, 0)
 	recolorpedia.position.y = clampf(recolorpedia.position.y, -1000, 0)
 
 func _ready() -> void:

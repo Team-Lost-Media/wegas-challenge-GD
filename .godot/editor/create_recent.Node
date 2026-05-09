@@ -1,3 +1,5 @@
+AnimatedSprite3D
+Timer
 Label
 Control
 TextureRect
@@ -11,4 +13,3 @@ HBoxContainer
 AnimatedSprite2D
 RichTextLabel
 AnimationPlayer
-ColorRect

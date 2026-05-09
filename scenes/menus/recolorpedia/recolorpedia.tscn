@@ -111,12 +111,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.847059)
 
-[node name="Camera" type="Camera2D" parent="." unique_id=2114960574]
-limit_left = 0
-limit_top = 0
-limit_right = 1920
-limit_bottom = 1080
-
 [node name="Control" type="Control" parent="." unique_id=2025004007]
 texture_filter = 1
 anchors_preset = 0
