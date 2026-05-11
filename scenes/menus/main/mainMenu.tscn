@@ -616,8 +616,9 @@ offset_right = -3.0
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "demo2 alpha.1"
+text = "v2"
 label_settings = SubResource("LabelSettings_ugs4v")
+horizontal_alignment = 2
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778330567
+::res://::1778519301
 default_bus_layout.tres::AudioBusLayout::785099390495628539::1775316985::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1774104215::0::1::::<><><>0<>0<><>::
 main.tscn::PackedScene/PackedScene::1070366442542408141::1747563943::0::1::::<><><>0<>0<><>::uid://ba87mwa8xsj6h::::res://scenes/main/gameloop.gd<>uid://b618s8yms5b50::::res://scenes/objects/wega/wega.tscn<>uid://brpt71jl5cg2q::::res://scenes/objects/player/player.tscn<>uid://bmnr2t3cooaoj::::res://assets/meshlibraries/main.tres<>uid://b10h4jeg5fnr5::::res://scenes/objects/deathbarrier.tscn<>uid://chb3131atdha7::::res://assets/BGM/WEXECUTION.mp3<>uid://c2ya7342irkd8::::res://scenes/objects/wegadoll/wegadoll.tscn<>uid://n6lujls2y0vf::::res://assets/SFX/wood tap.mp3
@@ -25,7 +25,7 @@ Roboto-Bold.ttf::FontFile::316043257971280746::1774104214::1774104377::1::::<><>
 VisualizerAudioBus.tres::AudioBusLayout::2284711204667567248::1774104214::0::1::::<><><>0<>0<><>::
 ::res://addons/rhythm_notifier/::1774104378
 icon.svg::CompressedTexture2D/CompressedTexture2D::915565551177489870::1774104215::1774104378::1::::<><><>0<>0<>f8cc61bf8b2136d516e4d26df7e62389<>res://.godot/imported/icon.svg-794c3cd667fc78a40612cbf98faccfbd.ctex::
-rhythm_notifier.gd::GDScript::1758134565861831738::1774104215::0::1::::RhythmNotifier<>Node<><>0<>1<><>::
+rhythm_notifier.gd::GDScript::1758134565861831738::1774104215::0::1::::RhythmNotifier<>Node<>res://addons/rhythm_notifier/icon.svg<>0<>1<><>::
 ::res://addons/richtext2/::1774104215
 emoji.gd::GDScript::6790777452550232943::1774104215::0::1::::Emoji<>RefCounted<><>0<>1<><>::
 font_helper.gd::GDScript::7531643313085518595::1774104215::0::1::::FontHelper<>Resource<><>0<>1<><>::
@@ -216,7 +216,7 @@ WegaEnraged.webp::CompressedTexture2D/CompressedTexture2D::877167247439505278::1
 wegakill cover.png::CompressedTexture2D/CompressedTexture2D::2685520428326154893::1774104215::1774104378::1::::<><><>0<>0<>618bcaf938729528543b2ebb9b19e4b4<>res://.godot/imported/wegakill cover.png-29e6c8982dedacaaa44e946706ab7655.ctex::
 wegakill.png::CompressedTexture2D/CompressedTexture2D::6162179170566334997::1774104215::1774104378::1::::<><><>0<>0<>9e634833f188b59a8648b38e8adc9aa5<>res://.godot/imported/wegakill.png-92691f20f7bed36765147b7a3206ac90.ctex::
 you winga.png::CompressedTexture2D/CompressedTexture2D::8471274237064570921::1739102790::1774104378::1::::<><><>0<>0<>7bc93df5b3669d79570e325f2f1d4709<>res://.godot/imported/you winga.png-b985805c86822bc286ec2a4b8fa01a67.ctex::
-::res://assets/textures/achievements/::1778331610
+::res://assets/textures/achievements/::1778331612
 certified wega expert.png::CompressedTexture2D::6329427824691887516::1774104215::1774104356::1::::<><><>0<>0<>727a7adf262e0a1a087ed4c223d3e542<>res://.godot/imported/certified wega expert.png-8f658aa98641d5034ab451f090248df1.ctex::
 exploded.png::CompressedTexture2D::1092656971572824374::1774104215::1774104356::1::::<><><>0<>0<>36b1ee0ee2c3cdea03b22422c9d0bb1a<>res://.godot/imported/exploded.png-f92fdc47aa6ce99558eda50d00eb0402.ctex::
 haha.png::CompressedTexture2D::3715978371488312250::1778331610::1778331612::1::::<><><>0<>0<>6847a438683ad4466bcf8c2fa7836ff3<>res://.godot/imported/haha.png-87b98f161e3137dd2552924b03f73c2a.ctex::
@@ -255,8 +255,8 @@ reset_high_score.gd::GDScript::2819844449588394574::1776175302::0::1::::<>Button
 SettingsWindow.tscn::PackedScene::3703183720414537606::1775316988::0::1::::<><><>0<>0<><>::uid://ctiqwlfv3kn0r::::res://scenes/settings_window.gd<>uid://dujk86c4t3d30::::res://scenes/settings_slider.gd<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://bov85nprj2w2h::::res://assets/textures/shoe_bench.png<>uid://bgf7oqtpfm4pm::::res://scenes/reset_high_score.gd<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf
 settings_slider.gd::GDScript::8582286057410600973::1774104216::0::1::::<>HSlider<><>0<>0<><>::
 settings_window.gd::GDScript::6123955764364310663::1774104216::0::1::::<>Panel<><>0<>0<><>::
-::res://scenes/autoload/::1778258082
-achievements.gd::GDScript::1123753790587756634::1776177907::0::1::::<>Control<><>0<>0<><>::
+::res://scenes/autoload/::1778331782
+achievements.gd::GDScript::1123753790587756634::1778331782::0::1::::<>Control<><>0<>0<><>::
 achievements.tscn::PackedScene::6053587851904275887::1774104215::0::1::::<><><>0<>0<><>::uid://qamcchwnyeji::::res://scenes/autoload/achievements.gd<>uid://ohy868mffp8k::::res://assets/textures/MusicClipmask.png<>uid://ba21qkbob8m4v::::res://assets/textures/achievements/placeholder.png<>uid://d3yhtkt4tafka::::res://assets/other/scrolling line bg.gdshader<>uid://crwldbtpbhuiu::::res://assets/textures/squaresloop.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf
 global.gd::GDScript::1589799686723312401::1774104215::0::1::::<>Node<><>0<>0<><>::
 save.gd::GDScript::2025443034864928943::1778258082::0::1::::<>Node<><>0<>0<><>::
@@ -304,10 +304,10 @@ credits_gameover.gd::GDScript::4007936771750526480::1774104216::0::1::::<>Contro
 ::res://scenes/menus/gameover/::1774104216
 gameover.gd::GDScript::1668897329616516952::1774104216::0::1::::<>Control<><>0<>0<><>::
 gameover.tscn::PackedScene::4822005129990280951::1774104216::0::1::::<><><>0<>0<><>::uid://x1oq3o7aaim7::::res://scenes/menus/gameover/gameover.gd<>uid://2u6sk66u0cn0::::res://assets/textures/maltigi.jpg<>uid://7jcnj2v5xp75::::res://assets/other/wcti points and time curve.tres
-::res://scenes/menus/main/::1778258223
+::res://scenes/menus/main/::1778333391
 gamemodes scroll.gd::GDScript::7741306639115931662::1777553434::0::1::::<>Panel<><>0<>0<><>::
 high_score_label.gd::GDScript::797784949338509571::1774104216::0::1::::<>Label<><>0<>0<><>::
-mainMenu.tscn::PackedScene::290914851781947886::1778258222::0::1::::<><><>0<>0<><>::uid://cnyb344qrb0um::::res://scenes/menus/main/main_menu.gd<>uid://bfikfhcvcr3u5::::res://assets/BGM/Does Not Bleed (No Drums).mp3<>uid://ct2agqmwrxprp::::res://assets/textures/wegakill.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>uid://bopsn36uffa10::::res://assets/BGM/Does Not Bleed (Drums).mp3<>uid://chc61cjknrihr::::res://assets/other/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://nm6pduxr8y0c::::res://assets/other/BroshK.ttf<>uid://h510i4enqc80::::res://assets/textures/thumbnails/classic.png<>uid://0ecmftjaqi74::::res://assets/textures/thumbnails/wcti.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://dij7go4ky6al7::::res://scenes/menus/main/gamemodes scroll.gd<>uid://lmpnwg3dlk32::::res://scenes/menus/main/high_score_label.gd<>uid://b6tdk2e5p381g::::res://scenes/menus/recolorpedia/recolorpedia.tscn<>uid://cxbawji40rfht::::res://assets/textures/thumbnails/wcti2.png<>uid://2i7t43dgb712::::res://scenes/menus/achievements/achievements menu.tscn
+mainMenu.tscn::PackedScene::290914851781947886::1778333391::0::1::::<><><>0<>0<><>::uid://cnyb344qrb0um::::res://scenes/menus/main/main_menu.gd<>uid://bfikfhcvcr3u5::::res://assets/BGM/Does Not Bleed (No Drums).mp3<>uid://ct2agqmwrxprp::::res://assets/textures/wegakill.png<>uid://bs035oor8cgug::::res://scenes/SettingsWindow.tscn<>uid://bopsn36uffa10::::res://assets/BGM/Does Not Bleed (Drums).mp3<>uid://chc61cjknrihr::::res://assets/other/texturescroll.gdshader<>uid://beoerbu073eqr::::res://assets/textures/wega.png<>uid://daau2y37t3uou::::res://assets/other/VCR_OSD_MONO_1.001.ttf<>uid://nm6pduxr8y0c::::res://assets/other/BroshK.ttf<>uid://h510i4enqc80::::res://assets/textures/thumbnails/classic.png<>uid://0ecmftjaqi74::::res://assets/textures/thumbnails/wcti.png<>uid://de6qx3ef6kfm1::::res://assets/other/Pixellari.ttf<>uid://dij7go4ky6al7::::res://scenes/menus/main/gamemodes scroll.gd<>uid://lmpnwg3dlk32::::res://scenes/menus/main/high_score_label.gd<>uid://b6tdk2e5p381g::::res://scenes/menus/recolorpedia/recolorpedia.tscn<>uid://cxbawji40rfht::::res://assets/textures/thumbnails/wcti2.png<>uid://2i7t43dgb712::::res://scenes/menus/achievements/achievements menu.tscn
 main_menu.gd::GDScript::5734953688726396912::1778258223::0::1::::<>Control<><>0<>0<><>::
 ::res://scenes/menus/recolorpedia/::1777553980
 recolorpedia.gd::GDScript::1278565450688963769::1777553980::0::1::::<>Control<><>0<>0<><>::
@@ -360,9 +360,9 @@ player.tscn::PackedScene::3611808840168377422::1775079879::0::1::::<><><>0<>0<><
 progress_bar.gd::GDScript::1032271959638554990::1774104216::0::1::::<>ProgressBar<><>0<>0<><>::
 style_bar.gd::GDScript::4971824606632701432::1774104216::0::1::::<>VBoxContainer<><>0<>0<><>::
 timer.gd::GDScript::6450223892863130342::1774104216::0::1::::<>Label<><>0<>0<><>::
-::res://scenes/objects/rorys/::1778325847
+::res://scenes/objects/rorys/::1778331781
 rorys.gd::GDScript::1828369424279034452::1774104216::0::1::::<>AnimatedSprite3D<><>0<>0<><>::
-rorys.tscn::PackedScene::35977981932156860::1778325847::0::1::::<><><>0<>0<><>::uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://1bw8h0nquq5y::::res://scenes/objects/rorys/rorys.gd<>uid://d1t21utirnpcc::::res://assets/textures/spritesheetboom.png<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://ca4hmppmj846s::::res://scenes/objects/flash.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://03fbe2ya4f4i::::res://assets/SFX/rory being an asshole.ogg
+rorys.tscn::PackedScene::35977981932156860::1778331781::0::1::::<><><>0<>0<><>::uid://c27stbfaxcpcp::::res://assets/textures/rorys accurate.png<>uid://1bw8h0nquq5y::::res://scenes/objects/rorys/rorys.gd<>uid://d1t21utirnpcc::::res://assets/textures/spritesheetboom.png<>uid://c6b31t80xgx6v::::res://assets/SFX/Counter Strike Punch Sound Effect.mp3<>uid://ca4hmppmj846s::::res://scenes/objects/flash.gd<>uid://b88xh2xnkblfl::::res://assets/textures/punchable.png<>uid://03fbe2ya4f4i::::res://assets/SFX/rory being an asshole.ogg
 ::res://scenes/objects/shoe bench (enemy)/::1774104216
 shoe bench.tscn::PackedScene::4218370134104277957::1774104216::0::1::::<><><>0<>0<><>::uid://bt4kg26lwevja::::res://assets/textures/shoe bench murder mode.png<>uid://dkar4yjkwtli5::::res://scenes/objects/shoe bench (enemy)/shoe_bench.gd<>uid://boqg6v6tagpu2::::res://assets/SFX/shoebench.mp3
 shoe_bench.gd::GDScript::7862235739308055506::1774104216::0::1::::<>Sprite3D<><>0<>0<><>::
@@ -386,11 +386,11 @@ wegadoll.tscn::PackedScene::6717543873806726871::1774104216::0::1::::<><><>0<>0<
 ::res://screenshots/::1774104379
 2026-03-10173206.png::CompressedTexture2D::5341059460885139027::1774104216::1774104379::1::::<><><>0<>0<>4631b12dd974d6147346dcba71e47e0d<>res://.godot/imported/2026-03-10173206.png-7d6c80f10ad9394011c7764495034df8.ctex::
 ::res://text/::1774104216
-::res://text/recolorpedia/::1777553382
-maltigi.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
-rorys.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
-shoe bench.txt::TextFile::-1::1777553382::0::1::::<><><>0<>0<><>::
+::res://text/recolorpedia/::1778333391
+maltigi.txt::TextFile::-1::1778333042::0::1::::<><><>0<>0<><>::
+rorys.txt::TextFile::-1::1778332275::0::1::::<><><>0<>0<><>::
+shoe bench.txt::TextFile::-1::1778333391::0::1::::<><><>0<>0<><>::
 super john.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
 template.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
-ultra irios.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
-wega.txt::TextFile::-1::1774104216::0::1::::<><><>0<>0<><>::
+ultra irios.txt::TextFile::-1::1778333194::0::1::::<><><>0<>0<><>::
+wega.txt::TextFile::-1::1778332801::0::1::::<><><>0<>0<><>::

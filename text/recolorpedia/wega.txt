@@ -1,7 +1,7 @@
 Wega
 Origin: idk
 Wega constantly moves towards your position, phasing through obstacles. [br] [br]When touched, he instantly kills you.
-Wega is constantly chasing you, and so he must be constantly kept track of. Luckily, since his behaviour is so basic, it's rather easy to keep track of him. [br] [br]On top of that, he also has varying tells on how close-by he is, such as the red/purple light he emits and the sound he constantly plays.
+Wega is constantly chasing you, and so he must be constantly kept track of. Luckily, since his behaviour is so basic, it's rather easy to keep track of him. [br] [br]On top of that, he also has varying tells on how close-by he is, such as the colored light he emits and the sound he constantly plays.
 * His scream is a cut sound from Half-Life 2, called "hl2-stalker-scream.mp3". [br] [br]* Urio is his brother, and both run a site called MOVIEFREE.COM. [br] [br]* Go play WATLM
 Wega is the main threat of the game, but, by himself, he's extremely easy to avoid (his chase in the tutorial should be proof of that). [br] [br]This is because Wega is most dangerous when there's other things pressuring you, such as the threat of falling, the need to rack up points or other enemies. [br] [br]The idea for "STYLE" came as a result of me adding jumping and dashing to Xetheon's port of Wega's Challenge to Godot. I found that juking around Wega with a dash was fun, and I wanted to incentivize doing so. I had also recently played ULTRAKILL, which was (and still is) a very big source of inspiration for this game's design.
 +JUKED
