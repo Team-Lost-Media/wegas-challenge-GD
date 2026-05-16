@@ -532,11 +532,13 @@ draw_pass_1 = SubResource("BoxMesh_utsbc")
 
 [node name="WEXECUTION" type="AudioStreamPlayer" parent="." unique_id=990414659]
 stream = ExtResource("6_b8rnu")
+bus = &"BGM"
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=2088199578]
 stream = ExtResource("7_h636s")
 volume_db = -5.0
 pitch_scale = 1.7
+bus = &"SFX"
 
 [node name="group of wegas" type="Node3D" parent="." unique_id=906359095]
 

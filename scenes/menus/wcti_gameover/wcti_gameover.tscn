@@ -1459,6 +1459,7 @@ position = Vector2(909, 1065)
 shape = SubResource("CircleShape2D_iq8ya")
 
 [node name="sfx" type="AudioStreamPlayer" parent="DeathFX/Fall2" unique_id=1289375978]
+bus = &"SFX"
 
 [node name="Rorys" type="Control" parent="DeathFX" unique_id=146369988]
 visible = false

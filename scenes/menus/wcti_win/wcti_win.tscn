@@ -11,12 +11,12 @@
 [sub_resource type="RichTextEffect" id="RichTextEffect_bbgvn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1874870742138
+metadata/rt = 1882974138034
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_e0xnn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1875575385217
+metadata/rt = 1883678781113
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3
@@ -48,17 +48,21 @@ anchor_mode = 0
 [node name="DRAMATIC SOUND!!!!!!!!!!!" type="AudioStreamPlayer" parent="." unique_id=111794539]
 stream = ExtResource("3_w02rk")
 autoplay = true
+bus = &"SFX"
 
 [node name="text sound" type="AudioStreamPlayer" parent="." unique_id=2127795703]
 stream = ExtResource("3_a8hyr")
 volume_db = 4.0
+bus = &"SFX"
 
 [node name="glitch sound" type="AudioStreamPlayer" parent="." unique_id=1397630700]
 stream = ExtResource("4_5or1p")
 volume_db = 1.0
+bus = &"SFX"
 
 [node name="final sound" type="AudioStreamPlayer" parent="." unique_id=1695307013]
 stream = ExtResource("5_bbgvn")
+bus = &"SFX"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=801796536]
 clip_contents = false

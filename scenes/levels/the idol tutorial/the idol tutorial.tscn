@@ -353,6 +353,13 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -0.5, 1.25, 8)
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
 
+[node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=776630354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+light_color = Color(0.655, 0.31, 1, 1)
+light_energy = 7.5
+shadow_enabled = true
+omni_range = 10.0
+
 [node name="Main" type="Node3D" parent="." unique_id=1874344369]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.485046, 0.712285, 0.156724)
 
@@ -472,6 +479,7 @@ shape = SubResource("SphereShape3D_jxpd2")
 [node name="SFX" type="AudioStreamPlayer" parent="Crate" unique_id=816867916]
 stream = ExtResource("16_nq13k")
 volume_db = 2.0
+bus = &"SFX"
 
 [node name="Hitstop" type="Timer" parent="Crate" unique_id=1514127803]
 wait_time = 0.5
@@ -513,11 +521,13 @@ omni_range = 10.0
 
 [node name="WEXECUTION" type="AudioStreamPlayer" parent="." unique_id=990414659]
 stream = ExtResource("17_1bx5r")
+bus = &"BGM"
 
 [node name="SFX" type="AudioStreamPlayer" parent="." unique_id=2088199578]
 stream = ExtResource("18_ddgid")
 volume_db = -5.0
 pitch_scale = 1.7
+bus = &"SFX"
 
 [node name="group of wegas" type="Node3D" parent="." unique_id=906359095]
 
