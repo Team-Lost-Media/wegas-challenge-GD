@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="2_yude8"]
 [ext_resource type="Script" uid="uid://bgf7oqtpfm4pm" path="res://scenes/reset_high_score.gd" id="4_ee6v7"]
 [ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="4_oufcy"]
+[ext_resource type="Script" uid="uid://d3pxmldvb26dn" path="res://scenes/menus/main/reset_everything_button.gd" id="7_jbven"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2lxl"]
 bg_color = Color(0.2484, 0.2484, 0.2484, 1)
@@ -386,6 +387,24 @@ theme_override_font_sizes/font_size = 40
 text = "Reset High Score"
 script = ExtResource("4_ee6v7")
 
+[node name="reset EVERYTHING" type="Button" parent="." unique_id=829073751]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -246.0
+offset_right = 210.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+text = "Reset ALL SAVE DATA"
+script = ExtResource("7_jbven")
+
 [node name="Button" type="Button" parent="." unique_id=758835068]
 z_index = 1
 layout_mode = 1
@@ -405,4 +424,5 @@ text = "Apply"
 
 [connection signal="pressed" from="Button2" to="." method="_on_close"]
 [connection signal="pressed" from="reset high score" to="reset high score" method="_on_pressed"]
+[connection signal="pressed" from="reset EVERYTHING" to="." method="_on_reset_everything_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_apply_settings"]

@@ -9,6 +9,7 @@ extends Control
 
 func _play() -> void:
 	gamemodes.show()
+	gamemodes.open = true
 	buttons.hide()
 	crossfade(true)
 
@@ -31,6 +32,7 @@ func _credits() -> void:
 
 func on_gamemode_quit_pressed() -> void:
 	gamemodes.hide()
+	gamemodes.open = false
 	buttons.show()
 	crossfade(false)
 
@@ -47,22 +49,27 @@ func _settings() -> void:
 
 func _recolorpedia() -> void:
 	recolorpedia.position = Vector2(0, 0)
-	position = Vector2(30000, 0)
+	recolorpedia.open = true
+	position = Vector2(-30000, 0)
 	crossfade(true)
 	Achievements.award("certified wega expert")
 
 func _exit_recolorpedia() -> void:
 	recolorpedia.position = Vector2(30000, 0)
+	recolorpedia.open = false
 	position = Vector2(0, 0)
 	crossfade(false)
 
 func _achievements() -> void:
-	achievements_menu.position = Vector2(0, 0)
+	achievements_menu.position = Vector2(30000, 0)
+	achievements_menu.open = true
+	achievements_menu.show()
 	position = Vector2(-30000, 0)
 	crossfade(true)
 
 func _exit_achievements() -> void:
 	achievements_menu.position = Vector2(-30000, 0)
+	achievements_menu.open = false
 	position = Vector2(0, 0)
 	crossfade(false)
 

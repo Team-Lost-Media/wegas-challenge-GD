@@ -5,12 +5,15 @@ extends Panel
 @onready var the_idol: Button = $"TextureRect/VBoxContainer/The Idol"
 @onready var thing_to_show_while_the_idol_is_locked: Control = $"TextureRect/VBoxContainer/The Idol/thing to show while the idol is locked"
 
+var open: bool = false
+
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == 4:
-			modes_container.position.y += 25
-		if event.button_index == 5:
-			modes_container.position.y -= 25
+		if open:
+			if event.button_index == 4:
+				modes_container.position.y += 25
+			if event.button_index == 5:
+				modes_container.position.y -= 25
 	modes_container.position.y = clampf(modes_container.position.y, -100, 0)
 
 func _process(delta: float) -> void:

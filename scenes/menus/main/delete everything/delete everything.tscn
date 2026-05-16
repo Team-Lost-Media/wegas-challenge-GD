@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://byava5hmd338n"]
+
+[ext_resource type="Script" uid="uid://dagmly3jb6aoc" path="res://scenes/menus/main/delete everything/delete_everything.gd" id="1_jv4eu"]
+[ext_resource type="Texture2D" uid="uid://2u6sk66u0cn0" path="res://assets/textures/maltigi.jpg" id="2_7vash"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_rf1fe"]
+
+[node name="DeleteEverything" type="Control" unique_id=1896323663]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jv4eu")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2093234017]
+modulate = Color(0.23, 0.23, 0.23, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7vash")
+stretch_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1693068242]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -762.0
+offset_right = 762.0
+offset_bottom = 312.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_rf1fe")
+theme_override_font_sizes/normal_font_size = 128
+bbcode_enabled = true
+text = "DELETE ALL SAVE DATA?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="." unique_id=1567211925]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -762.0
+offset_top = 292.0
+offset_right = 762.0
+offset_bottom = 604.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_rf1fe")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "You will lose all high scores, achievements and progress."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResetButton" type="Button" parent="." unique_id=1437344976]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.905
+anchor_right = 0.3
+anchor_bottom = 0.905
+offset_left = -548.0
+offset_top = -294.39996
+offset_right = 682.0
+offset_bottom = 73.60004
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.88, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "DELETE EVERYTHING!!!!!!"
+icon = ExtResource("2_7vash")
+
+[node name="QuitButton" type="Button" parent="." unique_id=1205432238]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -641.0
+offset_top = -140.0
+offset_right = -26.709473
+offset_bottom = -20.799805
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 48
+text = "go back without resetting"
+
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

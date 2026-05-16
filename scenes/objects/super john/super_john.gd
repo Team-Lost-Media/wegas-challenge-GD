@@ -120,6 +120,8 @@ func _on_death_area_3d_body_entered(body: Node3D) -> void:
 			body.boosted.start(0.75)
 			Global.died_to_override = "super john"
 			velocity = -velocity
+			
+			Achievements.award("super john bowling")
 
 
 func _on_punchable_area_3d_body_entered(body: Node3D) -> void:

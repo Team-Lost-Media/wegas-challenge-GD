@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cd60sgtrgf0hx"]
+
+[ext_resource type="Script" uid="uid://ccukyteehdr3j" path="res://scenes/menus/achievements/achievement menu thing.gd" id="1_wxop3"]
+[ext_resource type="Texture2D" uid="uid://cniepqjhpl7ka" path="res://assets/textures/recolorpedia/achievementsbox.png" id="2_vsmnm"]
+[ext_resource type="Texture2D" uid="uid://ptj5vgou4nxm" path="res://assets/textures/achievements/exploded.png" id="3_ocib0"]
+[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="4_nr588"]
+[ext_resource type="Texture2D" uid="uid://kt7cryisokl8" path="res://assets/textures/achievements/winga.png" id="5_7wm0a"]
+
+[node name="Achievement" type="Control" unique_id=1065809476]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -639.0
+offset_right = 1500.0
+offset_bottom = -389.0
+script = ExtResource("1_wxop3")
+
+[node name="Box" type="TextureRect" parent="." unique_id=2010007708]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1500.0
+offset_bottom = 250.0
+texture = ExtResource("2_vsmnm")
+
+[node name="Achievement Icon" type="TextureRect" parent="." unique_id=1212224183]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 76.0
+offset_top = 64.0
+offset_right = 204.0
+offset_bottom = 192.0
+texture = ExtResource("3_ocib0")
+
+[node name="Achievement Name" type="RichTextLabel" parent="." unique_id=717686114]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 235.0
+offset_top = 26.0
+offset_right = 1310.0
+offset_bottom = 116.0
+theme_override_fonts/normal_font = ExtResource("4_nr588")
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "Cool Achievement Name"
+
+[node name="Achievement Description" type="RichTextLabel" parent="." unique_id=1905050302]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 235.0
+offset_top = 111.0
+offset_right = 1305.0
+offset_bottom = 212.0
+theme_override_fonts/normal_font = ExtResource("4_nr588")
+theme_override_font_sizes/normal_font_size = 41
+bbcode_enabled = true
+text = "Words Words Words Wow That's A Lot Of Words Isn't It Surprising How Many Words There Are"
+
+[node name="Achievement Description2" type="RichTextLabel" parent="." unique_id=584498715]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 235.0
+offset_top = 192.0
+offset_right = 1296.0
+offset_bottom = 293.0
+theme_override_colors/default_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_fonts/normal_font = ExtResource("4_nr588")
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "this joke sucks"
+
+[node name="Darken" type="ColorRect" parent="." unique_id=240502140]
+visible = false
+layout_mode = 0
+offset_right = 1500.0
+offset_bottom = 250.0
+color = Color(0, 0, 0, 0.827451)
+
+[node name="Winga" type="TextureRect" parent="." unique_id=1855186344]
+visible = false
+layout_mode = 0
+offset_left = -142.0
+offset_top = 55.0
+offset_right = -14.0
+offset_bottom = 183.0
+texture = ExtResource("5_7wm0a")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

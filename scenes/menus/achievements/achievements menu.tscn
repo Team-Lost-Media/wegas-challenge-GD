@@ -2,22 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dqsq7f0fc50wd" path="res://scenes/menus/achievements/achievements menu.gd" id="1_nrm0g"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_t21ta"]
-[ext_resource type="Texture2D" uid="uid://bm0pyqnxpxd36" path="res://assets/textures/recolorpedia/box4.png" id="3_4scsl"]
-[ext_resource type="Texture2D" uid="uid://c27stbfaxcpcp" path="res://assets/textures/rorys accurate.png" id="4_6juv8"]
-[ext_resource type="Texture2D" uid="uid://b3jpcq473qemx" path="res://assets/textures/maltigi enemy.png" id="5_vvl1d"]
-[ext_resource type="Texture2D" uid="uid://7o4npgo68ncp" path="res://assets/textures/ultra irios accurate.png" id="6_w25ue"]
-[ext_resource type="Texture2D" uid="uid://daxy2g8buut62" path="res://assets/textures/super john.png" id="7_dfkc3"]
-[ext_resource type="Texture2D" uid="uid://bov85nprj2w2h" path="res://assets/textures/shoe_bench.png" id="8_vp1es"]
-[ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="9_b5ub5"]
-[ext_resource type="FontFile" uid="uid://de6qx3ef6kfm1" path="res://assets/other/Pixellari.ttf" id="10_xjsqw"]
-[ext_resource type="Texture2D" uid="uid://n7i8h85wsg3w" path="res://assets/textures/recolorpedia/box7.png" id="11_np6i5"]
-[ext_resource type="Texture2D" uid="uid://0xwmt5f0dneo" path="res://assets/textures/recolorpedia/box8.png" id="12_kgccw"]
-[ext_resource type="Texture2D" uid="uid://dxqh170tb0juh" path="res://assets/textures/recolorpedia/box8.5.png" id="13_bv6mq"]
-[ext_resource type="Texture2D" uid="uid://dwxq3y8hsoieh" path="res://assets/textures/recolorpedia/box9.png" id="14_6dnbs"]
-[ext_resource type="Texture2D" uid="uid://b387uv10iqxtd" path="res://assets/textures/recolorpedia/box11.png" id="15_trny7"]
+[ext_resource type="PackedScene" uid="uid://cd60sgtrgf0hx" path="res://scenes/menus/achievements/achievement menu item thingy.tscn" id="4_uft6x"]
+[ext_resource type="Texture2D" uid="uid://dm77bsymw3frm" path="res://assets/textures/achievements/speedrunner.png" id="6_8j1ec"]
+[ext_resource type="Texture2D" uid="uid://dsui5othyecfu" path="res://assets/textures/achievements/wexecution.png" id="6_ecis2"]
+[ext_resource type="Texture2D" uid="uid://c2vuvukae8rj8" path="res://assets/textures/achievements/so close yet so far.png" id="7_mkvfe"]
+[ext_resource type="Texture2D" uid="uid://b3vgo8tacnak" path="res://assets/textures/achievements/thnak you.png" id="8_8j1ec"]
+[ext_resource type="Texture2D" uid="uid://kt7cryisokl8" path="res://assets/textures/achievements/winga.png" id="8_uft6x"]
+[ext_resource type="Texture2D" uid="uid://j4n3cdjedtpa" path="res://assets/textures/achievements/idiot.png" id="10_omis3"]
+[ext_resource type="Texture2D" uid="uid://bs7bvdytfqfla" path="res://assets/textures/achievements/haha.png" id="11_2ydd1"]
+[ext_resource type="Texture2D" uid="uid://dxsu15o8dy7cn" path="res://assets/textures/achievements/super john bowling.png" id="12_omis3"]
+[ext_resource type="Texture2D" uid="uid://76hw8p618kwg" path="res://assets/textures/achievements/shoe bench.png" id="13_4q0g8"]
+[ext_resource type="Texture2D" uid="uid://d14pa1ycf0cs2" path="res://assets/textures/achievements/wegakill.png" id="14_tgs3n"]
+[ext_resource type="Texture2D" uid="uid://cwga0s1g4knea" path="res://assets/textures/achievements/certified wega expert.png" id="15_tgs3n"]
 [ext_resource type="Texture2D" uid="uid://dp4074674wsar" path="res://assets/textures/recolorpedia/box5.png" id="16_hoycn"]
-[ext_resource type="Texture2D" uid="uid://dvmuq144plfwk" path="res://assets/textures/recolorpedia/box3.png" id="17_qidij"]
-[ext_resource type="Texture2D" uid="uid://cw3edukcu2men" path="res://assets/textures/recolorpedia/box3hover.png" id="18_deacs"]
 
 [sub_resource type="Shader" id="Shader_ccdq0"]
 code = "shader_type canvas_item;
@@ -58,25 +55,6 @@ shader_parameter/repeat_y = 5.25
 shader_parameter/row_offset = 0.775
 shader_parameter/texture_to_scroll = ExtResource("2_t21ta")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvf1e"]
-bg_color = Color(0.796078, 0.858824, 0.988235, 1)
-border_width_left = 8
-border_width_top = 8
-border_width_right = 8
-border_width_bottom = 8
-border_color = Color(0.796078, 0.858824, 0.988235, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-anti_aliasing = false
-
-[sub_resource type="LabelSettings" id="LabelSettings_4v2tg"]
-font = ExtResource("9_b5ub5")
-font_size = 41
-outline_size = 20
-outline_color = Color(0, 0, 0, 1)
-
 [node name="Achievements Menu" type="Control" unique_id=1580315916]
 texture_filter = 1
 layout_mode = 3
@@ -111,907 +89,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.847059)
 
-[node name="Control" type="Control" parent="." unique_id=1534417161]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Portrait" type="TextureRect" parent="Control" unique_id=1120386589]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.401
-anchor_top = 0.035
-anchor_right = 0.556
-anchor_bottom = 0.299
-offset_left = 882.96
-offset_top = 4.6
-offset_right = 1104.76
-offset_bottom = 222.04
-grow_horizontal = 2
-texture = ExtResource("3_4scsl")
-
-[node name="Wega" type="TextureRect" parent="Control/Portrait" unique_id=1654553461]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_t21ta")
-expand_mode = 1
-
-[node name="Rorys" type="TextureRect" parent="Control/Portrait" unique_id=1188218310]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_6juv8")
-expand_mode = 1
-
-[node name="Maltigi" type="TextureRect" parent="Control/Portrait" unique_id=355955721]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_vvl1d")
-expand_mode = 1
-
-[node name="Ultra Irios" type="TextureRect" parent="Control/Portrait" unique_id=322067067]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_w25ue")
-expand_mode = 1
-
-[node name="Super John" type="TextureRect" parent="Control/Portrait" unique_id=11878370]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_dfkc3")
-expand_mode = 1
-
-[node name="Shoe Bench" type="TextureRect" parent="Control/Portrait" unique_id=908792738]
-visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.0
-offset_top = -96.0
-offset_right = 96.0
-offset_bottom = 96.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("8_vp1es")
-expand_mode = 1
-
-[node name="Name" type="RichTextLabel" parent="Control" unique_id=1210387788]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.581
-anchor_top = 0.031
-anchor_right = 1.0
-anchor_bottom = 0.159
-offset_left = 1158.76
-offset_top = 18.76
-offset_right = 1823.0
-offset_bottom = 87.64
-grow_horizontal = 0
-theme_override_constants/outline_size = 41
-theme_override_fonts/normal_font = ExtResource("9_b5ub5")
-theme_override_font_sizes/normal_font_size = 82
-bbcode_enabled = true
-text = "Wega"
-vertical_alignment = 1
-
-[node name="Origin" type="RichTextLabel" parent="Control" unique_id=1623666970]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.586
-anchor_top = 0.15
-anchor_right = 1.0
-anchor_bottom = 0.198
-offset_left = 1161.56
-offset_top = 91.0
-offset_right = 1854.0
-offset_bottom = 116.08
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/outline_size = 8
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Origin: idk"
-
-[node name="HSeparator" type="HSeparator" parent="Control" unique_id=1988471560]
-texture_filter = 1
-layout_mode = 0
-offset_left = 1142.0
-offset_top = 139.0
-offset_right = 1820.0
-offset_bottom = 153.0
-theme_override_styles/separator = SubResource("StyleBoxFlat_gvf1e")
-
-[node name="Behaviour" type="TextureRect" parent="Control" unique_id=1534339460]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 258.0
-offset_right = 1116.0
-offset_bottom = 658.0
-texture = ExtResource("11_np6i5")
-
-[node name="Title" type="RichTextLabel" parent="Control/Behaviour" unique_id=2077766967]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.072
-anchor_right = 0.95
-anchor_bottom = 0.212
-offset_left = 11.0
-offset_top = -19.8
-offset_right = -11.2
-offset_bottom = -19.8
-grow_horizontal = 0
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "BEHAVIOUR"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Text" type="RichTextLabel" parent="Control/Behaviour" unique_id=1762698178]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.02
-anchor_top = 0.27
-anchor_right = 0.95
-anchor_bottom = 0.9
-offset_left = -0.12
-offset_top = -23.0
-offset_right = -0.200012
-offset_bottom = 12.0
-grow_horizontal = 0
-theme_override_constants/line_separation = 4
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Wega constantly moves towards your position, phasing through obstacles.
-
-When touched, he instantly kills you."
-
-[node name="Tips" type="TextureRect" parent="Control" unique_id=1745007494]
-texture_filter = 1
-layout_mode = 0
-offset_left = 1200.0
-offset_top = 191.0
-offset_right = 1920.0
-offset_bottom = 658.0
-texture = ExtResource("12_kgccw")
-
-[node name="Title" type="RichTextLabel" parent="Control/Tips" unique_id=1204766193]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.069
-anchor_right = 1.0
-anchor_bottom = 0.206
-offset_left = 40.05
-offset_top = -27.223
-offset_right = -29.0
-offset_bottom = -27.103
-grow_horizontal = 0
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "TIPS"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Text" type="RichTextLabel" parent="Control/Tips" unique_id=735426462]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.046
-anchor_top = 0.21
-anchor_right = 0.983
-anchor_bottom = 0.921
-offset_left = -4.12
-offset_top = -14.07
-offset_right = 4.23999
-offset_bottom = 8.89301
-grow_horizontal = 0
-theme_override_constants/line_separation = 4
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Wega is constantly chasing you, and so he must be constantly kept track of. Luckily, since his behaviour is so basic, it's rather easy to keep track of him.
-
-On top of that, he also has varying tells on how close-by he is, such as the red/purple light he emits and the sound he constantly plays."
-
-[node name="Info" type="TextureRect" parent="Control" unique_id=1298214996]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = 1200.0
-offset_top = 689.0
-offset_right = 1920.0
-offset_bottom = 1156.0
-texture = ExtResource("12_kgccw")
-
-[node name="Title" type="RichTextLabel" parent="Control/Info" unique_id=1925092713]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.069
-anchor_right = 1.0
-anchor_bottom = 0.206
-offset_left = 11.0
-offset_top = -28.223
-offset_bottom = -28.063
-grow_horizontal = 0
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "INFO"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Text" type="RichTextLabel" parent="Control/Info" unique_id=2127551333]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.046
-anchor_top = 0.21
-anchor_right = 0.983
-anchor_bottom = 0.932
-offset_left = -2.12
-offset_top = -14.07
-offset_right = 6.23999
-offset_bottom = 3.75601
-grow_horizontal = 0
-theme_override_constants/line_separation = 4
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "* His scream is a cut sound from Half-Life 2, called \"hl2-stalker-scream.mp3\".
-
-* "
-
-[node name="Dev Commentary" type="TextureRect" parent="Control" unique_id=20302583]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 689.0
-offset_right = 1166.0
-offset_bottom = 1156.0
-texture = ExtResource("13_bv6mq")
-flip_h = true
-
-[node name="Title" type="RichTextLabel" parent="Control/Dev Commentary" unique_id=722954611]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.069
-anchor_right = 1.0
-anchor_bottom = 0.206
-offset_left = 49.0
-offset_top = -27.223
-offset_right = -17.0
-offset_bottom = -27.502
-grow_horizontal = 0
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "DEV NOTES"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Text" type="RichTextLabel" parent="Control/Dev Commentary" unique_id=590346073]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.099
-anchor_top = 0.218
-anchor_right = 0.954
-anchor_bottom = 0.924
-offset_left = -62.28
-offset_top = -17.806
-offset_right = 7.12
-offset_bottom = 14.492
-grow_horizontal = 0
-theme_override_constants/line_separation = 4
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Wega is the main threat of the game, but, by himself, he's extremely easy to avoid (his chase in the tutorial should be proof of that).
-
-This is because Wega is most dangerous when there's other things pressuring you, such as the threat of falling, the need to rack up points or other enemies.
-
-The idea for \"STYLE\" came as a result of me adding jumping and dashing to Xetheon's port of Wega's Challenge to Godot. I found that juking around Wega with a dash was fun, and I wanted to incentivize doing so. I had also recently played ULTRAKILL, which was (and still is) a very big source of inspiration for this game's design."
-
-[node name="Style Bonuses Title" type="TextureRect" parent="Control" unique_id=101461580]
-texture_filter = 1
-layout_mode = 0
-offset_left = 985.0
-offset_top = 1188.0
-offset_right = 1391.0
-offset_bottom = 1337.0
-texture = ExtResource("14_6dnbs")
-
-[node name="Text" type="RichTextLabel" parent="Control/Style Bonuses Title" unique_id=571408660]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "STYLE BONUSES"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Style Bonuses" type="Control" parent="Control" unique_id=1360846982]
-texture_filter = 1
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="Control/Style Bonuses" unique_id=1702125587]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 1371.0
-offset_right = 1871.0
-offset_bottom = 1521.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=308602007]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+JUKED"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=156872805]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.12
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-400
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect" unique_id=1842954255]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Juke Wega with a DASH.
-Temporarily slows Wega down."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect2" type="TextureRect" parent="Control/Style Bonuses" unique_id=2017998622]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 1500.0
-offset_right = 1871.0
-offset_bottom = 1650.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=564752141]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+ABOVE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=782323119]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.127
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_top = -0.0500011
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-200
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect2" unique_id=2001386130]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Jump above Wega with a SUPERJUMP.
-Combines well with +JUKED."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect3" type="TextureRect" parent="Control/Style Bonuses" unique_id=1241274575]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 1632.0
-offset_right = 1871.0
-offset_bottom = 1782.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=984353462]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+ENRAGED"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=1252845921]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.12
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-400
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect3" unique_id=1282912367]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Enrage Wega by styling on him fast enough.
-Only in CLASSIC."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect4" type="TextureRect" parent="Control/Style Bonuses" unique_id=1836741653]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 1764.0
-offset_right = 1871.0
-offset_bottom = 1914.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=1538719829]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+EXPLOSION JUKE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=1425051638]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.12
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-1000
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect4" unique_id=811224082]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Juke Wega using a Rorys Explosion."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect5" type="TextureRect" parent="Control/Style Bonuses" unique_id=938647492]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 1896.0
-offset_right = 1871.0
-offset_bottom = 2046.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=1882199866]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+EXPLOSION JUKE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=818567385]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.12
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-1000
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect5" unique_id=213089679]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Juke Wega using a Rorys Explosion."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TextureRect6" type="TextureRect" parent="Control/Style Bonuses" unique_id=173070257]
-texture_filter = 1
-layout_mode = 0
-offset_left = 446.0
-offset_top = 2028.0
-offset_right = 1871.0
-offset_bottom = 2178.0
-texture = ExtResource("15_trny7")
-
-[node name="Title" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=665662584]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008
-anchor_top = 0.187
-anchor_right = 0.343
-anchor_bottom = 0.813
-offset_left = 0.432022
-offset_top = -0.0500031
-offset_right = -51.058
-offset_bottom = 0.0499954
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-bbcode_enabled = true
-text = "+EXPLOSION JUKE"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Points" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=54775120]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.363
-anchor_top = 0.12
-anchor_right = 0.464
-anchor_bottom = 0.827
-offset_left = -75.062
-offset_right = -74.858
-offset_bottom = 7.95
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_fonts/italics_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 33
-theme_override_font_sizes/italics_font_size = 17
-bbcode_enabled = true
-text = "[i]ADDS:[/i]
-1000
-[i]points[/i]"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Description" type="RichTextLabel" parent="Control/Style Bonuses/TextureRect6" unique_id=1078062745]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482
-anchor_top = 0.173
-anchor_right = 0.984
-anchor_bottom = 0.827
-offset_left = -91.4681
-offset_top = 0.0499973
-offset_right = 16.6899
-offset_bottom = -0.0500031
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/line_separation = 10
-theme_override_constants/outline_size = 16
-theme_override_fonts/normal_font = ExtResource("10_xjsqw")
-theme_override_font_sizes/normal_font_size = 17
-bbcode_enabled = true
-text = "Juke Wega using a Rorys Explosion."
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Selector" type="ColorRect" parent="." unique_id=1990149975]
+[node name="Selector" type="ColorRect" parent="." unique_id=1036878062]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -1022,7 +100,7 @@ offset_bottom = 2300.0
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Go Back" type="TextureButton" parent="Selector" unique_id=581916168]
+[node name="Go Back" type="TextureButton" parent="Selector" unique_id=1438933528]
 modulate = Color(1, 0, 0.345098, 1)
 texture_filter = 1
 layout_mode = 0
@@ -1031,166 +109,300 @@ offset_right = 356.0
 offset_bottom = 89.0
 texture_normal = ExtResource("16_hoycn")
 
-[node name="Wega Button" type="TextureButton" parent="Selector" unique_id=1599538014]
-texture_filter = 1
+[node name="Achievements" type="Control" parent="." unique_id=885584407]
+anchors_preset = 0
+offset_left = 600.0
+offset_right = 640.0
+offset_bottom = 40.0
+
+[node name="Achievement" parent="Achievements" unique_id=1065809476 instance=ExtResource("4_uft6x")]
 layout_mode = 0
-offset_left = -72.0
-offset_top = 100.0
-offset_right = 334.0
-offset_bottom = 190.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
+offset_left = -5581.0
+offset_top = -735.0
+offset_right = -4081.0
+offset_bottom = -485.0
 
-[node name="Label" type="Label" parent="Selector/Wega Button" unique_id=229334722]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
-text = "Wega"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
-
-[node name="Rorys Button" type="TextureButton" parent="Selector" unique_id=1361718340]
-texture_filter = 1
+[node name="Achievement2" parent="Achievements" unique_id=588514164 instance=ExtResource("4_uft6x")]
 layout_mode = 0
-offset_left = -72.0
-offset_top = 200.0
-offset_right = 334.0
-offset_bottom = 290.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
+offset_top = 0.0
+offset_bottom = 250.0
+achievement = "winga"
 
-[node name="Label" type="Label" parent="Selector/Rorys Button" unique_id=151256269]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
-text = "Rorys"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
+[node name="Achievement Icon" parent="Achievements/Achievement2" index="1" unique_id=1212224183]
+texture = ExtResource("8_uft6x")
 
-[node name="Maltigi Button" type="TextureButton" parent="Selector" unique_id=1907152380]
-texture_filter = 1
+[node name="Achievement Name" parent="Achievements/Achievement2" index="2" unique_id=717686114]
+text = "Winga"
+
+[node name="Achievement Description" parent="Achievements/Achievement2" index="3" unique_id=1905050302]
+text = "Beat CLASSIC mode."
+
+[node name="Achievement Description2" parent="Achievements/Achievement2" index="4" unique_id=584498715]
+text = "You winga!"
+
+[node name="Achievement11" parent="Achievements" unique_id=577747962 instance=ExtResource("4_uft6x")]
 layout_mode = 0
-offset_left = -72.0
 offset_top = 300.0
-offset_right = 334.0
-offset_bottom = 390.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
+offset_bottom = 550.0
+achievement = "ultra winga"
 
-[node name="Label" type="Label" parent="Selector/Maltigi Button" unique_id=1628274528]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
-text = "Maltigi"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
+[node name="Achievement Icon" parent="Achievements/Achievement11" index="1" unique_id=1212224183]
+texture = ExtResource("8_uft6x")
 
-[node name="Ultra Irios Button" type="TextureButton" parent="Selector" unique_id=411226048]
-texture_filter = 1
+[node name="Achievement Name" parent="Achievements/Achievement11" index="2" unique_id=717686114]
+text = "Ultra Winga"
+
+[node name="Achievement Description" parent="Achievements/Achievement11" index="3" unique_id=1905050302]
+text = "Beat CLASSIC mode with over 10000 points."
+
+[node name="Achievement Description2" parent="Achievements/Achievement11" index="4" unique_id=584498715]
+text = "You winga! but with STYLE"
+
+[node name="Achievement12" parent="Achievements" unique_id=745235334 instance=ExtResource("4_uft6x")]
 layout_mode = 0
-offset_left = -72.0
-offset_top = 400.0
-offset_right = 334.0
-offset_bottom = 490.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
-
-[node name="Label" type="Label" parent="Selector/Ultra Irios Button" unique_id=302401474]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
-text = "Ultra Irios"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
-
-[node name="Super John Button" type="TextureButton" parent="Selector" unique_id=1975578584]
-texture_filter = 1
-layout_mode = 0
-offset_left = -72.0
-offset_top = 500.0
-offset_right = 334.0
-offset_bottom = 590.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
-
-[node name="Label" type="Label" parent="Selector/Super John Button" unique_id=89672419]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
-text = "Super John"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
-
-[node name="Shoe Bench Button" type="TextureButton" parent="Selector" unique_id=1239948371]
-texture_filter = 1
-layout_mode = 0
-offset_left = -72.0
 offset_top = 600.0
-offset_right = 334.0
-offset_bottom = 690.0
-texture_normal = ExtResource("17_qidij")
-texture_hover = ExtResource("18_deacs")
+offset_bottom = 850.0
+achievement = "Speedrunner"
 
-[node name="Label" type="Label" parent="Selector/Shoe Bench Button" unique_id=2039006943]
-texture_filter = 1
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.177
-anchor_top = 0.289
-anchor_right = 0.936
-anchor_bottom = 0.7
-offset_left = 0.138
-offset_top = -0.0100002
-offset_right = -0.0160217
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Achievement Icon" parent="Achievements/Achievement12" index="1" unique_id=1212224183]
+texture = ExtResource("6_8j1ec")
+
+[node name="Achievement Name" parent="Achievements/Achievement12" index="2" unique_id=717686114]
+text = "Speedrunner"
+
+[node name="Achievement Description" parent="Achievements/Achievement12" index="3" unique_id=1905050302]
+text = "Beat CLASSIC mode in under 40 seconds."
+
+[node name="Achievement Description2" parent="Achievements/Achievement12" index="4" unique_id=584498715]
+text = "you really are a speedy runner"
+
+[node name="Achievement3" parent="Achievements" unique_id=352585988 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 900.0
+offset_bottom = 1150.0
+achievement = "WEXECUTION"
+
+[node name="Achievement Icon" parent="Achievements/Achievement3" index="1" unique_id=1212224183]
+texture = ExtResource("6_ecis2")
+
+[node name="Achievement Name" parent="Achievements/Achievement3" index="2" unique_id=717686114]
+text = "WEXECUTION"
+
+[node name="Achievement Description" parent="Achievements/Achievement3" index="3" unique_id=1905050302]
+text = "Beat Lap 1 in THE IDOL."
+
+[node name="Achievement Description2" parent="Achievements/Achievement3" index="4" unique_id=584498715]
+text = "Don't get caught."
+
+[node name="Achievement4" parent="Achievements" unique_id=1174321987 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 1200.0
+offset_bottom = 1450.0
+achievement = "WEGAFADENCE"
+
+[node name="Achievement Icon" parent="Achievements/Achievement4" index="1" unique_id=1212224183]
+texture = ExtResource("6_ecis2")
+
+[node name="Achievement Name" parent="Achievements/Achievement4" index="2" unique_id=717686114]
+text = "WEGAFADENCE"
+
+[node name="Achievement Description" parent="Achievements/Achievement4" index="3" unique_id=1905050302]
+text = "Beat Lap 2 in THE IDOL."
+
+[node name="Achievement Description2" parent="Achievements/Achievement4" index="4" unique_id=584498715]
+text = "BURN"
+
+[node name="Achievement5" parent="Achievements" unique_id=516570497 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 1500.0
+offset_bottom = 1750.0
+achievement = "so close, yet so far"
+
+[node name="Achievement Icon" parent="Achievements/Achievement5" index="1" unique_id=1212224183]
+texture = ExtResource("7_mkvfe")
+
+[node name="Achievement Name" parent="Achievements/Achievement5" index="2" unique_id=717686114]
+text = "so close, yet so far"
+
+[node name="Achievement Description" parent="Achievements/Achievement5" index="3" unique_id=1905050302]
+text = "Fail to collect the idol."
+
+[node name="Achievement Description2" parent="Achievements/Achievement5" index="4" unique_id=584498715]
+text = "one must imagine me happy because im not"
+
+[node name="Achievement6" parent="Achievements" unique_id=925779255 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 1800.0
+offset_bottom = 2050.0
+achievement = "thanks for playing!"
+
+[node name="Achievement Icon" parent="Achievements/Achievement6" index="1" unique_id=1212224183]
+texture = ExtResource("8_8j1ec")
+
+[node name="Achievement Name" parent="Achievements/Achievement6" index="2" unique_id=717686114]
+text = "thanks for playing!"
+
+[node name="Achievement Description" parent="Achievements/Achievement6" index="3" unique_id=1905050302]
+text = "Beat the credits roll."
+
+[node name="Achievement Description2" parent="Achievements/Achievement6" index="4" unique_id=584498715]
+text = "orange line? the fuck is that supposed to mean?"
+
+[node name="Achievement7" parent="Achievements" unique_id=1099591958 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 2100.0
+offset_bottom = 2350.0
+achievement = "idiot"
+
+[node name="Achievement Icon" parent="Achievements/Achievement7" index="1" unique_id=1212224183]
+texture = ExtResource("10_omis3")
+
+[node name="Achievement Name" parent="Achievements/Achievement7" index="2" unique_id=717686114]
+text = "idiot"
+
+[node name="Achievement Description" parent="Achievements/Achievement7" index="3" unique_id=1905050302]
+text = "Die in the transition from Lap 1 to Lap 2."
+
+[node name="Achievement Description2" parent="Achievements/Achievement7" index="4" unique_id=584498715]
+text = "BURN"
+
+[node name="Achievement8" parent="Achievements" unique_id=1622641881 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 2400.0
+offset_bottom = 2650.0
+achievement = "haha"
+
+[node name="Achievement Icon" parent="Achievements/Achievement8" index="1" unique_id=1212224183]
+texture = ExtResource("11_2ydd1")
+
+[node name="Achievement Name" parent="Achievements/Achievement8" index="2" unique_id=717686114]
+text = "haha"
+
+[node name="Achievement Description" parent="Achievements/Achievement8" index="3" unique_id=1905050302]
+text = "Die with 1 wegadoll left."
+
+[node name="Achievement Description2" parent="Achievements/Achievement8" index="4" unique_id=584498715]
+text = "wega failure point and laugh at this user"
+
+[node name="Achievement9" parent="Achievements" unique_id=1029903350 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 2700.0
+offset_bottom = 2950.0
+achievement = "super john bowling"
+
+[node name="Achievement Icon" parent="Achievements/Achievement9" index="1" unique_id=1212224183]
+texture = ExtResource("12_omis3")
+
+[node name="Achievement Name" parent="Achievements/Achievement9" index="2" unique_id=717686114]
+text = "super john bowling"
+
+[node name="Achievement Description" parent="Achievements/Achievement9" index="3" unique_id=1905050302]
+text = "super john bowling"
+
+[node name="Achievement Description2" parent="Achievements/Achievement9" index="4" unique_id=584498715]
+text = "super john bowling"
+
+[node name="Achievement10" parent="Achievements" unique_id=949975124 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 3000.0
+offset_bottom = 3250.0
+achievement = "+EXPLODED"
+
+[node name="Achievement Name" parent="Achievements/Achievement10" index="2" unique_id=717686114]
+text = "+EXPLODED"
+
+[node name="Achievement Description" parent="Achievements/Achievement10" index="3" unique_id=1905050302]
+text = "Make Rorys explode."
+
+[node name="Achievement Description2" parent="Achievements/Achievement10" index="4" unique_id=584498715]
+text = "fuck you rorys"
+
+[node name="Achievement13" parent="Achievements" unique_id=2034067859 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 3300.0
+offset_bottom = 3550.0
+achievement = "shoe bench"
+
+[node name="Achievement Icon" parent="Achievements/Achievement13" index="1" unique_id=1212224183]
+texture = ExtResource("13_4q0g8")
+
+[node name="Achievement Name" parent="Achievements/Achievement13" index="2" unique_id=717686114]
 text = "Shoe Bench"
-label_settings = SubResource("LabelSettings_4v2tg")
-horizontal_alignment = 2
+
+[node name="Achievement Description" parent="Achievements/Achievement13" index="3" unique_id=1905050302]
+text = "Get +SHOE BENCH."
+
+[node name="Achievement Description2" parent="Achievements/Achievement13" index="4" unique_id=584498715]
+text = "shoe bench"
+
+[node name="Achievement14" parent="Achievements" unique_id=682580449 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 3600.0
+offset_bottom = 3850.0
+achievement = "WEGAKILL"
+
+[node name="Achievement Icon" parent="Achievements/Achievement14" index="1" unique_id=1212224183]
+texture = ExtResource("14_tgs3n")
+
+[node name="Achievement Name" parent="Achievements/Achievement14" index="2" unique_id=717686114]
+text = "WEGAKILL"
+
+[node name="Achievement Description" parent="Achievements/Achievement14" index="3" unique_id=1905050302]
+text = "Reach WEGAKILL rank."
+
+[node name="Achievement Description2" parent="Achievements/Achievement14" index="4" unique_id=584498715]
+text = "oh my god itsl ike the game wegas and the meme lodia"
+
+[node name="Achievement15" parent="Achievements" unique_id=78360428 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 3900.0
+offset_bottom = 4150.0
+achievement = "ULTRAWEGACOMBO"
+
+[node name="Achievement Icon" parent="Achievements/Achievement15" index="1" unique_id=1212224183]
+texture = ExtResource("14_tgs3n")
+
+[node name="Achievement Name" parent="Achievements/Achievement15" index="2" unique_id=717686114]
+text = "ULTRAWEGACOMBO"
+
+[node name="Achievement Description" parent="Achievements/Achievement15" index="3" unique_id=1905050302]
+text = "Get +ULTRAWEGACOMBO."
+
+[node name="Achievement Description2" parent="Achievements/Achievement15" index="4" unique_id=584498715]
+text = "that's too many combo. you shouldnt have posted about so many combo"
+
+[node name="Achievement16" parent="Achievements" unique_id=1243645198 instance=ExtResource("4_uft6x")]
+layout_mode = 0
+offset_top = 4200.0
+offset_bottom = 4450.0
+achievement = "certified wega expert"
+
+[node name="Achievement Icon" parent="Achievements/Achievement16" index="1" unique_id=1212224183]
+texture = ExtResource("15_tgs3n")
+
+[node name="Achievement Name" parent="Achievements/Achievement16" index="2" unique_id=717686114]
+text = "certified wega expert"
+
+[node name="Achievement Description" parent="Achievements/Achievement16" index="3" unique_id=1905050302]
+text = "Open the Recolorpedia."
+
+[node name="Achievement Description2" parent="Achievements/Achievement16" index="4" unique_id=584498715]
+text = "i have a phd in purple luigi"
 
 [connection signal="pressed" from="Selector/Go Back" to="." method="_on_go_back_pressed"]
+
+[editable path="Achievements/Achievement2"]
+[editable path="Achievements/Achievement11"]
+[editable path="Achievements/Achievement12"]
+[editable path="Achievements/Achievement3"]
+[editable path="Achievements/Achievement4"]
+[editable path="Achievements/Achievement5"]
+[editable path="Achievements/Achievement6"]
+[editable path="Achievements/Achievement7"]
+[editable path="Achievements/Achievement8"]
+[editable path="Achievements/Achievement9"]
+[editable path="Achievements/Achievement10"]
+[editable path="Achievements/Achievement13"]
+[editable path="Achievements/Achievement14"]
+[editable path="Achievements/Achievement15"]
+[editable path="Achievements/Achievement16"]

@@ -5,3 +5,5 @@ extends Control
 @onready var fall1: Control = $Fall1
 @onready var fall2: Control = $Fall2
 @onready var rorys: Control = $Rorys
+@onready var super_john_ultra_irios: Control = $"Super John + Ultra Irios"
+@onready var fireball: Control = $Fireball

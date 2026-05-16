@@ -110,3 +110,16 @@ func do_the_fx() -> void:
 		"rorys":
 			death_fx.rorys.show()
 			death_fx.rorys.anim()
+		"ultra irios":
+			death_fx.super_john_ultra_irios.show()
+			death_fx.super_john_ultra_irios.anim()
+		"super john":
+			death_fx.super_john_ultra_irios.show()
+			death_fx.super_john_ultra_irios.anim()
+		"fireball":
+			death_fx.fireball.show()
+			death_fx.fireball.anim()
+		
+		_:
+			death_fx.fall1.show()
+			death_fx.fall1.anim()

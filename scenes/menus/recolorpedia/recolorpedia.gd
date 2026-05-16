@@ -53,6 +53,8 @@ signal go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK
 
 var dont_change_scene_to_main_menu: bool = false
 
+var open: bool = false
+
 func _on_go_back_pressed() -> void:
 	go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK.emit()
 	if dont_change_scene_to_main_menu == false:
@@ -75,7 +77,7 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if !Input.is_action_pressed("superjump"):
+		if open:
 			if event.button_index == 4:
 				recolorpedia.position.y += 25
 			if event.button_index == 5:

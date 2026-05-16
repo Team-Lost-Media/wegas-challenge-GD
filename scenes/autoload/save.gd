@@ -111,15 +111,24 @@ func reset_everything():
 	classichighscore.store_string(str(0))
 	
 	var achievements = FileAccess.open(SAVE_ACHIEVEMENTS_FILE_PATH, FileAccess.WRITE)
-	var achievements_json_string = JSON.stringify(achievements_dict.values())
+	var false_achievements: Array
+	for i in achievements_dict.size():
+		false_achievements.append(false)
+	var achievements_json_string = JSON.stringify(false_achievements)
 	achievements.store_string(achievements_json_string)
 	
 	var progress = FileAccess.open(PROGRESS_SAVE_FILE_PATH, FileAccess.WRITE)
-	var progress_json_string = JSON.stringify(progress_dict.values())
+	var false_progress: Array
+	for i in progress_dict.size():
+		false_progress.append(false)
+	var progress_json_string = JSON.stringify(false_progress)
 	progress.store_string(progress_json_string)
 	
 	var savefileversion = FileAccess.open(SAVEFILE_VERSION_FILE_PATH, FileAccess.WRITE_READ)
 	savefileversion.store_string(str(savefile_version))
+	
+	load_achievements()
+	load_progress()
 
 func _ready() -> void:
 	var file = FileAccess.open(SAVEFILE_VERSION_FILE_PATH, FileAccess.READ)

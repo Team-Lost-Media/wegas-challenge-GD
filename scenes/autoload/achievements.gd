@@ -10,7 +10,7 @@ extends Control
 var achievement_to_icon_dict: Dictionary = {
 	"winga": "res://assets/textures/achievements/winga.png", #beat classic mode "you winga!"
 	"WEXECUTION": "res://assets/textures/achievements/wexecution.png", #beat lap 1 "i cant believe green lawson got wexecuted :pensive:"
-	"WEGAFADENCE": "res://assets/textures/achievements/placeholder.png", #beat lap 2 "this really was our wegafadence"
+	"WEGAFADENCE": "", #beat lap 2 "this really was our wegafadence"
 	"so close, yet so far": "res://assets/textures/achievements/so close yet so far.png", #fail to collect the idol "you're almost there! keep trying!"
 	"idiot": "res://assets/textures/achievements/idiot.png", #die in the pause before transition to lap 2 "guy stupid"
 	"Task Failed Succesfully!": "res://assets/textures/achievements/task failed succesfully.png", #die to every enemy "insert fanfare here"
@@ -22,10 +22,10 @@ var achievement_to_icon_dict: Dictionary = {
 	"Speedrunner": "res://assets/textures/achievements/speedrunner.png", #beat classic mode in less than 40 seconds "you really are a speedy runner"
 	"WEGAKILL": "res://assets/textures/achievements/wegakill.png", #reach wegakill rank "oh my god itsl ike the game wegas and the meme lodia"
 	"shoe bench": "res://assets/textures/achievements/shoe bench.png", #get +SHOE BENCH "shoe bench"
-	"ULTRAWEGACOMBO": false, #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
-	"ultra winga": false, #beat classic mode with >10000 score "you winga! but with STYLE"
+	"ULTRAWEGACOMBO": "", #get +ULTRAWEGACOMBO "that's too many combo. you shouldnt have posted about so many combo"
+	"ultra winga": "", #beat classic mode with >10000 score "you winga! but with STYLE"
 	"ouroboros": "res://assets/textures/achievements/ouroboros.png", #do 100 runs "this really was our oboros"
-	"embrace the malt": false, #run into maltigi while he's not dashing
+	"embrace the malt": "", #run into maltigi while he's not dashing
 	"thanks for playing!": "res://assets/textures/achievements/thnak you.png" 
 	
 }

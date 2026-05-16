@@ -1,3 +1,5 @@
+res://scenes/menus/main/
+res://scenes/menus/achievements/
 res://scenes/objects/
 res://assets/textures/
 res://addons/richtext2/
@@ -12,7 +14,6 @@ res://assets/other/
 res://scenes/autoload/
 C:/Users/valer/Downloads/!godot exports/wegakill/demo2 alpha.0/ACTUAL BUILD/
 C:/Users/valer/Downloads/!godot exports/wegakill/demo2 alpha.0/
-res://scenes/menus/main/
 res://scenes/levels/tutorial/
 C:/Users/valer/Documents/GitHub/wegas-challenge-GD/scenes/menus/recolorpedia/
 res://scenes/objects/rorys/

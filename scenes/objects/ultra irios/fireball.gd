@@ -18,7 +18,7 @@ func _on_death_area_body_entered(body: Node3D) -> void:
 		close_call = false
 		body.damage_effects.play_damage_fx("fireball")
 		if Global.health <= 0:
-			Global.died_to = "ultra irios fireball"
+			Global.died_to = "fireball"
 			Global.player_died.emit()
 			if death_scene != "": get_tree().change_scene_to_file(death_scene)
 

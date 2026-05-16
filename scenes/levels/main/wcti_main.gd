@@ -251,6 +251,7 @@ func _on_so_retro_body_entered(body: Node3D) -> void:
 
 func wassup_guys_its_me_the_idol(body: Node3D) -> void:
 	if body is PlayerCharacter:
+		Achievements.award("WEGAFADENCE")
 		Global.saved_time_as_string = Global.time_as_string
 		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_win.tscn") #win
 
@@ -325,7 +326,6 @@ func _on_lap_2_start_pause_timeout() -> void:
 	ultra_irios.show()
 	lap = 2
 	
-	await get_tree().create_timer(2.0).timeout
 	SongCredits.show_song_credits("WEGAFADENCE", "From: WC:TI OST", "By: GAMR")
 
 func shoe_bench_timer_bounce() -> void:

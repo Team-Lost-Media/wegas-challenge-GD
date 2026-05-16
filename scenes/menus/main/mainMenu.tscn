@@ -16,6 +16,7 @@
 [ext_resource type="Script" uid="uid://lmpnwg3dlk32" path="res://scenes/menus/main/high_score_label.gd" id="12_sp6e7"]
 [ext_resource type="PackedScene" uid="uid://b6tdk2e5p381g" path="res://scenes/menus/recolorpedia/recolorpedia.tscn" id="12_ugs4v"]
 [ext_resource type="Texture2D" uid="uid://cxbawji40rfht" path="res://assets/textures/thumbnails/wcti2.png" id="13_524vu"]
+[ext_resource type="Script" uid="uid://ctygjj4321gfr" path="res://scenes/menus/main/orange_line.gd" id="15_k3myg"]
 [ext_resource type="PackedScene" uid="uid://2i7t43dgb712" path="res://scenes/menus/achievements/achievements menu.tscn" id="17_qyi5k"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jtjce"]
@@ -439,8 +440,7 @@ offset_left = -528.0
 offset_top = -157.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "HIGH SCORE: 33333
-"
+text = "HIGH SCORE: 33333"
 label_settings = SubResource("LabelSettings_524vu")
 horizontal_alignment = 2
 vertical_alignment = 2
@@ -524,6 +524,15 @@ grow_vertical = 2
 text = "Beat CLASSIC to unlock!"
 label_settings = SubResource("LabelSettings_g7n6k")
 
+[node name="orange line" type="ColorRect" parent="Gamemodes/TextureRect/VBoxContainer/The Idol" unique_id=1135744069]
+layout_mode = 0
+offset_left = 0.124988556
+offset_top = 196.12498
+offset_right = 943.8749
+offset_bottom = 199.87498
+color = Color(1, 0.48452926, 0, 1)
+script = ExtResource("15_k3myg")
+
 [node name="Credits" type="Button" parent="Gamemodes/TextureRect/VBoxContainer" unique_id=1389887946]
 visible = false
 custom_minimum_size = Vector2(0, 200)
@@ -602,6 +611,7 @@ offset_right = 2334.0
 layout_mode = 1
 offset_left = -2334.0
 offset_right = -2334.0
+dont_change_scene_to_main_menu = true
 
 [node name="Label" type="Label" parent="." unique_id=1018771620]
 layout_mode = 1
@@ -631,3 +641,4 @@ horizontal_alignment = 2
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/The Idol" to="." method="_the_idol"]
 [connection signal="pressed" from="Gamemodes/TextureRect/VBoxContainer/Credits" to="." method="_credits"]
 [connection signal="pressed" from="Gamemodes/Quit" to="." method="on_gamemode_quit_pressed"]
+[connection signal="go_back_GO_BACK_LEAVE_GO_BACK_PLEASE_GO_BACK_TWO" from="Achievements Menu" to="." method="_exit_achievements"]

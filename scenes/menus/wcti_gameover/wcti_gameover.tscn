@@ -19,6 +19,9 @@
 [ext_resource type="AudioStream" uid="uid://bm0k6wodboy7r" path="res://assets/SFX/church death bell.mp3" id="15_k3obx"]
 [ext_resource type="Texture2D" uid="uid://cxrd1fwrw6xh6" path="res://assets/textures/golden sigma gif cut.png" id="15_kiujo"]
 [ext_resource type="Texture2D" uid="uid://c8p3x7oowlnns" path="res://assets/textures/gravestone.jpg" id="16_6lsbc"]
+[ext_resource type="Script" uid="uid://csireehssy4df" path="res://scenes/menus/wcti_gameover/super_john_+_ultra_irios.gd" id="19_lxw1a"]
+[ext_resource type="VideoStream" uid="uid://ctdmvrjyvgvhq" path="res://assets/other/i hear a tune coming on hit it john.ogv" id="20_s4rvh"]
+[ext_resource type="VideoStream" uid="uid://cy3ptj775k7gj" path="res://assets/other/wegadiesinlava.ogv" id="21_s4rvh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7xr85"]
 font_size = 88
@@ -1493,6 +1496,36 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("16_6lsbc")
 expand_mode = 1
+
+[node name="Super John + Ultra Irios" type="Control" parent="DeathFX" unique_id=9187418]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("19_lxw1a")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="DeathFX/Super John + Ultra Irios" unique_id=2135551396]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+scale = Vector2(1.4999908, 1.4999771)
+stream = ExtResource("20_s4rvh")
+bus = &"SFX"
+
+[node name="Fireball" type="Control" parent="DeathFX" unique_id=1464986478]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("19_lxw1a")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="DeathFX/Fireball" unique_id=789987241]
+layout_mode = 0
+offset_right = 854.0
+offset_bottom = 480.0
+scale = Vector2(2.248235, 2.2500064)
+stream = ExtResource("21_s4rvh")
+bus = &"SFX"
 
 [node name="results" type="Control" parent="." unique_id=1479479000]
 anchors_preset = 0
