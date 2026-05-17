@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cidip7e43iklv"
-path="res://.godot/imported/2026-03-10173206.png-7d6c80f10ad9394011c7764495034df8.ctex"
+uid="uid://7f864e16bleq"
+path="res://.godot/imported/wegafadence.png-692f2c4d4c6803167676df7c127e1bde.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://screenshots/2026-03-10173206.png"
-dest_files=["res://.godot/imported/2026-03-10173206.png-7d6c80f10ad9394011c7764495034df8.ctex"]
+source_file="res://assets/textures/achievements/wegafadence.png"
+dest_files=["res://.godot/imported/wegafadence.png-692f2c4d4c6803167676df7c127e1bde.ctex"]
 
 [params]
 

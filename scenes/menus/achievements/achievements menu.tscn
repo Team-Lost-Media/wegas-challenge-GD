@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://dqsq7f0fc50wd" path="res://scenes/menus/achievements/achievements menu.gd" id="1_nrm0g"]
 [ext_resource type="Texture2D" uid="uid://beoerbu073eqr" path="res://assets/textures/wega.png" id="2_t21ta"]
 [ext_resource type="PackedScene" uid="uid://cd60sgtrgf0hx" path="res://scenes/menus/achievements/achievement menu item thingy.tscn" id="4_uft6x"]
+[ext_resource type="Texture2D" uid="uid://c85pyk82lj8gy" path="res://assets/textures/achievements/ultra winga.png" id="6_1twxs"]
 [ext_resource type="Texture2D" uid="uid://dm77bsymw3frm" path="res://assets/textures/achievements/speedrunner.png" id="6_8j1ec"]
 [ext_resource type="Texture2D" uid="uid://dsui5othyecfu" path="res://assets/textures/achievements/wexecution.png" id="6_ecis2"]
 [ext_resource type="Texture2D" uid="uid://c2vuvukae8rj8" path="res://assets/textures/achievements/so close yet so far.png" id="7_mkvfe"]
 [ext_resource type="Texture2D" uid="uid://b3vgo8tacnak" path="res://assets/textures/achievements/thnak you.png" id="8_8j1ec"]
 [ext_resource type="Texture2D" uid="uid://kt7cryisokl8" path="res://assets/textures/achievements/winga.png" id="8_uft6x"]
+[ext_resource type="Texture2D" uid="uid://7f864e16bleq" path="res://assets/textures/achievements/wegafadence.png" id="9_nrm0g"]
 [ext_resource type="Texture2D" uid="uid://j4n3cdjedtpa" path="res://assets/textures/achievements/idiot.png" id="10_omis3"]
 [ext_resource type="Texture2D" uid="uid://bs7bvdytfqfla" path="res://assets/textures/achievements/haha.png" id="11_2ydd1"]
 [ext_resource type="Texture2D" uid="uid://dxsu15o8dy7cn" path="res://assets/textures/achievements/super john bowling.png" id="12_omis3"]
@@ -15,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://d14pa1ycf0cs2" path="res://assets/textures/achievements/wegakill.png" id="14_tgs3n"]
 [ext_resource type="Texture2D" uid="uid://cwga0s1g4knea" path="res://assets/textures/achievements/certified wega expert.png" id="15_tgs3n"]
 [ext_resource type="Texture2D" uid="uid://dp4074674wsar" path="res://assets/textures/recolorpedia/box5.png" id="16_hoycn"]
+[ext_resource type="Texture2D" uid="uid://d2gxngt8324m8" path="res://assets/textures/achievements/ultrawegacombo.png" id="16_nrm0g"]
 
 [sub_resource type="Shader" id="Shader_ccdq0"]
 code = "shader_type canvas_item;
@@ -147,7 +150,7 @@ offset_bottom = 550.0
 achievement = "ultra winga"
 
 [node name="Achievement Icon" parent="Achievements/Achievement11" index="1" unique_id=1212224183]
-texture = ExtResource("8_uft6x")
+texture = ExtResource("6_1twxs")
 
 [node name="Achievement Name" parent="Achievements/Achievement11" index="2" unique_id=717686114]
 text = "Ultra Winga"
@@ -201,7 +204,7 @@ offset_bottom = 1450.0
 achievement = "WEGAFADENCE"
 
 [node name="Achievement Icon" parent="Achievements/Achievement4" index="1" unique_id=1212224183]
-texture = ExtResource("6_ecis2")
+texture = ExtResource("9_nrm0g")
 
 [node name="Achievement Name" parent="Achievements/Achievement4" index="2" unique_id=717686114]
 text = "WEGAFADENCE"
@@ -264,7 +267,7 @@ text = "idiot"
 text = "Die in the transition from Lap 1 to Lap 2."
 
 [node name="Achievement Description2" parent="Achievements/Achievement7" index="4" unique_id=584498715]
-text = "BURN"
+text = "why would he do that is he stupid"
 
 [node name="Achievement8" parent="Achievements" unique_id=1622641881 instance=ExtResource("4_uft6x")]
 layout_mode = 0
@@ -360,7 +363,7 @@ offset_bottom = 4150.0
 achievement = "ULTRAWEGACOMBO"
 
 [node name="Achievement Icon" parent="Achievements/Achievement15" index="1" unique_id=1212224183]
-texture = ExtResource("14_tgs3n")
+texture = ExtResource("16_nrm0g")
 
 [node name="Achievement Name" parent="Achievements/Achievement15" index="2" unique_id=717686114]
 text = "ULTRAWEGACOMBO"
