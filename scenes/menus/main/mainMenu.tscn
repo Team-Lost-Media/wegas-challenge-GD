@@ -177,7 +177,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ugs4v"]
 font = ExtResource("6_yk1ip")
-font_size = 41
+font_size = 20
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
@@ -626,9 +626,10 @@ offset_right = -3.0
 offset_bottom = -3.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "v2"
+text = "WEGAKILL v2"
 label_settings = SubResource("LabelSettings_ugs4v")
 horizontal_alignment = 2
+vertical_alignment = 2
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_play"]
 [connection signal="pressed" from="VBoxContainer/Button3" to="." method="_tutorial"]
