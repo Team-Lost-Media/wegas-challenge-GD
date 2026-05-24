@@ -124,7 +124,7 @@ func end() -> void:
 	ended = true
 	
 	Save.progress_dict.set("beat wcti", true)
-	if Global.credits_cleared: Save.progress_dict.set("beat classic orange line", true)
+	if Global.credits_cleared: Save.progress_dict.set("beat wcti orange line", true)
 	Save.save_progress()
 	
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
