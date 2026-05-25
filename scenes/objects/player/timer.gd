@@ -17,14 +17,15 @@ func _on_timer_timeout() -> void:
 #also the first section is broken because one_centisecond_passed doesnt exist anymore
 
 func _process(delta: float) -> void:
+	time = Global.time_in_seconds
 	if Global.timer_stopped == false:
-		time += delta
+		Global.time_in_seconds += delta
 	if totaltime_seconds >= 60:
 		totaltime_seconds
 		totaltime_minutes += 1
 		#turning 60 secs into a minute
-	totaltime_seconds = time - 60*totaltime_minutes
+	totaltime_seconds = Global.time_in_seconds - 60*totaltime_minutes
 	text = str(totaltime_minutes, ":", snapped(totaltime_seconds, 0.001))
 	Global.time_as_string = str(totaltime_minutes, ":", snapped(totaltime_seconds, 0.001))
-	Global.time_in_seconds = time
+	
 	

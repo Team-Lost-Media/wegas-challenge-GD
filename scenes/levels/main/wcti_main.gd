@@ -80,6 +80,15 @@ func _ready() -> void:
 	
 	gridmap.mesh_library.get_item_mesh(2).surface_set_material(0, gridmap.mesh_library.get_item_mesh(0).surface_get_material(0))
 	#flash.flash(Color.WHITE, 1.5)
+	
+	var testinglap2: bool = false
+	#testinglap2 = true
+	if testinglap2:
+		for child in group_of_wegas.get_children():
+			if child.name != "wegadoll":
+				child.queue_free()
+		await get_tree().process_frame
+		Global.time_in_seconds = 50
 
 var time_passed = 0.0
 var time_left: float
