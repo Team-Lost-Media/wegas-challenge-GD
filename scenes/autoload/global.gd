@@ -30,6 +30,7 @@ var saved_time_as_string: String = "0:00.000"
 
 func reset(): #execited when the player retries after a game over or win
 	points = 0
+	time_in_seconds = 0.0
 	style = "none"
 	wegadoll_combo = 0
 	died_to = ""
