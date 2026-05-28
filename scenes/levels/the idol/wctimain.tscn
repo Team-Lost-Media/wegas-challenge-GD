@@ -27,6 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://b1dn67n1ycfir" path="res://scenes/objects/shoe bench (enemy)/shoe bench.tscn" id="17_vtxl0"]
 [ext_resource type="PackedScene" uid="uid://5fyklqfajuef" path="res://scenes/objects/super john/super john.tscn" id="18_7ytgl"]
 [ext_resource type="Texture2D" uid="uid://bmyvtstlhdqae" path="res://assets/textures/fire lowquality skybox version.png" id="19_lr4ys"]
+[ext_resource type="Curve" uid="uid://d3gggsc2cuovk" path="res://assets/other/overheal drain curve.tres" id="19_sw7cd"]
 [ext_resource type="ArrayMesh" uid="uid://ont8af16353c" path="res://assets/Models/luigidoll.obj" id="20_7ytgl"]
 
 [sub_resource type="Gradient" id="Gradient_rcnw4"]
@@ -470,6 +471,7 @@ floor_constant_speed = true
 floor_snap_length = 0.2
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
+overheal_drain_curve = ExtResource("19_sw7cd")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Player" unique_id=410377228]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.333, 0)
