@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b618s8yms5b50" path="res://scenes/objects/wega/wega.tscn" id="2_o8krw"]
 [ext_resource type="PackedScene" uid="uid://brpt71jl5cg2q" path="res://scenes/objects/player/player.tscn" id="3_pnemw"]
 [ext_resource type="Texture2D" uid="uid://2g4uapwqkpjv" path="res://assets/textures/SORETRO-1.png.png" id="4_osekl"]
+[ext_resource type="Curve" uid="uid://ch2dlyqut2g8o" path="res://assets/other/overheal drain curve harsh.tres" id="5_0g67u"]
 [ext_resource type="Material" uid="uid://qano16jjkcr2" path="res://assets/other/tutorial_black_texture.tres" id="5_dwkvq"]
 [ext_resource type="PackedScene" uid="uid://b10h4jeg5fnr5" path="res://scenes/objects/deathbarrier.tscn" id="5_kwqv8"]
 [ext_resource type="AudioStream" uid="uid://chb3131atdha7" path="res://assets/BGM/WEXECUTION.mp3" id="5_plv8s"]
@@ -496,6 +497,7 @@ omni_range = 10.0
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.538, 1.258, 8.212)
 DEFAULT_SPEED = 11
 JUMP_VELOCITY = 10.0
+overheal_drain_curve = ExtResource("5_0g67u")
 max_health = 100.1
 
 [node name="Main" type="Node3D" parent="." unique_id=1039749120]

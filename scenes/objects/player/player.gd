@@ -66,6 +66,7 @@ var gravity: Vector3 = Vector3(0, -55, 0)
 
 func _ready():
 	Global.max_health = max_health
+	Global.health = Global.max_health
 	$MeshInstance3D.hide()
 	Engine.max_fps = 9999
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
