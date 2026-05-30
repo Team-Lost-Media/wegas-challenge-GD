@@ -11,12 +11,12 @@
 [sub_resource type="RichTextEffect" id="RichTextEffect_bbgvn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1882974138034
+metadata/rt = 1805362733894
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_e0xnn"]
 resource_name = "cuss"
 script = ExtResource("5_lasd8")
-metadata/rt = 1883678781113
+metadata/rt = 1806134485846
 
 [node name="Control" type="Control" unique_id=499590777]
 layout_mode = 3

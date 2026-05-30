@@ -20,8 +20,11 @@ extends Node3D
 
 var rotating: bool = false
 var cleared: bool = false
+var started: bool = false
 
 var time: float = 0
+
+const CREDITS_WIREFRAME_MESH = preload("res://assets/other/credits wireframe mesh.tres")
 
 func _ready() -> void:
 	credits_parent.hide()
@@ -30,6 +33,8 @@ func _ready() -> void:
 	
 	wega.kill = false #WEGAKILL?????????
 	music_timer.wait_time = 0.3647*2
+	
+	
 	
 	Global.player_died.connect(end)
 	
@@ -45,6 +50,7 @@ func start() -> void:
 	bgm.play()
 	music_timer.start()
 	SongCredits.show_song_credits("Staff Roll", "From: TGM2 OST", "By: Ayako Saso")
+	started = true
 	
 	credits_parent.show()
 	
@@ -117,7 +123,6 @@ func flash() -> void:
 
 func _on_wegadoll_collected() -> void:
 	start()
-	sfx.play()
 
 @onready var switch_to_results_timer: Timer = $"switch to results timer"
 func end() -> void:
@@ -134,7 +139,10 @@ func end() -> void:
 	tween.set_ignore_time_scale(true)
 	tween.tween_property(color_rect, "position:y", 0, 1.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
 	await switch_to_results_timer.timeout
-	get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_results.tscn")
+	if is_inside_tree():
+		get_tree().change_scene_to_file("res://scenes/menus/wcti_win/wcti_results.tscn")
+	else:
+		await get_tree().process_frame
 
 
 var music_bars: int = -1
@@ -168,6 +176,7 @@ func _on_music_timer_timeout() -> void:
 			tween.tween_property(sun, "light_energy", 20, 1)
 			var tween2 = create_tween()
 			tween2.tween_property(environment, "environment:sky:sky_material:energy_multiplier", 1, 1)
+			
 		65:
 			particles.emitting = true
 		80:
