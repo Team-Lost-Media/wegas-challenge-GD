@@ -68,7 +68,7 @@ height = 2.5
 script = ExtResource("1_em6xu")
 
 [node name="WegaDoll" type="MeshInstance3D" parent="." unique_id=1155297875]
-transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+transform = Transform3D(0.04, 0, 0, 0, 0.04, 0, 0, 0, 0.04, 0, 0, 0)
 material_overlay = SubResource("StandardMaterial3D_0w5eh")
 mesh = ExtResource("1_s7v15")
 
