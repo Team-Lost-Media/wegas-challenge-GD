@@ -39,7 +39,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if enabled:
-		if stay_still_timer.is_stopped() and stun_timer.is_stopped():
+		if stay_still_timer.is_stopped() and stun_timer.is_stopped() and group_of_wegas.get_child_count()>5:
 			wegadoll = group_of_wegas.get_children().pick_random()
 			if wegadoll:
 				normal_wegadoll_material = wegadoll.wegadoll.material_overlay
