@@ -65,6 +65,7 @@ func _ready() -> void:
 	line_anim.play("new_animation")
 	line.show()
 	quittable = true
+	Engine.time_scale = 1
 	
 	await get_tree().create_timer(2).timeout
 	var tween4 = create_tween()
@@ -73,7 +74,12 @@ func _ready() -> void:
 
 var quittable: bool = false
 func _process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed("jump"):
+		Engine.time_scale = 200
+	
 	if quittable:
 		if Input.is_action_just_pressed("escape"):
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			Engine.time_scale = 1
 			get_tree().change_scene_to_file("res://scenes/menus/main/mainMenu.tscn")
