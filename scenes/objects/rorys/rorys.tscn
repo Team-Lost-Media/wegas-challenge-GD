@@ -300,11 +300,11 @@ animations = [{
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sf834"]
 radius = 0.75
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aoh5m"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iy12u"]
 height = 2.5
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sf834"]
-radius = 4.0
+radius = 5.0
 height = 10.0
 
 [node name="Rorys" type="AnimatedSprite3D" unique_id=958867044]
@@ -330,7 +330,8 @@ color = Color(1, 1, 1, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="punchable indicator" type="Sprite3D" parent="." unique_id=2135218005]
-transform = Transform3D(1, -5.8042815e-10, 5.820766e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.0020247025, 1.5986884, -0.0011613148)
+transform = Transform3D(1, -6.9684347e-10, 6.9849193e-10, 1.2391865e-11, 1, 0, 0, 0, 1, -0.002304352, 1.8194971, -0.001321714)
+pixel_size = 0.015
 billboard = 1
 texture_filter = 2
 render_priority = 1
@@ -347,7 +348,7 @@ transform = Transform3D(1, -2.31182e-10, 2.32831e-10, 1.23919e-11, 1, 0, 0, 0, 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FuckYouArea3D" unique_id=1257648815]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)
-shape = SubResource("CapsuleShape3D_aoh5m")
+shape = SubResource("CapsuleShape3D_iy12u")
 
 [node name="PunchableArea3D" type="Area3D" parent="." unique_id=794347913]
 

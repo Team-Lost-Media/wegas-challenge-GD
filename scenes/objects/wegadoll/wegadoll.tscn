@@ -77,7 +77,6 @@ libraries/ = SubResource("AnimationLibrary_xrb3n")
 autoplay = &"spin"
 
 [node name="Area3D" type="Area3D" parent="." unique_id=1034784782]
-visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=721878004]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 2.25765, 0)

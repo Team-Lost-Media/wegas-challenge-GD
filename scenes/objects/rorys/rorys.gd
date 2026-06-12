@@ -146,7 +146,8 @@ func _on_start_timer_timeout() -> void:
 
 func _on_punchable_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		punchable = true
+		if animation != "explode":
+			punchable = true
 
 
 func _on_punchable_area_3d_body_exited(body: Node3D) -> void:
