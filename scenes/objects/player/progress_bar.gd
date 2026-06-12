@@ -7,11 +7,14 @@ extends ProgressBar
 @onready var superjump_cooldown: Timer = $"../SuperJumpCooldown"
 @onready var label: Label = $Label #works for both the cooldowns's labels
 @onready var player: CharacterBody3D = $".."
+@onready var circular_bar: TextureProgressBar = $CircularBar
 
 func _process(delta: float) -> void:
 	if dash:
 		max_value = dash_cooldown.wait_time
 		value = dash_cooldown.time_left
+		circular_bar.max_value = dash_cooldown.wait_time
+		circular_bar.value = dash_cooldown.wait_time - dash_cooldown.time_left
 		label.text = str(player.dashes_left)
 		match player.dashes_left:
 			2:
@@ -24,3 +27,5 @@ func _process(delta: float) -> void:
 	if superjump:
 		max_value = superjump_cooldown.wait_time
 		value = superjump_cooldown.time_left
+		circular_bar.max_value = superjump_cooldown.wait_time
+		circular_bar.value = superjump_cooldown.wait_time - superjump_cooldown.time_left

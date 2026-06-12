@@ -5,9 +5,11 @@
 [ext_resource type="FontFile" uid="uid://daau2y37t3uou" path="res://assets/other/VCR_OSD_MONO_1.001.ttf" id="3_0a575"]
 [ext_resource type="Texture2D" uid="uid://dlf23nb3wl5ra" path="res://assets/textures/golden sigma.png" id="4_absnx"]
 [ext_resource type="Script" uid="uid://brwcsx3yog6er" path="res://scenes/objects/player/health.gd" id="4_bdcal"]
+[ext_resource type="Texture2D" uid="uid://dej4pwmyal1wc" path="res://assets/textures/ui/dash.png" id="4_jxhie"]
 [ext_resource type="Theme" uid="uid://bmjhaxt70t64q" path="res://assets/other/vcr_osd_mono.tres" id="4_nkbs0"]
 [ext_resource type="Script" uid="uid://bxicvannoy5f4" path="res://scenes/objects/player/health_label.gd" id="5_a2h7i"]
 [ext_resource type="Shader" uid="uid://bnvqk864yprcf" path="res://assets/other/balatro.gdshader" id="5_japq8"]
+[ext_resource type="Texture2D" uid="uid://bmelno46esto5" path="res://assets/textures/ui/superjump.png" id="5_jxhie"]
 [ext_resource type="Script" uid="uid://cc3nhv7vlnl17" path="res://scenes/objects/player/style_bar.gd" id="5_wim6f"]
 [ext_resource type="Script" uid="uid://cx5silmovrt1o" path="res://scenes/objects/player/timer.gd" id="6_gmdvr"]
 [ext_resource type="Script" uid="uid://1tvrxarpsw8e" path="res://scenes/objects/player/damage_effects.gd" id="8_ponut"]
@@ -427,6 +429,30 @@ theme_override_styles/background = SubResource("StyleBoxFlat_g65c7")
 max_value = 1.0
 show_percentage = false
 
+[node name="CircularBar" type="TextureProgressBar" parent="DashCooldownBar" unique_id=522022454]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -899.0
+offset_top = 406.0
+offset_right = -699.0
+offset_bottom = 606.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(100, 100)
+max_value = 1.0
+step = 0.01
+value = 0.69
+fill_mode = 4
+texture_under = ExtResource("4_jxhie")
+texture_progress = ExtResource("4_jxhie")
+tint_under = Color(1, 0, 0.5166669, 0.07058824)
+tint_progress = Color(1, 0, 0.5166669, 0.3647059)
+
 [node name="SuperJumpCooldownBar" type="ProgressBar" parent="." unique_id=1046084149]
 anchors_preset = 1
 anchor_left = 1.0
@@ -457,6 +483,30 @@ grow_horizontal = 0
 theme_override_styles/background = SubResource("StyleBoxFlat_ibpxp")
 max_value = 1.0
 show_percentage = false
+
+[node name="CircularBar" type="TextureProgressBar" parent="SuperJumpCooldownBar" unique_id=2012270562]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -899.0
+offset_top = 351.0
+offset_right = -699.0
+offset_bottom = 551.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(100, 100)
+max_value = 1.0
+step = 0.01
+value = 0.61
+fill_mode = 4
+texture_under = ExtResource("5_jxhie")
+texture_progress = ExtResource("5_jxhie")
+tint_under = Color(0.4333334, 0, 1, 0.07058824)
+tint_progress = Color(0.5666666, 0, 1, 0.3647059)
 
 [node name="HealthLabel" type="Label" parent="." unique_id=426940117]
 offset_left = 1460.0
