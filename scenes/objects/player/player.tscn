@@ -451,7 +451,7 @@ fill_mode = 4
 texture_under = ExtResource("4_jxhie")
 texture_progress = ExtResource("4_jxhie")
 tint_under = Color(1, 0, 0.5166669, 0.07058824)
-tint_progress = Color(1, 0, 0.5166669, 0.3647059)
+tint_progress = Color(1, 0, 0.5166669, 0.62352943)
 
 [node name="SuperJumpCooldownBar" type="ProgressBar" parent="." unique_id=1046084149]
 anchors_preset = 1
@@ -506,7 +506,7 @@ fill_mode = 4
 texture_under = ExtResource("5_jxhie")
 texture_progress = ExtResource("5_jxhie")
 tint_under = Color(0.4333334, 0, 1, 0.07058824)
-tint_progress = Color(0.5666666, 0, 1, 0.3647059)
+tint_progress = Color(0.5647059, 0, 1, 0.62352943)
 
 [node name="HealthLabel" type="Label" parent="." unique_id=426940117]
 offset_left = 1460.0
